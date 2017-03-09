@@ -25,7 +25,7 @@ items:
   nameWithType: ProjectItem
   fullName: Microsoft.Build.Evaluation.ProjectItem
   type: Class
-  summary: Represents an evaluated design-time project item.
+  summary: "확인 된 디자인 타임 프로젝트 항목을 나타냅니다."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{ItemType}={EvaluatedInclude} [{UnevaluatedInclude}] #DirectMetadata={DirectMetadataCount}")]
@@ -49,13 +49,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all item metadata.
-  remarks: Does not include metadata from item definitions. Does not include built-in metadata, such as "FullPath".
+  summary: "모든 항목 메타 데이터에 대 한 열거자를 가져옵니다."
+  remarks: "항목 정의에서 메타 데이터를 포함 하지 않습니다. &quot;FullPath&quot;와 같은 기본 제공 메타 데이터를 포함 하지 않습니다."
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Evaluation.ProjectMetadata> DirectMetadata { get; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectMetadata}
-      description: Returns an enumerator over all item metadata, which can never be null.
+      description: "Null 합니다 모든 항목 메타 데이터에 대 한 열거자를 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.DirectMetadata*
   exceptions: []
   platform:
@@ -72,13 +72,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the count of metadata for this item.
-  remarks: Does not include metadata from item definitions. Does not include built-in metadata, such as "FullPath".
+  summary: "이 항목에 대 한 메타 데이터의 수를 가져옵니다."
+  remarks: "항목 정의에서 메타 데이터를 포함 하지 않습니다. &quot;FullPath&quot;와 같은 기본 제공 메타 데이터를 포함 하지 않습니다."
   syntax:
     content: public int DirectMetadataCount { get; }
     return:
       type: System.Int32
-      description: Returns the count of metadata for this item.
+      description: "이 항목에 대 한 메타 데이터의 수를 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.DirectMetadataCount*
   exceptions: []
   platform:
@@ -95,13 +95,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the evaluated value of the Include attribute.
-  remarks: Escaped characters are not present.
+  summary: "Include 특성의 확인된 된 값을 가져옵니다."
+  remarks: "이스케이프 된 문자 나타나지 않습니다."
   syntax:
     content: public string EvaluatedInclude { get; }
     return:
       type: System.String
-      description: Returns the evaluated value of the Include attribute.
+      description: "Include 특성의 확인된 된 값을 반환합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.EvaluatedInclude*
   exceptions: []
   platform:
@@ -118,17 +118,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the evaluated value of the given metadata for this item.
-  remarks: May include metadata from an item definition. Does not include built-in metadata, such as "FullPath".
+  summary: "이 항목에 대 한 지정된 된 메타 데이터의 확인된 된 값을 가져옵니다."
+  remarks: "항목 정의에서 메타 데이터를 포함할 수 있습니다. &quot;FullPath&quot;와 같은 기본 제공 메타 데이터를 포함 하지 않습니다."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata GetMetadata (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the metadata whose value is retrieved.
+      description: "해당 값을 검색 하는 메타 데이터의 이름입니다."
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: Gets the evaluated value of the given metadata for this item. Returns null if no metadata exists with the given name.
+      description: "이 항목에 대 한 지정된 된 메타 데이터의 확인된 된 값을 가져옵니다. 지정 된 이름의 메타 데이터가 없으면 null을 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.GetMetadata*
   exceptions: []
   platform:
@@ -145,17 +145,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Get the evaluated value of the given metadata for this item, including metadata originating from an item definition.
-  remarks: "To determine whether metadata exist, whether it has a value or not, use <xref:Microsoft.Build.Evaluation.ProjectItem.HasMetadata%2A>.  \n  \n This method may be used to access the value of built-in metadata, such as \"FullPath\"."
+  summary: "항목 정의에서 생성 된 메타 데이터를 포함 하 여이 항목에 대 한 지정된 된 메타 데이터의 확인된 된 값을 가져옵니다."
+  remarks: "메타 데이터의 존재 여부를 확인 하려면 있는지 값 여부, <xref:Microsoft.Build.Evaluation.ProjectItem.HasMetadata%2A>.</xref:Microsoft.Build.Evaluation.ProjectItem.HasMetadata%2A> 사용       &quot;FullPath&quot;와 같은 기본 제공 메타 데이터 값에 액세스 하려면이 메서드를 사용할 수 있습니다."
   syntax:
     content: public string GetMetadataValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the metadata whose value is retrieved.
+      description: "해당 값을 검색 하는 메타 데이터의 이름입니다."
     return:
       type: System.String
-      description: Returns the evaluated value of the given metadata for this item, including metadata originating from an item definition. Returns an empty string if no metadata exists with the given name.
+      description: "항목 정의에서 생성 된 메타 데이터를 포함 하 여이 항목에 대 한 지정된 된 메타 데이터의 확인된 된 값을 반환 합니다. 지정 된 이름의 메타 데이터가 없으면 빈 문자열을 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue*
   exceptions: []
   platform:
@@ -172,17 +172,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Determines whether metadata with the given name is defined on this item.
-  remarks: Includes built-in metadata and metadata originating from item definitions.
+  summary: "이 항목에 지정 된 이름의 메타 데이터 정의 되어 있는지 여부를 결정 합니다."
+  remarks: "기본 제공 메타 데이터 및 항목 정의에서 생성 된 메타 데이터를 포함 합니다."
   syntax:
     content: public bool HasMetadata (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the metadata to be searched for.
+      description: "검색할 메타 데이터의 이름입니다."
     return:
       type: System.Boolean
-      description: Returns true if metadata with the given name is defined on this item; false otherwise.
+      description: "이 항목;에 지정 된 이름의 메타 데이터를 정의 하는 경우 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.ProjectItem.HasMetadata*
   exceptions: []
   platform:
@@ -199,12 +199,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Determines if this item originates from an imported file.
+  summary: "이 항목이 가져온된 파일에서 생성 하는 경우를 결정 합니다."
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: Return true if this item originates from an imported file; false otherwise.
+      description: "이 항목이 가져온된 파일;에서 생성 하는 경우 true를 반환합니다 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.ProjectItem.IsImported*
   exceptions: []
   platform:
@@ -221,12 +221,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets the type of this item.
+  summary: "이 항목의 형식을 가져오거나 설정 합니다."
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: Returns the item type.
+      description: "항목 형식을 반환합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.ItemType*
   exceptions: []
   platform:
@@ -243,13 +243,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all the metadata for this item, including metadata originating from item definitions.
-  remarks: "Does not include built-in metadata, such as \"FullPath\".  \n  \n To add, remove, or change the values of built-in metadata, use <xref:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue%2A> and <xref:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue%2A>."
+  summary: "항목 정의에서 생성 된 메타 데이터를 포함 하 여이 항목에 대 한 모든 메타 데이터를 가져옵니다."
+  remarks: "&quot;FullPath&quot;와 같은 기본 제공 메타 데이터를 포함 하지 않습니다.       추가, 제거 또는 기본 제공 메타 데이터의 값을 변경, 사용 <xref:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue%2A>및 <xref:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue%2A>.</xref:Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue%2A> </xref:Microsoft.Build.Evaluation.ProjectItem.GetMetadataValue%2A>"
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectMetadata> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectMetadata}
-      description: Returns all the metadata for this item, including metadata originating from item definitions.
+      description: "항목 정의에서 생성 된 메타 데이터를 포함 하 여이 항목에 대 한 모든 메타 데이터를 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.Metadata*
   exceptions: []
   platform:
@@ -266,12 +266,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the count of metadata for this item, including any metadata originating from item definitions, and any built-in metadata.
+  summary: "항목 정의에서 생성 된 메타 데이터를 포함 하 여이 항목에 대 한 메타 데이터 및 기본 제공 메타 데이터의 수를 가져옵니다."
   syntax:
     content: public int MetadataCount { get; }
     return:
       type: System.Int32
-      description: Returns the count of metadata for this item, including any metadata originating from item definitions, and any built-in metadata.
+      description: "항목 정의에서 생성 된 메타 데이터를 포함 하 여이 항목에 대 한 메타 데이터 및 기본 제공 메타 데이터의 수를 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.MetadataCount*
   exceptions: []
   platform:
@@ -288,13 +288,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the project that contains this project item.
-  remarks: Project items are always contained by a project.
+  summary: "이 프로젝트 항목을 포함 하는 프로젝트를 가져옵니다."
+  remarks: "프로젝트 항목은 항상 프로젝트에 포함 됩니다."
   syntax:
     content: public Microsoft.Build.Evaluation.Project Project { get; }
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: Returns the project that contains this project item.
+      description: "이 프로젝트 항목을 포함 하는 프로젝트를 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.Project*
   exceptions: []
   platform:
@@ -311,17 +311,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes any metadata with the given name.
-  remarks: "Throws InvalidArgumentException if the metadata name refers to built-in metadata, like \"FullPath\".  \n  \n Throws InvalidOperationException if the metadata name refers to metadata that originates from an item definition."
+  summary: "지정한 이름을 가진 모든 메타 데이터를 제거합니다."
+  remarks: "InvalidArgumentException 메타 데이터 이름이 &quot;FullPath&quot;와 같은 기본 제공 메타 데이터를 참조 하는 경우 throw 됩니다.       메타 데이터 이름이 항목 정의에서 생성 된 메타 데이터를 참조 하는 경우 InvalidOperationException을 throw 합니다."
   syntax:
     content: public bool RemoveMetadata (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the metadata to remove.
+      description: "제거할 메타 데이터의 이름입니다."
     return:
       type: System.Boolean
-      description: Returns true if metadata with the given name exists before removal; false otherwise.
+      description: "지정 된 이름의 메타 데이터가; 제거 하기 전에 존재 하는 경우 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.ProjectItem.RemoveMetadata*
   exceptions: []
   platform:
@@ -338,14 +338,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Renames the item to the given name.
-  remarks: Equivalent to setting the <xref:Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude%2A> value. Generally, no evaluation occurs, because this could result in several items, which has no meaning in the context of renaming a single item. However if the item does not need to be split, and the new value evaluates to exactly one item, then its evaluated Include attribute is updated with the evaluated value.
+  summary: "항목이 지정 된 이름으로 이름을 바꿉니다."
+  remarks: "로 설정 된 <xref:Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude%2A>값.</xref:Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude%2A> 일반적으로이 발생할 수 있으므로 여러 항목에서 단일 항목의 컨텍스트에서 의미가 있는 계산은 필요 하지 않은 발생 합니다. 그러나 항목 분할 될 필요가 없는 경우 새 값이 항목이 정확히&1;로 계산 평가 Include 특성의 계산된 값으로 업데이트 됩니다."
   syntax:
     content: public void Rename (string name);
     parameters:
     - id: name
       type: System.String
-      description: The new name of the item.
+      description: "항목의 새 이름입니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.Rename*
   exceptions: []
   platform:
@@ -362,20 +362,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds metadata with the given name and unevaluated value to the item.
-  remarks: "Updates the value of existing metadata if metadata already exists with the given name on the item, as long as it does not originate from an item definition. Updates the evaluated project, but does not affect anything else in the project until reevaluation.  \n  \n For example, if a piece of metadata named \"m\" is added on item of type \"i\", it does not affect \"j\" which is evaluated from \"@(j->'%(m)')\" until reevaluation. Also if the unevaluated value of \"m\" is set to something that is modified by evaluation, such as \"$(p)\", the evaluated value will be set to literally \"$(p)\" until reevaluation.  \n  \n Special characters in the unevaluated value should be converted to escape characters."
+  summary: "항목에 지정 된 이름 및 확인 되지 않은 값 사용 하 여 메타 데이터를 추가합니다."
+  remarks: "항목 정의에서 가져오지 않는 것으로 메타 데이터 항목에 지정 된 이름의 이미 있으면 기존 메타 데이터의 값을 업데이트 합니다. 평가 된 프로젝트를 업데이트 하지만 영향을 주지 않습니다 다른 프로젝트에 다시 확인할 때까지 합니다.       예를 들어, &quot;i&quot; 형식의 항목에서 &quot;m&quot; 라는 메타 데이터가 추가 되는 경우 아무런 영향이 없습니다에서 계산 되는 &quot;j&quot; &quot;@(&quot;% (m)&quot;-> j)&quot; 재계산 해야 합니다. 또한 &quot;m&quot;의 확인 되지 않은 값은 평가, &quot;$(p)&quot;와 같은 의해 수정 된 것으로 설정 되어 있는 경우 계산된 값 설정 됩니다를 문자 그대로 &quot;$(p)&quot; 다시 확인할 때까지.       확인 되지 않은 값의 특수 문자는 이스케이프 문자를 변환 합니다."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata SetMetadataValue (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: The name of the metadata to add.
+      description: "추가할 메타 데이터의 이름입니다."
     - id: unevaluatedValue
       type: System.String
-      description: The unevaluated value of the metadata to add.
+      description: "추가할 메타 데이터의 확인 되지 않은 값입니다."
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: Returns the new metadata. If metadata with the given name already exists, returns this metadata.
+      description: "새 메타 데이터를 반환합니다. 지정 된 이름의 메타 데이터에 이미 있으면이 메타 데이터를 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.SetMetadataValue*
   exceptions: []
   platform:
@@ -392,12 +392,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets the unevaluated value of the Include attribute.
+  summary: "Include 특성 확인 되지 않은 값을 가져오거나 설정 합니다."
   syntax:
     content: public string UnevaluatedInclude { get; set; }
     return:
       type: System.String
-      description: Returns the unevaluated value of the Include attribute.
+      description: "Include 특성 확인 되지 않은 값을 반환합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.UnevaluatedInclude*
   exceptions: []
   platform:
@@ -414,12 +414,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the item element that is associated with this item.
+  summary: "이 항목에 연관 된 항목 요소를 가져옵니다."
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement Xml { get; }
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: Returns the item element that is associated with this item, which can never be null.
+      description: "Null 수 없는이 항목과 연결 하는 항목 요소를 반환 합니다."
   overload: Microsoft.Build.Evaluation.ProjectItem.Xml*
   exceptions: []
   platform:

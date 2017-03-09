@@ -95,7 +95,7 @@ items:
   nameWithType: Project
   fullName: Microsoft.Build.Evaluation.Project
   type: Class
-  summary: Represents a project with design time semantics. This class can load project files, edit items and properties and build projects.
+  summary: "디자인 타임 의미 체계를 사용 하 여 프로젝트를 나타냅니다. 이 클래스 프로젝트 파일을 로드, 항목 및 속성을 편집 및 프로젝트를 빌드할 수 있습니다."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{FullPath} EffectiveToolsVersion={ToolsVersion} #GlobalProperties={data.globalProperties.Count} #Properties={data.Properties.Count} #ItemTypes={data.ItemTypes.Count} #ItemDefinitions={data.ItemDefinitions.Count} #Items={data.Items.Count} #Targets={data.Targets.Count}")]
@@ -119,8 +119,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project using the global project collection global properties and default tools version.
-  remarks: This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.
+  summary: "전역 프로젝트 컬렉션의 전역 속성 및 기본 도구 버전을 사용 하 여 빈 프로젝트를 생성 합니다."
+  remarks: "이 프로젝트는 경로 지정 된 전체 소스 프로젝트 파일을 일반적으로 프로젝트를 저장 하 여 때 전역 프로젝트 컬렉션에 추가 됩니다."
   syntax:
     content: public Project ();
     parameters: []
@@ -140,14 +140,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project and evaluates it using the given project root and the global project collection global properties and default tools version.
-  remarks: "This project is added to the global project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "빈 프로젝트를 생성 하 고 지정된 된 프로젝트 루트 및 전역 프로젝트 컬렉션 전역 속성 및 기본 도구 버전을 사용 하 여를 평가 합니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 전역 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: ProjectRootElement to use for evaluation.
+      description: "평가 위해 사용 하 여 ProjectRootElement 합니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -164,14 +164,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project using the given project collection global properties and default tools version.
-  remarks: This project is added to the given project collection when it is given the full path to the source project file, typically by saving the project.
+  summary: "지정 된 프로젝트 컬렉션의 전역 속성 및 기본 도구 버전을 사용 하 여 빈 프로젝트를 생성 합니다."
+  remarks: "이 프로젝트를 지정의 전체 경로 소스 프로젝트 파일을 일반적으로 프로젝트를 저장 하 여 지정된 된 프로젝트 컬렉션에 추가 됩니다."
   syntax:
     content: public Project (Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection that the new project is added to.
+      description: "새 프로젝트에 추가 되는 프로젝트 컬렉션입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -188,19 +188,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the global project collection global properties and default tools version.
-  remarks: "The project is added to the global project collection.  \n  \n Throws InvalidOperationException if there is already a project in the project collection that evaluates this source project file. May throw IO-related exceptions."
+  summary: "프로젝트를 생성 하 고 전역 프로젝트 컬렉션의 전역 속성 및 기본 도구 버전을 지정 된 소스 프로젝트 파일에서이 확인 합니다."
+  remarks: "프로젝트는 전역 프로젝트 컬렉션에 추가 됩니다.       이 소스 프로젝트 파일을 평가 하는 프로젝트 컬렉션에서 프로젝트를 이미이 InvalidOperationException을 throw 합니다. IO 관련 예외를 throw 할 수 있습니다."
   syntax:
     content: public Project (string projectFile);
     parameters:
     - id: projectFile
       type: System.String
-      description: The source project file to be evaluated.
+      description: "평가할 소스 프로젝트 파일입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions:
   - type: Microsoft.Build.Exceptions.InvalidProjectFileException
     commentId: T:Microsoft.Build.Exceptions.InvalidProjectFileException
-    description: If the evaluation fails.
+    description: "평가 실패 하면 합니다."
   platform:
   - net462
 - uid: Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader)
@@ -215,14 +215,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the global project collection global properties and default tools version.
-  remarks: "This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 지정된 된 XML 판독기에서 소스 코드를 평가 합니다. 소스 코드는 전역 프로젝트 컬렉션의 전역 속성 및 기본 도구 버전을 사용 하 여 확인 됩니다."
+  remarks: "이 프로젝트는 경로 지정 된 전체 소스 프로젝트 파일을 일반적으로 프로젝트를 저장 하 여 때 전역 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "프로젝트 소스 코드를 읽을 Xml 판독기입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -239,20 +239,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project and evaluates it using the given project root and with the given global properties and given tools version.
-  remarks: "This project is added to the global project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "빈 프로젝트를 생성 하 고 지정된 된 프로젝트 루트를 사용 하 여 확인 하 고 지정 된 전역 속성 및 지정 된 도구 버전입니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 전역 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "평가 위해 사용 하 여 프로젝트 루트입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -269,20 +269,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project, to be evaluated with the given project collection and with the given global properties and given tools version.
-  remarks: The project is added to the specified project collection when it is given the full path to the source project file, typically by saving the project.
+  summary: "지정 된 전역 속성을 사용 하 여 지정된 된 프로젝트 컬렉션으로 확인 하 고 지정 된 도구 버전을 빈 프로젝트를 생성 합니다."
+  remarks: "프로젝트 경로 지정 된 전체 소스 프로젝트 파일을 일반적으로 프로젝트를 저장 하 여 때 지정된 된 프로젝트 컬렉션에 추가 됩니다."
   syntax:
     content: public Project (System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: The tools version used to evaluate the project. May be null.
+      description: "프로젝트를 확인 하는 데 사용 도구 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the new project will be added to.
+      description: "프로젝트 컬렉션에 새 프로젝트에 추가 됩니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -299,20 +299,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties and given tools version.
-  remarks: "The project is added to the global project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "프로젝트를 생성 하 고 지정 된 소스 프로젝트 파일에서 지정 된 전역 속성 및 지정 된 도구 버전 평가 합니다."
+  remarks: "프로젝트는 전역 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다. IO 관련 예외를 throw 할 수 있습니다."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "평가할 소스 프로젝트 파일에 대 한 경로입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -329,20 +329,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties and given tools version.
-  remarks: "This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 지정된 된 XML 판독기에서 소스 코드를 평가 합니다. 소스 코드는 지정 된 전역 속성 평가 되 고 지정 된 도구 버전입니다."
+  remarks: "이 프로젝트는 경로 지정 된 전체 소스 프로젝트 파일을 일반적으로 프로젝트를 저장 하 여 때 전역 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "프로젝트 소스 코드를 읽을 Xml 판독기입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -359,23 +359,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it using the given project root and with the given global properties and given tools version.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 지정된 된 프로젝트 루트를 사용 하 여 평가 하 고 지정 된 전역 속성 및 지정 된 도구 버전입니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "평가 위해 사용 하 여 프로젝트 루트입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -392,23 +392,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties and given tools version.
-  remarks: "The project is added to the given project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "프로젝트를 생성 하 고 지정 된 소스 프로젝트 파일에서 지정 된 전역 속성 및 지정 된 도구 버전 평가 합니다."
+  remarks: "프로젝트는 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다. IO 관련 예외를 throw 할 수 있습니다."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "평가할 소스 프로젝트 파일에 대 한 경로입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: The global properties. May be null.
+      description: "전역 속성입니다. Null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: The tools version. May be null.
+      description: "도구 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -425,23 +425,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties and given tools version.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 지정된 된 XML 판독기에서 소스 코드를 평가 합니다. 소스 코드는 지정 된 전역 속성 평가 되 고 지정 된 도구 버전입니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "프로젝트 소스 코드를 읽을 Xml 판독기입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -458,26 +458,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it using the given project root and with the given global properties, given tools version, and given load settings.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 평가 하는 지정된 된 프로젝트 루트를 사용 하 여 지정 된 도구 버전을 지정 된 전역 속성을 사용 하 고 지정 된 로드 설정을 합니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "평가 위해 사용 하 여 프로젝트 루트입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "계산에 사용할 부하 설정입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -494,26 +494,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties, given tools version, and given load settings.
-  remarks: "The project is added to the given project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "프로젝트를 생성 하 고 지정 된 소스 프로젝트 파일 및 지정 된 전역 속성을 지정 된 도구 버전 및 지정 된 로드 설정을 평가 합니다."
+  remarks: "프로젝트는 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다. IO 관련 예외를 throw 할 수 있습니다."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "평가할 소스 프로젝트 파일에 대 한 경로입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: The tools version. May be null.
+      description: "도구 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "계산에 사용할 부하 설정입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -530,26 +530,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties and given tools version.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 지정된 된 XML 판독기에서 소스 코드를 평가 합니다. 소스 코드는 지정 된 전역 속성 평가 되 고 지정 된 도구 버전입니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader from which to read project source code.
+      description: "프로젝트 소스 코드를 읽을 Xml 판독기입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "계산에 사용할 부하 설정입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -566,29 +566,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it using the given project root and with the given global properties, tools and sub-toolset versions, project collection, and load settings.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 지정된 된 프로젝트 루트를 사용 하 여 평가 및 프로젝트 컬렉션의 지정 된 전역 속성, 도구 및 하위 도구 집합 버전 및 설정을 로드 합니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "평가 위해 사용 하 여 프로젝트 루트입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
     - id: subToolsetVersion
       type: System.String
-      description: Sub toolset version to evaluate with. May be null.
+      description: "확인에 하위 도구 집합 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "계산에 사용할 부하 설정입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -605,29 +605,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties, tools and sub-toolset versions, project collection, and load settings.
-  remarks: "The project is added to the given project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "프로젝트를 생성 하 고 지정 된 소스 프로젝트 파일 및 지정 된 전역 속성, 도구 및 하위 도구 집합 버전, 프로젝트 컬렉션 및 로드 설정을 평가 합니다."
+  remarks: "프로젝트는 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다. IO 관련 예외를 throw 할 수 있습니다."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "평가할 소스 프로젝트 파일에 대 한 경로입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: The tools version. May be null.
+      description: "도구 버전입니다. Null 일 수 있습니다."
     - id: subToolsetVersion
       type: System.String
-      description: The sub toolset version. May be null.
+      description: "하위 도구 집합 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "계산에 사용할 부하 설정입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -644,29 +644,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties, tools and sub-toolset versions, project collection, and load settings.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "프로젝트를 생성 하 고 지정된 된 XML 판독기에서 소스 코드를 평가 합니다. 소스 코드는 지정 된 전역 속성, 도구 및 하위 도구 집합 버전, 프로젝트 컬렉션 및 부하 설정 확인 됩니다."
+  remarks: "이 프로젝트는이 프로젝트 또는 지정된 된 프로젝트 루트 된 원본 프로젝트 파일 전체 경로 지정 하는 경우 지정된 된 프로젝트 컬렉션에 추가 됩니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다. Throw InvalidOperationException 이미 있는 경우 해당 프로젝트는 프로젝트 컬렉션에 로드 합니다."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "프로젝트 소스 코드를 읽을 Xml 판독기입니다."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "확인에 대 한 전역 속성입니다. 포함 하는 프로젝트 컬렉션의 전역 속성이 사용 되는 경우에서 null 일 수 있습니다."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "확인에 도구 버전입니다. Null 일 수 있습니다."
     - id: subToolsetVersion
       type: System.String
-      description: Sub Toolset version to evaluate with. May be null.
+      description: "확인에 하위 도구 집합 버전입니다. Null 일 수 있습니다."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "프로젝트는 프로젝트 컬렉션에 추가 됩니다. Null 일 수 있습니다."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "계산에 사용할 부하 설정입니다."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -683,20 +683,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with no metadata to the project.
-  remarks: "Any metadata can be added later. Does not modify the project source if a wildcard expression already includes the new item.  \n  \n Evaluation takes place on a best-effort basis. Items that are defined in the project source following the new item may be used for evaluation. Only this item is evaluated. Other items that might depend on it are not affected."
+  summary: "프로젝트에 메타 데이터가 없는 항목을 추가 합니다."
+  remarks: "모든 메타 데이터는 나중에 추가할 수 있습니다. 와일드 카드 식을 이미 새 항목을 포함 하는 경우에 프로젝트 소스를 수정 하지 않습니다.       계산은은 최선의 노력을 기반으로 수행이 됩니다. 새 항목 다음에 프로젝트 소스에 정의 된 항목을 평가 위해 사용할 수 있습니다. 이 항목에만 평가 됩니다. 다른 항목에 종속 된 영향을 받지 않습니다."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItem (string itemType, string unevaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type of the added item.
+      description: "추가 된 항목의 항목 유형입니다."
     - id: unevaluatedInclude
       type: System.String
-      description: Include attribute of the item to be added.
+      description: "추가할 항목의 특성을 포함 합니다."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns the added item.
+      description: "추가 된 항목을 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.AddItem*
   exceptions: []
   platform:
@@ -713,23 +713,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with the given metadata to the project.
-  remarks: "The metadata may be null, which indicates no metadata.  \n  \n Evaluation takes place on a best-effort basis. Items that are defined in the project source following the new item may be used for evaluation. Only this item is evaluated. Other items that might depend on it are not affected."
+  summary: "프로젝트에 있는 지정된 된 메타 데이터 항목을 추가 합니다."
+  remarks: "메타 데이터는 null 일 수 없음을 나타내는 합니다.       계산은은 최선의 노력을 기반으로 수행이 됩니다. 새 항목 다음에 프로젝트 소스에 정의 된 항목을 평가 위해 사용할 수 있습니다. 이 항목에만 평가 됩니다. 다른 항목에 종속 된 영향을 받지 않습니다."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItem (string itemType, string unevaluatedInclude, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type of the added item.
+      description: "추가 된 항목의 항목 유형입니다."
     - id: unevaluatedInclude
       type: System.String
-      description: Include attribute of the item to be added.
+      description: "추가할 항목의 특성을 포함 합니다."
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: The metadata of the added item.
+      description: "추가 된 항목의 메타 데이터입니다."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns the added item.
+      description: "추가 된 항목을 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.AddItem*
   exceptions: []
   platform:
@@ -746,20 +746,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with no metadata to the project.  Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group.  Makes no effort to locate the new item near similar items.
-  remarks: "Appends the item to the first item group that does not have a condition and has either no children or whose first child is an item of the same type.  \n  \n Evaluates on a best-effort basis: -expands with all items. Items that are defined in the XML below the new item may be used, even though in a real evaluation they would not be.  \n  \n Only this item is evaluated. Other items that might depend on it are not affected.  \n  \n This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation."
+  summary: "프로젝트에 메타 데이터가 없는 항목을 추가 합니다.  기존 와일드 카드 일치는 새 항목을 이미 경우 하지 않은 경우 항목 그룹에서 첫 번째 항목을 참조 하지를 만듭니다.  유사 항목 근처 새 항목을 찾을 수 없는 노력을 만듭니다."
+  remarks: "첫 번째 자식이 동일한 유형의 항목 또는 조건이 없는 하 고 자식이 첫 번째 항목 그룹에 항목을 추가 합니다.       최선의 노력을 기반으로 계산:-모든 항목을 확장 합니다. 실수부에서는 그렇지 않을 수 있지만 새 항목 아래 XML에 정의 된 항목을 사용할 수 있습니다.       이 항목에만 평가 됩니다. 다른 항목에 종속 된 영향을 받지 않습니다.       이 편의 위해 이해를 반드시 두고 프로젝트를 완벽 하 게 자체 일관 된 상태로 다시 확인할 때까지 합니다."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItemFast (string itemType, string unevaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be added.
+      description: "추가할 항목 유형입니다."
     - id: unevaluatedInclude
       type: System.String
-      description: The unevaluated Include attribute to be added to the item.
+      description: "항목에 추가할 확인 되지 않은 포함 특성입니다."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns a list of the project items added.
+      description: "추가 된 프로젝트 항목의 목록을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.AddItemFast*
   exceptions: []
   platform:
@@ -776,23 +776,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with metadata to the project. Metadata may be null, indicating no metadata. Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group. Makes no effort to locate the new item near similar items.
-  remarks: "Appends the item to the first item group that does not have a condition and has either no children or whose first child is an item of the same type.  \n  \n Evaluates on a best-effort basis: -expands with all items. Items that are defined in the XML below the new item may be used, even though in a real evaluation they would not be.  \n  \n Only this item is evaluated. Other items that might depend on it is not affected.  \n  \n This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation."
+  summary: "프로젝트에 메타 데이터와 항목을 추가 합니다. 메타 데이터가 나타내는 메타 데이터 null 일 수 있습니다. 기존 와일드 카드 일치는 새 항목을 이미 경우 하지 않은 경우 항목 그룹에서 첫 번째 항목을 참조 하지를 만듭니다. 유사 항목 근처 새 항목을 찾을 수 없는 노력을 만듭니다."
+  remarks: "첫 번째 자식이 동일한 유형의 항목 또는 조건이 없는 하 고 자식이 첫 번째 항목 그룹에 항목을 추가 합니다.       최선의 노력을 기반으로 계산:-모든 항목을 확장 합니다. 실수부에서는 그렇지 않을 수 있지만 새 항목 아래 XML에 정의 된 항목을 사용할 수 있습니다.       이 항목에만 평가 됩니다. 에 종속 된 다른 항목은 영향을 받지 않습니다.       이 편의 위해 이해를 반드시 두고 프로젝트를 완벽 하 게 자체 일관 된 상태로 다시 확인할 때까지 합니다."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItemFast (string itemType, string unevaluatedInclude, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be added.
+      description: "추가할 항목 유형입니다."
     - id: unevaluatedInclude
       type: System.String
-      description: The unevaluated Include attribute to be added to the item.
+      description: "항목에 추가할 확인 되지 않은 포함 특성입니다."
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: The metadata to be added.
+      description: "추가할 메타 데이터입니다."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns a list of the project items added.
+      description: "추가 된 프로젝트 항목의 목록을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.AddItemFast*
   exceptions: []
   platform:
@@ -809,13 +809,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all item definition metadata encountered during evaluation.
-  remarks: Item metadata is read during the second evaluation pass. Unlike metadata returned by the ItemDefinitions property, this metadata is ordered, and includes any metadata subsequently overridden with the same name and item type.
+  summary: "평가 하는 동안 발견 된 모든 항목 정의 메타 데이터를 가져옵니다."
+  remarks: "두 번째 계산 패스 항목 메타 데이터를 읽습니다. ItemDefinitions 속성에서 반환 된 메타 데이터와 달리이 메타 데이터 정렬 되는 경우와 이후에 동일한 이름 및 항목 유형으로 재정의 하는 모든 메타 데이터를 포함 합니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectMetadata> AllEvaluatedItemDefinitionMetadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectMetadata}
-      description: Returns all item definition metadata encountered during evaluation. This does not include any elements whose conditions did not evaluate to true, nor any item definition metadata added since the last evaluation.
+      description: "평가 하는 동안 발견 된 모든 항목 정의 메타 데이터를 반환 합니다. 해당 조건이 true로 평가 되지 않은 모든 요소와 마지막 평가 이후에 추가 된 모든 항목 정의 메타 데이터에는 포함 되지 않습니다."
   overload: Microsoft.Build.Evaluation.Project.AllEvaluatedItemDefinitionMetadata*
   exceptions: []
   platform:
@@ -832,13 +832,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all items encountered during evaluation. These are read during the third evaluation pass.
-  remarks: "Unlike those items returned by the Items property, these are ordered with respect to all other items encountered during evaluation, not just ordered with respect to items of the same item type.  \n  \n In some applications, this complete mutual ordering is significant, and such hosts can use this property.  \n  \n The enumeration does not include any elements whose conditions did not evaluate to true, nor does it include any items added since the last evaluation."
+  summary: "평가 하는 동안 발생 하는 모든 항목에 대해 열거자를 가져옵니다. 세 번째 평가 단계를 읽습니다."
+  remarks: "Items 속성에서 반환 된 해당 항목과 달리 뿐만 아니라 동일한 항목 형식 항목의 상대적으로 정렬 됨을 평가 하는 동안 발생 한 다른 모든 항목에 대해 정렬 됩니다.       일부 응용 프로그램에서이 전체 상호 중요 순서 지정 및 이러한 호스트가이 속성을 사용할 수 있습니다.       열거형 해당 조건이 true로 평가 되지 않은 요소는 포함 하지 않는 마지막 평가 이후 추가 항목도 포함 하지 않습니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> AllEvaluatedItems { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns an enumerator over all items encountered during evaluation. These are read during the third evaluation pass.
+      description: "평가 하는 동안 발생 하는 모든 항목에 대해 열거자를 반환 합니다. 세 번째 평가 단계를 읽습니다."
   overload: Microsoft.Build.Evaluation.Project.AllEvaluatedItems*
   exceptions: []
   platform:
@@ -855,13 +855,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all properties encountered during evaluation.
-  remarks: These properties are read during the first evaluation pass. Unlike properties returned by the Properties property, these are ordered, and includes any properties subsequently overridden with the same name.
+  summary: "평가 하는 동안 발견 된 모든 속성을 가져옵니다."
+  remarks: "첫 번째 계산 패스 동안 이러한 속성을 읽습니다. Properties 속성에서 반환 된 속성과 달리은 정렬 이러한 고 이후에 동일한 이름의 재정의 된 속성을 포함 합니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectProperty> AllEvaluatedProperties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectProperty}
-      description: Returns all properties encountered during evaluation. This does not include any properties whose conditions did not evaluate to true, nor any properties added since the last evaluation.
+      description: "평가 하는 동안 발견 된 모든 속성을 반환 합니다. 해당 조건이 true로 평가 되지 않은 모든 속성이 나 마지막 평가 이후에 추가 된 모든 속성에는 포함 되지 않습니다."
   overload: Microsoft.Build.Evaluation.Project.AllEvaluatedProperties*
   exceptions: []
   platform:
@@ -878,14 +878,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "기본 대상을 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build ();
     parameters: []
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -902,17 +902,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets and the given logger.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "기본 대상 및 지정된 된로 거를 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (Microsoft.Build.Framework.ILogger logger);
     parameters:
     - id: logger
       type: Microsoft.Build.Framework.ILogger
-      description: The logger to be used during the build.
+      description: "로 거를 빌드하는 동안 사용할 수 있습니다."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -929,17 +929,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets and the given loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "기본 대상 및 지정된 된로 거를 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: An enumerator over all loggers to be used during the build.
+      description: "빌드 중에 사용할 수 있는 모든로 거에 대 한 열거자입니다."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -956,17 +956,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given target.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "지정한 대상을 구축 하는이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (string target);
     parameters:
     - id: target
       type: System.String
-      description: The target to be built.
+      description: "빌드할 대상입니다."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -983,17 +983,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given targets.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "특정된 대상 빌드이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (string[] targets);
     parameters:
     - id: targets
       type: System.String[]
-      description: An array of targets to be built.
+      description: "배열 빌드할 대상입니다."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1010,20 +1010,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets and the given loggers and remote loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "기본 대상 지정된로 거 및 원격로 거를 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "빌드하는 동안 사용할 로거입니다."
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: The remote loggers to be used during the build.
+      description: "빌드 중에 사용할 원격 로거."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1040,20 +1040,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given target and using the given loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "지정한 대상 빌드하고 지정된 된로 거를 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: target
       type: System.String
-      description: The target to be built.
+      description: "빌드할 대상입니다."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "빌드하는 동안 사용할 로거입니다."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1070,20 +1070,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given targets and using the given loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "지정된 된 대상을 빌드하고 지정된 된로 거를 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: The targets to be built.
+      description: "빌드할 대상입니다."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "빌드하는 동안 사용할 로거입니다."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1100,23 +1100,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given target and using the given loggers and remote loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "지정한 대상 빌드하고 지정된로 거와 원격로 거를 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: target
       type: System.String
-      description: The target to be built.
+      description: "빌드할 대상입니다."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "빌드하는 동안 사용할 로거입니다."
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: The remote loggers to be used during the build.
+      description: "빌드 중에 사용할 원격 로거."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1133,23 +1133,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given targets and using the given loggers and remote loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "지정된 된 대상을 빌드하고 지정된로 거와 원격로 거를 사용 하 여이 프로젝트를 빌드합니다."
+  remarks: "를 설정 하거나 빌드를 위해 가상 항목을 가져와 프로젝트 인스턴스를 명시적으로 복제 하 고 빌드하십시오. 이 메서드는 프로젝트 개체를 수정 하지 않습니다."
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: The targets to be built.
+      description: "빌드할 대상입니다."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "빌드하는 동안 사용할 로거입니다."
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: The remote loggers to be used during the build.
+      description: "빌드 중에 사용할 원격 로거."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "성공에 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1166,13 +1166,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens.
+  summary: "속성, 속성 그룹, 가져오기에 있는 조건을 확인 하는 데 사용 되는 속성에 대 한 가능한 속성 값의 컬렉션을 가져옵니다 시기의입니다."
   remarks: 'For example, if the following conditions existed on properties in a project: Condition="''$(Configuration)&#124;$(Platform)'' == ''Debug&#124;x86''" Condition="''$(Configuration)'' == ''Release''" the table would be populated with { "Configuration", { "Debug", "Release" }} { "Platform", { "x86" }} This collection is used by Visual Studio to determine the configurations defined in the project'
   syntax:
     content: public System.Collections.Generic.IDictionary<string,System.Collections.Generic.List<string>> ConditionedProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.List{System.String}}
-      description: Returns a collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens. The collection is in canonical form. The name of the entry is the name of the property to be evaluated, and the value is a list of possible property values.
+      description: "속성, 속성 그룹, 가져오기에 있는 조건을 확인 하는 데 사용 되는 속성에 대 한 가능한 속성 값의 컬렉션을 반환 하 고 때의입니다. 정규 형식에서 컬렉션이입니다. 항목의 이름은 평가 되 고, 속성의 이름 및 값은 가능한 속성 값의 목록입니다."
   overload: Microsoft.Build.Evaluation.Project.ConditionedProperties*
   exceptions: []
   platform:
@@ -1189,14 +1189,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Creates a project instance based on this project, but completely disconnected from it.
-  remarks: Can be used to build independently. The original project is evaluated before creating the instance, if necessary, so that the original project is marked as unmodified.
+  summary: "이 프로젝트를 기반으로 하지만 여기에서 완전히 분리 프로젝트 인스턴스를 만듭니다."
+  remarks: "독립적으로 빌드하도록 사용 될 수 있습니다. 원래 프로젝트는 필요한 경우 원래 프로젝트 된 것으로 표시는 수정 되지 않은 경우 인스턴스를 만들기 전에 계산 됩니다."
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance CreateProjectInstance ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: Returns the project instance.
+      description: "프로젝트 인스턴스를 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.CreateProjectInstance*
   exceptions: []
   platform:
@@ -1213,17 +1213,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Creates a project instance based on this project, but completely disconnected from it.
-  remarks: Can be used to build independently. The original project is evaluated before creating the instance, if necessary, so that the original project is marked as unmodified.
+  summary: "이 프로젝트를 기반으로 하지만 여기에서 완전히 분리 프로젝트 인스턴스를 만듭니다."
+  remarks: "독립적으로 빌드하도록 사용 될 수 있습니다. 원래 프로젝트는 필요한 경우 원래 프로젝트 된 것으로 표시는 수정 되지 않은 경우 인스턴스를 만들기 전에 계산 됩니다."
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance CreateProjectInstance (Microsoft.Build.Execution.ProjectInstanceSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Execution.ProjectInstanceSettings
-      description: Determines whether created project instance is immutable and whether it contains a look up table to improve performance.
+      description: "만든된 프로젝트 인스턴스는 변경할 수 있는지 여부 및 성능을 향상 시키기 위해 테이블에 대 한 조회 포함 되어 있는지 여부를 결정 합니다."
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: Returns the project instance.
+      description: "프로젝트 인스턴스를 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.CreateProjectInstance*
   exceptions: []
   platform:
@@ -1240,12 +1240,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the root directory for this project.
+  summary: "이 프로젝트에 대 한 루트 디렉터리를 가져옵니다."
   syntax:
     content: public string DirectoryPath { get; }
     return:
       type: System.String
-      description: Returns the root directory for this project. The root directory is never null; in-memory projects use the current directory at the time of project load.
+      description: "이 프로젝트에 대 한 루트 디렉터리를 반환합니다. 루트 디렉터리는 null 일 수 있습니다. 메모리 내 프로젝트의 프로젝트 로드 시 현재 디렉터리를 사용합니다."
   overload: Microsoft.Build.Evaluation.Project.DirectoryPath*
   exceptions: []
   platform:
@@ -1262,12 +1262,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets a flag the determines whether <xref:Microsoft.Build.Evaluation.Project.MarkDirty*> is temporarily disabled. This allows, for example, a global property to be set without the project getting marked dirty for reevaluation as a consequence.
+  summary: "플래그를 가져오거나 설정 합니다.는 결정 여부 <xref:Microsoft.Build.Evaluation.Project.MarkDirty*>가 일시적으로 해제 합니다.</xref:Microsoft.Build.Evaluation.Project.MarkDirty*> 이 사용 하면 예를 들어, 전역 속성을 설정 된 것으로 표시 재확인을 위해 더티 결과적으로 프로젝트를 제외 합니다."
   syntax:
     content: public bool DisableMarkDirty { get; set; }
     return:
       type: System.Boolean
-      description: Returns a flag the determines whether <xref uid="langword_csharp_MarkDirty" name="MarkDirty" href=""></xref> is temporarily disabled.
+      description: "플래그를 반환는 결정 여부 <xref uid=&quot;langword_csharp_MarkDirty&quot; name=&quot;MarkDirty&quot; href=&quot;&quot;> </xref> 가 일시적으로 해제 합니다."
   overload: Microsoft.Build.Evaluation.Project.DisableMarkDirty*
   exceptions: []
   platform:
@@ -1284,13 +1284,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a number that is incremented every time that project is re-evaluated.
-  remarks: This value should be compared with previous values to see if the project has been re-evaluated. It should not be used to determine how many times the project has been re-evaluated since it may be incremented by more than one for a given re-evaluation.
+  summary: "해당 프로젝트를 다시 확인할 때마다 증가 하는 번호를 가져옵니다."
+  remarks: "이 값은 프로젝트가 다시 확인 된 경우 참조 하는 이전 값과 비교 해야 합니다. 주어진된 재평가 대 한 개 이상의 증가 될 수 있으므로 프로젝트 다시 평가 되었는지 얼마나 많은 시간을 확인 하는 사용 되지 해야 합니다."
   syntax:
     content: public int EvaluationCounter { get; }
     return:
       type: System.Int32
-      description: Returns the incremented value.
+      description: "증가 한 값을 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.EvaluationCounter*
   exceptions: []
   platform:
@@ -1307,17 +1307,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Evaluates the given string by expanding items and properties. The string is evaluated as if it were found at the very end of the project file.
-  remarks: This method can be used when best-effort evaluation is sufficient.
+  summary: "항목 및 속성을 확장 하 여 지정된 된 문자열을 확인 합니다. 문자열은 프로젝트 파일의 맨 끝에서 발견 된 것 처럼 계산 됩니다."
+  remarks: "최선의 평가 충분 한 경우이 메서드를 사용할 수 있습니다."
   syntax:
     content: public string ExpandString (string unexpandedValue);
     parameters:
     - id: unexpandedValue
       type: System.String
-      description: The string to be evaluated.
+      description: "평가할 문자열입니다."
     return:
       type: System.String
-      description: Returns the evaluated string.
+      description: "확인된 된 문자열을 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.ExpandString*
   exceptions: []
   platform:
@@ -1334,13 +1334,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets the full path to the project source file.
-  remarks: Setting this property on a project in a project collection renames the project.
+  summary: "프로젝트 소스 파일의 전체 경로 가져오거나 설정 합니다."
+  remarks: "프로젝트 컬렉션의 프로젝트에서이 속성을 설정 합니다. 프로젝트를 이름을 바꿉니다."
   syntax:
     content: public string FullPath { get; set; }
     return:
       type: System.String
-      description: Returns the full path to the project source file. Returns an empty string if the project was not loaded from disk.
+      description: "프로젝트 소스 파일의 전체 경로 반환합니다. 디스크에서 프로젝트를 로드 하지 않은 경우에 빈 문자열을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.FullPath*
   exceptions: []
   platform:
@@ -1357,16 +1357,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets evaluated, escaped value of the Include attribute of the provided items.
+  summary: "평가, 제공된 된 항목의 Include 특성의 값을 이스케이프 합니다."
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Evaluation.ProjectItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItem
-      description: The item to be evaluated and escaped.
+      description: "확인 하 고 이스케이프할 항목입니다."
     return:
       type: System.String
-      description: Returns the evaluated, escaped value of the Include attribute of the provided items.
+      description: "제공된 된 항목의 Include 특성의 값을 이스케이프 하는 확인 되 고 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -1383,16 +1383,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the evaluated, escaped value of the Include attribute of the provided item definition.
+  summary: "Include 특성에 제공된 된 항목 정의의 확인 되 고 이스케이프 값을 가져옵니다."
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Evaluation.ProjectItemDefinition item);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItemDefinition
-      description: The item definition to be evaluated and escaped.
+      description: "평가 하 고 이스케이프 하는 항목 정의 합니다."
     return:
       type: System.String
-      description: Returns the value of the Include attribute.
+      description: "Include 특성의 값을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -1409,17 +1409,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all the items in the project of the given item type. If there are none, returns an empty list. Use AddItem or RemoveItem to modify items in this project.
-  remarks: Use AddItem or RemoveItem to modify items in this project.
+  summary: "지정한 항목 형식의 프로젝트의 모든 항목을 가져옵니다. 항목이 없으면, 빈 목록을 반환 합니다. AddItem 또는 RemoveItem를 사용 하 여이 프로젝트에 항목을 수정 합니다."
+  remarks: "AddItem 또는 RemoveItem를 사용 하 여이 프로젝트에 항목을 수정 합니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> GetItems (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be retrieved.
+      description: "검색할 항목 유형입니다."
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns all the items in the project of the given item type. Returns an empty list if there are no items with the given item name.
+      description: "지정한 항목 형식의 프로젝트의 모든 항목을 반환 합니다. 지정 된 항목 이름으로 항목이 없는 경우 빈 목록을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.GetItems*
   exceptions: []
   platform:
@@ -1436,17 +1436,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all items that have the given evaluated Include attribute.
-  remarks: For example, this method might return all items that have the evaluated Include attribute "component.cpp". Typically zero or one items are returned. However, there may be multiple items with the same path and different item types, or even with the same item types.
+  summary: "계산 된 지정 된 Include 특성이 있는 모든 항목을 가져옵니다."
+  remarks: "예를 들어이 메서드는 모든 항목 확인 특성이 포함 &quot;component.cpp&quot;을 반환할 수 있습니다. 일반적으로&0; 개 또는 한 개의 항목이 반환 됩니다. 그러나 동일한 경로 다른 항목 형식 또는 같은 항목 형식을 있는 경우에 여러 항목이 있을 수 있습니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> GetItemsByEvaluatedInclude (string evaluatedInclude);
     parameters:
     - id: evaluatedInclude
       type: System.String
-      description: The evaluated Include attribute.
+      description: "평가 된 포함 특성입니다."
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns all items that have the given evaluated Include attribute.
+      description: "계산 된 지정 된 Include 특성이 있는 모든 항목을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.GetItemsByEvaluatedInclude*
   exceptions: []
   platform:
@@ -1463,17 +1463,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: 'Gets all the items in the project of the given type, whether or not their Condition attribute evaluates to true. This is a read-only list: use AddItem or RemoveItem to modify items in this project.'
-  remarks: This is a read-only list. Use AddItem or RemoveItem to modify items in this project.
+  summary: '해당 조건 특성이 true로 평가 되는 여부 지정 된 형식의 프로젝트의 모든 항목을 가져옵니다. 이것은 읽기 전용 목록: 항목 추가 또는 RemoveItem를 사용 하 여이 프로젝트에 항목을 수정 합니다.'
+  remarks: "읽기 전용 목록입니다. AddItem 또는 RemoveItem를 사용 하 여이 프로젝트에 항목을 수정 합니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> GetItemsIgnoringCondition (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be retrieved.
+      description: "검색할 항목 유형입니다."
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns all the items in the project of the given type, whether or not their Condition attribute evaluates to true.
+      description: "해당 조건 특성이 true로 평가 되는 여부 지정 된 형식의 프로젝트에서 모든 항목을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.GetItemsIgnoringCondition*
   exceptions: []
   platform:
@@ -1490,14 +1490,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all the elements in the "logical project". The logical project is defined as the unevaluated project obtained from the single MSBuild file that is the result of inlining the text of all imports of the original MSBuild project manifest file.
-  remarks: The logical project is defined as the unevaluated project obtained from the single MSBuild file that is the result of including inline the text of all imports of the original MSBuild project manifest file.
+  summary: "&quot;논리 프로젝트&quot;에 모든 요소에 대 한 열거자를 가져옵니다. 논리 프로젝트는 확인 되지 않은 프로젝트의 결과인 단일 MSBuild 파일에서 가져온로 정의 됩니다 인라이닝 원래 MSBuild 프로젝트 매니페스트 파일의 모든 가져오기의 텍스트입니다."
+  remarks: "논리 프로젝트는 확인 되지 않은 프로젝트 원본 MSBuild 프로젝트 매니페스트 파일의 모든 가져오기의 텍스트를 인라인을 포함 하 여 결과 단일 MSBuild 파일에서 가져온 대로 정의 됩니다."
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Construction.ProjectElement> GetLogicalProject ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectElement}
-      description: Returns an enumerator over all the elements in the "logical project".
+      description: "모든 요소는 &quot;논리 프로젝트&quot;에 대해 열거자를 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.GetLogicalProject*
   exceptions: []
   platform:
@@ -1514,16 +1514,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the escaped value of the provided metadatum.
+  summary: "제공된 된 메타 데이터의 이스케이프 된 값을 가져옵니다."
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectMetadata metadatum);
     parameters:
     - id: metadatum
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: The metadatum to be escaped.
+      description: "이스케이프 된 메타 데이터입니다."
     return:
       type: System.String
-      description: Gets the escaped value of the provided metadatum.
+      description: "제공된 된 메타 데이터의 이스케이프 된 값을 가져옵니다."
   overload: Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -1540,19 +1540,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the escaped value of the metadatum with the provided name on the provided item.
+  summary: "제공된 된 항목에 제공된 된 이름 가진 메타 데이터의 이스케이프 된 값을 가져옵니다."
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectItem item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItem
-      description: The item whose metadata is to be escaped.
+      description: "해당 메타 데이터를 이스케이프 해야 하는 항목입니다."
     - id: name
       type: System.String
-      description: The name of the metadata to be escaped.
+      description: "이스케이프 된 메타 데이터의 이름입니다."
     return:
       type: System.String
-      description: Gets the escaped value of the metadatum with the provided name on the provided item.
+      description: "제공된 된 항목에 제공된 된 이름 가진 메타 데이터의 이스케이프 된 값을 가져옵니다."
   overload: Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -1569,19 +1569,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the escaped value of the metadatum with the provided name on the provided item definition.
+  summary: "제공된 된 항목 정의에 제공된 된 이름 가진 메타 데이터의 이스케이프 된 값을 가져옵니다."
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectItemDefinition item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItemDefinition
-      description: The item definition whose metadata is to be escaped.
+      description: "해당 메타 데이터를 이스케이프 하는 항목 정의입니다."
     - id: name
       type: System.String
-      description: The name of the metadata to be escaped.
+      description: "이스케이프 된 메타 데이터의 이름입니다."
     return:
       type: System.String
-      description: Returns the escaped value of the metadatum with the provided name on the provided item definition.
+      description: "제공된 된 항목 정의에 제공된 된 이름 가진 메타 데이터의 이스케이프 된 값을 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -1598,16 +1598,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets any property in the project that has the specified name.
+  summary: "지정된 된 이름을 가진 프로젝트의 모든 속성을 가져옵니다."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectProperty GetProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the property to retrieve.
+      description: "검색할 속성의 이름입니다."
     return:
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: Returns any property in the project that has the specified name. Returns null if no property of that name exists.
+      description: "지정된 된 이름을 가진 프로젝트의 모든 속성을 반환 합니다. 해당 이름의 속성이 없으면 null을 반환 존재 합니다."
   overload: Microsoft.Build.Evaluation.Project.GetProperty*
   exceptions: []
   platform:
@@ -1624,17 +1624,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the value of the given property in this project.
-  remarks: A property with a value of empty string and no property at all are not distinguished between by this method. To determine if a property is set at all in the project, use GetProperty(name).
+  summary: "이 프로젝트에 지정된 된 속성의 값을 가져옵니다."
+  remarks: "빈 문자열 값을 포함 하는 속성 및 속성이 전혀 구분 하지 않습니다이 메서드에 의해 합니다. 프로젝트에는 속성이 전혀 설정 되어 있는지를 확인 하려면 GetProperty(name)를 사용 합니다."
   syntax:
     content: public string GetPropertyValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the property whose value is retrieved.
+      description: "해당 값을 검색 하는 속성의 이름입니다."
     return:
       type: System.String
-      description: Returns the value of the given property in this project. Return an empty string if no property of that name exists. Escape sequences are converted before returning the string.
+      description: "이 프로젝트에 지정된 된 속성의 값을 반환합니다. 해당 이름의 속성이 없는 경우 빈 문자열을 반환 합니다. 이스케이프 시퀀스는 문자열을 반환 하기 전에 변환 됩니다."
   overload: Microsoft.Build.Evaluation.Project.GetPropertyValue*
   exceptions: []
   platform:
@@ -1651,16 +1651,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Get the escaped value of the provided property.
+  summary: "제공된 된 속성의 이스케이프 된 값을 가져옵니다."
   syntax:
     content: public static string GetPropertyValueEscaped (Microsoft.Build.Evaluation.ProjectProperty property);
     parameters:
     - id: property
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: The property to be escaped.
+      description: "이스케이프할 속성입니다."
     return:
       type: System.String
-      description: Returns the escaped value of the provided property.
+      description: "제공된 된 속성의 이스케이프 된 값을 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.GetPropertyValueEscaped*
   exceptions: []
   platform:
@@ -1677,13 +1677,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a dictionary of the global properties used for the evaluation of this project.
+  summary: "이 프로젝트의 평가에 사용 되는 전역 속성의 사전을 가져옵니다."
   remarks: "This is the publicly exposed getter, that translates into a read-only dead IDictionary\\<string, string>.  \n  \n In order to easily tell when we're dirtied, setting and removing global properties is done with <xref:Microsoft.Build.Evaluation.Project.SetGlobalProperty%2A> and <xref:Microsoft.Build.Evaluation.Project.RemoveGlobalProperty%2A>."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Returns a dictionary of the global properties used for the evaluation of this project.
+      description: "이 프로젝트의 평가에 사용 되는 전역 속성의 사전을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.GlobalProperties*
   exceptions: []
   platform:
@@ -1700,13 +1700,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a list of all the files that contributed to the evaluation of this project.
-  remarks: The project root of this project is not included.
+  summary: "이 프로젝트의 평가에 영향을 주는 모든 파일의 목록을 가져옵니다."
+  remarks: "이 프로젝트의 프로젝트 루트에 포함 되지 않습니다."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ResolvedImport> Imports { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ResolvedImport}
-      description: "Returns a list of all the files that contributed to the evaluation of this project.  \n  \n The name of each item is the Import element that caused the file to be imported. The value of each item is the project root of the imported project. Import elements whose Condition attribute evaluated to false are not included."
+      description: "이 프로젝트의 평가에 영향을 주는 모든 파일의 목록을 반환 합니다.       각 항목의 이름에는 해당 파일을 가져올 수 있는 가져오기 요소입니다. 각 항목의 값은 가져온된 프로젝트의 프로젝트 루트입니다. Import 요소 조건 특성이 false로 평가 포함 되지 않습니다."
   overload: Microsoft.Build.Evaluation.Project.Imports*
   exceptions: []
   platform:
@@ -1723,12 +1723,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a list of duplicate imports if an import was imported multiple times. However, only the first import was used in evaluation.
+  summary: "가져오기 가져왔으면 여러 번 중복 가져오기 목록을 가져옵니다. 그러나 첫 번째 가져오기만 평가에 사용 되었습니다."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ResolvedImport> ImportsIncludingDuplicates { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ResolvedImport}
-      description: Returns a list of duplicate imports.
+      description: "중복 가져오기 목록을 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.ImportsIncludingDuplicates*
   exceptions: []
   platform:
@@ -1745,13 +1745,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets a property that selects whether the targets and tasks of this project can be built.
-  remarks: Can be used for security purposes. By default, a new project has the same IsBuildEnabled setting as the parent project collection that contains it. When IsBuildEnabled is false, the Build method on this project fails.
+  summary: "이 프로젝트의 작업 및 대상을 빌드할 수 있는지 여부를 선택 하는 속성을 가져오거나 설정 합니다."
+  remarks: "보안을 위해 사용할 수 있습니다. 기본적으로 새 프로젝트를 같은 IsBuildEnabled 설정을 포함 하는 부모 프로젝트 컬렉션에 있습니다. IsBuildEnabled false 이면이 프로젝트의 빌드 메서드가 실패 합니다."
   syntax:
     content: public bool IsBuildEnabled { get; set; }
     return:
       type: System.Boolean
-      description: Returns true if the targets and tasks of this project can be built; false otherwise.
+      description: "이 프로젝트의 작업 및 대상을; 생성할 수 있으면 true를 반환 false 그렇지 않은 경우."
   overload: Microsoft.Build.Evaluation.Project.IsBuildEnabled*
   exceptions: []
   platform:
@@ -1768,13 +1768,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a property that indicates whether this project has been modified so that it must be reevaluated.
-  remarks: A project is modified and must be reevaluated when the underlying project source code, including changes to imported files. A project is also modified must be reevaluated if the project tool set changes.
+  summary: "이 프로젝트 수정 되었는지 다시 확인 해야 하는지 여부를 나타내는 속성을 가져옵니다."
+  remarks: "프로젝트가 수정 되 고 변경 내용을 포함 하 여 기본 프로젝트 소스 코드 파일을 가져올 때 다시 평가 해야 합니다. 프로젝트도 수정 됩니다. 프로젝트 도구 집합을 변경 하는 경우 다시 평가 해야 합니다."
   syntax:
     content: public bool IsDirty { get; }
     return:
       type: System.Boolean
-      description: Returns a property that indicates whether this project has been modified so that it must be reevaluated.
+      description: "이 프로젝트 수정 되었는지 다시 확인 해야 하는지 여부를 나타내는 속성을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.IsDirty*
   exceptions: []
   platform:
@@ -1791,12 +1791,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a dictionary of item definitions in this project, keyed by item type.
+  summary: "이 프로젝트에서 항목 종류에 따라 키가 지정 된 항목 정의의 사전을 가져옵니다."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Evaluation.ProjectItemDefinition> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Evaluation.ProjectItemDefinition}
-      description: Returns a dictionary of item definitions in this project, keyed by item type.
+      description: "항목 형식을 키로 사용이 프로젝트의 항목 정의의 사전을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.ItemDefinitions*
   exceptions: []
   platform:
@@ -1813,12 +1813,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all items in this project, ordered within groups of item types.
+  summary: "이 프로젝트에서는 항목 형식 그룹 내에서 순서가 지정 된 모든 항목에 대해 열거자를 가져옵니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns an enumerator over all items in this project, ordered within groups of item types.
+      description: "이 프로젝트에서는 항목 형식 그룹 내에서 순서가 지정 된 모든 항목에 대해 열거자를 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.Items*
   exceptions: []
   platform:
@@ -1835,13 +1835,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all items in this project, ordered within groups of item types.
-  remarks: Can be used to display all items, even if they are not part of the build in the current configuration.
+  summary: "이 프로젝트에서는 항목 형식 그룹 내에서 순서가 지정 된 모든 항목에 대해 열거자를 가져옵니다."
+  remarks: "사용할 수 있는 모든 항목을 표시 하는 현재 구성에 대 한 빌드에 포함 하는 경우에 합니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> ItemsIgnoringCondition { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns an enumerator over all items in this project., ordered within groups of item types, including items whose conditions evaluate to false, or are contained within item groups whose condition evaluates to false.
+      description: "이 프로젝트에서 항목 형식, 해당 조건이 false로 평가 되거나 해당 조건이 false로 평가 되는 항목 그룹 내에 포함 된 항목을 포함 하 여 그룹 내에서 순서가 지정 된 모든 항목에 대해 열거자를 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.ItemsIgnoringCondition*
   exceptions: []
   platform:
@@ -1858,12 +1858,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all item types in this project.
+  summary: "이 프로젝트의 모든 항목 형식에 대 한 열거자를 가져옵니다."
   syntax:
     content: public System.Collections.Generic.ICollection<string> ItemTypes { get; }
     return:
       type: System.Collections.Generic.ICollection{System.String}
-      description: Returns an enumerator over all item types in this project. This is an ordered collection.
+      description: "이 프로젝트의 모든 항목 형식에 대 한 열거자를 반환합니다. 순서가 지정 된 컬렉션입니다."
   overload: Microsoft.Build.Evaluation.Project.ItemTypes*
   exceptions: []
   platform:
@@ -1880,8 +1880,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Marks this project as modified.
-  remarks: "It is seldom necessary to call this method explicitly, because all edits affecting a project automatically mark it as modified.  \n  \n Sometimes, however, this method must be called. For example, a project may have an Import element whose condition depends on a file that exists on a disk. If that file does not exist at evaluation time, and it is created after evaluation, then the project must be explicitly marked as modified.  \n  \n The <xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A> method uses this property to determine if an evaluation is necessary."
+  summary: "수정 된 것으로이 프로젝트를 표시 합니다."
+  remarks: "프로젝트를 자동으로 영향을 주는 모든 편집이 수정 된 것으로 표시 하기 때문에는이 메서드를 명시적으로 호출할 필요가 거의 없습니다.       그러나 경우에 따라이 메서드 호출 해야 합니다. 예를 들어 프로젝트 조건을 디스크에 존재 하는 파일에 따라 달라 집니다 Import 요소가 있을 수 있습니다. 평가 시 해당 파일이 존재 하지 않는 경우을 평가한 후 만든 수정 된 것으로 프로젝트 명시적으로 표시 해야 합니다.       <xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A>메서드는 평가 필요한 인지 확인 하려면이 속성을 사용 합니다.</xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A>"
   syntax:
     content: public void MarkDirty ();
     parameters: []
@@ -1901,12 +1901,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the project collection which contains this project.
+  summary: "이 프로젝트를 포함 하는 프로젝트 컬렉션을 가져옵니다."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectCollection ProjectCollection { get; }
     return:
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: Returns the project collection which contains this project, which is never null.
+      description: "이 프로젝트는 null 일 수를 포함 하는 프로젝트 컬렉션을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.ProjectCollection*
   exceptions: []
   platform:
@@ -1923,12 +1923,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: The location of the originating file itself, not any specific content within it. If the file has not been given a name, this is an empty location. This is a legitimate case of having no location.
+  summary: "시작 위치 파일 자체 내에서 특정 콘텐츠 적용 되지 않습니다. 파일 이름을 적용 되지 않은 경우 빈는 위치입니다. 이 경우 없는 위치를 설정할 경우의 합법적인 합니다."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns the originating file location or an empty location.
+      description: "원본 파일 위치 또는 비어 있는 위치를 반환합니다."
   overload: Microsoft.Build.Evaluation.Project.ProjectFileLocation*
   exceptions: []
   platform:
@@ -1945,12 +1945,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all properties in this project. This is an unordered collection.
+  summary: "이 프로젝트의 모든 속성에 대해 열거자를 가져옵니다. 순서가 지정 되지 않은 컬렉션입니다."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectProperty> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectProperty}
-      description: Returns an enumerator over all properties in this project. Since properties are evaluated as they appear, this is an unordered collection.
+      description: "이 프로젝트의 모든 속성에 대해 열거자를 반환합니다. 표시 된 대로 속성을 확인, 이므로 순서 없는 컬렉션."
   overload: Microsoft.Build.Evaluation.Project.Properties*
   exceptions: []
   platform:
@@ -1967,8 +1967,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Reevaluates the project to incorporate any changes.
-  remarks: "The project is reevaluated only if it is marked as modified. Reevaluation incorporates all changes made to the project source code.  \n  \n Throws InvalidProjectFileException if the evaluation fails."
+  summary: "변경 내용을 포함 하도록 프로젝트를 다시 확인 합니다."
+  remarks: "프로젝트에는 수정 된 것으로 표시 되는 경우에 다시 평가 됩니다. 프로젝트 소스 코드에 대 한 모든 변경 내용을 통합 하는 다시 평가 합니다.       InvalidProjectFileException 평가가 실패할 경우 throw 됩니다."
   syntax:
     content: public void ReevaluateIfNecessary ();
     parameters: []
@@ -1988,16 +1988,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes a global property and marks the project as modified.
+  summary: "전역 속성을 제거 하 고 수정 된 프로젝트를 표시 합니다."
   syntax:
     content: public bool RemoveGlobalProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the global property to be removed.
+      description: "제거할 전역 속성의 이름입니다."
     return:
       type: System.Boolean
-      description: Returns true if the value of the global property was set.
+      description: "전역 속성의 값이 설정 된 경우 true를 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.RemoveGlobalProperty*
   exceptions: []
   platform:
@@ -2014,17 +2014,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes an item from the project. The item to be removed must be present in the project, and must not originate from an imported file.
-  remarks: "If the item group containing the item becomes empty, it is also removed.  \n  \n If the item originates from a wildcard or semicolon-separated expression, the expression is first expanded into multiple items.  \n  \n The project is updated, but no further evaluation occurs until reevaluation. For example, if an item of type \"i\" is removed, \"j\" which is evaluated from \"@(i)\" is not modified until reevaluation."
+  summary: "프로젝트에서 항목을 제거 합니다. 항목을 제거할 수 프로젝트에 있어야 하며 가져온된 파일에서 생성 된 해야 합니다."
+  remarks: "빈 항목을 포함 하는 항목 그룹 없어지면도 제거 됩니다.       항목 와일드 카드 또는 세미콜론으로 구분 된 식에서 발생 하는 경우 식이 여러 항목으로 먼저 확장 됩니다.       프로젝트 업데이트 되지만 더 이상 평가 다시 확인할 때까지 발생 합니다. 예를 들어 항목의 &quot;i&quot; 유형 제거 됩니다에서 계산 되는 &quot;j&quot; &quot;@(i)&quot;은 다시 확인할 때까지 수정 되지 않습니다."
   syntax:
     content: public bool RemoveItem (Microsoft.Build.Evaluation.ProjectItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItem
-      description: The item to be removed.
+      description: "제거할 항목입니다."
     return:
       type: System.Boolean
-      description: Returns true if the item is present in this evaluated project; otherwise false. Normally this method returns true, since if the requested item is not present, the method throws an exception. If the item is present only in the ItemsIgnoringCondition collection, however, the method returns false.
+      description: "항목이이 확인 된 프로젝트;에 있는 경우 true를 반환 그렇지 않으면 false입니다. 일반적으로 요청 된 항목이 없는 경우는 예외를 throw 하므로이 메서드가 true를 반환 합니다. 그러나 항목이 ItemsIgnoringCondition 컬렉션에만 있는 경우 메서드에서 false가 반환 됩니다."
   overload: Microsoft.Build.Evaluation.Project.RemoveItem*
   exceptions: []
   platform:
@@ -2041,14 +2041,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes all the given items from the project, unless they originate from an imported project.
-  remarks: If an item originates from an imported project, it is simply skipped.
+  summary: "가져온된 프로젝트에서 발생 한 것 하지 않으면 프로젝트에서 지정된 된 모든 항목을 제거 합니다."
+  remarks: "항목 가져온된 프로젝트에서 발생 하는 경우 건너뜁니다."
   syntax:
     content: public void RemoveItems (System.Collections.Generic.IEnumerable<Microsoft.Build.Evaluation.ProjectItem> items);
     parameters:
     - id: items
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectItem}
-      description: The items to be removed.
+      description: "제거할 항목입니다."
   overload: Microsoft.Build.Evaluation.Project.RemoveItems*
   exceptions: []
   platform:
@@ -2065,17 +2065,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes an property from the project. The property to be removed must be present in the project, and must not originate from an imported file.
-  remarks: "If the property group containing the property becomes empty, it is also removed.  \n  \n The project is updated, but no further evaluation occurs until reevaluation. For example, if \"p\" is removed, \"q\" which is evaluated from \"$(p)\" is not modified until reevaluation."
+  summary: "프로젝트에서 속성을 제거 합니다. 제거할 속성 프로젝트에 있어야 하며 가져온된 파일에서 생성 된 해야 합니다."
+  remarks: "속성을 포함 하는 속성 그룹이 비게 되도 제거 됩니다.       프로젝트 업데이트 되지만 더 이상 평가 다시 확인할 때까지 발생 합니다. 예를 들어, &quot;p&quot; 제거 &quot;q&quot;가 평가 되는 &quot;$(p)&quot;에서 다시 확인할 때까지 수정 되지 않습니다."
   syntax:
     content: public bool RemoveProperty (Microsoft.Build.Evaluation.ProjectProperty property);
     parameters:
     - id: property
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: The property to remove.
+      description: "제거할 속성입니다."
     return:
       type: System.Boolean
-      description: Returns true if the property is present in this evaluated project; otherwise false.
+      description: "속성은이 확인 된 프로젝트;에 있는 경우 true를 반환 그렇지 않으면 false입니다."
   overload: Microsoft.Build.Evaluation.Project.RemoveProperty*
   exceptions: []
   platform:
@@ -2092,7 +2092,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified, using the default character encoding.
+  summary: "기본 문자 인코딩을 사용 하 여 수정 하는 경우에 파일 시스템에 프로젝트를 저장 합니다."
   syntax:
     content: public void Save ();
     parameters: []
@@ -2112,13 +2112,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the provided text writer, whether or not the project has been modified. Uses the character encoding of the text writer and marks the project as unmodified.
+  summary: "프로젝트가 수정 되었는지 여부를 제공 된 텍스트 작성기에는 프로젝트를 저장 합니다. 텍스트 기록기의 문자 인코딩을 사용 하 고 수정 되지 않은 프로젝트로 표시 합니다."
   syntax:
     content: public void Save (System.IO.TextWriter writer);
     parameters:
     - id: writer
       type: System.IO.TextWriter
-      description: The text writer to save the project to.
+      description: "프로젝트를 저장할 텍스트 기록기입니다."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2135,13 +2135,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified or if the path to the project source code changes, using the default character encoding.
+  summary: "수정 되거나 프로젝트 소스 코드에 대 한 경로 변경 하는 경우 기본 문자 인코딩을 사용 하는 프로젝트 파일 시스템에 저장 합니다."
   syntax:
     content: public void Save (string path);
     parameters:
     - id: path
       type: System.String
-      description: The path to the project source code.
+      description: "프로젝트 소스 코드에 대 한 경로입니다."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2158,13 +2158,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified, using the given character encoding.
+  summary: "지정 된 문자 인코딩을 사용 하 여 수정 하는 경우에 파일 시스템에 프로젝트를 저장 합니다."
   syntax:
     content: public void Save (System.Text.Encoding encoding);
     parameters:
     - id: encoding
       type: System.Text.Encoding
-      description: The character encoding used to save the project.
+      description: "문자 인코딩을 프로젝트를 저장 하는 데 사용 합니다."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2181,16 +2181,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified or if the path to the project source code changes, using the given character encoding.
+  summary: "수정 되거나 프로젝트 소스 코드에 대 한 경로 변경 하는 경우 지정 된 문자 인코딩을 사용 하는 프로젝트 파일 시스템에 저장 합니다."
   syntax:
     content: public void Save (string path, System.Text.Encoding encoding);
     parameters:
     - id: path
       type: System.String
-      description: The path to the project source code.
+      description: "프로젝트 소스 코드에 대 한 경로입니다."
     - id: encoding
       type: System.Text.Encoding
-      description: The character encoding used to save the project.
+      description: "문자 인코딩을 프로젝트를 저장 하는 데 사용 합니다."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2207,13 +2207,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves a "logical" or "preprocessed" project file, that includes all the imported files as if they formed a single file.
+  summary: "단일 파일을 형성 하는 경우 모든 가져온된 파일을 포함 하는 &quot;논리&quot; 또는 &quot;전처리&quot; 프로젝트 파일을 저장 합니다."
   syntax:
     content: public void SaveLogicalProject (System.IO.TextWriter writer);
     parameters:
     - id: writer
       type: System.IO.TextWriter
-      description: The writer that saves the project file.
+      description: "프로젝트 파일을 저장 하는 작성기입니다."
   overload: Microsoft.Build.Evaluation.Project.SaveLogicalProject*
   exceptions: []
   platform:
@@ -2230,19 +2230,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Sets a global property after the project has been evaluated. If the value changes, the project is marked to require reevaluation.
+  summary: "프로젝트가 계산 된 후에 전역 속성을 설정 합니다. 값이 변경 되는 프로젝트 재평가 요구 하도록 표시 됩니다."
   syntax:
     content: public bool SetGlobalProperty (string name, string escapedValue);
     parameters:
     - id: name
       type: System.String
-      description: The name of the global property to set.
+      description: "전역 속성을 설정의 이름입니다."
     - id: escapedValue
       type: System.String
-      description: The new value of the global property.
+      description: "전역 속성의 새 값입니다."
     return:
       type: System.Boolean
-      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if the value changes, otherwise returns <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "반환 <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> 그렇지 않으면 반환 값이 변경 되 면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다."
   overload: Microsoft.Build.Evaluation.Project.SetGlobalProperty*
   exceptions: []
   platform:
@@ -2259,20 +2259,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Sets or adds a property with the given name and value to the project. Overwrites the value of a property with the same name if it did not originate in an imported file.
-  remarks: "If there is no property with the given name, updates the last existing property with the given name that has no condition on itself or its property group, unless it originated in an imported file.  \n  \n Otherwise, adds a new property in the first property group without a condition, creating a property group if necessary after the last existing property group, else at the start of the project.  \n  \n Evaluation takes place on a best-effort basis. Properties that are defined in the project source following the new property may be used for evaluation. Only this property is evaluated. Other properties that might depend on it are not affected."
+  summary: "설정 하거나 프로젝트에 지정 된 이름과 값으로 속성을 추가 합니다. 가져온된 파일에서 시작 되지 않은 경우 동일한 이름의 속성의 값을 덮어씁니다."
+  remarks: "지정한 이름을 가진 속성이 있으면 마지막 기존 속성을 업데이트 자체 또는 해당 속성 그룹에 조건이 지정 된 이름의 가져온된 파일에서 발생 하지 않는 한 합니다.       그렇지 않으면 마지막 기존 속성 그룹, 프로젝트의 시작 부분에 후 필요한 경우 속성 그룹을 만들 조건 없이 첫 번째 속성 그룹에서 새 속성을 추가 합니다.       계산은은 최선의 노력을 기반으로 수행이 됩니다. 평가 위해 새 속성을 다음 프로젝트 소스에 정의 된 속성을 사용할 수 있습니다. 이 속성에만 평가 됩니다. 종속 되는 다른 속성과 영향을 받지 않습니다."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectProperty SetProperty (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: The name of the property to set.
+      description: "설정할 속성의 이름입니다."
     - id: unevaluatedValue
       type: System.String
-      description: The new unevaluated value of the property.
+      description: "속성의 확인 되지 않은 새 값입니다."
     return:
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: Returns the property.
+      description: "속성을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.SetProperty*
   exceptions: []
   platform:
@@ -2289,12 +2289,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets a flag the determines whether ReevaluateIfNecessary is temporarily disabled. This is useful when the host expects to make a number of reads and writes to the project, and wants to temporarily sacrifice correctness for performance.
+  summary: "플래그를 가져오거나 설정 합니다.는 ReevaluateIfNecessary가 일시적으로 해제 되어 있는지 여부를 결정 합니다. 이 호스트 읽기 횟수를 확인 하는 프로젝트에 기록 하는 경우 유용 하 고 일시적으로 성능에 대 한 정확성을 무시 하려는 합니다."
   syntax:
     content: public bool SkipEvaluation { get; set; }
     return:
       type: System.Boolean
-      description: Returns a flag the determines whether ReevaluateIfNecessary is temporarily disabled.
+      description: "플래그를 반환 된 ReevaluateIfNecessary가 일시적으로 해제 되어 있는지 여부를 결정 합니다."
   overload: Microsoft.Build.Evaluation.Project.SkipEvaluation*
   exceptions: []
   platform:
@@ -2311,12 +2311,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the value of the SubToolsetVersion attribute, if any. This value was combined with the value of the ToolsVersion attribute to determine the toolset properties for this project.
+  summary: "있으면 SubToolsetVersion 특성의 값을 가져옵니다. 이 값은이 프로젝트에 대 한 도구 집합 속성을 확인 하려면 ToolsVersion 특성의 값과 결합 되었습니다."
   syntax:
     content: public string SubToolsetVersion { get; }
     return:
       type: System.String
-      description: Returns the SubToolsetVersion attribute value. Returns an empty string if the attribute is not present.
+      description: "SubToolsetVersion 특성 값을 반환합니다. 특성이 없는 경우 빈 문자열을 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.SubToolsetVersion*
   exceptions: []
   platform:
@@ -2333,12 +2333,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a dictionary of all targets in this project, keyed by target name.
+  summary: "대상 이름을 키로이 프로젝트의 모든 대상의 사전을 가져옵니다."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectTargetInstance> Targets { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectTargetInstance}
-      description: Returns a dictionary of all targets in this project, keyed by target name. Overridden targets are not included in this collection. This dictionary is read-only.
+      description: "대상 이름을 키로이 프로젝트의 모든 대상의 사전을 반환 합니다. 재정의 된 대상은이 컬렉션에 포함 되지 않습니다. 이 사전은 읽기 전용입니다."
   overload: Microsoft.Build.Evaluation.Project.Targets*
   exceptions: []
   platform:
@@ -2355,13 +2355,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the tools version that this project was evaluated with, if any.
-  remarks: Set by the constructor. This is not necessarily the same as the tools version on the Project tag, if any; it may have been externally specified, for example with a /tv switch on the command line. The actual tools version on the Project tag can be obtained from <xref:Microsoft.Build.Evaluation.Project.Xml%2A>. The tools version cannot be changed once the project has been created.
+  summary: "있는 경우이 프로젝트를 평가 하는 도구 버전을 가져옵니다."
+  remarks: "생성자에 의해 설정 됩니다. 이 아닐 프로젝트 태그에 도구 버전과 동일. 이 지정 된 것 외부에서, 예를 들어 명령줄에서 /tv 스위치와 함께 합니다. 프로젝트 태그에 있는 실제 도구 버전 <xref:Microsoft.Build.Evaluation.Project.Xml%2A>.</xref:Microsoft.Build.Evaluation.Project.Xml%2A> 에서 가져올 수 있습니다. 프로젝트를 만든 후에 도구 버전을 변경할 수 없습니다."
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: Gets the tools version that this project was evaluated with, if any.
+      description: "있는 경우이 프로젝트를 평가 하는 도구 버전을 가져옵니다."
   overload: Microsoft.Build.Evaluation.Project.ToolsVersion*
   exceptions: []
   platform:
@@ -2378,13 +2378,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the root project associated with this project. Can never be null
-  remarks: There is no way to set this property. If you have a new project root, evaluate it into a new project.
+  summary: "이 프로젝트와 연결 된 루트 프로젝트를 가져옵니다. Null 일 수 없습니다."
+  remarks: "이 속성을 설정 하는 방법은 있습니다. 새 프로젝트 루트를 설정한 경우 새 프로젝트에 평가 합니다."
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement Xml { get; }
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: Returns the root project associated with this project, which can never be null.
+      description: "Null 일 수 없습니다이 프로젝트와 연결 된 루트 프로젝트를 반환 합니다."
   overload: Microsoft.Build.Evaluation.Project.Xml*
   exceptions: []
   platform:
