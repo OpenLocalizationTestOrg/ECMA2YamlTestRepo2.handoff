@@ -13,8 +13,8 @@ items:
   nameWithType: ProjectChooseElement
   fullName: Microsoft.Build.Construction.ProjectChooseElement
   type: Class
-  summary: Represents the [Choose Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
-  remarks: Does not allow a Condition attribute.
+  summary: "代表[選擇的項目 (MSBuild)](~/add/includes/ajax-current-ext-md.md) MSBuild 專案中。"
+  remarks: "不允許條件屬性。"
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("ProjectChooseElement (#Children={Count} HasOtherwise={OtherwiseElement != null})")]
@@ -60,12 +60,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets a nonexistent condition, which is implicitly true.
+  summary: "取得不存在的條件，也就是以隱含方式，則為 true。"
   syntax:
     content: public override string Condition { get; set; }
     return:
       type: System.String
-      description: Returns a null.
+      description: "會傳回 null。"
   overload: Microsoft.Build.Construction.ProjectChooseElement.Condition*
   exceptions: []
   platform:
@@ -82,12 +82,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: This does not allow conditions, so it should not be called.
+  summary: "這會使條件，所以應該不會呼叫。"
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
+      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
   overload: Microsoft.Build.Construction.ProjectChooseElement.ConditionLocation*
   exceptions: []
   platform:
@@ -104,12 +104,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets any [Otherwise Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) child.
+  summary: "取得任何[否則項目 (MSBuild)](~/add/includes/ajax-current-ext-md.md)子系。"
   syntax:
     content: public Microsoft.Build.Construction.ProjectOtherwiseElement OtherwiseElement { get; }
     return:
       type: Microsoft.Build.Construction.ProjectOtherwiseElement
-      description: Returns any Otherwise child. Returns null if no Otherwise child exists.
+      description: "傳回任何其他方式子系。 如果沒有其他方式子項目存在，傳回 null。"
   overload: Microsoft.Build.Construction.ProjectChooseElement.OtherwiseElement*
   exceptions: []
   platform:
@@ -126,12 +126,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets all the [When Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) children.
+  summary: "取得所有[當項目 (MSBuild)](~/add/includes/ajax-current-ext-md.md)子系。"
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectWhenElement> WhenElements { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectWhenElement}
-      description: Returns all the When children. There is always at least one When child.
+      description: "傳回所有 When 子系。 永遠會有一個以上時，子系。"
   overload: Microsoft.Build.Construction.ProjectChooseElement.WhenElements*
   exceptions: []
   platform:
