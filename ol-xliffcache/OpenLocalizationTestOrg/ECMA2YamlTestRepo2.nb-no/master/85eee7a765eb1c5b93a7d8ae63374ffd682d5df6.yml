@@ -17,8 +17,8 @@ items:
   nameWithType: ElementLocation
   fullName: Microsoft.Build.Construction.ElementLocation
   type: Class
-  summary: "The location of an XML node in a file.  \n  \n Any editing of the project XML through the MSBuild API's will invalidate locations in that XML until the XML is reloaded."
-  remarks: "This object is IMMUTABLE, so that it can be passed around arbitrarily.  \n  \n DO NOT make these objects any larger. There are huge numbers of them and they are transmitted between nodes."
+  summary: "Plasseringen av en XML-node i en fil.       Redigering av prosjektet XML gjennom MSBuild-APIen blir plasseringene i dette XML til XML-filen er lastet inn på nytt."
+  remarks: "Dette objektet er IMMUTABLE, slik at den kan bli sendt tilfeldige.       IKKE foreta disse objektene større. Det er stort antall dem, og de sendes mellom noder."
   syntax:
     content: public abstract class ElementLocation
   inheritance:
@@ -39,7 +39,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Construction.ElementLocation"></xref> class.
+  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;> </xref> klasse."
   syntax:
     content: protected ElementLocation ();
     parameters: []
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "The column number where this element exists in its file.  \n  \n The first column is numbered 1.  \n  \n Zero indicates \"unknown location\"."
+  summary: "Kolonnenummer der dette elementet finnes i en fil.       Den første kolonnen er nummererte 1.       &quot;Ukjent plassering&quot; angir er null."
   syntax:
     content: public abstract int Column { get; }
     return:
       type: System.Int32
-      description: Returns <xref:System.Int32>.
+      description: "Returnerer <xref:System.Int32>.</xref:System.Int32>"
   overload: Microsoft.Build.Construction.ElementLocation.Column*
   exceptions: []
   platform:
@@ -81,16 +81,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Override Equals so that identical fields imply equal objects.
+  summary: "Overstyre lik slik at identiske felt angir lik objekter."
   syntax:
     content: public override bool Equals (object obj);
     parameters:
     - id: obj
       type: System.Object
-      description: The element location to compare to this element location.
+      description: "Elementplassering til å sammenligne på denne plasseringen for elementet."
     return:
       type: System.Boolean
-      description: Returns  <xref uid="langword_csharp_true" name="true" href=""></xref> if the objects are equal; otherwise, returns <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "Returnerer <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> Hvis objekter er like, ellers, returnerer <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Construction.ElementLocation.Equals*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "The file from which this particular element originated. It may differ from the ProjectFile if, for instance, it was part of an import or originated in a targets file.  \n  \n If not known, returns empty string."
+  summary: "Filen bestemt elementet kom fra. Det kan være forskjellig fra ProjectFile Hvis for eksempel den var en del av en import eller kommer i en mål-fil.       Hvis du ikke vet, tom returnerer streng."
   syntax:
     content: public abstract string File { get; }
     return:
       type: System.String
-      description: Returns <xref:System.String>.
+      description: "Returnerer <xref:System.String>.</xref:System.String>"
   overload: Microsoft.Build.Construction.ElementLocation.File*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Get reasonable hash code.
+  summary: "Hent rimelig hash-kode."
   syntax:
     content: public override int GetHashCode ();
     parameters: []
     return:
       type: System.Int32
-      description: Returns <xref:System.Int32>.
+      description: "Returnerer <xref:System.Int32>.</xref:System.Int32>"
   overload: Microsoft.Build.Construction.ElementLocation.GetHashCode*
   exceptions: []
   platform:
@@ -152,12 +152,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "The line number where this element exists in its file.  \n  \n The first line is numbered 1.  \n  \n Zero indicates \"unknown location\"."
+  summary: "Linjenummeret der dette elementet finnes i en fil.       Den første linjen er nummererte 1.       &quot;Ukjent plassering&quot; angir er null."
   syntax:
     content: public abstract int Line { get; }
     return:
       type: System.Int32
-      description: Returns <xref:System.Int32>.
+      description: "Returnerer <xref:System.Int32>.</xref:System.Int32>"
   overload: Microsoft.Build.Construction.ElementLocation.Line*
   exceptions: []
   platform:
@@ -179,7 +179,7 @@ items:
     content: public string LocationString { get; }
     return:
       type: System.String
-      description: Returns <xref:System.String>.
+      description: "Returnerer <xref:System.String>.</xref:System.String>"
   overload: Microsoft.Build.Construction.ElementLocation.LocationString*
   exceptions: []
   platform:
@@ -196,13 +196,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Location of element.
+  summary: "Plassering av elementet."
   syntax:
     content: public override string ToString ();
     parameters: []
     return:
       type: System.String
-      description: Returns <xref:System.String>.
+      description: "Returnerer <xref:System.String>.</xref:System.String>"
   overload: Microsoft.Build.Construction.ElementLocation.ToString*
   exceptions: []
   platform:

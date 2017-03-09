@@ -20,8 +20,8 @@ items:
   nameWithType: ProjectMetadata
   fullName: Microsoft.Build.Evaluation.ProjectMetadata
   type: Class
-  summary: Represents evaluated design-time metadata.
-  remarks: "Never used to represent built-in metadata, like %(Filename). The metadata is always associated with project source code.  \n  \n The metadata is contained by either by a <xref:Microsoft.Build.Evaluation.ProjectItemDefinition> or a <xref:Microsoft.Build.Evaluation.ProjectItem>."
+  summary: "Representerer evalueres utformingen metadata."
+  remarks: "Aldri brukt til å representere innebygde metadata, som % (filnavn). Metadataene er alltid knyttet til kildekode for prosjektet.       Metadataene inneholder som en <xref:Microsoft.Build.Evaluation.ProjectItemDefinition>eller <xref:Microsoft.Build.Evaluation.ProjectItem>.</xref:Microsoft.Build.Evaluation.ProjectItem> </xref:Microsoft.Build.Evaluation.ProjectItemDefinition>"
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{Name}={EvaluatedValue} [{xml.Value}]")]
@@ -46,12 +46,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Location of the Condition attribute.
+  summary: "Plasseringen av attributtet betingelse."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns Condition attribute location.
+      description: "Returnerer betingelse attributtet plassering."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.ConditionLocation*
   exceptions: []
   platform:
@@ -68,13 +68,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the evaluated metadata value.
-  remarks: 'Cannot be set directly: only the unevaluated value can be set.'
+  summary: "Henter den evaluerte metadata-verdien."
+  remarks: 'Kan ikke angis direkte: bare unevaluated verdien kan angis.'
   syntax:
     content: public string EvaluatedValue { get; }
     return:
       type: System.String
-      description: Returns the evaluated metadata value, which is never null.
+      description: "Returnerer evaluerte metadataverdi som ikke er null."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.EvaluatedValue*
   exceptions: []
   platform:
@@ -91,12 +91,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Determines if the metadata originated from an imported file.
+  summary: "Bestemmer om metadataene kommer fra en importert fil."
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: Returns true if the metadata originated from an imported file; false otherwise.
+      description: "Returnerer true Hvis metadataene kommer fra en importerte fil. False ellers."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.IsImported*
   exceptions: []
   platform:
@@ -113,12 +113,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the item type of the containing item definition or item.
+  summary: "Henter elementtypen inneholdende definisjon for elementet eller elementet."
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: Returns the item type of the containing item definition or item.
+      description: "Returnerer elementtypen som inneholder definisjon for elementet eller elementet."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.ItemType*
   exceptions: []
   platform:
@@ -135,12 +135,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Location of the element.
+  summary: "Plasseringen av elementet."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns the element location.
+      description: "Returnerer plasseringen for elementet."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Location*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the name of the metadata.
+  summary: "Henter navnet på metadataene."
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: Returns the name of the metadata.
+      description: "Returnerer navnet på metadataene."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Name*
   exceptions: []
   platform:
@@ -179,13 +179,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the last metadata (from an item definition or item) that was overridden by this metadata during evaluation.
-  remarks: "This method searches for all metadata with the same name that lie above in the logical project file, and which are contained by item definitions of the same item type, and whose conditions evaluate to true. If the metadata is contained by an item, this method searches for any previous metadata with the same name and item whose condition evaluated to true. Item definitions are searched before items.  \n  \n If the project has not been reevaluated since the last modification, this value may be incorrect."
+  summary: "Henter siste metadataene (fra en definisjon for elementet eller elementet) som ble overskrevet av disse metadataene under evalueringen."
+  remarks: "Denne metoden søker etter alle metadataene med samme navn som ligger over i logiske prosjektfilen, og som finnes i elementet definisjoner av samme elementtypen og der betingelser evalueres til true. Hvis metadataene inneholder et element, søker denne metoden for eventuelle tidligere metadata med samme navn og elementet som betingelse evalueres til true. Elementet definisjoner søkes før elementer.       Hvis prosjektet ikke er reevaluated siden siste endring, vil denne verdien kan være feil."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata Predecessor { get; }
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: Returns the last metadata (from an item definition or item) whose value was overridden by this metadata during evaluation. Returns null if the metadata has not been overridden.
+      description: "Returnerer siste metadataene (fra en definisjon for elementet eller elementet) som har en verdi ble overskrevet av disse metadataene under evalueringen. Returnerer null hvis metadataene ikke er overstyrt."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Predecessor*
   exceptions: []
   platform:
@@ -202,12 +202,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the project that contains this metadata.
+  summary: "Henter prosjektet som inneholder disse metadataene."
   syntax:
     content: public Microsoft.Build.Evaluation.Project Project { get; }
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: Returns the project that contains this metadata, which is never null.
+      description: "Returnerer prosjektet som inneholder disse metadataene som aldri er null."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Project*
   exceptions: []
   platform:
@@ -230,10 +230,10 @@ items:
     parameters:
     - id: other
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: To be added.
+      description: "Som skal legges til."
     return:
       type: System.Boolean
-      description: To be added.
+      description: "Som skal legges til."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.System#IEquatable<Microsoft#Build#Evaluation#ProjectMetadata>#Equals*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets the unevaluated metadata value.
-  remarks: "The setter method updates both the unevaluated value and the evaluated value, but does not affect anything else in the project until reevaluation.  \n  \n For example, --if a piece of metadata named \"m\" is modified on item of type \"i\", it does not affect \"j\" which is evaluated from \"@(j->'%(m)')\" until reevaluation. --if the unevaluated value of \"m\" is set to something that is modified by evaluation, such as \"$(p)\", the evaluated value will be set to \"$(p)\" until reevaluation.  \n  \n Setting metadata through a <xref:Microsoft.Build.Evaluation.ProjectItem> may cause the associated <xref:Microsoft.Build.Construction.ProjectItemElement> to be split, if the item element originated from an item list, wildcard, or semicolon expression. because it implies an intention to only affect that particular item.  \n  \n Setting metadata through ProjectMetadata does not cause any splitting, because it implies an intention to affect all items using the underlying <xref:Microsoft.Build.Construction.ProjectMetadataElement>.  \n  \n The containing project is marked as modified. Unevaluated values are assumed to contain escaped character sequences as needed.  \n  \n This method may not leave the project in a self consistent state."
+  summary: "Henter eller angir verdien unevaluated metadata."
+  remarks: "Metoden aksesamlingen oppdaterer både unevaluated verdien og verdien som er evaluert, men påvirker ikke noe annet i prosjektet før ny vurdering.       For eksempel--hvis en del av metadata navnet &quot;m&quot; er endret i element av typen &quot;i&quot;, den påvirker ikke &quot;j&quot; som er evaluert fra &quot;@(j-> % (m))&quot; før ny vurdering. --Hvis unevaluated verdien &quot;m&quot; er satt til noe som er endret av evaluering, for eksempel &quot;$(p)&quot;, evaluerte verdien settes til &quot;$(p)&quot; før ny vurdering.       Angi metadata via en <xref:Microsoft.Build.Evaluation.ProjectItem>kan føre til det tilknyttede <xref:Microsoft.Build.Construction.ProjectItemElement>som skal deles, hvis elementet elementet kommer fra et element-listen, jokertegn eller semikolon uttrykk.</xref:Microsoft.Build.Construction.ProjectItemElement> </xref:Microsoft.Build.Evaluation.ProjectItem> fordi den antyder en har tenkt å påvirke bare bestemt element.       Angi metadata via ProjectMetadata fører ikke til en deling, fordi den antyder en har tenkt å påvirke alle elementer ved hjelp av den underliggende <xref:Microsoft.Build.Construction.ProjectMetadataElement>.</xref:Microsoft.Build.Construction.ProjectMetadataElement>       Med prosjektet er merket som endret. Unevaluated verdiene brukes til å inneholde escape-tegn tegnsekvenser etter behov.       Denne metoden kan ikke prosjektet selvbetjeningsportal konsekvente."
   syntax:
     content: public string UnevaluatedValue { get; set; }
     return:
       type: System.String
-      description: Returns the unevaluated metadata value.
+      description: "Returnerer verdien for unevaluated metadata."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.UnevaluatedValue*
   exceptions: []
   platform:
@@ -273,12 +273,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the associated project metadata element.
+  summary: "Henter den tilknyttede prosjektelement metadata."
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement Xml { get; }
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: Returns the associated project metadata element, which can never be null.
+      description: "Returnerer den tilknyttede metadataene prosjektelement, som ikke kan være null."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Xml*
   exceptions: []
   platform:

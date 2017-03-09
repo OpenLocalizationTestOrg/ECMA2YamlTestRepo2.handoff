@@ -19,7 +19,7 @@ items:
   nameWithType: ProjectElement
   fullName: Microsoft.Build.Construction.ProjectElement
   type: Class
-  summary: Abstract base class for MSBuild construction object model elements.
+  summary: "Abstrakt basisklasse for MSBuild konstruksjon objektet modellelementer."
   syntax:
     content: public abstract class ProjectElement
   inheritance:
@@ -40,12 +40,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "All parent elements of this element, going up to the ProjectRootElement.  \n  \n None if this is a ProjectRootElement.  \n  \n None if this has not been attached to a parent yet."
+  summary: "Alle overordnede elementer for dette elementet, gå opptil ProjectRootElement.       Ingen hvis dette er en ProjectRootElement.       Ingen hvis dette ikke er knyttet til en overordnet ennå."
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Construction.ProjectElementContainer> AllParents { get; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectElementContainer}
-      description: Returns an enumerator over all parent elements. There are no parents elements if the project element is a ProjectRootElement or if this is not yet attached to a parent element.
+      description: "Returnerer en opplisting over alle overordnede elementer. Det finnes ingen elementer for overordnede Hvis elementet prosjektet er en ProjectRootElement eller dette ennå ikke er koblet til et overordnet objekt."
   overload: Microsoft.Build.Construction.ProjectElement.AllParents*
   exceptions: []
   platform:
@@ -62,13 +62,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Gets or sets the Condition value.  \n  \n It will return empty string IFF a condition attribute is legal but it’s not present or has no value.  \n  \n It will return null IFF a Condition attribute is illegal on that element.  \n  \n Removes the attribute if the value to set is empty.  \n  \n It is possible for derived classes to throw an <xref:System.InvalidOperationException> if setting the condition is not applicable for those elements."
-  remarks: "Removes the Condition attribute if the value to set is set to null or an empty string. If the Condition attribute is not present, returns an empty string instead of throwing an exception because a nonexistent condition is implicitly true  \n  \n For the \"ProjectExtensions\" element, the getter returns null and the setter throws an exception for any value."
+  summary: "Henter eller angir Betingelsesverdien.       Returneres tom streng IFF attributtet betingelsen er gyldige, men den finnes ikke eller har ingen verdi.       Returneres null IFF en betingelse-attributtet er ugyldig for dette elementet.       Fjerner attributtet hvis verdien er tom.       Det er mulig for avledede klasser skal returneres en <xref:System.InvalidOperationException>Hvis innstillingen betingelsen ikke gjelder for disse elementene.</xref:System.InvalidOperationException>"
+  remarks: "Fjerner attributtet betingelse hvis verdien er satt til null eller en tom streng. Hvis attributtet betingelse ikke finnes, returneres en tom streng i stedet for et unntak fordi en ikke-eksisterende betingelsen oppfylles implisitt For elementet &quot;ProjectExtensions&quot;, &quot;Getter&quot; returnerer null, og setter oppstår det et unntak for en hvilken som helst verdi."
   syntax:
     content: public virtual string Condition { get; set; }
     return:
       type: System.String
-      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
+      description: "Returnerer attributtverdien betingelse. Returnerer en tom streng hvis attributtet ikke finnes."
   overload: Microsoft.Build.Construction.ProjectElement.Condition*
   exceptions: []
   platform:
@@ -85,12 +85,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Location of the \"Condition\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null."
+  summary: "Plasseringen av attributtet &quot;Betingelse&quot; på dette elementet hvis noen.       Hvis det er ikke attributtet, returneres null."
   syntax:
     content: public virtual Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
+      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
   overload: Microsoft.Build.Construction.ProjectElement.ConditionLocation*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "ProjectRootElement (possibly imported) that contains this Xml.  \n  \n Cannot be null."
+  summary: "ProjectRootElement som (muligens importert) som inneholder denne Xml.       Kan ikke være null."
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement ContainingProject { get; }
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: Returns the project root container that contains this project.
+      description: "Returnerer prosjektet root-beholder som inneholder dette prosjektet."
   overload: Microsoft.Build.Construction.ProjectElement.ContainingProject*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Gets or sets the Label value.  \n  \n Returns empty string if it is not present.  \n  \n Removes the attribute if the value to set is empty."
-  remarks: Removes the attribute if the value to set is empty.
+  summary: "Henter eller angir verdien for etiketten.       Returnerer tom streng hvis den ikke finnes.       Fjerner attributtet hvis verdien er tom."
+  remarks: "Fjerner attributtet hvis verdien er tom."
   syntax:
     content: public string Label { get; set; }
     return:
       type: System.String
-      description: Returns the label. Returns an empty string if no label is present.
+      description: "Returnerer meldingsetiketten. Returnerer en tom streng hvis det finnes ingen etikett."
   overload: Microsoft.Build.Construction.ProjectElement.Label*
   exceptions: []
   platform:
@@ -152,12 +152,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Location of the \"Label\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
+  summary: "Plasseringen av attributtet &quot;Etikett&quot; på dette elementet hvis noen.       Hvis det er ikke attributtet, returneres null."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation LabelLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
+      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
   overload: Microsoft.Build.Construction.ProjectElement.LabelLocation*
   exceptions: []
   platform:
@@ -174,12 +174,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Location of the corresponding Xml element.  \n  \n May not be correct if file is not saved, or file has been edited since it was last saved.  \n  \n In the case of an unsaved edit, the location only contains the path to the file that the element originates from."
+  summary: "Plasseringen av det tilsvarende Xml-elementet.       Kan ikke være riktig hvis ikke, eller er tillatt fordi den sist ble lagret.       Hvis det er en ulagrede Rediger inneholder plasseringen bare banen til filen som elementet stammer fra."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
+      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
   overload: Microsoft.Build.Construction.ProjectElement.Location*
   exceptions: []
   platform:
@@ -196,12 +196,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Next sibling element.  \n  \n May be null."
+  summary: "Neste likestilte element.       Kan være null."
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement NextSibling { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: Returns the next sibling of this project element. Returns null if no next sibling exists.
+      description: "Returnerer den neste sideordnet elementtype dette prosjektet. Returnerer null hvis det finnes ingen neste sideordnede."
   overload: Microsoft.Build.Construction.ProjectElement.NextSibling*
   exceptions: []
   platform:
@@ -218,13 +218,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Null if this is a ProjectRootElement.  \n  \n Null if this has not been attached to a parent yet."
-  remarks: Parent should only be set by ProjectElementContainer.
+  summary: "Hvis dette er en ProjectRootElement er null.       Null Hvis dette ikke er knyttet til en overordnet ennå."
+  remarks: "Overordnet kan bare angis av ProjectElementContainer."
   syntax:
     content: public Microsoft.Build.Construction.ProjectElementContainer Parent { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElementContainer
-      description: Returns the project element container that contains this project.
+      description: "Returnerer prosjektet elementet beholderen som inneholder dette prosjektet."
   overload: Microsoft.Build.Construction.ProjectElement.Parent*
   exceptions: []
   platform:
@@ -241,12 +241,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Previous sibling element.  \n  \n May be null."
+  summary: "Forrige likestilte element.       Kan være null."
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement PreviousSibling { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: Returns the previous sibling of this project element. Returns null if no previous sibling exists.
+      description: "Returnerer den forrige sideordnet elementtype dette prosjektet. Returnerer null hvis det finnes ingen forrige sideordnede."
   overload: Microsoft.Build.Construction.ProjectElement.PreviousSibling*
   exceptions: []
   platform:
