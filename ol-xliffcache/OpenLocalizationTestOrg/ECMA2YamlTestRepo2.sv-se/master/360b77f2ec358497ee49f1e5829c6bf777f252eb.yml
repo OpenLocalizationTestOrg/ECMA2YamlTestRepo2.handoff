@@ -12,8 +12,8 @@ items:
   nameWithType: ITask
   fullName: Microsoft.Build.Framework.ITask
   type: Interface
-  summary: Defines a task, which is a unit of executable code used by [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] to perform build operations.
-  remarks: All task classes must implement this interface to be recognized by the build engine. Instead of implenting this interface directly, you can also derive your class from the helper class, <xref:Microsoft.Build.Utilities.Task>, which provides default implementations of some ITask members.
+  summary: "Definierar en aktivitet som är en körbar kod som används av [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] att utföra build-åtgärder."
+  remarks: "Alla klasser som aktiviteten måste implementera gränssnittet ska kunna identifieras av build-motorn. I stället för detta gränssnitt direkt implenting, du också härleda en klass från klassen helper <xref:Microsoft.Build.Utilities.Task>, som innehåller standard implementeringar av vissa ITask medlemmar.</xref:Microsoft.Build.Utilities.Task>"
   example:
   - "The following example shows the code from a complete task implementation.  \n  \n [!code-cs[msbuild_MakeDirTask#1](~/add/codesnippet/csharp/msbuild_MakeDirTask/msbuild_MakeDirTask.cs#1)]"
   syntax:
@@ -33,12 +33,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets or sets the build engine associated with the task.
+  summary: "Hämtar eller anger build-motorn är associerad med uppgiften."
   syntax:
     content: public Microsoft.Build.Framework.IBuildEngine BuildEngine { get; set; }
     return:
       type: Microsoft.Build.Framework.IBuildEngine
-      description: The build engine associated with the task.
+      description: "Build-motorn är associerad med uppgiften."
   overload: Microsoft.Build.Framework.ITask.BuildEngine*
   exceptions: []
   platform:
@@ -55,14 +55,14 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Executes a task.
-  remarks: This method is called by the build engine to execute a task. Upon termination of this method, a task should indicate if the execution was successful. If a task throws an exception from this method, the engine assumes that the task has failed.
+  summary: "Kör en uppgift."
+  remarks: "Den här metoden anropas av build-motorn att köra en uppgift. En aktivitet ska vid avslutning av den här metoden ange om körningen lyckades. Om en aktivitet genereras ett undantag från den här metoden, förutsätter motorn att uppgiften har misslyckats."
   syntax:
     content: public bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task executed successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Om aktiviteten utfördes; i annat fall <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Framework.ITask.Execute*
   exceptions: []
   platform:
@@ -79,13 +79,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets or sets any host object that is associated with the task.
-  remarks: This property can be a null reference (`Nothing` in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
+  summary: "Hämtar eller anger värdobjekt som är associerad med uppgiften."
+  remarks: "Den här egenskapen kan vara en nullreferens (`Nothing` i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
   syntax:
     content: public Microsoft.Build.Framework.ITaskHost HostObject { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskHost
-      description: The host object associated with the task.
+      description: "Värd-objekt som är associerad med uppgiften."
   overload: Microsoft.Build.Framework.ITask.HostObject*
   exceptions: []
   platform:
