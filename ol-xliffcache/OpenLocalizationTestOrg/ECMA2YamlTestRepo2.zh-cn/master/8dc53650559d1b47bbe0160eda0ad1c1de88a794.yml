@@ -21,7 +21,7 @@ items:
   nameWithType: ProjectElementContainer
   fullName: Microsoft.Build.Construction.ProjectElementContainer
   type: Class
-  summary: Provides an abstract container class for project elements.
+  summary: "为项目元素提供的抽象容器类。"
   syntax:
     content: 'public abstract class ProjectElementContainer : Microsoft.Build.Construction.ProjectElement'
   inheritance:
@@ -53,13 +53,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets a recursive depth-first enumerator over all child elements.
-  remarks: Recursion is possible because project element containers may contain children that are themselves project element containers.
+  summary: "在所有子元素中获取的递归深度优先枚举器。"
+  remarks: "递归是可能的因为项目元素容器可能包含本身就是子级项目元素容器。"
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Construction.ProjectElement> AllChildren { get; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectElement}
-      description: Returns a recursive depth-first enumerator over all child elements.
+      description: "返回所有子元素的递归深度优先枚举器。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.AllChildren*
   exceptions: []
   platform:
@@ -76,14 +76,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Appends the <code>child</code> element as the last child of this project container.
-  remarks: Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>.
+  summary: "追加<code> child </code>作为此项目容器的最后一个子级的元素。"
+  remarks: "如果此项目容器没有父级，或如果引发异常`child`元素已经有父级，或如果`child`元素由不同<xref:Microsoft.Build.Construction.ProjectRootElement>.</xref:Microsoft.Build.Construction.ProjectRootElement>"
   syntax:
     content: public void AppendChild (Microsoft.Build.Construction.ProjectElement child);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: The project element to be appended.
+      description: "要追加的项目元素。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.AppendChild*
   exceptions: []
   platform:
@@ -100,12 +100,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets all child elements.
+  summary: "获取所有子元素。"
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectElement> Children { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectElement}
-      description: Returns all child elements.
+      description: "返回所有子元素。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.Children*
   exceptions: []
   platform:
@@ -122,12 +122,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets all child elements, starting from the last child.
+  summary: "获取所有子元素，从最后一个子级开始。"
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectElement> ChildrenReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectElement}
-      description: Returns all child elements, starting from the last child.
+      description: "返回所有子元素，从最后一个子级开始。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.ChildrenReversed*
   exceptions: []
   platform:
@@ -144,12 +144,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets the number of child elements.
+  summary: "获取子元素的数目。"
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: Returns the number of child elements.
+      description: "返回子元素的数目。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.Count*
   exceptions: []
   platform:
@@ -166,13 +166,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets the first child element.
-  remarks: Use <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A> to initialize this property.
+  summary: "获取第一个子元素。"
+  remarks: "使用<xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>来初始化此属性。</xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>"
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement FirstChild { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: Returns the first child element. Returns null if no child element exists.
+      description: "返回第一个子元素。 如果存在任何子元素，不则，返回 null。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.FirstChild*
   exceptions: []
   platform:
@@ -189,17 +189,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Inserts the <code>child</code> element after the <code>reference</code> element.
-  remarks: "If the `reference` element is null, this method is equivalent to <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>.  \n  \n Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>, or if the `reference` element is not a child of this project container."
+  summary: "将插入<code> child </code>元素的后面<code> reference </code>元素。"
+  remarks: "如果`reference`元素为 null，此方法等效于<xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>.</xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>       如果此项目容器没有父级，或如果引发异常`child`元素已经有父级，或如果`child`元素由不同<xref:Microsoft.Build.Construction.ProjectRootElement>，或者如果`reference`元素不是此项目容器的子级。</xref:Microsoft.Build.Construction.ProjectRootElement>"
   syntax:
     content: public void InsertAfterChild (Microsoft.Build.Construction.ProjectElement child, Microsoft.Build.Construction.ProjectElement reference);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: The project element to be inserted.
+      description: "要插入的项目元素。"
     - id: reference
       type: Microsoft.Build.Construction.ProjectElement
-      description: The project element to be inserted after.
+      description: "要插入后的项目元素。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.InsertAfterChild*
   exceptions: []
   platform:
@@ -216,17 +216,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Inserts the <code>child</code> element before the <code>reference</code> element.
-  remarks: "If the `reference` element is null, this method is equivalent to <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>.  \n  \n Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>, or if the `reference` element is not a child of this project container."
+  summary: "将插入<code> child </code>元素之前<code> reference </code>元素。"
+  remarks: "如果`reference`元素为 null，此方法等效于<xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>.</xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>       如果此项目容器没有父级，或如果引发异常`child`元素已经有父级，或如果`child`元素由不同<xref:Microsoft.Build.Construction.ProjectRootElement>，或者如果`reference`元素不是此项目容器的子级。</xref:Microsoft.Build.Construction.ProjectRootElement>"
   syntax:
     content: public void InsertBeforeChild (Microsoft.Build.Construction.ProjectElement child, Microsoft.Build.Construction.ProjectElement reference);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: The project element to be inserted.
+      description: "要插入的项目元素。"
     - id: reference
       type: Microsoft.Build.Construction.ProjectElement
-      description: The project element to be inserted before.
+      description: "要插入之前的项目元素。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.InsertBeforeChild*
   exceptions: []
   platform:
@@ -243,13 +243,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Gets the last child element.
-  remarks: Use <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A> to initialize this property.
+  summary: "获取最后一个子元素。"
+  remarks: "使用<xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>来初始化此属性。</xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>"
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement LastChild { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: Returns the last child element. Returns null if no child element exists.
+      description: "返回最后一个子元素。 如果存在任何子元素，不则，返回 null。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.LastChild*
   exceptions: []
   platform:
@@ -266,14 +266,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Prepends the <code>child</code> element as the first child of this project container.
-  remarks: Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>.
+  summary: "将添加前<code> child </code>作为此项目容器的第一个子级的元素。"
+  remarks: "如果此项目容器没有父级，或如果引发异常`child`元素已经有父级，或如果`child`元素由不同<xref:Microsoft.Build.Construction.ProjectRootElement>.</xref:Microsoft.Build.Construction.ProjectRootElement>"
   syntax:
     content: public void PrependChild (Microsoft.Build.Construction.ProjectElement child);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: The project element to be prepended.
+      description: "要在前面追加的项目元素。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.PrependChild*
   exceptions: []
   platform:
@@ -290,8 +290,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Removes all the children, if any, from this project container.
-  remarks: It is safe to modify the children in this way during enumeration.
+  summary: "如果有的话，从该项目容器中移除所有的子级。"
+  remarks: "则可以安全地在枚举过程中修改以这种方式的子级。"
   syntax:
     content: public void RemoveAllChildren ();
     parameters: []
@@ -311,14 +311,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: Removes a <code>child</code> element from this project container.
-  remarks: Throws an exception if the child element is not currently parented by this project container. It is safe to remove a child this way during enumeration.
+  summary: "删除<code> child </code>从该项目容器的元素。"
+  remarks: "如果此项目容器没有当前父级的子元素，则引发异常。 则可以安全地枚举过程中删除子这种方式。"
   syntax:
     content: public void RemoveChild (Microsoft.Build.Construction.ProjectElement child);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: The project element to be removed.
+      description: "要删除的项目元素。"
   overload: Microsoft.Build.Construction.ProjectElementContainer.RemoveChild*
   exceptions: []
   platform:

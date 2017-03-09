@@ -15,7 +15,7 @@ items:
   nameWithType: BuildStartedEventArgs
   fullName: Microsoft.Build.Framework.BuildStartedEventArgs
   type: Class
-  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.BuildStarted"></xref> event.
+  summary: "提供有关数据<xref href=&quot;Microsoft.Build.Framework.IEventSource.BuildStarted&quot;></xref>事件。"
   remarks: 'WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a promise to never change the type''s fields i.e. the type is immutable; adding new fields in the next version of the type without following certain special FX guidelines, can break both forward and backward compatibility'
   syntax:
     content: 'public class BuildStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs'
@@ -46,7 +46,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildStartedEventArgs"></xref> class.
+  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Framework.BuildStartedEventArgs&quot;></xref>类。"
   syntax:
     content: protected BuildStartedEventArgs ();
     parameters: []
@@ -66,16 +66,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildStartedEventArgs"></xref> class with the specified message and Help keyword.
+  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Framework.BuildStartedEventArgs&quot;></xref>使用指定的消息和 Help 关键字的类。"
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword);
     parameters:
     - id: message
       type: System.String
-      description: The text of the event.
+      description: "事件的文本。"
     - id: helpKeyword
       type: System.String
-      description: The Help keyword associated with the event.
+      description: "与事件关联的帮助关键字。"
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -92,20 +92,20 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Constructor to initialize all parameters.
-  remarks: Sender field cannot be set here and is assumed to be "MSBuild".
+  summary: "若要初始化的所有参数的构造函数。"
+  remarks: "发件人字段不能在此处设置，并假定为&quot;MSBuild&quot;。"
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, System.Collections.Generic.IDictionary<string,string> environmentOfBuild);
     parameters:
     - id: message
       type: System.String
-      description: text message
+      description: "短信"
     - id: helpKeyword
       type: System.String
-      description: help keyword
+      description: "帮助关键字"
     - id: environmentOfBuild
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: A dictionary which lists the environment of the build when the build is started.
+      description: "一个字典，其中列出的生成环境，在生成开始时。"
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -122,19 +122,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Constructor to allow timestamp to be set
+  summary: "构造函数，以便用于设置时间戳"
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: text message
+      description: "短信"
     - id: helpKeyword
       type: System.String
-      description: help keyword
+      description: "帮助关键字"
     - id: eventTimestamp
       type: System.DateTime
-      description: Timestamp when the event was created
+      description: "创建该事件时的时间戳"
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -151,22 +151,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Constructor to allow timestamp to be set
+  summary: "构造函数，以便用于设置时间戳"
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: text message
+      description: "短信"
     - id: helpKeyword
       type: System.String
-      description: help keyword
+      description: "帮助关键字"
     - id: eventTimestamp
       type: System.DateTime
-      description: Timestamp when the event was created
+      description: "创建该事件时的时间戳"
     - id: messageArgs
       type: System.Object[]
-      description: message args
+      description: "消息参数"
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -183,12 +183,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets the environment dictionary which is used at the start of the build.
+  summary: "获取在生成开始时使用的环境字典。"
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> BuildEnvironment { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Returns the environment dictionary which is used at the start of the build.
+      description: "返回环境字典在生成开始时使用。"
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.BuildEnvironment*
   exceptions: []
   platform:
