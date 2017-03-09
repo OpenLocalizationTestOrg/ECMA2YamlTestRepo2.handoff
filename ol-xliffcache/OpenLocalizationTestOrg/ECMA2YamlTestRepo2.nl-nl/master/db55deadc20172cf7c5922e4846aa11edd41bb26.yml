@@ -20,8 +20,8 @@ items:
   nameWithType: ProjectMetadata
   fullName: Microsoft.Build.Evaluation.ProjectMetadata
   type: Class
-  summary: Represents evaluated design-time metadata.
-  remarks: "Never used to represent built-in metadata, like %(Filename). The metadata is always associated with project source code.  \n  \n The metadata is contained by either by a <xref:Microsoft.Build.Evaluation.ProjectItemDefinition> or a <xref:Microsoft.Build.Evaluation.ProjectItem>."
+  summary: "Geeft de metagegevens van het moment van ontwerp geëvalueerd."
+  remarks: "Nooit gebruikt als aanduiding voor ingebouwde metagegevens, zoals % (bestandsnaam). De metagegevens zijn altijd gekoppeld aan het project broncode te wijzigen.       De metagegevens is opgenomen in een <xref:Microsoft.Build.Evaluation.ProjectItemDefinition>of een <xref:Microsoft.Build.Evaluation.ProjectItem>.</xref:Microsoft.Build.Evaluation.ProjectItem> </xref:Microsoft.Build.Evaluation.ProjectItemDefinition>"
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{Name}={EvaluatedValue} [{xml.Value}]")]
@@ -46,12 +46,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Location of the Condition attribute.
+  summary: "Locatie van het kenmerk voorwaarde."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns Condition attribute location.
+      description: "Retourneert voorwaarde kenmerklocatie."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.ConditionLocation*
   exceptions: []
   platform:
@@ -68,13 +68,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the evaluated metadata value.
-  remarks: 'Cannot be set directly: only the unevaluated value can be set.'
+  summary: "Hiermee wordt de metagegevenswaarde van de geëvalueerde."
+  remarks: 'Kan niet rechtstreeks worden ingesteld: alleen de unevaluated waarde kan worden ingesteld.'
   syntax:
     content: public string EvaluatedValue { get; }
     return:
       type: System.String
-      description: Returns the evaluated metadata value, which is never null.
+      description: "Retourneert de geëvalueerde metagegevenswaarde, nooit null is."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.EvaluatedValue*
   exceptions: []
   platform:
@@ -91,12 +91,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Determines if the metadata originated from an imported file.
+  summary: "Bepaalt of de metagegevens afkomstig van een geïmporteerde bestand is."
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: Returns true if the metadata originated from an imported file; false otherwise.
+      description: "Retourneert waar als de metagegevens afkomstig van een geïmporteerde bestand is. de waarde False anders."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.IsImported*
   exceptions: []
   platform:
@@ -113,12 +113,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the item type of the containing item definition or item.
+  summary: "Het itemtype van de bovenliggende item definitie of item wordt opgehaald."
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: Returns the item type of the containing item definition or item.
+      description: "Retourneert het itemtype van de bovenliggende item definitie of item."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.ItemType*
   exceptions: []
   platform:
@@ -135,12 +135,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Location of the element.
+  summary: "Locatie van het element."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns the element location.
+      description: "Retourneert de locatie van het element."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Location*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the name of the metadata.
+  summary: "Hiermee haalt u de naam van de metagegevens."
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: Returns the name of the metadata.
+      description: "Retourneert de naam van de metagegevens."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Name*
   exceptions: []
   platform:
@@ -179,13 +179,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the last metadata (from an item definition or item) that was overridden by this metadata during evaluation.
-  remarks: "This method searches for all metadata with the same name that lie above in the logical project file, and which are contained by item definitions of the same item type, and whose conditions evaluate to true. If the metadata is contained by an item, this method searches for any previous metadata with the same name and item whose condition evaluated to true. Item definitions are searched before items.  \n  \n If the project has not been reevaluated since the last modification, this value may be incorrect."
+  summary: "Hiermee haalt u de laatste metagegevens (vanaf een definitie van item of de item) die tijdens de evaluatie is genegeerd door deze metagegevens."
+  remarks: "Deze methode wordt gezocht voor alle metagegevens met dezelfde naam die liggen boven in het logische projectbestand en die zijn opgenomen door de itemdefinities van hetzelfde itemtype en waarvan de voorwaarden in waar resulteren. De metagegevens is opgenomen door een item, zoekt deze methode naar vorige metagegevens met dezelfde naam en item waarvan voorwaarde werd geëvalueerd als waar. Itemdefinities worden doorzocht vóór items.       Als het project is niet opnieuw is geëvalueerd sinds de laatste wijziging, is deze waarde mogelijk onjuist."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata Predecessor { get; }
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: Returns the last metadata (from an item definition or item) whose value was overridden by this metadata during evaluation. Returns null if the metadata has not been overridden.
+      description: "Retourneert de laatste metagegevens (vanaf een definitie van item of de item) waarvan de waarde is genegeerd door deze metagegevens tijdens de evaluatie. Retourneert null als de metagegevens niet zijn overschreven."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Predecessor*
   exceptions: []
   platform:
@@ -202,12 +202,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the project that contains this metadata.
+  summary: "Het project met deze metagegevens opgehaald."
   syntax:
     content: public Microsoft.Build.Evaluation.Project Project { get; }
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: Returns the project that contains this metadata, which is never null.
+      description: "Retourneert het project met deze metagegevens die nooit null is."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Project*
   exceptions: []
   platform:
@@ -230,10 +230,10 @@ items:
     parameters:
     - id: other
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: To be added.
+      description: "Moet worden toegevoegd."
     return:
       type: System.Boolean
-      description: To be added.
+      description: "Moet worden toegevoegd."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.System#IEquatable<Microsoft#Build#Evaluation#ProjectMetadata>#Equals*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets the unevaluated metadata value.
-  remarks: "The setter method updates both the unevaluated value and the evaluated value, but does not affect anything else in the project until reevaluation.  \n  \n For example, --if a piece of metadata named \"m\" is modified on item of type \"i\", it does not affect \"j\" which is evaluated from \"@(j->'%(m)')\" until reevaluation. --if the unevaluated value of \"m\" is set to something that is modified by evaluation, such as \"$(p)\", the evaluated value will be set to \"$(p)\" until reevaluation.  \n  \n Setting metadata through a <xref:Microsoft.Build.Evaluation.ProjectItem> may cause the associated <xref:Microsoft.Build.Construction.ProjectItemElement> to be split, if the item element originated from an item list, wildcard, or semicolon expression. because it implies an intention to only affect that particular item.  \n  \n Setting metadata through ProjectMetadata does not cause any splitting, because it implies an intention to affect all items using the underlying <xref:Microsoft.Build.Construction.ProjectMetadataElement>.  \n  \n The containing project is marked as modified. Unevaluated values are assumed to contain escaped character sequences as needed.  \n  \n This method may not leave the project in a self consistent state."
+  summary: "Opgehaald of ingesteld van de metagegevenswaarde unevaluated."
+  remarks: "De methode setter werkt de unevaluated waarde en de geëvalueerde waarde, maar heeft geen invloed op alle andere dingen in het project pas opnieuw evalueren.       Bijvoorbeeld,--als een onderdeel van de metagegevens met de naam &quot;m&quot; wordt gewijzigd op het item van het type &quot;i&quot;, het heeft geen invloed op &quot;j&quot; die wordt geëvalueerd van &quot;@(j-> &quot;% (m)&quot;) &quot; tot nieuwe evaluatie. --Als de unevaluated waarde van &quot;m&quot; is ingesteld op iets wat is gewijzigd door de evaluatie, zoals &quot;$(p) &quot;, de geëvalueerde waarde wordt ingesteld op&quot; $(p) &quot;pas opnieuw evalueren.       Instellen van metagegevens via een <xref:Microsoft.Build.Evaluation.ProjectItem>kan ertoe leiden dat de bijbehorende <xref:Microsoft.Build.Construction.ProjectItemElement>te splitsen, als het itemelement afkomstig van een item lijst, jokerteken of puntkomma expressie is.</xref:Microsoft.Build.Construction.ProjectItemElement> </xref:Microsoft.Build.Evaluation.ProjectItem> omdat impliceert aan het alleen van invloed op dat element dat.       Metagegevens via ProjectMetadata stellen leidt niet tot een splitsen omdat impliceert dat aan de gevolgen hebben voor alle items met behulp van de onderliggende <xref:Microsoft.Build.Construction.ProjectMetadataElement>.</xref:Microsoft.Build.Construction.ProjectMetadataElement>       Het overkoepelende project is gemarkeerd als gewijzigd. Unevaluated waarden zijn aangenomen escape bevat tekenreeksen naar behoefte.       Deze methode kan het project niet in een consistente status self laat."
   syntax:
     content: public string UnevaluatedValue { get; set; }
     return:
       type: System.String
-      description: Returns the unevaluated metadata value.
+      description: "Retourneert de metagegevenswaarde unevaluated."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.UnevaluatedValue*
   exceptions: []
   platform:
@@ -273,12 +273,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the associated project metadata element.
+  summary: "Het element van de metagegevens gekoppeld project opgehaald."
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement Xml { get; }
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: Returns the associated project metadata element, which can never be null.
+      description: "Retourneert het gekoppelde project metagegevenselement dat kan niet null zijn."
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Xml*
   exceptions: []
   platform:

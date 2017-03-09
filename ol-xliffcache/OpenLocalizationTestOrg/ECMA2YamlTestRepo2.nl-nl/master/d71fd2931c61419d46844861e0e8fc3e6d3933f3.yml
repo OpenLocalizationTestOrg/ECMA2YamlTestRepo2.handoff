@@ -22,7 +22,7 @@ items:
   nameWithType: BuildManager
   fullName: Microsoft.Build.Execution.BuildManager
   type: Class
-  summary: This class is the public entry point for executing builds.
+  summary: "Deze klasse is het openbare beginpunt voor het uitvoeren van builds."
   syntax:
     content: 'public class BuildManager : IDisposable'
   inheritance:
@@ -44,7 +44,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Gets a new build manager without specifying a name.
+  summary: "Hiermee haalt u een nieuwe build manager zonder op te geven van een naam op."
   syntax:
     content: public BuildManager ();
     parameters: []
@@ -64,14 +64,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Creates a new unnamed build manager.
-  remarks: Create a new BuildManager. Creating multiple multi-processor aware build managers is not supported due to conflicts in the NodeManager.
+  summary: "Hiermee maakt een nieuwe build geen naamloze manager."
+  remarks: "Een nieuwe BuildManager maken. Maken van meerdere met meerdere processors op de hoogte build managers wordt vanwege conflicten in de NodeManager niet ondersteund."
   syntax:
     content: public BuildManager (string hostName);
     parameters:
     - id: hostName
       type: System.String
-      description: The host for the build manager.
+      description: "De host voor de build-manager."
   overload: Microsoft.Build.Execution.BuildManager.#ctor*
   exceptions: []
   platform:
@@ -88,18 +88,18 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Prepares the BuildManager to receive build requests.
+  summary: "Bereidt de BuildManager build aanvragen ontvangen."
   syntax:
     content: public void BeginBuild (Microsoft.Build.Execution.BuildParameters parameters);
     parameters:
     - id: parameters
       type: Microsoft.Build.Execution.BuildParameters
-      description: The build parameters. May be null.
+      description: "De build-parameters. Kan niet null zijn."
   overload: Microsoft.Build.Execution.BuildManager.BeginBuild*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: Thrown if a build is already in progress.
+    description: "Gegenereerd als een build al uitgevoerd wordt."
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildManager.Build(Microsoft.Build.Execution.BuildParameters,Microsoft.Build.Execution.BuildRequestData)
@@ -114,25 +114,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Submits a lone build request and blocks until results are available.
-  remarks: Convenience method.
+  summary: "Verzendt een verzoek alleenstaande build en blokken totdat resultaten beschikbaar zijn."
+  remarks: "Methode voor uw gemak bedoeld;."
   syntax:
     content: public Microsoft.Build.Execution.BuildResult Build (Microsoft.Build.Execution.BuildParameters parameters, Microsoft.Build.Execution.BuildRequestData requestData);
     parameters:
     - id: parameters
       type: Microsoft.Build.Execution.BuildParameters
-      description: Build parameters.
+      description: "Bouw parameters."
     - id: requestData
       type: Microsoft.Build.Execution.BuildRequestData
-      description: Build request data.
+      description: "Maken van gegevens van aanvragen."
     return:
       type: Microsoft.Build.Execution.BuildResult
-      description: Returns the build result.
+      description: "Retourneert het resultaat samenstellen."
   overload: Microsoft.Build.Execution.BuildManager.Build*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: Thrown if a build is already in progress.
+    description: "Gegenereerd als een build al uitgevoerd wordt."
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildManager.BuildRequest(Microsoft.Build.Execution.BuildRequestData)
@@ -147,22 +147,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Submits a build request and blocks until the results are available.
-  remarks: Convenience method.
+  summary: "Verzendt een aanvraag voor het samenstellen en blokken totdat de resultaten beschikbaar zijn."
+  remarks: "Methode voor uw gemak bedoeld;."
   syntax:
     content: public Microsoft.Build.Execution.BuildResult BuildRequest (Microsoft.Build.Execution.BuildRequestData requestData);
     parameters:
     - id: requestData
       type: Microsoft.Build.Execution.BuildRequestData
-      description: Build request.
+      description: "Aanvraag voor het samenstellen."
     return:
       type: Microsoft.Build.Execution.BuildResult
-      description: Returns the build result.
+      description: "Retourneert het resultaat samenstellen."
   overload: Microsoft.Build.Execution.BuildManager.BuildRequest*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: Thrown if StartBuild has not been called or if EndBuild has been called.
+    description: "Gegenereerd als StartBuild is niet aangeroepen of als EndBuild is aangeroepen."
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildManager.CancelAllSubmissions
@@ -177,7 +177,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Cancels all outstanding submissions asynchronously.
+  summary: "Alle openstaande bijdragen annuleert asynchroon."
   syntax:
     content: public void CancelAllSubmissions ();
     parameters: []
@@ -197,12 +197,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Gets the singleton instance of the Build Manager.
+  summary: "Hiermee haalt u de singleton-instantie van de Manager bouwen."
   syntax:
     content: public static Microsoft.Build.Execution.BuildManager DefaultBuildManager { get; }
     return:
       type: Microsoft.Build.Execution.BuildManager
-      description: Returns the singleton instance of the Build Manager.
+      description: "Retourneert de singleton-instantie van de Manager bouwen."
   overload: Microsoft.Build.Execution.BuildManager.DefaultBuildManager*
   exceptions: []
   platform:
@@ -219,7 +219,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Dispose of the build manager.
+  summary: "Buitengebruikstelling van de build-manager."
   syntax:
     content: public void Dispose ();
     parameters: []
@@ -239,8 +239,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Signals that no more build requests are expected (or allowed) and that the BuildManager may clean up.
-  remarks: This call blocks until all currently pending requests are complete.
+  summary: "Geeft aan dat geen aanvragen meer build worden verwacht (of toegestaan) en de BuildManager kan opschonen."
+  remarks: "Deze aanroep blokken totdat alle aanvragen die momenteel in behandeling zijn voltooid."
   syntax:
     content: public void EndBuild ();
     parameters: []
@@ -248,7 +248,7 @@ items:
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: Thrown if there is no build in progress.
+    description: "Als er geen build wordt gegenereerd."
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildManager.Finalize
@@ -263,7 +263,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Finalize the building manager.
+  summary: "Voltooi de manager ontwikkelen."
   syntax:
     content: ~BuildManager ();
     parameters: []
@@ -283,16 +283,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Gets a matching ProjectInstance from the BuildManager cache of previously built projects.
+  summary: "Hiermee wordt een overeenkomende ProjectInstance opgehaald uit de cache BuildManager eerder gemaakte projecten."
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance GetProjectInstanceForBuild (Microsoft.Build.Evaluation.Project project);
     parameters:
     - id: project
       type: Microsoft.Build.Evaluation.Project
-      description: The project for which an instance should be retrieved.
+      description: "Het project waarvoor een exemplaar moet worden opgehaald."
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: Returns a matching ProjectInstance from the BuildManager cache of previously built projects. If none exist, a new project instance will be created from the specified project.
+      description: "Retourneert een overeenkomende ProjectInstance uit de cache BuildManager eerder gemaakte projecten. Als er geen bestaan, wordt een nieuw project exemplaar gemaakt van het opgegeven project."
   overload: Microsoft.Build.Execution.BuildManager.GetProjectInstanceForBuild*
   exceptions: []
   platform:
@@ -309,21 +309,21 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Submits a build request to the current build but does not start it immediately. Allows the user to perform asynchronous execution or access the submission ID prior to executing the request.
+  summary: "Verzendt een verzoek build naar de huidige versie, maar heeft niet het onmiddellijk starten. Kan de gebruiker asynchrone uitvoering uitvoeren of toegang tot de aanvraag-ID voordat de aanvraag wordt uitgevoerd."
   syntax:
     content: public Microsoft.Build.Execution.BuildSubmission PendBuildRequest (Microsoft.Build.Execution.BuildRequestData requestData);
     parameters:
     - id: requestData
       type: Microsoft.Build.Execution.BuildRequestData
-      description: Build request data.
+      description: "Maken van gegevens van aanvragen."
     return:
       type: Microsoft.Build.Execution.BuildSubmission
-      description: Returns the submission that will be built.
+      description: "Retourneert de bijdrage die worden samengesteld."
   overload: Microsoft.Build.Execution.BuildManager.PendBuildRequest*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: Thrown if StartBuild has not been called or if EndBuild has been called.
+    description: "Gegenereerd als StartBuild is niet aangeroepen of als EndBuild is aangeroepen."
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildManager.ResetCaches
@@ -338,7 +338,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Clears out all of the build manager cached information.
+  summary: "Wissen uit alle van de manager van de build in cache opgeslagen gegevens."
   syntax:
     content: public void ResetCaches ();
     parameters: []
