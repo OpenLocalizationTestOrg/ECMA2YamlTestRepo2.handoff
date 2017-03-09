@@ -10,7 +10,7 @@ items:
   nameWithType: ICancelableTask
   fullName: Microsoft.Build.Framework.ICancelableTask
   type: Interface
-  summary: Interface for tasks which can be cancelled.
+  summary: "Interfejs dla zadań, które mogą być anulowane."
   syntax:
     content: 'public interface ICancelableTask : Microsoft.Build.Framework.ITask'
   implements:
@@ -29,8 +29,8 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Instructs the task to exit as soon as possible, or to immediately exit if Execute is invoked after this method.
-  remarks: "Cancel() may be called at any time after the task has been instantiated, even before <xref:Microsoft.Build.Framework.ITask.Execute%2A> is called.  \n  \n Cancel calls may come in from any thread. The implementation of this method should not block indefinitely.  \n  \n To cancel the build, both `Cancel` and `Execute` must return in any order."
+  summary: "Powoduje, że zadanie, aby jak najszybciej zakończyć lub natychmiast zamknąć, jeżeli wykonanie jest wywoływana po tej metody."
+  remarks: "Cancel() może być wywoływana w dowolnej chwili po zadanie ma zostały utworzone, nawet zanim <xref:Microsoft.Build.Framework.ITask.Execute%2A>jest wywoływana.</xref:Microsoft.Build.Framework.ITask.Execute%2A>       Anuluj wywołania mogą pochodzić z każdego wątku. Implementacja tej metody nie powinny zablokowania nieskończoność.       Aby anulować kompilacji, zarówno `Cancel` i `Execute` musi zwracać w dowolnej kolejności."
   syntax:
     content: public void Cancel ();
     parameters: []

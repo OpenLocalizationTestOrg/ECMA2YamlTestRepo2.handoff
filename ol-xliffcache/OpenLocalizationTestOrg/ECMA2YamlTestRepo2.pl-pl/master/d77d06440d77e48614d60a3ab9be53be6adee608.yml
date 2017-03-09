@@ -12,7 +12,7 @@ items:
   nameWithType: ITargetResult
   fullName: Microsoft.Build.Execution.ITargetResult
   type: Interface
-  summary: An interface representing the results for a specific target
+  summary: "Interfejs reprezentującą wyników dla określonego obiektu docelowego"
   syntax:
     content: public interface ITargetResult
   implements: []
@@ -30,12 +30,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Gets the exception generated when the target was built.
+  summary: "Pobiera wyjątek generowane, gdy element docelowy został utworzony."
   syntax:
     content: public Exception Exception { get; }
     return:
       type: System.Exception
-      description: Returns the exception generated when the target was built. Return null if no exception occurred.
+      description: "Zwraca wyjątek generowane, gdy element docelowy został utworzony. Zwraca wartość null, jeśli wystąpił wyjątek nie."
   overload: Microsoft.Build.Execution.ITargetResult.Exception*
   exceptions: []
   platform:
@@ -52,13 +52,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Gets the set of build items output by the target.
-  remarks: ITaskItem's have no item-type.
+  summary: "Pobiera zestaw danych wyjściowych kompilacji elementów przez obiekt docelowy."
+  remarks: "Jego ITaskItem mieć nie typu elementu."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Items { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: Returns the set of build items output by the target.
+      description: "Zwraca zestaw elementów kompilacji w danych wyjściowych przez obiekt docelowy."
   overload: Microsoft.Build.Execution.ITargetResult.Items*
   exceptions: []
   platform:
@@ -75,12 +75,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: Gets the result code returned when the target was built.
+  summary: "Pobiera kod wynik zwracany, gdy element docelowy został utworzony."
   syntax:
     content: public Microsoft.Build.Execution.TargetResultCode ResultCode { get; }
     return:
       type: Microsoft.Build.Execution.TargetResultCode
-      description: Returns the result code returned when the target was built.
+      description: "Zwraca kod wyniku zwracany, jeśli element docelowy został utworzony."
   overload: Microsoft.Build.Execution.ITargetResult.ResultCode*
   exceptions: []
   platform:

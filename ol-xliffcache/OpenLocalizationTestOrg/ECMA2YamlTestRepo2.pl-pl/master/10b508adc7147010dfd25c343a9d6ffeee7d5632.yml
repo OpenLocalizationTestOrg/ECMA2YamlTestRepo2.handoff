@@ -30,8 +30,8 @@ items:
   nameWithType: BuildEventContext
   fullName: Microsoft.Build.Framework.BuildEventContext
   type: Class
-  summary: Provides contextual location information for build events.
-  remarks: BuildEventContext is especially useful in multiprocessor environments.
+  summary: "Informacje kontekstowe lokalizacji dla zdarzeń kompilacji."
+  remarks: "BuildEventContext jest szczególnie przydatna w środowiskach wieloprocesorowych."
   syntax:
     content: public class BuildEventContext
   inheritance:
@@ -52,22 +52,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildEventContext"></xref> class.
+  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Framework.BuildEventContext&quot;> </xref> klasy."
   syntax:
     content: public BuildEventContext (int nodeId, int targetId, int projectContextId, int taskId);
     parameters:
     - id: nodeId
       type: System.Int32
-      description: The node ID of the build event.
+      description: "Identyfikator węzła zdarzenia kompilacji."
     - id: targetId
       type: System.Int32
-      description: The target ID of the build event.
+      description: "Identyfikator docelowy zdarzenia kompilacji."
     - id: projectContextId
       type: System.Int32
-      description: The project ID of the build event.
+      description: "Identyfikator zdarzenia kompilacji."
     - id: taskId
       type: System.Int32
-      description: The task ID of the build event.
+      description: "Identyfikator zadania zdarzenia kompilacji."
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -84,25 +84,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Constructs a BuildEventContext with a specified project instance id.
+  summary: "Konstrukcje BuildEventContext za pomocą identyfikatora wystąpienia określonego projektu."
   syntax:
     content: public BuildEventContext (int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);
     parameters:
     - id: nodeId
       type: System.Int32
-      description: The node ID of the build event.
+      description: "Identyfikator węzła zdarzenia kompilacji."
     - id: projectInstanceId
       type: System.Int32
-      description: The project instance ID of the build event.
+      description: "Identyfikator wystąpienia zdarzenia kompilacji."
     - id: projectContextId
       type: System.Int32
-      description: The project ID of the build event.
+      description: "Identyfikator zdarzenia kompilacji."
     - id: targetId
       type: System.Int32
-      description: The target ID of the build event.
+      description: "Identyfikator docelowy zdarzenia kompilacji."
     - id: taskId
       type: System.Int32
-      description: The task ID of the build event.
+      description: "Identyfikator zadania zdarzenia kompilacji."
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -119,28 +119,28 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Constructs a BuildEventContext with a specific submission id
+  summary: "Konstrukcje BuildEventContext o identyfikatorze określonych przesyłania"
   syntax:
     content: public BuildEventContext (int submissionId, int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);
     parameters:
     - id: submissionId
       type: System.Int32
-      description: The submission ID of the build event.
+      description: "Przesyłanie identyfikator zdarzenia kompilacji."
     - id: nodeId
       type: System.Int32
-      description: The node ID of the build event.
+      description: "Identyfikator węzła zdarzenia kompilacji."
     - id: projectInstanceId
       type: System.Int32
-      description: The project instance ID of the build event.
+      description: "Identyfikator wystąpienia zdarzenia kompilacji."
     - id: projectContextId
       type: System.Int32
-      description: The project ID of the build event.
+      description: "Identyfikator zdarzenia kompilacji."
     - id: targetId
       type: System.Int32
-      description: The target ID of the build event.
+      description: "Identyfikator docelowy zdarzenia kompilacji."
     - id: taskId
       type: System.Int32
-      description: The task ID of the build event.
+      description: "Identyfikator zadania zdarzenia kompilacji."
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Retrieves the BuildRequest id. Note that this is not the same as the global request id on a BuildRequest or BuildResult.
+  summary: "Pobiera identyfikator BuildRequest. Należy zauważyć, że nie jest taki sam jak identyfikator globalnej na BuildRequest lub BuildResult."
   syntax:
     content: public long BuildRequestId { get; }
     return:
       type: System.Int64
-      description: To be added.
+      description: "Do dodania."
   overload: Microsoft.Build.Framework.BuildEventContext.BuildRequestId*
   exceptions: []
   platform:
@@ -179,16 +179,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets whether the references are the same.
+  summary: "Pobiera czy odwołania są takie same."
   syntax:
     content: public override bool Equals (object obj);
     parameters:
     - id: obj
       type: System.Object
-      description: The reference to compare.
+      description: "Odwołanie do porównania."
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the references are equal, <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli odwołania są równe, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> w inny sposób."
   overload: Microsoft.Build.Framework.BuildEventContext.Equals*
   exceptions: []
   platform:
@@ -205,13 +205,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets a code comprised of the <xref:Microsoft.Build.Framework.BuildEventContext.ProjectContextId*> and the <xref:Microsoft.Build.Framework.BuildEventContext.NodeId*>.
+  summary: "Pobiera kod składający się z <> </> *> i <> </> *>."
   syntax:
     content: public override int GetHashCode ();
     parameters: []
     return:
       type: System.Int32
-      description: An integer value representing the hash code.
+      description: "Liczbę całkowitą reprezentującą kod skrótu."
   overload: Microsoft.Build.Framework.BuildEventContext.GetHashCode*
   exceptions: []
   platform:
@@ -228,12 +228,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets whether the context where the event occurred is valid.
+  summary: "Pobiera czy kontekst, w którym wystąpiło zdarzenie jest prawidłowy."
   syntax:
     content: public static Microsoft.Build.Framework.BuildEventContext Invalid { get; }
     return:
       type: Microsoft.Build.Framework.BuildEventContext
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the context is valid; <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli kontekst jest nieprawidłowe. <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> w inny sposób."
   overload: Microsoft.Build.Framework.BuildEventContext.Invalid*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: The node ID of the target the event was in when the event was triggered.
-  remarks: An integer value representing the node ID.
+  summary: "Identyfikator węzła docelowego zdarzenia w momencie zdarzenie zostało uaktywnione."
+  remarks: "Liczbę całkowitą reprezentującą identyfikator węzła."
   syntax:
     content: public const int InvalidNodeId = -2;
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   exceptions: []
   platform:
   - net462
@@ -272,12 +272,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: The project ID of the target the event was in when the event was triggered.
+  summary: "Identyfikator docelowy zdarzenia w momencie zdarzenie zostało uaktywnione."
   syntax:
     content: public const int InvalidProjectContextId = -2;
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   exceptions: []
   platform:
   - net462
@@ -293,12 +293,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: The project instance ID of the target the event was in when the event was triggered.
+  summary: "Identyfikator wystąpienia docelowego zdarzenia w momencie zdarzenie zostało uaktywnione."
   syntax:
     content: public const int InvalidProjectInstanceId = -1;
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   exceptions: []
   platform:
   - net462
@@ -314,12 +314,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: The submission ID of the target the event was in when the event was triggered.
+  summary: "Przesyłanie identyfikator docelowy zdarzenia w momencie zdarzenie zostało uaktywnione."
   syntax:
     content: public const int InvalidSubmissionId = -1;
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   exceptions: []
   platform:
   - net462
@@ -335,12 +335,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: The name of the target the event was in when the event was triggered.
+  summary: "Nazwa elementu docelowego zdarzenia w momencie zdarzenie zostało uaktywnione."
   syntax:
     content: public const int InvalidTargetId = -1;
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   exceptions: []
   platform:
   - net462
@@ -356,12 +356,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: The task ID of the target the event was in when the event was triggered.
+  summary: "Zadania o identyfikatorze zdarzenia obiektu docelowego w momencie zdarzenie zostało uaktywnione."
   syntax:
     content: public const int InvalidTaskId = -1;
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   exceptions: []
   platform:
   - net462
@@ -377,12 +377,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets the node ID where the event occurred.
+  summary: "Pobiera identyfikator węzła, w którym wystąpiło zdarzenie."
   syntax:
     content: public int NodeId { get; }
     return:
       type: System.Int32
-      description: An integer value representing the node ID.
+      description: "Liczbę całkowitą reprezentującą identyfikator węzła."
   overload: Microsoft.Build.Framework.BuildEventContext.NodeId*
   exceptions: []
   platform:
@@ -399,19 +399,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Override == so the equals comparison using this operator will be the same as .Equals
+  summary: "Zastąpienie ==, więc będzie taki sam, jak za pomocą tego operatora porównania równości. Równa się"
   syntax:
     content: public static bool op_Equality (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);
     parameters:
     - id: left
       type: Microsoft.Build.Framework.BuildEventContext
-      description: Left hand side operand
+      description: "Argument operacji po stronie po lewej stronie"
     - id: right
       type: Microsoft.Build.Framework.BuildEventContext
-      description: Right hand side operand
+      description: "Argument operacji po stronie prawej"
     return:
       type: System.Boolean
-      description: True if the object values are identical, false if they are not identical
+      description: "Wartość true, jeśli wartości obiektu są identyczne, false, jeśli nie są identyczne"
   overload: Microsoft.Build.Framework.BuildEventContext.op_Equality*
   exceptions: []
   platform:
@@ -428,19 +428,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Override != so the equals comparison using this operator will be the same as ! Equals
+  summary: "Zastąpienie! =, więc będzie taki sam, jak za pomocą tego operatora porównania równości! Równa się"
   syntax:
     content: public static bool op_Inequality (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);
     parameters:
     - id: left
       type: Microsoft.Build.Framework.BuildEventContext
-      description: Left hand side operand
+      description: "Argument operacji po stronie po lewej stronie"
     - id: right
       type: Microsoft.Build.Framework.BuildEventContext
-      description: Right hand side operand
+      description: "Argument operacji po stronie prawej"
     return:
       type: System.Boolean
-      description: True if the object values are not identical, false if they are identical
+      description: "Wartość true, jeśli obiekt wartości nie są identyczne, false, jeśli są one identyczne"
   overload: Microsoft.Build.Framework.BuildEventContext.op_Inequality*
   exceptions: []
   platform:
@@ -457,12 +457,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets the ID of the project where the event occurred.
+  summary: "Pobiera identyfikator projektu, w którym wystąpiło zdarzenie."
   syntax:
     content: public int ProjectContextId { get; }
     return:
       type: System.Int32
-      description: An integer value representing the project ID.
+      description: "Liczbę całkowitą reprezentującą identyfikator projektu."
   overload: Microsoft.Build.Framework.BuildEventContext.ProjectContextId*
   exceptions: []
   platform:
@@ -479,12 +479,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Retrieves the project instance id.
+  summary: "Pobiera identyfikator wystąpienia projektu."
   syntax:
     content: public int ProjectInstanceId { get; }
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   overload: Microsoft.Build.Framework.BuildEventContext.ProjectInstanceId*
   exceptions: []
   platform:
@@ -501,12 +501,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Retrieves the Submission id.
+  summary: "Pobiera identyfikator zgłoszenia."
   syntax:
     content: public int SubmissionId { get; }
     return:
       type: System.Int32
-      description: To be added.
+      description: "Do dodania."
   overload: Microsoft.Build.Framework.BuildEventContext.SubmissionId*
   exceptions: []
   platform:
@@ -523,12 +523,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets the ID of the target where the event occurred.
+  summary: "Pobiera identyfikator docelowy, w którym wystąpiło zdarzenie."
   syntax:
     content: public int TargetId { get; }
     return:
       type: System.Int32
-      description: An integer value representing the target ID.
+      description: "Liczbę całkowitą reprezentującą identyfikator docelowy."
   overload: Microsoft.Build.Framework.BuildEventContext.TargetId*
   exceptions: []
   platform:
@@ -545,12 +545,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: Gets the ID of the task where the event occurred.
+  summary: "Pobiera identyfikator zadania, w którym wystąpiło zdarzenie."
   syntax:
     content: public int TaskId { get; }
     return:
       type: System.Int32
-      description: An integer value representing the task ID.
+      description: "Liczbę całkowitą reprezentującą identyfikator zadania."
   overload: Microsoft.Build.Framework.BuildEventContext.TaskId*
   exceptions: []
   platform:

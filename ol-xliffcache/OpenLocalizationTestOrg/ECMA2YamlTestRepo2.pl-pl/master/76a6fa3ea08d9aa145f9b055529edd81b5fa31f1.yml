@@ -95,7 +95,7 @@ items:
   nameWithType: Project
   fullName: Microsoft.Build.Evaluation.Project
   type: Class
-  summary: Represents a project with design time semantics. This class can load project files, edit items and properties and build projects.
+  summary: "Reprezentuje projektu z semantyką czasu projektowania. Ta klasa można ładować pliki projektu, edytowanie elementów i właściwości i kompilowania projektów."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{FullPath} EffectiveToolsVersion={ToolsVersion} #GlobalProperties={data.globalProperties.Count} #Properties={data.Properties.Count} #ItemTypes={data.ItemTypes.Count} #ItemDefinitions={data.ItemDefinitions.Count} #Items={data.Items.Count} #Targets={data.Targets.Count}")]
@@ -119,8 +119,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project using the global project collection global properties and default tools version.
-  remarks: This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.
+  summary: "Tworzy pusty projekt za pomocą właściwości globalnych kolekcji globalnego projektu i wersji narzędzia domyślnej."
+  remarks: "Ten projekt jest dodawany do kolekcji globalnego projektu danej pełną ścieżkę do pliku źródłowego projektu, zazwyczaj przez zapisania projektu."
   syntax:
     content: public Project ();
     parameters: []
@@ -140,14 +140,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project and evaluates it using the given project root and the global project collection global properties and default tools version.
-  remarks: "This project is added to the global project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Tworzy pusty projekt i ocenia je za pomocą głównego danego projektu i projektu globalnego kolekcji globalnych właściwości i domyślna wersja narzędzia."
+  remarks: "Ten projekt jest dodawany do kolekcji globalnego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: ProjectRootElement to use for evaluation.
+      description: "ProjectRootElement na potrzeby oceny."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -164,14 +164,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project using the given project collection global properties and default tools version.
-  remarks: This project is added to the given project collection when it is given the full path to the source project file, typically by saving the project.
+  summary: "Tworzy pusty projekt za pomocą właściwości globalnych kolekcji danego projektu i wersji narzędzia domyślnej."
+  remarks: "Ten projekt jest dodawany do kolekcji danego projektu danej pełną ścieżkę do pliku źródłowego projektu, zazwyczaj przez zapisania projektu."
   syntax:
     content: public Project (Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection that the new project is added to.
+      description: "Nowy projekt jest dodawany do kolekcji projektu."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -188,19 +188,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the global project collection global properties and default tools version.
-  remarks: "The project is added to the global project collection.  \n  \n Throws InvalidOperationException if there is already a project in the project collection that evaluates this source project file. May throw IO-related exceptions."
+  summary: "Konstruuje projekt i ocenia go z danego źródła pliku projektu oraz właściwości globalnych kolekcji globalnego projektu i wersji narzędzia domyślnej."
+  remarks: "Projekt jest dodawany do kolekcji projektu globalnego.       Generuje wyjątek InvalidOperationException, jeśli istnieje już projekt w kolekcji projektów, której wynikiem tego pliku źródłowego projektu. Może zgłaszać wyjątki dotyczące operacji We/Wy."
   syntax:
     content: public Project (string projectFile);
     parameters:
     - id: projectFile
       type: System.String
-      description: The source project file to be evaluated.
+      description: "Plik źródłowy projektu do obliczenia."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions:
   - type: Microsoft.Build.Exceptions.InvalidProjectFileException
     commentId: T:Microsoft.Build.Exceptions.InvalidProjectFileException
-    description: If the evaluation fails.
+    description: "Jeśli ocena kończy się niepowodzeniem."
   platform:
   - net462
 - uid: Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader)
@@ -215,14 +215,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the global project collection global properties and default tools version.
-  remarks: "This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia kod źródłowy z poziomu danego czytnika XML. Kod źródłowy jest oceniany z właściwości globalnych kolekcji globalnego projektu i wersji narzędzia domyślnej."
+  remarks: "Ten projekt jest dodawany do kolekcji globalnego projektu danej pełną ścieżkę do pliku źródłowego projektu, zazwyczaj przez zapisania projektu.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "Czytnik XML odczytać kodu źródłowego projektu z."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -239,20 +239,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project and evaluates it using the given project root and with the given global properties and given tools version.
-  remarks: "This project is added to the global project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Tworzy pusty projekt i ocenia je za pomocą głównego danego projektu i z danej właściwości globalnych i daną wersją narzędzi."
+  remarks: "Ten projekt jest dodawany do kolekcji globalnego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "Katalog główny projektu na potrzeby oceny."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -269,20 +269,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs an empty project, to be evaluated with the given project collection and with the given global properties and given tools version.
-  remarks: The project is added to the specified project collection when it is given the full path to the source project file, typically by saving the project.
+  summary: "Tworzy pusty projekt, obliczenia z kolekcji danego projektu i danej właściwości globalnych i biorąc pod uwagę wersji narzędzia."
+  remarks: "Projekt jest dodawany do kolekcji określonego projektu danej pełną ścieżkę do pliku źródłowego projektu, zazwyczaj przez zapisania projektu."
   syntax:
     content: public Project (System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: The tools version used to evaluate the project. May be null.
+      description: "Wersja narzędzia używane do analizowania projektu. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the new project will be added to.
+      description: "Kolekcja projektów nowy projekt zostanie dodany do."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -299,20 +299,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties and given tools version.
-  remarks: "The project is added to the global project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "Konstruuje projekt i ocenia go z pliku projektu danego źródła i z danej właściwości globalnych i daną wersją narzędzi."
+  remarks: "Projekt jest dodawany do kolekcji projektu globalnego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów. Może zgłaszać wyjątki dotyczące operacji We/Wy."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "Ścieżka do pliku projektu źródłowego ma zostać obliczone."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -329,20 +329,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties and given tools version.
-  remarks: "This project is added to the global project collection when it is given the full path to the source project file, typically by saving the project.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia kod źródłowy z poziomu danego czytnika XML. Kod źródłowy jest oceniany z danej właściwości globalnych i danych wersji narzędzia."
+  remarks: "Ten projekt jest dodawany do kolekcji globalnego projektu danej pełną ścieżkę do pliku źródłowego projektu, zazwyczaj przez zapisania projektu.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "Czytnik XML odczytać kodu źródłowego projektu z."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -359,23 +359,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it using the given project root and with the given global properties and given tools version.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia je za pomocą głównego danego projektu i z danej właściwości globalnych i daną wersją narzędzi."
+  remarks: "Ten projekt jest dodawany do kolekcji danego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "Katalog główny projektu na potrzeby oceny."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to.
+      description: "Kolekcja projektów projekt jest dodawany do."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -392,23 +392,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties and given tools version.
-  remarks: "The project is added to the given project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "Konstruuje projekt i ocenia go z pliku projektu danego źródła i z danej właściwości globalnych i daną wersją narzędzi."
+  remarks: "Projekt jest dodawany do kolekcji danego projektu.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów. Może zgłaszać wyjątki dotyczące operacji We/Wy."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "Ścieżka do pliku projektu źródłowego ma zostać obliczone."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: The global properties. May be null.
+      description: "Właściwości globalne. Może być zerowy."
     - id: toolsVersion
       type: System.String
-      description: The tools version. May be null.
+      description: "Wersja narzędzia. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -425,23 +425,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties and given tools version.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia kod źródłowy z poziomu danego czytnika XML. Kod źródłowy jest oceniany z danej właściwości globalnych i danych wersji narzędzia."
+  remarks: "Ten projekt jest dodawany do kolekcji danego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "Czytnik XML odczytać kodu źródłowego projektu z."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -458,26 +458,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it using the given project root and with the given global properties, given tools version, and given load settings.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia je za pomocą głównego danego projektu danej właściwości globalnych, biorąc pod uwagę wersji narzędzia i podanych ustawień obciążenia."
+  remarks: "Ten projekt jest dodawany do kolekcji danego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "Katalog główny projektu na potrzeby oceny."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "Ustawienia ładowania na potrzeby oceny."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -494,26 +494,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties, given tools version, and given load settings.
-  remarks: "The project is added to the given project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "Konstruuje projekt i ocenia go z pliku projektu danego źródła i z danej właściwości globalne, biorąc pod uwagę wersji narzędzia i podanych ustawień obciążenia."
+  remarks: "Projekt jest dodawany do kolekcji danego projektu.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów. Może zgłaszać wyjątki dotyczące operacji We/Wy."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "Ścieżka do pliku projektu źródłowego ma zostać obliczone."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: The tools version. May be null.
+      description: "Wersja narzędzia. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "Ustawienia ładowania na potrzeby oceny."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -530,26 +530,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties and given tools version.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia kod źródłowy z poziomu danego czytnika XML. Kod źródłowy jest oceniany z danej właściwości globalnych i danych wersji narzędzia."
+  remarks: "Ten projekt jest dodawany do kolekcji danego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader from which to read project source code.
+      description: "Czytnik XML, z których mają być odczytywany kod źródłowy projektu."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "Ustawienia ładowania na potrzeby oceny."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -566,29 +566,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it using the given project root and with the given global properties, tools and sub-toolset versions, project collection, and load settings.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia je za pomocą głównego danego projektu danej właściwości globalnych, narzędzia i zestawu narzędzi sub wersje kolekcja projektu i załadować ustawień."
+  remarks: "Ten projekt jest dodawany do kolekcji danego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: The project root to use for evaluation.
+      description: "Katalog główny projektu na potrzeby oceny."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
     - id: subToolsetVersion
       type: System.String
-      description: Sub toolset version to evaluate with. May be null.
+      description: "Sub wersja zestawu narzędzi do oceny. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "Ustawienia ładowania na potrzeby oceny."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -605,29 +605,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates it from the given source project file and with the given global properties, tools and sub-toolset versions, project collection, and load settings.
-  remarks: "The project is added to the given project collection.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection. May throw IO-related exceptions."
+  summary: "Konstruuje projekt i ocenia go z pliku projektu danego źródła i z danej właściwości globalnych, narzędzia i wersji zestawu narzędzi sub, Kolekcja projektów i ustawienia ładowania."
+  remarks: "Projekt jest dodawany do kolekcji danego projektu.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów. Może zgłaszać wyjątki dotyczące operacji We/Wy."
   syntax:
     content: public Project (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: projectFile
       type: System.String
-      description: The path to the source project file to be evaluated.
+      description: "Ścieżka do pliku projektu źródłowego ma zostać obliczone."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: The tools version. May be null.
+      description: "Wersja narzędzia. Może być zerowy."
     - id: subToolsetVersion
       type: System.String
-      description: The sub toolset version. May be null.
+      description: "Wersja zestawu narzędzi sub. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "Ustawienia ładowania na potrzeby oceny."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -644,29 +644,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Constructs a project and evaluates the source code from the given XML reader. The source code is evaluated with the given global properties, tools and sub-toolset versions, project collection, and load settings.
-  remarks: "This project is added to the given project collection when either this project or the given project root is given the full path to the source project file.  \n  \n Throws InvalidProjectFileException if the evaluation fails. Throws InvalidOperationException if there is already an equivalent project loaded in the project collection."
+  summary: "Konstruuje projekt i ocenia kod źródłowy z poziomu danego czytnika XML. Kod źródłowy jest oceniany z danej właściwości globalnych, narzędzia i wersji zestawu narzędzi sub, Kolekcja projektów i ustawienia ładowania."
+  remarks: "Ten projekt jest dodawany do kolekcji danego projektu, gdy tego projektu lub katalogu głównego danego projektu podano pełną ścieżkę do pliku projektu źródłowego.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena. Generuje wyjątek InvalidOperationException, jeśli już jest równoważny projekt załadowane w kolekcji projektów."
   syntax:
     content: public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: Xml reader to read project source code from.
+      description: "Czytnik XML odczytać kodu źródłowego projektu z."
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Global properties to evaluate with. May be null in which case the containing project collection's global properties will be used.
+      description: "Właściwości globalne do oceny. Może mieć wartości null w takim przypadku w kolekcji projektu globalnego właściwości będą używane."
     - id: toolsVersion
       type: System.String
-      description: Tools version to evaluate with. May be null.
+      description: "Wersja narzędzia do oceny. Może być zerowy."
     - id: subToolsetVersion
       type: System.String
-      description: Sub Toolset version to evaluate with. May be null.
+      description: "Sub wersja zestawu narzędzi do oceny. Może być zerowy."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: The project collection the project is added to. May not be null.
+      description: "Kolekcja projektów projekt jest dodawany do. Nie może mieć wartości null."
     - id: loadSettings
       type: Microsoft.Build.Evaluation.ProjectLoadSettings
-      description: The load settings to use for evaluation.
+      description: "Ustawienia ładowania na potrzeby oceny."
   overload: Microsoft.Build.Evaluation.Project.#ctor*
   exceptions: []
   platform:
@@ -683,20 +683,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with no metadata to the project.
-  remarks: "Any metadata can be added later. Does not modify the project source if a wildcard expression already includes the new item.  \n  \n Evaluation takes place on a best-effort basis. Items that are defined in the project source following the new item may be used for evaluation. Only this item is evaluated. Other items that might depend on it are not affected."
+  summary: "Dodaje element bez metadanych do projektu."
+  remarks: "Później można dodać wszystkich metadanych. Jeśli nowy element zawiera wyrażenie z symbolem wieloznacznym już nie powoduje modyfikacji źródłowy projektu.       Ocena odbywa się w sposób optymalny. Elementy, które są zdefiniowane w źródle projektu po nowy element może służyć do oceny. Obliczane jest tylko ten element. Nie dotyczy innych elementów, które może być od niego zależne."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItem (string itemType, string unevaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type of the added item.
+      description: "Typ elementu dodany element."
     - id: unevaluatedInclude
       type: System.String
-      description: Include attribute of the item to be added.
+      description: "Uwzględnij atrybut elementu do dodania."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns the added item.
+      description: "Zwraca dodany element."
   overload: Microsoft.Build.Evaluation.Project.AddItem*
   exceptions: []
   platform:
@@ -713,23 +713,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with the given metadata to the project.
-  remarks: "The metadata may be null, which indicates no metadata.  \n  \n Evaluation takes place on a best-effort basis. Items that are defined in the project source following the new item may be used for evaluation. Only this item is evaluated. Other items that might depend on it are not affected."
+  summary: "Dodaje element z metadanymi danego projektu."
+  remarks: "Metadane może mieć wartość null, co oznacza brak metadanych.       Ocena odbywa się w sposób optymalny. Elementy, które są zdefiniowane w źródle projektu po nowy element może służyć do oceny. Obliczane jest tylko ten element. Nie dotyczy innych elementów, które może być od niego zależne."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItem (string itemType, string unevaluatedInclude, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type of the added item.
+      description: "Typ elementu dodany element."
     - id: unevaluatedInclude
       type: System.String
-      description: Include attribute of the item to be added.
+      description: "Uwzględnij atrybut elementu do dodania."
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: The metadata of the added item.
+      description: "Metadane dodany element."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns the added item.
+      description: "Zwraca dodany element."
   overload: Microsoft.Build.Evaluation.Project.AddItem*
   exceptions: []
   platform:
@@ -746,20 +746,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with no metadata to the project.  Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group.  Makes no effort to locate the new item near similar items.
-  remarks: "Appends the item to the first item group that does not have a condition and has either no children or whose first child is an item of the same type.  \n  \n Evaluates on a best-effort basis: -expands with all items. Items that are defined in the XML below the new item may be used, even though in a real evaluation they would not be.  \n  \n Only this item is evaluated. Other items that might depend on it are not affected.  \n  \n This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation."
+  summary: "Dodaje element bez metadanych do projektu.  Nie robi nic aby zobaczyć, czy istniejący symbol wieloznaczny będzie pasował nowego elementu, chyba że jest to pierwszy element grupy elementów.  Nie robi nic zlokalizować nowego elementu w pobliżu podobnych elementów."
+  remarks: "Dołącza element do pierwszej grupy elementów nie ma warunek, którego użytkownik nie ma elementów podrzędnych, lub których pierwszy element podrzędny jest elementem tego samego typu.       Ocenia na podstawie optymalny:-rozszerza ze wszystkimi elementami. Elementy, które są zdefiniowane w pliku XML poniżej nowy element mogą być używane, mimo że w rzeczywistych oceny może nie być.       Obliczane jest tylko ten element. Nie dotyczy innych elementów, które może być od niego zależne.       Jest to udogodnienie należy rozumieć jest niekoniecznie pozostaw projektu doskonale self spójna do ponownej oceny."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItemFast (string itemType, string unevaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be added.
+      description: "Typ elementu do dodania."
     - id: unevaluatedInclude
       type: System.String
-      description: The unevaluated Include attribute to be added to the item.
+      description: "Unevaluated atrybutu Uwzględnij ma zostać dodana do elementu."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns a list of the project items added.
+      description: "Zwraca listę elementów projektu dodać."
   overload: Microsoft.Build.Evaluation.Project.AddItemFast*
   exceptions: []
   platform:
@@ -776,23 +776,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Adds an item with metadata to the project. Metadata may be null, indicating no metadata. Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group. Makes no effort to locate the new item near similar items.
-  remarks: "Appends the item to the first item group that does not have a condition and has either no children or whose first child is an item of the same type.  \n  \n Evaluates on a best-effort basis: -expands with all items. Items that are defined in the XML below the new item may be used, even though in a real evaluation they would not be.  \n  \n Only this item is evaluated. Other items that might depend on it is not affected.  \n  \n This is a convenience that it is understood does not necessarily leave the project in a perfectly self consistent state until reevaluation."
+  summary: "Dodaje element metadanych do projektu. Metadane może być zerowy, wskazujący brak metadanych. Nie robi nic aby zobaczyć, czy istniejący symbol wieloznaczny będzie pasował nowego elementu, chyba że jest to pierwszy element grupy elementów. Nie robi nic zlokalizować nowego elementu w pobliżu podobnych elementów."
+  remarks: "Dołącza element do pierwszej grupy elementów nie ma warunek, którego użytkownik nie ma elementów podrzędnych, lub których pierwszy element podrzędny jest elementem tego samego typu.       Ocenia na podstawie optymalny:-rozszerza ze wszystkimi elementami. Elementy, które są zdefiniowane w pliku XML poniżej nowy element mogą być używane, mimo że w rzeczywistych oceny może nie być.       Obliczane jest tylko ten element. Nie wpływa na inne elementy, które może być od niego zależne.       Jest to udogodnienie należy rozumieć jest niekoniecznie pozostaw projektu doskonale self spójna do ponownej oceny."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ProjectItem> AddItemFast (string itemType, string unevaluatedInclude, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be added.
+      description: "Typ elementu do dodania."
     - id: unevaluatedInclude
       type: System.String
-      description: The unevaluated Include attribute to be added to the item.
+      description: "Unevaluated atrybutu Uwzględnij ma zostać dodana do elementu."
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: The metadata to be added.
+      description: "Metadane do dodania."
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns a list of the project items added.
+      description: "Zwraca listę elementów projektu dodać."
   overload: Microsoft.Build.Evaluation.Project.AddItemFast*
   exceptions: []
   platform:
@@ -809,13 +809,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all item definition metadata encountered during evaluation.
-  remarks: Item metadata is read during the second evaluation pass. Unlike metadata returned by the ItemDefinitions property, this metadata is ordered, and includes any metadata subsequently overridden with the same name and item type.
+  summary: "Pobiera wszystkie metadane definicji elementu napotkanych podczas obliczania."
+  remarks: "Metadane elementu jest do odczytu w drugim przebiegu oceny. W przeciwieństwie do metadanych zwróconej przez właściwość ItemDefinitions te metadane porządkowania i zawiera wszystkie metadane później zastąpić tę samą nazwę i typ elementu."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectMetadata> AllEvaluatedItemDefinitionMetadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectMetadata}
-      description: Returns all item definition metadata encountered during evaluation. This does not include any elements whose conditions did not evaluate to true, nor any item definition metadata added since the last evaluation.
+      description: "Zwraca wszystkie metadane definicji elementu napotkanych podczas obliczania. Nie zawiera żadnych elementów, których warunki nie prowadzi do PRAWDA ani wszelkich dodanych od momentu ostatniej oceny metadanych definicji elementu."
   overload: Microsoft.Build.Evaluation.Project.AllEvaluatedItemDefinitionMetadata*
   exceptions: []
   platform:
@@ -832,13 +832,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all items encountered during evaluation. These are read during the third evaluation pass.
-  remarks: "Unlike those items returned by the Items property, these are ordered with respect to all other items encountered during evaluation, not just ordered with respect to items of the same item type.  \n  \n In some applications, this complete mutual ordering is significant, and such hosts can use this property.  \n  \n The enumeration does not include any elements whose conditions did not evaluate to true, nor does it include any items added since the last evaluation."
+  summary: "Pobiera moduł wyliczający przez wszystkie elementy napotkanych podczas obliczania. Te są odczytywane podczas przebiegu trzeci oceny."
+  remarks: "W przeciwieństwie do tych elementów zwróconych przez właściwość elementy te są uporządkowane względem innych elementów napotkanych podczas obliczania nie tylko uporządkowane względem elementów typu elementu.       W niektórych aplikacjach tym pełną wzajemnego kolejność ma znaczenie tych hostów i może używać tej właściwości.       Wyliczenia nie zawiera żadnych elementów, których warunki nie prowadzi na wartość true, ani obejmuje żadnych elementów dodanych od momentu ostatniej oceny."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> AllEvaluatedItems { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns an enumerator over all items encountered during evaluation. These are read during the third evaluation pass.
+      description: "Zwraca moduł wyliczający we wszystkich elementów napotkanych podczas obliczania. Te są odczytywane podczas przebiegu trzeci oceny."
   overload: Microsoft.Build.Evaluation.Project.AllEvaluatedItems*
   exceptions: []
   platform:
@@ -855,13 +855,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all properties encountered during evaluation.
-  remarks: These properties are read during the first evaluation pass. Unlike properties returned by the Properties property, these are ordered, and includes any properties subsequently overridden with the same name.
+  summary: "Pobiera wszystkie właściwości napotkanych podczas obliczania."
+  remarks: "Te właściwości są odczytywane w pierwszym przebiegu oceny. W przeciwieństwie do właściwości zwróconej przez właściwość właściwości te są uporządkowane i zawiera żadnych właściwości później zastąpiona o takiej samej nazwie."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectProperty> AllEvaluatedProperties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectProperty}
-      description: Returns all properties encountered during evaluation. This does not include any properties whose conditions did not evaluate to true, nor any properties added since the last evaluation.
+      description: "Zwraca wszystkie właściwości napotkanych podczas obliczania. Nie zawiera żadnych właściwości, których warunki nie prowadzi do PRAWDA ani żadnych właściwości dodane od ostatniego obliczania."
   overload: Microsoft.Build.Evaluation.Project.AllEvaluatedProperties*
   exceptions: []
   platform:
@@ -878,14 +878,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy ten projekt, za pomocą domyślnych elementów docelowych."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build ();
     parameters: []
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -902,17 +902,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets and the given logger.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy ten projekt, za pomocą domyślnych elementów docelowych i danego rejestratora."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (Microsoft.Build.Framework.ILogger logger);
     parameters:
     - id: logger
       type: Microsoft.Build.Framework.ILogger
-      description: The logger to be used during the build.
+      description: "Rejestrator do użycia podczas kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -929,17 +929,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets and the given loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy ten projekt, za pomocą domyślnych elementów docelowych i danego rejestratorów."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: An enumerator over all loggers to be used during the build.
+      description: "Moduł wyliczający przez wszystkie rejestratory do użycia podczas kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -956,17 +956,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given target.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Kompilacje tego projektu, tworzenie aplikacji docelowej."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (string target);
     parameters:
     - id: target
       type: System.String
-      description: The target to be built.
+      description: "Obiekt docelowy do kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -983,17 +983,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given targets.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Kompilacje tego projektu, kompilacja danego obiektów docelowych."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (string[] targets);
     parameters:
     - id: targets
       type: System.String[]
-      description: An array of targets to be built.
+      description: "Tablica elementów docelowych do kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1010,20 +1010,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, using the default targets and the given loggers and remote loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy ten projekt, za pomocą domyślnych elementów docelowych i rejestratorów danego i zdalne rejestratory."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "Rejestratory, które mają być używane podczas kompilacji."
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: The remote loggers to be used during the build.
+      description: "Zdalne rejestratory do użycia podczas kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1040,20 +1040,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given target and using the given loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy projekt, tworzenie aplikacji docelowej i przy użyciu danego rejestratorów."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: target
       type: System.String
-      description: The target to be built.
+      description: "Obiekt docelowy do kompilacji."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "Rejestratory, które mają być używane podczas kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1070,20 +1070,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given targets and using the given loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy projekt, kompilacja danego obiektów docelowych i przy użyciu danego rejestratorów."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: The targets to be built.
+      description: "Cele, które mają być tworzone."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "Rejestratory, które mają być używane podczas kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1100,23 +1100,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given target and using the given loggers and remote loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy projekt, tworzenie aplikacji docelowej i przy użyciu danego rejestratorów i zdalne rejestratory."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: target
       type: System.String
-      description: The target to be built.
+      description: "Obiekt docelowy do kompilacji."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "Rejestratory, które mają być używane podczas kompilacji."
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: The remote loggers to be used during the build.
+      description: "Zdalne rejestratory do użycia podczas kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1133,23 +1133,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Builds this project, building the given targets and using the given loggers and remote loggers.
-  remarks: To set or get virtual items for build purposes, clone a project instance explicitly and build that. This method does not modify the project object.
+  summary: "Tworzy projekt, kompilacja danego obiektów docelowych i przy użyciu danego rejestratorów i zdalne rejestratory."
+  remarks: "Aby ustawić lub pobrać wirtualne elementy na potrzeby kompilacji, jawnie sklonować wystąpienie projektu i dokonać jego kompilacji. Ta metoda nie powoduje modyfikacji obiektu projektu."
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: The targets to be built.
+      description: "Cele, które mają być tworzone."
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: The loggers to be used during the build.
+      description: "Rejestratory, które mają być używane podczas kompilacji."
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: The remote loggers to be used during the build.
+      description: "Zdalne rejestratory do użycia podczas kompilacji."
     return:
       type: System.Boolean
-      description: Returns true on success; false otherwise.
+      description: "Zwraca wartość true w przypadku powodzenia; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.Build*
   exceptions: []
   platform:
@@ -1166,13 +1166,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens.
+  summary: "Pobiera zbiór właściwości możliwych wartości dla właściwości używaną do oceny warunków znaleziono właściwości, właściwość grup, definicje importu i kiedy firmy."
   remarks: 'For example, if the following conditions existed on properties in a project: Condition="''$(Configuration)&#124;$(Platform)'' == ''Debug&#124;x86''" Condition="''$(Configuration)'' == ''Release''" the table would be populated with { "Configuration", { "Debug", "Release" }} { "Platform", { "x86" }} This collection is used by Visual Studio to determine the configurations defined in the project'
   syntax:
     content: public System.Collections.Generic.IDictionary<string,System.Collections.Generic.List<string>> ConditionedProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.List{System.String}}
-      description: Returns a collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens. The collection is in canonical form. The name of the entry is the name of the property to be evaluated, and the value is a list of possible property values.
+      description: "Zwraca kolekcję właściwości możliwych wartości właściwości używaną do oceny warunków znaleziono właściwości, właściwość grup, definicje importu i kiedy firmy. Kolekcja jest w formie kanonicznej. Nazwa wpisu jest nazwa właściwości do obliczenia, a wartość jest listę możliwych wartości."
   overload: Microsoft.Build.Evaluation.Project.ConditionedProperties*
   exceptions: []
   platform:
@@ -1189,14 +1189,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Creates a project instance based on this project, but completely disconnected from it.
-  remarks: Can be used to build independently. The original project is evaluated before creating the instance, if necessary, so that the original project is marked as unmodified.
+  summary: "Tworzy wystąpienie projektu na podstawie tego projektu, ale w całkowitym odłączeniu od niego."
+  remarks: "Może służyć do niezależnego tworzenia kompilacji. Oryginalny projekt jest oceniany przed utworzeniem wystąpienia, jeśli to konieczne, tak aby oryginalny projekt był oznaczony jako niezmodyfikowany."
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance CreateProjectInstance ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: Returns the project instance.
+      description: "Zwraca wystąpienie projektu."
   overload: Microsoft.Build.Evaluation.Project.CreateProjectInstance*
   exceptions: []
   platform:
@@ -1213,17 +1213,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Creates a project instance based on this project, but completely disconnected from it.
-  remarks: Can be used to build independently. The original project is evaluated before creating the instance, if necessary, so that the original project is marked as unmodified.
+  summary: "Tworzy wystąpienie projektu na podstawie tego projektu, ale w całkowitym odłączeniu od niego."
+  remarks: "Może służyć do niezależnego tworzenia kompilacji. Oryginalny projekt jest oceniany przed utworzeniem wystąpienia, jeśli to konieczne, tak aby oryginalny projekt był oznaczony jako niezmodyfikowany."
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance CreateProjectInstance (Microsoft.Build.Execution.ProjectInstanceSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Execution.ProjectInstanceSettings
-      description: Determines whether created project instance is immutable and whether it contains a look up table to improve performance.
+      description: "Określa, czy wystąpienie utworzony projekt jest niezmienny i czy zawiera on wyszukiwania tabeli, aby poprawić wydajność."
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: Returns the project instance.
+      description: "Zwraca wystąpienie projektu."
   overload: Microsoft.Build.Evaluation.Project.CreateProjectInstance*
   exceptions: []
   platform:
@@ -1240,12 +1240,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the root directory for this project.
+  summary: "Pobiera katalog główny dla tego projektu."
   syntax:
     content: public string DirectoryPath { get; }
     return:
       type: System.String
-      description: Returns the root directory for this project. The root directory is never null; in-memory projects use the current directory at the time of project load.
+      description: "Zwraca katalog główny dla tego projektu. Katalog główny nigdy nie jest równa null; projekty w pamięci Użyj bieżącego katalogu w czasie ładowania projektu."
   overload: Microsoft.Build.Evaluation.Project.DirectoryPath*
   exceptions: []
   platform:
@@ -1262,12 +1262,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets a flag the determines whether <xref:Microsoft.Build.Evaluation.Project.MarkDirty*> is temporarily disabled. This allows, for example, a global property to be set without the project getting marked dirty for reevaluation as a consequence.
+  summary: "Pobiera lub ustawia flagę Określa, czy <xref:Microsoft.Build.Evaluation.Project.MarkDirty*>jest tymczasowo wyłączona.</xref:Microsoft.Build.Evaluation.Project.MarkDirty*> Pozwala to na przykład globalne właściwości do ustawienia bez pobierania oznaczonych jako zakłócone dla ponownej oceny konsekwencji projektu."
   syntax:
     content: public bool DisableMarkDirty { get; set; }
     return:
       type: System.Boolean
-      description: Returns a flag the determines whether <xref uid="langword_csharp_MarkDirty" name="MarkDirty" href=""></xref> is temporarily disabled.
+      description: "Zwraca flagę Określa, czy <xref uid=&quot;langword_csharp_MarkDirty&quot; name=&quot;MarkDirty&quot; href=&quot;&quot;> </xref> jest tymczasowo wyłączona."
   overload: Microsoft.Build.Evaluation.Project.DisableMarkDirty*
   exceptions: []
   platform:
@@ -1284,13 +1284,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a number that is incremented every time that project is re-evaluated.
-  remarks: This value should be compared with previous values to see if the project has been re-evaluated. It should not be used to determine how many times the project has been re-evaluated since it may be incremented by more than one for a given re-evaluation.
+  summary: "Pobiera liczbę, która jest zwiększany za każdym razem zostanie oceniona tego projektu."
+  remarks: "Ta wartość powinna być porównana z poprzednie wartości, aby zobaczyć, czy projekt został ponownej ocenie. Nie można stosować określający, ile razy projektu została ponownie oceniona, ponieważ może on być zwiększony przez więcej niż jedną dla danego ponownej oceny."
   syntax:
     content: public int EvaluationCounter { get; }
     return:
       type: System.Int32
-      description: Returns the incremented value.
+      description: "Zwraca wartość zwiększany."
   overload: Microsoft.Build.Evaluation.Project.EvaluationCounter*
   exceptions: []
   platform:
@@ -1307,17 +1307,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Evaluates the given string by expanding items and properties. The string is evaluated as if it were found at the very end of the project file.
-  remarks: This method can be used when best-effort evaluation is sufficient.
+  summary: "Oblicza podanego ciągu, rozszerzając elementów i właściwości. Ten ciąg jest obliczane tak, jakby zostały odnalezione na końcu pliku projektu."
+  remarks: "Ta metoda służy podczas oceny optymalny jest wystarczająca."
   syntax:
     content: public string ExpandString (string unexpandedValue);
     parameters:
     - id: unexpandedValue
       type: System.String
-      description: The string to be evaluated.
+      description: "Ciąg, który ma zostać obliczone."
     return:
       type: System.String
-      description: Returns the evaluated string.
+      description: "Zwraca ciąg ocenione."
   overload: Microsoft.Build.Evaluation.Project.ExpandString*
   exceptions: []
   platform:
@@ -1334,13 +1334,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets the full path to the project source file.
-  remarks: Setting this property on a project in a project collection renames the project.
+  summary: "Pobiera lub ustawia pełną ścieżkę do pliku źródłowego projektu."
+  remarks: "Ustawienie tej właściwości na projekt w kolekcji projektów zmienia nazwę projektu."
   syntax:
     content: public string FullPath { get; set; }
     return:
       type: System.String
-      description: Returns the full path to the project source file. Returns an empty string if the project was not loaded from disk.
+      description: "Zwraca pełną ścieżkę do pliku źródłowego projektu. Zwraca pusty ciąg, jeśli projekt nie został załadowany z dysku."
   overload: Microsoft.Build.Evaluation.Project.FullPath*
   exceptions: []
   platform:
@@ -1357,16 +1357,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets evaluated, escaped value of the Include attribute of the provided items.
+  summary: "Pobiera obliczane, poprzedzone znakiem zmiany znaczenia wartość atrybutu Uwzględnij podane elementów."
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Evaluation.ProjectItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItem
-      description: The item to be evaluated and escaped.
+      description: "Element można szacować ani wyjściowym."
     return:
       type: System.String
-      description: Returns the evaluated, escaped value of the Include attribute of the provided items.
+      description: "Zwraca ocenionych wyjściowym wartość atrybutu Uwzględnij podane elementy."
   overload: Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -1383,16 +1383,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the evaluated, escaped value of the Include attribute of the provided item definition.
+  summary: "Pobiera oszacowaną wartość atrybutu Uwzględnij za pomocą podanej definicji elementu."
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Evaluation.ProjectItemDefinition item);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItemDefinition
-      description: The item definition to be evaluated and escaped.
+      description: "Definicja elementu obliczone i wyjściowym."
     return:
       type: System.String
-      description: Returns the value of the Include attribute.
+      description: "Zwraca wartość atrybutu Uwzględnij."
   overload: Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -1409,17 +1409,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all the items in the project of the given item type. If there are none, returns an empty list. Use AddItem or RemoveItem to modify items in this project.
-  remarks: Use AddItem or RemoveItem to modify items in this project.
+  summary: "Pobiera wszystkie elementy w projekcie typu danego elementu. Jeśli żaden nie jest, zwraca pustą listę. Zmodyfikuj elementy w tym projekcie za pomocą AddItem lub RemoveItem."
+  remarks: "Zmodyfikuj elementy w tym projekcie za pomocą AddItem lub RemoveItem."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> GetItems (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be retrieved.
+      description: "Typ elementu do pobrania."
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns all the items in the project of the given item type. Returns an empty list if there are no items with the given item name.
+      description: "Zwraca wszystkie elementy w projekcie typu danego elementu. Zwraca pustą listę, jeśli nie ma żadnych elementów z nazwą danego elementu."
   overload: Microsoft.Build.Evaluation.Project.GetItems*
   exceptions: []
   platform:
@@ -1436,17 +1436,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets all items that have the given evaluated Include attribute.
-  remarks: For example, this method might return all items that have the evaluated Include attribute "component.cpp". Typically zero or one items are returned. However, there may be multiple items with the same path and different item types, or even with the same item types.
+  summary: "Pobiera wszystkie elementy, które mają danego atrybutu Uwzględnij ocenione."
+  remarks: "Na przykład ta metoda może zwracać wszystkie elementy, które mają atrybut ocenionych Include &quot;component.cpp&quot;. Zazwyczaj zero lub jeden elementy są zwracane. Jednak może być wiele elementów z tej samej ścieżki i typy różnych elementów lub nawet w przypadku ten sam typ elementu."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> GetItemsByEvaluatedInclude (string evaluatedInclude);
     parameters:
     - id: evaluatedInclude
       type: System.String
-      description: The evaluated Include attribute.
+      description: "Atrybut ocenionych Include."
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns all items that have the given evaluated Include attribute.
+      description: "Zwraca wszystkie elementy, które mają atrybut danego Include ocenionych."
   overload: Microsoft.Build.Evaluation.Project.GetItemsByEvaluatedInclude*
   exceptions: []
   platform:
@@ -1463,17 +1463,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: 'Gets all the items in the project of the given type, whether or not their Condition attribute evaluates to true. This is a read-only list: use AddItem or RemoveItem to modify items in this project.'
-  remarks: This is a read-only list. Use AddItem or RemoveItem to modify items in this project.
+  summary: 'Pobiera wszystkie elementy w projekcie danego typu, czy ich atrybutu warunek jest spełniony. Jest to lista tylko do odczytu: modyfikowanie elementów w tym projekcie za pomocą AddItem lub RemoveItem.'
+  remarks: "To jest lista tylko do odczytu. Zmodyfikuj elementy w tym projekcie za pomocą AddItem lub RemoveItem."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> GetItemsIgnoringCondition (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: The item type to be retrieved.
+      description: "Typ elementu do pobrania."
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns all the items in the project of the given type, whether or not their Condition attribute evaluates to true.
+      description: "Zwraca wszystkie elementy w projekcie danego typu, czy ich atrybutu warunek jest spełniony."
   overload: Microsoft.Build.Evaluation.Project.GetItemsIgnoringCondition*
   exceptions: []
   platform:
@@ -1490,14 +1490,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all the elements in the "logical project". The logical project is defined as the unevaluated project obtained from the single MSBuild file that is the result of inlining the text of all imports of the original MSBuild project manifest file.
-  remarks: The logical project is defined as the unevaluated project obtained from the single MSBuild file that is the result of including inline the text of all imports of the original MSBuild project manifest file.
+  summary: "Pobiera moduł wyliczający przez wszystkie elementy &quot;logiczne projektu&quot;. Logiczne projektu jest zdefiniowany jako projekt unevaluated uzyskany w pojedynczy plik MSBuild, który jest wynikiem wbudowanie tekst wszystkie Importy oryginalnego pliku manifestu projektu programu MSBuild."
+  remarks: "Logiczne projektu zdefiniowano unevaluated projektu uzyskany w jeden plik MSBuild wynika z tym wbudowanym tekst wszystkie Importy oryginalnego pliku manifestu projektu programu MSBuild."
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Construction.ProjectElement> GetLogicalProject ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectElement}
-      description: Returns an enumerator over all the elements in the "logical project".
+      description: "Zwraca moduł wyliczający we wszystkich elementów w &quot;logiczne projektu&quot;."
   overload: Microsoft.Build.Evaluation.Project.GetLogicalProject*
   exceptions: []
   platform:
@@ -1514,16 +1514,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the escaped value of the provided metadatum.
+  summary: "Pobiera wartość wyjścia metadanej za podany."
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectMetadata metadatum);
     parameters:
     - id: metadatum
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: The metadatum to be escaped.
+      description: "Wyjścia metadanej za wstawić."
     return:
       type: System.String
-      description: Gets the escaped value of the provided metadatum.
+      description: "Pobiera wartość wyjścia metadanej za podany."
   overload: Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -1540,19 +1540,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the escaped value of the metadatum with the provided name on the provided item.
+  summary: "Pobiera wartość wyjścia metadanej za pomocą podanej nazwy na podanym elemencie."
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectItem item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItem
-      description: The item whose metadata is to be escaped.
+      description: "Element, którego metadanych ma być wyjściowym."
     - id: name
       type: System.String
-      description: The name of the metadata to be escaped.
+      description: "Nazwa metadanych wstawić."
     return:
       type: System.String
-      description: Gets the escaped value of the metadatum with the provided name on the provided item.
+      description: "Pobiera wartość wyjścia metadanej za pomocą podanej nazwy na podanym elemencie."
   overload: Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -1569,19 +1569,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the escaped value of the metadatum with the provided name on the provided item definition.
+  summary: "Pobiera wartość wyjścia metadanej za pomocą podanej nazwy na podanej definicji elementu."
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectItemDefinition item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItemDefinition
-      description: The item definition whose metadata is to be escaped.
+      description: "Definicji elementu, którego metadanych ma być wyjściowym."
     - id: name
       type: System.String
-      description: The name of the metadata to be escaped.
+      description: "Nazwa metadanych wstawić."
     return:
       type: System.String
-      description: Returns the escaped value of the metadatum with the provided name on the provided item definition.
+      description: "Zwraca wartość wyjścia metadanej za pomocą podanej nazwy na podanej definicji elementu."
   overload: Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -1598,16 +1598,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets any property in the project that has the specified name.
+  summary: "Pobiera wszystkie właściwości w projekcie o określonej nazwie."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectProperty GetProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the property to retrieve.
+      description: "Nazwa właściwości do pobrania."
     return:
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: Returns any property in the project that has the specified name. Returns null if no property of that name exists.
+      description: "Zwraca wszystkie właściwości w projekcie o określonej nazwie. Zwraca wartość null, jeśli ma właściwości o tej nazwie istnieje."
   overload: Microsoft.Build.Evaluation.Project.GetProperty*
   exceptions: []
   platform:
@@ -1624,17 +1624,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the value of the given property in this project.
-  remarks: A property with a value of empty string and no property at all are not distinguished between by this method. To determine if a property is set at all in the project, use GetProperty(name).
+  summary: "Pobiera wartość danej właściwości w tym projekcie."
+  remarks: "Właściwość o wartości pusty ciąg, a nie właściwość w ogóle nie różnią się między przez tę metodę. Aby określić, jeśli właściwość jest ustawiona na wszystkich w projekcie, należy użyć GetProperty(nazwa)."
   syntax:
     content: public string GetPropertyValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the property whose value is retrieved.
+      description: "Nazwa właściwości, której wartość jest pobierana."
     return:
       type: System.String
-      description: Returns the value of the given property in this project. Return an empty string if no property of that name exists. Escape sequences are converted before returning the string.
+      description: "Zwraca wartość danej właściwości w tym projekcie. Zwraca pusty ciąg, jeśli istnieje żadna właściwość o tej nazwie. Sekwencje unikowe są konwertowane, zanim zwróci ciąg."
   overload: Microsoft.Build.Evaluation.Project.GetPropertyValue*
   exceptions: []
   platform:
@@ -1651,16 +1651,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Get the escaped value of the provided property.
+  summary: "Pobierz wartość podana właściwość."
   syntax:
     content: public static string GetPropertyValueEscaped (Microsoft.Build.Evaluation.ProjectProperty property);
     parameters:
     - id: property
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: The property to be escaped.
+      description: "Właściwość wstawić."
     return:
       type: System.String
-      description: Returns the escaped value of the provided property.
+      description: "Zwraca wartość podana właściwość."
   overload: Microsoft.Build.Evaluation.Project.GetPropertyValueEscaped*
   exceptions: []
   platform:
@@ -1677,13 +1677,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a dictionary of the global properties used for the evaluation of this project.
+  summary: "Pobiera słownika właściwości globalne używane do obliczania tego projektu."
   remarks: "This is the publicly exposed getter, that translates into a read-only dead IDictionary\\<string, string>.  \n  \n In order to easily tell when we're dirtied, setting and removing global properties is done with <xref:Microsoft.Build.Evaluation.Project.SetGlobalProperty%2A> and <xref:Microsoft.Build.Evaluation.Project.RemoveGlobalProperty%2A>."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: Returns a dictionary of the global properties used for the evaluation of this project.
+      description: "Zwraca słownika właściwości globalne używane do obliczania tego projektu."
   overload: Microsoft.Build.Evaluation.Project.GlobalProperties*
   exceptions: []
   platform:
@@ -1700,13 +1700,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a list of all the files that contributed to the evaluation of this project.
-  remarks: The project root of this project is not included.
+  summary: "Pobiera listę wszystkich plików, które przyczyniły się do oceny tego projektu."
+  remarks: "Katalog główny projektu tego projektu nie jest włączony."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ResolvedImport> Imports { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ResolvedImport}
-      description: "Returns a list of all the files that contributed to the evaluation of this project.  \n  \n The name of each item is the Import element that caused the file to be imported. The value of each item is the project root of the imported project. Import elements whose Condition attribute evaluated to false are not included."
+      description: "Zwraca listę wszystkich plików, które przyczyniły się do oceny tego projektu.       Nazwa każdy element jest element importu, który spowodował pliku do zaimportowania. Wartość każdego elementu jest głównym projektu zaimportowanego projektu. Importowanie elementów, których atrybut warunek przyjął wartość false, nie są uwzględniane."
   overload: Microsoft.Build.Evaluation.Project.Imports*
   exceptions: []
   platform:
@@ -1723,12 +1723,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a list of duplicate imports if an import was imported multiple times. However, only the first import was used in evaluation.
+  summary: "Pobiera listę zduplikowane Importy, jeśli import został zaimportowany wiele razy. Jednak tylko pierwszy importowania został użyty w oceny."
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Evaluation.ResolvedImport> ImportsIncludingDuplicates { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Evaluation.ResolvedImport}
-      description: Returns a list of duplicate imports.
+      description: "Zwraca listę Importy duplikatów."
   overload: Microsoft.Build.Evaluation.Project.ImportsIncludingDuplicates*
   exceptions: []
   platform:
@@ -1745,13 +1745,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets a property that selects whether the targets and tasks of this project can be built.
-  remarks: Can be used for security purposes. By default, a new project has the same IsBuildEnabled setting as the parent project collection that contains it. When IsBuildEnabled is false, the Build method on this project fails.
+  summary: "Pobiera lub ustawia właściwość, która wybiera czy mogą być tworzone obiektów docelowych i zadań tego projektu."
+  remarks: "Mogą być używane ze względów bezpieczeństwa. Domyślnie nowy projekt ma takie same ustawienia IsBuildEnabled jako nadrzędnego kolekcji projektów, która zawiera go. IsBuildEnabled ma wartość false, metody kompilacji dla tego projektu nie powiedzie się."
   syntax:
     content: public bool IsBuildEnabled { get; set; }
     return:
       type: System.Boolean
-      description: Returns true if the targets and tasks of this project can be built; false otherwise.
+      description: "Zwraca wartość true, jeśli mogą być tworzone obiektów docelowych i zadań tego projektu; wartość false w przeciwnym razie."
   overload: Microsoft.Build.Evaluation.Project.IsBuildEnabled*
   exceptions: []
   platform:
@@ -1768,13 +1768,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a property that indicates whether this project has been modified so that it must be reevaluated.
-  remarks: A project is modified and must be reevaluated when the underlying project source code, including changes to imported files. A project is also modified must be reevaluated if the project tool set changes.
+  summary: "Pobiera właściwość, która wskazuje, czy ten projekt został zmieniony tak, aby muszą być ponownie oceniane."
+  remarks: "Projekt został zmodyfikowany i muszą być ponownie oceniane po zaimportowaniu podstawowej kodu źródłowego projektu, w tym zmiany plików. Projekt jest modyfikowana również muszą być ponownie oceniane w przypadku zmiany zestaw narzędzi projektu."
   syntax:
     content: public bool IsDirty { get; }
     return:
       type: System.Boolean
-      description: Returns a property that indicates whether this project has been modified so that it must be reevaluated.
+      description: "Zwraca wartość właściwości, która wskazuje, czy ten projekt został zmieniony tak, aby muszą być ponownie oceniane."
   overload: Microsoft.Build.Evaluation.Project.IsDirty*
   exceptions: []
   platform:
@@ -1791,12 +1791,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a dictionary of item definitions in this project, keyed by item type.
+  summary: "Pobiera słownika definicje elementów w tym projekcie przez typ elementu z kluczami."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Evaluation.ProjectItemDefinition> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Evaluation.ProjectItemDefinition}
-      description: Returns a dictionary of item definitions in this project, keyed by item type.
+      description: "Zwraca słownika definicje elementów w tym projekcie przez typ elementu z kluczami."
   overload: Microsoft.Build.Evaluation.Project.ItemDefinitions*
   exceptions: []
   platform:
@@ -1813,12 +1813,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all items in this project, ordered within groups of item types.
+  summary: "Pobiera moduł wyliczający przez wszystkie elementy w tym projekcie uporządkowane w grupach typów elementów."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns an enumerator over all items in this project, ordered within groups of item types.
+      description: "Zwraca moduł wyliczający we wszystkich elementów w tym projekcie uporządkowane w grupach typów elementów."
   overload: Microsoft.Build.Evaluation.Project.Items*
   exceptions: []
   platform:
@@ -1835,13 +1835,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all items in this project, ordered within groups of item types.
-  remarks: Can be used to display all items, even if they are not part of the build in the current configuration.
+  summary: "Pobiera moduł wyliczający przez wszystkie elementy w tym projekcie uporządkowane w grupach typów elementów."
+  remarks: "Można wyświetlić wszystkie elementy, nawet jeśli nie są częścią kompilacji w bieżącej konfiguracji."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectItem> ItemsIgnoringCondition { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectItem}
-      description: Returns an enumerator over all items in this project., ordered within groups of item types, including items whose conditions evaluate to false, or are contained within item groups whose condition evaluates to false.
+      description: "Zwraca moduł wyliczający we wszystkich elementów w tym projekcie., uporządkowane w grupach typów elementów, w tym elementy, których warunki zwrócić wartość false lub znajdują się w obrębie grup elementów, których warunek ma wartość FAŁSZ."
   overload: Microsoft.Build.Evaluation.Project.ItemsIgnoringCondition*
   exceptions: []
   platform:
@@ -1858,12 +1858,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all item types in this project.
+  summary: "Pobiera moduł wyliczający za pośrednictwem wszystkich typów elementów w tym projekcie."
   syntax:
     content: public System.Collections.Generic.ICollection<string> ItemTypes { get; }
     return:
       type: System.Collections.Generic.ICollection{System.String}
-      description: Returns an enumerator over all item types in this project. This is an ordered collection.
+      description: "Zwraca moduł wyliczający we wszystkich typów elementów w tym projekcie. To jest uporządkowaną kolekcję."
   overload: Microsoft.Build.Evaluation.Project.ItemTypes*
   exceptions: []
   platform:
@@ -1880,8 +1880,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Marks this project as modified.
-  remarks: "It is seldom necessary to call this method explicitly, because all edits affecting a project automatically mark it as modified.  \n  \n Sometimes, however, this method must be called. For example, a project may have an Import element whose condition depends on a file that exists on a disk. If that file does not exist at evaluation time, and it is created after evaluation, then the project must be explicitly marked as modified.  \n  \n The <xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A> method uses this property to determine if an evaluation is necessary."
+  summary: "Oznaczenie tego projektu jako zmodyfikowanych."
+  remarks: "Jest rzadko należy jawnie wywołać tę metodę, ponieważ wszystkie zmiany wpływu na projekt automatycznie oznaczyć go jako zmodyfikowane.       Czasami jednak tę metodę należy wywoływać. Na przykład projekt może zawierać element Import, którego stan jest zależny od pliku znajdującego się na dysku. Jeśli ten plik nie istnieje w czasie oceny, jest tworzony po dokonaniu oceny, a następnie projektu musi być jawnie oznaczona jako zmodyfikowana.       <xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A>Metoda używa tej właściwości do ustalenia, czy konieczne jest ocenę.</xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A>"
   syntax:
     content: public void MarkDirty ();
     parameters: []
@@ -1901,12 +1901,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the project collection which contains this project.
+  summary: "Pobiera kolekcji projektów, który zawiera tego projektu."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectCollection ProjectCollection { get; }
     return:
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: Returns the project collection which contains this project, which is never null.
+      description: "Zwraca kolekcję projektów zawierającą tego projektu, który nigdy nie ma wartość null."
   overload: Microsoft.Build.Evaluation.Project.ProjectCollection*
   exceptions: []
   platform:
@@ -1923,12 +1923,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: The location of the originating file itself, not any specific content within it. If the file has not been given a name, this is an empty location. This is a legitimate case of having no location.
+  summary: "Lokalizację pochodzących samego nie żadnej zawartości określonych w nim pliku. Jeśli plik nie został podany nazwę, jest puste miejsce. Jest to uzasadnione przypadek o lokalizacja nie."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: Returns the originating file location or an empty location.
+      description: "Zwraca lokalizację pliku źródłowego lub puste miejsce."
   overload: Microsoft.Build.Evaluation.Project.ProjectFileLocation*
   exceptions: []
   platform:
@@ -1945,12 +1945,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets an enumerator over all properties in this project. This is an unordered collection.
+  summary: "Pobiera moduł wyliczający przez wszystkie właściwości w tym projekcie. Jest to nieuporządkowanej kolekcji."
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.ProjectProperty> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.ProjectProperty}
-      description: Returns an enumerator over all properties in this project. Since properties are evaluated as they appear, this is an unordered collection.
+      description: "Zwraca moduł wyliczający we wszystkich właściwości w tym projekcie. Ponieważ właściwości są obliczane, w jakiej występują, jest to Kolekcja nieuporządkowana."
   overload: Microsoft.Build.Evaluation.Project.Properties*
   exceptions: []
   platform:
@@ -1967,8 +1967,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Reevaluates the project to incorporate any changes.
-  remarks: "The project is reevaluated only if it is marked as modified. Reevaluation incorporates all changes made to the project source code.  \n  \n Throws InvalidProjectFileException if the evaluation fails."
+  summary: "Reevaluates projektu do wprowadzania żadnych zmian."
+  remarks: "Projekt jest ponownie oceniane tylko wtedy, gdy jest ona oznaczona jako zmodyfikowana. Ponownej oceny zawiera wszystkie zmiany wprowadzone w kodzie źródłowym projektu.       Wyjątek InvalidProjectFileException, jeśli nie powiedzie się ocena."
   syntax:
     content: public void ReevaluateIfNecessary ();
     parameters: []
@@ -1988,16 +1988,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes a global property and marks the project as modified.
+  summary: "Usuwa globalnych właściwości i oznacza projekt jako zmodyfikowana."
   syntax:
     content: public bool RemoveGlobalProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: The name of the global property to be removed.
+      description: "Nazwa właściwości globalne do usunięcia."
     return:
       type: System.Boolean
-      description: Returns true if the value of the global property was set.
+      description: "Zwraca wartość true, jeśli ustawiono wartość właściwości globalnej."
   overload: Microsoft.Build.Evaluation.Project.RemoveGlobalProperty*
   exceptions: []
   platform:
@@ -2014,17 +2014,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes an item from the project. The item to be removed must be present in the project, and must not originate from an imported file.
-  remarks: "If the item group containing the item becomes empty, it is also removed.  \n  \n If the item originates from a wildcard or semicolon-separated expression, the expression is first expanded into multiple items.  \n  \n The project is updated, but no further evaluation occurs until reevaluation. For example, if an item of type \"i\" is removed, \"j\" which is evaluated from \"@(i)\" is not modified until reevaluation."
+  summary: "Usuwa element z projektu. Element do usunięcia musi być obecny w projekcie i nie mogą pochodzić z importowanego pliku."
+  remarks: "Jeśli grupa elementów zawierających element staje się puste, zostaną również usunięte.       Jeśli element pochodzi z symbolem wieloznacznym lub wyrażenie rozdzielanych średnikami, wyrażenie najpierw podzielonego na wiele elementów.       Projekt jest aktualizowana, ale nie dalsze oceny występuje aż do ponownej oceny. Na przykład, jeśli element zostanie usunięty typ &quot;i&quot;, &quot;j&quot;, który jest oceniany z &quot;@(i)&quot; nie jest modyfikowany do ponownej oceny."
   syntax:
     content: public bool RemoveItem (Microsoft.Build.Evaluation.ProjectItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Evaluation.ProjectItem
-      description: The item to be removed.
+      description: "Element do usunięcia."
     return:
       type: System.Boolean
-      description: Returns true if the item is present in this evaluated project; otherwise false. Normally this method returns true, since if the requested item is not present, the method throws an exception. If the item is present only in the ItemsIgnoringCondition collection, however, the method returns false.
+      description: "Zwraca wartość PRAWDA, jeśli element znajduje się w tym projekcie ocenionych; w przeciwnym razie false. Zazwyczaj metoda ta zwraca wartość true, ponieważ Jeśli żądany element nie jest obecny, metoda zgłasza wyjątek. Jeśli element jest obecna w kolekcji ItemsIgnoringCondition, jednak metoda zwraca wartość false."
   overload: Microsoft.Build.Evaluation.Project.RemoveItem*
   exceptions: []
   platform:
@@ -2041,14 +2041,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes all the given items from the project, unless they originate from an imported project.
-  remarks: If an item originates from an imported project, it is simply skipped.
+  summary: "Usuwa wszystkie elementy danego z projektu, chyba że pochodzą z zaimportowanych projektu."
+  remarks: "Jeśli element pochodzi z zaimportowanych projektu, jest po prostu pomijane."
   syntax:
     content: public void RemoveItems (System.Collections.Generic.IEnumerable<Microsoft.Build.Evaluation.ProjectItem> items);
     parameters:
     - id: items
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectItem}
-      description: The items to be removed.
+      description: "Elementy do usunięcia."
   overload: Microsoft.Build.Evaluation.Project.RemoveItems*
   exceptions: []
   platform:
@@ -2065,17 +2065,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Removes an property from the project. The property to be removed must be present in the project, and must not originate from an imported file.
-  remarks: "If the property group containing the property becomes empty, it is also removed.  \n  \n The project is updated, but no further evaluation occurs until reevaluation. For example, if \"p\" is removed, \"q\" which is evaluated from \"$(p)\" is not modified until reevaluation."
+  summary: "Usuwa właściwość z projektu. Właściwość do usunięcia musi być obecny w projekcie i nie mogą pochodzić z importowanego pliku."
+  remarks: "Jeśli grupa właściwości zawierający właściwość staje się puste, zostaną również usunięte.       Projekt jest aktualizowana, ale nie dalsze oceny występuje aż do ponownej oceny. Na przykład w przypadku usunięcia &quot;p&quot;, &quot;q&quot;, który jest oceniany z &quot;$(p)&quot; nie jest modyfikowany do ponownej oceny."
   syntax:
     content: public bool RemoveProperty (Microsoft.Build.Evaluation.ProjectProperty property);
     parameters:
     - id: property
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: The property to remove.
+      description: "Właściwość do usunięcia."
     return:
       type: System.Boolean
-      description: Returns true if the property is present in this evaluated project; otherwise false.
+      description: "Zwraca wartość PRAWDA, jeśli właściwość jest obecny w tym projekcie ocenionych; w przeciwnym razie false."
   overload: Microsoft.Build.Evaluation.Project.RemoveProperty*
   exceptions: []
   platform:
@@ -2092,7 +2092,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified, using the default character encoding.
+  summary: "Zapisuje projekt do systemu plików, jeśli został zmodyfikowany, przy użyciu domyślnego kodowania znaków."
   syntax:
     content: public void Save ();
     parameters: []
@@ -2112,13 +2112,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the provided text writer, whether or not the project has been modified. Uses the character encoding of the text writer and marks the project as unmodified.
+  summary: "Zapisuje projekt do zapisywania podanego tekstu, czy projekt został zmodyfikowany. Używa kodowania znaków moduł zapisujący tekstu i oznacza projekt jako niezmodyfikowany."
   syntax:
     content: public void Save (System.IO.TextWriter writer);
     parameters:
     - id: writer
       type: System.IO.TextWriter
-      description: The text writer to save the project to.
+      description: "Moduł zapisujący tekstu do zapisania projektu."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2135,13 +2135,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified or if the path to the project source code changes, using the default character encoding.
+  summary: "Zapisuje projekt do systemu plików, jeśli zmodyfikowane albo w przypadku zmiany ścieżki do kodu źródłowego projektu, przy użyciu domyślnego kodowania znaków."
   syntax:
     content: public void Save (string path);
     parameters:
     - id: path
       type: System.String
-      description: The path to the project source code.
+      description: "Ścieżka do kodu źródłowego projektu."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2158,13 +2158,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified, using the given character encoding.
+  summary: "Zapisuje projekt do systemu plików, jeśli został zmodyfikowany, przy użyciu kodowania danego znaku."
   syntax:
     content: public void Save (System.Text.Encoding encoding);
     parameters:
     - id: encoding
       type: System.Text.Encoding
-      description: The character encoding used to save the project.
+      description: "Kodowanie znaków użyte do zapisania projektu."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2181,16 +2181,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves the project to the file system, if modified or if the path to the project source code changes, using the given character encoding.
+  summary: "Zapisuje projekt do systemu plików, jeśli zmodyfikowane albo w przypadku zmiany ścieżki do kodu źródłowego projektu, przy użyciu kodowania danego znaku."
   syntax:
     content: public void Save (string path, System.Text.Encoding encoding);
     parameters:
     - id: path
       type: System.String
-      description: The path to the project source code.
+      description: "Ścieżka do kodu źródłowego projektu."
     - id: encoding
       type: System.Text.Encoding
-      description: The character encoding used to save the project.
+      description: "Kodowanie znaków użyte do zapisania projektu."
   overload: Microsoft.Build.Evaluation.Project.Save*
   exceptions: []
   platform:
@@ -2207,13 +2207,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Saves a "logical" or "preprocessed" project file, that includes all the imported files as if they formed a single file.
+  summary: "Zapisuje plik projektu &quot;logicznych&quot; lub &quot;wstępnie przetworzony&quot;, zawierający wszystkie zaimportowane pliki tak, jakby one utworzone pojedynczy plik."
   syntax:
     content: public void SaveLogicalProject (System.IO.TextWriter writer);
     parameters:
     - id: writer
       type: System.IO.TextWriter
-      description: The writer that saves the project file.
+      description: "Moduł zapisujący jest zapisywany w pliku projektu."
   overload: Microsoft.Build.Evaluation.Project.SaveLogicalProject*
   exceptions: []
   platform:
@@ -2230,19 +2230,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Sets a global property after the project has been evaluated. If the value changes, the project is marked to require reevaluation.
+  summary: "Ustawia właściwość globalną, po projektu zostało wykonane. Jeśli wartość zostanie zmieniona, projekt jest oznaczony do wymagają ponownej oceny."
   syntax:
     content: public bool SetGlobalProperty (string name, string escapedValue);
     parameters:
     - id: name
       type: System.String
-      description: The name of the global property to set.
+      description: "Nazwa właściwości globalne do ustawienia."
     - id: escapedValue
       type: System.String
-      description: The new value of the global property.
+      description: "Nowa wartość właściwości globalnej."
     return:
       type: System.Boolean
-      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if the value changes, otherwise returns <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "Zwraca <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> , jeśli wartość zostanie zmieniona, w przeciwnym razie zwraca <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Evaluation.Project.SetGlobalProperty*
   exceptions: []
   platform:
@@ -2259,20 +2259,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Sets or adds a property with the given name and value to the project. Overwrites the value of a property with the same name if it did not originate in an imported file.
-  remarks: "If there is no property with the given name, updates the last existing property with the given name that has no condition on itself or its property group, unless it originated in an imported file.  \n  \n Otherwise, adds a new property in the first property group without a condition, creating a property group if necessary after the last existing property group, else at the start of the project.  \n  \n Evaluation takes place on a best-effort basis. Properties that are defined in the project source following the new property may be used for evaluation. Only this property is evaluated. Other properties that might depend on it are not affected."
+  summary: "Ustawia lub dodaje właściwość o podanej nazwie i wartości do projektu. Zastępuje wartości właściwości o tej samej nazwie, jeśli nie pochodzi w pliku importowanych."
+  remarks: "Jeśli nie ma właściwości o podanej nazwie, chyba że pochodzi importowany plik aktualizacji ostatnich istniejącej właściwości o podanej nazwie, która nie ma warunku na siebie lub jego grupa właściwości.       W przeciwnym razie dodaje nową właściwość, w pierwszej grupy właściwości bez warunku, tworzenie grupy właściwości, w razie potrzeby po ostatnim istniejącej właściwości grupy, else na początku projektu.       Ocena odbywa się w sposób optymalny. Właściwości, które są zdefiniowane w źródle projektu po nowej właściwości mogą być używane do oceny. Obliczane jest tylko tej właściwości. Nie wpływa na inne właściwości, które może być od niego zależne."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectProperty SetProperty (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: The name of the property to set.
+      description: "Nazwa właściwości do ustawienia."
     - id: unevaluatedValue
       type: System.String
-      description: The new unevaluated value of the property.
+      description: "Nowa wartość unevaluated właściwości."
     return:
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: Returns the property.
+      description: "Zwraca wartość właściwości."
   overload: Microsoft.Build.Evaluation.Project.SetProperty*
   exceptions: []
   platform:
@@ -2289,12 +2289,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets or sets a flag the determines whether ReevaluateIfNecessary is temporarily disabled. This is useful when the host expects to make a number of reads and writes to the project, and wants to temporarily sacrifice correctness for performance.
+  summary: "Pobiera lub ustawia flagę Określa, czy ReevaluateIfNecessary jest tymczasowo wyłączone. Jest przydatne, gdy host oczekuje wykonywać liczbę operacji odczytu i zapisuje projekt i chce, aby tymczasowo poświęcać poprawności wydajności."
   syntax:
     content: public bool SkipEvaluation { get; set; }
     return:
       type: System.Boolean
-      description: Returns a flag the determines whether ReevaluateIfNecessary is temporarily disabled.
+      description: "Zwraca flagę Określa, czy ReevaluateIfNecessary jest tymczasowo wyłączone."
   overload: Microsoft.Build.Evaluation.Project.SkipEvaluation*
   exceptions: []
   platform:
@@ -2311,12 +2311,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the value of the SubToolsetVersion attribute, if any. This value was combined with the value of the ToolsVersion attribute to determine the toolset properties for this project.
+  summary: "Pobiera wartość atrybutu SubToolsetVersion, jeśli istnieją. Ta wartość została połączona z wartością atrybutu ToolsVersion, aby określić właściwości zestawu narzędzi dla tego projektu."
   syntax:
     content: public string SubToolsetVersion { get; }
     return:
       type: System.String
-      description: Returns the SubToolsetVersion attribute value. Returns an empty string if the attribute is not present.
+      description: "Zwraca wartość atrybutu SubToolsetVersion. Jeśli atrybut nie jest obecny, zwraca pusty ciąg."
   overload: Microsoft.Build.Evaluation.Project.SubToolsetVersion*
   exceptions: []
   platform:
@@ -2333,12 +2333,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets a dictionary of all targets in this project, keyed by target name.
+  summary: "Pobiera słownika wszystkie elementy docelowe, w tym projekcie według nazwy docelowej z kluczami."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectTargetInstance> Targets { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectTargetInstance}
-      description: Returns a dictionary of all targets in this project, keyed by target name. Overridden targets are not included in this collection. This dictionary is read-only.
+      description: "Zwraca słownika wszystkie elementy docelowe, w tym projekcie według nazwy docelowej z kluczami. Zastąpione elementy docelowe nie są dołączone do tej kolekcji. Słownik ten jest tylko do odczytu."
   overload: Microsoft.Build.Evaluation.Project.Targets*
   exceptions: []
   platform:
@@ -2355,13 +2355,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the tools version that this project was evaluated with, if any.
-  remarks: Set by the constructor. This is not necessarily the same as the tools version on the Project tag, if any; it may have been externally specified, for example with a /tv switch on the command line. The actual tools version on the Project tag can be obtained from <xref:Microsoft.Build.Evaluation.Project.Xml%2A>. The tools version cannot be changed once the project has been created.
+  summary: "Pobiera wersję narzędzia, która ten projekt został oceniony, jeśli istnieją."
+  remarks: "Ustaw przez konstruktora. Nie jest zawsze taki sam, jak wersja narzędzia na znaczniku projektu go może zewnętrznie określono, na przykład z przełącznikiem /tv w wierszu polecenia. Wersja narzędzia rzeczywiste na znaczniku projektu można uzyskać z <xref:Microsoft.Build.Evaluation.Project.Xml%2A>.</xref:Microsoft.Build.Evaluation.Project.Xml%2A> Wersja narzędzia nie można zmienić po utworzeniu projektu."
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: Gets the tools version that this project was evaluated with, if any.
+      description: "Pobiera wersję narzędzia, która ten projekt został oceniony, jeśli istnieją."
   overload: Microsoft.Build.Evaluation.Project.ToolsVersion*
   exceptions: []
   platform:
@@ -2378,13 +2378,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: Gets the root project associated with this project. Can never be null
-  remarks: There is no way to set this property. If you have a new project root, evaluate it into a new project.
+  summary: "Pobiera główny projektu skojarzonego z tym projektem. Nigdy nie może mieć wartości null"
+  remarks: "Nie istnieje sposób, aby ustawić tę właściwość. Jeśli masz nowy katalog główny projektu, wypróbuj go do nowego projektu."
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement Xml { get; }
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: Returns the root project associated with this project, which can never be null.
+      description: "Zwraca główny projektu skojarzonego z tym projektem, które nigdy nie może mieć wartości null."
   overload: Microsoft.Build.Evaluation.Project.Xml*
   exceptions: []
   platform:
