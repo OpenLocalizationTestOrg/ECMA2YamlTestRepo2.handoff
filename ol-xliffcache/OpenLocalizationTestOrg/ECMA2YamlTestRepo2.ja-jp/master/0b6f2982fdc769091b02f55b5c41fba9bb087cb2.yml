@@ -20,8 +20,8 @@ items:
   nameWithType: DataSource
   fullName: Microsoft.Build.Framework.XamlTypes.DataSource
   type: Class
-  summary: Represents the location and grouping for a <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref>.
-  remarks: If you manually instantiate this class, call <xref:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit%2A> before you set the first property of the object and <xref:Microsoft.Build.Framework.XamlTypes.DataSource.EndInit%2A> after you set the last property.
+  summary: "グループ化と保存場所を表す、 <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;></xref>します。"
+  remarks: "このクラスを手動でインスタンス化する場合に呼び出す<xref:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit%2A>オブジェクトの最初のプロパティを設定する前に、<xref:Microsoft.Build.Framework.XamlTypes.DataSource.EndInit%2A>最後のプロパティを設定した後</xref:Microsoft.Build.Framework.XamlTypes.DataSource.EndInit%2A></xref:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit%2A>。"
   syntax:
     content: 'public sealed class DataSource : System.ComponentModel.ISupportInitialize'
   inheritance:
@@ -43,7 +43,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Default constructor. Required for correct XAML deserialization.
+  summary: "既定のコンス トラクターです。 適切な XAML の逆シリアル化が必要です。"
   syntax:
     content: public DataSource ();
     parameters: []
@@ -63,7 +63,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: See <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.
+  summary: "<xref:System.ComponentModel.ISupportInitialize.BeginInit*>。</xref:System.ComponentModel.ISupportInitialize.BeginInit*>を参照してください。"
   syntax:
     content: public void BeginInit ();
     parameters: []
@@ -83,7 +83,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: See <xref:System.ComponentModel.ISupportInitialize.EndInit*>.
+  summary: "<xref:System.ComponentModel.ISupportInitialize.EndInit*>。</xref:System.ComponentModel.ISupportInitialize.EndInit*>を参照してください。"
   syntax:
     content: public void EndInit ();
     parameters: []
@@ -103,13 +103,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets a flag that determines whether a property is configuration-dependent, as indicated by the presence of a configuration condition that is attached to the property definition at its persistence location.
-  remarks: This field is optional and has the default value `true`.
+  summary: "取得またはプロパティが、構成に依存である、持続性の場所にプロパティの定義に関連付けられている構成状態の有無によって示されるかどうかを決定するフラグを設定します。"
+  remarks: "このフィールドは省略可能で既定値`true`です。"
   syntax:
     content: public bool HasConfigurationCondition { get; set; }
     return:
       type: System.Boolean
-      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if a property is configuration-dependent; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "返します。 <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref>プロパティが構成に依存する、それ以外の場合<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>します。"
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.HasConfigurationCondition*
   exceptions: []
   platform:
@@ -126,13 +126,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets the item type of the data source.
-  remarks: If a <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> is an item definition metadata or item metadata, this field specifies the item type of the item definition or the item, respectively. For common properties, this field must not be set.
+  summary: "取得またはデータ ソースの項目の種類を設定します。"
+  remarks: "場合、<xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>項目定義メタデータは、または項目のメタデータ、このフィールドはそれぞれ、項目の定義や、項目の項目の種類を指定します</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>。 一般的なプロパティは、このフィールドを設定しないでください。"
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: Returns the item type of the data source.
+      description: "データ ソースの項目の種類を返します。"
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.ItemType*
   exceptions: []
   platform:
@@ -149,13 +149,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets the label of the MSBuild property group/item definition group to which a property/item definition metadata belongs.
-  remarks: The default value is the empty string.
+  summary: "取得またはプロパティ/項目定義のメタデータが属している MSBuild プロパティ グループ/項目定義グループのラベルを設定します。"
+  remarks: "既定値は、空の文字列です。"
   syntax:
     content: public string Label { get; set; }
     return:
       type: System.String
-      description: Returns the label of the property or item group.
+      description: "プロパティまたは項目のグループのラベルを返します。"
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.Label*
   exceptions: []
   platform:
@@ -172,12 +172,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets the semicolon-delimited list of MSBuild targets that must be executed before reading the read-only properties or items of this data source.
+  summary: "取得または読み取り専用のプロパティまたはこのデータ ソースの項目を読み取る前に実行する必要がある MSBuild のターゲットのセミコロン区切りのリストを設定します。"
   syntax:
     content: public string MSBuildTarget { get; set; }
     return:
       type: System.String
-      description: Returns a semicolon-delimited list.
+      description: "セミコロンで区切った一覧を返します。"
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget*
   exceptions: []
   platform:
@@ -194,13 +194,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets the actual MSBuild property name used to read/write the value of this property.
-  remarks: "Applicable only to <xref:Microsoft.Build.Framework.XamlTypes.DataSource> objects attached to properties.  \n  \n The persisted name will usually be the same as the property name as it appears in the <xref:Microsoft.Build.Framework.XamlTypes.Rule> and the value of this property can therefore be left at is default of `null`.  \n  \n Since property names must be unique but need not be unique in the persisted store (due to other differences in the data source such as item type) there may be times when Rule property names must be changed to be unique in the XAML file, but without changing how the property is persisted in the MSBuild file.  \n  \n It is in those cases where this property becomes useful.It may also be useful in specialized build environments where property names must differ from the normally used name in order to maintain compatibility with the project system."
+  summary: "取得またはこのプロパティの値の読み取り/書き込みに使用される実際の MSBuild プロパティ名を設定します。"
+  remarks: "のみ適用される<xref:Microsoft.Build.Framework.XamlTypes.DataSource>オブジェクトのプロパティにアタッチします</xref:Microsoft.Build.Framework.XamlTypes.DataSource>。       永続化された名前場合、通常はプロパティ名と同じように、<xref:Microsoft.Build.Framework.XamlTypes.Rule>し、このプロパティの値のままにすることができますのででは、既定値は`null`</xref:Microsoft.Build.Framework.XamlTypes.Rule>。       プロパティ名が一意である必要がありますが (項目の種類など、データ ソースの違いが他の) のための永続化ストアで一意なできない必要がありますので、時間の XAML ファイルで一意であるが、MSBuild では、プロパティを永続化する方法を変更することがなくファイルにルールのプロパティ名を変更しなければならない場合があります。       このような場合はこのプロパティが便利な場所です。プロジェクト システムとの互換性を維持するために、プロパティ名を通常使用される名前と異なる必要があります、特殊なビルド環境で役立つ場合もあります。"
   syntax:
     content: public string PersistedName { get; set; }
     return:
       type: System.String
-      description: Returns the actual MSBuild property name used to read/write the value of this property.
+      description: "このプロパティの値の読み取り/書き込みに使用される実際の MSBuild プロパティ名を返します。"
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.PersistedName*
   exceptions: []
   platform:
@@ -217,13 +217,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets the storage location for this data source.
-  remarks: "This field is mandatory and is culture-invariant.  \n  \n Current accepted values are `ProjectFile` and `UserFile`. `ProjectFile` causes the property value to be written to and read from the project manifest file or the property sheet, depending on which node in **Solution Explorer** or the **Properties** window is used to spawn the property pages UI. `UserFile` causes the property value to be written to and read from the .user file."
+  summary: "取得またはこのデータ ソースの保存場所を設定します。"
+  remarks: "このフィールドは必須、カルチャに依存しないです。       現在の許容値は`ProjectFile`と`UserFile`です。 `ProjectFile`によって、プロパティ値への書き込みし、プロジェクトのマニフェスト ファイルまたは内のどのノードによって、プロパティ シートから読み取りを**ソリューション エクスプ ローラー**または**プロパティ**ウィンドウは、プロパティ ページの UI の生成に使用します。 `UserFile`プロパティの値への書き込みし、.user ファイルから読み取りをさせます。"
   syntax:
     content: public string Persistence { get; set; }
     return:
       type: System.String
-      description: Returns the storage location for this data source.
+      description: "このデータ ソースの保存場所を返します。"
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.Persistence*
   exceptions: []
   platform:
@@ -240,12 +240,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets the value of a<xref href="Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation"></xref> which indicates the location of the default value for this data source.
+  summary: "取得または設定の値、<xref href=&quot;Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation&quot;> </xref>このデータ ソースの既定値の場所を示します。"
   syntax:
     content: public Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation SourceOfDefaultValue { get; set; }
     return:
       type: Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation
-      description: Returns <xref href="Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation"></xref>.
+      description: "Returns <xref href=&quot;Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation&quot;></xref>."
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.SourceOfDefaultValue*
   exceptions: []
   platform:
@@ -262,13 +262,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: Gets or sets the data type of the source, which governs how the data is treated during build.
-  remarks: Typically has the value `Item`, `ItemDefinition`, or `Property`.
+  summary: "取得またはビルド時にデータを処理する方法を指定すると、ソースのデータ型を設定します。"
+  remarks: "通常、値を持つ`Item`、 `ItemDefinition`、または`Property`です。"
   syntax:
     content: public string SourceType { get; set; }
     return:
       type: System.String
-      description: Returns the data type.
+      description: "データ型を返します。"
   overload: Microsoft.Build.Framework.XamlTypes.DataSource.SourceType*
   exceptions: []
   platform:
