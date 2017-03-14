@@ -50,7 +50,7 @@ items:
   nameWithType: ApplicationManifest
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest
   type: Class
-  summary: Describes a ClickOnce or native Win32 application manifest.
+  summary: "描述 ClickOnce 或本机 Win32 应用程序清单。"
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -99,7 +99,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref> class.
+  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;></xref>类。"
   syntax:
     content: public ApplicationManifest ();
     parameters: []
@@ -119,13 +119,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref> class.
+  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;></xref>类。"
   syntax:
     content: public ApplicationManifest (string targetFrameworkVersion);
     parameters:
     - id: targetFrameworkVersion
       type: System.String
-      description: A token that represents a version of the .NET Framework.
+      description: "一个表示.NET Framework 的版本的令牌。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.#ctor*
   exceptions: []
   platform:
@@ -142,13 +142,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the application configuration file.
-  remarks: For a native Win32 manifest, this input is ignored.
+  summary: "获取或设置应用程序配置文件。"
+  remarks: "对于本机 Win32 清单，则忽略此输入。"
   syntax:
     content: public string ConfigFile { get; set; }
     return:
       type: System.String
-      description: A string that represents the name of the application configuration file.
+      description: "表示应用程序配置文件的名称的字符串。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*
   exceptions: []
   platform:
@@ -165,12 +165,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets an assembly reference that represents the entry point of the application.
+  summary: "获取或设置表示应用程序的入口点程序集引用。"
   syntax:
     content: public override Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference EntryPoint { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: An <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference"></xref> object that represents the entry point of the application.
+      description: "<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference&quot;> </xref>对象，表示应用程序的入口点。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.EntryPoint*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the URL of the error report.
+  summary: "获取或设置错误报表的 URL。"
   syntax:
     content: public string ErrorReportUrl { get; set; }
     return:
       type: System.String
-      description: A string that contains the URL of the error report.
+      description: "一个字符串，包含错误报告的 URL。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*
   exceptions: []
   platform:
@@ -209,12 +209,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the file associations that are defined in the manifest.
+  summary: "获取或设置清单中定义的文件关联。"
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociationCollection FileAssociations { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociationCollection
-      description: A string that contains the file associations.
+      description: "一个字符串，包含的文件关联。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*
   exceptions: []
   platform:
@@ -231,13 +231,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies whether the application is hosted in a browser (as WPF Web Browser Applications are).
-  remarks: "For project types other than WPF Web Browser Applications, you should set HostInBrowser to `False` (the default value).  \n  \n When you deploy a WPF Web Browser Application, you must set the HostInBrowser property to `True`. This causes the `<hostInBrowser>` tag to be added to the generated application manifest. This tag enables ClickOnce to deploy projects for browser-hosted applications, which contain .xbap files.  \n  \n You will also have to make the application available only online by setting <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> to `False`. If you do not do this, you will receive [MSBuild Error MSB3116](~/add/includes/ajax-current-ext-md.md)."
+  summary: "获取或设置一个值，指定是否 （如 WPF Web 浏览器应用程序） 时，浏览器承载的应用程序。"
+  remarks: "WPF Web 浏览器应用程序以外的项目类型，你应该将 HostInBrowser `False` （默认值）。       在部署 WPF Web 浏览器应用程序时，你必须将 HostInBrowser 属性设置为`True`。 这将导致`<hostInBrowser>`标记要添加到生成的应用程序清单。 此标记允许 ClickOnce 部署项目类型提供的浏览器承载的应用程序，其中包含.xbap 文件。       您还需要提供应用程序只能联机通过设置<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>到`False`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> 如果不这样做，你将收到[MSBuild 错误 MSB3116](~/add/includes/ajax-current-ext-md.md)。"
   syntax:
     content: public bool HostInBrowser { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value that indicates whether the application being deployed will be hosted in a browser (<xref uid="langword_csharp_True" name="True" href=""></xref>), or not (<xref uid="langword_csharp_False" name="False" href=""></xref>). <xref uid="langword_csharp_True" name="True" href=""></xref> applies only to WPF Web Browser Applications.
+      description: "一个布尔值，该值指示是否将在浏览器承载要部署的应用程序 (<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>)，或不 (<xref uid=&quot;langword_csharp_False&quot; name=&quot;False&quot; href=&quot;&quot;></xref>)。 <xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>仅适用于 WPF Web 浏览器应用程序。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*
   exceptions: []
   platform:
@@ -254,13 +254,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the program icon file.
-  remarks: The program icon is expressed in the generated application manifest and is used for the **Start** menu and **Add or Remove Programs**. If this the icon file is not specified, a default icon is used. For a native Win32 manifest, this input is ignored.
+  summary: "获取或设置程序图标文件。"
+  remarks: "程序图标表示在生成的应用程序清单中，并且适用于**启动**菜单和**添加或删除程序**。 如果此图标文件未指定，则使用默认图标。 对于本机 Win32 清单，则忽略此输入。"
   syntax:
     content: public string IconFile { get; set; }
     return:
       type: System.String
-      description: A string that represents the name of the icon file.
+      description: "表示图标文件的名称的字符串。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*
   exceptions: []
   platform:
@@ -277,12 +277,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies whether the manifest is a ClickOnce application manifest or a native Win32 application manifest.
+  summary: "获取或设置一个值，指定该清单是一个 ClickOnce 应用程序清单还是本机 Win32 应用程序清单。"
   syntax:
     content: public bool IsClickOnceManifest { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value that indicates whether the manifest is a ClickOnce application manifest (<xref uid="langword_csharp_True" name="True" href=""></xref>) or a native Win32 manifest (<xref uid="langword_csharp_False" name="False" href=""></xref>).
+      description: "一个布尔值，该值指示该清单是一个 ClickOnce 应用程序清单 (<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>) 还是本机 Win32 清单 (<xref uid=&quot;langword_csharp_False&quot; name=&quot;False&quot; href=&quot;&quot;></xref>)。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*
   exceptions: []
   platform:
@@ -299,12 +299,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the maximum allowed length of a file path in a ClickOnce application deployment. If this value is specified, the length of each file path in the application is checked against this limit. Any items that exceed the limit cause a warning message. If this input is not specified or is zero, no checking is performed. For a native Win32 manifest, this input is ignored.
+  summary: "获取或设置一个值，指定 ClickOnce 应用程序部署中的文件路径的最大允许的长度。 如果指定此值，是针对此限制检查应用程序中每个文件路径的长度。 超出限制的任何项导致一条警告消息。 如果此输入未指定，则为零，则执行不进行检查。 对于本机 Win32 清单，则忽略此输入。"
   syntax:
     content: public int MaxTargetPath { get; set; }
     return:
       type: System.Int32
-      description: An integer that indicates the maximum allowed length of a file path in a ClickOnce application deployment.
+      description: "一个整数，指示 ClickOnce 应用程序部署中的文件路径的最大允许的长度。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.MaxTargetPath*
   exceptions: []
   platform:
@@ -321,12 +321,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies a textual description for the operating system dependency.
+  summary: "获取或设置一个值，指定操作系统依赖项的文本说明。"
   syntax:
     content: public string OSDescription { get; set; }
     return:
       type: System.String
-      description: A string that indicates the operating system dependency.
+      description: "一个字符串，指示操作系统依赖项。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*
   exceptions: []
   platform:
@@ -343,12 +343,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies a support URL for the operating system dependency.
+  summary: "获取或设置一个值，指定操作系统依赖项的支持 URL。"
   syntax:
     content: public string OSSupportUrl { get; set; }
     return:
       type: System.String
-      description: A string indicating the support URL for the operating system dependency.
+      description: "指示操作系统依赖项的支持 URL 的字符串。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*
   exceptions: []
   platform:
@@ -365,13 +365,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the minimum required operating system version required by the application.
-  remarks: Specifies the minimum operating system version required by the application. An example value is "5.1.2600.0" for Windows XP. If this input is not specified, a default value is used. The default value is the minimum supported operating system of the .NET Framework, which is "4.10.0.0" for Windows 98SE. However, if the application contains any native or Reg-Free COM references, the default is Windows XP. For a native Win32 manifest, this input is ignored.
+  summary: "获取或设置一个值，指定应用程序所需的所需最低操作系统版本。"
+  remarks: "指定应用程序所需的最低操作系统版本。 一个示例值是&quot;5.1.2600.0&quot;对于 Windows XP。 如果未指定此输入，使用默认值。 默认值为所需的最低支持的操作系统的.NET Framework 中，这是为 Windows 98SE&quot;4.10.0.0&quot;。 但是，如果应用程序包含的任何本机或 Reg-free COM 引用，则默认值是 Windows XP。 对于本机 Win32 清单，则忽略此输入。"
   syntax:
     content: public string OSVersion { get; set; }
     return:
       type: System.String
-      description: A string that indicates the minimum required operating system version required by the application.
+      description: "一个字符串，指示由应用程序所需的所需最低操作系统版本。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSVersion*
   exceptions: []
   platform:
@@ -388,13 +388,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the <xref uid="langword_csharp_ProductName" name="ProductName" href=""></xref> property in the project file.
-  remarks: This property corresponds to the `ProductName` property in the project file. The default is null. If `ProductName` is null and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `True`, the RegisteredOrganization value in the registry is written to the application manifest. If RegisteredOrganization is also null, the assembly name is used.
+  summary: "获取或设置一个值，指定<xref uid=&quot;langword_csharp_ProductName&quot; name=&quot;ProductName&quot; href=&quot;&quot;></xref>项目文件中的属性。"
+  remarks: "此属性对应于`ProductName`项目文件中的属性。 默认值为 null。 如果`ProductName`为 null 和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>是`True`，注册表中的 RegisteredOrganization 值写入到应用程序清单。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> 如果 RegisteredOrganization 也为 null，则使用程序集名称。"
   syntax:
     content: public string Product { get; set; }
     return:
       type: System.String
-      description: A string value that corresponds to the <xref uid="langword_csharp_ProductName" name="ProductName" href=""></xref> property in the project file.
+      description: "一个字符串值，对应于<xref uid=&quot;langword_csharp_ProductName&quot; name=&quot;ProductName&quot; href=&quot;&quot;></xref>项目文件中的属性。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*
   exceptions: []
   platform:
@@ -411,13 +411,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the <xref uid="langword_csharp_PublisherName" name="PublisherName" href=""></xref> property in the project file.
-  remarks: This property corresponds to the `PublisherName` property in the project file. The default is null. If `PublisherName` is null and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `True`, the assembly name is written to the application manifest.
+  summary: "获取或设置一个值，指定<xref uid=&quot;langword_csharp_PublisherName&quot; name=&quot;PublisherName&quot; href=&quot;&quot;></xref>项目文件中的属性。"
+  remarks: "此属性对应于`PublisherName`项目文件中的属性。 默认值为 null。 如果`PublisherName`为 null 和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>是`True`，程序集名称写入到应用程序清单。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>"
   syntax:
     content: public string Publisher { get; set; }
     return:
       type: System.String
-      description: A string value that corresponds to the <xref uid="langword_csharp_PublisherName" name="PublisherName" href=""></xref> property in the project file.
+      description: "一个字符串值，对应于<xref uid=&quot;langword_csharp_PublisherName&quot; name=&quot;PublisherName&quot; href=&quot;&quot;></xref>项目文件中的属性。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*
   exceptions: []
   platform:
@@ -434,12 +434,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the suite name that is defined in the manifest.
+  summary: "获取或设置清单中定义的套件名称。"
   syntax:
     content: public string SuiteName { get; set; }
     return:
       type: System.String
-      description: A string that contains the suite name.
+      description: "包含套件名称的字符串。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*
   exceptions: []
   platform:
@@ -456,13 +456,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the <xref uid="langword_csharp_SupportUrl" name="SupportUrl" href=""></xref> property in the project file.
-  remarks: This property corresponds to the `SupportUrl` property in the project file. The default is null. If `SupportUrl` is null and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `True`, an empty string is written to the application manifest.
+  summary: "获取或设置一个值，指定<xref uid=&quot;langword_csharp_SupportUrl&quot; name=&quot;SupportUrl&quot; href=&quot;&quot;></xref>项目文件中的属性。"
+  remarks: "此属性对应于`SupportUrl`项目文件中的属性。 默认值为 null。 如果`SupportUrl`为 null 和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>是`True`，空字符串写入到应用程序清单。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>"
   syntax:
     content: public string SupportUrl { get; set; }
     return:
       type: System.String
-      description: A string value that corresponds to the <xref uid="langword_csharp_SupportUrl" name="SupportUrl" href=""></xref> property in the project file.
+      description: "一个字符串值，对应于<xref uid=&quot;langword_csharp_SupportUrl&quot; name=&quot;SupportUrl&quot; href=&quot;&quot;></xref>项目文件中的属性。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*
   exceptions: []
   platform:
@@ -479,12 +479,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a token that represents a version of the .NET Framework.
+  summary: "获取或设置一个标记，用于表示.NET Framework 的版本。"
   syntax:
     content: public string TargetFrameworkVersion { get; set; }
     return:
       type: System.String
-      description: A <xref:System.String> that represents a version of the .NET Framework.
+      description: "A<xref:System.String>表示.NET Framework 的版本。</xref:System.String>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion*
   exceptions: []
   platform:
@@ -501,12 +501,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies a trust object that defines the application security.
+  summary: "获取或设置一个值，指定用于定义应用程序安全性的信任对象。"
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo TrustInfo { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo
-      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo"></xref> object that defines the application security.
+      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo&quot;> </xref>对象，用于定义应用程序安全性。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TrustInfo*
   exceptions: []
   platform:
@@ -523,13 +523,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies whether the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>, and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> properties are written to the application manifest.
-  remarks: "By default, the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A>, and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A> properties are set to null. They are used only if UseApplicationTrust is `True`. If this property is `True`, the values of these properties are written to the corresponding tags in the application manifest.  \n  \n If UseApplicationTrust is `False` (the default value), these properties are ignored.  \n  \n This property corresponds to the `UseApplicationTrust` property in the project file."
+  summary: "获取或设置一个值，指定是否<> *1>， <> </> *1>，和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>属性写入到应用程序清单。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>"
+  remarks: "默认情况下， <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A>， <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A>，和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A>属性设置为 null。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A> 仅当 UseApplicationTrust 为使用它们`True`。 如果此属性为`True`，这些属性的值写入到相应的标记中的应用程序清单。       如果 UseApplicationTrust `False` （默认值），这些属性会被忽略。       此属性对应于`UseApplicationTrust`项目文件中的属性。"
   syntax:
     content: public bool UseApplicationTrust { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value that indicates whether the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>, and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> properties are written to the application manifest. If the value is <xref uid="langword_csharp_True" name="True" href=""></xref>, they are written to the application manifest. If the value is <xref uid="langword_csharp_False" name="False" href=""></xref>, these properties are ignored.
+      description: "一个布尔值，该值指示是否<> *1>， <> </> *1>，和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>属性写入到应用程序清单。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> 如果值为<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;> </xref>，它们会写入应用程序清单。 如果值为<xref uid=&quot;langword_csharp_False&quot; name=&quot;False&quot; href=&quot;&quot;> </xref>，这些属性会被忽略。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*
   exceptions: []
   platform:
@@ -546,8 +546,8 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Performs various checks to verify the validity of the manifest. Any resulting errors or warnings are reported in the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection"></xref> object.
-  remarks: Before calling this method, you must set the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A> property so that the validation can verify application manifest against the correct version of the .NET Framework runtime.
+  summary: "执行各项检查以验证该清单的有效性。 在中报告任何生成错误或警告<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection&quot;></xref>对象。"
+  remarks: "调用此方法之前，必须设置<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A>属性以便验证可以验证是否针对的.NET Framework 运行时的正确版本的应用程序清单。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A>"
   syntax:
     content: public override void Validate ();
     parameters: []
@@ -567,12 +567,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>"
   syntax:
     content: public string XmlConfigFile { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlConfigFile*
   exceptions: []
   platform:
@@ -589,12 +589,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the entry point identity to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为 XML 文件的入口点标识。"
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity XmlEntryPointIdentity { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity
-      description: The entry point identity.
+      description: "入口点标识。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointIdentity*
   exceptions: []
   platform:
@@ -611,12 +611,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the entry point parameters to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为 XML 文件的入口点参数。"
   syntax:
     content: public string XmlEntryPointParameters { get; set; }
     return:
       type: System.String
-      description: The entry point parameters.
+      description: "入口点参数。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointParameters*
   exceptions: []
   platform:
@@ -633,12 +633,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that specifies the entry point for executing the assembly and that is used to serialize the entry point to an XML file.
+  summary: "获取或设置一个属性，指定用于执行程序集和的入口点用于序列化到 XML 文件的入口点。"
   syntax:
     content: public string XmlEntryPointPath { get; set; }
     return:
       type: System.String
-      description: The entry point for executing the assembly.
+      description: "用于执行程序集的入口点。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointPath*
   exceptions: []
   platform:
@@ -655,12 +655,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>"
   syntax:
     content: public string XmlErrorReportUrl { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlErrorReportUrl*
   exceptions: []
   platform:
@@ -677,12 +677,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>"
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation[] XmlFileAssociations { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation[]
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlFileAssociations*
   exceptions: []
   platform:
@@ -699,12 +699,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>"
   syntax:
     content: public string XmlHostInBrowser { get; set; }
     return:
       type: System.String
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> or <xref uid="langword_csharp_false" name="false" href=""></xref>. The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*> property.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>or <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>. 值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlHostInBrowser*
   exceptions: []
   platform:
@@ -721,12 +721,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>"
   syntax:
     content: public string XmlIconFile { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIconFile*
   exceptions: []
   platform:
@@ -743,12 +743,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>"
   syntax:
     content: public string XmlIsClickOnceManifest { get; set; }
     return:
       type: System.String
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> or <xref uid="langword_csharp_false" name="false" href=""></xref>. The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*> property.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>or <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>. 值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIsClickOnceManifest*
   exceptions: []
   platform:
@@ -765,12 +765,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the build version of the operating system to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为 XML 文件的操作系统的内部版本号。"
   syntax:
     content: public string XmlOSBuild { get; set; }
     return:
       type: System.String
-      description: The build version of the operating system.
+      description: "操作系统内部版本号。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSBuild*
   exceptions: []
   platform:
@@ -787,12 +787,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>"
   syntax:
     content: public string XmlOSDescription { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSDescription*
   exceptions: []
   platform:
@@ -809,12 +809,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the major portion of the version number of the operating system to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为 XML 文件的操作系统的版本号的主要部分。"
   syntax:
     content: public string XmlOSMajor { get; set; }
     return:
       type: System.String
-      description: The major portion of the version number of the operating system.
+      description: "操作系统的版本号主要部分。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMajor*
   exceptions: []
   platform:
@@ -831,12 +831,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the minor portion of the version number of the operating system to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为 XML 文件的操作系统的版本号的次要部分。"
   syntax:
     content: public string XmlOSMinor { get; set; }
     return:
       type: System.String
-      description: The minor portion of the version number of the operating system.
+      description: "操作系统的版本号次要部分。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMinor*
   exceptions: []
   platform:
@@ -853,12 +853,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the revision portion of the version number of the operating system to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为 XML 文件的操作系统的版本号的修订部分。"
   syntax:
     content: public string XmlOSRevision { get; set; }
     return:
       type: System.String
-      description: The revision portion of the version number of the operating system.
+      description: "操作系统的版本号的修订部分。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSRevision*
   exceptions: []
   platform:
@@ -875,12 +875,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>"
   syntax:
     content: public string XmlOSSupportUrl { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSSupportUrl*
   exceptions: []
   platform:
@@ -897,12 +897,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>"
   syntax:
     content: public string XmlProduct { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlProduct*
   exceptions: []
   platform:
@@ -919,12 +919,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>"
   syntax:
     content: public string XmlPublisher { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlPublisher*
   exceptions: []
   platform:
@@ -941,12 +941,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>"
   syntax:
     content: public string XmlSuiteName { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSuiteName*
   exceptions: []
   platform:
@@ -963,12 +963,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>"
   syntax:
     content: public string XmlSupportUrl { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSupportUrl*
   exceptions: []
   platform:
@@ -985,12 +985,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*> property to an XML file.
+  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>"
   syntax:
     content: public string XmlUseApplicationTrust { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*> property.
+      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlUseApplicationTrust*
   exceptions: []
   platform:
