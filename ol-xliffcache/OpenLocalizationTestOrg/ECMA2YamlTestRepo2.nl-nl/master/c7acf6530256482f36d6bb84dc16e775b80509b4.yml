@@ -21,7 +21,7 @@ items:
   nameWithType: Copy
   fullName: Microsoft.Build.Tasks.Copy
   type: Class
-  summary: Implements the `Copy` task. Use the `Copy` element in your project file to create and execute this task. For usage and parameter information, see [Copy Task](~/add/includes/ajax-current-ext-md.md).
+  summary: "Implementeert de `Copy` taak. Gebruik de `Copy` element in het projectbestand maken en deze taak niet uitvoeren. Zie voor informatie en de parameter [taak kopiëren](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: 'public class Copy : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask'
   inheritance:
@@ -53,7 +53,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Copy"></xref> class.
+  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.Copy&quot;> </xref> klasse."
   syntax:
     content: public Copy ();
     parameters: []
@@ -73,7 +73,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Stop and return (in an undefined state) as soon as possible.
+  summary: "Stoppen en zo snel mogelijk retourneren (in een niet-gedefinieerde status)."
   syntax:
     content: public void Cancel ();
     parameters: []
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the items that were successfully copied.
+  summary: "Hiermee haalt u de items die zijn gekopieerd."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] CopiedFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: The items that were successfully copied.
+      description: "De items die zijn gekopieerd."
   overload: Microsoft.Build.Tasks.Copy.CopiedFiles*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a list of files to copy the source files to.
-  remarks: The list of destination files is expected to be a one-to-one mapping with the list specified in the <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> property. That is, the first file specified in <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> will be copied to the first location specified in DestinationFiles, and so forth.
+  summary: "Opgehaald of ingesteld van een lijst van bestanden naar de bronbestanden te kopiëren."
+  remarks: "De lijst met doelbestanden wordt verwacht een een-op-toewijzing met de lijst die is opgegeven in de <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>eigenschap.</xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> Dat wil zeggen, de eerste bestand dat is opgegeven <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>moeten worden gekopieerd naar de eerste locatie die is opgegeven in DestinationFiles, enzovoort.</xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>"
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] DestinationFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: The list of files to copy the source files to.
+      description: "De lijst van bestanden naar de bronbestanden te kopiëren."
   overload: Microsoft.Build.Tasks.Copy.DestinationFiles*
   exceptions: []
   platform:
@@ -138,13 +138,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the directory to which you want to copy the files.
-  remarks: The destination folder must be a directory, not a file. If the directory does not exist, it is created automatically.
+  summary: "Opgehaald of ingesteld van de map op waarin de bestanden te kopiëren."
+  remarks: "De doelmap moet een map, geen bestand. Als de map niet bestaat, wordt deze automatisch gemaakt."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem DestinationFolder { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: The directory to which you want to copy the files.
+      description: "De map op waarin u de bestanden te kopiëren."
   overload: Microsoft.Build.Tasks.Copy.DestinationFolder*
   exceptions: []
   platform:
@@ -161,13 +161,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Executes the `Copy` task.
+  summary: "Voert de `Copy` taak."
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de uitvoering van de taak is voltooid; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Copy.Execute*
   exceptions: []
   platform:
@@ -184,12 +184,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a Boolean value that indicates whether to overwrite files even if they are marked as read only files.
+  summary: "Opgehaald of ingesteld van een Booleaanse waarde die of bestanden zelfs als ze zijn gemarkeerd aangeeft als alleen-lezen bestanden te overschrijven."
   syntax:
     content: public bool OverwriteReadOnlyFiles { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Copy` task should overwrite files even if they are marked as read only files; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Copy` taak moet bestanden overschrijven, zelfs als ze zijn gemarkeerd als alleen-lezen bestanden, anders, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Copy.OverwriteReadOnlyFiles*
   exceptions: []
   platform:
@@ -206,12 +206,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: 'How many times to attempt to copy, if all previous attempts failed. Defaults to zero. Warning: using retries may mask a synchronization problem in your build process.'
+  summary: 'Hoe vaak als u wilt kopiëren, als alle eerdere pogingen is mislukt. Standaard ingesteld op nul. Waarschuwing: met behulp van nieuwe pogingen een synchronisatiefout in uw buildproces kan verbergen.'
   syntax:
     content: public int Retries { get; set; }
     return:
       type: System.Int32
-      description: To be added.
+      description: "Moet worden toegevoegd."
   overload: Microsoft.Build.Tasks.Copy.Retries*
   exceptions: []
   platform:
@@ -228,12 +228,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Delay between any necessary retries. Defaults to <xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault>
+  summary: "Vertraging tussen alle benodigde nieuwe pogingen. De standaardwaarde<xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault></xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault>"
   syntax:
     content: public int RetryDelayMilliseconds { get; set; }
     return:
       type: System.Int32
-      description: To be added.
+      description: "Moet worden toegevoegd."
   overload: Microsoft.Build.Tasks.Copy.RetryDelayMilliseconds*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a Boolean value that indicates whether the `Copy` task should skip the copying of files that are unchanged between the source and destination.
-  remarks: The `Copy` task considers files to be unchanged if they have the same size and the same last modified time.
+  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de `Copy` taak moet worden overgeslagen het kopiëren van bestanden die tussen de bron en bestemming ongewijzigd zijn."
+  remarks: "De `Copy` taak bestanden worden niet gewijzigd als ze dezelfde grootte hebben en hetzelfde laatst gewijzigd om beschouwd."
   syntax:
     content: public bool SkipUnchangedFiles { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Copy` task should skip the copying of files that are unchanged between the source and destination; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Copy` taak moet worden overgeslagen het kopiëren van bestanden die tussen de bron en bestemming ongewijzigd, anders zijn, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Copy.SkipUnchangedFiles*
   exceptions: []
   platform:
@@ -273,12 +273,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the files to copy.
+  summary: "Opgehaald of ingesteld van de bestanden te kopiëren."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SourceFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: The files to copy.
+      description: "De bestanden te kopiëren."
   overload: Microsoft.Build.Tasks.Copy.SourceFiles*
   exceptions: []
   platform:
@@ -295,12 +295,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Indicates if hard links should be used.
+  summary: "Geeft aan of de vaste koppelingen moet worden gebruikt."
   syntax:
     content: public bool UseHardlinksIfPossible { get; set; }
     return:
       type: System.Boolean
-      description: To be added.
+      description: "Moet worden toegevoegd."
   overload: Microsoft.Build.Tasks.Copy.UseHardlinksIfPossible*
   exceptions: []
   platform:

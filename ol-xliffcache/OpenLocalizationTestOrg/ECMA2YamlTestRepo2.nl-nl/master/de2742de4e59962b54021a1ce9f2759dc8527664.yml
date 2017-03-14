@@ -15,7 +15,7 @@ items:
   nameWithType: CallTarget
   fullName: Microsoft.Build.Tasks.CallTarget
   type: Class
-  summary: Implements the `CallTarget` task. Use the `CallTarget` element in your project file to create and execute this task. For usage and parameter information, see [CallTarget Task](~/add/includes/ajax-current-ext-md.md).
+  summary: "Implementeert de `CallTarget` taak. Gebruik de `CallTarget` element in het projectbestand maken en deze taak niet uitvoeren. Zie voor informatie en de parameter [CallTarget taak](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: >-
       [Microsoft.Build.Framework.RunInMTA]
@@ -49,7 +49,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.CallTarget"></xref> class.
+  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.CallTarget&quot;> </xref> klasse."
   syntax:
     content: public CallTarget ();
     parameters: []
@@ -69,13 +69,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Instructs the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine to build one or more targets in the current project.
+  summary: "Geeft de [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine voor het bouwen van een of meer doelen in het huidige project."
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if all targets built successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als alle doelen gemaakt; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.CallTarget.Execute*
   exceptions: []
   platform:
@@ -92,12 +92,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a Boolean value that indicates whether the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once per target (<xref uid="langword_csharp_true" name="true" href=""></xref>) or the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once to build all targets (<xref uid="langword_csharp_false" name="false" href=""></xref>).
+  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine heet eenmaal per doel (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) of de [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine eenmaal is aangeroepen om samen te stellen van alle doelen (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
   syntax:
     content: public bool RunEachTargetSeparately { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once per target; <xref uid="langword_csharp_false" name="false" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once to build all targets.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine heet eenmaal per doel; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> als de [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine eenmaal is aangeroepen om samen te stellen van alle doelen."
   overload: Microsoft.Build.Tasks.CallTarget.RunEachTargetSeparately*
   exceptions: []
   platform:
@@ -114,12 +114,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the outputs of all built targets.
+  summary: "Hiermee haalt u de uitvoer van alle ingebouwde doelen."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TargetOutputs { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: The outputs of all built targets.
+      description: "De uitvoer van alle ingebouwde doelen."
   overload: Microsoft.Build.Tasks.CallTarget.TargetOutputs*
   exceptions: []
   platform:
@@ -136,12 +136,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the target or targets to build.
+  summary: "Opgehaald of ingesteld van het doel of -doelen te bouwen."
   syntax:
     content: public string[] Targets { get; set; }
     return:
       type: System.String[]
-      description: The target or targets to build.
+      description: "Het doel of -doelen te bouwen."
   overload: Microsoft.Build.Tasks.CallTarget.Targets*
   exceptions: []
   platform:
@@ -158,13 +158,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a Boolean value that indicates whether the MSBuild engine will return the built targets from the cache.
-  remarks: The scope of built targets in the cash is (ProjectFileName, GlobalProperties)[TargetNames] as a list of build items.
+  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de MSBuild-engine de ingebouwde doelen uit de cache retourneert."
+  remarks: "Het bereik van ingebouwde doelen in het geld is (ProjectFileName GlobalProperties) [TargetNames] als een lijst met items samenstellen."
   syntax:
     content: public bool UseResultsCache { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the MSBuild engine will return the built targets from the cache; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de MSBuild-engine de ingebouwde doelen uit de cache retourneert wordt. anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.CallTarget.UseResultsCache*
   exceptions: []
   platform:
