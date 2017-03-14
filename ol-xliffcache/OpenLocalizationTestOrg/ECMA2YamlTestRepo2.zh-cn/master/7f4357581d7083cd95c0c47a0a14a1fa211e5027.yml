@@ -26,7 +26,7 @@ items:
   nameWithType: TrustInfo
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo
   type: Class
-  summary: This class represents the application security trust information.
+  summary: "此类表示应用程序安全信任信息。"
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -50,7 +50,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo"></xref> class.
+  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo&quot;></xref>类。"
   syntax:
     content: public TrustInfo ();
     parameters: []
@@ -70,7 +70,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Resets the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo"></xref> object to its default state of full trust.
+  summary: "重置<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo&quot;></xref>为完全信任其默认状态的对象。"
   syntax:
     content: public void Clear ();
     parameters: []
@@ -90,13 +90,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Determines whether the application has permission to call unmanaged code.
-  remarks: "\"Application\" refers to the application for which the manifest is being read. You can read the deployment manifest using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> or <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>."
+  summary: "确定应用程序是否有权调用非托管的代码。"
+  remarks: "&quot;应用程序&quot;指的应用程序对其读取清单。 你可以阅读使用<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>或<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A></xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>部署清单"
   syntax:
     content: public bool HasUnmanagedCodePermission { get; }
     return:
       type: System.Boolean
-      description: A Boolean value indicating whether the application has permission to call unmanaged code.
+      description: "一个布尔值，该值指示应用程序是否有权调用非托管的代码。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.HasUnmanagedCodePermission*
   exceptions: []
   platform:
@@ -113,13 +113,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Determines whether the application is full trust or partial trust.
-  remarks: "\"Application\" refers to the application for which the manifest is being read. You can read the deployment manifest using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> or <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>."
+  summary: "确定应用程序是完全信任还是部分信任。"
+  remarks: "&quot;应用程序&quot;指的应用程序对其读取清单。 你可以阅读使用<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>或<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A></xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>部署清单"
   syntax:
     content: public bool IsFullTrust { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value indicating whether the application is full trust or partial trust.
+      description: "一个布尔值，该值指示应用程序完全信任还是部分信任。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust*
   exceptions: []
   platform:
@@ -136,12 +136,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the permission set object for the application trust.
+  summary: "获取或设置应用程序信任的权限集对象。"
   syntax:
     content: public System.Security.PermissionSet PermissionSet { get; set; }
     return:
       type: System.Security.PermissionSet
-      description: A PermissionSet object for the application trust.
+      description: "应用程序信任 PermissionSet 对象。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*
   exceptions: []
   platform:
@@ -158,13 +158,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets whether to preserve partial trust permission when the full trust flag is set.
-  remarks: "Normally when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> is set to `True`, all permission settings are deleted. If you want to preserve these settings (typically during design time), you can call this method to persist the permission settings even when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> is set to `True`.  \n  \n `PreserveFullTrustPermissionSet` should not be set to `True` for ClickOnce deployments because this violates ClickOnce schema requirements.  \n  \n If this property is set to `False` with full trust specified, then any permissions defined in the permission set object will be dropped on save."
+  summary: "获取或设置是否要设置完全信任标志后保留部分信任权限。"
+  remarks: "通常，当<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A>设置为`True`，所有权限设置会被都删除。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> 如果你想要保留这些设置 （通常在设计时），则可以调用此方法来保持这些权限设置，即使<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A>设置为`True`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A>       `PreserveFullTrustPermissionSet`不应设置为`True`ClickOnce 部署的这违反了 ClickOnce 架构要求。       如果此属性设置为`False`以完全信任指定，然后定义权限中的所有权限集对象将被丢弃保存。"
   syntax:
     content: public bool PreserveFullTrustPermissionSet { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value indicating whether to preserve partial trust permission when the full trust flag is set.
+      description: "一个布尔值，该值指示是否设置完全信任标志后保留部分信任权限。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PreserveFullTrustPermissionSet*
   exceptions: []
   platform:
@@ -181,14 +181,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Reads the application trust from an XML file.
-  remarks: The data stream must contain only a \<TrustInfo> section and no other data.
+  summary: "从 XML 文件读取应用程序信任。"
+  remarks: "数据流必须仅包含\\<TrustInfo&1;> 部分和任何其他数据。"
   syntax:
     content: public void Read (System.IO.Stream input);
     parameters:
     - id: input
       type: System.IO.Stream
-      description: Specifies an input stream.
+      description: "指定输入的流。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read*
   exceptions: []
   platform:
@@ -205,14 +205,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Reads the application trust from an XML file.
-  remarks: The specified string must contain only a \<TrustInfo> section and no other data.
+  summary: "从 XML 文件读取应用程序信任。"
+  remarks: "指定的字符串必须仅包含\\<TrustInfo&1;> 部分和任何其他数据。"
   syntax:
     content: public void Read (string path);
     parameters:
     - id: path
       type: System.String
-      description: The name of the input file.
+      description: "输入文件的名称。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read*
   exceptions: []
   platform:
@@ -229,13 +229,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Reads the application trust from a ClickOnce application manifest.
+  summary: "读取 ClickOnce 应用程序清单中的应用程序信任。"
   syntax:
     content: public void ReadManifest (System.IO.Stream input);
     parameters:
     - id: input
       type: System.IO.Stream
-      description: Specifies an input stream.
+      description: "指定输入的流。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*
   exceptions: []
   platform:
@@ -252,13 +252,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Reads the application trust from a ClickOnce application manifest.
+  summary: "读取 ClickOnce 应用程序清单中的应用程序信任。"
   syntax:
     content: public void ReadManifest (string path);
     parameters:
     - id: path
       type: System.String
-      description: The name of the input file.
+      description: "输入文件的名称。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*
   exceptions: []
   platform:
@@ -275,13 +275,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the level of same site access permitted, specifying whether the application has permission to communicate with the server from which it was deployed.
-  remarks: "\"Application\" refers to the application for which the manifest is being read. You can read the deployment manifest using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> or <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>."
+  summary: "获取或设置允许的同一站点访问，指定应用程序是否具有与从中部署的服务器进行通信的权限级别。"
+  remarks: "&quot;应用程序&quot;指的应用程序对其读取清单。 你可以阅读使用<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>或<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A></xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>部署清单"
   syntax:
     content: public string SameSiteAccess { get; set; }
     return:
       type: System.String
-      description: "A string indicating the level of same site access permitted. The values can be <xref uid=\"langword_csharp_site\" name=\"site\" href=\"\"></xref> or <xref uid=\"langword_csharp_none\" name=\"none\" href=\"\"></xref>.  \n  \n <xref uid=\"langword_csharp_site\" name=\"site\" href=\"\"></xref> specifies that the application can call Web services at the same URL from which it was deployed; if deployed from a share, the application has permission to read files from that share.  \n  \n <xref uid=\"langword_csharp_none\" name=\"none\" href=\"\"></xref> specifies that the application can neither access Web services from the same URL from which it was deployed, nor access files from the share from which it was deployed.  \n  \n \"Application\" refers to the application for which the manifest is being read (using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*>)."
+      description: "指示允许的同一站点访问级别的字符串。 值可以是<xref uid=&quot;langword_csharp_site&quot; name=&quot;site&quot; href=&quot;&quot;></xref>或<xref uid=&quot;langword_csharp_none&quot; name=&quot;none&quot; href=&quot;&quot;> </xref>。       <xref uid=&quot;langword_csharp_site&quot; name=&quot;site&quot; href=&quot;&quot;></xref>指定应用程序可以从中部署它; 同一个 URL 上调用 Web 服务如果从共享部署，则应用程序有权从该共享读取文件。       <xref uid=&quot;langword_csharp_none&quot; name=&quot;none&quot; href=&quot;&quot;></xref>指定应用程序既不能可以从中不部署，也不能从部署它的共享访问文件的同一个 url 访问 Web 服务。       &quot;应用程序&quot;指的应用程序对其读取清单 (使用<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*>)。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.SameSiteAccess*
   exceptions: []
   platform:
@@ -298,13 +298,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Returns all the information in the application security trust object as a string.
+  summary: "作为字符串返回在应用程序安全信任对象中的所有信息。"
   syntax:
     content: public override string ToString ();
     parameters: []
     return:
       type: System.String
-      description: A string containing the information in the application security trust object.
+      description: "包含应用程序安全信任对象中的信息的字符串。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ToString*
   exceptions: []
   platform:
@@ -321,14 +321,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Writes the application trust to an XML file.
+  summary: "将应用程序信任写入 XML 文件。"
   remarks: "This method updates only the \\<TrustInfo> section in a file containing only the \\<TrustInfo> section and nothing else.  \n  \n The specified stream must contain only a \\<TrustInfo> section and no other data."
   syntax:
     content: public void Write (System.IO.Stream output);
     parameters:
     - id: output
       type: System.IO.Stream
-      description: Specifies an output stream.
+      description: "指定输出流。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write*
   exceptions: []
   platform:
@@ -345,14 +345,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Writes the application trust to an XML file.
+  summary: "将应用程序信任写入 XML 文件。"
   remarks: "This method updates only the \\<TrustInfo> section in a file containing only the \\<TrustInfo> section and nothing else.  \n  \n The specified string must contain only a \\<TrustInfo> section and no other data."
   syntax:
     content: public void Write (string path);
     parameters:
     - id: path
       type: System.String
-      description: The name of the output file.
+      description: "输出文件的名称。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write*
   exceptions: []
   platform:
@@ -369,14 +369,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Writes the application trust to a new template ClickOnce application manifest.
-  remarks: This method updates only the \<TrustInfo> section in a file containing only the top-level manifest header, the \<TrustInfo> section, and nothing else.
+  summary: "将应用程序信任写入新的模板 ClickOnce 应用程序清单。"
+  remarks: "此方法只更新\\<TrustInfo&1;> 包含仅是顶级清单的头文件中节\\<TrustInfo&1;> 部分中，且没有其他任何内容。"
   syntax:
     content: public void WriteManifest (System.IO.Stream output);
     parameters:
     - id: output
       type: System.IO.Stream
-      description: Specifies an output stream to which to write the updated manifest file.
+      description: "指定要向其写入更新的清单文件的输出流。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest*
   exceptions: []
   platform:
@@ -393,14 +393,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Writes the application trust to a ClickOnce application manifest.
+  summary: "将应用程序信任写入 ClickOnce 应用程序清单。"
   remarks: "This method updates only the \\<TrustInfo> section in a file containing only the top-level manifest header, the \\<TrustInfo> section, and nothing else.  \n  \n This overload of the method will update the file in place (that is, the input file is the same as the output file). If the file exists, the trust section will be updated. If the file does not exist, a new template manifest with the specified trust will be created."
   syntax:
     content: public void WriteManifest (string path);
     parameters:
     - id: path
       type: System.String
-      description: The name of the output file.
+      description: "输出文件的名称。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest*
   exceptions: []
   platform:
@@ -417,17 +417,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Updates an existing ClickOnce application manifest with the specified trust.
-  remarks: This method updates only the \<TrustInfo> section in a file containing only the top-level manifest header, the \<TrustInfo> section, and nothing else.
+  summary: "使用指定的信任中更新现有的 ClickOnce 应用程序清单。"
+  remarks: "此方法只更新\\<TrustInfo&1;> 包含仅是顶级清单的头文件中节\\<TrustInfo&1;> 部分中，且没有其他任何内容。"
   syntax:
     content: public void WriteManifest (System.IO.Stream input, System.IO.Stream output);
     parameters:
     - id: input
       type: System.IO.Stream
-      description: Specifies an input stream containing the manifest to be updated.
+      description: "指定输入的流包含要更新的清单。"
     - id: output
       type: System.IO.Stream
-      description: Specifies an output stream to which to write the updated manifest file.
+      description: "指定要向其写入更新的清单文件的输出流。"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest*
   exceptions: []
   platform:

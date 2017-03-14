@@ -17,7 +17,7 @@ items:
   nameWithType: RegisterAssembly
   fullName: Microsoft.Build.Tasks.RegisterAssembly
   type: Class
-  summary: Implements the `RegisterAssembly` task. Use the `RegisterAssembly` element in your project file to create and execute this task. For usage and parameter information, see [RegisterAssembly Task](~/add/includes/ajax-current-ext-md.md).
+  summary: "实现`RegisterAssembly`任务。 使用`RegisterAssembly`项目文件以创建和执行此任务中的元素。 有关用法和参数信息，请参阅[RegisterAssembly 任务](~/add/includes/ajax-current-ext-md.md)。"
   remarks: "Framework64/\\<version>/RegisterAssemblyTask cannot resolve a library of COM objects registered as 32-bit components. Framework/\\<version>/RegisterAssemblyTask cannot resolve a library of COM objects registered as 64-bit components.  \n  \n For example, if you register a library of COM objects called ClassLibrary1 as 32-bit components on a 64-bit machine, run Visual Studio, and change the target to x64, the build fails with the following error:  \n  \n `ClassLibrary1.dll is not a valid assembly`"
   syntax:
     content: 'public class RegisterAssembly : Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension, System.Runtime.InteropServices.ITypeLibExporterNotifySink'
@@ -52,7 +52,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.RegisterAssembly"></xref> class.
+  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.RegisterAssembly&quot;></xref>类。"
   syntax:
     content: public RegisterAssembly ();
     parameters: []
@@ -72,12 +72,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the assemblies to be registered with COM.
+  summary: "获取或设置要向 COM 注册的程序集"
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Assemblies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: The assemblies to be registered with COM.
+      description: "要向 COM 注册的程序集"
   overload: Microsoft.Build.Tasks.RegisterAssembly.Assemblies*
   exceptions: []
   platform:
@@ -94,12 +94,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets information about the state between the `RegisterAssembly` task and the [UnregisterAssembly](~/add/includes/ajax-current-ext-md.md) task. This prevents the `UnregisterAssembly` task from attempting to unregister an assembly that failed to register in the `RegisterAssembly` task.
+  summary: "获取或设置之间的状态信息`RegisterAssembly`任务和[UnregisterAssembly](~/add/includes/ajax-current-ext-md.md)任务。 这可以防止`UnregisterAssembly`任务尝试注销无法在中注册程序集`RegisterAssembly`任务。"
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem AssemblyListFile { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: The state information necessary for the `UnregisterAssembly` task to do proper clean-up.
+      description: "所需的状态信息`UnregisterAssembly`任务执行适当的清理操作。"
   overload: Microsoft.Build.Tasks.RegisterAssembly.AssemblyListFile*
   exceptions: []
   platform:
@@ -116,13 +116,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a Boolean value that specifies whether the task creates a codebase entry in the registry, which specifies the file path for an assembly that is not installed in the global assembly cache.
-  remarks: You should not specify this option if you will subsequently install the assembly that you are registering into the global assembly cache.
+  summary: "获取或设置一个布尔值，指定任务是否在注册表中，该项指定未在全局程序集缓存中安装的程序集的文件路径中创建 codebase 项。"
+  remarks: "如果随后将你要注册的程序集安装到全局程序集缓存，不应指定此选项。"
   syntax:
     content: public bool CreateCodeBase { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task creates a codebase entry in the registry; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果任务在注册表; 中创建 codebase 项否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
   overload: Microsoft.Build.Tasks.RegisterAssembly.CreateCodeBase*
   exceptions: []
   platform:
@@ -139,13 +139,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Executes the `RegisterAssembly` task.
+  summary: "执行`RegisterAssembly`任务。"
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果任务成功执行;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
   overload: Microsoft.Build.Tasks.RegisterAssembly.Execute*
   exceptions: []
   platform:
@@ -162,19 +162,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Callback method for reporting the type library export events.
+  summary: "回调方法，以报告类型库导出事件。"
   syntax:
     content: public void ReportEvent (System.Runtime.InteropServices.ExporterEventKind kind, int code, string msg);
     parameters:
     - id: kind
       type: System.Runtime.InteropServices.ExporterEventKind
-      description: Describes the callbacks that the type library exporter makes when exporting a type library.
+      description: "描述类型库导出程序生成导出类型库时的回调。"
     - id: code
       type: System.Int32
-      description: The error code of the export event.
+      description: "导出事件的错误代码。"
     - id: msg
       type: System.String
-      description: The message of the export event.
+      description: "导出事件消息。"
   overload: Microsoft.Build.Tasks.RegisterAssembly.ReportEvent*
   exceptions: []
   platform:
@@ -191,17 +191,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Callback method for finding the type library for the specified assembly.
-  remarks: Logs an error indicating that the specified assembly is not registered for COM interop in all cases.
+  summary: "回调方法，以查找指定程序集的类型库。"
+  remarks: "记录错误，该值指示指定的程序集未注册为 COM 互操作在所有情况下。"
   syntax:
     content: public object ResolveRef (System.Reflection.Assembly assemblyToResolve);
     parameters:
     - id: assemblyToResolve
       type: System.Reflection.Assembly
-      description: The assembly to find type libraries for.
+      description: "要查找类型库的程序集。"
     return:
       type: System.Object
-      description: <xref uid="langword_csharp_null" name="null" href=""></xref> in all cases.
+      description: "<xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;></xref>在所有情况下。"
   overload: Microsoft.Build.Tasks.RegisterAssembly.ResolveRef*
   exceptions: []
   platform:
@@ -218,13 +218,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the type library to generate from the specified assembly.
-  remarks: "The generated type library contains definitions of the accessible types defined within the assembly. The type library is only generated if one of the following is true:  \n  \n-   A type library of that name does not exist at that location.  \n  \n-   A type library exists but it is older than the assembly being passed in.  \n  \n If the type library is newer than the assembly being passed, a new one will not be created, but the assembly will still be registered.  \n  \n If this property is specified, it must have the same number of items as the <xref:Microsoft.Build.Tasks.RegisterAssembly.Assemblies%2A> property or the task will fail. If no inputs are specified, the task will default to the name of the assembly and change the extension of the item to .tlb."
+  summary: "获取或设置要从指定的程序集生成类型库。"
+  remarks: "生成的类型库包含在程序集中定义的可访问类型的定义。 如果下列之一为 true，将仅生成类型库:-在该位置不存在该名称的类型库。      -A 类型库存在，但它是早于正在传递的程序集。       如果较新比所传递的程序集的类型库，将不会创建一个新，但仍注册程序集。       如果指定此属性，它必须具有相同数量的项作为<xref:Microsoft.Build.Tasks.RegisterAssembly.Assemblies%2A>属性或任务将失败。</xref:Microsoft.Build.Tasks.RegisterAssembly.Assemblies%2A> 如果未不指定任何输入，该任务将默认为程序集的名称，将项的扩展名更改为.tlb。"
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TypeLibFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: The type library to generate from the specified assembly.
+      description: "要从指定的程序集生成类型库。"
   overload: Microsoft.Build.Tasks.RegisterAssembly.TypeLibFiles*
   exceptions: []
   platform:
