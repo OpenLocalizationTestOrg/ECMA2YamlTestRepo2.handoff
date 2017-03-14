@@ -33,8 +33,8 @@ items:
   nameWithType: ConsoleLogger
   fullName: Microsoft.Build.Logging.ConsoleLogger
   type: Class
-  summary: Represents the default logger that outputs event data to the console (stdout).
-  remarks: "This class creates, wraps, and delegates to a `BaseConsoleLogger`, either `SerialConsoleLogger` or `ParallelConsoleLogger`.  \n  \n This class is not thread safe."
+  summary: "Hiermee geeft u de standaard berichtenlogboek die gebeurtenisgegevens naar de console (stdout)."
+  remarks: "Deze klasse maakt, loopt en gedelegeerd naar een `BaseConsoleLogger`, ofwel `SerialConsoleLogger` of `ParallelConsoleLogger`.       Deze klasse is niet thread-safe."
   syntax:
     content: 'public class ConsoleLogger : Microsoft.Build.Framework.INodeLogger'
   inheritance:
@@ -56,7 +56,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Creates a default logger.
+  summary: "Maakt een standaard-logboek."
   syntax:
     content: public ConsoleLogger ();
     parameters: []
@@ -76,13 +76,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Creates a logger instance with the given verbosity that logs to the default console.
+  summary: "Maakt een exemplaar van het logboek met de opgegeven gegevens opnemen die meldt zich aan de standaard-console."
   syntax:
     content: public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity);
     parameters:
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: The verbosity level.
+      description: "De uitgebreidheidsniveau."
   overload: Microsoft.Build.Logging.ConsoleLogger.#ctor*
   exceptions: []
   platform:
@@ -99,22 +99,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Initializes the logger with alternate output handlers.
+  summary: "Initialiseert het logboek met alternatieve uitvoer-handlers."
   syntax:
     content: public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity, Microsoft.Build.Logging.WriteHandler write, Microsoft.Build.Logging.ColorSetter colorSet, Microsoft.Build.Logging.ColorResetter colorReset);
     parameters:
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: The verbosity level.
+      description: "De uitgebreidheidsniveau."
     - id: write
       type: Microsoft.Build.Logging.WriteHandler
-      description: The write handler.
+      description: "De handler schrijven."
     - id: colorSet
       type: Microsoft.Build.Logging.ColorSetter
-      description: Sets the text color.
+      description: "Hiermee stelt u de tekstkleur."
     - id: colorReset
       type: Microsoft.Build.Logging.ColorResetter
-      description: Resets the text color.
+      description: "Stelt de tekstkleur in."
   overload: Microsoft.Build.Logging.ConsoleLogger.#ctor*
   exceptions: []
   platform:
@@ -131,17 +131,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Applies a parameter to the logger.
-  remarks: Deprecated.
+  summary: "Een parameter geldt voor het logboek."
+  remarks: "Afgeschaft."
   syntax:
     content: public void ApplyParameter (string parameterName, string parameterValue);
     parameters:
     - id: parameterName
       type: System.String
-      description: The name of the parameter.
+      description: "De naam van de parameter."
     - id: parameterValue
       type: System.String
-      description: The value of the parameter.
+      description: "De waarde van de parameter."
   overload: Microsoft.Build.Logging.ConsoleLogger.ApplyParameter*
   exceptions: []
   platform:
@@ -158,16 +158,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called when the build is finished.
+  summary: "Wordt aangeroepen wanneer de build is voltooid."
   syntax:
     content: public void BuildFinishedHandler (object sender, Microsoft.Build.Framework.BuildFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.BuildFinishedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.BuildFinishedHandler*
   exceptions: []
   platform:
@@ -184,16 +184,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called when the build is started.
+  summary: "Wordt aangeroepen wanneer de build is gestart."
   syntax:
     content: public void BuildStartedHandler (object sender, Microsoft.Build.Framework.BuildStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.BuildStartedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.BuildStartedHandler*
   exceptions: []
   platform:
@@ -210,16 +210,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a custom event.
+  summary: "Aangeroepen om een aangepaste gebeurtenis."
   syntax:
     content: public void CustomEventHandler (object sender, Microsoft.Build.Framework.CustomBuildEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender of the event.
+      description: "De afzender van de gebeurtenis."
     - id: e
       type: Microsoft.Build.Framework.CustomBuildEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.CustomEventHandler*
   exceptions: []
   platform:
@@ -236,16 +236,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log an error event.
+  summary: "Voor een foutgebeurtenis logboekregistratie genoemd."
   syntax:
     content: public void ErrorHandler (object sender, Microsoft.Build.Framework.BuildErrorEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender of the event.
+      description: "De afzender van de gebeurtenis."
     - id: e
       type: Microsoft.Build.Framework.BuildErrorEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.ErrorHandler*
   exceptions: []
   platform:
@@ -262,13 +262,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Signs up the console logger for the given build event.
+  summary: "Tekenen van het logboek van de console voor de opgegeven build-gebeurtenis."
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: The available events.
+      description: "De beschikbare gebeurtenissen."
   overload: Microsoft.Build.Logging.ConsoleLogger.Initialize*
   exceptions: []
   platform:
@@ -285,16 +285,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Initializes the logger with the given event source and node count.
+  summary: "Initialiseert het logboek met de opgegeven bron- en knooppunt van het aantal."
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: The event source.
+      description: "De bron van de gebeurtenis."
     - id: nodeCount
       type: System.Int32
-      description: The node count.
+      description: "Het aantal knooppunten."
   overload: Microsoft.Build.Logging.ConsoleLogger.Initialize*
   exceptions: []
   platform:
@@ -311,16 +311,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a message event.
+  summary: "Aangeroepen om een gebeurtenis weergegeven."
   syntax:
     content: public void MessageHandler (object sender, Microsoft.Build.Framework.BuildMessageEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender of the event.
+      description: "De afzender van de gebeurtenis."
     - id: e
       type: Microsoft.Build.Framework.BuildMessageEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.MessageHandler*
   exceptions: []
   platform:
@@ -337,12 +337,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Gets or sets a semicolon-delimited list of parameter key-value pairs.
+  summary: "Opgehaald of ingesteld van een met puntkomma&quot;s gescheiden lijst van de parameter sleutel-waardeparen."
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: Returns a semicolon-delimited list of parameter key-value pairs.
+      description: "Retourneert een met puntkomma&quot;s gescheiden lijst van de parameter sleutel-waardeparen."
   overload: Microsoft.Build.Logging.ConsoleLogger.Parameters*
   exceptions: []
   platform:
@@ -359,16 +359,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a project finished event.
+  summary: "Voltooid gebeurtenis aangeroepen voor logboekregistratie van een project."
   syntax:
     content: public void ProjectFinishedHandler (object sender, Microsoft.Build.Framework.ProjectFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.ProjectFinishedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.ProjectFinishedHandler*
   exceptions: []
   platform:
@@ -385,16 +385,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a project started event.
+  summary: "Gestart gebeurtenis aangeroepen voor logboekregistratie van een project."
   syntax:
     content: public void ProjectStartedHandler (object sender, Microsoft.Build.Framework.ProjectStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.ProjectStartedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.ProjectStartedHandler*
   exceptions: []
   platform:
@@ -411,12 +411,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Gets or sets a switch that determines whether to suppress the display of errors and the warnings summary.
+  summary: "Opgehaald of ingesteld van een switch die bepaalt of de weergave van fouten en waarschuwingen samenvatting onderdrukken."
   syntax:
     content: public bool ShowSummary { get; set; }
     return:
       type: System.Boolean
-      description: Returns a switch that determines whether to suppress the display of errors and the warnings summary.
+      description: "Retourneert een switch die bepaalt of de weergave van fouten en waarschuwingen samenvatting onderdrukken."
   overload: Microsoft.Build.Logging.ConsoleLogger.ShowSummary*
   exceptions: []
   platform:
@@ -433,8 +433,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called when the build is finished.
-  remarks: The console logger does not need to release any resources. This method does nothing.
+  summary: "Wordt aangeroepen wanneer de build is voltooid."
+  remarks: "Het logboek console hoeft niet om resources vrij te geven. Deze methode niet."
   syntax:
     content: public virtual void Shutdown ();
     parameters: []
@@ -454,13 +454,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Gets or sets a switch that determines whether to suppress the display of project headers.
-  remarks: Project headers are displayed by default unless this property is set.
+  summary: "Opgehaald of ingesteld van een switch waarmee wordt bepaald of de weergave van project headers onderdrukken."
+  remarks: "Project headers worden standaard weergegeven, tenzij deze eigenschap is ingesteld."
   syntax:
     content: public bool SkipProjectStartedText { get; set; }
     return:
       type: System.Boolean
-      description: Returns a switch that determines whether to suppress the display of project headers.
+      description: "Retourneert een switch waarmee wordt bepaald of de weergave van project headers onderdrukken."
   overload: Microsoft.Build.Logging.ConsoleLogger.SkipProjectStartedText*
   exceptions: []
   platform:
@@ -477,16 +477,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a target finished event.
+  summary: "Voltooid gebeurtenis aangeroepen voor logboekregistratie van een doel."
   syntax:
     content: public void TargetFinishedHandler (object sender, Microsoft.Build.Framework.TargetFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.TargetFinishedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.TargetFinishedHandler*
   exceptions: []
   platform:
@@ -503,16 +503,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a target started event.
+  summary: "Gestart gebeurtenis aangeroepen voor logboekregistratie van een doel."
   syntax:
     content: public void TargetStartedHandler (object sender, Microsoft.Build.Framework.TargetStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.TargetStartedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.TargetStartedHandler*
   exceptions: []
   platform:
@@ -529,16 +529,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a task finished event.
+  summary: "Aangeroepen voor logboekregistratie van een taak is voltooid gebeurtenis."
   syntax:
     content: public void TaskFinishedHandler (object sender, Microsoft.Build.Framework.TaskFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.TaskFinishedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.TaskFinishedHandler*
   exceptions: []
   platform:
@@ -555,16 +555,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a task started event.
+  summary: "Aangeroepen voor logboekregistratie van een taak is gestart gebeurtenis."
   syntax:
     content: public void TaskStartedHandler (object sender, Microsoft.Build.Framework.TaskStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender (should be null).
+      description: "De afzender (moet null zijn)."
     - id: e
       type: Microsoft.Build.Framework.TaskStartedEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.TaskStartedHandler*
   exceptions: []
   platform:
@@ -581,12 +581,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Gets or sets the level of detail to show in the event log.
+  summary: "Opgehaald of ingesteld van het detailniveau in het gebeurtenislogboek kunnen worden weergegeven."
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: Returns the level of detail to show in the event log.
+      description: "Retourneert het detailniveau in het gebeurtenislogboek kunnen worden weergegeven."
   overload: Microsoft.Build.Logging.ConsoleLogger.Verbosity*
   exceptions: []
   platform:
@@ -603,16 +603,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Called to log a warning event.
+  summary: "Voor een waarschuwingsgebeurtenis logboekregistratie genoemd."
   syntax:
     content: public void WarningHandler (object sender, Microsoft.Build.Framework.BuildWarningEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: The sender of the event.
+      description: "De afzender van de gebeurtenis."
     - id: e
       type: Microsoft.Build.Framework.BuildWarningEventArgs
-      description: The event arguments.
+      description: "De gebeurtenisargumenten."
   overload: Microsoft.Build.Logging.ConsoleLogger.WarningHandler*
   exceptions: []
   platform:
@@ -629,12 +629,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Provides access to the write handler delegate so that it can be redirected if necessary (e.g. to a file).
+  summary: "Biedt toegang tot de handler schrijven gemachtigde zodat deze kan worden omgeleid, indien nodig (bijvoorbeeld naar een bestand)."
   syntax:
     content: protected Microsoft.Build.Logging.WriteHandler WriteHandler { get; set; }
     return:
       type: Microsoft.Build.Logging.WriteHandler
-      description: Returns the write handler delegate.
+      description: "Retourneert een gemachtigde voor de handler schrijven."
   overload: Microsoft.Build.Logging.ConsoleLogger.WriteHandler*
   exceptions: []
   platform:

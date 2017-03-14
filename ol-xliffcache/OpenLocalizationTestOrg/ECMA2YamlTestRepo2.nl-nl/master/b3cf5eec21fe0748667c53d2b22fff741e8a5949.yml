@@ -13,7 +13,7 @@ items:
   nameWithType: LoggerDescription
   fullName: Microsoft.Build.Logging.LoggerDescription
   type: Class
-  summary: Contains information about a logger as a collection of values that can be used to instantiate the logger and can be serialized to be passed between different processes.
+  summary: "Bevat informatie over een berichtenlogboek als een verzameling van waarden die kunnen worden gebruikt voor het starten van het logboek en worden doorgegeven tussen verschillende processen kunnen worden geserialiseerd."
   syntax:
     content: public class LoggerDescription
   inheritance:
@@ -34,25 +34,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Creates a logger description from the given data.
+  summary: "Maakt een beschrijving van het logboek van de opgegeven gegevens."
   syntax:
     content: public LoggerDescription (string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, Microsoft.Build.Framework.LoggerVerbosity verbosity);
     parameters:
     - id: loggerClassName
       type: System.String
-      description: The class name of the logger.
+      description: "De klassenaam van het logboek."
     - id: loggerAssemblyName
       type: System.String
-      description: The assembly name that implements the logger.
+      description: "De assemblynaam die u het logboek implementeert."
     - id: loggerAssemblyFile
       type: System.String
-      description: The assembly file that implements the logger.
+      description: "Het assemblybestand dat het logboek implementeert."
     - id: loggerSwitchParameters
       type: System.String
-      description: Switch parameters for the logger.
+      description: "Parameters voor het logboek overschakelen."
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: The verbosity level.
+      description: "De uitgebreidheidsniveau."
   overload: Microsoft.Build.Logging.LoggerDescription.#ctor*
   exceptions: []
   platform:
@@ -69,14 +69,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Creates an ILogger instance from the data in this description.
-  remarks: This method may throw a variety of reflection exceptions if the data is invalid. It is the resposibility of the caller to handle these exceptions if desired.
+  summary: "Maakt een ILogger exemplaar van de gegevens in de beschrijving."
+  remarks: "Deze methode kan een aantal verschillende reflectie uitzonderingen genereren als de gegevens ongeldig is. De resposibility van de beller voor het afhandelen van deze uitzonderingen als gewenst is."
   syntax:
     content: public Microsoft.Build.Framework.ILogger CreateLogger ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: Returns an ILogger instance from the data in this description.
+      description: "Retourneert een ILogger exemplaar van de gegevens in de beschrijving."
   overload: Microsoft.Build.Logging.LoggerDescription.CreateLogger*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Gets the string of logger parameters.
+  summary: "De tekenreeks van berichtenlogboek parameters opgehaald."
   syntax:
     content: public string LoggerSwitchParameters { get; }
     return:
       type: System.String
-      description: Returns the string of logger parameters.  Returns null if there are no parameters.
+      description: "Retourneert de tekenreeks van berichtenlogboek parameters.  Retourneert null als er geen parameters."
   overload: Microsoft.Build.Logging.LoggerDescription.LoggerSwitchParameters*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: Returns the verbosity level for this logger.
-  remarks: For command line display, all loggers get the same verbosity level.
+  summary: "Retourneert de uitgebreidheidsniveau voor dit logboek."
+  remarks: "Voor weergave van de opdrachtregel, worden alle bijhouden dezelfde uitgebreidheidsniveau opgehaald."
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: To be added.
+      description: "Moet worden toegevoegd."
   overload: Microsoft.Build.Logging.LoggerDescription.Verbosity*
   exceptions: []
   platform:

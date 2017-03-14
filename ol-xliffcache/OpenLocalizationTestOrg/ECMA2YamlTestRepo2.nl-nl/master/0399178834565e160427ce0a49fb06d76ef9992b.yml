@@ -16,7 +16,7 @@ items:
   nameWithType: CodeTaskFactory
   fullName: Microsoft.Build.Tasks.CodeTaskFactory
   type: Class
-  summary: A task factory which can take a code DOM supported language and create a task from it.
+  summary: "De fabrieksinstellingen van een taak die een code DOM kan overnemen ondersteunde taal en een taak maken uit."
   syntax:
     content: 'public class CodeTaskFactory : Microsoft.Build.Framework.ITaskFactory'
   inheritance:
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Creates the task factory.
+  summary: "De fabriek taak maakt."
   syntax:
     content: public CodeTaskFactory ();
     parameters: []
@@ -58,13 +58,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Cleans up any context or state used in a task.
+  summary: "Ruimt context of de status in een taak gebruikt."
   syntax:
     content: public void CleanupTask (Microsoft.Build.Framework.ITask task);
     parameters:
     - id: task
       type: Microsoft.Build.Framework.ITask
-      description: The task to clean up.
+      description: "De taak om op te schonen."
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CleanupTask*
   exceptions: []
   platform:
@@ -81,16 +81,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Create a `taskfactory` instance which contains the data that needs to be refreshed between task invocations.
+  summary: "Maak een `taskfactory` exemplaar waarin de gegevens die moet worden vernieuwd tussen aanroepen van de taak."
   syntax:
     content: public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine loggingHost);
     parameters:
     - id: loggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: The host that logs information from the task factory.
+      description: "De host die informatie in de fabriek taak registreert."
     return:
       type: Microsoft.Build.Framework.ITask
-      description: Returns the new task.
+      description: "Retourneert de nieuwe taak."
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CreateTask*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: The MSBuild engine uses this for logging.
+  summary: "De MSBuild-engine gebruikt deze voor logboekregistratie."
   syntax:
     content: public string FactoryName { get; }
     return:
       type: System.String
-      description: Returns the name of the task.
+      description: "Retourneert de naam van de taak."
   overload: Microsoft.Build.Tasks.CodeTaskFactory.FactoryName*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the type information for all task parameters.
+  summary: "Hiermee haalt u de type-informatie voor alle taakparameters."
   syntax:
     content: public Microsoft.Build.Framework.TaskPropertyInfo[] GetTaskParameters ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.TaskPropertyInfo[]
-      description: Returns an array of the type information for all task parameters.
+      description: "Retourneert een matrix van het type informatie voor alle taakparameters."
   overload: Microsoft.Build.Tasks.CodeTaskFactory.GetTaskParameters*
   exceptions: []
   platform:
@@ -152,25 +152,25 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Initialzes the task factory.
+  summary: "Initialzes de fabriek taak."
   syntax:
     content: public bool Initialize (string taskName, System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.TaskPropertyInfo> taskParameters, string taskElementContents, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);
     parameters:
     - id: taskName
       type: System.String
-      description: The name of the task.
+      description: "De naam van de taak."
     - id: taskParameters
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo}
-      description: The parameters for the task.
+      description: "De parameters voor de taak."
     - id: taskElementContents
       type: System.String
-      description: The element contents for the task.
+      description: "De element-inhoud voor de taak."
     - id: taskFactoryLoggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: The logging host that gets information about tasks.
+      description: "De logboekregistratie-host die informatie over taken opgehaald."
     return:
       type: System.Boolean
-      description: Returns the new task factory.
+      description: "Retourneert de nieuwe taak factory."
   overload: Microsoft.Build.Tasks.CodeTaskFactory.Initialize*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Represents the type of task.
+  summary: "Hiermee geeft u het type taak."
   syntax:
     content: public Type TaskType { get; }
     return:
       type: System.Type
-      description: Returns the task type.
+      description: "Retourneert het taaktype."
   overload: Microsoft.Build.Tasks.CodeTaskFactory.TaskType*
   exceptions: []
   platform:
