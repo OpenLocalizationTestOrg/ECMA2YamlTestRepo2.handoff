@@ -35,7 +35,7 @@ items:
   nameWithType: Exec
   fullName: Microsoft.Build.Tasks.Exec
   type: Class
-  summary: Implements the `Exec` task. Use the `Exec` element in your project file to create and execute this task. For usage and parameter information, see [Exec Task](~/add/includes/ajax-current-ext-md.md).
+  summary: "Implementuje `Exec` zadań. Użyj `Exec` elementu w pliku projektu, aby utworzyć i wykonać tego zadania. Uzyskać użycia i parametrów, zobacz [zadanie Exec](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: 'public class Exec : Microsoft.Build.Tasks.ToolTaskExtension'
   inheritance:
@@ -100,7 +100,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Exec"></xref> class.
+  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Tasks.Exec&quot;> </xref> klasy."
   syntax:
     content: public Exec ();
     parameters: []
@@ -120,13 +120,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Generates command line arguments that the command line tool must run directly from the command line and not from a response file.
+  summary: "Generuje argumenty wiersza polecenia, które muszą zostać uruchomione narzędzie wiersza polecenia bezpośrednio z wiersza polecenia, a nie z pliku odpowiedzi."
   syntax:
     content: protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: Command line builder to add arguments to.
+      description: "Konstruktor wiersza polecenia, aby dodawać argumenty."
   overload: Microsoft.Build.Tasks.Exec.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -143,13 +143,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the command to run.
-  remarks: The command to run can be a system command, such as attrib, or an executable, such as program.exe.
+  summary: "Pobiera lub ustawia polecenie do uruchomienia."
+  remarks: "Wykonanie polecenia może być polecenia systemu, takie jak atrybuty lub pliku wykonywalnego, takie jak program.exe."
   syntax:
     content: public string Command { get; set; }
     return:
       type: System.String
-      description: The command to run.
+      description: "Polecenie do uruchomienia."
   overload: Microsoft.Build.Tasks.Exec.Command*
   exceptions: []
   platform:
@@ -166,12 +166,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Returns the output as an Item. Whitespace is trimmed.  \n  \n ConsoleOutput is enabled when ConsoleToMSBuild is true. This avoids holding lines in memory if they aren't used. ConsoleOutput is a combination of stdout and stderr."
+  summary: "Zwraca element danych wyjściowych. Przycięciu odstępu.       ConsoleOutput jest włączone, jeśli ConsoleToMSBuild ma wartość true. Pozwala to uniknąć zawierający wiersze w pamięci, jeśli nie są one używane. ConsoleOutput jest kombinacją stdout i stderr."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ConsoleOutput { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
+      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
   overload: Microsoft.Build.Tasks.Exec.ConsoleOutput*
   exceptions: []
   platform:
@@ -188,12 +188,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Enable the standard output to pipe to an item. (StandardOutput).
+  summary: "Włącz standardowe dane wyjściowe do potoku do elementu. (StandardOutput)."
   syntax:
     content: public bool ConsoleToMSBuild { get; set; }
     return:
       type: System.Boolean
-      description: Returns <xref:System.Boolean>.
+      description: "Zwraca <xref:System.Boolean>.</xref:System.Boolean>"
   overload: Microsoft.Build.Tasks.Exec.ConsoleToMSBuild*
   exceptions: []
   platform:
@@ -210,13 +210,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a regular expression to spot error lines in the tool output.
-  remarks: This property is useful for tools that produce unusually formatted output.
+  summary: "Pobiera lub ustawia wyrażenie regularne wiersze dodatkowych błędów w danych wyjściowych narzędzia."
+  remarks: "Ta właściwość jest przydatna dla narzędzi, które tworzą nietypowo sformatowane wyniki."
   syntax:
     content: public string CustomErrorRegularExpression { get; set; }
     return:
       type: System.String
-      description: A regular expression to spot error lines in the tool output.
+      description: "Wyrażenie regularne do wiersze dodatkowych błędów w danych wyjściowych narzędzia."
   overload: Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression*
   exceptions: []
   platform:
@@ -233,13 +233,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a regular expression to spot warning lines in the tool output.
-  remarks: This property is useful for tools that produce unusually formatted output.
+  summary: "Pobiera lub ustawia wyrażeń regularnych do dodatkowych wierszy ostrzeżenie w danych wyjściowych narzędzia."
+  remarks: "Ta właściwość jest przydatna dla narzędzi, które tworzą nietypowo sformatowane wyniki."
   syntax:
     content: public string CustomWarningRegularExpression { get; set; }
     return:
       type: System.String
-      description: A regular expression to spot warning lines in the tool output.
+      description: "Wyrażenie regularne do dodatkowych wierszy ostrzeżenie w danych wyjściowych narzędzia."
   overload: Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression*
   exceptions: []
   platform:
@@ -256,23 +256,23 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Executes the cmd.exe tool, waits for its completion, and cleans up the batch file after execution completes.
-  remarks: If errors were logged and the tool has an exit code of zero, then this method sets the exit code to -1.
+  summary: "Wykonuje narzędziu cmd.exe, czeka na jego ukończenie i czyści plik wsadowy po zakończeniu wykonywania."
+  remarks: "Jeśli zarejestrowano błędów i narzędzie ma kod zakończenia o wartości zero, a następnie ta metoda powoduje ustawienie kodu zakończenia -1."
   syntax:
     content: protected override int ExecuteTool (string pathToTool, string responseFileCommands, string commandLineCommands);
     parameters:
     - id: pathToTool
       type: System.String
-      description: The path to the tool to execute.
+      description: "Ścieżka do narzędzia do wykonania."
     - id: responseFileCommands
       type: System.String
-      description: Command line arguments that should go into a temporary response file.
+      description: "Argumenty wiersza polecenia, które powinny przejść do pliku odpowiedzi tymczasowej."
     - id: commandLineCommands
       type: System.String
-      description: Command line arguments that should be passed to the tool directly.
+      description: "Argumenty wiersza polecenia, które powinny być przekazywane bezpośrednio do narzędzia."
     return:
       type: System.Int32
-      description: The exit code that the tool returns.
+      description: "Narzędzie zwraca kod zakończenia."
   overload: Microsoft.Build.Tasks.Exec.ExecuteTool*
   exceptions: []
   platform:
@@ -289,13 +289,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Returns the full path to the system tool cmd.exe.
+  summary: "Zwraca pełną ścieżkę do cmd.exe narzędzia systemu."
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: The full path to the system tool cmd.exe.
+      description: "Pełna ścieżka do cmd.exe narzędzia systemu."
   overload: Microsoft.Build.Tasks.Exec.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -312,14 +312,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Returns the working directory to use for the tool process.
-  remarks: If the working directory is UNC, returns the system path %SystemRoot%\System32.
+  summary: "Zwraca katalog roboczy do użycia podczas procesu narzędzia."
+  remarks: "Jeśli katalog roboczy jest ścieżką UNC, zwraca systemu ścieżki % SystemRoot%\\System32."
   syntax:
     content: protected override string GetWorkingDirectory ();
     parameters: []
     return:
       type: System.String
-      description: The working directory to use for the tool process.
+      description: "Katalog roboczy do użycia podczas procesu narzędzia."
   overload: Microsoft.Build.Tasks.Exec.GetWorkingDirectory*
   exceptions: []
   platform:
@@ -336,14 +336,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Logs error message and handles exit code.
-  remarks: This method will only be called with a non-zero exit code.
+  summary: "Komunikat o błędzie dzienniki i uchwytów kod zakończenia."
+  remarks: "Metoda ta zostanie wywołana tylko z kodem zakończenia różna od zera."
   syntax:
     content: protected override bool HandleTaskExecutionErrors ();
     parameters: []
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if exit code was ignored; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli kod zakończenia została zignorowana; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Exec.HandleTaskExecutionErrors*
   exceptions: []
   platform:
@@ -360,12 +360,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a Boolean value that indicates whether the `Exec` task should ignore the exit code provided by the executed command (<xref uid="langword_csharp_true" name="true" href=""></xref>) or should return <xref uid="langword_csharp_false" name="false" href=""></xref> if the executed command returns a non-zero exit code (<xref uid="langword_csharp_false" name="false" href=""></xref>).
+  summary: "Pobiera lub ustawia wartość logiczną, która wskazuje, czy `Exec` ignorować kod zakończenia dostępnych za pomocą polecenia wykonywane zadania (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) lub powinna zwrócić <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Jeśli wykonanego polecenia zwraca kod zakończenia różna od zera (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
   syntax:
     content: public bool IgnoreExitCode { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Exec` task should ignore the exit code provided by the executed command; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `Exec` task should return <xref uid="langword_csharp_false" name="false" href=""></xref> if the executed command returns a non-zero exit code.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli `Exec` zadań ignorować kod zakończenia dostępnych za pomocą polecenia wykonywane; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Jeśli `Exec` powinna zwrócić zadanie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Jeśli wykonanego polecenia zwraca kod zakończenia różna od zera."
   overload: Microsoft.Build.Tasks.Exec.IgnoreExitCode*
   exceptions: []
   platform:
@@ -382,13 +382,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets a Boolean value that indicates whether to ignore the standard error and warning format and log errors and warnings from the output as regular messages.
-  remarks: The default value is `false`.
+  summary: "Pobiera lub ustawia wartość logiczną, która wskazuje, czy należy zignorować błąd standardowy i ostrzeżenie format i dziennik błędów i ostrzeżeń z danych wyjściowych jako zwykłych wiadomości."
+  remarks: "Wartość domyślna to `false`."
   syntax:
     content: public bool IgnoreStandardErrorWarningFormat { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Exec` task should ignore the standard error and warning format and should log errors and warnings as regular messages; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `Exec` task should log the errors and warnings that match the standard error and warning format.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli `Exec` zadań należy zignorować błąd standardowy i format ostrzeżenie i powinny być rejestrowane błędy i ostrzeżenia jako zwykłych wiadomości; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Jeśli `Exec` zadań należy rejestrować błędy i ostrzeżenia, które odpowiada błędów i ostrzeżeń format."
   overload: Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*
   exceptions: []
   platform:
@@ -405,16 +405,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Logs the specified single line of text as an error or warning if the single line matched custom or standard error and warning formats or as a regular message if <xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*> is set to <xref uid="langword_csharp_true" name="true" href=""></xref> and no custom format matched.
+  summary: "Rejestruje określony jednego wiersza tekstu jako błąd lub ostrzeżenie, jeśli jednym wierszu dopasowane niestandardowe lub błąd standardowy i formaty ostrzeżenie lub jako zwykłe wiadomości Jeśli <xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*>jest ustawiona na <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> i dopasowywane nie formatu niestandardowego.</xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*>"
   syntax:
     content: protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);
     parameters:
     - id: singleLine
       type: System.String
-      description: Single line from the output to parse.
+      description: "Pojedynczy wiersz z danych wyjściowych do analizy."
     - id: messageImportance
       type: Microsoft.Build.Framework.MessageImportance
-      description: The importance to log the message with.
+      description: "Ważność do wiadomości z dziennika."
   overload: Microsoft.Build.Tasks.Exec.LogEventsFromTextOutput*
   exceptions: []
   platform:
@@ -431,16 +431,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Logs the tool name and path.
+  summary: "Dzienniki narzędzia nazwę i ścieżkę."
   syntax:
     content: protected override void LogPathToTool (string toolName, string pathToTool);
     parameters:
     - id: toolName
       type: System.String
-      description: The tool name.
+      description: "Nazwa narzędzia."
     - id: pathToTool
       type: System.String
-      description: The current directory where the tool is run.
+      description: "Bieżący katalog, w którym uruchomiono narzędzie."
   overload: Microsoft.Build.Tasks.Exec.LogPathToTool*
   exceptions: []
   platform:
@@ -457,13 +457,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Logs the batch file command to be executed.
+  summary: "Rejestruje polecenia pliku wsadowego do wykonania."
   syntax:
     content: protected override void LogToolCommand (string message);
     parameters:
     - id: message
       type: System.String
-      description: Specify an empty string. This parameter is not used.
+      description: "Określ pusty ciąg. Ten parametr nie jest używany."
   overload: Microsoft.Build.Tasks.Exec.LogToolCommand*
   exceptions: []
   platform:
@@ -480,13 +480,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the output items from the task.
-  remarks: The `Exec` task does not set the output items. Instead, you can provide the output items as if they were set by the task, so that they can be used later in the project.
+  summary: "Pobiera lub ustawia elementy danych wyjściowych z zadania."
+  remarks: "`Exec` Zadań nie ustawia elementy danych wyjściowych. Zamiast tego można określić elementy danych wyjściowych tak, jakby one zostały określone przez zadanie, więc mogą być używane w dalszej części projektu."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Outputs { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: The output items from the task.
+      description: "Elementy danych wyjściowych z zadania."
   overload: Microsoft.Build.Tasks.Exec.Outputs*
   exceptions: []
   platform:
@@ -503,12 +503,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the encoding of the captured task standard error stream.
+  summary: "Pobiera kodowanie zadań przechwyconych Standardowy strumień błędów."
   syntax:
     content: protected override System.Text.Encoding StandardErrorEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: The encoding of the captured task standard error stream.
+      description: "Kodowanie zadań przechwyconych Standardowy strumień błędów."
   overload: Microsoft.Build.Tasks.Exec.StandardErrorEncoding*
   exceptions: []
   platform:
@@ -525,12 +525,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the importance to log ordinary messages with in the standard error stream.
+  summary: "Pobiera ważność do logowania zwykłej wiadomości z Standardowy strumień błędów."
   syntax:
     content: protected override Microsoft.Build.Framework.MessageImportance StandardErrorLoggingImportance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: The importance to log ordinary messages with in the standard error stream.
+      description: "Znaczenie do logowania zwykłej wiadomości z Standardowy strumień błędów."
   overload: Microsoft.Build.Tasks.Exec.StandardErrorLoggingImportance*
   exceptions: []
   platform:
@@ -547,12 +547,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the encoding of the captured task standard output stream.
+  summary: "Pobiera kodowanie przechwyconych zadania standardowego strumienia wyjściowego."
   syntax:
     content: protected override System.Text.Encoding StandardOutputEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: The encoding of the captured task standard output stream.
+      description: "Kodowanie przechwyconych zadania standardowego strumienia wyjściowego."
   overload: Microsoft.Build.Tasks.Exec.StandardOutputEncoding*
   exceptions: []
   platform:
@@ -569,12 +569,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the importance to log ordinary messages with in the standard out stream.
+  summary: "Pobiera znaczenie logowania zwykłej wiadomości z Standard out strumienia."
   syntax:
     content: protected override Microsoft.Build.Framework.MessageImportance StandardOutputLoggingImportance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: The importance to log ordinary messages with in the standard out stream.
+      description: "Znaczenie logowania zwykłej wiadomości z Standard out strumienia."
   overload: Microsoft.Build.Tasks.Exec.StandardOutputLoggingImportance*
   exceptions: []
   platform:
@@ -591,12 +591,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the encoding of the captured task standard error stream that is visible to the project.
+  summary: "Pobiera lub ustawia kodowanie zadań przechwyconych Standardowy strumień błędów nie jest widoczny w projekcie."
   syntax:
     content: public string StdErrEncoding { get; set; }
     return:
       type: System.String
-      description: The encoding of the captured task standard error stream that is visible to the project.
+      description: "Kodowanie zadań przechwyconych Standardowy strumień błędów który jest widoczny dla projektu."
   overload: Microsoft.Build.Tasks.Exec.StdErrEncoding*
   exceptions: []
   platform:
@@ -613,12 +613,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the encoding of the captured task standard output stream that is visible to the project.
+  summary: "Pobiera lub ustawia kodowanie zadań przechwyconych Standardowy strumień wyjściowy nie jest widoczny w projekcie."
   syntax:
     content: public string StdOutEncoding { get; set; }
     return:
       type: System.String
-      description: The encoding of the captured task standard output stream that is visible to the project.
+      description: "Kodowanie zadań przechwyconych Standardowy strumień wyjściowy nie jest widoczny w projekcie."
   overload: Microsoft.Build.Tasks.Exec.StdOutEncoding*
   exceptions: []
   platform:
@@ -635,12 +635,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets the name of the tool (cmd.exe).
+  summary: "Pobiera nazwę narzędzia (cmd.exe)."
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: The name of the tool (cmd.exe).
+      description: "Nazwa narzędzia (cmd.exe)."
   overload: Microsoft.Build.Tasks.Exec.ToolName*
   exceptions: []
   platform:
@@ -657,13 +657,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.
+  summary: "Sprawdza poprawność wejściowych parametrów i rejestruje błędy lub ostrzeżenia, jeśli istnieją. Zwraca wartość logiczną, która wskazuje, czy należy kontynuować wykonywanie zadania."
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should proceed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli należy kontynuować wykonywanie zadania; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Exec.ValidateParameters*
   exceptions: []
   platform:
@@ -680,12 +680,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: Gets or sets the directory in which the command will run.
+  summary: "Pobiera lub ustawia katalog, w którym polecenie jest wykonywane."
   syntax:
     content: public string WorkingDirectory { get; set; }
     return:
       type: System.String
-      description: The directory in which the command will run.
+      description: "Katalog, w którym polecenie jest wykonywane."
   overload: Microsoft.Build.Tasks.Exec.WorkingDirectory*
   exceptions: []
   platform:

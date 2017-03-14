@@ -23,7 +23,7 @@ items:
   nameWithType: BuildSettings
   fullName: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings
   type: Class
-  summary: Defines the settings for the bootstrapper build operation.
+  summary: "Określa ustawienia dla operacji tworzenia programu inicjującego."
   syntax:
     content: >-
       [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
@@ -52,7 +52,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings"></xref> class.
+  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings&quot;> </xref> klasy."
   syntax:
     content: public BuildSettings ();
     parameters: []
@@ -72,13 +72,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the file to be installed after the bootstrapper installs the required components.
-  remarks: Gets or sets the file to be installed after the bootstrapper installs the required components. By default, the file path is relative to the bootstrapper source path. Set this property to null if no application is to be installed.
+  summary: "Pobiera lub ustawia plik do zainstalowania po zainstalowaniu programu inicjującego wymagane składniki."
+  remarks: "Pobiera lub ustawia plik do zainstalowania po zainstalowaniu programu inicjującego wymagane składniki. Domyślnie ścieżka pliku jest względną ścieżkę źródłową programu inicjującego. Ustaw dla tej właściwości wartość null, jeśli żadna aplikacja nie ma być zainstalowany."
   syntax:
     content: public string ApplicationFile { get; set; }
     return:
       type: System.String
-      description: The name of the file to be installed after the required components are installed.
+      description: "Nazwa pliku, który można zainstalować wymagane składniki są zainstalowane."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile*
   exceptions: []
   platform:
@@ -95,13 +95,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the name of the application to be installed after the bootstrapper installs all required components.
-  remarks: Gets or sets the name of the application to be installed after the bootstrapper installs all required components. Set this property to null if no application is to be installed.
+  summary: "Pobiera lub ustawia nazwę aplikacji do zainstalowania po zainstalowaniu programu inicjującego wszystkich wymaganych składników."
+  remarks: "Pobiera lub ustawia nazwę aplikacji do zainstalowania po zainstalowaniu programu inicjującego wszystkich wymaganych składników. Ustaw dla tej właściwości wartość null, jeśli żadna aplikacja nie ma być zainstalowany."
   syntax:
     content: public string ApplicationName { get; set; }
     return:
       type: System.String
-      description: The name of the application to be installed after the required components are installed.
+      description: "Nazwa aplikacji do zainstalowania po zainstalowaniu wymaganych składników."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationName*
   exceptions: []
   platform:
@@ -118,13 +118,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets a value indicating whether a component runs with elevated permissions when it is installed on a target computer.
-  remarks: "This property can be set in the project file, but it is not exposed in the MSBuild schema.  \n  \n A component runs with elevated permissions when it writes a registry key or is installed to the global assembly cache. For example, if you are installing assemblies to the global assembly cache, you have to set this property to `true`."
+  summary: "Pobiera lub ustawia wartość wskazującą, czy składnik jest uruchamiany z podwyższonym poziomem uprawnień, gdy jest zainstalowany na komputerze docelowym."
+  remarks: "Tę właściwość można ustawić w pliku projektu, ale nie jest widoczne w schemacie MSBuild.       Składnik jest uruchamiany z podwyższonym poziomem uprawnień zapisu klucza rejestru lub jest zainstalowany w globalnej pamięci podręcznej zestawów. Na przykład, jeśli instalujesz zestawów do globalnej pamięci podręcznej zestawów, należy ustawić tę właściwość na `true`."
   syntax:
     content: public bool ApplicationRequiresElevation { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the installed component runs with elevated permissions; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli zainstalowany składnik jest uruchomiony z podwyższonym poziomem uprawnień; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationRequiresElevation*
   exceptions: []
   platform:
@@ -141,13 +141,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the expected source location when the bootstrapper is published to a Web site.
-  remarks: "If you specify <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile%2A>, the bootstraper will be published to the location specified by this value.  \n  \n If <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation%2A> is set to <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation>, required component files will be published to a location relative to this value.  \n  \n Set this value to null if Setup.exe is not to be published to the Web."
+  summary: "Pobiera lub ustawia lokalizacji źródłowej oczekiwane, gdy inicjujący jest opublikowana w witrynie sieci Web."
+  remarks: "W przypadku określenia <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile%2A>, bootstraper zostaną opublikowane w lokalizacji określonej przez tę wartość.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile%2A>       Jeśli <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation%2A>jest równa <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation>, wymagane pliki składników zostaną opublikowane w lokalizacji względem tej wartości.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation> </xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation%2A>       Ustaw tę wartość na wartość null, jeśli Setup.exe nie ma zostać opublikowany w sieci Web."
   syntax:
     content: public string ApplicationUrl { get; set; }
     return:
       type: System.String
-      description: A URL that represents the expected source location when the bootstrapper is published to a Web site.
+      description: "Adres URL, który reprezentuje lokalizację źródłową oczekiwanego, gdy inicjujący jest opublikowana w witrynie sieci Web."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationUrl*
   exceptions: []
   platform:
@@ -164,12 +164,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the installation location for bootstrapper components.
+  summary: "Pobiera lub Ustawia lokalizację instalacji pakietu programu inicjującego składników."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation ComponentsLocation { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation
-      description: The <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation"></xref> installation location for bootstrapper components.
+      description: "<xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation&quot;> </xref> Lokalizacji instalacji składników programu inicjującego."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation*
   exceptions: []
   platform:
@@ -186,12 +186,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the location to which the bootstrapper will copy components if <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation*> is set to <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation"></xref>.
+  summary: "Pobiera lub Ustawia lokalizację, do której inicjujący skopiuje składników, jeśli <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation*>jest ustawiona na <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation&quot;> </xref>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation*>"
   syntax:
     content: public string ComponentsUrl { get; set; }
     return:
       type: System.String
-      description: The location to which the bootstrapper will copy components if <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation*> is set to <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation"></xref>.
+      description: "Lokalizacja, do której inicjujący skopiuje składników, jeśli <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation*>jest ustawiona na <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation&quot;> </xref>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation*>"
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsUrl*
   exceptions: []
   platform:
@@ -208,13 +208,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets a value indicating whether the bootstrapper components will be copied to the build output directory.
-  remarks: If `true`, the bootstrapper components will be copied. If `false`, the files will not be copied.
+  summary: "Pobiera lub ustawia wartość wskazującą, czy składniki programu inicjującego zostaną skopiowane do katalogu wyjściowego kompilacji."
+  remarks: "Jeśli `true`, składniki programu inicjującego zostaną skopiowane. Jeśli `false`, nie można skopiować plików."
   syntax:
     content: public bool CopyComponents { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the bootstrapper components will be copied to the build output directory; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli składniki programu inicjującego zostaną skopiowane do katalogu wyjściowego kompilacji; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.CopyComponents*
   exceptions: []
   platform:
@@ -231,12 +231,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the culture identifier to use if the LCID identifier is not available.
+  summary: "Pobiera lub ustawia identyfikator kultury, jeśli identyfikator LCID jest niedostępny."
   syntax:
     content: public int FallbackLCID { get; set; }
     return:
       type: System.Int32
-      description: An integer value that represents the culture identifier to use if the LCID identifier is not available.
+      description: "Wartość całkowitą, która reprezentuje identyfikator kultury, jeśli identyfikator LCID jest niedostępny."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.FallbackLCID*
   exceptions: []
   platform:
@@ -253,12 +253,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the culture identifier specifying the culture for which the bootstrapper is built.
+  summary: "Pobiera lub ustawia identyfikator kultury kultury, dla którego jest zbudowany inicjujący."
   syntax:
     content: public int LCID { get; set; }
     return:
       type: System.Int32
-      description: An integer value that represents the culture identifier specifying the culture for which the bootstrapper is built.
+      description: "Wartość całkowitą, która reprezentuje identyfikator kultury kultury, dla którego jest zbudowany inicjujący."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.LCID*
   exceptions: []
   platform:
@@ -275,12 +275,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the file location to which to copy output files.
+  summary: "Pobiera lub ustawia lokalizacji pliku, do którego chcesz skopiować pliki wyjściowe."
   syntax:
     content: public string OutputPath { get; set; }
     return:
       type: System.String
-      description: A string representing the file location to which to copy output files.
+      description: "Ciąg reprezentujący lokalizacji pliku, do którego chcesz skopiować pliki wyjściowe."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.OutputPath*
   exceptions: []
   platform:
@@ -297,12 +297,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets the product builders to use for generating the bootstrapper.
+  summary: "Pobiera Konstruktorzy produktu do użycia na potrzeby generowania programu inicjującego."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection ProductBuilders { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection
-      description: A collection of product builders (<xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection"></xref>) to use for generating the bootstrapper.
+      description: "Kolekcja Konstruktorzy produktu (<xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection&quot;></xref>) na potrzeby generowania programu inicjującego."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ProductBuilders*
   exceptions: []
   platform:
@@ -319,12 +319,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the URL for the Web site that contains support information for the bootstrapper.
+  summary: "Pobiera lub ustawia adres URL witryny sieci Web, który zawiera informacje o pomocy technicznej dla programu inicjującego."
   syntax:
     content: public string SupportUrl { get; set; }
     return:
       type: System.String
-      description: The URL for the Web site that contains support information for the bootstrapper.
+      description: "Adres URL witryny sieci Web, który zawiera informacje o pomocy technicznej dla programu inicjującego."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.SupportUrl*
   exceptions: []
   platform:
@@ -341,13 +341,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets a value indicating whether the bootstrapper performs XML validation on the component manifests.
-  remarks: If `true`, the bootstrapper validates component manifests; if `false`, the bootstrapper does not validate component manifests.
+  summary: "Pobiera lub ustawia wartość wskazującą, czy inicjujący wykonuje sprawdzanie poprawności kodu XML w manifestach składnika."
+  remarks: "Jeśli `true`, inicjujący sprawdza poprawność składnika manifestów; Jeśli `false`, inicjujący nie sprawdza poprawność manifestów składnika."
   syntax:
     content: public bool Validate { get; set; }
     return:
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the bootstrapper performs XML validation on the component manifests; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli inicjujący wykonuje sprawdzanie poprawności kodu XML w manifestach składnik; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.Validate*
   exceptions: []
   platform:

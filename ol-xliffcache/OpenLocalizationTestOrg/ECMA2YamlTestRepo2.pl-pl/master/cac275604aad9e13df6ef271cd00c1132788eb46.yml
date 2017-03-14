@@ -50,7 +50,7 @@ items:
   nameWithType: ApplicationManifest
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest
   type: Class
-  summary: Describes a ClickOnce or native Win32 application manifest.
+  summary: "Opisuje ClickOnce lub natywny manifest aplikacji Win32."
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -99,7 +99,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref> class.
+  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;> </xref> klasy."
   syntax:
     content: public ApplicationManifest ();
     parameters: []
@@ -119,13 +119,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref> class.
+  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;> </xref> klasy."
   syntax:
     content: public ApplicationManifest (string targetFrameworkVersion);
     parameters:
     - id: targetFrameworkVersion
       type: System.String
-      description: A token that represents a version of the .NET Framework.
+      description: "Tokenu, który reprezentuje wersję programu .NET Framework."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.#ctor*
   exceptions: []
   platform:
@@ -142,13 +142,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the application configuration file.
-  remarks: For a native Win32 manifest, this input is ignored.
+  summary: "Pobiera lub ustawia plik konfiguracji aplikacji."
+  remarks: "Dla natywny manifest Win32 to dane wejściowe są ignorowane."
   syntax:
     content: public string ConfigFile { get; set; }
     return:
       type: System.String
-      description: A string that represents the name of the application configuration file.
+      description: "Ciąg, który reprezentuje nazwę pliku konfiguracji aplikacji."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*
   exceptions: []
   platform:
@@ -165,12 +165,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets an assembly reference that represents the entry point of the application.
+  summary: "Pobiera lub ustawia odwołanie do zestawu, który reprezentuje punkt wejścia aplikacji."
   syntax:
     content: public override Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference EntryPoint { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: An <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference"></xref> object that represents the entry point of the application.
+      description: "<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference&quot;> </xref> Obiekt, który reprezentuje punkt wejścia aplikacji."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.EntryPoint*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the URL of the error report.
+  summary: "Pobiera lub ustawia adres URL raportu o błędach."
   syntax:
     content: public string ErrorReportUrl { get; set; }
     return:
       type: System.String
-      description: A string that contains the URL of the error report.
+      description: "Ciąg zawierający adres URL raportu o błędach."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*
   exceptions: []
   platform:
@@ -209,12 +209,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the file associations that are defined in the manifest.
+  summary: "Pobiera lub ustawia skojarzenia plików, które są zdefiniowane w pliku manifestu."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociationCollection FileAssociations { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociationCollection
-      description: A string that contains the file associations.
+      description: "Ciąg, który zawiera skojarzenia plików."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*
   exceptions: []
   platform:
@@ -231,13 +231,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies whether the application is hosted in a browser (as WPF Web Browser Applications are).
-  remarks: "For project types other than WPF Web Browser Applications, you should set HostInBrowser to `False` (the default value).  \n  \n When you deploy a WPF Web Browser Application, you must set the HostInBrowser property to `True`. This causes the `<hostInBrowser>` tag to be added to the generated application manifest. This tag enables ClickOnce to deploy projects for browser-hosted applications, which contain .xbap files.  \n  \n You will also have to make the application available only online by setting <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> to `False`. If you do not do this, you will receive [MSBuild Error MSB3116](~/add/includes/ajax-current-ext-md.md)."
+  summary: "Pobiera lub ustawia wartość określającą, czy aplikacja jest obsługiwany w przeglądarce (jak WPF aplikacji przeglądarki sieci Web)."
+  remarks: "Dla typów projektów niż WPF aplikacji przeglądarki sieci Web, należy ustawić hostinbrowser — `False` (wartość domyślna).       Podczas wdrażania aplikacji WPF przeglądarki sieci Web, musisz ustawić hostinbrowser — właściwość `True`. Powoduje to, że `<hostInBrowser>` znacznik do dodania do manifestu aplikacji wygenerowany. Ten znacznik umożliwia ClickOnce do wdrażania projektów dla aplikacje obsługiwane w przeglądarce, które zawierają pliki XBAP.       Należy także udostępnić aplikacji tylko w trybie online przez ustawienie <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>do `False`.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> Jeśli nie zrobisz, zostanie wyświetlony [MSBuild MSB3116 błąd](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: public bool HostInBrowser { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value that indicates whether the application being deployed will be hosted in a browser (<xref uid="langword_csharp_True" name="True" href=""></xref>), or not (<xref uid="langword_csharp_False" name="False" href=""></xref>). <xref uid="langword_csharp_True" name="True" href=""></xref> applies only to WPF Web Browser Applications.
+      description: "Wartość logiczna wskazująca, czy wdrażana aplikacja będzie obsługiwana w przeglądarce (<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>), czy nie (<xref uid=&quot;langword_csharp_False&quot; name=&quot;False&quot; href=&quot;&quot;></xref>). <xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>dotyczy tylko aplikacji przeglądarki sieci Web programu WPF."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*
   exceptions: []
   platform:
@@ -254,13 +254,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the program icon file.
-  remarks: The program icon is expressed in the generated application manifest and is used for the **Start** menu and **Add or Remove Programs**. If this the icon file is not specified, a default icon is used. For a native Win32 manifest, this input is ignored.
+  summary: "Pobiera lub ustawia pliku ikony programu."
+  remarks: "Ikona programu jest wyrażone w manifeście wygenerowanej aplikacji i jest używany do **Start** menu i **Dodaj lub usuń programy**. Jeśli ten plik ikony nie zostanie określona, będzie używana ikona domyślna. Dla natywny manifest Win32 to dane wejściowe są ignorowane."
   syntax:
     content: public string IconFile { get; set; }
     return:
       type: System.String
-      description: A string that represents the name of the icon file.
+      description: "Ciąg, który reprezentuje nazwę pliku ikony."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*
   exceptions: []
   platform:
@@ -277,12 +277,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies whether the manifest is a ClickOnce application manifest or a native Win32 application manifest.
+  summary: "Pobiera lub ustawia wartość określającą, czy manifest jest manifest aplikacji ClickOnce lub natywny manifest aplikacji Win32."
   syntax:
     content: public bool IsClickOnceManifest { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value that indicates whether the manifest is a ClickOnce application manifest (<xref uid="langword_csharp_True" name="True" href=""></xref>) or a native Win32 manifest (<xref uid="langword_csharp_False" name="False" href=""></xref>).
+      description: "Wartość logiczna wskazująca, czy manifest aplikacji ClickOnce w manifeście (<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>) lub natywny manifest Win32 (<xref uid=&quot;langword_csharp_False&quot; name=&quot;False&quot; href=&quot;&quot;></xref>)."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*
   exceptions: []
   platform:
@@ -299,12 +299,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the maximum allowed length of a file path in a ClickOnce application deployment. If this value is specified, the length of each file path in the application is checked against this limit. Any items that exceed the limit cause a warning message. If this input is not specified or is zero, no checking is performed. For a native Win32 manifest, this input is ignored.
+  summary: "Pobiera lub ustawia wartość określającą maksymalną dopuszczalną długość ścieżki pliku we wdrożeniu aplikacji ClickOnce. Jeśli ta wartość jest określona, długość ścieżki każdego pliku w aplikacji zostaje sprawdzony pod kątem tego limitu. Wszystkie elementy, które przekraczają limit spowodować komunikat ostrzegawczy. Jeśli tych danych wejściowych nie jest określony lub ma wartość zero, nie jest przeprowadzane sprawdzanie. Dla natywny manifest Win32 to dane wejściowe są ignorowane."
   syntax:
     content: public int MaxTargetPath { get; set; }
     return:
       type: System.Int32
-      description: An integer that indicates the maximum allowed length of a file path in a ClickOnce application deployment.
+      description: "Liczba całkowita wskazująca maksymalną dopuszczalną długość ścieżki pliku we wdrożeniu aplikacji ClickOnce."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.MaxTargetPath*
   exceptions: []
   platform:
@@ -321,12 +321,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies a textual description for the operating system dependency.
+  summary: "Pobiera lub ustawia wartość określającą tekstowy opis zależności systemu operacyjnego."
   syntax:
     content: public string OSDescription { get; set; }
     return:
       type: System.String
-      description: A string that indicates the operating system dependency.
+      description: "Ciąg, który wskazuje zależne od systemu operacyjnego."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*
   exceptions: []
   platform:
@@ -343,12 +343,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies a support URL for the operating system dependency.
+  summary: "Pobiera lub ustawia wartość, która określa adres URL pomocy technicznej dla systemu operacyjnego zależności."
   syntax:
     content: public string OSSupportUrl { get; set; }
     return:
       type: System.String
-      description: A string indicating the support URL for the operating system dependency.
+      description: "Ciąg wskazujący adres URL pomocy technicznej dla systemu operacyjnego zależności."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*
   exceptions: []
   platform:
@@ -365,13 +365,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the minimum required operating system version required by the application.
-  remarks: Specifies the minimum operating system version required by the application. An example value is "5.1.2600.0" for Windows XP. If this input is not specified, a default value is used. The default value is the minimum supported operating system of the .NET Framework, which is "4.10.0.0" for Windows 98SE. However, if the application contains any native or Reg-Free COM references, the default is Windows XP. For a native Win32 manifest, this input is ignored.
+  summary: "Pobiera lub ustawia wartość określającą wersję minimalny wymagany system operacyjny wymagany przez aplikację."
+  remarks: "Określa minimalnej wersji systemu operacyjnego wymagane przez aplikację. Na przykład wartość to &quot;5.1.2600.0&quot; dla systemu Windows XP. Jeśli nie określono tych danych wejściowych, jest używana wartość domyślna. Wartość domyślna to, że co najmniej obsługiwanych systemów operacyjnych programu .NET Framework, który jest &quot;4.10.0.0&quot; dla Windows 98SE. Jednak jeśli aplikacja zawiera natywnym, czy odwołania COM bez Reg, wartością domyślną jest system Windows XP. Dla natywny manifest Win32 to dane wejściowe są ignorowane."
   syntax:
     content: public string OSVersion { get; set; }
     return:
       type: System.String
-      description: A string that indicates the minimum required operating system version required by the application.
+      description: "Ciąg wskazujący wersję minimalny wymagany system operacyjny wymagany przez aplikację."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSVersion*
   exceptions: []
   platform:
@@ -388,13 +388,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the <xref uid="langword_csharp_ProductName" name="ProductName" href=""></xref> property in the project file.
-  remarks: This property corresponds to the `ProductName` property in the project file. The default is null. If `ProductName` is null and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `True`, the RegisteredOrganization value in the registry is written to the application manifest. If RegisteredOrganization is also null, the assembly name is used.
+  summary: "Pobiera lub ustawia wartość określającą <xref uid=&quot;langword_csharp_ProductName&quot; name=&quot;ProductName&quot; href=&quot;&quot;> </xref> właściwość w pliku projektu."
+  remarks: "Ta właściwość odpowiada `ProductName` właściwość w pliku projektu. Wartością domyślną jest wartość null. Jeśli `ProductName` ma wartość null i <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>jest `True`, manifest aplikacji jest zapisywany w rejestrze wartość RegisteredOrganization.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> Jeśli RegisteredOrganization również ma wartość null, jest używana nazwa zestawu."
   syntax:
     content: public string Product { get; set; }
     return:
       type: System.String
-      description: A string value that corresponds to the <xref uid="langword_csharp_ProductName" name="ProductName" href=""></xref> property in the project file.
+      description: "Wartość ciągu, który odpowiada <xref uid=&quot;langword_csharp_ProductName&quot; name=&quot;ProductName&quot; href=&quot;&quot;> </xref> właściwość w pliku projektu."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*
   exceptions: []
   platform:
@@ -411,13 +411,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the <xref uid="langword_csharp_PublisherName" name="PublisherName" href=""></xref> property in the project file.
-  remarks: This property corresponds to the `PublisherName` property in the project file. The default is null. If `PublisherName` is null and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `True`, the assembly name is written to the application manifest.
+  summary: "Pobiera lub ustawia wartość określającą <xref uid=&quot;langword_csharp_PublisherName&quot; name=&quot;PublisherName&quot; href=&quot;&quot;> </xref> właściwość w pliku projektu."
+  remarks: "Ta właściwość odpowiada `PublisherName` właściwość w pliku projektu. Wartością domyślną jest wartość null. Jeśli `PublisherName` ma wartość null i <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>jest `True`, nazwa zestawu są zapisywane w manifeście aplikacji.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>"
   syntax:
     content: public string Publisher { get; set; }
     return:
       type: System.String
-      description: A string value that corresponds to the <xref uid="langword_csharp_PublisherName" name="PublisherName" href=""></xref> property in the project file.
+      description: "Wartość ciągu, który odpowiada <xref uid=&quot;langword_csharp_PublisherName&quot; name=&quot;PublisherName&quot; href=&quot;&quot;> </xref> właściwość w pliku projektu."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*
   exceptions: []
   platform:
@@ -434,12 +434,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets the suite name that is defined in the manifest.
+  summary: "Pobiera lub ustawia nazwę zestawu, który jest zdefiniowany w manifeście."
   syntax:
     content: public string SuiteName { get; set; }
     return:
       type: System.String
-      description: A string that contains the suite name.
+      description: "Ciąg, który zawiera nazwę zestawu."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*
   exceptions: []
   platform:
@@ -456,13 +456,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies the <xref uid="langword_csharp_SupportUrl" name="SupportUrl" href=""></xref> property in the project file.
-  remarks: This property corresponds to the `SupportUrl` property in the project file. The default is null. If `SupportUrl` is null and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A> is `True`, an empty string is written to the application manifest.
+  summary: "Pobiera lub ustawia wartość określającą <xref uid=&quot;langword_csharp_SupportUrl&quot; name=&quot;SupportUrl&quot; href=&quot;&quot;> </xref> właściwość w pliku projektu."
+  remarks: "Ta właściwość odpowiada `SupportUrl` właściwość w pliku projektu. Wartością domyślną jest wartość null. Jeśli `SupportUrl` ma wartość null i <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>jest `True`, pusty ciąg jest zapisywany do manifestu aplikacji.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust%2A>"
   syntax:
     content: public string SupportUrl { get; set; }
     return:
       type: System.String
-      description: A string value that corresponds to the <xref uid="langword_csharp_SupportUrl" name="SupportUrl" href=""></xref> property in the project file.
+      description: "Wartość ciągu, który odpowiada <xref uid=&quot;langword_csharp_SupportUrl&quot; name=&quot;SupportUrl&quot; href=&quot;&quot;> </xref> właściwość w pliku projektu."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*
   exceptions: []
   platform:
@@ -479,12 +479,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a token that represents a version of the .NET Framework.
+  summary: "Pobiera lub ustawia tokenu, który reprezentuje wersję programu .NET Framework."
   syntax:
     content: public string TargetFrameworkVersion { get; set; }
     return:
       type: System.String
-      description: A <xref:System.String> that represents a version of the .NET Framework.
+      description: "A <xref:System.String>reprezentujący wersję programu .NET Framework.</xref:System.String>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion*
   exceptions: []
   platform:
@@ -501,12 +501,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies a trust object that defines the application security.
+  summary: "Pobiera lub ustawia wartość określającą obiektu zaufania, który definiuje zabezpieczeń aplikacji."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo TrustInfo { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo
-      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo"></xref> object that defines the application security.
+      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo&quot;> </xref> obiektu, który definiuje zabezpieczeń aplikacji."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TrustInfo*
   exceptions: []
   platform:
@@ -523,13 +523,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a value that specifies whether the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>, and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> properties are written to the application manifest.
-  remarks: "By default, the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A>, and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A> properties are set to null. They are used only if UseApplicationTrust is `True`. If this property is `True`, the values of these properties are written to the corresponding tags in the application manifest.  \n  \n If UseApplicationTrust is `False` (the default value), these properties are ignored.  \n  \n This property corresponds to the `UseApplicationTrust` property in the project file."
+  summary: "Pobiera lub ustawia wartość, która określa, czy <> </> *>, <> </> *>, i <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>Właściwości są zapisywane w manifeście aplikacji.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>"
+  remarks: "Domyślnie <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A>, i <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A>Właściwości są ustawione na wartość null.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product%2A> Są one używane tylko wtedy, gdy UseApplicationTrust `True`. Jeśli ta właściwość jest `True`, wartości tych właściwości są zapisywane w odpowiednich tagów w manifeście aplikacji.       Jeśli jest UseApplicationTrust `False` (wartość domyślna), te właściwości są ignorowane.       Ta właściwość odpowiada `UseApplicationTrust` właściwość w pliku projektu."
   syntax:
     content: public bool UseApplicationTrust { get; set; }
     return:
       type: System.Boolean
-      description: A Boolean value that indicates whether the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>, <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>, and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> properties are written to the application manifest. If the value is <xref uid="langword_csharp_True" name="True" href=""></xref>, they are written to the application manifest. If the value is <xref uid="langword_csharp_False" name="False" href=""></xref>, these properties are ignored.
+      description: "Wartość logiczna, która wskazuje, czy <> </> *>, <> </> *>, i <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>Właściwości są zapisywane w manifeście aplikacji.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> Jeśli wartość jest <xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;> </xref>, są one zapisywane w manifeście aplikacji. Jeśli wartość jest <xref uid=&quot;langword_csharp_False&quot; name=&quot;False&quot; href=&quot;&quot;> </xref>, te właściwości są ignorowane."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*
   exceptions: []
   platform:
@@ -546,8 +546,8 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Performs various checks to verify the validity of the manifest. Any resulting errors or warnings are reported in the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection"></xref> object.
-  remarks: Before calling this method, you must set the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A> property so that the validation can verify application manifest against the correct version of the .NET Framework runtime.
+  summary: "Różne sprawdza poprawność manifestu. Wszystkie wynikowe błędy lub ostrzeżenia są zgłaszane w <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection&quot;> </xref> obiektu."
+  remarks: "Przed wywołaniem tej metody, należy ustawić <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A>właściwość, aby sprawdzanie poprawności można zweryfikować manifestu aplikacji przed poprawną wersję środowiska uruchomieniowego .NET Framework.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion%2A>"
   syntax:
     content: public override void Validate ();
     parameters: []
@@ -567,12 +567,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>"
   syntax:
     content: public string XmlConfigFile { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlConfigFile*
   exceptions: []
   platform:
@@ -589,12 +589,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the entry point identity to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji tożsamość punktu wejścia do pliku XML."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity XmlEntryPointIdentity { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity
-      description: The entry point identity.
+      description: "Tożsamość punktu wejścia."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointIdentity*
   exceptions: []
   platform:
@@ -611,12 +611,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the entry point parameters to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji Parametry punktu wejścia do pliku XML."
   syntax:
     content: public string XmlEntryPointParameters { get; set; }
     return:
       type: System.String
-      description: The entry point parameters.
+      description: "Parametry punktu wejścia."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointParameters*
   exceptions: []
   platform:
@@ -633,12 +633,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that specifies the entry point for executing the assembly and that is used to serialize the entry point to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która określa, że punkt wejścia do wykonania zestawu i że jest używane do serializacji punkt wejścia do pliku XML."
   syntax:
     content: public string XmlEntryPointPath { get; set; }
     return:
       type: System.String
-      description: The entry point for executing the assembly.
+      description: "Punkt wejścia do wykonania zestawu."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointPath*
   exceptions: []
   platform:
@@ -655,12 +655,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>"
   syntax:
     content: public string XmlErrorReportUrl { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlErrorReportUrl*
   exceptions: []
   platform:
@@ -677,12 +677,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>"
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation[] XmlFileAssociations { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation[]
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlFileAssociations*
   exceptions: []
   platform:
@@ -699,12 +699,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>"
   syntax:
     content: public string XmlHostInBrowser { get; set; }
     return:
       type: System.String
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> or <xref uid="langword_csharp_false" name="false" href=""></xref>. The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*> property.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>or <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>. Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlHostInBrowser*
   exceptions: []
   platform:
@@ -721,12 +721,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>"
   syntax:
     content: public string XmlIconFile { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIconFile*
   exceptions: []
   platform:
@@ -743,12 +743,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>"
   syntax:
     content: public string XmlIsClickOnceManifest { get; set; }
     return:
       type: System.String
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> or <xref uid="langword_csharp_false" name="false" href=""></xref>. The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*> property.
+      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>or <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>. Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIsClickOnceManifest*
   exceptions: []
   platform:
@@ -765,12 +765,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the build version of the operating system to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji numer kompilacji systemu operacyjnego do pliku XML."
   syntax:
     content: public string XmlOSBuild { get; set; }
     return:
       type: System.String
-      description: The build version of the operating system.
+      description: "Wersja kompilacji systemu operacyjnego."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSBuild*
   exceptions: []
   platform:
@@ -787,12 +787,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>"
   syntax:
     content: public string XmlOSDescription { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSDescription*
   exceptions: []
   platform:
@@ -809,12 +809,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the major portion of the version number of the operating system to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji głównych części numer wersji systemu operacyjnego do pliku XML."
   syntax:
     content: public string XmlOSMajor { get; set; }
     return:
       type: System.String
-      description: The major portion of the version number of the operating system.
+      description: "Główne części numer wersji systemu operacyjnego."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMajor*
   exceptions: []
   platform:
@@ -831,12 +831,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the minor portion of the version number of the operating system to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji drobne części numer wersji systemu operacyjnego do pliku XML."
   syntax:
     content: public string XmlOSMinor { get; set; }
     return:
       type: System.String
-      description: The minor portion of the version number of the operating system.
+      description: "Pomocnicza część numer wersji systemu operacyjnego."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMinor*
   exceptions: []
   platform:
@@ -853,12 +853,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the revision portion of the version number of the operating system to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji poprawki część numer wersji systemu operacyjnego do pliku XML."
   syntax:
     content: public string XmlOSRevision { get; set; }
     return:
       type: System.String
-      description: The revision portion of the version number of the operating system.
+      description: "Poprawka część numer wersji systemu operacyjnego."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSRevision*
   exceptions: []
   platform:
@@ -875,12 +875,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>"
   syntax:
     content: public string XmlOSSupportUrl { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSSupportUrl*
   exceptions: []
   platform:
@@ -897,12 +897,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>"
   syntax:
     content: public string XmlProduct { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlProduct*
   exceptions: []
   platform:
@@ -919,12 +919,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>"
   syntax:
     content: public string XmlPublisher { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlPublisher*
   exceptions: []
   platform:
@@ -941,12 +941,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>"
   syntax:
     content: public string XmlSuiteName { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSuiteName*
   exceptions: []
   platform:
@@ -963,12 +963,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>"
   syntax:
     content: public string XmlSupportUrl { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSupportUrl*
   exceptions: []
   platform:
@@ -985,12 +985,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*> property to an XML file.
+  summary: "Pobiera lub ustawia właściwość, która jest używana do serializacji <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>Właściwość do pliku XML.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>"
   syntax:
     content: public string XmlUseApplicationTrust { get; set; }
     return:
       type: System.String
-      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*> property.
+      description: "Wartość <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>właściwość.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust*>"
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlUseApplicationTrust*
   exceptions: []
   platform:
