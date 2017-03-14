@@ -15,7 +15,7 @@ items:
   nameWithType: BootstrapperBuilder
   fullName: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder
   type: Class
-  summary: The top-level object for the bootstrapper system.
+  summary: "O objeto de nível superior para o sistema bootstrapper."
   syntax:
     content: >-
       [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
@@ -44,7 +44,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Initializes a new instance of the <xref uid="langword_csharp_BootstrapperBuilder" name="BootstrapperBuilder" href=""></xref> class.
+  summary: "Inicializa uma nova instância do <xref uid=&quot;langword_csharp_BootstrapperBuilder&quot; name=&quot;BootstrapperBuilder&quot; href=&quot;&quot;> </xref> classe."
   syntax:
     content: public BootstrapperBuilder ();
     parameters: []
@@ -64,13 +64,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Initializes a new instance of the <xref uid="langword_csharp_BootstrapperBuilder" name="BootstrapperBuilder" href=""></xref> class, using the specified version of [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)].
+  summary: "Inicializa uma nova instância do <xref uid=&quot;langword_csharp_BootstrapperBuilder&quot; name=&quot;BootstrapperBuilder&quot; href=&quot;&quot;> </xref> classe, utilizar a versão especificada do [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)]."
   syntax:
     content: public BootstrapperBuilder (string visualStudioVersion);
     parameters:
     - id: visualStudioVersion
       type: System.String
-      description: The version of [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)] to use.
+      description: "A versão do [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)] a utilizar."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.#ctor*
   exceptions: []
   platform:
@@ -87,16 +87,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Generates a bootstrapper by using the specified settings.
+  summary: "Gera um bootstrapper utilizando as definições especificadas."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults Build (Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings
-      description: The properties used to create the bootstrapper.
+      description: "As propriedades utilizadas para criar o bootstrapper."
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults
-      description: The results of the bootstrapper generation.
+      description: "Os resultados da geração bootstrapper."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Build*
   exceptions: []
   platform:
@@ -113,25 +113,25 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Returns the directories to which bootstrapper component files are copied when they are created, given the specified settings.
+  summary: "Devolve os diretórios para a qual bootstrapper ficheiros de componentes são copiados quando forem criados, com as definições especificadas."
   syntax:
     content: public string[] GetOutputFolders (string[] productCodes, string culture, string fallbackCulture, Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation componentsLocation);
     parameters:
     - id: productCodes
       type: System.String[]
-      description: The <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProduct.ProductCode*> values of the selected components.
+      description: "O <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProduct.ProductCode*>valores dos componentes selecionados.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProduct.ProductCode*>"
     - id: culture
       type: System.String
-      description: The culture used to create the bootstrapper.
+      description: "A cultura utilizada para criar o bootstrapper."
     - id: fallbackCulture
       type: System.String
-      description: The fallback culture used to create the bootstrapper.
+      description: "A cultura de contingência utilizada para criar o bootstrapper."
     - id: componentsLocation
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation
-      description: Specifies how the bootstrapper packages the selected components.
+      description: "Especifica a forma como o bootstrapper pacotes e os componentes selecionados."
     return:
       type: System.String[]
-      description: The directories to which bootstrapper component files are copied when they are created, given the specified settings.
+      description: "Os diretórios para a qual bootstrapper ficheiros de componentes são copiados quando forem criados, tendo em conta as definições especificadas."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.GetOutputFolders*
   exceptions: []
   platform:
@@ -148,12 +148,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets or sets the location of the required bootstrapper files.
+  summary: "Obtém ou define a localização do bootstrapper necessário ficheiros."
   syntax:
     content: public string Path { get; set; }
     return:
       type: System.String
-      description: The path for the required bootstrapper files.
+      description: "O caminho para os ficheiros de bootstrapper necessária."
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*
   exceptions: []
   platform:
@@ -170,12 +170,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: Gets all products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.
+  summary: "Obtém todos os produtos disponíveis no bootstrapper atual <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>"
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection Products { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection
-      description: All products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.
+      description: "Todos os produtos disponíveis no bootstrapper atual <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>"
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Products*
   exceptions: []
   platform:
