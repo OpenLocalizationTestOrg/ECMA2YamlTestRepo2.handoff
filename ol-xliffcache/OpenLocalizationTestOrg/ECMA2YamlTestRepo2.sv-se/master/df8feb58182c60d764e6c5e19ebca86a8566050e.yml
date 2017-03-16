@@ -12,7 +12,7 @@ items:
   nameWithType: CreateCSharpManifestResourceName
   fullName: Microsoft.Build.Tasks.CreateCSharpManifestResourceName
   type: Class
-  summary: "Skapar C#-manifest namn från en angiven filnamn."
+  summary: Creates a C#-style manifest name from a given resource file name.
   syntax:
     content: 'public class CreateCSharpManifestResourceName : Microsoft.Build.Tasks.CreateManifestResourceName'
   inheritance:
@@ -52,7 +52,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Initierar en ny instans av den <xref href=&quot;Microsoft.Build.Tasks.CreateCSharpManifestResourceName&quot;> </xref> klass."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.CreateCSharpManifestResourceName"></xref> class.
   syntax:
     content: public CreateCSharpManifestResourceName ();
     parameters: []
@@ -72,28 +72,28 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Returnerar C#-manifest resursnamn som motsvarar den angivna resursfilen."
+  summary: Returns the C#-style manifest resource name that corresponds to the specified resource file.
   syntax:
     content: protected override string CreateManifestName (string fileName, string linkFileName, string rootNamespace, string dependentUponFileName, System.IO.Stream binaryStream);
     parameters:
     - id: fileName
       type: System.String
-      description: "Namnet på resursfilen som du vill skapa C# manifest namn."
+      description: The name of the resource file from which to create the C# manifest name.
     - id: linkFileName
       type: System.String
-      description: "Namnet på länkfilen."
+      description: The name of the link file.
     - id: rootNamespace
       type: System.String
-      description: "Rotnamnområdet i resursfilen vanligtvis hämtas från projektfilen. May be <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;></xref>."
+      description: The root namespace of the resource file, typically taken from the project file. May be <xref uid="langword_csharp_null" name="null" href=""></xref>.
     - id: dependentUponFileName
       type: System.String
-      description: "Filnamnet för överordnat resursfil (vanligtvis en .cs-fil). May be <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;></xref>."
+      description: The file name of the parent of the resource file (usually a .cs file). May be <xref uid="langword_csharp_null" name="null" href=""></xref>.
     - id: binaryStream
       type: System.IO.Stream
-      description: "Innehållet binära filström. May be <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;></xref>."
+      description: File contents binary stream. May be <xref uid="langword_csharp_null" name="null" href=""></xref>.
     return:
       type: System.String
-      description: "Manifestet resursnamnet som motsvarar den angivna resursfilen."
+      description: The manifest resource name that corresponds to the specified resource file.
   overload: Microsoft.Build.Tasks.CreateCSharpManifestResourceName.CreateManifestName*
   exceptions: []
   platform:
@@ -110,16 +110,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Anger om den angivna filen är en C#-källfil."
+  summary: Indicates whether the specified file is a C# source file.
   syntax:
     content: protected override bool IsSourceFile (string fileName);
     parameters:
     - id: fileName
       type: System.String
-      description: "Namnet på filen för att undersöka."
+      description: The name of the file to examine.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Om den angivna filen är C# källfilen; i annat fall <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the specified file is a C# source file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.CreateCSharpManifestResourceName.IsSourceFile*
   exceptions: []
   platform:

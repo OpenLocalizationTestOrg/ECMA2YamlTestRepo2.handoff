@@ -13,7 +13,7 @@ items:
   nameWithType: LoggerDescription
   fullName: Microsoft.Build.Logging.LoggerDescription
   type: Class
-  summary: "Innehåller information om en transaktionsloggfiler som en samling med värden som kan användas för att initiera meddelandeloggfiler och kan serialiseras för att skickas mellan olika processer."
+  summary: Contains information about a logger as a collection of values that can be used to instantiate the logger and can be serialized to be passed between different processes.
   syntax:
     content: public class LoggerDescription
   inheritance:
@@ -34,25 +34,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Skapar en beskrivning för meddelandeloggfiler från den angivna data."
+  summary: Creates a logger description from the given data.
   syntax:
     content: public LoggerDescription (string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, Microsoft.Build.Framework.LoggerVerbosity verbosity);
     parameters:
     - id: loggerClassName
       type: System.String
-      description: "Klassnamn för transaktionsloggfiler."
+      description: The class name of the logger.
     - id: loggerAssemblyName
       type: System.String
-      description: "Sammansättningsnamnet som implementerar transaktionsloggfiler."
+      description: The assembly name that implements the logger.
     - id: loggerAssemblyFile
       type: System.String
-      description: "Sammansättningsfilen som implementerar transaktionsloggfiler."
+      description: The assembly file that implements the logger.
     - id: loggerSwitchParameters
       type: System.String
-      description: "Växla parametrar för transaktionsloggfiler."
+      description: Switch parameters for the logger.
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Nivån."
+      description: The verbosity level.
   overload: Microsoft.Build.Logging.LoggerDescription.#ctor*
   exceptions: []
   platform:
@@ -69,14 +69,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Skapar en instans av ILogger från data i den här beskrivningen."
-  remarks: "Den här metoden kan vara en mängd reflektion undantag om data är ogiltiga. Det är resposibility av anroparen kan hantera dessa om det behövs."
+  summary: Creates an ILogger instance from the data in this description.
+  remarks: This method may throw a variety of reflection exceptions if the data is invalid. It is the resposibility of the caller to handle these exceptions if desired.
   syntax:
     content: public Microsoft.Build.Framework.ILogger CreateLogger ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: "Returnerar en instans av ILogger från data i den här beskrivningen."
+      description: Returns an ILogger instance from the data in this description.
   overload: Microsoft.Build.Logging.LoggerDescription.CreateLogger*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Hämtar strängen transaktionsloggfiler parametrar."
+  summary: Gets the string of logger parameters.
   syntax:
     content: public string LoggerSwitchParameters { get; }
     return:
       type: System.String
-      description: "Returnerar strängen transaktionsloggfiler parametrar.  Returnerar null om det finns inga parametrar."
+      description: Returns the string of logger parameters.  Returns null if there are no parameters.
   overload: Microsoft.Build.Logging.LoggerDescription.LoggerSwitchParameters*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Returnerar nivån för den här transaktionsloggfiler."
-  remarks: "Alla loggar tangenttryckningar få samma nivån för kommandoraden visas."
+  summary: Returns the verbosity level for this logger.
+  remarks: For command line display, all loggers get the same verbosity level.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Som ska läggas till."
+      description: To be added.
   overload: Microsoft.Build.Logging.LoggerDescription.Verbosity*
   exceptions: []
   platform:

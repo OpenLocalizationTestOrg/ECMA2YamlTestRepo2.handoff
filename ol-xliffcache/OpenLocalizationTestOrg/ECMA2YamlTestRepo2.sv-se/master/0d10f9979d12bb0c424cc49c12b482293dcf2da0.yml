@@ -10,7 +10,7 @@ items:
   nameWithType: IVbcHostObjectFreeThreaded
   fullName: Microsoft.Build.Tasks.Hosting.IVbcHostObjectFreeThreaded
   type: Interface
-  summary: "Definierar en fritrådade gränssnitt att kommunicera med IDE Vbc aktiviteten. Uppgiften Vbc kommer särskilt delegera faktiska kompileringen att IDE, i stället för skalning till kommandoraden kompilatorer.       Den här viss version av kompilera (till skillnad från IVbcHostObject::Compile) är inte ordnas tillbaka till UI-tråden. Implementerare för gränssnittet är ansvarig för eventuella konvertering."
+  summary: "Defines a free-threaded interface for the Vbc task to communicate with the IDE. In particular, the Vbc task will delegate the actual compilation to the IDE, rather than shelling out to the command-line compilers.  \n  \n This particular version of Compile (unlike the IVbcHostObject::Compile) is not marshalled back to the UI thread. The implementor of the interface is responsible for any marshalling."
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -35,13 +35,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "Kompilera källfilen."
+  summary: Compile the source file.
   syntax:
     content: public bool Compile ();
     parameters: []
     return:
       type: System.Boolean
-      description: "Returnerar <xref:System.Boolean>.</xref:System.Boolean>"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Tasks.Hosting.IVbcHostObjectFreeThreaded.Compile*
   exceptions: []
   platform:

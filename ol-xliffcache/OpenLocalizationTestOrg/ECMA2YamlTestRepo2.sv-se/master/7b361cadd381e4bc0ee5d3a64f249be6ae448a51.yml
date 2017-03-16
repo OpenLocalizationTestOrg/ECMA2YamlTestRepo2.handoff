@@ -26,7 +26,7 @@ items:
   nameWithType: ResolveManifestFiles
   fullName: Microsoft.Build.Tasks.ResolveManifestFiles
   type: Class
-  summary: 'Den här uppgiften matchar följande objekt i skapar filer för generering av manifestet: inbyggda objekt, beroenden, satelliter, innehåll, felsökning symboler och dokumentation) till filer för generering av manifestet.'
+  summary: 'This task resolves the following items in the build process to files for manifest generation: built items, dependencies, satellites, content, debug symbols, and documentation) to files for manifest generation.'
   syntax:
     content: 'public sealed class ResolveManifestFiles : Microsoft.Build.Tasks.TaskExtension'
   inheritance:
@@ -57,7 +57,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Initierar en ny instans av den <xref href=&quot;Microsoft.Build.Tasks.ResolveManifestFiles&quot;> </xref> klass."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.ResolveManifestFiles"></xref> class.
   syntax:
     content: public ResolveManifestFiles ();
     parameters: []
@@ -77,13 +77,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger namnet på distributionen manifestet."
-  remarks: "Manifestet startpunkten för distribution är namnet på distributionen manifestet, till exempel Application.exe.manifest."
+  summary: Gets or sets the name of the deployment manifest.
+  remarks: The deployment manifest entry point is the name of the deployment manifest, such as Application.exe.manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem DeploymentManifestEntryPoint { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Distributionen manifest namn som en startpunkt."
+      description: The deployment manifest name as an entry point.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.DeploymentManifestEntryPoint*
   exceptions: []
   platform:
@@ -100,12 +100,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger den hanterade sammansättningen eller ClickOnce manifestet referens som är utgångspunkten för manifestet."
+  summary: Gets or sets the managed assembly or ClickOnce manifest reference that is the entry point to the manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem EntryPoint { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Startpunkten."
+      description: The entry point.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.EntryPoint*
   exceptions: []
   platform:
@@ -122,13 +122,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Kör den `ResolveManifestFiles` aktivitet."
+  summary: Executes the `ResolveManifestFiles` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Om körning av aktiviteten lyckades i annat fall <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.Execute*
   exceptions: []
   platform:
@@ -145,12 +145,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger de extra filerna."
+  summary: Gets or sets the extra files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ExtraFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Extra filer."
+      description: The extra files.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.ExtraFiles*
   exceptions: []
   platform:
@@ -167,12 +167,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger de inkommande filerna."
+  summary: Gets or sets the input files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Files { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Inkommande filer."
+      description: The input files.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.Files*
   exceptions: []
   platform:
@@ -189,12 +189,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger de hanterade sammansättningarna."
+  summary: Gets or sets the managed assemblies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ManagedAssemblies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Hanterade sammansättningar."
+      description: The managed assemblies.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.ManagedAssemblies*
   exceptions: []
   platform:
@@ -211,12 +211,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger de interna sammansättningarna."
+  summary: Gets or sets the native assemblies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] NativeAssemblies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De interna paket."
+      description: The native assemblies.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.NativeAssemblies*
   exceptions: []
   platform:
@@ -233,12 +233,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger de genererade sammansättningarna."
+  summary: Gets or sets the generated assemblies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] OutputAssemblies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Genererade paket."
+      description: The generated assemblies.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.OutputAssemblies*
   exceptions: []
   platform:
@@ -255,13 +255,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger startpunkten för utdata distribution manifestet."
-  remarks: "Andra MSBuild-aktiviteter kan använda den här egenskapen för utdata som indata."
+  summary: Gets or sets the output deployment manifest entry point.
+  remarks: Other MSBuild tasks can use this output property as input.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem OutputDeploymentManifestEntryPoint { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "En distribution manifest startpunkt."
+      description: A deployment manifest entry point.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.OutputDeploymentManifestEntryPoint*
   exceptions: []
   platform:
@@ -278,12 +278,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger startpunkten för utdata."
+  summary: Gets or sets the output entry point.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem OutputEntryPoint { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "En startpunkt för utdata."
+      description: An output entry point.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.OutputEntryPoint*
   exceptions: []
   platform:
@@ -300,12 +300,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger utdatafilerna."
+  summary: Gets or sets the output files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] OutputFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Utdatafilerna."
+      description: The output files.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.OutputFiles*
   exceptions: []
   platform:
@@ -322,12 +322,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger publicera filer."
+  summary: Gets or sets the publish files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] PublishFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Publicera filer."
+      description: The publish files.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.PublishFiles*
   exceptions: []
   platform:
@@ -344,12 +344,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger satellitsammansättningarna."
+  summary: Gets or sets the satellite assemblies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SatelliteAssemblies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Satellitsammansättningarna."
+      description: The satellite assemblies.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.SatelliteAssemblies*
   exceptions: []
   platform:
@@ -366,12 +366,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger ett värde som anger om manifesten loggas."
+  summary: Gets or sets a value that indicates whether the manifests are signed.
   syntax:
     content: public bool SigningManifests { get; set; }
     return:
       type: System.Boolean
-      description: "Som ska läggas till."
+      description: To be added.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.SigningManifests*
   exceptions: []
   platform:
@@ -388,12 +388,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger kulturen mål för satellitsammansättningarna."
+  summary: Gets or sets the target culture for satellite assemblies.
   syntax:
     content: public string TargetCulture { get; set; }
     return:
       type: System.String
-      description: "Satellitsammansättningarna mål kultur."
+      description: The target culture for satellite assemblies.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.TargetCulture*
   exceptions: []
   platform:
@@ -410,12 +410,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger mål för .NET Framework-version."
+  summary: Gets or sets the target .NET Framework version.
   syntax:
     content: public string TargetFrameworkVersion { get; set; }
     return:
       type: System.String
-      description: "Versionen av .NET Framework målet."
+      description: The version of the target .NET Framework.
   overload: Microsoft.Build.Tasks.ResolveManifestFiles.TargetFrameworkVersion*
   exceptions: []
   platform:

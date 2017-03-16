@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="sv-se">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">99f7fd01ed185424160e7ef9e3460c98d01ceada</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Messaging.MessageQueueTransaction.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4d76a3730235386d16ff8a3d07ce1e5d986e9710</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e43dbd96f8dd40b5883f6c11e03d22dd2b1525fd</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides a Message Queuing internal transaction.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To send or receive a message as part of a transaction, you can use the MessageQueueTransaction class to create a transaction and pass it to an overload of the &lt;xref:System.Messaging.MessageQueue.Send%2A?displayProperty=fullName&gt; method or the &lt;xref:System.Messaging.MessageQueue.Receive%2A?displayProperty=fullName&gt; method that takes a <ph id="ph1">`transaction`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Messages sent as part of a transaction must be sent to transactional queues.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Messages received from transactional queues must be received using a specified transaction.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In addition to the &lt;xref:System.Messaging.MessageQueue.Receive%2A&gt; method, you can receive messages with a specified identifier or specified correlation identifier.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See the &lt;xref:System.Messaging.MessageQueue.ReceiveById%2A&gt; and &lt;xref:System.Messaging.MessageQueue.ReceiveByCorrelationId%2A&gt; methods for more information about selectively receiving messages from transactional queues.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Messages sent to transactional queues are removed if the transaction is committed.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Similarly, messages received from transactional queues are returned to the queue if the transaction is rolled back.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you instantiate a MessageQueueTransaction and pass it to an applicable overload of the &lt;xref:System.Messaging.MessageQueue.Send%2A&gt; method or &lt;xref:System.Messaging.MessageQueue.Receive%2A&gt; method to send a message to a non-transactional queue or receive a message from a non-transactional queue, the method throws an exception that indicates "Wrong Transaction Usage."</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>[Visual Basic]       MessageQueueTransaction is threading apartment aware, so if your apartment state is <ph id="ph1">`STA`</ph>, you cannot use the transaction in multiple threads.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Visual Basic sets the state of the main thread to <ph id="ph1">`STA`</ph>, so you must apply the &lt;xref:System.MTAThreadAttribute&gt; in the <ph id="ph2">`Main`</ph> subroutine.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Otherwise, sending a transactional message using another thread throws a &lt;xref:System.Messaging.MessageQueueException&gt; exception.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You apply the &lt;xref:System.MTAThreadAttribute&gt; by using the following fragment.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   &lt;System.MTAThreadAttribute&gt;    public sub Main()   ```</ph>      <ph id="ph2">```vb#      ```</ph></source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Messaging.MessageQueueTransaction"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This constructor sets the &lt;xref:System.Messaging.MessageQueueTransaction.Status%2A&gt; property to <ph id="ph1">`Initialized`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Rolls back the pending internal transaction.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Abort marks the unsuccessful completion of a process begun at a call to &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Typically, one makes a call to &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt; within a <ph id="ph1">`Try...Catch`</ph> exception-handling block, putting a call to &lt;xref:System.Messaging.MessageQueueTransaction.Commit%2A&gt; in the <ph id="ph2">`Try`</ph> clause, and a call to Abort in the <ph id="ph3">`Catch`</ph> clause.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Abort rolls back the entire transaction.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This includes all messages sent or received after the call to &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The internal transaction you are attempting to roll back has not started.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>An internal Message Queuing error occurs.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Begins a new Message Queuing internal transaction.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Begin marks the start of processing that will be committed or rolled back, depending on the success of the transaction.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If an exception occurs during processing, the entire transaction is rolled back.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This includes all messages sent or received after the call to Begin.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Typically, one makes a call to Begin within a <ph id="ph1">`Try...Catch`</ph> exception-handling block, putting a call to &lt;xref:System.Messaging.MessageQueueTransaction.Commit%2A&gt; in the <ph id="ph2">`Try`</ph> clause, and a call to &lt;xref:System.Messaging.MessageQueueTransaction.Abort%2A&gt; in the <ph id="ph3">`Catch`</ph> clause.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The transaction has already been started.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>An internal Message Queuing error occurs.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Commits a pending internal transaction.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Commit marks the successful completion of processing begun at a call to &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If an exception occurs between the call the &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt; and the call to Commit, the entire transaction is rolled back.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This includes all messages sent or received after the call to &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Typically, one makes a call to &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt; within a <ph id="ph1">`Try...Catch`</ph> exception-handling block, putting a call to Commit in the <ph id="ph2">`Try`</ph> clause, and a call to &lt;xref:System.Messaging.MessageQueueTransaction.Abort%2A&gt; in the <ph id="ph3">`Catch`</ph> clause.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The transaction you are trying to commit has not started.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>An internal Message Queuing error occurs.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Releases all resources used by the <bpt id="p1">&lt;xref href="System.Messaging.MessageQueueTransaction"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling Dispose allows the resources used by the &lt;xref:System.Messaging.MessageQueueTransaction&gt; to be reallocated for other purposes.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about <ph id="ph1">`Dispose`</ph>, see <bpt id="p1">[</bpt>Cleaning Up Unmanaged Resources<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Any pending internal transactions are rolled back by Dispose.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Releases the unmanaged resources used by the <bpt id="p1">&lt;xref href="System.Messaging.MessageQueueTransaction"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and optionally releases the managed resources.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is called by the public &lt;xref:System.Messaging.MessageQueueTransaction.Dispose%2A&gt; method and the &lt;xref:System.Object.Finalize%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`Dispose`</ph> invokes the protected <ph id="ph2">`Dispose(Boolean)`</ph> method with the <ph id="ph3">`disposing`</ph> parameter set to <ph id="ph4">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Object.Finalize%2A&gt; invokes <ph id="ph1">`Dispose`</ph> with <ph id="ph2">`disposing`</ph> set to <ph id="ph3">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the <ph id="ph1">`disposing`</ph> parameter is <ph id="ph2">`true`</ph>, this method releases all resources held by any managed objects that this &lt;xref:System.Messaging.MessageQueueTransaction&gt; references.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method invokes the <ph id="ph1">`Dispose`</ph> method of each referenced object.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to release both managed and unmanaged resources; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to release only unmanaged resources.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Releases the resources held by the current instance.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method overrides &lt;xref:System.Object.Finalize%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Application code should not call this method; an object's Finalize method is automatically invoked during garbage collection, unless finalization by the garbage collector has been disabled by a call to the &lt;xref:System.GC.SuppressFinalize%2A?displayProperty=fullName&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Finalize Methods and Destructors<ept id="p1">](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70)</ept>, <bpt id="p2">[</bpt>Cleaning Up Unmanaged Resources<ept id="p2">](~/add/includes/ajax-current-ext-md.md)</ept>, and <bpt id="p3">[</bpt>Overriding the Finalize Method<ept id="p3">](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Gets the status of the transaction.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an instance of the &lt;xref:System.Messaging.MessageQueueTransaction&gt; class has been created, the Status is set by the constructor to <ph id="ph1">`Initialized`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After a call to &lt;xref:System.Messaging.MessageQueueTransaction.Begin%2A&gt; but before a call to &lt;xref:System.Messaging.MessageQueueTransaction.Commit%2A&gt; or &lt;xref:System.Messaging.MessageQueueTransaction.Abort%2A&gt;, the Status is <ph id="ph1">`Pending`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Messaging.MessageQueueTransactionStatus"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values that indicates whether the transaction has been committed, aborted, initialized, or is pending.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

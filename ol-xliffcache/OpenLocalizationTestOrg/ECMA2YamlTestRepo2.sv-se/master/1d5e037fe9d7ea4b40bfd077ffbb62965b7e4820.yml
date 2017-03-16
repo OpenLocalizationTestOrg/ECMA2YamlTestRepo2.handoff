@@ -12,7 +12,7 @@ items:
   nameWithType: IBootstrapperBuilder
   fullName: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder
   type: Interface
-  summary: "Visar funktioner som krävs för att skapa ett startprogram."
+  summary: Exposes functionality that you must have to create a bootstrapper.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -37,16 +37,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Genererar ett startprogram baserat på de angivna inställningarna."
+  summary: Generates a bootstrapper based on the specified settings.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults Build (Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings
-      description: "Egenskaper som används för att skapa startprogrammet."
+      description: The properties used to create the bootstrapper.
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults
-      description: "En <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults&quot;> </xref> objekt som representerar resultatet av startprogram generation."
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults"></xref> object that represents the results of the bootstrapper generation.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Build*
   exceptions: []
   platform:
@@ -63,12 +63,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Hämtar eller anger platsen för det obligatoriska startprogrammet filer."
+  summary: Gets or sets the location of the required bootstrapper files.
   syntax:
     content: public string Path { get; set; }
     return:
       type: System.String
-      description: "Ett strängvärde som representerar platsen för filerna som krävs startprogram."
+      description: A string value that represents the location of the required bootstrapper files.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*
   exceptions: []
   platform:
@@ -85,12 +85,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Hämtar alla produkter som är tillgängliga i den aktuella startprogram sökvägen."
+  summary: Gets all products available at the current bootstrapper path.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection Products { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection
-      description: "En <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection&quot;> </xref> objekt som representerar alla produkter som är tillgängliga på det aktuella startprogrammet <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection"></xref> object that represents all products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Products*
   exceptions: []
   platform:

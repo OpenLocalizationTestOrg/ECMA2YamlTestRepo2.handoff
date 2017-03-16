@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="sv-se">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8b6f73c874ae9ddf4297092db3400542d4bd8d83</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.UI.ControlCachePolicy.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7a83d8534ff6d73e8d3c55ed1845e0830514e299</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5a089e2daabd0fc395601b2fc205e39522cf26dd</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides programmatic access to an ASP.NET user control's output cache settings.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ControlCachePolicy class is used by developers in programmatic user control scenarios to specify output caching settings for user controls (.ascx files).</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ASP.NET embeds user controls within a &lt;xref:System.Web.UI.BasePartialCachingControl&gt; instance.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.BasePartialCachingControl&gt; class represents a user control that has output caching enabled.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you access the &lt;xref:System.Web.UI.BasePartialCachingControl.CachePolicy%2A?displayProperty=fullName&gt; property of a &lt;xref:System.Web.UI.PartialCachingControl&gt; control, you will always receive a valid ControlCachePolicy object.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, if you access the &lt;xref:System.Web.UI.UserControl.CachePolicy%2A?displayProperty=fullName&gt; property of a &lt;xref:System.Web.UI.UserControl&gt; control, you receive a valid ControlCachePolicy object only if the user control is already wrapped by a &lt;xref:System.Web.UI.BasePartialCachingControl&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If it is not wrapped, the ControlCachePolicy object returned by the property will throw exceptions when you attempt to manipulate it because it does not have an associated &lt;xref:System.Web.UI.BasePartialCachingControl&gt;.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To determine whether a &lt;xref:System.Web.UI.UserControl&gt; instance supports caching without generating exceptions, inspect the &lt;xref:System.Web.UI.ControlCachePolicy.SupportsCaching%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the ControlCachePolicy class is one of several ways you can enable output caching.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following list describes methods you can use to enable output caching:      -   Use the  directive to enable output caching in declarative scenarios.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Use the &lt;xref:System.Web.UI.PartialCachingAttribute&gt; attribute to enable caching for a user control in a code-behind file.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Use the ControlCachePolicy class to specify cache settings in programmatic scenarios in which you are working with &lt;xref:System.Web.UI.BasePartialCachingControl&gt; instances that have been cache-enabled using one of the previous methods and dynamically loaded using the &lt;xref:System.Web.UI.TemplateControl.LoadControl%2A?displayProperty=fullName&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A ControlCachePolicy instance can be successfully manipulated only between the <ph id="ph1">`Init`</ph> and <ph id="ph2">`PreRender`</ph> stages of the control life cycle.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you modify a ControlCachePolicy object after the <ph id="ph1">`PreRender`</ph> phase, ASP.NET throws an exception, because any changes made after the control is rendered cannot actually affect cache settings (a control is cached during the <ph id="ph2">`Render`</ph> stage).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Finally, a user control instance (and therefore its ControlCachePolicy object) is only available for programmatic manipulation when it is actually rendered.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether fragment caching is enabled for the user control.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the user control's output is cached; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Gets or sets an instance of the <bpt id="p1">&lt;xref href="System.Web.Caching.CacheDependency"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class associated with the cached user control output.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Dependency property delegates to the &lt;xref:System.Web.UI.BasePartialCachingControl.Dependency%2A&gt; property of the &lt;xref:System.Web.UI.BasePartialCachingControl&gt; control that wraps the user control.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.Caching.CacheDependency&gt; instance is invalidated, the user control is removed from the cache.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.Caching.CacheDependency"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> associated with the control.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Gets or sets the amount of time that cached items are to remain in the output cache.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If an absolute expiration policy is set using the &lt;xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A&gt; method, the Duration property returns the amount of time remaining until cache entry expiration.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.TimeSpan&gt; that represents the amount of time a user control is to remain in the output cache.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The default is &lt;xref:System.TimeSpan&gt;.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the output-cache provider that is associated with a control instance.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ProviderName property enables you to specify the current output-cache provider that is associated with a control, by using the &lt;xref:System.Web.UI.ControlCachePolicy&gt; instance.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property can be set only before the &lt;xref:System.Web.UI.Control.PreRender&gt; event occurs in the control life cycle.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The name of the provider.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The provider name was not found.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>An attempt was made to set the ProviderName property during or after the <bpt id="p1">&lt;xref href="System.Web.UI.Control.PreRender"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Instructs the <bpt id="p1">&lt;xref href="System.Web.UI.BasePartialCachingControl"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control that wraps the user control to expire the cache entry at the specified date and time.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the SetExpires and &lt;xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A&gt; methods (passing <ph id="ph1">`true`</ph>) to instruct the &lt;xref:System.Web.UI.BasePartialCachingControl&gt; control that wraps the user control to use a sliding expiration caching policy instead of an absolute expiration policy.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the SetExpires method and the &lt;xref:System.Web.UI.ControlCachePolicy.SetSlidingExpiration%2A&gt; method (passing <ph id="ph1">`false`</ph>) to specify an absolute expiration policy.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.DateTime&gt; after which the cached entry expires.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The user control is not associated with a <bpt id="p1">&lt;xref href="System.Web.UI.BasePartialCachingControl"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and is not cacheable.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Instructs the <bpt id="p1">&lt;xref href="System.Web.UI.BasePartialCachingControl"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control that wraps the user control to set the user control's cache entry to use sliding or absolute expiration.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the &lt;xref:System.Web.UI.ControlCachePolicy.SetExpires%2A&gt; and SetSlidingExpiration methods (passing <ph id="ph1">`true`</ph>) to instruct the &lt;xref:System.Web.UI.BasePartialCachingControl&gt; control that wraps the user control to use a sliding expiration caching policy instead of an absolute expiration policy.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the &lt;xref:System.Web.UI.ControlCachePolicy.SetExpires%2A&gt; method and the SetSlidingExpiration method (passing <ph id="ph1">`false`</ph>) to specify an absolute expiration policy.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to use sliding cache expiration instead of absolute expiration; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The user control is not associated with a <bpt id="p1">&lt;xref href="System.Web.UI.BasePartialCachingControl"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and is not cacheable.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Sets a list of custom strings that the output cache will use to vary the user control.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you pass "browser" as the <ph id="ph1">`varyByCustom`</ph> parameter, the user control will be varied by browser type and major version number.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If another custom string is entered, you must override the &lt;xref:System.Web.HttpApplication.GetVaryByCustomString%2A&gt; method in your application's Global.asax file.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The list of custom strings.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The user control is not associated with a <bpt id="p1">&lt;xref href="System.Web.UI.BasePartialCachingControl"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and is not cacheable.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Gets a value indicating whether the user control supports caching.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A user control supports caching if it is associated with a &lt;xref:System.Web.UI.BasePartialCachingControl&gt; instance, which signals that either an  directive was parsed by the ASP.NET parser or the user control was decorated with a &lt;xref:System.Web.UI.PartialCachingAttribute&gt; attribute.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the user control supports caching; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Gets or sets a list of control identifiers to vary the cached output by.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>A semicolon-separated list of strings used to vary a user control's output cache.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>These strings represent the &lt;xref:System.Web.UI.Control.ID*&gt; property values of ASP.NET server controls declared in the user control.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Gets or sets a list of <bpt id="p1">&lt;xref uid="langword_csharp_GET" name="GET" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref uid="langword_csharp_POST" name="POST" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> parameter names to vary the cached output by.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By default, these strings correspond to a query string value sent with the GET method or to a parameter sent using the POST method.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the VaryByParams property is set to multiple parameters, the output cache contains a different version of the requested document for each specified parameter.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Possible values include "none", "*", and any valid query string or POST parameter name.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>A semicolon-separated list of strings used to vary the output cache.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The user control is not associated with a <bpt id="p1">&lt;xref href="System.Web.UI.BasePartialCachingControl"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and is not cacheable.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

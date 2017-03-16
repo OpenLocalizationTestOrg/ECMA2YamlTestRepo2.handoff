@@ -15,8 +15,8 @@ items:
   nameWithType: RuleBag
   fullName: Microsoft.Build.Framework.XamlTypes.RuleBag
   type: Class
-  summary: "En behållare för <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> instanser."
-  remarks: "Gäller endast <xref:Microsoft.Build.Framework.XamlTypes.Rule>regler i förhållande till egenskapssidor.</xref:Microsoft.Build.Framework.XamlTypes.Rule> RuleBag används endast som en behållare för flera <xref:Microsoft.Build.Framework.XamlTypes.Rule>.</xref:Microsoft.Build.Framework.XamlTypes.Rule> Den med <xref:Microsoft.Build.Framework.XamlTypes.Rule>regler tas bort omedelbart efter XAML-filen har lästs in.</xref:Microsoft.Build.Framework.XamlTypes.Rule>"
+  summary: A container for <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> instances.
+  remarks: Concerns only <xref:Microsoft.Build.Framework.XamlTypes.Rule> rules, relative to property pages. The RuleBag is only used as a container for more than one <xref:Microsoft.Build.Framework.XamlTypes.Rule>. The containing <xref:Microsoft.Build.Framework.XamlTypes.Rule> rules are immediately stripped off after the XAML file is loaded.
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Rules")]
@@ -42,7 +42,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Standardkonstruktor. Krävs för XAML deserialisering."
+  summary: Default constructor. Required for XAML deserialization.
   syntax:
     content: public RuleBag ();
     parameters: []
@@ -62,7 +62,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Se <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.</xref:System.ComponentModel.ISupportInitialize.BeginInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.
   syntax:
     content: public void BeginInit ();
     parameters: []
@@ -82,7 +82,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Se <xref:System.ComponentModel.ISupportInitialize.EndInit*>.</xref:System.ComponentModel.ISupportInitialize.EndInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.EndInit*>.
   syntax:
     content: public void EndInit ();
     parameters: []
@@ -102,16 +102,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Returnerar en uppräknare över alla instanser av statiska data som har den angivna typen."
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "Typ av statiska data som ska hämtas."
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "Returnerar en uppräknare över alla instanser av statiska data som har den angivna typen. Returnerar <xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;> </xref> eller en tom lista om inga objekt av den angivna typen tillhandahålls av den här noden."
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if no objects of the given type are provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjects*
   exceptions: []
   platform:
@@ -128,13 +128,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Returnerar en uppräknare över alla typer av statiska data för datadrivna funktioner som innehåller den här noden."
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "Returnerar en uppräknare över alla typer av statiska data för datadrivna funktioner som innehåller den här noden."
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -151,12 +151,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Lista över <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> instanser som den här <xref href=&quot;Microsoft.Build.Framework.XamlTypes.RuleBag&quot;> </xref> -instans innehåller."
+  summary: The list of <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> instances that this <xref href="Microsoft.Build.Framework.XamlTypes.RuleBag"></xref> instance contains.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.Rule> Rules { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.Rule}
-      description: "Returnerar listan över regler. Returnerar alltid minst en regel."
+      description: Returns the list of rules. Always returns at least one rule.
   overload: Microsoft.Build.Framework.XamlTypes.RuleBag.Rules*
   exceptions: []
   platform:

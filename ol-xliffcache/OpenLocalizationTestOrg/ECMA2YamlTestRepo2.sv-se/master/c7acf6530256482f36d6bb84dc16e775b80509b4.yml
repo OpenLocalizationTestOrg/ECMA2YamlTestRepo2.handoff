@@ -21,7 +21,7 @@ items:
   nameWithType: Copy
   fullName: Microsoft.Build.Tasks.Copy
   type: Class
-  summary: "Implementerar den `Copy` aktivitet. Använd den `Copy` element i projektfilen för att skapa och köra den här åtgärden. Användnings- och parametern information finns i [kopiera aktivitet](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `Copy` task. Use the `Copy` element in your project file to create and execute this task. For usage and parameter information, see [Copy Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class Copy : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask'
   inheritance:
@@ -53,7 +53,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Initierar en ny instans av den <xref href=&quot;Microsoft.Build.Tasks.Copy&quot;> </xref> klass."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Copy"></xref> class.
   syntax:
     content: public Copy ();
     parameters: []
@@ -73,7 +73,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Stoppa och returnerar (i ett odefinierat tillstånd) så snart som möjligt."
+  summary: Stop and return (in an undefined state) as soon as possible.
   syntax:
     content: public void Cancel ();
     parameters: []
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar objekt som kopierades."
+  summary: Gets the items that were successfully copied.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] CopiedFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Objekt som kopierades."
+      description: The items that were successfully copied.
   overload: Microsoft.Build.Tasks.Copy.CopiedFiles*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger en lista över filer att kopiera filerna till."
-  remarks: "Lista över filer förväntas vara en mappning med listan som anges i den <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>egenskapen.</xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> Som inte är den första filen som anges i <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>ska kopieras till den första plats som anges i DestinationFiles och så vidare.</xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>"
+  summary: Gets or sets a list of files to copy the source files to.
+  remarks: The list of destination files is expected to be a one-to-one mapping with the list specified in the <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> property. That is, the first file specified in <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> will be copied to the first location specified in DestinationFiles, and so forth.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] DestinationFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Lista över filer att kopiera filerna till."
+      description: The list of files to copy the source files to.
   overload: Microsoft.Build.Tasks.Copy.DestinationFiles*
   exceptions: []
   platform:
@@ -138,13 +138,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger den katalog som du vill kopiera filer."
-  remarks: "Målmappen måste vara en katalog, inte en fil. Om katalogen inte finns, skapas den automatiskt."
+  summary: Gets or sets the directory to which you want to copy the files.
+  remarks: The destination folder must be a directory, not a file. If the directory does not exist, it is created automatically.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem DestinationFolder { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Den katalog som du vill kopiera filerna."
+      description: The directory to which you want to copy the files.
   overload: Microsoft.Build.Tasks.Copy.DestinationFolder*
   exceptions: []
   platform:
@@ -161,13 +161,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Kör den `Copy` aktivitet."
+  summary: Executes the `Copy` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Om körning av aktiviteten lyckades i annat fall <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Copy.Execute*
   exceptions: []
   platform:
@@ -184,12 +184,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger ett booleskt värde som anger om du vill skriva över filer även om de har markerats som Läs endast filer."
+  summary: Gets or sets a Boolean value that indicates whether to overwrite files even if they are marked as read only files.
   syntax:
     content: public bool OverwriteReadOnlyFiles { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Om den `Copy` aktiviteten Skriv över filer även om de är markerad som Läs endast filer, annars, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Copy` task should overwrite files even if they are marked as read only files; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Copy.OverwriteReadOnlyFiles*
   exceptions: []
   platform:
@@ -206,12 +206,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: 'Hur många gånger att försöka kopiera, om alla föregående försök misslyckades. Standardvärdet är noll. Varning: med nya försök kan maskera synkronisering problem i din build-processen.'
+  summary: 'How many times to attempt to copy, if all previous attempts failed. Defaults to zero. Warning: using retries may mask a synchronization problem in your build process.'
   syntax:
     content: public int Retries { get; set; }
     return:
       type: System.Int32
-      description: "Som ska läggas till."
+      description: To be added.
   overload: Microsoft.Build.Tasks.Copy.Retries*
   exceptions: []
   platform:
@@ -228,12 +228,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Fördröjning mellan alla nödvändiga återförsök. Som standard<xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault></xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault>"
+  summary: Delay between any necessary retries. Defaults to <xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault>
   syntax:
     content: public int RetryDelayMilliseconds { get; set; }
     return:
       type: System.Int32
-      description: "Som ska läggas till."
+      description: To be added.
   overload: Microsoft.Build.Tasks.Copy.RetryDelayMilliseconds*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger ett booleskt värde som anger om den `Copy` aktiviteten ska hoppa över kopiering av filer som är oförändrade mellan käll- och."
-  remarks: "Den `Copy` aktiviteten anser filer är oförändrad om de har samma storlek och samma ändrades senast."
+  summary: Gets or sets a Boolean value that indicates whether the `Copy` task should skip the copying of files that are unchanged between the source and destination.
+  remarks: The `Copy` task considers files to be unchanged if they have the same size and the same last modified time.
   syntax:
     content: public bool SkipUnchangedFiles { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Om den `Copy` aktivitet ska hoppa över kopiering av filer som är oförändrade mellan käll- och målvärden, annars, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Copy` task should skip the copying of files that are unchanged between the source and destination; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Copy.SkipUnchangedFiles*
   exceptions: []
   platform:
@@ -273,12 +273,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hämtar eller anger att kopiera filerna."
+  summary: Gets or sets the files to copy.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SourceFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Kopiera filerna."
+      description: The files to copy.
   overload: Microsoft.Build.Tasks.Copy.SourceFiles*
   exceptions: []
   platform:
@@ -295,12 +295,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Anger om hårda länkar ska användas."
+  summary: Indicates if hard links should be used.
   syntax:
     content: public bool UseHardlinksIfPossible { get; set; }
     return:
       type: System.Boolean
-      description: "Som ska läggas till."
+      description: To be added.
   overload: Microsoft.Build.Tasks.Copy.UseHardlinksIfPossible*
   exceptions: []
   platform:

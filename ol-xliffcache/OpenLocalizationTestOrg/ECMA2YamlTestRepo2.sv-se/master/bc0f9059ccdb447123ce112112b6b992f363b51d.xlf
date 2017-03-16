@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="sv-se">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bc0f9059ccdb447123ce112112b6b992f363b51d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Markup.IQueryAmbient.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">221ec5dc9b35b0373bb12c493685e4c3643f1a5a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7525a30dae94d83fc1bdca8158dd99215e943b06</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Queries for whether a specified property should be treated as ambient in the current scope.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The purpose of an ambient property mechanism is to improve parsing time by informing a XAML object writer to avoid instantiating certain objects, in cases where it is known that the objects are for values that are temporary and not useful for a typical run time application.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Normally, XAML lookups or XAML processing of a property get accessor would need to instantiate such objects to fill the object graph representation with ready-to-use values.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>IQueryAmbient has one member: &lt;xref:System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>IQueryAmbient is a parallel mechanism to &lt;xref:System.Windows.Markup.AmbientAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>IQueryAmbient is the specialized mechanism that avoids using reflection to determine information, and can also act situationally (a given object could choose to report <ph id="ph1">`true`</ph> or <ph id="ph2">`false`</ph> for &lt;xref:System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable%2A&gt;), whereas the attribute is essentially static analysis).</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Markup.AmbientAttribute&gt; is the general mechanism that can be used by XAML object writers and that typically correlates to the dedicated XAML type system properties &lt;xref:System.Xaml.XamlMember.IsAmbient%2A&gt; and &lt;xref:System.Xaml.XamlType.IsAmbient%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>WPF Implementations of IQueryAmbient    In WPF, IQueryAmbient is used for the resource dictionary lookup process.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The lookup process gets successive <ph id="ph1">`Resources`</ph> values throughout the WPF logical tree, working towards the root of the resource scope until either a key is found or the key is determined to not exist in scope.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Normally, doing so would require instantiating a &lt;xref:System.Windows.ResourceDictionary&gt; each time to receive the results.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Declaring the contents of <ph id="ph1">`Resources`</ph> as ambient so long as <ph id="ph2">`Resources`</ph> exists optimizes this lookup process.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In WPF, this interface is implemented in the following cases:      -   &lt;xref:System.Windows.FrameworkElement&gt; implements &lt;xref:System.Windows.FrameworkElement.System%23Windows%23Markup%23IQueryAmbient%23IsAmbientPropertyAvailable%2A&gt; to return <ph id="ph1">`true`</ph> for all property names if it contains an existing &lt;xref:System.Windows.ResourceDictionary&gt; for &lt;xref:System.Windows.FrameworkElement.Resources%2A&gt;, and so long as the query is not for the &lt;xref:System.Windows.FrameworkElement.Resources%2A&gt; property itself.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   &lt;xref:System.Windows.Style&gt; implements the same pattern for its &lt;xref:System.Windows.Style.Resources%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   &lt;xref:System.Windows.Application&gt; implements the same pattern for its &lt;xref:System.Windows.Application.Resources%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   &lt;xref:System.Windows.FrameworkContentElement&gt; implements the same pattern for its &lt;xref:System.Windows.FrameworkContentElement.Resources%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   &lt;xref:System.Windows.FrameworkTemplate&gt; implements the same pattern for its &lt;xref:System.Windows.FrameworkTemplate.Resources%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It also reports &lt;xref:System.Windows.FrameworkTemplate.Template%2A&gt; content as ambient but returns <ph id="ph1">`false`</ph> if querying for &lt;xref:System.Windows.FrameworkTemplate.Template%2A&gt; itself.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   In each of these cases, the relevant <ph id="ph1">`Resources`</ph> property (and &lt;xref:System.Windows.FrameworkTemplate.Template%2A&gt;) are attributed as &lt;xref:System.Windows.Markup.AmbientAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The typical usage is to query for the properties that are NOT the &lt;xref:System.Windows.Markup.AmbientAttribute&gt; attributed properties of the object that defines the interface.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In other words, so long as a resource dictionary exists in order to provide the potential run time value when the object graph is created, any other property besides the resource dictionary's property container can be treated as ambient.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Queries for whether a specified named property can be considered ambient in the current scope.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The name of the property to check for ambience state.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the requested property can be considered ambient; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -13,7 +13,7 @@ items:
   nameWithType: ProjectPropertyGroupElement
   fullName: Microsoft.Build.Construction.ProjectPropertyGroupElement
   type: Class
-  summary: "Representerar en PropertyGroup element i ett MSBuild-projekt."
+  summary: Represents a PropertyGroup element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#Properties={Count} Condition={Condition} Label={Label}")]
@@ -61,20 +61,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Lägger till en ny egenskap i Egenskapsgruppen."
-  remarks: "Den här metoden bekvämlighet hämtar en plats i MSBuild DOM baserat på en tumregel."
+  summary: Appends a new property to the property group.
+  remarks: This convenience method picks a location in the MSBuild DOM based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement AddProperty (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "Egenskapens namn."
+      description: The property name.
     - id: unevaluatedValue
       type: System.String
-      description: "Egenskapsvärdet."
+      description: The property value.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "Returnerar den nya egenskapen."
+      description: Returns the new property.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.AddProperty*
   exceptions: []
   platform:
@@ -91,12 +91,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hämtar alla underordnade egenskaper."
+  summary: Gets all child properties.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyElement> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyElement}
-      description: "Returnerar alla underordnade egenskaper."
+      description: Returns all child properties.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.Properties*
   exceptions: []
   platform:
@@ -113,12 +113,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hämtar alla underordnade egenskaper, från och med den sista underordnat."
+  summary: Gets all child properties, starting with the last child.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyElement> PropertiesReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyElement}
-      description: "Returnerar alla underordnade egenskaper, från och med den sista underordnat."
+      description: Returns all child properties, starting with the last child.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.PropertiesReversed*
   exceptions: []
   platform:
@@ -135,19 +135,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Uppdaterar värdet för den angivna egenskapen i Egenskapsgruppen."
+  summary: Updates the value of the given property in the property group.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement SetProperty (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "Namnet på egenskapen som ska uppdateras."
+      description: The name of the property to be updated.
     - id: unevaluatedValue
       type: System.String
-      description: "Det nya egenskapsvärdet."
+      description: The new property value.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "Returnerar den uppdaterade egenskapen."
+      description: Returns the updated property.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.SetProperty*
   exceptions: []
   platform:

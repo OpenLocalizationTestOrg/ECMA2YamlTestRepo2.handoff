@@ -16,7 +16,7 @@ items:
   nameWithType: SecurityUtilities
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities
   type: Class
-  summary: "Innehåller en uppsättning Hjälpfunktioner manipulera säkerhet upp uppsättningar och signering."
+  summary: Provides a set of utility functions for manipulating security permision sets and signing.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -40,22 +40,22 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Genererar en behörighetsgrupp av computing zonen förvald behörighetsgrupp, ta bort eventuella exkluderade behörigheter och lägga till alla inkluderade behörigheter."
+  summary: Generates a permission set by computing the zone default permission set, removing any excluded permissions, and adding any included permissions.
   syntax:
     content: public static System.Security.PermissionSet ComputeZonePermissionSet (string targetZone, System.Security.PermissionSet includedPermissionSet, string[] excludedPermissions);
     parameters:
     - id: targetZone
       type: System.String
-      description: "Anger en zon standardbehörighetsgrupp, som hämtas från datorprincipen. Valid values are <xref uid=&quot;langword_csharp_Internet&quot; name=&quot;Internet&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_LocalIntranet&quot; name=&quot;LocalIntranet&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_Custom&quot; name=&quot;Custom&quot; href=&quot;&quot;></xref>. Om <xref uid=&quot;langword_csharp_Custom&quot; name=&quot;Custom&quot; href=&quot;&quot;> </xref> anges genererade behörighetsgrupp baseras bara på den `includedPermissionSet` parameter."
+      description: Specifies a zone default permission set, which is obtained from machine policy. Valid values are <xref uid="langword_csharp_Internet" name="Internet" href=""></xref>, <xref uid="langword_csharp_LocalIntranet" name="LocalIntranet" href=""></xref>, or <xref uid="langword_csharp_Custom" name="Custom" href=""></xref>. If <xref uid="langword_csharp_Custom" name="Custom" href=""></xref> is specified, the generated permission set is based only on the `includedPermissionSet` parameter.
     - id: includedPermissionSet
       type: System.Security.PermissionSet
-      description: "En <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*>objekt som innehåller uppsättningen behörigheter som uttryckligen ska ingå i den genererade behörighetsgruppen.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*> Behörigheter som anges i den här parametern inkluderas verbatim i den genererade behörighetsgruppen oavsett `targetZone` eller `excludedPermissions` parametrar."
+      description: A <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*> object containing the set of permissions to be explicitly included in the generated permission set. Permissions specified in this parameter will be included verbatim in the generated permission set, regardless of `targetZone` or `excludedPermissions` parameters.
     - id: excludedPermissions
       type: System.String[]
-      description: "Ange en strängmatris behörighet identitet som ska undantas från zonen behörighet. Behörighet identitet strängar kan beräknas med hjälp av den <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*>metoden.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*> Den här parametern ignoreras om `targetZone` är inte <xref uid=&quot;langword_csharp_Internet&quot; name=&quot;Internet&quot; href=&quot;&quot;> </xref> eller <xref uid=&quot;langword_csharp_LocalIntranet&quot; name=&quot;LocalIntranet&quot; href=&quot;&quot;> </xref>."
+      description: An array of permission identity strings to be excluded from the zone default permission set. Permission identity strings can be computed using the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*> method. This parameter is ignored if `targetZone` is not <xref uid="langword_csharp_Internet" name="Internet" href=""></xref> or <xref uid="langword_csharp_LocalIntranet" name="LocalIntranet" href=""></xref>.
     return:
       type: System.Security.PermissionSet
-      description: "Returnerar genererade behörighet."
+      description: Returns the generated permission set.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.ComputeZonePermissionSet*
   exceptions: []
   platform:
@@ -72,16 +72,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Konverterar en strängmatris behörighet identiteten för en behörighet Ange objekt."
+  summary: Converts an array of permission identity strings to a permission set object.
   syntax:
     content: public static System.Security.PermissionSet IdentityListToPermissionSet (string[] ids);
     parameters:
     - id: ids
       type: System.String[]
-      description: "En strängmatris behörighet identitet."
+      description: An array of permission identity strings.
     return:
       type: System.Security.PermissionSet
-      description: "Returnerar den konvertera behörighetsgruppen."
+      description: Returns the converted permission set.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.IdentityListToPermissionSet*
   exceptions: []
   platform:
@@ -98,16 +98,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Konverterar en behörighetsuppsättning objekt till en matris med behörighet identitet strängar."
+  summary: Converts a permission set object to an array of permission identity strings.
   syntax:
     content: public static string[] PermissionSetToIdentityList (System.Security.PermissionSet permissionSet);
     parameters:
     - id: permissionSet
       type: System.Security.PermissionSet
-      description: "Den inkommande behörighetsgrupp som ska konverteras."
+      description: The input permission set to be converted.
     return:
       type: System.String[]
-      description: "Returnerar en matris med behörighet identitet strängar."
+      description: Returns an array of permission identity strings.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*
   exceptions: []
   platform:
@@ -124,20 +124,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Signerar en ClickOnce manifest eller PE-fil."
-  remarks: "Den här funktionen kan bara logga en PE-fil om parametern X509Certificate2 representerar ett certifikat i det personliga certifikatarkivet för den aktuella användaren.       Den här överlagringen för metoden anropar SignTool.exe och därför kräver den [!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)] som ska installeras."
+  summary: Signs a ClickOnce manifest or PE file.
+  remarks: "This function can only sign a PE file if the X509Certificate2 parameter represents a certificate in the current user's personal certificate store.  \n  \n This overload of the method calls SignTool.exe and therefore requires the [!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)] to be installed."
   syntax:
     content: public static void SignFile (System.Security.Cryptography.X509Certificates.X509Certificate2 cert, Uri timestampUrl, string path);
     parameters:
     - id: cert
       type: System.Security.Cryptography.X509Certificates.X509Certificate2
-      description: "Certifikatet som används för att signera filen."
+      description: The certificate to be used to sign the file.
     - id: timestampUrl
       type: System.Uri
-      description: "Anger att filen är tidsstämplad av tidsstämpelservern på den angivna adressen för HTTP. Den här parametern kan vara NULL om du inte vill att en tidsstämpel."
+      description: Indicates that the file is to be timestamped by the timestamp server at the specified HTTP address. This parameter can be NULL if you do not want a timestamp.
     - id: path
       type: System.String
-      description: "Namnet på filen för att logga in."
+      description: The name of the file to sign.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile*
   exceptions: []
   platform:
@@ -154,20 +154,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Signerar en ClickOnce manifest eller PE-fil."
-  remarks: "Den här överlagringen för metoden anropar SignTool.exe och därför kräver den [!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)] som ska installeras."
+  summary: Signs a ClickOnce manifest or PE file.
+  remarks: This overload of the method calls SignTool.exe and therefore requires the [!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)] to be installed.
   syntax:
     content: public static void SignFile (string certThumbprint, Uri timestampUrl, string path);
     parameters:
     - id: certThumbprint
       type: System.String
-      description: "Anger det tumavtryck som SHA1-hashen för signeringscertifikatet, som sparas i det personliga certifikatarkivet."
+      description: Specifies the thumbprint, which is the SHA1 hash of the signing certificate, which is kept in your personal certificate store.
     - id: timestampUrl
       type: System.Uri
-      description: "Anger att filen är tidsstämplad av tidsstämpelservern på den angivna adressen för HTTP. Den här parametern kan vara NULL om du inte vill att en tidsstämpel."
+      description: Indicates that the file is to be timestamped by the timestamp server at the specified HTTP address. This parameter can be NULL if you do not want a timestamp.
     - id: path
       type: System.String
-      description: "Namnet på filen för att logga in."
+      description: The name of the file to sign.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile*
   exceptions: []
   platform:
@@ -184,23 +184,23 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Signerar ett ClickOnce-manifest."
-  remarks: "Den här funktionen är endast för en manifestfil, inte en PE-signering."
+  summary: Signs a ClickOnce manifest.
+  remarks: This function is only for signing a manifest, not a PE file.
   syntax:
     content: public static void SignFile (string certPath, System.Security.SecureString certPassword, Uri timestampUrl, string path);
     parameters:
     - id: certPath
       type: System.String
-      description: "Certifikatet som används för att signera filen. Certifikatet måste innehålla en privat nyckel. Den <xref uid=&quot;langword_csharp_KeyUsage&quot; name=&quot;KeyUsage&quot; href=&quot;&quot;> </xref> tillägget är valfritt, men om det är närvarande, <xref uid=&quot;langword_csharp_DigitalSignature&quot; name=&quot;DigitalSignature&quot; href=&quot;&quot;> </xref> måste anges till <xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;> </xref>. Den <xref uid=&quot;langword_csharp_EnhancedKeyUsage&quot; name=&quot;EnhancedKeyUsage&quot; href=&quot;&quot;> </xref> tillägget också är valfritt, men om den finns, måste certifikatet innehålla stöd för objekt-ID (OID)."
+      description: The certificate to be used to sign the file. The certificate must contain a private key. The <xref uid="langword_csharp_KeyUsage" name="KeyUsage" href=""></xref> extension is optional, but if it is present, <xref uid="langword_csharp_DigitalSignature" name="DigitalSignature" href=""></xref> must be set to <xref uid="langword_csharp_True" name="True" href=""></xref>. The <xref uid="langword_csharp_EnhancedKeyUsage" name="EnhancedKeyUsage" href=""></xref> extension is also optional, but if it is present, the certificate must contain object identifier (OID) support.
     - id: certPassword
       type: System.Security.SecureString
-      description: "Lösenord för certifikatet."
+      description: The certificate password.
     - id: timestampUrl
       type: System.Uri
-      description: "Anger att filen är tidsstämplad av tidsstämpelservern på den angivna adressen för HTTP. Den här parametern kan vara NULL om du inte vill att en tidsstämpel."
+      description: Indicates that the file is to be timestamped by the timestamp server at the specified HTTP address. This parameter can be NULL if you do not want a timestamp.
     - id: path
       type: System.String
-      description: "Namnet på filen för att logga in."
+      description: The name of the file to sign.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile*
   exceptions: []
   platform:
@@ -217,17 +217,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Konverterar ett XML-element i en behörighetsgrupp Ange objekt."
-  remarks: "Konverterar ett <xref:System.Xml.XmlElement>objekt till ett <xref:System.Security.PermissionSet>objekt.</xref:System.Security.PermissionSet> </xref:System.Xml.XmlElement>"
+  summary: Converts an XML element to a permission set object.
+  remarks: Converts an <xref:System.Xml.XmlElement> object to a <xref:System.Security.PermissionSet> object.
   syntax:
     content: public static System.Security.PermissionSet XmlToPermissionSet (System.Xml.XmlElement element);
     parameters:
     - id: element
       type: System.Xml.XmlElement
-      description: "En XML-representation av behörighet."
+      description: An XML representation of the permission set.
     return:
       type: System.Security.PermissionSet
-      description: "Konverterade behörighetsgrupp objekt."
+      description: The converted permission set object.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.XmlToPermissionSet*
   exceptions: []
   platform:

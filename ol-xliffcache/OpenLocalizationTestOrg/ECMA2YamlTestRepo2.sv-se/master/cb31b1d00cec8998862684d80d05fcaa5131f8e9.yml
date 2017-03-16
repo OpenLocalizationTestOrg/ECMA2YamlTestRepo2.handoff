@@ -21,7 +21,7 @@ items:
   nameWithType: BuildWarningEventArgs
   fullName: Microsoft.Build.Framework.BuildWarningEventArgs
   type: Class
-  summary: "Tillhandahåller data för den <xref href=&quot;Microsoft.Build.Framework.IEventSource.WarningRaised&quot;> </xref> händelse."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.WarningRaised"></xref> event.
   remarks: 'WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a promise to never change the type''s fields i.e. the type is immutable; adding new fields in the next version of the type without following certain special FX guidelines, can break both forward and backward compatibility'
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -53,7 +53,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initierar en ny instans av den <xref href=&quot;Microsoft.Build.Framework.BuildWarningEventArgs&quot;> </xref> klass."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildWarningEventArgs"></xref> class.
   syntax:
     content: protected BuildWarningEventArgs ();
     parameters: []
@@ -73,40 +73,40 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initializes a new instance of the <xref href=&quot;Microsoft.Build.Framework.BuildWarningEventArgs&quot;></xref> class with the specified <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, and <>*> values."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildWarningEventArgs"></xref> class with the specified <xref:Microsoft.Build.Framework.BuildWarningEventArgs.SubCategory*>, <xref:Microsoft.Build.Framework.BuildWarningEventArgs.Code*>, <xref:Microsoft.Build.Framework.BuildWarningEventArgs.File*>, <xref:Microsoft.Build.Framework.BuildWarningEventArgs.LineNumber*>, <xref:Microsoft.Build.Framework.BuildWarningEventArgs.ColumnNumber*>, <xref:Microsoft.Build.Framework.BuildWarningEventArgs.EndLineNumber*>, <xref:Microsoft.Build.Framework.BuildWarningEventArgs.EndColumnNumber*>, <xref:Microsoft.Build.Framework.BuildEventArgs.Message*>, <xref:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword*>, and <xref:Microsoft.Build.Framework.BuildEventArgs.SenderName*> values.
   syntax:
     content: public BuildWarningEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName);
     parameters:
     - id: subcategory
       type: System.String
-      description: "Anpassade underkategori för händelsen."
+      description: The custom subcategory of the event.
     - id: code
       type: System.String
-      description: "Varning-koden för händelsen."
+      description: The warning code of the event.
     - id: file
       type: System.String
-      description: "Namnet på den fil som associeras med händelsen."
+      description: The name of the file associated with the event.
     - id: lineNumber
       type: System.Int32
-      description: "Radnumret som motsvarar början av avsnitt kod som händelsen."
+      description: The line number that corresponds to the beginning of the section of code that raised the event.
     - id: columnNumber
       type: System.Int32
-      description: "Det kolumnnummer som motsvarar början av avsnitt kod som händelsen."
+      description: The column number that corresponds to the beginning of the section of code that raised the event.
     - id: endLineNumber
       type: System.Int32
-      description: "Radnumret som motsvarar slutet av avsnittet kod som händelsen."
+      description: The line number that corresponds to the end of the section of code that raised the event.
     - id: endColumnNumber
       type: System.Int32
-      description: "Det kolumnnummer som motsvarar slutet av avsnittet kod som händelsen."
+      description: The column number that corresponds to the end of the section of code that raised the event.
     - id: message
       type: System.String
-      description: "Texten för händelsen."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Hjälp-nyckelord som associeras med händelsen."
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "Källan för händelsen."
+      description: The source of the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.#ctor*
   exceptions: []
   platform:
@@ -123,43 +123,43 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Den här konstruktorn kan tidsstämpel anges"
+  summary: This constructor allows timestamp to be set
   syntax:
     content: public BuildWarningEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, DateTime eventTimestamp);
     parameters:
     - id: subcategory
       type: System.String
-      description: "underkategori för händelse"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "händelsekod"
+      description: event code
     - id: file
       type: System.String
-      description: "filen är associerad med händelsen"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "radnumret (0 om det inte är tillämpligt)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "kolumnnumret (0 om det inte är tillämpligt)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "End radnummer (0 om det inte är tillämpligt)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "Avsluta kolumnnumret (0 om det inte är tillämpligt)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "textmeddelande"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "nyckelord för hjälp"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "namnet på händelseavsändare"
+      description: name of event sender
     - id: eventTimestamp
       type: System.DateTime
-      description: "anpassade tidsstämpel för händelsen"
+      description: custom timestamp for the event
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.#ctor*
   exceptions: []
   platform:
@@ -176,46 +176,46 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Den här konstruktorn kan tidsstämpel anges"
+  summary: This constructor allows timestamp to be set
   syntax:
     content: public BuildWarningEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: subcategory
       type: System.String
-      description: "underkategori för händelse"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "händelsekod"
+      description: event code
     - id: file
       type: System.String
-      description: "filen är associerad med händelsen"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "radnumret (0 om det inte är tillämpligt)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "kolumnnumret (0 om det inte är tillämpligt)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "End radnummer (0 om det inte är tillämpligt)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "Avsluta kolumnnumret (0 om det inte är tillämpligt)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "textmeddelande"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "nyckelord för hjälp"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "namnet på händelseavsändare"
+      description: name of event sender
     - id: eventTimestamp
       type: System.DateTime
-      description: "anpassade tidsstämpel för händelsen"
+      description: custom timestamp for the event
     - id: messageArgs
       type: System.Object[]
-      description: "Meddelandeargument"
+      description: message arguments
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.#ctor*
   exceptions: []
   platform:
@@ -232,12 +232,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar varning koden för händelsen."
+  summary: Gets the warning code of the event.
   syntax:
     content: public string Code { get; }
     return:
       type: System.String
-      description: "Varning-koden för händelsen."
+      description: The warning code of the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.Code*
   exceptions: []
   platform:
@@ -254,7 +254,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar det kolumnnummer som motsvarar början av avsnitt kod som händelsen."
+  summary: Gets the column number that corresponds to the beginning of the section of code that raised the event.
   remarks: ''
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -262,7 +262,7 @@ items:
     content: public int ColumnNumber { get; }
     return:
       type: System.Int32
-      description: "Det kolumnnummer som motsvarar början av avsnitt kod som händelsen."
+      description: The column number that corresponds to the beginning of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.ColumnNumber*
   exceptions: []
   platform:
@@ -279,12 +279,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar det kolumnnummer som motsvarar slutet av avsnittet kod som händelsen."
+  summary: Gets the column number that corresponds to the end of the section of code that raised the event.
   syntax:
     content: public int EndColumnNumber { get; }
     return:
       type: System.Int32
-      description: "Det kolumnnummer som motsvarar slutet av avsnittet kod som händelsen."
+      description: The column number that corresponds to the end of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.EndColumnNumber*
   exceptions: []
   platform:
@@ -301,12 +301,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar numret som motsvarar slutet av avsnittet kod som händelsen."
+  summary: Gets the line number that corresponds to the end of the section of code that raised the event.
   syntax:
     content: public int EndLineNumber { get; }
     return:
       type: System.Int32
-      description: "Radnumret som motsvarar slutet av avsnittet kod som händelsen."
+      description: The line number that corresponds to the end of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.EndLineNumber*
   exceptions: []
   platform:
@@ -323,7 +323,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar namnet på den fil som händelsen."
+  summary: Gets the name of the file that raised the event.
   remarks: ''
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -331,7 +331,7 @@ items:
     content: public string File { get; }
     return:
       type: System.String
-      description: "Namnet på den fil som händelsen."
+      description: The name of the file that raised the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.File*
   exceptions: []
   platform:
@@ -348,7 +348,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar numret som motsvarar början av avsnitt kod som händelsen."
+  summary: Gets the line number that corresponds to the beginning of the section of code that raised the event.
   remarks: ''
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -356,7 +356,7 @@ items:
     content: public int LineNumber { get; }
     return:
       type: System.Int32
-      description: "Radnumret som motsvarar början av avsnitt kod som händelsen."
+      description: The line number that corresponds to the beginning of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.LineNumber*
   exceptions: []
   platform:
@@ -373,12 +373,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar eller anger projektet som skapade när meddelandet skickades ut."
+  summary: Gets or sets the project which was building when the message was issued.
   syntax:
     content: public string ProjectFile { get; set; }
     return:
       type: System.String
-      description: "Returnerar projektet som skapade när meddelandet skickades ut."
+      description: Returns the project which was building when the message was issued.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.ProjectFile*
   exceptions: []
   platform:
@@ -395,12 +395,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hämtar anpassade underkategori för händelsen."
+  summary: Gets the custom subcategory of the event.
   syntax:
     content: public string Subcategory { get; }
     return:
       type: System.String
-      description: "Anpassade underkategori för händelsen."
+      description: The custom subcategory of the event.
   overload: Microsoft.Build.Framework.BuildWarningEventArgs.Subcategory*
   exceptions: []
   platform:
