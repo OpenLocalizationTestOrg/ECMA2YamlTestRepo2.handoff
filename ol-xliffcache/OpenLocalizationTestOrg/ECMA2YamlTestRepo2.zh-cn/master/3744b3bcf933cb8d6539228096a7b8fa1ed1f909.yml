@@ -16,7 +16,7 @@ items:
   nameWithType: SecurityUtilities
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities
   type: Class
-  summary: "用于操作安全权限集和签名，提供了一套实用工具函数。"
+  summary: Provides a set of utility functions for manipulating security permision sets and signing.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -40,22 +40,22 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "生成的权限通过计算区域默认权限集中、 删除任何已排除的权限，以及添加任何包括的权限集。"
+  summary: Generates a permission set by computing the zone default permission set, removing any excluded permissions, and adding any included permissions.
   syntax:
     content: public static System.Security.PermissionSet ComputeZonePermissionSet (string targetZone, System.Security.PermissionSet includedPermissionSet, string[] excludedPermissions);
     parameters:
     - id: targetZone
       type: System.String
-      description: "指定区域默认权限集中，可从计算机策略中获得。 Valid values are <xref uid=&quot;langword_csharp_Internet&quot; name=&quot;Internet&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_LocalIntranet&quot; name=&quot;LocalIntranet&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_Custom&quot; name=&quot;Custom&quot; href=&quot;&quot;></xref>. 如果<xref uid=&quot;langword_csharp_Custom&quot; name=&quot;Custom&quot; href=&quot;&quot;></xref>指定，则生成的权限集仅基于`includedPermissionSet`参数。"
+      description: Specifies a zone default permission set, which is obtained from machine policy. Valid values are <xref uid="langword_csharp_Internet" name="Internet" href=""></xref>, <xref uid="langword_csharp_LocalIntranet" name="LocalIntranet" href=""></xref>, or <xref uid="langword_csharp_Custom" name="Custom" href=""></xref>. If <xref uid="langword_csharp_Custom" name="Custom" href=""></xref> is specified, the generated permission set is based only on the `includedPermissionSet` parameter.
     - id: includedPermissionSet
       type: System.Security.PermissionSet
-      description: "A<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*>对象，其中包含组的权限来显式包含在生成的权限集。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*> 此参数中指定的权限将逐字包含在生成的权限集，而不考虑`targetZone`或`excludedPermissions`参数。"
+      description: A <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*> object containing the set of permissions to be explicitly included in the generated permission set. Permissions specified in this parameter will be included verbatim in the generated permission set, regardless of `targetZone` or `excludedPermissions` parameters.
     - id: excludedPermissions
       type: System.String[]
-      description: "设置要从区域默认权限排除的权限标识字符串数组。 可以使用计算权限标识字符串<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*>方法。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*> 如果忽略此参数`targetZone`不<xref uid=&quot;langword_csharp_Internet&quot; name=&quot;Internet&quot; href=&quot;&quot;></xref>或<xref uid=&quot;langword_csharp_LocalIntranet&quot; name=&quot;LocalIntranet&quot; href=&quot;&quot;> </xref>。"
+      description: An array of permission identity strings to be excluded from the zone default permission set. Permission identity strings can be computed using the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*> method. This parameter is ignored if `targetZone` is not <xref uid="langword_csharp_Internet" name="Internet" href=""></xref> or <xref uid="langword_csharp_LocalIntranet" name="LocalIntranet" href=""></xref>.
     return:
       type: System.Security.PermissionSet
-      description: "返回生成的权限集。"
+      description: Returns the generated permission set.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.ComputeZonePermissionSet*
   exceptions: []
   platform:
@@ -72,16 +72,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "将为权限的权限标识字符串数组集对象。"
+  summary: Converts an array of permission identity strings to a permission set object.
   syntax:
     content: public static System.Security.PermissionSet IdentityListToPermissionSet (string[] ids);
     parameters:
     - id: ids
       type: System.String[]
-      description: "权限标识字符串数组。"
+      description: An array of permission identity strings.
     return:
       type: System.Security.PermissionSet
-      description: "返回转换后的权限集。"
+      description: Returns the converted permission set.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.IdentityListToPermissionSet*
   exceptions: []
   platform:
@@ -98,16 +98,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "将权限集对象到数组的权限标识字符串。"
+  summary: Converts a permission set object to an array of permission identity strings.
   syntax:
     content: public static string[] PermissionSetToIdentityList (System.Security.PermissionSet permissionSet);
     parameters:
     - id: permissionSet
       type: System.Security.PermissionSet
-      description: "设置要转换的输入的权限。"
+      description: The input permission set to be converted.
     return:
       type: System.String[]
-      description: "返回数组的权限标识字符串。"
+      description: Returns an array of permission identity strings.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList*
   exceptions: []
   platform:
@@ -124,20 +124,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "对 ClickOnce 清单或 PE 文件进行签名。"
-  remarks: "如果 X509Certificate2 参数表示当前用户的个人证书存储中的证书，则此函数可以仅对签名的 PE 文件。       此重载的方法调用 SignTool.exe，因此需要[!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)]安装。"
+  summary: Signs a ClickOnce manifest or PE file.
+  remarks: "This function can only sign a PE file if the X509Certificate2 parameter represents a certificate in the current user's personal certificate store.  \n  \n This overload of the method calls SignTool.exe and therefore requires the [!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)] to be installed."
   syntax:
     content: public static void SignFile (System.Security.Cryptography.X509Certificates.X509Certificate2 cert, Uri timestampUrl, string path);
     parameters:
     - id: cert
       type: System.Security.Cryptography.X509Certificates.X509Certificate2
-      description: "要用于对文件进行签名的证书。"
+      description: The certificate to be used to sign the file.
     - id: timestampUrl
       type: System.Uri
-      description: "指示该文件将由位于指定 HTTP 地址的时间戳服务器加盖时间戳。 如果您不希望时间戳，则此参数可以为 NULL。"
+      description: Indicates that the file is to be timestamped by the timestamp server at the specified HTTP address. This parameter can be NULL if you do not want a timestamp.
     - id: path
       type: System.String
-      description: "要签名的文件的名称。"
+      description: The name of the file to sign.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile*
   exceptions: []
   platform:
@@ -154,20 +154,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "对 ClickOnce 清单或 PE 文件进行签名。"
-  remarks: "此重载的方法调用 SignTool.exe，因此需要[!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)]安装。"
+  summary: Signs a ClickOnce manifest or PE file.
+  remarks: This overload of the method calls SignTool.exe and therefore requires the [!INCLUDE[dnprdnlong](~/add/includes/dnprdnlong-md.md)] to be installed.
   syntax:
     content: public static void SignFile (string certThumbprint, Uri timestampUrl, string path);
     parameters:
     - id: certThumbprint
       type: System.String
-      description: "指定的指纹，这是保留在你的个人证书存储的签名证书的 SHA1 哈希。"
+      description: Specifies the thumbprint, which is the SHA1 hash of the signing certificate, which is kept in your personal certificate store.
     - id: timestampUrl
       type: System.Uri
-      description: "指示该文件将由位于指定 HTTP 地址的时间戳服务器加盖时间戳。 如果您不希望时间戳，则此参数可以为 NULL。"
+      description: Indicates that the file is to be timestamped by the timestamp server at the specified HTTP address. This parameter can be NULL if you do not want a timestamp.
     - id: path
       type: System.String
-      description: "要签名的文件的名称。"
+      description: The name of the file to sign.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile*
   exceptions: []
   platform:
@@ -184,23 +184,23 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "对 ClickOnce 清单进行签名。"
-  remarks: "此函数是仅对清单进行签名，不是 PE 文件。"
+  summary: Signs a ClickOnce manifest.
+  remarks: This function is only for signing a manifest, not a PE file.
   syntax:
     content: public static void SignFile (string certPath, System.Security.SecureString certPassword, Uri timestampUrl, string path);
     parameters:
     - id: certPath
       type: System.String
-      description: "要用于对文件进行签名的证书。 证书必须包含私钥。 <xref uid=&quot;langword_csharp_KeyUsage&quot; name=&quot;KeyUsage&quot; href=&quot;&quot;> </xref>扩展名是可选的但如果它存在， <xref uid=&quot;langword_csharp_DigitalSignature&quot; name=&quot;DigitalSignature&quot; href=&quot;&quot;> </xref>必须设置为<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;> </xref>。 <xref uid=&quot;langword_csharp_EnhancedKeyUsage&quot; name=&quot;EnhancedKeyUsage&quot; href=&quot;&quot;> </xref>扩展名也是可选的但如果存在，则证书必须包含对象标识符 (OID) 支持。"
+      description: The certificate to be used to sign the file. The certificate must contain a private key. The <xref uid="langword_csharp_KeyUsage" name="KeyUsage" href=""></xref> extension is optional, but if it is present, <xref uid="langword_csharp_DigitalSignature" name="DigitalSignature" href=""></xref> must be set to <xref uid="langword_csharp_True" name="True" href=""></xref>. The <xref uid="langword_csharp_EnhancedKeyUsage" name="EnhancedKeyUsage" href=""></xref> extension is also optional, but if it is present, the certificate must contain object identifier (OID) support.
     - id: certPassword
       type: System.Security.SecureString
-      description: "证书密码。"
+      description: The certificate password.
     - id: timestampUrl
       type: System.Uri
-      description: "指示该文件将由位于指定 HTTP 地址的时间戳服务器加盖时间戳。 如果您不希望时间戳，则此参数可以为 NULL。"
+      description: Indicates that the file is to be timestamped by the timestamp server at the specified HTTP address. This parameter can be NULL if you do not want a timestamp.
     - id: path
       type: System.String
-      description: "要签名的文件的名称。"
+      description: The name of the file to sign.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile*
   exceptions: []
   platform:
@@ -217,17 +217,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "将 XML 元素为权限集对象。"
-  remarks: "将转换<xref:System.Xml.XmlElement>对象传递给<xref:System.Security.PermissionSet>对象。</xref:System.Security.PermissionSet> </xref:System.Xml.XmlElement>"
+  summary: Converts an XML element to a permission set object.
+  remarks: Converts an <xref:System.Xml.XmlElement> object to a <xref:System.Security.PermissionSet> object.
   syntax:
     content: public static System.Security.PermissionSet XmlToPermissionSet (System.Xml.XmlElement element);
     parameters:
     - id: element
       type: System.Xml.XmlElement
-      description: "权限集的 XML 表示形式。"
+      description: An XML representation of the permission set.
     return:
       type: System.Security.PermissionSet
-      description: "转换后的权限集的对象。"
+      description: The converted permission set object.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.XmlToPermissionSet*
   exceptions: []
   platform:

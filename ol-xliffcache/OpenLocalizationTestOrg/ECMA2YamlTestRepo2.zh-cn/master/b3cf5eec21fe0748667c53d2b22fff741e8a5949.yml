@@ -13,7 +13,7 @@ items:
   nameWithType: LoggerDescription
   fullName: Microsoft.Build.Logging.LoggerDescription
   type: Class
-  summary: "包含有关记录器作为可以用来实例化记录器并且可以序列化不同进程之间传递的值的集合的信息。"
+  summary: Contains information about a logger as a collection of values that can be used to instantiate the logger and can be serialized to be passed between different processes.
   syntax:
     content: public class LoggerDescription
   inheritance:
@@ -34,25 +34,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "从给定的数据创建记录器说明。"
+  summary: Creates a logger description from the given data.
   syntax:
     content: public LoggerDescription (string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, Microsoft.Build.Framework.LoggerVerbosity verbosity);
     parameters:
     - id: loggerClassName
       type: System.String
-      description: "记录器类名。"
+      description: The class name of the logger.
     - id: loggerAssemblyName
       type: System.String
-      description: "实现记录器程序集名称。"
+      description: The assembly name that implements the logger.
     - id: loggerAssemblyFile
       type: System.String
-      description: "实现记录器程序集文件。"
+      description: The assembly file that implements the logger.
     - id: loggerSwitchParameters
       type: System.String
-      description: "记录器的开关参数。"
+      description: Switch parameters for the logger.
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "详细级别。"
+      description: The verbosity level.
   overload: Microsoft.Build.Logging.LoggerDescription.#ctor*
   exceptions: []
   platform:
@@ -69,14 +69,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "根据此说明中的数据创建 ILogger 实例。"
-  remarks: "如果的数据无效，则此方法可能会引发各种反射异常。 它负责处理这些异常，如果需要在调用方。"
+  summary: Creates an ILogger instance from the data in this description.
+  remarks: This method may throw a variety of reflection exceptions if the data is invalid. It is the resposibility of the caller to handle these exceptions if desired.
   syntax:
     content: public Microsoft.Build.Framework.ILogger CreateLogger ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: "此说明中的数据返回 ILogger 实例。"
+      description: Returns an ILogger instance from the data in this description.
   overload: Microsoft.Build.Logging.LoggerDescription.CreateLogger*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "获取记录器参数的字符串。"
+  summary: Gets the string of logger parameters.
   syntax:
     content: public string LoggerSwitchParameters { get; }
     return:
       type: System.String
-      description: "返回记录器参数的字符串。  如果没有参数，返回 null。"
+      description: Returns the string of logger parameters.  Returns null if there are no parameters.
   overload: Microsoft.Build.Logging.LoggerDescription.LoggerSwitchParameters*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "返回此记录器详细级别。"
-  remarks: "对于命令行显示所有记录器都获取相同的详细级别。"
+  summary: Returns the verbosity level for this logger.
+  remarks: For command line display, all loggers get the same verbosity level.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "要添加。"
+      description: To be added.
   overload: Microsoft.Build.Logging.LoggerDescription.Verbosity*
   exceptions: []
   platform:

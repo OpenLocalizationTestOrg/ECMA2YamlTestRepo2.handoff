@@ -59,8 +59,8 @@ items:
   nameWithType: ProjectInstance
   fullName: Microsoft.Build.Execution.ProjectInstance
   type: Class
-  summary: "表示一个项目实例。"
-  remarks: "克隆项目时，将导致此类的实例。 构造函数是内部以要求用户从现有的项目创建项目实例。       新项目实例是不可变，，区别在于实例项可以在其中添加，并且在其上设置实例属性。 项目实例很有用，因为它们会修改并生成若干次，而不影响原始的项目。       允许此类或任意位置及其各组成部分的任何引用了<xref:Microsoft.Build.Construction>或<xref:Microsoft.Build.Evaluation>对象。</xref:Microsoft.Build.Evaluation> </xref:Microsoft.Build.Construction>       不公开项目实例目标、 主机服务和任务注册表。"
+  summary: Represents a project instance.
+  remarks: "Instances of this class result when a project is cloned. Constructors are internal in order to require users to create project instances from existing projects.  \n  \n New project instances are immutable, except that instance items can be added to them and instance properties set on them. Project instances are useful because they can be modified and built several times without disturbing the original project.  \n  \n Neither this class nor any of its constituents is allowed to have references to <xref:Microsoft.Build.Construction> or <xref:Microsoft.Build.Evaluation> objects.  \n  \n Project instance targets, host services, and the task registry are not exposed."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{FullPath} #Targets={TargetsCount} DefaultTargets={(DefaultTargets == null) ? System.String.Empty : System.String.Join(";", DefaultTargets.ToArray())} ToolsVersion={Toolset.ToolsVersion} InitialTargets={(InitialTargets == null) ? System.String.Empty : System.String.Join(";", InitialTargets.ToArray())} #GlobalProperties={globalProperties.Count} #Properties={properties.Count} #ItemTypes={items.ItemTypes.Count} #Items={items.Count}")]
@@ -84,14 +84,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "创建一个新的项目实例并从给定的项目根目录位置，使用默认的项目集合对其进行初始化。"
-  remarks: "没有中间<xref:Microsoft.Build.Evaluation.Project>创建对象。</xref:Microsoft.Build.Evaluation.Project> 这是一个项目将无法生成，但不是显示或编辑的情况下很有用。"
+  summary: Creates a new project instance and initializes it from the given project root, using the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "项目根元素。"
+      description: The project root element.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -108,14 +108,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "创建一个新的项目实例并从给定的项目文件，使用默认的项目集合对其进行初始化。"
-  remarks: "没有中间<xref:Microsoft.Build.Evaluation.Project>创建对象。</xref:Microsoft.Build.Evaluation.Project> 这是一个项目将无法生成，但不是显示或编辑的情况下很有用。"
+  summary: Creates a new project instance and initializes it from the given project file, using the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile);
     parameters:
     - id: projectFile
       type: System.String
-      description: "项目文件的名称。"
+      description: The name of the project file.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -132,20 +132,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "创建一个新的项目实例并从给定的项目文件，使用给定的全局属性、 工具版本和默认的项目集合对其进行初始化。"
-  remarks: "没有中间<xref:Microsoft.Build.Evaluation.Project>创建对象。</xref:Microsoft.Build.Evaluation.Project> 这是一个项目将无法生成，但不是显示或编辑的情况下很有用。"
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, and the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: projectFile
       type: System.String
-      description: "项目文件的名称。"
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "要使用的全局属性。"
+      description: The global properties to use.
     - id: toolsVersion
       type: System.String
-      description: "工具版本。"
+      description: The tools version.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -162,23 +162,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "创建一个新的项目实例并从给定的项目根目录位置，使用给定的全局属性、 的工具版本和项目集合对其进行初始化。"
-  remarks: "没有中间<xref:Microsoft.Build.Evaluation.Project>创建对象。</xref:Microsoft.Build.Evaluation.Project> 这是一个项目将无法生成，但不是显示或编辑的情况下很有用。"
+  summary: Creates a new project instance and initializes it from the given project root, using the given global properties, tools version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "项目根元素"
+      description: The project root element
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "要使用的全局属性。 可能为 null。"
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "工具版本。 可能为 null。"
+      description: The tools version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "项目集合"
+      description: Project collection
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -195,23 +195,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "创建一个新的项目实例并从给定的项目文件，使用给定的全局属性、 的工具版本和项目集合对其进行初始化。"
-  remarks: "没有中间<xref:Microsoft.Build.Evaluation.Project>创建对象。</xref:Microsoft.Build.Evaluation.Project> 这是一个项目将无法生成，但不是显示或编辑的情况下很有用。"
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: "项目文件的名称。"
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "要使用的全局属性。 可能为 null。"
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "工具版本。 可能为 null。"
+      description: The tools version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "项目集合"
+      description: Project collection
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -228,26 +228,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "创建一个新的项目实例并从给定的项目根目录位置，使用给定的全局属性、 的工具版本和项目集合对其进行初始化"
-  remarks: "没有中间<xref:Microsoft.Build.Evaluation.Project>创建对象。</xref:Microsoft.Build.Evaluation.Project> 这是一个项目将无法生成，但不是显示或编辑的情况下很有用。"
+  summary: Creates a new project instance and initializes it from the given project root, using the given global properties, tools version, and project collection
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "项目根元素。"
+      description: The project root element.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "要使用的全局属性。 可能为 null。"
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "工具版本。 可能为 null。"
+      description: The tools version. May be null.
     - id: subToolsetVersion
       type: System.String
-      description: "子工具集版本。 可能为 null。"
+      description: The sub toolset version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "项目集合。"
+      description: Project collection.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -264,26 +264,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "创建一个新的项目实例并从给定的项目文件，使用给定的全局属性、 的工具版本、 子工具集版本和项目集合对其进行初始化。"
-  remarks: "没有中间<xref:Microsoft.Build.Evaluation.Project>创建对象。</xref:Microsoft.Build.Evaluation.Project> 这是一个项目将无法生成，但不是显示或编辑的情况下很有用。"
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, sub toolset version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: "项目文件的名称。"
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "要使用的全局属性。 可能为 null。"
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "工具版本。 可能为 null。"
+      description: The tools version. May be null.
     - id: subToolsetVersion
       type: System.String
-      description: "子工具集版本。 可能为 null。"
+      description: The sub toolset version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "项目集合。"
+      description: Project collection.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -300,20 +300,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "将具有任何元数据的项添加到项目。"
-  remarks: "我们不需要 ProjectItemInstance 若要确保我们还没有已由另一个 ProjectInstance 使用。"
+  summary: Adds an item with no metadata to the project.
+  remarks: We don't take a ProjectItemInstance to make sure we don't have one that's already in use by another ProjectInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectItemInstance AddItem (string itemType, string evaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: "要添加的项的项类型。"
+      description: The item type of the item to be added.
     - id: evaluatedInclude
       type: System.String
-      description: "计算的 Include 特性的项。"
+      description: The evaluated Include attribute of the item.
     return:
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "返回新的项。"
+      description: Returns the new item.
   overload: Microsoft.Build.Execution.ProjectInstance.AddItem*
   exceptions: []
   platform:
@@ -330,23 +330,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "将具有给定元数据的项添加到项目。"
-  remarks: "我们不需要 ProjectItemInstance 若要确保我们还没有已由另一个 ProjectInstance 使用。"
+  summary: Adds an item with the given metadata to the project.
+  remarks: We don't take a ProjectItemInstance to make sure we don't have one that's already in use by another ProjectInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectItemInstance AddItem (string itemType, string evaluatedInclude, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: "要添加的项的项类型。"
+      description: The item type of the item to be added.
     - id: evaluatedInclude
       type: System.String
-      description: "计算的 Include 特性的项。"
+      description: The evaluated Include attribute of the item.
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: "项的元数据。"
+      description: The metadata of the item.
     return:
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "返回新的项。"
+      description: Return the new item.
   overload: Microsoft.Build.Execution.ProjectInstance.AddItem*
   exceptions: []
   platform:
@@ -363,13 +363,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用记录器的项目集合生成项目的默认的目标。"
+  summary: Builds the default targets of the project with loggers of the project collection.
   syntax:
     content: public bool Build ();
     parameters: []
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -386,17 +386,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用给定的记录器生成项目的默认目标。"
-  remarks: "如果任何提供的记录器已附加到日志记录服务，则引发 InvalidOperationException。"
+  summary: Builds the default targets of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成的记录器。 可能为 null。"
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -413,20 +413,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用给定的记录器和远程记录器生成项目的默认目标。"
-  remarks: "如果任何提供的记录器已附加到日志记录服务，则引发 InvalidOperationException。"
+  summary: Builds the default targets of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成的记录器。 可能为 null。"
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "要用于生成的远程记录器。 可能为 null。"
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -443,20 +443,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用给定的记录器生成项目的给定的目标。"
-  remarks: "如果任何提供的记录器已附加到日志记录服务，则引发 InvalidOperationException。"
+  summary: Builds the given target of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: target
       type: System.String
-      description: "要生成的目标。 可能为 null。"
+      description: The target to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成的记录器。 可能为 null。"
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -473,20 +473,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用给定的记录器生成项目的给定的目标。"
-  remarks: "如果任何提供的记录器已附加到日志记录服务，则引发 InvalidOperationException。"
+  summary: Builds the given targets of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: "要生成的目标。 可能为 null。"
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成的记录器。 可能为 null。"
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -503,23 +503,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用给定的记录器和远程记录器生成项目的给定的目标。"
-  remarks: "如果任何提供的记录器已附加到日志记录服务，则引发 InvalidOperationException。"
+  summary: Builds the given target of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: target
       type: System.String
-      description: "要生成的目标。 可能为 null。"
+      description: The target to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成的记录器。 可能为 null。"
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "要用于生成的远程记录器。 可能为 null。"
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -536,23 +536,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用指定的记录器生成目标的列表。 目标可能为 null。 记录器可能为 null。"
-  remarks: "如果任何提供的记录器已附加到我们已传递的日志记录服务，将引发 InvalidOperationException。"
+  summary: Build a list of targets with specified loggers. Targets may be null. Loggers may be null.
+  remarks: If any of the loggers supplied are already attached to the logging service we were passed, throws InvalidOperationException.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, out System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.TargetResult> targetOutputs);
     parameters:
     - id: targets
       type: System.String[]
-      description: "要生成的目标的列表。 可能为 null。"
+      description: List of targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成目标的记录器的枚举的列表。"
+      description: Enumerated list of loggers to use for building targets.
     - id: targetOutputs
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.TargetResult}
-      description: "目标生成的输出。"
+      description: Outputs of target builds.
     return:
       type: System.Boolean
-      description: "如果成功，失败 false 则返回 true。"
+      description: Returns true on success, false on failure.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -569,23 +569,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用给定的记录器和远程记录器生成项目的给定的目标。"
-  remarks: "如果任何提供的记录器已附加到日志记录服务，则引发 InvalidOperationException。"
+  summary: Builds the given targets of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: "要生成的目标。 可能为 null。"
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成的记录器。 可能为 null。"
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "要用于生成的远程记录器。 可能为 null。"
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -602,26 +602,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "生成给定的目标与给定的目标输出和使用给定的记录器和远程记录器。"
-  remarks: "如果任何提供的记录器已附加到日志记录服务，则引发 InvalidOperationException。"
+  summary: Builds the given targets with the given target outputs and with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers, out System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.TargetResult> targetOutputs);
     parameters:
     - id: targets
       type: System.String[]
-      description: "要生成的目标。 可能为 null。"
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "要用于生成的记录器。 可能为 null。"
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "要用于生成的远程记录器。 可能为 null。"
+      description: The remote loggers to use for the build. May be null.
     - id: targetOutputs
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.TargetResult}
-      description: "目标输出中。"
+      description: The target outputs.
     return:
       type: System.Boolean
-      description: "如果生成成功，则返回 truefalse 否则为。"
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -638,13 +638,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "在其中创建此项目，所有内容的独立的深层克隆。 克隆具有与原始相同的可变性。 用于编译单个文件或保留生成之间的生成结果很有用。"
+  summary: Creates an independent, deep clone of this project and everything in it. Clone has the same mutability as the original. Useful for compiling a single file or for keeping build results between builds.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance DeepCopy ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "创建此项目独立的深层克隆。"
+      description: Creates an independent, deep clone of this project.
   overload: Microsoft.Build.Execution.ProjectInstance.DeepCopy*
   exceptions: []
   platform:
@@ -661,16 +661,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "使用指定的可变性，创建此项目，所有内容独立的深层克隆。 用于编译单个文件或保留生成之间的生成结果很有用。"
+  summary: Creates an independent, deep clone of this project and everything in it, with specified mutability. Useful for compiling a single file or for keeping build results between builds.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance DeepCopy (bool isImmutable);
     parameters:
     - id: isImmutable
       type: System.Boolean
-      description: "标志，指示克隆可变性。"
+      description: Flag indicating clone mutability.
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "使用指定的可变性返回此项目中，独立的深层克隆。"
+      description: Returns an independent, deep clone of this project, with specified mutability.
   overload: Microsoft.Build.Execution.ProjectInstance.DeepCopy*
   exceptions: []
   platform:
@@ -687,13 +687,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取或设置此项目的默认目标列表。"
-  remarks: "如果未显式不指定任何目标，则会生成默认目标。"
+  summary: Gets or sets the list of default targets for this project.
+  remarks: Default targets are built if no targets are explicitly specified.
   syntax:
     content: public System.Collections.Generic.List<string> DefaultTargets { get; }
     return:
       type: System.Collections.Generic.List{System.String}
-      description: "返回此项目的默认目标的列表。"
+      description: Returns the list of default targets for this project.
   overload: Microsoft.Build.Execution.ProjectInstance.DefaultTargets*
   exceptions: []
   platform:
@@ -710,12 +710,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: '获取项目根目录。 用于相对路径和生成期间设置的当前目录的计算。 永远不会为 null︰ 未从磁盘中加载的项目使用从生成开始时间的当前目录。'
+  summary: 'Gets the project root directory. Used for evaluation of relative paths and setting the current directory during build. Is never null: projects not loaded from disk use the current directory from the time the build started.'
   syntax:
     content: public string Directory { get; }
     return:
       type: System.String
-      description: "返回项目根目录下，从不会是 null。 在生成开始时，未从磁盘中加载的项目返回当前目录。"
+      description: Returns the project root directory, which is never null. Projects not loaded from disk return the current directory at the time the build was started.
   overload: Microsoft.Build.Execution.ProjectInstance.Directory*
   exceptions: []
   platform:
@@ -732,17 +732,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "通过展开项和属性，使用的当前项和可用，然后执行逻辑求值的属性作为条件计算所提供的字符串。"
-  remarks: "这是用于即时窗口。       不会展开裸机元数据表达式。"
+  summary: Evaluates the provided string as a condition by expanding items and properties, using the current items and properties available, then doing a logical evaluation.
+  remarks: "This is useful for the immediate window.  \n  \n Does not expand bare metadata expressions."
   syntax:
     content: public bool EvaluateCondition (string condition);
     parameters:
     - id: condition
       type: System.String
-      description: "要扩展的字符串。"
+      description: The string to be expanded.
     return:
       type: System.Boolean
-      description: "如果字符串的计算结果为 true; 则返回 truefalse 否则为。"
+      description: Returns true if the string evaluates to true; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.EvaluateCondition*
   exceptions: []
   platform:
@@ -759,17 +759,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "通过展开项和属性，使用的当前项和可用的属性的计算结果所提供的字符串。"
-  remarks: "这很有用，对于某些主机，或调试器即时窗口。       不会展开裸机元数据表达式。"
+  summary: Evaluates the provided string by expanding items and properties, using the current items and properties available.
+  remarks: "This is useful for some hosts, or for the debugger immediate window.  \n  \n Does not expand bare metadata expressions."
   syntax:
     content: public string ExpandString (string unexpandedValue);
     parameters:
     - id: unexpandedValue
       type: System.String
-      description: "要扩展的字符串。"
+      description: The string to be expanded.
     return:
       type: System.String
-      description: "返回扩展的字符串值。"
+      description: Returns the expanded string value.
   overload: Microsoft.Build.Execution.ProjectInstance.ExpandString*
   exceptions: []
   platform:
@@ -786,12 +786,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取项目文件的完整路径。 用于日志记录。"
+  summary: Gets the full path to the project file. Used for logging.
   syntax:
     content: public string FullPath { get; }
     return:
       type: System.String
-      description: "返回项目文件的完整路径。 如果该项目永远不会名称为，返回 null。"
+      description: Returns the full path to the project file. Returns null if the project was never named.
   overload: Microsoft.Build.Execution.ProjectInstance.FullPath*
   exceptions: []
   platform:
@@ -808,16 +808,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取转义的计算提供的项定义的 Include 特性的值。"
+  summary: Gets the evaluated, escaped value of the Include attribute of the provided item definition.
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Execution.ProjectItemDefinitionInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemDefinitionInstance
-      description: "要进行计算并转义项定义。"
+      description: The item definition to be evaluated and escaped.
     return:
       type: System.String
-      description: "返回计算转义提供的项定义的 Include 特性的值。"
+      description: Returns the evaluated, escaped value of the Include attribute of the provided item definition.
   overload: Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -834,16 +834,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取所提供的项的 Include 特性的计算，转义值。"
+  summary: Gets the evaluated, escaped value of the Include attribute of the provided item.
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Execution.ProjectItemInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "要计算和转义的项。"
+      description: The item to be evaluated and escaped.
     return:
       type: System.String
-      description: "返回计算转义所提供的项的 Include 特性的值。"
+      description: Returns the evaluated, escaped value of the Include attribute of the provided item.
   overload: Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -860,16 +860,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取指定类型的此项目中的所有项。 这是只读的列表。"
+  summary: Gets all the items in this project of the specified type. This is a read-only list.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemInstance> GetItems (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "要检索的项的项类型。"
+      description: The item type of the items to be retrieved.
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "返回指定类型的此项目中的所有项。 如果不存在，则返回空列表。"
+      description: Returns all the items in this project of the specified type. Returns an empty list if there are none.
   overload: Microsoft.Build.Execution.ProjectInstance.GetItems*
   exceptions: []
   platform:
@@ -886,19 +886,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取指定类型的此项目中的所有项和计算包含值。 这是只读的列表。"
+  summary: Gets all the items in this project of the specified type and evaluated include value. This is a read-only list.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Execution.ProjectItemInstance> GetItemsByItemTypeAndEvaluatedInclude (string itemType, string evaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: "要检索的项的项类型。"
+      description: The item type of the items to be retrieved.
     - id: evaluatedInclude
       type: System.String
-      description: "要检索的项计算的包括成本"
+      description: The evaluated include value of the items to be retrieved
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "返回指定类型的此项目中的所有项和计算包含值。 如果不存在，则返回一个空集合。"
+      description: Returns all the items in this project of the specified type and evaluated include value. Returns an empty collection if there are none.
   overload: Microsoft.Build.Execution.ProjectInstance.GetItemsByItemTypeAndEvaluatedInclude*
   exceptions: []
   platform:
@@ -915,16 +915,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取提供元数据的转义的值。"
+  summary: Gets the escaped value of the provided metadatum.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectMetadataInstance metadatum);
     parameters:
     - id: metadatum
       type: Microsoft.Build.Execution.ProjectMetadataInstance
-      description: "若要对其进行转义元数据。"
+      description: The metadatum to be escaped.
     return:
       type: System.String
-      description: "返回提供的元数据的转义的值。"
+      description: Returns the escaped value of the provided metadatum.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -941,19 +941,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取元数据的转义的值与提供的项定义的提供的名称。"
+  summary: Gets the escaped value of the metadatum with the provided name of the provided item definition.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectItemDefinitionInstance item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemDefinitionInstance
-      description: "要提供元数据值的项定义。"
+      description: The item definition to provide the metadatum value.
     - id: name
       type: System.String
-      description: "元数据名称。"
+      description: The name of the metadatum.
     return:
       type: System.String
-      description: "返回具有提供的名称的提供的项定义的元数据的转义的值。"
+      description: Returns the escaped value of the metadatum with the provided name of the provided item definition.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -970,19 +970,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取具有所提供的名称的元数据的转义的值上提供的项。"
+  summary: Gets the escaped value of the metadatum with the provided name on the provided item.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectItemInstance item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "要提供元数据值的项。"
+      description: The item to provide the metadatum value.
     - id: name
       type: System.String
-      description: "元数据名称。"
+      description: The name of the metadatum.
     return:
       type: System.String
-      description: "返回具有提供的名称的元数据的转义的值上提供的项。"
+      description: Returns the escaped value of the metadatum with the provided name on the provided item.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -999,16 +999,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取具有给定名称的属性。"
+  summary: Get the property with the given name.
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance GetProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "要检索的属性的名称。"
+      description: The name of the property to retrieve.
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "返回具有给定名称的属性。 如果不存在属性具有该名称，返回 null。"
+      description: Returns the property with the given name. Returns null if no property exists with that name.
   overload: Microsoft.Build.Execution.ProjectInstance.GetProperty*
   exceptions: []
   platform:
@@ -1025,17 +1025,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取具有给定名称的属性的值。"
-  remarks: "此方法不区分具有空字符串值的属性和没有具有给定名称的属性。"
+  summary: Get the value of the property with the given name.
+  remarks: This method does not distinguish between a property with a value of empty string and no property with the given name.
   syntax:
     content: public string GetPropertyValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: "要检索其值的属性的名称。"
+      description: The name of the property whose value is to be retrieved.
     return:
       type: System.String
-      description: "返回具有给定名称的属性的值。 如果不存在属性具有该名称，则返回空字符串。 返回的值具有任何转义的字符序列。"
+      description: Returns the value of the property with the given name. Returns an empty string if no property exists with that name. The value returned has no escaped character sequences.
   overload: Microsoft.Build.Execution.ProjectInstance.GetPropertyValue*
   exceptions: []
   platform:
@@ -1052,16 +1052,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取所提供的属性的转义的值。"
+  summary: Get the escaped value of the provided property.
   syntax:
     content: public static string GetPropertyValueEscaped (Microsoft.Build.Execution.ProjectPropertyInstance property);
     parameters:
     - id: property
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "要对其进行转义的属性。"
+      description: The property to be escaped.
     return:
       type: System.String
-      description: "返回所提供的属性的转义的值。"
+      description: Returns the escaped value of the provided property.
   overload: Microsoft.Build.Execution.ProjectInstance.GetPropertyValueEscaped*
   exceptions: []
   platform:
@@ -1078,13 +1078,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "如果有的话，请获取此项目，将使用已计算的全局属性的字典。"
+  summary: Gets the dictionary of global properties this project was evaluated with, if any.
   remarks: "Read only collection.  \n  \n Traverses project references.  \n  \n This is the publicly exposed getter, that translates into a read-only dead IDictionary\\<string, string>."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "返回此项目已使用计算的全局属性的字典。"
+      description: Returns the dictionary of global properties this project was evaluated with.
   overload: Microsoft.Build.Execution.ProjectInstance.GlobalProperties*
   exceptions: []
   platform:
@@ -1101,12 +1101,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "对于项目以及所有其导入，深度优先获取初始目标列表。 在任何其他目标之前，会生成这些目标。"
+  summary: Gets the list of initial targets for the project and all its imports, depth-first. These targets are built before any other targets.
   syntax:
     content: public System.Collections.Generic.List<string> InitialTargets { get; }
     return:
       type: System.Collections.Generic.List{System.String}
-      description: "返回的项目和所有其导入，深度优先的初始目标的列表。"
+      description: Returns the list of initial targets for the project and all its imports, depth-first.
   overload: Microsoft.Build.Execution.ProjectInstance.InitialTargets*
   exceptions: []
   platform:
@@ -1123,12 +1123,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取一个标志，指示项目实例不可变。 创建实例时，将永久设置此标志。"
+  summary: Gets a flag indicating that the project instance is immutable. This flag is set permanently when the instance is created.
   syntax:
     content: public bool IsImmutable { get; }
     return:
       type: System.Boolean
-      description: "返回的标志。"
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.ProjectInstance.IsImmutable*
   exceptions: []
   platform:
@@ -1145,12 +1145,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "在项目中，项类型进行键控中获取项定义一个只读的字典。"
+  summary: Gets a read-only dictionary of the item definitions in the project, keyed by item type.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectItemDefinitionInstance> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectItemDefinitionInstance}
-      description: "在项目中，项类型进行键控返回项定义一个只读的字典。"
+      description: Returns a read-only dictionary of the item definitions in the project, keyed by item type.
   overload: Microsoft.Build.Execution.ProjectInstance.ItemDefinitions*
   exceptions: []
   platform:
@@ -1167,12 +1167,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取此项目中的所有项。"
+  summary: Gets all items in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemInstance> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "返回此项目中的所有项。"
+      description: Returns all items in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Items*
   exceptions: []
   platform:
@@ -1189,12 +1189,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取此项目中的所有项类型。"
+  summary: Gets all item types in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<string> ItemTypes { get; }
     return:
       type: System.Collections.Generic.ICollection{System.String}
-      description: "返回此项目中的所有项类型。"
+      description: Returns all item types in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.ItemTypes*
   exceptions: []
   platform:
@@ -1211,12 +1211,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取原始文件本身的位置。 决不会为 null。"
+  summary: Gets the location of the originating file itself. Never null.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "返回原始文件的位置。 从不返回 null。"
+      description: Returns the location of the originating file. Never returns null.
   overload: Microsoft.Build.Execution.ProjectInstance.ProjectFileLocation*
   exceptions: []
   platform:
@@ -1233,12 +1233,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取此项目中的所有属性。"
+  summary: Gets all properties in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectPropertyInstance> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectPropertyInstance}
-      description: "返回此项目中的所有属性。"
+      description: Returns all properties in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Properties*
   exceptions: []
   platform:
@@ -1255,16 +1255,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "如果存在，请从项目中移除的项。 如果它存在，则返回 false 否则，则返回 true。"
+  summary: Removes an item from the project, if present. Returns true if it was present, false otherwise.
   syntax:
     content: public bool RemoveItem (Microsoft.Build.Execution.ProjectItemInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "要删除的项目。"
+      description: The item to be removed.
     return:
       type: System.Boolean
-      description: "如果该项已在移除; 之前存在，则返回 truefalse 否则为。"
+      description: Returns true if the item was present before removal; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.RemoveItem*
   exceptions: []
   platform:
@@ -1281,16 +1281,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "删除具有给定名称的属性。 如果属性具有值 （可能为空字符串），否则为 false，则返回 true。"
+  summary: Removes a property with the given name. Returns true if the property had a value (possibly empty string), otherwise false.
   syntax:
     content: public bool RemoveProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "要删除的属性名称。"
+      description: The name of the property to be removed.
     return:
       type: System.Boolean
-      description: "如果该属性以前在移除; 之前的值 （可能是空字符串），则返回 truefalse 否则为。"
+      description: Returns true if the property had a value (possibly an empty string) before removal; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.RemoveProperty*
   exceptions: []
   platform:
@@ -1307,20 +1307,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "向项目添加具有指定的名称和值的属性。 将任何属性覆盖具有相同名称已在属性集合。"
-  remarks: "我们不需要 ProjectPropertyInstance 若要确保我们还没有已由另一个 ProjectPropertyInstance 使用。"
+  summary: Add a property with the specified name and value to the project. Overwrites any property with the same name already in the property collection.
+  remarks: We don't take a ProjectPropertyInstance to make sure we don't have one that's already in use by another ProjectPropertyInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance SetProperty (string name, string evaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "要添加的属性的名称。"
+      description: The name of the property to add.
     - id: evaluatedValue
       type: System.String
-      description: "要添加的属性计算所得的值。"
+      description: The evaluated value of the property to add.
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "返回新的属性。"
+      description: Returns the new property.
   overload: Microsoft.Build.Execution.ProjectInstance.SetProperty*
   exceptions: []
   platform:
@@ -1337,12 +1337,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "此项目中，通过所有目标中获取的枚举。 此集合是只读的。"
+  summary: Gets an enumerator over all targets in this project. This collection is read-only.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectTargetInstance> Targets { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectTargetInstance}
-      description: "通过此项目中的所有目标中返回的枚举。"
+      description: Returns an enumerator over all targets in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Targets*
   exceptions: []
   platform:
@@ -1359,13 +1359,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "如果有的话，请获取此项目，将使用已计算的工具版本。"
-  remarks: "结果不一定是项目标记上的工具版本相同如果任何;它可能已从外部指定，例如与 /tv 交换机。"
+  summary: Gets the tools version this project was evaluated with, if any.
+  remarks: The result is not necessarily the same as the tools version on the Project tag, if any; it may have been externally specified, for example with a /tv switch.
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: "如果有，则返回此项目，将使用已计算的工具版本。"
+      description: Returns the tools version this project was evaluated with, if any.
   overload: Microsoft.Build.Execution.ProjectInstance.ToolsVersion*
   exceptions: []
   platform:
@@ -1382,13 +1382,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "此 ProjectInstance 的内容创建 ProjectRootElement。"
+  summary: Creates a ProjectRootElement from the contents of this ProjectInstance.
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement ToProjectRootElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回表示此实例 ProjectRootElement。"
+      description: Returns a ProjectRootElement which represents this instance.
   overload: Microsoft.Build.Execution.ProjectInstance.ToProjectRootElement*
   exceptions: []
   platform:
@@ -1405,13 +1405,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "替换的项目状态<> *1>， <> </> *1> 和<xref:Microsoft.Build.Execution.ProjectInstance.Items*>与从指定<xref href=&quot;Microsoft.Build.Execution.ProjectInstance&quot;> </xref>。</xref:Microsoft.Build.Execution.ProjectInstance.Items*>"
+  summary: Replaces the project state <xref:Microsoft.Build.Execution.ProjectInstance.GlobalProperties*>, <xref:Microsoft.Build.Execution.ProjectInstance.Properties*> and <xref:Microsoft.Build.Execution.ProjectInstance.Items*> with those from the specified <xref href="Microsoft.Build.Execution.ProjectInstance"></xref>.
   syntax:
     content: public void UpdateStateFrom (Microsoft.Build.Execution.ProjectInstance projectState);
     parameters:
     - id: projectState
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "<xref uid=&quot;langword_csharp_ProjectInstance&quot; name=&quot;ProjectInstance&quot; href=&quot;&quot;> </xref>从进行更新。"
+      description: The <xref uid="langword_csharp_ProjectInstance" name="ProjectInstance" href=""></xref> to update from.
   overload: Microsoft.Build.Execution.ProjectInstance.UpdateStateFrom*
   exceptions: []
   platform:

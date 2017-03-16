@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">208467e763933988cad96c707aa193768e98b704</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Xaml.XamlServices.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">53d4dead39cd9a3a0a69a75137ac94c69f545387</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">251086e4a08beb46e415516b715d313312131e2b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides higher-level services (static methods) for the common XAML tasks of reading XAML and writing an object graph; or reading an object graph and writing XAML file output for serialization purposes.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The modes of the XamlServices class that are used in the most common XAML reading and writing scenarios rely on creating instances of XAML readers and XAML writers.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>These readers and writers are specialized but internal implementations of public classes, such as &lt;xref:System.Xml.XmlReader&gt;, &lt;xref:System.Xaml.XamlXmlReader&gt;, and &lt;xref:System.Xaml.XamlObjectWriter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To use XamlServices for most scenarios, you can rely on the default internal implementations to obtain the results that you want.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more specialized scenarios, you might define readers and writers yourself, and then pass them as arguments for overloads of the XamlServices methods.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  XamlServices is not the recommended XAML reading or XAML writing API set if you are processing WPF-defined types, or types based on WPF.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For <ph id="ph1">[!INCLUDE[TLA2#tla_winclient](~/add/includes/tla2sharptla-winclient-md.md)]</ph> usage, use &lt;xref:System.Windows.Markup.XamlReader?displayProperty=fullName&gt; for reading or loading XAML (or BAML); and &lt;xref:System.Windows.Markup.XamlWriter?displayProperty=fullName&gt; for writing back XAML.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>These classes use .NET Framework XAML Services APIs and the XAML readers and XAML writers internally in their implementation; however, they also provide support and specialized XAML schema context for WPF-specific concepts, such as optimizations for dependency properties and WPF known types.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Loads a &lt;xref:System.IO.Stream&gt; source for a XAML reader and writes its output as an object graph.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Different signatures for the Load method specify different types of input for the source XAML.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The Load internal implementation first creates an &lt;xref:System.Xml.XmlReader&gt; by calling &lt;xref:System.Xml.XmlReader.Create%28System.IO.Stream%29&gt; and then creates a new instance of a specialized &lt;xref:System.Xaml.XamlReader&gt; that processes the input.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In order for the Load call to successfully create an object graph, the following must be true:      -   The source is well-formed and valid XML.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>-   The source is valid XAML at the language level.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>-   The XAML types that are specified in the source XAML must resolve to backing types in the relevant XAML namespaces.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For example, XAML types for WPF namespaces can resolve to a WPF XAML namespace as specified in the XAML; the assemblies for WPF must be included in the project or available in the run time; and so on.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  &lt;xref:System.Xaml.XamlServices&gt; is not the recommended XAML reading or XAML writing API set if you are processing <ph id="ph2">[!INCLUDE[TLA#tla_winclient](~/add/includes/ajax-current-ext-md.md)]</ph> types, or types based on <ph id="ph3">[!INCLUDE[TLA2#tla_winclient](~/add/includes/tla2sharptla-winclient-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For <ph id="ph1">[!INCLUDE[TLA2#tla_winclient](~/add/includes/tla2sharptla-winclient-md.md)]</ph> usage, use &lt;xref:System.Windows.Markup.XamlReader?displayProperty=fullName&gt; for reading or loading XAML; and &lt;xref:System.Windows.Markup.XamlWriter?displayProperty=fullName&gt; for writing back XAML.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>These classes use &lt;xref:System.Xaml&gt; APIs internally in their implementation; however, they also provide support for WPF-specific concepts that influence the nature of XAML reading and writing, such as optimizations for dependency properties.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The stream to load as input.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The object graph that is written as output.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;stream&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Creates a XAML reader from a &lt;xref:System.IO.TextReader&gt;, and returns an object graph.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In order to return the object graph, the <ph id="ph1">`textReader`</ph> input should be constructed by using its relevant input.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For example, it should pass a &lt;xref:System.IO.StringReader&gt; that is constructed by using a valid XAML-as-string input for the &lt;xref:System.IO.StringReader.%23ctor%28System.String%29&gt; constructor.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.IO.TextReader&gt; to use as the basis for the created &lt;xref:System.Xml.XmlReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The object graph that is returned.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;textReader&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Loads a &lt;xref:System.IO.Stream&gt; source for a XAML reader and returns an object graph.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Different signatures for the Load method specify different types of input for the source XAML.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The Load internal implementation first creates an &lt;xref:System.Xml.XmlReader&gt; by calling &lt;xref:System.Xml.XmlReader.Create%28System.String%29&gt; and then creates a new instance of a specialized &lt;xref:System.Xaml.XamlReader&gt; that processes the input.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In order for the Load call to successfully create an object graph, the following must be true:      -   The source is well-formed and valid XML.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>-   The source is valid XAML at the language level.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>-   The XAML types that are specified in the source XAML must resolve to backing types in the relevant XAML namespaces.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For example, XAML types for WPF namespaces can resolve to a WPF XAML namespace as specified in the XAML; the assemblies for WPF must be included in the project or be available in the run time; and so on.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The file name to load and use as source.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The object graph that is returned.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;fileName&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Loads a specific XAML reader implementation and returns an object graph.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>You should typically use this signature only in the following cases:      -   You defined your own implementation of a &lt;xref:System.Xaml.XamlReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>-   You specified settings for a &lt;xref:System.Xaml.XamlReader&gt; that differ from the default settings.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The XAML reader implementation to use as the reader for this <bpt id="p1">&lt;xref uid="langword_csharp_Load" name="Load" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> operation.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The object graph that is returned.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;xamlReader&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Loads a specific XML reader implementation and returns an object graph.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>You should typically use this signature only if you defined your own implementation of a &lt;xref:System.Xml.XmlReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.XmlReader&gt; implementation to use as the reader for this <bpt id="p1">&lt;xref uid="langword_csharp_Load" name="Load" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> operation.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The output object graph.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;xamlReader&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Reads XAML as string output and returns an object graph.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>In order for the Parse call to successfully create an object tree, the following must be true:      -   The <ph id="ph1">`xaml`</ph> input is well-formed and valid XML.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>-   The <ph id="ph1">`xaml`</ph> input is valid XAML at the language level.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>-   The XAML types that are specified in the <ph id="ph1">`xaml`</ph> input must resolve to backing types in the relevant XAML namespaces.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For example, XAML types for a WPF namespace can resolve to a WPF XAML namespace as specified in the XAML; the assemblies for WPF must be included in the project or be available in the run time; and so on.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  &lt;xref:System.Xaml.XamlServices&gt; is not the recommended XAML reading or XAML writing API set if you are processing <ph id="ph2">[!INCLUDE[TLA#tla_winclient](~/add/includes/ajax-current-ext-md.md)]</ph> types, or types based on <ph id="ph3">[!INCLUDE[TLA2#tla_winclient](~/add/includes/tla2sharptla-winclient-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>For <ph id="ph1">[!INCLUDE[TLA2#tla_winclient](~/add/includes/tla2sharptla-winclient-md.md)]</ph> usage, use &lt;xref:System.Windows.Markup.XamlReader?displayProperty=fullName&gt; for reading or loading XAML, and &lt;xref:System.Windows.Markup.XamlWriter?displayProperty=fullName&gt; for writing back XAML.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>These classes use &lt;xref:System.Xaml&gt; APIs internally in their implementation; however, they also provide support for WPF-specific concepts that influence the nature of XAML reading and writing, such as optimizations for dependency properties.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The XAML string input to parse.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The object graph that is returned.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;xaml&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Processes a provided object tree into a XAML node representation, and returns a string representation of the output XAML.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The output from this method is the <ph id="ph1">`ToString`</ph> result of an &lt;xref:System.Xml.XmlWriter&gt; that is created by the method call.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>That &lt;xref:System.Xml.XmlWriter&gt; is created by using the following settings: &lt;xref:System.Xml.XmlWriterSettings.Indent%2A?displayProperty=fullName&gt; is <ph id="ph1">`true`</ph>; and &lt;xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration%2A?displayProperty=fullName&gt; is <ph id="ph2">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The returned string can be loaded as valid XML through the &lt;xref:System.Xml.XmlReader.Create%2A&gt; method if you processed the string into a stream, or into a reader more specifically dedicated for XAML.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The root of the object graph to process.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The XAML markup output as a string.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Processes a provided object graph into a XAML node representation and then into an output stream for serialization.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The destination stream.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The root of the object graph to process.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;stream&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Processes a provided object graph into a XAML node representation and then into an output that goes to the provided &lt;xref:System.IO.TextWriter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.IO.TextWriter&gt; that writes the output.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The root of the object graph to process.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;writer&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Processes a provided object graph into a XAML node representation and then writes it to an output file at a provided location.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`fileName`</ph> parameter value is used as the <ph id="ph2">`outputFileName`</ph> input for a call to &lt;xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName&gt;, which creates a &lt;xref:System.Xml.XmlWriter&gt; as part of the method call.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The name and location of the file to write the output to.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The root of the object graph to process.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;fileName&lt;/code&gt;</ph> is an empty string.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;fileName&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Processes a provided object graph into a XAML node representation and then writes it to the provided XAML writer.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>You should typically use this signature only in the following cases:      -   You defined your own implementation of a &lt;xref:System.Xaml.XamlWriter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>-   You specified settings for the &lt;xref:System.Xaml.XamlWriter&gt; that differ from the default settings.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlWriter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation to use.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The root of the object graph to process.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;writer&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Processes a provided object graph into a XAML node representation and then writes it to the provided &lt;xref:System.Xml.XmlWriter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.XmlWriter&gt; implementation to use.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The root of the object graph to process.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;writer&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Connects a <bpt id="p1">&lt;xref href="System.Xaml.XamlReader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and a <bpt id="p2">&lt;xref href="System.Xaml.XamlWriter"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to use a common XAML node set intermediary.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Potentially transforms the content, depending on the types of readers and writers that are provided.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>This method is a wrapper around &lt;xref:System.Xaml.XamlServices.Transform%28System.Xaml.XamlReader%2CSystem.Xaml.XamlWriter%2CSystem.Boolean%29&gt;, where <ph id="ph1">`closeWriter`</ph> is specified as <ph id="ph2">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlReader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation to use.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlWriter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to use.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;xamlReader&lt;/code&gt;</ph> or <ph id="ph2">&lt;code&gt;xamlWriter&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The XAML schema context does not match between the provided <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">xamlReader</ph><ept id="p1">&lt;/code&gt;</ept> and <bpt id="p2">&lt;code&gt;</bpt><ph id="ph2">xamlWriter</ph><ept id="p2">&lt;/code&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Connects a <bpt id="p1">&lt;xref href="System.Xaml.XamlReader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and a <bpt id="p2">&lt;xref href="System.Xaml.XamlWriter"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to use a common XAML node set intermediary.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Potentially transforms the content, depending on the types of readers and writers that are provided.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Provides a parameter for specifying whether to close the writer after the call is completed.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlReader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation to use.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlWriter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to use.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to close the writer after the call is complete; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to leave the writer active at the last written position.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;xamlReader&lt;/code&gt;</ph> or <ph id="ph2">&lt;code&gt;xamlWriter&lt;/code&gt;</ph> input is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The XAML schema context does not match between the provided <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">xamlReader</ph><ept id="p1">&lt;/code&gt;</ept> and <bpt id="p2">&lt;code&gt;</bpt><ph id="ph2">xamlWriter</ph><ept id="p2">&lt;/code&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

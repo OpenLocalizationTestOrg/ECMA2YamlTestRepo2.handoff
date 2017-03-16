@@ -10,8 +10,8 @@ items:
   nameWithType: IEventRedirector
   fullName: Microsoft.Build.Framework.IEventRedirector
   type: Interface
-  summary: "生成事件转发到其他记录器。"
-  remarks: "请参阅[编写识别多处理器的记录器](~/add/includes/ajax-current-ext-md.md)有关详细信息。"
+  summary: Forwards build events to other loggers.
+  remarks: See [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md) for more information.
   syntax:
     content: public interface IEventRedirector
   implements: []
@@ -29,14 +29,14 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "由生成事件转发到中央记录器的节点记录器调用。"
-  remarks: "请参阅[编写识别多处理器的记录器](~/add/includes/ajax-current-ext-md.md)有关详细信息。"
+  summary: Called by the node loggers to forward build events to the central logger.
+  remarks: See [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md) for more information.
   syntax:
     content: public void ForwardEvent (Microsoft.Build.Framework.BuildEventArgs buildEvent);
     parameters:
     - id: buildEvent
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "<xref href=&quot;Microsoft.Build.Framework.BuildEventArgs&quot;> </xref>转发。"
+      description: The <xref href="Microsoft.Build.Framework.BuildEventArgs"></xref> to forward.
   overload: Microsoft.Build.Framework.IEventRedirector.ForwardEvent*
   exceptions: []
   platform:

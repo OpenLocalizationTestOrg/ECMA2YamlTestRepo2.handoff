@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3e956dad0abdc3e2bdfb9649199ef8b2da325e89</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.LogicalTreeHelper.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">faa3d5f2047d008a3d3ecec2702448ce6b0a26bf</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e7a060b5836d0c4e39a02d0e9f64095e72e019ab</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides static helper methods for querying objects in the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The LogicalTreeHelper class provides methods that you can use to return child collections of objects, or specific objects from within subnodes of the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>However, most of the object tree operations that you typically perform are also exposed by similar methods or properties on &lt;xref:System.Windows.FrameworkElement&gt; or &lt;xref:System.Windows.FrameworkContentElement&gt;.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For example, try the following:      -   Instead of calling the static &lt;xref:System.Windows.LogicalTreeHelper.GetChildren%2A&gt; method, which returns an enumerator for the logical child objects, use the dedicated collection exposed in the content model for that object.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Nearly all objects that support a content model expose some property that contains the collection of child objects, and provides collection interface support directly on that collection.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>-   Instead of calling the static &lt;xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A&gt; method to obtain a child object by specifying its name, call the &lt;xref:System.Windows.FrameworkElement.FindName%2A?displayProperty=fullName&gt; or &lt;xref:System.Windows.FrameworkContentElement.FindName%2A?displayProperty=fullName&gt; method on specific objects.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>LogicalTreeHelper is most useful for analysis scenarios where you are traveling up or down the logical tree recursively through multiple levels, and want to use a consistent approach for examining the various parent or child objects.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In this case, you might be accessing a mixture of content models, and using the more content-model specific APIs would be too complex.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Attempts to bring the requested UI element into view and raises the <bpt id="p1">&lt;xref href="System.Windows.FrameworkElement.RequestBringIntoView"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event on the target in order to report the results.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>It is typically more convenient to call the instance methods &lt;xref:System.Windows.FrameworkElement.BringIntoView%2A?displayProperty=fullName&gt; or &lt;xref:System.Windows.FrameworkContentElement.BringIntoView%2A?displayProperty=fullName&gt; rather than this static utility method.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The behavior of the instance methods is equivalent to the behavior of the static method.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Even if the <ph id="ph1">`current`</ph> UI element provided was a &lt;xref:System.Windows.FrameworkContentElement&gt;, the resulting event is still the same &lt;xref:System.Windows.FrameworkElement.RequestBringIntoView?displayProperty=fullName&gt; event, with the originating &lt;xref:System.Windows.FrameworkContentElement&gt; identifiable by checking the event data of the event.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The UI element to bring into view.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Attempts to find and return an object that has the specified name.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The search starts from the specified object and continues into subnodes of the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The methods &lt;xref:System.Windows.FrameworkContentElement.FindName%2A?displayProperty=fullName&gt; and &lt;xref:System.Windows.FrameworkElement.FindName%2A?displayProperty=fullName&gt; are superficially similar to FindLogicalNode, but operate by different logic:      -   The search direction for FindLogicalNode is toward child objects (down the tree); the search direction for the <ph id="ph1">`FindName`</ph> methods is towards parent objects (up the tree).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>-   The <ph id="ph1">`FindName`</ph> methods are governed by the concept of a XAML namescope.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Using <ph id="ph1">`FindName`</ph> you are guaranteed that only one object of that name exists, because XAML namescopes enforce uniqueness.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In contrast, FindLogicalNode ignores XAML namescope and might cross XAML namescope boundaries during the search.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>As such, there is no guarantee of uniqueness of the <ph id="ph1">`elementName`</ph> name once boundaries are crossed.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For more information about XAML namescopes, see <bpt id="p1">[</bpt>WPF XAML Namescopes<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The object to start searching from.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This object must be either a <bpt id="p1">&lt;xref href="System.Windows.FrameworkElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or a <bpt id="p2">&lt;xref href="System.Windows.FrameworkContentElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The name of the object to find.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The object with the matching name, if one is found; returns <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if no matching name was found in the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Returns the collection of immediate child objects of the specified object, by processing the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Use this signature and helper method primarily when you are unsure whether <ph id="ph1">`current`</ph> is a &lt;xref:System.Windows.FrameworkElement&gt; or &lt;xref:System.Windows.FrameworkContentElement&gt; and are also unsure whether that object's class supports its own content model collection.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If you can determine the type of the object you are querying, check the specific content property that you know exists on that type.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For example, if you know that the object you are querying is an &lt;xref:System.Windows.Controls.ItemsControl&gt;, check the &lt;xref:System.Windows.Controls.ItemsControl.Items%2A&gt; property to get a strongly typed collection, which has collection interface support and is probably more useful than an enumerator.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The object from which to start processing the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This is expected to be either a <bpt id="p1">&lt;xref href="System.Windows.FrameworkElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref href="System.Windows.FrameworkContentElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The enumerable collection of immediate child objects from the logical tree of the specified object.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Returns the collection of immediate child objects of the specified <bpt id="p1">&lt;xref href="System.Windows.FrameworkContentElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> by processing the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The object from which to start processing the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The enumerable collection of immediate child objects starting from <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">current</ph><ept id="p1">&lt;/code&gt;</ept> in the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Returns the collection of immediate child objects of the specified <bpt id="p1">&lt;xref href="System.Windows.FrameworkElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> by processing the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The object from which to start processing the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The enumerable collection of immediate child objects starting from <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">current</ph><ept id="p1">&lt;/code&gt;</ept> in the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Returns the parent object of the specified object by processing the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This method is merely a wrapper that gets the appropriate type version (&lt;xref:System.Windows.FrameworkElement&gt; or &lt;xref:System.Windows.FrameworkContentElement&gt;) of the &lt;xref:System.Windows.FrameworkElement.Parent%2A?displayProperty=fullName&gt; or &lt;xref:System.Windows.FrameworkContentElement.Parent%2A?displayProperty=fullName&gt; property; so unless you are unable to determine the <ph id="ph1">`current`</ph> type, you might want to check the respective instance properties instead.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The object to find the parent object for.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This is expected to be either a <bpt id="p1">&lt;xref href="System.Windows.FrameworkElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or a <bpt id="p2">&lt;xref href="System.Windows.FrameworkContentElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The requested parent object.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

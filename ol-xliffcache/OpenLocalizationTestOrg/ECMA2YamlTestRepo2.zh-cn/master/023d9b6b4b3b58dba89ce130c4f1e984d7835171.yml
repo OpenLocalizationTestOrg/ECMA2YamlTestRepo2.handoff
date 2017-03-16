@@ -93,8 +93,8 @@ items:
   nameWithType: ProjectRootElement
   fullName: Microsoft.Build.Construction.ProjectRootElement
   type: Class
-  summary: "MSBuild 项目文件架构中表示的 MSBuild 项目、 目标文件或任何其他文件，符合。 此类和相关的类允许完成 MSBuild 项目或目标文件读取和写入。"
-  remarks: "注释和空白区域不能通过编辑此模型目前。 每个项目根元素都与一个项目集合关联。 这样能够控制其生存期内并不会对感到惊讶通过来自另一个项目集合的编辑该项目集合的所有者。"
+  summary: Represents an MSBuild project, a targets file, or any other file that conforms to MSBuild project file schema. This class and its related classes allow a complete MSBuild project or targets file to be read and written.
+  remarks: Comments and white space cannot be edited through this model at present. Each project root element is associated with exactly one project collection. This allows the owner of that project collection to control its lifetime and not be surprised by edits that come from another project collection.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{FullPath} #Children={Count} DefaultTargets={DefaultTargets} ToolsVersion={ToolsVersion} InitialTargets={InitialTargets} ExplicitlyLoaded={IsExplicitlyLoaded}")]
@@ -140,17 +140,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将项目导入添加到此项目。"
-  remarks: "如果导入组存在，则会将项目导入插入不具有任何条件属性，则最后一个导入组否则，在项目的末尾创建导入。"
+  summary: Adds a project import to this project.
+  remarks: If import groups exist, inserts the project import into the last import group that has no Condition attribute; otherwise, creates an import at the end of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement AddImport (string project);
     parameters:
     - id: project
       type: System.String
-      description: "要导入的项目。"
+      description: The project to be imported.
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "返回添加的项目导入。"
+      description: Returns the added project import.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddImport*
   exceptions: []
   platform:
@@ -167,14 +167,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "在此项目的末尾创建一个导入组。"
-  remarks: "此便利方法，通过选取基于启发 MSBuild DOM 中的位置。"
+  summary: Creates an import group at the end of this project.
+  remarks: This convenience method picks a location in the MSBuild DOM based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportGroupElement AddImportGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectImportGroupElement
-      description: "返回此项目的结束时创建的导入组。"
+      description: Returns the import group created at the end of this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddImportGroup*
   exceptions: []
   platform:
@@ -191,20 +191,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "向此项目中添加一项。"
-  remarks: "创建一个项，然后添加到具有的条件属性的项组和相同的项类型的至少一个项。 如果不找到任何此类项组，则创建新的项组，并向其添加项。 项按包含的值排序。       如果项匹配的现有的通配符表达式进行此项类型，则没有任何效果。"
+  summary: Adds an item to this project.
+  remarks: "Creates an item, then adds it to an item group with no Condition attribute and at least one item of same item type. If no such item group is found, creates a new item group and adds the item to it. Items are ordered by Include values.  \n  \n Does nothing if the item matches an existing wildcard expression for this item type."
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include);
     parameters:
     - id: itemType
       type: System.String
-      description: "要添加的项的项类型。"
+      description: The item type of the item to be added.
     - id: include
       type: System.String
-      description: "要添加的项包括成本。"
+      description: The Include value of the item to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "返回添加的项。"
+      description: Returns the added item.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItem*
   exceptions: []
   platform:
@@ -221,23 +221,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将某个项与其元数据添加到此项目。"
-  remarks: "创建一个项，然后添加到具有的条件属性的项组和相同的项类型的至少一个项。 如果不找到任何此类项组，则创建新的项组，并向其添加项。 项按包含的值排序。"
+  summary: Adds an item with metadata to this project.
+  remarks: Creates an item, then adds it to an item group with no Condition attribute and at least one item of same item type. If no such item group is found, creates a new item group and adds the item to it. Items are ordered by Include values.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: "要添加的项的项类型。"
+      description: The item type of the item to be added.
     - id: include
       type: System.String
-      description: "要添加的项包括成本。"
+      description: The Include value of the item to be added.
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: "要添加的元数据。"
+      description: The metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "返回添加的项。"
+      description: Returns the added item.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItem*
   exceptions: []
   platform:
@@ -254,17 +254,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将项定义添加到此项目。"
-  remarks: "创建一个项，然后添加到具有的条件属性的项组和相同的项类型的至少一个项。 如果不找到任何此类项组，则创建新的项组，并向其添加项。 项按包含的值排序。"
+  summary: Adds an item definition to this project.
+  remarks: Creates an item, then adds it to an item group with no Condition attribute and at least one item of same item type. If no such item group is found, creates a new item group and adds the item to it. Items are ordered by Include values.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionElement AddItemDefinition (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "要添加的项定义的项类型。"
+      description: The item type of the item definition to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionElement
-      description: "返回添加的项定义。"
+      description: Returns the added item definition.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItemDefinition*
   exceptions: []
   platform:
@@ -281,14 +281,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将项定义组添加到此项目。"
-  remarks: "创建并后的最后一个现有项定义组，将项定义组，如果有的话。 否则，最后一个现有属性组中之后, 创建的项定义组如果有的话。 如果属性组不存在，请在项目的末尾创建一个新的项定义组。"
+  summary: Adds an item definition group to this project.
+  remarks: Creates and adds an item definition group after the last existing item definition group, if any. Otherwise, creates an item definition group after the last existing property group, if any. If no property group exists, creates a new item definition group at the end of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionGroupElement AddItemDefinitionGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionGroupElement
-      description: "返回添加的项定义组。"
+      description: Returns the added item definition group.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItemDefinitionGroup*
   exceptions: []
   platform:
@@ -305,14 +305,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建并向此项目添加项组。"
-  remarks: "创建并后的最后一个的现有项组，将项组，如果有的话。 否则，最后一个现有属性组中之后, 创建的项组如果有的话。 如果属性组不存在，请在项目的末尾创建一个新的项组。"
+  summary: Creates and adds an item group to this project.
+  remarks: Creates and adds an item group after the last existing item group, if any. Otherwise, creates an item group after the last existing property group, if any. If no property group exists, creates a new item group at the end of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemGroupElement AddItemGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemGroupElement
-      description: "返回添加的项组。"
+      description: Returns the added item group.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItemGroup*
   exceptions: []
   platform:
@@ -329,20 +329,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "更新或将属性添加到此项目。"
-  remarks: "使用指定更新的最后一个的现有属性`name`本身或包含它的属性组上具有的条件属性。 否则为创建一个属性，并将其添加到没有 Condition 特性的第一个属性组。 如果此类属性组不存在之后的最后一个现有属性组中，, 创建属性组，如果有的话，并将属性添加到它。 否则为创建并将属性组添加到项目，开始且将属性添加到它。"
+  summary: Updates or adds a property to this project.
+  remarks: Updates the last existing property with the specified `name` that has no Condition attribute on itself or on the property group that contains it. Otherwise, creates a property and adds it to the first property group that has no Condition attribute. If no such property group exists, creates a property group after the last existing property group, if any, and adds the property to it . Otherwise, creates and adds a property group to the start of the project, and adds the property to it.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement AddProperty (string name, string value);
     parameters:
     - id: name
       type: System.String
-      description: "要更新或添加的属性名称。"
+      description: The name of the property to be updated or added.
     - id: value
       type: System.String
-      description: "要更新或添加的属性值。"
+      description: The value of the property to be updated or added.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "返回的已更新或添加属性。"
+      description: Returns the updated or added property.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddProperty*
   exceptions: []
   platform:
@@ -359,14 +359,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "向此项目添加新的属性组。"
-  remarks: "创建属性组并将其添加后的最后一个现有属性组中，如果有的话。 否则，将属性组添加到项目开始。"
+  summary: Adds a new property group to this project.
+  remarks: Creates a property group and adds it after the last existing property group, if any. Otherwise, adds the property group to the start of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyGroupElement AddPropertyGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectPropertyGroupElement
-      description: "返回添加的属性组。"
+      description: Returns the added property group.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddPropertyGroup*
   exceptions: []
   platform:
@@ -383,17 +383,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将目标添加到项目。"
-  remarks: '选取一个位置的便捷方法基于启发式方法︰ 在项目的末尾创建一个目标。'
+  summary: Adds a target to the project.
+  remarks: 'Convenience method that picks a location based on a heuristic: Creates a target at the end of the project.'
   syntax:
     content: public Microsoft.Build.Construction.ProjectTargetElement AddTarget (string name);
     parameters:
     - id: name
       type: System.String
-      description: "要添加的目标的名称。"
+      description: The name of the target to be added.
     return:
       type: Microsoft.Build.Construction.ProjectTargetElement
-      description: "返回添加的目标。"
+      description: Returns the added target.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddTarget*
   exceptions: []
   platform:
@@ -410,23 +410,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将添加[UsingTask 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)到项目。"
-  remarks: "请`assemblyName`或`assemblyFile`必须为 null，但不是两个。"
+  summary: Adds a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) to the project.
+  remarks: Either the `assemblyName` or `assemblyFile` must be null, but not both.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskElement AddUsingTask (string name, string assemblyFile, string assemblyName);
     parameters:
     - id: name
       type: System.String
-      description: "任务名称。"
+      description: The task name.
     - id: assemblyFile
       type: System.String
-      description: "程序集的文件路径。"
+      description: The file path to the assembly.
     - id: assemblyName
       type: System.String
-      description: "要加载的程序集的名称。"
+      description: The name of the assembly to load.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskElement
-      description: "返回添加的 UsingTask 元素。"
+      description: Returns the added UsingTask element.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddUsingTask*
   exceptions: []
   platform:
@@ -443,12 +443,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取所有子[选择元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)此项目中。"
+  summary: Gets all child [Choose Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectChooseElement> ChooseElements { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectChooseElement}
-      description: "返回所有子选择元素。"
+      description: Returns all child Choose elements.
   overload: Microsoft.Build.Construction.ProjectRootElement.ChooseElements*
   exceptions: []
   platform:
@@ -465,12 +465,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取 null，因为条件属性是此元素不存在，并且不存在的条件为隐式 true。"
+  summary: Gets null because the Condition attribute is nonexistent for this element and a nonexistent condition is implicitly true.
   syntax:
     content: public override string Condition { get; set; }
     return:
       type: System.String
-      description: "将返回 null。"
+      description: Returns a null.
   overload: Microsoft.Build.Construction.ProjectRootElement.Condition*
   exceptions: []
   platform:
@@ -487,12 +487,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "请不要使用。 条件属性不存在为<xref href=&quot;Microsoft.Build.Construction.ProjectRootElement&quot;> </xref>。 获取引发内部错误。"
+  summary: Do not use. The Condition attribute is nonexistent for <xref href="Microsoft.Build.Construction.ProjectRootElement"></xref>. Get throws an internal error.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "引发内部错误，并返回 null。"
+      description: Throws an internal error and returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.ConditionLocation*
   exceptions: []
   platform:
@@ -509,13 +509,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建和初始化内存中的空 ProjectRootElement 实例并将其添加到全局项目集合。"
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the global project collection.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回新的项目根目录。"
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -532,16 +532,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建和初始化内存中的空 ProjectRootElement 实例并将其添加到指定的项目集合。"
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the specified project collection.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "要添加到项目集合。"
+      description: The project collection to be added to.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回新的项目根目录。"
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -558,16 +558,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建和初始化内存中的空 ProjectRootElement 实例并将其添加到全局项目集合。 在指定的文件路径中找到的数据的初始化新的项目根目录。"
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the global project collection. The new project root is initialized from data found at the specified file path.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (string path);
     parameters:
     - id: path
       type: System.String
-      description: "用于初始化的数据文件路径。"
+      description: The file path to the data used for initialization.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回新的项目根目录。"
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -584,17 +584,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建和初始化内存中的空 ProjectRootElement 实例并将其添加到全局项目集合。 从指定的 XmlReader 读取的数据的初始化新的项目根目录。"
-  remarks: "可能会引发 InvalidProjectFileException。"
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the global project collection. The new project root is initialized from data read from the specified XmlReader.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (System.Xml.XmlReader xmlReader);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: "用于初始化 XML 读取器。"
+      description: The XML reader used for initialization.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回新的项目根目录。"
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -611,19 +611,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建和初始化内存中的空 ProjectRootElement 实例并将其添加到指定的项目集合。 在指定的文件路径中找到的数据的初始化新的项目根目录。"
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the specified project collection. The new project root is initialized from data found at the specified file path.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: path
       type: System.String
-      description: "用于初始化的数据文件路径。"
+      description: The file path to the data used for initialization.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "要添加到项目集合。"
+      description: The project collection to be added to.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回新的项目根目录。"
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -640,20 +640,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建和初始化内存中的空 ProjectRootElement 实例并将其添加到指定的项目集合。 从指定的 XmlReader 读取的数据的初始化新的项目根目录。"
-  remarks: "可能会引发 InvalidProjectFileException。"
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the specified project collection. The new project root is initialized from data read from the specified XmlReader.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (System.Xml.XmlReader xmlReader, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: "用于初始化 XML 读取器。"
+      description: The XML reader used for initialization.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "要添加到项目集合。"
+      description: The project collection to be added to.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回新的项目根目录。"
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -670,14 +670,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建[选择元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "调用方必须将选择元素添加到所选项目中的位置。"
+  summary: Creates a [Choose Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the Choose element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectChooseElement CreateChooseElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectChooseElement
-      description: "A <xref href=&quot;Microsoft.Build.Construction.ProjectChooseElement&quot;></xref> object."
+      description: A <xref href="Microsoft.Build.Construction.ProjectChooseElement"></xref> object.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateChooseElement*
   exceptions: []
   platform:
@@ -694,17 +694,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建[导入元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "调用方必须将 Import 元素添加到所选项目中的位置。"
+  summary: Creates an [Import Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the Import element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement CreateImportElement (string project);
     parameters:
     - id: project
       type: System.String
-      description: "要导入的项目。"
+      description: The project to be imported.
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "返回所创建的导入元素。"
+      description: Returns the created Import element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateImportElement*
   exceptions: []
   platform:
@@ -721,14 +721,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建一个导入组。"
-  remarks: "调用方必须将导入组添加到所选项目中的位置。"
+  summary: Creates an import group.
+  remarks: Caller must add the import group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportGroupElement CreateImportGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectImportGroupElement
-      description: "返回的导入组。"
+      description: Returns the import group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateImportGroupElement*
   exceptions: []
   platform:
@@ -745,17 +745,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建项定义。"
-  remarks: "调用方必须将项定义添加到所选项目中的位置。"
+  summary: Creates an item definition.
+  remarks: Caller must add the item definition to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionElement CreateItemDefinitionElement (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "项定义的项类型。"
+      description: The item type of the item definition.
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionElement
-      description: "返回的项定义。"
+      description: Returns the item definition.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionElement*
   exceptions: []
   platform:
@@ -772,14 +772,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建项定义组。"
-  remarks: "调用方必须将项定义组添加到所选项目中的位置。"
+  summary: Creates an item definition group.
+  remarks: Caller must add the item definition group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionGroupElement CreateItemDefinitionGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionGroupElement
-      description: "返回的项定义组。"
+      description: Returns the item definition group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionGroupElement*
   exceptions: []
   platform:
@@ -796,17 +796,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建一个项目。"
-  remarks: "调用方必须将项添加到所选项目中的位置。"
+  summary: Creates an item.
+  remarks: Caller must add the item to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement CreateItemElement (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "项目项类型。"
+      description: The item type of the item.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "返回的项。"
+      description: Returns the item.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemElement*
   exceptions: []
   platform:
@@ -823,20 +823,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "使用指定的 Include 值创建项。"
-  remarks: "调用方必须将项添加到所选项目中的位置。"
+  summary: Creates an item with the specifed Include value.
+  remarks: Caller must add the item to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement CreateItemElement (string itemType, string include);
     parameters:
     - id: itemType
       type: System.String
-      description: "项目项类型。"
+      description: The item type of the item.
     - id: include
       type: System.String
-      description: "项包含值。"
+      description: The Include value of the item.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "返回的项。"
+      description: Returns the item.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemElement*
   exceptions: []
   platform:
@@ -853,14 +853,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建项组。"
-  remarks: "调用方必须将项组添加到所选项目中的位置。"
+  summary: Creates an item group.
+  remarks: Caller must add the item group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemGroupElement CreateItemGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemGroupElement
-      description: "返回的项组。"
+      description: Returns the item group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemGroupElement*
   exceptions: []
   platform:
@@ -877,17 +877,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建具有指定名称的元数据节点。"
-  remarks: "调用方必须将元数据节点添加到所选项目中的位置。"
+  summary: Creates a metadata node with the specified name.
+  remarks: Caller must add the metadata node to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "元数据的名称。"
+      description: The name of the metadata.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "返回元数据节点。"
+      description: Returns the metadata node.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement*
   exceptions: []
   platform:
@@ -904,20 +904,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建具有指定的名称和值的元数据节点。"
-  remarks: "调用方必须将元数据节点添加到所选项目中的位置。"
+  summary: Creates a metadata node with the specified name and value.
+  remarks: Caller must add the metadata node to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "元数据的名称。"
+      description: The name of the metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "元数据的值。"
+      description: The value of the metadata.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "返回的元数据元素。"
+      description: Returns the metadata element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement*
   exceptions: []
   platform:
@@ -934,17 +934,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建[OnError 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "调用方必须将 OnError 元素添加到所选项目中的位置。"
+  summary: Creates an [OnError Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the OnError element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOnErrorElement CreateOnErrorElement (string executeTargets);
     parameters:
     - id: executeTargets
       type: System.String
-      description: "要执行任务失败时的目标。"
+      description: The targets to execute if a task fails.
     return:
       type: Microsoft.Build.Construction.ProjectOnErrorElement
-      description: "返回 OnError 元素。"
+      description: Returns the OnError element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateOnErrorElement*
   exceptions: []
   platform:
@@ -961,14 +961,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建[Otherwise 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。 调用方必须将其添加到所选项目中的位置。"
-  remarks: "调用方必须将其他元素添加到所选项目中的位置。"
+  summary: Creates an [Otherwise Element (MSBuild)](~/add/includes/ajax-current-ext-md.md). Caller must add it to the location of choice in the project.
+  remarks: Caller must add the Otherwise element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOtherwiseElement CreateOtherwiseElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectOtherwiseElement
-      description: "返回的其他元素。"
+      description: Returns the Otherwise element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateOtherwiseElement*
   exceptions: []
   platform:
@@ -985,23 +985,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建[输出元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "调用方必须将输出元素添加到所选项目中的位置。 ItemType 或属性名称必须是指定的但不是能同时。"
+  summary: Creates an [Output Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the Output element to the location of choice in the project. Either itemType or propertyName must be specified, but not both.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement CreateOutputElement (string taskParameter, string itemType, string propertyName);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "任务的名称的输出参数。"
+      description: The name of the task's output parameter.
     - id: itemType
       type: System.String
-      description: "接收任务的项的输出参数值。"
+      description: The item that receives the task's output parameter value.
     - id: propertyName
       type: System.String
-      description: "接收任务的属性的输出参数值。"
+      description: The property that receives the task's output parameter value.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "返回的输出元素。"
+      description: Returns the Output element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateOutputElement*
   exceptions: []
   platform:
@@ -1018,14 +1018,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建[ProjectExtensions 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "调用方必须将 ProjectExtensions 元素添加到所选项目中的位置。"
+  summary: Creates a [ProjectExtensions Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the ProjectExtensions element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectExtensionsElement CreateProjectExtensionsElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectExtensionsElement
-      description: "返回 ProjectExtensions 元素。"
+      description: Returns the ProjectExtensions element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateProjectExtensionsElement*
   exceptions: []
   platform:
@@ -1042,17 +1042,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建一个属性。"
-  remarks: "调用方必须将属性添加到所选项目中的位置。"
+  summary: Creates a property.
+  remarks: Caller must add the property to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement CreatePropertyElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "属性的名称。"
+      description: The name of the property.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "返回的属性。"
+      description: Returns the property.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreatePropertyElement*
   exceptions: []
   platform:
@@ -1069,14 +1069,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建属性组。"
-  remarks: "调用方必须将属性组添加到所选项目中的位置。"
+  summary: Creates a property group.
+  remarks: Caller must add the property group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyGroupElement CreatePropertyGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectPropertyGroupElement
-      description: "返回的属性组。"
+      description: Returns the property group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreatePropertyGroupElement*
   exceptions: []
   platform:
@@ -1093,17 +1093,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建一个目标。"
-  remarks: "调用方必须将目标添加到此项目中选择的位置。"
+  summary: Creates a target.
+  remarks: Caller must add the target to the location of choice in this project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectTargetElement CreateTargetElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "目标的名称。"
+      description: The name of the target.
     return:
       type: Microsoft.Build.Construction.ProjectTargetElement
-      description: "返回的目标。"
+      description: Returns the target.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateTargetElement*
   exceptions: []
   platform:
@@ -1120,17 +1120,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建一个任务。"
-  remarks: "调用方必须将任务添加到此项目中选择的位置。"
+  summary: Creates a task.
+  remarks: Caller must add the task to the location of choice in this project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectTaskElement CreateTaskElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "任务的名称。"
+      description: The name of the task.
     return:
       type: Microsoft.Build.Construction.ProjectTaskElement
-      description: "返回的任务。"
+      description: Returns the task.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateTaskElement*
   exceptions: []
   platform:
@@ -1147,20 +1147,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建一个任务将引用的[UsingTask 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "调用方必须将任务添加到项目中的选项的 UsingTask 元素。"
+  summary: Creates a task to be referenced by a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the task to the UsingTask element of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskBodyElement CreateUsingTaskBodyElement (string evaluate, string body);
     parameters:
     - id: evaluate
       type: System.String
-      description: "要计算的字符串。"
+      description: The string to evaluate.
     - id: body
       type: System.String
-      description: "要添加的主体。"
+      description: The body to add.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskBodyElement
-      description: "返回的任务。"
+      description: Returns the task.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskBodyElement*
   exceptions: []
   platform:
@@ -1177,23 +1177,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将添加[UsingTask 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)到项目。"
-  remarks: "调用方必须将 UsingTask 元素添加到所选项目中的位置。 请`assemblyName`或`assemblyFile`必须为 null，但不是两个。"
+  summary: Adds a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) to the project.
+  remarks: Caller must add the UsingTask element to the location of choice in the project. Either the `assemblyName` or `assemblyFile` must be null, but not both.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement (string taskName, string assemblyFile, string assemblyName);
     parameters:
     - id: taskName
       type: System.String
-      description: "任务名称。"
+      description: The task name.
     - id: assemblyFile
       type: System.String
-      description: "程序集的文件路径。"
+      description: The file path to the assembly.
     - id: assemblyName
       type: System.String
-      description: "要加载的程序集的名称。"
+      description: The name of the assembly to load.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskElement
-      description: "返回 UsingTask 元素。"
+      description: Returns the UsingTask element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement*
   exceptions: []
   platform:
@@ -1210,29 +1210,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将添加[UsingTask 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)到项目。"
-  remarks: "调用方必须将 UsingTask 元素添加到所选项目中的位置。 请`assemblyName`或`assemblyFile`必须为 null，但不是两个。 同时`runtime`和`architecture`可以为 null。"
+  summary: Adds a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) to the project.
+  remarks: Caller must add the UsingTask element to the location of choice in the project. Either the `assemblyName` or `assemblyFile` must be null, but not both. Both the `runtime` and `architecture` can be null.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement (string taskName, string assemblyFile, string assemblyName, string runtime, string architecture);
     parameters:
     - id: taskName
       type: System.String
-      description: "任务名称。"
+      description: The task name.
     - id: assemblyFile
       type: System.String
-      description: "程序集的文件路径。"
+      description: The file path to the assembly.
     - id: assemblyName
       type: System.String
-      description: "要加载的程序集的名称。"
+      description: The name of the assembly to load.
     - id: runtime
       type: System.String
-      description: "可选的运行时说明符。"
+      description: Optional runtime specifier.
     - id: architecture
       type: System.String
-      description: "可选的体系结构说明符。"
+      description: Optional architecture specifier.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskElement
-      description: "返回 UsingTask 元素。"
+      description: Returns the UsingTask element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement*
   exceptions: []
   platform:
@@ -1249,26 +1249,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建用于参数[UsingTask 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)参数组。"
-  remarks: "调用方必须将参数添加到项目中选择的 UsingTask 参数组。"
+  summary: Creates a parameter for use in a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) parameter group.
+  remarks: Caller must add the parameter to the UsingTask parameter group of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskParameterElement CreateUsingTaskParameterElement (string name, string output, string required, string parameterType);
     parameters:
     - id: name
       type: System.String
-      description: "名称`UsingTask`元素。"
+      description: The name of the `UsingTask` element.
     - id: output
       type: System.String
-      description: "从项目文件中的任务的输出存储。"
+      description: Stores outputs from the task in the project file.
     - id: required
       type: System.String
-      description: "包含作为其值的参数值的用户定义的任务参数。"
+      description: A user-defined task parameter that contains the parameter value as its value.
     - id: parameterType
       type: System.String
-      description: "参数的类型。"
+      description: The type of the parameter.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskParameterElement
-      description: "返回参数。"
+      description: Returns the parameter.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterElement*
   exceptions: []
   platform:
@@ -1285,14 +1285,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "参数为创建组[UsingTask 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "调用方必须将参数组添加到项目中的选项的 UsingTask 元素。"
+  summary: Creates a parameter group for a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the parameter group to the UsingTask element of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.UsingTaskParameterGroupElement CreateUsingTaskParameterGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.UsingTaskParameterGroupElement
-      description: "返回参数组。"
+      description: Returns the parameter group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterGroupElement*
   exceptions: []
   platform:
@@ -1309,17 +1309,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "创建[When 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)具有指定的条件属性。"
-  remarks: "调用方必须添加时选择此项目中的位置的元素。"
+  summary: Creates a [When Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) with a specified Condition attribute.
+  remarks: Caller must add the When element to the location of choice in this project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectWhenElement CreateWhenElement (string condition);
     parameters:
     - id: condition
       type: System.String
-      description: "条件属性的值。"
+      description: The value of the Condition attribute.
     return:
       type: Microsoft.Build.Construction.ProjectWhenElement
-      description: "返回 When 元素。"
+      description: Returns the When element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateWhenElement*
   exceptions: []
   platform:
@@ -1336,13 +1336,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取或设置 DefaultTargets 特性的值。"
-  remarks: "如果要设置的值是空字符串或 null，则删除 DefaultTargets 特性。"
+  summary: Gets or sets the value of the DefaultTargets attribute.
+  remarks: Removes the DefaultTargets attribute if the value to set is an empty string or null.
   syntax:
     content: public string DefaultTargets { get; set; }
     return:
       type: System.String
-      description: "返回 DefaultTargets 特性的值。 如果该属性不存在，则返回空字符串。"
+      description: Returns the value of the DefaultTargets attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.DefaultTargets*
   exceptions: []
   platform:
@@ -1359,13 +1359,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "针对此元素，如果任何 DefaultTargets 特性的位置。"
-  remarks: "可能不正确如果不保存文件，或自上次保存已编辑文件。"
+  summary: Location of the DefaultTargets attribute on this element, if any.
+  remarks: May not be correct if file is not saved, or file has been edited since it was last saved.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation DefaultTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "返回 DefaultTargets 特性位置。 如果没有此类的属性，返回 null。"
+      description: Returns  the DefaultTargets attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.DefaultTargetsLocation*
   exceptions: []
   platform:
@@ -1382,13 +1382,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取项目文件的目录路径。"
-  remarks: "此方法是必需的评估相对路径。"
+  summary: Gets the directory path to the project file.
+  remarks: This method is required for evaluating relative paths.
   syntax:
     content: public string DirectoryPath { get; }
     return:
       type: System.String
-      description: "返回永远不会为 null 的目录路径。 如果未从磁盘加载该项目，请在加载该项目时的时间返回当前目录。"
+      description: Returns the directory path, which is never null. If the project is not loaded from disk, returns the current-directory at the time the project was loaded.
   overload: Microsoft.Build.Construction.ProjectRootElement.DirectoryPath*
   exceptions: []
   platform:
@@ -1405,13 +1405,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "指定将用于保存在项目文件的字符编码。"
-  remarks: "返回给定的项目文件中的 Xml 声明的编码。 如果没有指定编码，则将默认为 utf-8。"
+  summary: Specifies the character encoding that the project file is to be saved in.
+  remarks: Returns the encoding given by the Xml declaration in the project file. If no encoding is specified, this defaults to UTF 8.
   syntax:
     content: public System.Text.Encoding Encoding { get; }
     return:
       type: System.Text.Encoding
-      description: "返回的字符编码将用于保存在项目文件。"
+      description: Returns the character encoding that the project file is to be saved in.
   overload: Microsoft.Build.Construction.ProjectRootElement.Encoding*
   exceptions: []
   platform:
@@ -1428,12 +1428,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取项目文件的完整路径。"
+  summary: Gets the full path to the project file.
   syntax:
     content: public string FullPath { get; set; }
     return:
       type: System.String
-      description: "返回项目文件的完整路径。 如果未从磁盘加载该项目，返回 null。"
+      description: Returns the full path to the project file. If the project is not loaded from disk, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.FullPath*
   exceptions: []
   platform:
@@ -1450,12 +1450,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "确定自上次加载或保存该项目是否已修改。"
+  summary: Determines whether the project has been modified since it was last loaded or saved.
   syntax:
     content: public bool HasUnsavedChanges { get; }
     return:
       type: System.Boolean
-      description: "如果已修改项目，则返回 truefalse 否则为。"
+      description: Returns true if the project has been modified; false otherwise.
   overload: Microsoft.Build.Construction.ProjectRootElement.HasUnsavedChanges*
   exceptions: []
   platform:
@@ -1472,12 +1472,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子导入组。"
+  summary: Gets all the child import groups in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportGroupElement> ImportGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportGroupElement}
-      description: "返回此项目中的所有子导入组。"
+      description: Returns all the child import groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ImportGroups*
   exceptions: []
   platform:
@@ -1494,12 +1494,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取在此项目中，首先以最后一个组的所有子导入组。"
+  summary: Gets all the child import groups in this project, starting with the last group.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportGroupElement> ImportGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportGroupElement}
-      description: "返回所有子导入组在此项目中，从最后一个组开始。"
+      description: Returns all the child import groups in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.ImportGroupsReversed*
   exceptions: []
   platform:
@@ -1516,12 +1516,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子导入元素。"
+  summary: Gets all the child import elements in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportElement> Imports { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportElement}
-      description: "获取此项目中的所有子导入元素。"
+      description: Gets all the child import elements in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Imports*
   exceptions: []
   platform:
@@ -1538,13 +1538,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取或设置 InitialTargets 属性的值。"
-  remarks: "如果要设置的值是空字符串或 null，则删除 InitialTargets 属性。"
+  summary: Gets or sets the value of the InitialTargets attribute.
+  remarks: Removes the InitialTargets attribute if the value to set is an empty string or null.
   syntax:
     content: public string InitialTargets { get; set; }
     return:
       type: System.String
-      description: "返回 InitialTargets 属性值。 如果该属性不存在，则返回空字符串。"
+      description: Returns the InitialTargets attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.InitialTargets*
   exceptions: []
   platform:
@@ -1561,12 +1561,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "此元素，如果有的话上的 InitialTargets 属性的位置。"
+  summary: Location of the InitialTargets attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation InitialTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "返回 InitialTargets 特性位置。 如果没有此类的属性，返回 null。"
+      description: Returns InitialTargets attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.InitialTargetsLocation*
   exceptions: []
   platform:
@@ -1583,12 +1583,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子项定义组。"
+  summary: Gets all the child item definition groups in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemDefinitionGroupElement> ItemDefinitionGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemDefinitionGroupElement}
-      description: "返回此项目中的所有子项定义组。"
+      description: Returns all the child item definition groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroups*
   exceptions: []
   platform:
@@ -1605,12 +1605,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取在此项目中，首先以最后一个组的所有子项定义组。"
+  summary: Gets all the child item definition groups in this project, starting with the last group.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemDefinitionGroupElement> ItemDefinitionGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemDefinitionGroupElement}
-      description: "返回此项目，从最后一个组中的所有子项目定义组。"
+      description: Returns all the child item definition groups in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroupsReversed*
   exceptions: []
   platform:
@@ -1627,12 +1627,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的任意位置的所有项定义组中的所有子项项定义。"
+  summary: Gets all child item definitions in all item definition groups anywhere in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemDefinitionElement> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemDefinitionElement}
-      description: "获取此项目中的任意位置的所有项定义组中的所有子项项定义。"
+      description: Gets all child item definitions in all item definition groups anywhere in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemDefinitions*
   exceptions: []
   platform:
@@ -1649,13 +1649,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子组。"
-  remarks: "不包括在 Choose 元素包含任何项组。"
+  summary: Gets all the child item groups in this project.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemGroupElement> ItemGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemGroupElement}
-      description: "返回此项目中的所有子项组。"
+      description: Returns all the child item groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemGroups*
   exceptions: []
   platform:
@@ -1672,13 +1672,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取所有子项组存在于此项目中从最后一个组开始。"
-  remarks: "不包括在 Choose 元素包含任何项组。"
+  summary: Gets all the child item groups present in this project, starting with the last group.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemGroupElement> ItemGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemGroupElement}
-      description: "返回所有子项组存在于此项目中从最后一个组开始。"
+      description: Returns all the child item groups present in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemGroupsReversed*
   exceptions: []
   platform:
@@ -1695,12 +1695,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子项。"
+  summary: Gets all child items in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemElement> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemElement}
-      description: "在此项目中，返回所有子项目，即使它们包含在 Choose 元素。"
+      description: Returns all child items in this project, even if they are contained by Choose elements.
   overload: Microsoft.Build.Construction.ProjectRootElement.Items*
   exceptions: []
   platform:
@@ -1717,13 +1717,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取项目文件的上次写入时间。"
-  remarks: "此属性可以用于确定文件是否具有已更改磁盘上由 MSBuild 进程外进程。"
+  summary: Gets the last-write-time of the project file.
+  remarks: This property can be used to determine whether a file has been changed on disk by a process other than the MSBuild process.
   syntax:
     content: public DateTime LastWriteTimeWhenRead { get; }
     return:
       type: System.DateTime
-      description: "获取项目文件的上次写入时间。"
+      description: Gets the last-write-time of the project file.
   overload: Microsoft.Build.Construction.ProjectRootElement.LastWriteTimeWhenRead*
   exceptions: []
   platform:
@@ -1740,17 +1740,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "通过从指定的文件路径加载数据来初始化全局项目集合中的项目根。"
-  remarks: "可能会引发 InvalidProjectFileException。"
+  summary: Initializes a project root in the global project collection by loading data from the specified file path.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Open (string path);
     parameters:
     - id: path
       type: System.String
-      description: "数据文件路径。"
+      description: The file path to the data.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回初始化的项目根。"
+      description: Returns the initialized project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Open*
   exceptions: []
   platform:
@@ -1767,20 +1767,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "通过从指定的文件路径加载数据来初始化的指定的项目集合中的项目根。"
-  remarks: "可能会引发 InvalidProjectFileException。"
+  summary: Initializes a project root in the specified project collection by loading data from the specified file path.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Open (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: path
       type: System.String
-      description: "数据文件路径。"
+      description: The file path to the data.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "包含要初始化的项目的项目集合。"
+      description: The project collection containing the project to be initialized.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回初始化的项目根。"
+      description: Returns the initialized project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Open*
   exceptions: []
   platform:
@@ -1797,12 +1797,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "源位置文件本身中没有任何特定的内容。 如果不指定文件名称，这是一个空的位置。 这是具有没有位置合法大小写。"
+  summary: The location of the originating file itself, not any specific content within it. If the file has not been given a name, this is an empty location. This is a legitimate case of having no location.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "返回原始的文件位置或空位置。"
+      description: Returns the originating file location or an empty location.
   overload: Microsoft.Build.Construction.ProjectRootElement.ProjectFileLocation*
   exceptions: []
   platform:
@@ -1819,12 +1819,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子属性。"
+  summary: Gets all the child properties in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyElement> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyElement}
-      description: "在此项目中，返回所有子属性，即使它们包含在 Choose 元素。"
+      description: Returns all child properties in this project, even if they are contained by Choose elements.
   overload: Microsoft.Build.Construction.ProjectRootElement.Properties*
   exceptions: []
   platform:
@@ -1841,13 +1841,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子属性组。"
-  remarks: "不包括在 Choose 元素包含任何项组。"
+  summary: Gets all the child property groups in this project.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyGroupElement> PropertyGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyGroupElement}
-      description: "返回此项目中的所有子属性组。"
+      description: Returns all the child property groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.PropertyGroups*
   exceptions: []
   platform:
@@ -1864,13 +1864,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取所有子属性组存在于此项目中从最后一个组开始。"
-  remarks: "不包括在 Choose 元素包含任何项组。"
+  summary: Gets all the child property groups present in this project, starting with the last group.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyGroupElement> PropertyGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyGroupElement}
-      description: "返回所有子属性组存在于此项目中从最后一个组开始。"
+      description: Returns all the child property groups present in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.PropertyGroupsReversed*
   exceptions: []
   platform:
@@ -1887,13 +1887,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取 XML 内容，它表示此项目。"
-  remarks: "不将标记为未修改内容。 MSBuild 对象模型提供用于访问的 XML 内容的其他方法。"
+  summary: Gets the XML content that represents this project.
+  remarks: Does not mark the content as unmodified. The MSBuild object model provides no other way to access the XML content.
   syntax:
     content: public string RawXml { get; }
     return:
       type: System.String
-      description: "返回的 XML 内容，它表示此项目以字符串形式。"
+      description: Returns the XML content that represents this project as a string.
   overload: Microsoft.Build.Construction.ProjectRootElement.RawXml*
   exceptions: []
   platform:
@@ -1910,8 +1910,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "如果修改，到文件系统，将保存该项目。"
-  remarks: "使用编码的编码属性所返回的字符。 将标记为未修改的项目。"
+  summary: Saves the project, if modified, to the file system.
+  remarks: Uses the character Encoding returned by the Encoding property. Marks the project as unmodified.
   syntax:
     content: public void Save ();
     parameters: []
@@ -1931,14 +1931,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将项目保存到指定的文本编写器，无论修改。"
-  remarks: "使用 TextWriter 的字符编码。 将标记为未修改的项目。"
+  summary: Saves the project to the specified text writer, whether modified or not.
+  remarks: Uses the character encoding of the TextWriter. Marks the project as unmodified.
   syntax:
     content: public void Save (System.IO.TextWriter writer);
     parameters:
     - id: writer
       type: System.IO.TextWriter
-      description: "要写入到项目的文本编写器。"
+      description: The text writer to write the project to.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -1955,14 +1955,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "如果修改或存储的文件路径已更改，将保存该项目。"
-  remarks: "将标记为未修改的项目。"
+  summary: Saves the project, if modified or if the file path to storage has changed.
+  remarks: Marks the project as unmodified.
   syntax:
     content: public void Save (string path);
     parameters:
     - id: path
       type: System.String
-      description: "存储中的项目文件路径。"
+      description: The file path to the project in storage.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -1979,14 +1979,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "如果修改，使用指定的字符编码，将保存该项目。"
-  remarks: "将标记为未修改的项目。"
+  summary: Saves the project, if modified, using the specified character encoding.
+  remarks: Marks the project as unmodified.
   syntax:
     content: public void Save (System.Text.Encoding saveEncoding);
     parameters:
     - id: saveEncoding
       type: System.Text.Encoding
-      description: "用于保存项目的字符编码。"
+      description: The character encoding used to save the project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -2003,17 +2003,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "如果修改或存储的文件路径已更改，将保存该项目。 使用指定的字符编码..."
-  remarks: "将标记为未修改的项目。"
+  summary: Saves the project, if modified or if the file path to storage has changed. Uses the specified character encoding..
+  remarks: Marks the project as unmodified.
   syntax:
     content: public void Save (string path, System.Text.Encoding encoding);
     parameters:
     - id: path
       type: System.String
-      description: "存储中的项目文件路径。"
+      description: The file path to the project in storage.
     - id: encoding
       type: System.Text.Encoding
-      description: "用于保存项目的字符编码。"
+      description: The character encoding used to save the project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -2030,12 +2030,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此项目中的所有子目标。"
+  summary: Gets all the child targets in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectTargetElement> Targets { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectTargetElement}
-      description: "返回此项目中的所有子目标。"
+      description: Returns all the child targets in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Targets*
   exceptions: []
   platform:
@@ -2052,12 +2052,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取上次修改此项目的时间。"
+  summary: Gets the time that this project was last modified.
   syntax:
     content: public DateTime TimeLastChanged { get; }
     return:
       type: System.DateTime
-      description: "返回上次修改此项目的时间。 如果尚未已修改项目，因为它正在创建或加载，返回 null。"
+      description: Returns the time that this project was last modified. Returns null if the project hasn't been modified since being created or loaded.
   overload: Microsoft.Build.Construction.ProjectRootElement.TimeLastChanged*
   exceptions: []
   platform:
@@ -2074,13 +2074,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取或设置 ToolsVersion 特性的值。"
-  remarks: "如果要设置的值是空字符串或 null，则删除 ToolsVersion 特性。"
+  summary: Gets or sets the value of the ToolsVersion attribute.
+  remarks: Removes the ToolsVersion attribute if the value to set is an empty string or null.
   syntax:
     content: public string ToolsVersion { get; set; }
     return:
       type: System.String
-      description: "返回 ToolsVersion 特性值。 如果该属性不存在，则返回空字符串。"
+      description: Returns the ToolsVersion attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.ToolsVersion*
   exceptions: []
   platform:
@@ -2097,12 +2097,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "针对此元素，如果任何 ToolsVersion 特性的位置。"
+  summary: The location of the ToolsVersion attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ToolsVersionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "返回 ToolsVersion 特性位置。 如果没有此类的属性，返回 null。"
+      description: Returns the ToolsVersion attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.ToolsVersionLocation*
   exceptions: []
   platform:
@@ -2119,13 +2119,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取或设置 TreatAsLocalProperty 属性的值。"
-  remarks: "如果要设置的值是空字符串或 null，则删除 TreatAsLocalProperty 属性。       有关详细信息`TreatAsLocalProperty`属性，请参阅[Project 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)和[如何︰ 生成不同的选项相同的源文件](~/add/includes/ajax-current-ext-md.md)。"
+  summary: Gets or sets the value of the TreatAsLocalProperty attribute.
+  remarks: "Removes the TreatAsLocalProperty attribute if the value to set is an empty string or null.  \n  \n For more information about the `TreatAsLocalProperty` attribute, see [Project Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) and [How to: Build the Same Source Files with Different Options](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: public string TreatAsLocalProperty { get; set; }
     return:
       type: System.String
-      description: "返回 TreatAsLocalProperty 属性值。 如果该属性不存在，则返回空字符串。"
+      description: Returns the TreatAsLocalProperty attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalProperty*
   exceptions: []
   platform:
@@ -2142,12 +2142,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "此元素，如果有的话上的 TreatAsLocalProperty 属性的位置。"
+  summary: The location of the TreatAsLocalProperty attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation TreatAsLocalPropertyLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "返回 TreatAsLocalProperty 特性位置。 如果没有此类的属性，返回 null。"
+      description: Returns the TreatAsLocalProperty attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalPropertyLocation*
   exceptions: []
   platform:
@@ -2164,17 +2164,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取全局项目集合中已加载到从指定的文件路径的内存的项目根目录位置。 或者，如果该文件当前不在内存中。"
-  remarks: "它有可能 ProjectRootElements 要纳入内存并且由于内存压力而被丢弃。 如果 TryOpen 返回 null 而不表示，项目根永远不会加载后，仅，该文件当前不在内存中。"
+  summary: Gets the project root in the global project collection that was loaded into memory from the specified file path. or null if it is not currently in memory.
+  remarks: It is possible for ProjectRootElements to be brought into memory and discarded due to memory pressure. If TryOpen returns null it does not indicate that the project root has never been loaded, only that it is not currently in memory.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement TryOpen (string path);
     parameters:
     - id: path
       type: System.String
-      description: "ProjectRootElement，路径不能为 null。"
+      description: The path of the ProjectRootElement, cannot be null.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回的项目根目录位置。 如果没有项目加载到内存中从指定的文件路径，返回 null。"
+      description: Returns the project root. Returns null if no project was loaded into memory from the specified file path.
   overload: Microsoft.Build.Construction.ProjectRootElement.TryOpen*
   exceptions: []
   platform:
@@ -2191,20 +2191,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取已加载到内存中从指定的文件路径指定的项目集合中的项目根目录位置。 或者，如果该文件当前不在内存中。"
-  remarks: "它有可能 ProjectRootElements 要纳入内存并且由于内存压力而被丢弃。 如果 TryOpen 返回 null 而不表示，项目根永远不会加载后，仅，该文件当前不在内存中。"
+  summary: Gets the project root in the specified project collection that was loaded into memory from the specified file path. or null if it is not currently in memory.
+  remarks: It is possible for ProjectRootElements to be brought into memory and discarded due to memory pressure. If TryOpen returns null it does not indicate that the project root has never been loaded, only that it is not currently in memory.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement TryOpen (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: path
       type: System.String
-      description: "ProjectRootElement，路径不能为 null。"
+      description: The path of the ProjectRootElement, cannot be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "要搜索的项目根目录的项目集合。"
+      description: The project collection to search for the project root.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "返回的项目根目录位置。 如果没有项目加载到内存中从指定的文件路径，返回 null。"
+      description: Returns the project root. Returns null if no project was loaded into memory from the specified file path.
   overload: Microsoft.Build.Construction.ProjectRootElement.TryOpen*
   exceptions: []
   platform:
@@ -2221,12 +2221,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取所有子[UsingTask 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)此项目中。"
+  summary: Gets all child [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectUsingTaskElement> UsingTasks { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectUsingTaskElement}
-      description: "返回此项目中的所有子 UsingTask 元素。"
+      description: Returns all child UsingTask elements in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.UsingTasks*
   exceptions: []
   platform:
@@ -2243,13 +2243,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取此对象的版本号。"
-  remarks: "比较此版本号与存储的版本号来确定是否已更改项目的 XML 内容，即使在更改后保存项目。 编辑可能不止一次，递增版本号，因此仅很版本对存储的值进行比较。"
+  summary: Gets the version number of this object.
+  remarks: Compare this version number to a stored version number to determine whether the project XML content has changed, even if the project is saved after the change. An edit may increment the version number more than once, so Version should only be compared to a stored value.
   syntax:
     content: public int Version { get; }
     return:
       type: System.Int32
-      description: "返回此对象的版本号。"
+      description: Returns the version number of this object.
   overload: Microsoft.Build.Construction.ProjectRootElement.Version*
   exceptions: []
   platform:

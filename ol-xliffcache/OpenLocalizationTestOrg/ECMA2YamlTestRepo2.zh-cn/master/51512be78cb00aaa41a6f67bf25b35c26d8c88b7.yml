@@ -12,8 +12,8 @@ items:
   nameWithType: DynamicEnumProperty
   fullName: Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty
   type: Class
-  summary: "表示一个枚举属性的架构。"
-  remarks: "此类继承<xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Default%2A>自<xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>类，它具有对此类没有意义</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>的属性</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Default%2A> 使用<xref:Microsoft.Build.Framework.XamlTypes.EnumValue.IsDefault%2A>属性<xref:Microsoft.Build.Framework.XamlTypes.EnumValue>改为将标记此属性的默认值。</xref:Microsoft.Build.Framework.XamlTypes.EnumValue> </xref:Microsoft.Build.Framework.XamlTypes.EnumValue.IsDefault%2A>"
+  summary: Represents the schema of an enumeration property.
+  remarks: This class inherits the <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Default%2A> property from the <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> class, which has no meaning for this class. Use the <xref:Microsoft.Build.Framework.XamlTypes.EnumValue.IsDefault%2A> property on the <xref:Microsoft.Build.Framework.XamlTypes.EnumValue> instead to mark the default value for this property.
   syntax:
     content: 'public sealed class DynamicEnumProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty'
   inheritance:
@@ -60,7 +60,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "动态枚举属性的默认构造函数。"
+  summary: The default constructor for a dynamic enum property.
   syntax:
     content: public DynamicEnumProperty ();
     parameters: []
@@ -80,13 +80,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "获取或设置的提供程序生成的此属性的可能值列表。"
-  remarks: "反序列化期间，必须设置此属性。"
+  summary: Gets or sets the provider that produces the list of possible values for this property.
+  remarks: This property must be set during deserialization.
   syntax:
     content: public string EnumProvider { get; set; }
     return:
       type: System.String
-      description: "返回提供程序。"
+      description: Returns the provider.
   overload: Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.EnumProvider*
   exceptions: []
   platform:
@@ -103,12 +103,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "获取或设置提供程序特定的一组选项要传递给提供程序。"
+  summary: Gets or sets a provider-specific set of options to pass to the provider.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.NameValuePair> ProviderSettings { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.NameValuePair}
-      description: "返回组的选项。"
+      description: Returns the set of options.
   overload: Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.ProviderSettings*
   exceptions: []
   platform:

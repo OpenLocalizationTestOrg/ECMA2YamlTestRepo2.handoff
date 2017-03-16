@@ -17,8 +17,8 @@ items:
   nameWithType: InternalLoggerException
   fullName: Microsoft.Build.BuildEngine.InternalLoggerException
   type: Class
-  summary: "此异常用于包装记录器未经处理的异常。"
-  remarks: "仅可由引发此异常[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]引擎。       此异常停止生成。"
+  summary: This exception is used to wrap an unhandled exception from a logger.
+  remarks: "This exception can only be thrown by the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine.  \n  \n This exception stops the build."
   syntax:
     content: 'public sealed class InternalLoggerException : Exception'
   inheritance:
@@ -39,7 +39,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InternalLoggerException&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InternalLoggerException"></xref> class.
   syntax:
     content: public InternalLoggerException ();
     parameters: []
@@ -59,13 +59,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InternalLoggerException&quot;></xref>类使用指定的值。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InternalLoggerException"></xref> class using the specified values.
   syntax:
     content: public InternalLoggerException (string message);
     parameters:
     - id: message
       type: System.String
-      description: "解释异常原因的错误消息。"
+      description: The error message that explains the reason for the exception.
   overload: Microsoft.Build.BuildEngine.InternalLoggerException.#ctor*
   exceptions: []
   platform:
@@ -82,16 +82,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InternalLoggerException&quot;></xref>类使用指定的值。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InternalLoggerException"></xref> class using the specified values.
   syntax:
     content: public InternalLoggerException (string message, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "解释异常原因的错误消息。"
+      description: The error message that explains the reason for the exception.
     - id: innerException
       type: System.Exception
-      description: "导致当前异常的异常。 如果`innerException`参数不是 null 引用 (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref>中[!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) 中, 引发当前异常<xref uid=&quot;langword_csharp_catch&quot; name=&quot;catch&quot; href=&quot;&quot;></xref>处理内部异常的块。"
+      description: The exception that is the cause of the current excpetion. If the `innerException` parameter is not a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]), the current exception is raised in a <xref uid="langword_csharp_catch" name="catch" href=""></xref> block that handles the inner exception.
   overload: Microsoft.Build.BuildEngine.InternalLoggerException.#ctor*
   exceptions: []
   platform:
@@ -108,12 +108,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取生成事件的详细信息，如果有正在记录。"
+  summary: Gets the details of the build event, if any, that was being logged.
   syntax:
     content: public Microsoft.Build.Framework.BuildEventArgs BuildEventArgs { get; }
     return:
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "正在记录生成事件的详细信息。"
+      description: The details of the build event that was being logged.
   overload: Microsoft.Build.BuildEngine.InternalLoggerException.BuildEventArgs*
   exceptions: []
   platform:
@@ -130,12 +130,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取与此异常的消息关联的错误代码。"
+  summary: Gets the error code associated with this exception's message.
   syntax:
     content: public string ErrorCode { get; }
     return:
       type: System.String
-      description: "错误代码的文本。"
+      description: The text for the error code.
   overload: Microsoft.Build.BuildEngine.InternalLoggerException.ErrorCode*
   exceptions: []
   platform:
@@ -152,16 +152,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "集<xref href=&quot;System.Runtime.Serialization.SerializationInfo&quot;></xref>使用有关异常的信息。"
+  summary: Sets the <xref href="System.Runtime.Serialization.SerializationInfo"></xref> with information about the exception.
   syntax:
     content: public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "<xref href=&quot;System.Runtime.Serialization.SerializationInfo&quot;> </xref>它保存关于所引发异常的序列化的对象数据。"
+      description: The <xref href="System.Runtime.Serialization.SerializationInfo"></xref> that holds the serialized object data about the exception being thrown.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "<xref:System.Runtime.Serialization.StreamingContext>它包含有关源或目标的上下文信息。</xref:System.Runtime.Serialization.StreamingContext>"
+      description: The <xref:System.Runtime.Serialization.StreamingContext> that contains contextual information about the source or destination.
   overload: Microsoft.Build.BuildEngine.InternalLoggerException.GetObjectData*
   exceptions: []
   platform:
@@ -178,12 +178,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取与此错误关联的 F1 帮助关键字。"
+  summary: Gets the F1-help keyword associated with this error.
   syntax:
     content: public string HelpKeyword { get; }
     return:
       type: System.String
-      description: "与此错误关联的 F1 帮助关键字。"
+      description: The F1-help keyword associated with this error.
   overload: Microsoft.Build.BuildEngine.InternalLoggerException.HelpKeyword*
   exceptions: []
   platform:
@@ -200,12 +200,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取是否记录器初始化过程中出现异常。"
+  summary: Gets whether an exception occurred during logger initialization.
   syntax:
     content: public bool InitializationException { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果在记录器初始化过程中发生异常<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>否则为。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the exception occured during logger initialization, <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
   overload: Microsoft.Build.BuildEngine.InternalLoggerException.InitializationException*
   exceptions: []
   platform:

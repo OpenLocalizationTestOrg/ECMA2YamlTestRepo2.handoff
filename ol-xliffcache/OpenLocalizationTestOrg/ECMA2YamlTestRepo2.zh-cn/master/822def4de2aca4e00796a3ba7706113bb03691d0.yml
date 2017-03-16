@@ -16,8 +16,8 @@ items:
   nameWithType: ProjectItemDefinition
   fullName: Microsoft.Build.Evaluation.ProjectItemDefinition
   type: Class
-  summary: "表示一个特定的项类型的计算的项定义。"
-  remarks: "项定义不与项相同。 在类似项目，项定义可以具有元数据。 与属性一样，新的元数据可以重写一个同名的旧元数据。       过程评估，项类型的所有项定义会都收集在一起 （假设其条件都为真） 创建的每种类型的一个 ProjectItemDefinition。 为此，项目项定义可以引用多个项目项定义元素。 但是，引用单个项目元数据元素，它可以添加、 删除和修改项目项定义中的元数据。"
+  summary: Represents an evaluated item definition for a particular item-type.
+  remarks: "Item definitions are not the same as items. Like items, item definitions can have metadata. Like properties, new metadata can override old metadata with the same name.  \n  \n During evaluation, all the item definitions for an item type are collected together (assuming their conditions are true) to create one ProjectItemDefinition for each type. For this reason, a project item definition can refer to more than one project item definition element. The metadata within a project item definition, however, refers to a single project metadata element, which can be added, removed, and modified."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{itemType} #Metadata={MetadataCount}")]
@@ -41,16 +41,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "获取具有给定名称的项定义中的任何元数据。"
+  summary: Get any metadata in the item definition with the given name.
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata GetMetadata (string name);
     parameters:
     - id: name
       type: System.String
-      description: "要检索的元数据名称。"
+      description: The name of the metadata to retrieve.
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: "获取具有给定名称的项定义中的任何元数据。 返回元数据不存在具有该名称的情况下为 null。"
+      description: Get any metadata in the item definition with the given name. Returns null if no metadata exists with that name.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.GetMetadata*
   exceptions: []
   platform:
@@ -67,16 +67,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "获取具有指定的名称的项中的任何元数据的值。"
+  summary: Get the value of any metadata in the item that has the specified name.
   syntax:
     content: public string GetMetadataValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: "要检索其元数据值的项名称。"
+      description: The name of the item whose metadata value is to be retrieved.
     return:
       type: System.String
-      description: "返回具有指定的名称; 的项中的任何元数据的值否则返回 null。"
+      description: Returns the value of any metadata in the item that has the specified name; otherwise returns null.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.GetMetadataValue*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "获取此项定义的项类型。"
+  summary: Gets the item type of this item definition.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "返回此项定义的项类型。"
+      description: Returns the item type of this item definition.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.ItemType*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "所有元数据获取项定义的枚举数。"
-  remarks: "这是只读集合。"
+  summary: Gets an enumerator over all metadata for the item definition.
+  remarks: This is a read-only collection.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Evaluation.ProjectMetadata> Metadata { get; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectMetadata}
-      description: "通过此项定义的所有元数据中返回的枚举。"
+      description: Returns an enumerator over all metadata for the item definition.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.Metadata*
   exceptions: []
   platform:
@@ -138,12 +138,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "获取上项定义的元数据的计数。"
+  summary: Gets the count of the metadata on the item definition.
   syntax:
     content: public int MetadataCount { get; }
     return:
       type: System.Int32
-      description: "在项定义返回的元数据的计数。"
+      description: Returns the count of the metadata on the item definition.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.MetadataCount*
   exceptions: []
   platform:
@@ -160,12 +160,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "获取包含此项定义的项目。"
+  summary: Gets the project that contains this item definition.
   syntax:
     content: public Microsoft.Build.Evaluation.Project Project { get; }
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "返回包含此项定义，即永远不会为 null 的项目。"
+      description: Returns the project that contains this item definition, which is never null.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.Project*
   exceptions: []
   platform:
@@ -182,20 +182,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "项定义中设置给定的元数据的值。"
-  remarks: "假定未计算的值以根据需要包含字符转义序列。"
+  summary: Sets the value of the given metadata in the item definition.
+  remarks: The unevaluated value is assumed to contain character escape sequences as needed.
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata SetMetadataValue (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "要设置的元数据名称。"
+      description: The name of the metadata to set.
     - id: unevaluatedValue
       type: System.String
-      description: "元数据的新而言未计算的值。"
+      description: The new unevaluated value of the metadata.
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: "返回具有给定名称的元数据。"
+      description: Returns the metadata with the given name.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.SetMetadataValue*
   exceptions: []
   platform:

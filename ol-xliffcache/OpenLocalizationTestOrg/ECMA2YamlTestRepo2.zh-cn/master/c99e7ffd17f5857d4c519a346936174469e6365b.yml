@@ -12,7 +12,7 @@ items:
   nameWithType: ProjectItemDefinitionElement
   fullName: Microsoft.Build.Construction.ProjectItemDefinitionElement
   type: Class
-  summary: "表示 MSBuild 项目中的某个 ItemDefinition 元素。"
+  summary: Represents an ItemDefinition element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{ItemType} #Metadata={Count} Condition={Condition}")]
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "将元数据添加到此项定义。 将元数据追加到所有现有元数据。"
+  summary: Adds metadata to this item definition. Appends the metadata to any existing metadata.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement AddMetadata (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "元数据的名称。"
+      description: Name of the metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "要添加的元数据。"
+      description: Metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "返回修改的元数据。"
+      description: Returns the modified metadata.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.AddMetadata*
   exceptions: []
   platform:
@@ -89,12 +89,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取项定义元素名称。"
+  summary: Gets the item definition element name.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "返回的项定义元素名称。"
+      description: Returns the item definition element name.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.ItemType*
   exceptions: []
   platform:
@@ -111,12 +111,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "获取所有子元数据定义。"
+  summary: Gets all child metadata definitions.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectMetadataElement> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectMetadataElement}
-      description: "返回所有子元数据定义。"
+      description: Returns all child metadata definitions.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.Metadata*
   exceptions: []
   platform:

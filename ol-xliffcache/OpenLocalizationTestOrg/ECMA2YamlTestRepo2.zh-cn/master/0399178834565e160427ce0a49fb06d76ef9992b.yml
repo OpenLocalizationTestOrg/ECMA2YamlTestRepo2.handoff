@@ -16,7 +16,7 @@ items:
   nameWithType: CodeTaskFactory
   fullName: Microsoft.Build.Tasks.CodeTaskFactory
   type: Class
-  summary: "这可能会花费代码 DOM 任务工厂支持的语言，并从它创建的任务。"
+  summary: A task factory which can take a code DOM supported language and create a task from it.
   syntax:
     content: 'public class CodeTaskFactory : Microsoft.Build.Framework.ITaskFactory'
   inheritance:
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "创建任务工厂。"
+  summary: Creates the task factory.
   syntax:
     content: public CodeTaskFactory ();
     parameters: []
@@ -58,13 +58,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "清除任何上下文或用于任务的状态。"
+  summary: Cleans up any context or state used in a task.
   syntax:
     content: public void CleanupTask (Microsoft.Build.Framework.ITask task);
     parameters:
     - id: task
       type: Microsoft.Build.Framework.ITask
-      description: "若要清理任务。"
+      description: The task to clean up.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CleanupTask*
   exceptions: []
   platform:
@@ -81,16 +81,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "创建`taskfactory`实例，其中包含需要刷新任务调用之间的数据。"
+  summary: Create a `taskfactory` instance which contains the data that needs to be refreshed between task invocations.
   syntax:
     content: public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine loggingHost);
     parameters:
     - id: loggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "记录从任务工厂的信息的主机。"
+      description: The host that logs information from the task factory.
     return:
       type: Microsoft.Build.Framework.ITask
-      description: "返回新的任务。"
+      description: Returns the new task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CreateTask*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "MSBuild 引擎将使用此日志记录。"
+  summary: The MSBuild engine uses this for logging.
   syntax:
     content: public string FactoryName { get; }
     return:
       type: System.String
-      description: "返回任务的名称。"
+      description: Returns the name of the task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.FactoryName*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取所有任务参数的类型信息。"
+  summary: Gets the type information for all task parameters.
   syntax:
     content: public Microsoft.Build.Framework.TaskPropertyInfo[] GetTaskParameters ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.TaskPropertyInfo[]
-      description: "返回数组的所有任务参数的类型信息。"
+      description: Returns an array of the type information for all task parameters.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.GetTaskParameters*
   exceptions: []
   platform:
@@ -152,25 +152,25 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "初始化任务工厂。"
+  summary: Initialzes the task factory.
   syntax:
     content: public bool Initialize (string taskName, System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.TaskPropertyInfo> taskParameters, string taskElementContents, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);
     parameters:
     - id: taskName
       type: System.String
-      description: "任务的名称。"
+      description: The name of the task.
     - id: taskParameters
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo}
-      description: "任务参数。"
+      description: The parameters for the task.
     - id: taskElementContents
       type: System.String
-      description: "任务元素内容。"
+      description: The element contents for the task.
     - id: taskFactoryLoggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "日志记录主机，可获取有关任务的信息。"
+      description: The logging host that gets information about tasks.
     return:
       type: System.Boolean
-      description: "返回新的任务工厂。"
+      description: Returns the new task factory.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.Initialize*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "表示任务的类型。"
+  summary: Represents the type of task.
   syntax:
     content: public Type TaskType { get; }
     return:
       type: System.Type
-      description: "返回的任务类型。"
+      description: Returns the task type.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.TaskType*
   exceptions: []
   platform:

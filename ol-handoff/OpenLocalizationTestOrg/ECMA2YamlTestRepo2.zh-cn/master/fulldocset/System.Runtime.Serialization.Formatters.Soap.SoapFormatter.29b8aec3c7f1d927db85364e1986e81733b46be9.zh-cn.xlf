@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">679072ddcef579e8e85e52f5a0e1b84c9e61eb26</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Runtime.Serialization.Formatters.Soap.SoapFormatter.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">13c2757f68304703d79f2cb51e48a32d24fc0327</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e21a9d35323525f7266853a6a9a498b6a3542897</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Serializes and deserializes an object, or an entire graph of connected objects, in SOAP format.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&gt; [!NOTE]</ph> &gt;  Beginning with the .NET Framework 2.0, this class is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Use &lt;xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter&gt; instead.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The SoapFormatter and &lt;xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter&gt; classes implement the &lt;xref:System.Runtime.Remoting.Messaging.IRemotingFormatter&gt; interface to support remote procedure calls (RPCs), and the &lt;xref:System.Runtime.Serialization.IFormatter&gt; interface (inherited by the &lt;xref:System.Runtime.Remoting.Messaging.IRemotingFormatter&gt;) to support serialization of a graph of objects.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The SoapFormatter class also supports RPCs with &lt;xref:System.Runtime.Serialization.Formatters.ISoapMessage&gt; objects, without using the &lt;xref:System.Runtime.Remoting.Messaging.IRemotingFormatter&gt; functionality.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>During RPCs, the &lt;xref:System.Runtime.Remoting.Messaging.IRemotingFormatter&gt; interface allows the specification of two separate object graphs: the graph of objects to serialize, and an additional graph that contains an array of header objects that convey information about the remote function call (for example, transaction ID or a method signature).</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For proper serialization, the root object of the first graph must be an object that implements either the &lt;xref:System.Runtime.Remoting.Messaging.IMethodCallMessage&gt; interface or the &lt;xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>During deserialization of an RPC, a &lt;xref:System.Runtime.Remoting.Messaging.HeaderHandler&gt; delegate is specified to the &lt;xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A&gt; method of the formatter.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The remoting infrastructure uses the &lt;xref:System.Runtime.Remoting.Messaging.HeaderHandler&gt; delegate to produce an object that supports the &lt;xref:System.Runtime.Serialization.ISerializable&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This object contains the information stored in the headers, and becomes the root of the graph returned by the deserializer.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The SoapFormatter can also handle RPCs that are produced with objects that implement the &lt;xref:System.Runtime.Serialization.Formatters.ISoapMessage&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To create an RPC without using the &lt;xref:System.Runtime.Remoting.Messaging.IRemotingFormatter&gt; functionality, place an object that supports the &lt;xref:System.Runtime.Serialization.Formatters.ISoapMessage&gt; interface at the root of a graph being serialized.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To deserialize an RPC created in this manner the &lt;xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject%2A&gt; property must be set to another object that supports the &lt;xref:System.Runtime.Serialization.Formatters.ISoapMessage&gt; interface, and contains the relevant remote call information.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>TimeSpan Serialization    TimeSpan objects are serialized according to the ISO 8601: 1998 section 5.5.3.2.1 "Alternative" standard.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Version Information    The SoapFormatter does not support serialization compatibility between versions of the .NET Framework.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Serialization between versions 1.1 and 2.0 types in the Framework often fails.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The following actions can be taken to remedy this issue:      -   Convert to use the &lt;xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter&gt;, which provides compatibility between 1.1 and 2.0.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>-   Convert existing persisted data to the new format.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>-   Convert all producers and consumers of serialized data to version 2.0.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>-   Avoid using types that changed from 1.1 to 2.0.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.Soap.SoapFormatter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with default property values.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The following table shows the initial property values for an instance of &lt;xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>|Property|Value|   |--------------|-----------|   |&lt;xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.SurrogateSelector%2A&gt;|<ph id="ph1">`null`</ph>|   |&lt;xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context%2A&gt;|A new &lt;xref:System.Runtime.Serialization.StreamingContext&gt; initialized to specify that the serialized data can be transmitted to or received from any of the other contexts|</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.Soap.SoapFormatter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified <bpt id="p2">&lt;xref href="System.Runtime.Serialization.ISurrogateSelector"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> and &lt;xref:System.Runtime.Serialization.StreamingContext&gt;.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Objects are serialized to, or deserialized from, the specified &lt;xref:System.IO.Stream&gt;.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The serialization or deserialization process uses the specified &lt;xref:System.Runtime.Serialization.ISurrogateSelector&gt; to search for surrogates that are registered for the object types you want to deserialize.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Surrogates are helpers that serialize and deserialize objects of specific classes.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The default &lt;xref:System.Runtime.Serialization.ISurrogateSelector&gt; cannot handle the serialization of objects that derive from the &lt;xref:System.MarshalByRefObject&gt; for remoting purposes.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In a remoting situation the specified &lt;xref:System.Runtime.Serialization.ISurrogateSelector&gt; replaces the object derived from &lt;xref:System.MarshalByRefObject&gt; with a &lt;xref:System.Runtime.Remoting.ObjRef&gt; object that is serialized by the specified surrogate selector.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Therefore, if you want to use remote objects, set the <ph id="ph1">`selector`</ph> parameter to an instance of &lt;xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector&gt;.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If you do not need surrogates, set the <ph id="ph1">`selector`</ph> parameter to be <ph id="ph2">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Runtime.Serialization.ISurrogateSelector"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to use with the new instance of <bpt id="p2">&lt;xref href="System.Runtime.Serialization.Formatters.Soap.SoapFormatter"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Runtime.Serialization.StreamingContext&gt; that holds the source and destination of the serialization.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`context`</ph> parameter is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, then the &lt;xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context*&gt; defaults to <bpt id="p2">&lt;xref href="System.Runtime.Serialization.StreamingContextStates"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Gets or sets the behavior of the deserializer with regards to finding and loading assemblies.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.FormatterAssemblyStyle"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values that specifies the deserializer behavior.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Runtime.Serialization.SerializationBinder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that controls the binding of a serialized object to a type.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Runtime.Serialization.SerializationBinder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> used with this <bpt id="p2">&lt;xref href="System.Runtime.Serialization.Formatters.Soap.SoapFormatter"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Gets or sets the &lt;xref:System.Runtime.Serialization.StreamingContext&gt; used with this <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.Soap.SoapFormatter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Runtime.Serialization.StreamingContext&gt; provides an enumeration that describes the source and the destination for a given serialized stream, as well as a way for serialization to retain that context and an additional caller-defined context.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Runtime.Serialization.StreamingContext&gt; used with this <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.Soap.SoapFormatter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Deserializes the data on the provided stream and reconstitutes the graph of objects.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>For successful deserialization, the current position in the stream must be at the beginning of the object graph.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  Calling this method with untrusted data is a security risk.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Call this method only with trusted data.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Untrusted Data Security Risks<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=330378)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The stream that contains the data to deserialize.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The top object of the deserialized graph (root).</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;serializationStream&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Deserializes the stream into an object graph with any headers in that stream being handled by the given <bpt id="p1">&lt;xref href="System.Runtime.Remoting.Messaging.HeaderHandler"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Headers are used only for specific remoting applications.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Runtime.Remoting.Messaging.HeaderHandler&gt; parameter is one of two ways to return headers from a stream in SOAP Remote Procedure Call (RPC) format.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The other way is to use the &lt;xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>For successful deserialization, the current position in the stream must be at the beginning of the object graph.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>TimeSpan Serialization    TimeSpan objects are serialized according to the ISO 8601: 1998 section 5.5.3.2.1 "Alternative" standard.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  Calling this method with untrusted data is a security risk.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Call this method only with trusted data.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Untrusted Data Security Risks<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=330378)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The stream that contains the data to deserialize.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Delegate to handle any headers found on the stream.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The top object of the deserialized graph (root).</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;serializationStream&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;serializationStream&lt;/code&gt;</ph> supports seeking, and its length is 0.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.TypeFilterLevel"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of automatic deserialization for .NET Framework remoting.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Supported values are &lt;xref:System.Runtime.Serialization.Formatters.TypeFilterLevel&gt; and &lt;xref:System.Runtime.Serialization.Formatters.TypeFilterLevel&gt; (the default).</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>For details about deserialization levels, see <bpt id="p1">[</bpt>Automatic Deserialization in .NET Remoting<ept id="p1">](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.TypeFilterLevel"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the current automatic deserialization level.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Serializes an object or graph of objects with the specified root to the given &lt;xref:System.IO.Stream&gt;.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>TimeSpan objects are serialized according to the ISO 8601: 1998 section 5.5.3.2.1 "Alternative" standard.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The stream onto which the formatter puts the data to serialize.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The object, or root of the object graph, to serialize.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>All child objects of this root object are automatically serialized.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;serializationStream&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Serializes an object or graph of objects with the specified root to the given &lt;xref:System.IO.Stream&gt; in the SOAP Remote Procedure Call (RPC) format.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Headers are used only for specific remoting applications.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>TimeSpan objects are serialized according to the ISO 8601: 1998 section 5.5.3.2.1 "Alternative" standard.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>The stream onto which the formatter puts the data to serialize.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The object or root of the object graph to serialize.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>All child objects of this root object are automatically serialized.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Remoting headers to include in the serialization.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;serializationStream&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Runtime.Serialization.SurrogateSelector"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that controls type substitution during serialization and deserialization.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Used by &lt;xref:System.Runtime.Remoting&gt; to generate &lt;xref:System.Runtime.Remoting.ObjRef&gt; instances for &lt;xref:System.MarshalByRefObject&gt; objects.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Runtime.Serialization.SurrogateSelector"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> used with this <bpt id="p2">&lt;xref href="System.Runtime.Serialization.Formatters.Soap.SoapFormatter"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.ISoapMessage"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> into which the SOAP top object is deserialized.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>This property is used for SOAP remote procedure call (RPC) format and specifies that the SOAP top record is a method called remotely, not a common language runtime object type.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Runtime.Serialization.Formatters.ISoapMessage"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> into which the SOAP top object is deserialized.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Gets or sets the format in which type descriptions are laid out in the serialized stream.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The format in which type descriptions are laid out in the serialized stream.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

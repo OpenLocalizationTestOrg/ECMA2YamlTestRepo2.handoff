@@ -52,7 +52,7 @@ items:
   nameWithType: ManagedCompiler
   fullName: Microsoft.Build.Tasks.ManagedCompiler
   type: Class
-  summary: "定义托管的编译器任务共有属性和方法。"
+  summary: Defines the properties and methods common to managed compiler tasks.
   syntax:
     content: 'public abstract class ManagedCompiler : Microsoft.Build.Tasks.ToolTaskExtension'
   inheritance:
@@ -126,7 +126,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.ManagedCompiler&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.ManagedCompiler"></xref> class.
   syntax:
     content: protected ManagedCompiler ();
     parameters: []
@@ -146,13 +146,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "生成命令行工具必须直接从命令行而不是从响应文件运行的命令行参数。"
+  summary: Generates command line arguments that the command line tool must run directly from the command line and not from a response file.
   syntax:
     content: protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "若要添加到参数的命令行生成器。"
+      description: Command line builder to add arguments to.
   overload: Microsoft.Build.Tasks.ManagedCompiler.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -169,12 +169,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置在其中查找程序集的其他文件夹。"
+  summary: Gets or sets the additional folders in which to look for assemblies.
   syntax:
     content: public string[] AdditionalLibPaths { get; set; }
     return:
       type: System.String[]
-      description: "在其中查找程序集的其他文件夹。"
+      description: The additional folders in which to look for assemblies.
   overload: Microsoft.Build.Tasks.ManagedCompiler.AdditionalLibPaths*
   exceptions: []
   platform:
@@ -191,12 +191,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置用于编译器要提供给项目当前正在编译的模块。"
+  summary: Gets or sets the modules for the compiler to make available to the project you are currently compiling.
   syntax:
     content: public string[] AddModules { get; set; }
     return:
       type: System.String[]
-      description: "当前正在编译的模块的编译器将对项目可用你。"
+      description: The modules for the compiler to make available to the project you are currently compiling.
   overload: Microsoft.Build.Tasks.ManagedCompiler.AddModules*
   exceptions: []
   platform:
@@ -213,13 +213,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "填充指定<code> commandLine </code>使用开关和可以进入响应文件的其他信息。"
+  summary: Fills the specified <code>commandLine</code> parameter with the switches and other information that can go into a response file.
   syntax:
     content: protected override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "若要添加到参数的命令行生成器。"
+      description: Command line builder to add arguments to.
   overload: Microsoft.Build.Tasks.ManagedCompiler.AddResponseFileCommands*
   exceptions: []
   platform:
@@ -236,13 +236,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "验证所有指定的引用存在于磁盘上。"
+  summary: Verifies that all specified references exist on disk.
   syntax:
     content: protected bool CheckAllReferencesExistOnDisk ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果磁盘; 上存在的所有引用否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if all references exist on disk; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.CheckAllReferencesExistOnDisk*
   exceptions: []
   platform:
@@ -259,16 +259,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "如果宿主编译器不支持指定的参数，则记录一条消息。"
+  summary: Logs a message if the specified parameter is not supported by the host compiler.
   syntax:
     content: protected void CheckHostObjectSupport (string parameterName, bool resultFromHostObjectSetOperation);
     parameters:
     - id: parameterName
       type: System.String
-      description: "要在宿主编译器上设置的参数名称。"
+      description: The parameter name to set on the host compiler.
     - id: resultFromHostObjectSetOperation
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果主机编译器支持`parameterName`; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the host compiler supports `parameterName`; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>
   overload: Microsoft.Build.Tasks.ManagedCompiler.CheckHostObjectSupport*
   exceptions: []
   platform:
@@ -285,12 +285,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置要用于编译中所有源代码文件的代码页。"
+  summary: Gets or sets the code page to use for all source code files in the compilation.
   syntax:
     content: public int CodePage { get; set; }
     return:
       type: System.Int32
-      description: "要用于编译中所有源代码文件的代码页。"
+      description: The code page to use for all source code files in the compilation.
   overload: Microsoft.Build.Tasks.ManagedCompiler.CodePage*
   exceptions: []
   platform:
@@ -307,12 +307,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置调试类型。"
+  summary: Gets or sets the debug type.
   syntax:
     content: public string DebugType { get; set; }
     return:
       type: System.String
-      description: "调试类型。"
+      description: The debug type.
   overload: Microsoft.Build.Tasks.ManagedCompiler.DebugType*
   exceptions: []
   platform:
@@ -329,12 +329,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置条件编译器常量。"
+  summary: Gets or sets the conditional compiler constants.
   syntax:
     content: public string DefineConstants { get; set; }
     return:
       type: System.String
-      description: "条件编译器常量。"
+      description: The conditional compiler constants.
   overload: Microsoft.Build.Tasks.ManagedCompiler.DefineConstants*
   exceptions: []
   platform:
@@ -351,12 +351,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示是否在程序集中放置公钥。"
+  summary: Gets or sets a value indicating whether the public key is placed in the assembly.
   syntax:
     content: public bool DelaySign { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果公钥放在程序集;<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>如果程序集进行完全签名。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the public key is placed in the assembly; <xref uid="langword_csharp_false" name="false" href=""></xref> if the assembly is fully signed.
   overload: Microsoft.Build.Tasks.ManagedCompiler.DelaySign*
   exceptions: []
   platform:
@@ -373,12 +373,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示编译器是否生成调试信息。"
+  summary: Gets or sets a value indicating whether the compiler generates debugging information.
   syntax:
     content: public bool EmitDebugInformation { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果生成调试信息;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>;"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if debugging information is generated; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>;
   overload: Microsoft.Build.Tasks.ManagedCompiler.EmitDebugInformation*
   exceptions: []
   platform:
@@ -395,12 +395,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值将输出文件的代码段对齐的位置。"
+  summary: Gets or sets a value indicating where to align the sections of the output file.
   syntax:
     content: public int FileAlignment { get; set; }
     return:
       type: System.Int32
-      description: "指示要将输出文件的节的对齐位置的值。"
+      description: A value indicating where to align the sections of the output file.
   overload: Microsoft.Build.Tasks.ManagedCompiler.FileAlignment*
   exceptions: []
   platform:
@@ -417,14 +417,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "处理编译器的返回代码。"
-  remarks: "此方法始终返回`false`。"
+  summary: Handles the return code from the compiler.
+  remarks: This method always returns `false`.
   syntax:
     content: protected override bool HandleTaskExecutionErrors ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果已成功，则处理返回代码否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the return code was handled successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.HandleTaskExecutionErrors*
   exceptions: []
   platform:
@@ -441,12 +441,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置 HighEntropyVA 属性。"
+  summary: Gets or sets the HighEntropyVA attribute.
   syntax:
     content: public bool HighEntropyVA { get; set; }
     return:
       type: System.Boolean
-      description: "返回的 HighEntropyVA 属性。"
+      description: Returns the HighEntropyVA attribute.
   overload: Microsoft.Build.Tasks.ManagedCompiler.HighEntropyVA*
   exceptions: []
   platform:
@@ -463,12 +463,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示主机编译器支持所有任务参数。"
+  summary: Gets or sets a value indicating wheter the host compilter supports all task parameters.
   syntax:
     content: protected bool HostCompilerSupportsAllParameters { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果主机编译器支持所有任务参数;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the host compiler supports all task parameters; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.HostCompilerSupportsAllParameters*
   exceptions: []
   platform:
@@ -485,12 +485,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置加密的密钥容器的名称。"
+  summary: Gets or sets the name of the cryptographic key container.
   syntax:
     content: public string KeyContainer { get; set; }
     return:
       type: System.String
-      description: "加密的密钥容器的名称。"
+      description: The name of the cryptographic key container.
   overload: Microsoft.Build.Tasks.ManagedCompiler.KeyContainer*
   exceptions: []
   platform:
@@ -507,12 +507,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置包含加密密钥的文件名。"
+  summary: Gets or sets the file name containing the cryptographic key.
   syntax:
     content: public string KeyFile { get; set; }
     return:
       type: System.String
-      description: "包含加密密钥的文件名。"
+      description: The file name containing the cryptographic key.
   overload: Microsoft.Build.Tasks.ManagedCompiler.KeyFile*
   exceptions: []
   platform:
@@ -529,12 +529,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]要链接到输出文件的资源文件。"
+  summary: Gets or sets the [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resource files to link to the output file.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] LinkResources { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]要链接到输出文件的资源文件。"
+      description: The [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resource files to link to the output file.
   overload: Microsoft.Build.Tasks.ManagedCompiler.LinkResources*
   exceptions: []
   platform:
@@ -551,19 +551,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "确定指定的任务参数中是否存在任何重复项。"
+  summary: Determines if any duplicate items exist in the specified task parameter.
   syntax:
     content: protected bool ListHasNoDuplicateItems (Microsoft.Build.Framework.ITaskItem[] itemList, string parameterName);
     parameters:
     - id: itemList
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "要检查重复项的项列表。"
+      description: The list of items to examine for duplicates.
     - id: parameterName
       type: System.String
-      description: "包含参数的名称`itemList`。"
+      description: The name of the parameter that contains the `itemList`.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果项列表不包含重复项;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the item list contains no duplicates; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.ListHasNoDuplicateItems*
   exceptions: []
   platform:
@@ -580,12 +580,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置的类或模块包含主入口点。"
+  summary: Gets or sets the class or module that contains the main entry point.
   syntax:
     content: public string MainEntryPoint { get; set; }
     return:
       type: System.String
-      description: "类或模块包含主入口点。"
+      description: The class or module that contains the main entry point.
   overload: Microsoft.Build.Tasks.ManagedCompiler.MainEntryPoint*
   exceptions: []
   platform:
@@ -602,12 +602,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示编译器是否应使用默认响应文件。"
+  summary: Gets or sets a value indicating whether the compiler should use the default response file.
   syntax:
     content: public bool NoConfig { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果编译器没有使用默认响应文件;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the compiler is not using the default response file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.NoConfig*
   exceptions: []
   platform:
@@ -624,12 +624,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示是否禁止显示编译器横幅信息。"
+  summary: Gets or sets a value indicating whether to suppress the compiler banner information.
   syntax:
     content: public bool NoLogo { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要禁止显示编译器横幅信息;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to suppress the compiler banner information; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.NoLogo*
   exceptions: []
   platform:
@@ -646,12 +646,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否将外部 UAC 清单生成应用程序。"
+  summary: Gets or sets a Boolean value that specifies whether an external UAC manifest is generated for the application.
   syntax:
     content: public bool NoWin32Manifest { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果为该应用程序; 生成外部 UAC 清单否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if an external UAC manifest is generated for the application; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.NoWin32Manifest*
   exceptions: []
   platform:
@@ -668,12 +668,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示是否启用编译器优化。"
+  summary: Gets or sets a value indicating whether to enable compiler optimizations.
   syntax:
     content: public bool Optimize { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要启用编译器优化;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to enable compiler optimizations; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Optimize*
   exceptions: []
   platform:
@@ -690,12 +690,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置输出文件的名称。"
+  summary: Gets or sets the name of the output file.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem OutputAssembly { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "输出文件的名称。"
+      description: The name of the output file.
   overload: Microsoft.Build.Tasks.ManagedCompiler.OutputAssembly*
   exceptions: []
   platform:
@@ -712,12 +712,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置 Platform 属性。"
+  summary: Gets or sets the Platform attribute.
   syntax:
     content: public string Platform { get; set; }
     return:
       type: System.String
-      description: "返回的平台属性。"
+      description: Returns the Platform attribute.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Platform*
   exceptions: []
   platform:
@@ -734,12 +734,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置 Prefer32Bit 属性。"
+  summary: Gets or sets the Prefer32Bit attribute.
   syntax:
     content: public bool Prefer32Bit { get; set; }
     return:
       type: System.Boolean
-      description: "返回的 Prefer32Bit 属性。"
+      description: Returns the Prefer32Bit attribute.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Prefer32Bit*
   exceptions: []
   platform:
@@ -756,12 +756,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置编译器将从中导入公共类型信息的项。"
+  summary: Gets or sets the items from which the compiler will import public type information.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] References { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "编译器将从中导入公共类型信息中的项。"
+      description: The items from which the compiler will import public type information.
   overload: Microsoft.Build.Tasks.ManagedCompiler.References*
   exceptions: []
   platform:
@@ -778,12 +778,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]资源嵌入到输出文件中。"
+  summary: Gets or sets the [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resources to embed in the output file.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Resources { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]资源嵌入到输出文件中。"
+      description: The [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resources to embed in the output file.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Resources*
   exceptions: []
   platform:
@@ -800,12 +800,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置包含任务命令的响应文件。"
+  summary: Gets or sets the response files that contain commands for the task.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResponseFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "包含任务命令的响应文件。"
+      description: The response files that contain commands for the task.
   overload: Microsoft.Build.Tasks.ManagedCompiler.ResponseFiles*
   exceptions: []
   platform:
@@ -822,12 +822,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置要编译的源文件。"
+  summary: Gets or sets the source files to compile.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Sources { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "要编译的源文件。"
+      description: The source files to compile.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Sources*
   exceptions: []
   platform:
@@ -844,12 +844,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置已捕获的任务标准输出流的编码。"
+  summary: Gets or sets the encoding of the captured task standard output stream.
   syntax:
     content: protected override System.Text.Encoding StandardOutputEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: "已捕获的任务标准输出流的编码。"
+      description: The encoding of the captured task standard output stream.
   overload: Microsoft.Build.Tasks.ManagedCompiler.StandardOutputEncoding*
   exceptions: []
   platform:
@@ -866,12 +866,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置 SubsystemVersion 属性值。"
+  summary: Gets or sets the SubsystemVersion attribute value.
   syntax:
     content: public string SubsystemVersion { get; set; }
     return:
       type: System.String
-      description: "返回子系统版本。"
+      description: Returns the subsystem version.
   overload: Microsoft.Build.Tasks.ManagedCompiler.SubsystemVersion*
   exceptions: []
   platform:
@@ -888,12 +888,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置输出文件的文件格式。"
+  summary: Gets or sets the file format of the output file.
   syntax:
     content: public string TargetType { get; set; }
     return:
       type: System.String
-      description: "输出文件的文件格式。"
+      description: The file format of the output file.
   overload: Microsoft.Build.Tasks.ManagedCompiler.TargetType*
   exceptions: []
   platform:
@@ -910,12 +910,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示是否将警告视为错误。"
+  summary: Gets or sets a value indicating whether warnings are treated as errors.
   syntax:
     content: public bool TreatWarningsAsErrors { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果将警告视为错误;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if warnings are treated as errors; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.TreatWarningsAsErrors*
   exceptions: []
   platform:
@@ -932,13 +932,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "如果在项目文件中指定了备用工具名称或工具路径，然后使用该工具而不是用于集成的开发环境 (IDE) 的主机编译器生成。"
+  summary: If an alternate tool name or tool path was specified in the project file, then that tool is used rather than the host compiler for integrated development environment (IDE) builds.
   syntax:
     content: protected virtual bool UseAlternateCommandLineToolToExecute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>如果应使用主机编译器;否则为<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_false" name="false" href=""></xref> if the host compiler should be used; otherwise, <xref uid="langword_csharp_true" name="true" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.UseAlternateCommandLineToolToExecute*
   exceptions: []
   platform:
@@ -955,12 +955,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "是否命令行编译器时调用，而不是宿主对象编译器。"
+  summary: Whether the command line compiler was invoked, instead of the host object compiler.
   syntax:
     content: protected bool UsedCommandLineTool { get; set; }
     return:
       type: System.Boolean
-      description: "要添加。"
+      description: To be added.
   overload: Microsoft.Build.Tasks.ManagedCompiler.UsedCommandLineTool*
   exceptions: []
   platform:
@@ -977,12 +977,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值，该值指示是否使用 utf-8 编码记录编译器输出。"
+  summary: Gets or sets a value indicating whether compiler output is logged using UTF-8 encoding.
   syntax:
     content: public bool Utf8Output { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果使用 utf-8 编码; 记录编译器输出否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if compiler output is logged using UTF-8 encoding; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Utf8Output*
   exceptions: []
   platform:
@@ -999,13 +999,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "验证任务参数。"
+  summary: Validates the task parameters.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果所有参数都都有效，则为否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if all parameters are valid; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ManagedCompiler.ValidateParameters*
   exceptions: []
   platform:
@@ -1022,12 +1022,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置图标文件名。"
+  summary: Gets or sets the icon file name.
   syntax:
     content: public string Win32Icon { get; set; }
     return:
       type: System.String
-      description: "图标文件名。"
+      description: The icon file name.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Win32Icon*
   exceptions: []
   platform:
@@ -1044,12 +1044,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置 Win32 清单。"
+  summary: Gets or sets the Win32 manifest.
   syntax:
     content: public string Win32Manifest { get; set; }
     return:
       type: System.String
-      description: "Win32 清单中。"
+      description: The Win32 manifest.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Win32Manifest*
   exceptions: []
   platform:
@@ -1066,12 +1066,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置要插入输出文件中的 Win32 资源 (.res) 文件。"
+  summary: Gets or sets a Win32 resource (.res) file to insert in the output file.
   syntax:
     content: public string Win32Resource { get; set; }
     return:
       type: System.String
-      description: "要插入输出文件中的 Win32 资源 (.res) 文件。"
+      description: The Win32 resource (.res) file to insert in the output file.
   overload: Microsoft.Build.Tasks.ManagedCompiler.Win32Resource*
   exceptions: []
   platform:

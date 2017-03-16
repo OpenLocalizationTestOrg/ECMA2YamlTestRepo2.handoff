@@ -25,8 +25,8 @@ items:
   nameWithType: BuildPropertyGroup
   fullName: Microsoft.Build.BuildEngine.BuildPropertyGroup
   type: Class
-  summary: "表示一套<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>对象。"
-  remarks: "BuildPropertyGroup 对象可以表示该项目或虚拟的属性，例如全局属性或环境变量的属性集合中的元素。"
+  summary: Represents a collection of <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> objects.
+  remarks: A BuildPropertyGroup object can represent a  element in the project, or a virtual collection of properties, such as global properties or environment variable properties.
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, BuildPropertyGroup, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-cs[msbuild_AddNewProperty#1](~/add/codesnippet/csharp/AddNewProperty/Program.cs#1)]\n [!code-vb[msbuild_AddNewProperty#1](~/add/codesnippet/visualbasic/AddNewProperty/Module1.vb#1)]"
   syntax:
@@ -53,7 +53,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> class.
   syntax:
     content: public BuildPropertyGroup ();
     parameters: []
@@ -73,14 +73,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化一个新的 PropertyGroup 元素中指定的项目。"
-  remarks: "请参阅[PropertyGroup 元素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)有关属性组的详细信息。"
+  summary: Initializes a new PropertyGroup element in the specified project.
+  remarks: See [PropertyGroup Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) for more information on property groups.
   syntax:
     content: public BuildPropertyGroup (Microsoft.Build.BuildEngine.Project parentProject);
     parameters:
     - id: parentProject
       type: Microsoft.Build.BuildEngine.Project
-      description: "要在其中添加新 PropertyGroup 项目的名称。"
+      description: The name of the Project in which to add the new PropertyGroup.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.#ctor*
   exceptions: []
   platform:
@@ -97,7 +97,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "添加新<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>具有指定<> *1> 和<> *1> 到<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
+  summary: Adds a new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> with the specified <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> and <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> to the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-cs[msbuild_AddNewProperty#1](~/add/codesnippet/csharp/AddNewProperty/Program.cs#1)]\n [!code-vb[msbuild_AddNewProperty#1](~/add/codesnippet/visualbasic/AddNewProperty/Module1.vb#1)]"
@@ -106,13 +106,13 @@ items:
     parameters:
     - id: propertyName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>要分配新的属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> property value to assign the new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
     - id: propertyValue
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>要分配新的属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> property value to assign the new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
     return:
       type: Microsoft.Build.BuildEngine.BuildProperty
-      description: "The new <xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>."
+      description: The new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.AddNewProperty*
   exceptions: []
   platform:
@@ -129,22 +129,22 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "添加新<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>具有指定<> *1> 和<> *1> 到<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
+  summary: Adds a new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> with the specified <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> and <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> to the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildProperty AddNewProperty (string propertyName, string propertyValue, bool treatPropertyValueAsLiteral);
     parameters:
     - id: propertyName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>要分配新的属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> property value to assign the new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
     - id: propertyValue
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>要分配新的属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> property value to assign the new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
     - id: treatPropertyValueAsLiteral
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要将`propertyValue`参数为文字值; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to treat the `propertyValue` parameter as a literal value; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: Microsoft.Build.BuildEngine.BuildProperty
-      description: "The new <xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>."
+      description: The new <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.AddNewProperty*
   exceptions: []
   platform:
@@ -161,7 +161,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "删除<xref:Microsoft.Build.BuildEngine.BuildPropertyGroup.Condition*>属性值和所有<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>对象从<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup.Condition*>"
+  summary: Removes the <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup.Condition*> property value and all <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> objects from the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   syntax:
     content: public void Clear ();
     parameters: []
@@ -181,17 +181,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "创建的深度或浅表副本<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
-  remarks: "浅表复制<xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>引用与原始相同的属性组。</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> 浅表副本将反映在两个副本的修改。       深层副本<xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>创建一个新的 XML 元素引用，以便这两份<xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>可以独立进行修改。</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> </xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>       如果<xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>直接对应于项目中的元素 (而不是对应于一套虚拟属性，如环境变量和全局属性)，仅深层副本允许。</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>"
+  summary: Creates a deep or shallow copy of the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
+  remarks: "A shallow copy of a <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> references the same property group as the original. Modifications a shallow copy will be reflected in both copies.  \n  \n A deep copy of a <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> creates a new XML element to reference so that both copies of the <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> can be independently modified.  \n  \n If the <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> corresponds directly to a  element in the project (rather than corresponding to a collection of virtual properties, such as environment variable and global properties), only deep copies are allowed."
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildPropertyGroup Clone (bool deepClone);
     parameters:
     - id: deepClone
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要创建的深层副本<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to create a deep copy of the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "一份<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
+      description: A copy of the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.Clone*
   exceptions: []
   platform:
@@ -208,12 +208,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取或设置`Condition`属性的属性组的值。"
+  summary: Gets or sets the `Condition` attribute value of the property group.
   syntax:
     content: public string Condition { get; set; }
     return:
       type: System.String
-      description: "`Condition`属性的属性组的值。"
+      description: The `Condition` attribute value of the property group.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.Condition*
   exceptions: []
   platform:
@@ -230,13 +230,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取一个值，该值的数<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>中的对象<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
-  remarks: "A<xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>对象可以表示该项目或虚拟的属性，例如全局属性或环境变量的属性集合中的元素。</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>"
+  summary: Gets a value indicating the number of <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> objects in the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
+  remarks: A <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> object can represent a  element in the project, or a virtual collection of properties, such as global properties or environment variable properties.
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: "表示的数的整数值<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;></xref>集合中的对象。"
+      description: An integer value representing the number of <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> objects in the collection.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.Count*
   exceptions: []
   platform:
@@ -253,8 +253,8 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取循环访问的枚举器<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
-  remarks: "此方法允许调用方使用`foreach`C# 语言的语句 (`for each`中[!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) 循环访问单个<xref:Microsoft.Build.BuildEngine.BuildProperty><xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>.</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>中的对象</xref:Microsoft.Build.BuildEngine.BuildProperty>"
+  summary: Gets an enumerator that iterates through the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
+  remarks: This method allows the caller to use the `foreach` statement of the C# language (`for each` in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) to iterate through the individual <xref:Microsoft.Build.BuildEngine.BuildProperty> objects in the <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>.
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty><xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> classes to list all the items and properties in the project.  \n  \n [!code-vb[msbuild_ListItemsAndProperties#1](~/add/codesnippet/visualbasic/ListItemAndPropertiesVB/Module1.vb#1)]\n [!code-cs[msbuild_ListItemsAndProperties#1](~/add/codesnippet/csharp/ListItemAndPropertiesCS/Program.cs#1)]"
   syntax:
@@ -262,7 +262,7 @@ items:
     parameters: []
     return:
       type: System.Collections.IEnumerator
-      description: "<xref:System.Collections.IEnumerator>整个<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。</xref:System.Collections.IEnumerator>"
+      description: An <xref:System.Collections.IEnumerator> for the entire <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.GetEnumerator*
   exceptions: []
   platform:
@@ -279,12 +279,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取或设置一个值，该值的属性组是否已导入项目。"
+  summary: Gets or sets a value indicating whether the property group was imported into the project.
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果属性组已导入到项目中;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the property group was imported into the project; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.IsImported*
   exceptions: []
   platform:
@@ -301,16 +301,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取或设置<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>中此对象<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
+  summary: Gets or sets a <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> object in this <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildProperty this[string propertyName] { get; set; }
     parameters:
     - id: propertyName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>要获取或设置。</xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> value of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> to get or set.
     return:
       type: Microsoft.Build.BuildEngine.BuildProperty
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref> object in this <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;></xref>."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> object in this <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.Item*
   exceptions: []
   platform:
@@ -327,7 +327,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "中移除指定<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>从<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。"
+  summary: Removes the specified <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> from the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-cs[msbuild_AddNewProperty#1](~/add/codesnippet/csharp/AddNewProperty/Program.cs#1)]\n [!code-vb[msbuild_AddNewProperty#1](~/add/codesnippet/visualbasic/AddNewProperty/Module1.vb#1)]"
@@ -336,7 +336,7 @@ items:
     parameters:
     - id: property
       type: Microsoft.Build.BuildEngine.BuildProperty
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>删除。"
+      description: The <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> to remove.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.RemoveProperty*
   exceptions: []
   platform:
@@ -353,13 +353,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "删除<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>具有指定<xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>从<xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>"
+  summary: Removes the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> with the specified <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> from the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref>.
   syntax:
     content: public void RemoveProperty (string propertyName);
     parameters:
     - id: propertyName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>删除。</xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> value of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> to remove.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.RemoveProperty*
   exceptions: []
   platform:
@@ -376,13 +376,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "设置导入的属性组的条件。 更改不会保留。"
+  summary: Sets the condition for imported property groups. Changes are not persisted.
   syntax:
     content: public void SetImportedPropertyGroupCondition (string condition);
     parameters:
     - id: condition
       type: System.String
-      description: "要将添加到导入 PropertyGroup 的条件。"
+      description: The condition to add to the imported PropertyGroup.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.SetImportedPropertyGroupCondition*
   exceptions: []
   platform:
@@ -399,16 +399,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "集<> *1> 的<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>具有指定<> *1>。"
+  summary: Sets the <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> with the specified <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>.
   syntax:
     content: public void SetProperty (string propertyName, string propertyValue);
     parameters:
     - id: propertyName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>设置。</xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> property value of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> to set.
     - id: propertyValue
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>要分配的属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> property value to assign the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.SetProperty*
   exceptions: []
   platform:
@@ -425,19 +425,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "集<> *1> 的<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>具有指定<> *1>。"
+  summary: Sets the <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> with the specified <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>.
   syntax:
     content: public void SetProperty (string propertyName, string propertyValue, bool treatPropertyValueAsLiteral);
     parameters:
     - id: propertyName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;></xref>设置。</xref:Microsoft.Build.BuildEngine.BuildProperty.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Name*> property value of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> to set.
     - id: propertyValue
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>要分配的属性值<xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>。</xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*> property value to assign the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
     - id: treatPropertyValueAsLiteral
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要将`propertyValue`参数为文字值; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to treat the `propertyValue` parameter as a literal value; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.BuildPropertyGroup.SetProperty*
   exceptions: []
   platform:

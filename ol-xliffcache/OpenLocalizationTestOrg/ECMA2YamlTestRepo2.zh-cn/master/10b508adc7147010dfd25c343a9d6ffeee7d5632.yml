@@ -30,8 +30,8 @@ items:
   nameWithType: BuildEventContext
   fullName: Microsoft.Build.Framework.BuildEventContext
   type: Class
-  summary: "提供有关生成事件的上下文的位置信息。"
-  remarks: "BuildEventContext 是在多处理器环境中尤其有用。"
+  summary: Provides contextual location information for build events.
+  remarks: BuildEventContext is especially useful in multiprocessor environments.
   syntax:
     content: public class BuildEventContext
   inheritance:
@@ -52,22 +52,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Framework.BuildEventContext&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildEventContext"></xref> class.
   syntax:
     content: public BuildEventContext (int nodeId, int targetId, int projectContextId, int taskId);
     parameters:
     - id: nodeId
       type: System.Int32
-      description: "生成事件的节点 ID。"
+      description: The node ID of the build event.
     - id: targetId
       type: System.Int32
-      description: "生成事件的目标 ID。"
+      description: The target ID of the build event.
     - id: projectContextId
       type: System.Int32
-      description: "生成事件的项目 ID。"
+      description: The project ID of the build event.
     - id: taskId
       type: System.Int32
-      description: "生成事件的任务 ID。"
+      description: The task ID of the build event.
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -84,25 +84,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "构造具有指定的项目的实例 id BuildEventContext。"
+  summary: Constructs a BuildEventContext with a specified project instance id.
   syntax:
     content: public BuildEventContext (int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);
     parameters:
     - id: nodeId
       type: System.Int32
-      description: "生成事件的节点 ID。"
+      description: The node ID of the build event.
     - id: projectInstanceId
       type: System.Int32
-      description: "生成事件的项目实例 ID。"
+      description: The project instance ID of the build event.
     - id: projectContextId
       type: System.Int32
-      description: "生成事件的项目 ID。"
+      description: The project ID of the build event.
     - id: targetId
       type: System.Int32
-      description: "生成事件的目标 ID。"
+      description: The target ID of the build event.
     - id: taskId
       type: System.Int32
-      description: "生成事件的任务 ID。"
+      description: The task ID of the build event.
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -119,28 +119,28 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "构造特定提交 id BuildEventContext"
+  summary: Constructs a BuildEventContext with a specific submission id
   syntax:
     content: public BuildEventContext (int submissionId, int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);
     parameters:
     - id: submissionId
       type: System.Int32
-      description: "生成事件的提交 ID。"
+      description: The submission ID of the build event.
     - id: nodeId
       type: System.Int32
-      description: "生成事件的节点 ID。"
+      description: The node ID of the build event.
     - id: projectInstanceId
       type: System.Int32
-      description: "生成事件的项目实例 ID。"
+      description: The project instance ID of the build event.
     - id: projectContextId
       type: System.Int32
-      description: "生成事件的项目 ID。"
+      description: The project ID of the build event.
     - id: targetId
       type: System.Int32
-      description: "生成事件的目标 ID。"
+      description: The target ID of the build event.
     - id: taskId
       type: System.Int32
-      description: "生成事件的任务 ID。"
+      description: The task ID of the build event.
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "检索 BuildRequest id。 请注意，这并不在 BuildRequest 或 BuildResult 上的全局请求 id 相同。"
+  summary: Retrieves the BuildRequest id. Note that this is not the same as the global request id on a BuildRequest or BuildResult.
   syntax:
     content: public long BuildRequestId { get; }
     return:
       type: System.Int64
-      description: "要添加。"
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEventContext.BuildRequestId*
   exceptions: []
   platform:
@@ -179,16 +179,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取引用是否相同。"
+  summary: Gets whether the references are the same.
   syntax:
     content: public override bool Equals (object obj);
     parameters:
     - id: obj
       type: System.Object
-      description: "要比较的引用。"
+      description: The reference to compare.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果引用相等<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>否则为。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the references are equal, <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
   overload: Microsoft.Build.Framework.BuildEventContext.Equals*
   exceptions: []
   platform:
@@ -205,13 +205,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取组成的代码<> *1> 和<> *1>。"
+  summary: Gets a code comprised of the <xref:Microsoft.Build.Framework.BuildEventContext.ProjectContextId*> and the <xref:Microsoft.Build.Framework.BuildEventContext.NodeId*>.
   syntax:
     content: public override int GetHashCode ();
     parameters: []
     return:
       type: System.Int32
-      description: "表示哈希代码的整数值。"
+      description: An integer value representing the hash code.
   overload: Microsoft.Build.Framework.BuildEventContext.GetHashCode*
   exceptions: []
   platform:
@@ -228,12 +228,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取发生事件的上下文是否有效。"
+  summary: Gets whether the context where the event occurred is valid.
   syntax:
     content: public static Microsoft.Build.Framework.BuildEventContext Invalid { get; }
     return:
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果上下文是有效，则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>否则为。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the context is valid; <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
   overload: Microsoft.Build.Framework.BuildEventContext.Invalid*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "目标事件的节点 ID 时触发事件时。"
-  remarks: "一个整数值，表示该节点 id。"
+  summary: The node ID of the target the event was in when the event was triggered.
+  remarks: An integer value representing the node ID.
   syntax:
     content: public const int InvalidNodeId = -2;
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -272,12 +272,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "事件的目标项目 ID 时触发事件时。"
+  summary: The project ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidProjectContextId = -2;
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -293,12 +293,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "目标事件的项目实例 ID 时触发事件时。"
+  summary: The project instance ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidProjectInstanceId = -1;
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -314,12 +314,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "目标事件的提交 ID 时触发事件时。"
+  summary: The submission ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidSubmissionId = -1;
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -335,12 +335,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "目标的名称的事件时触发事件时。"
+  summary: The name of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidTargetId = -1;
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -356,12 +356,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "目标事件的任务 ID 时触发事件时。"
+  summary: The task ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidTaskId = -1;
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -377,12 +377,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取发生事件的节点 ID。"
+  summary: Gets the node ID where the event occurred.
   syntax:
     content: public int NodeId { get; }
     return:
       type: System.Int32
-      description: "一个整数值，表示该节点 id。"
+      description: An integer value representing the node ID.
   overload: Microsoft.Build.Framework.BuildEventContext.NodeId*
   exceptions: []
   platform:
@@ -399,19 +399,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "重写 = = 因此，使用此运算符的相等比较将是相同。等于"
+  summary: Override == so the equals comparison using this operator will be the same as .Equals
   syntax:
     content: public static bool op_Equality (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);
     parameters:
     - id: left
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "左操作数"
+      description: Left hand side operand
     - id: right
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "右操作数"
+      description: Right hand side operand
     return:
       type: System.Boolean
-      description: "如果对象值是相同的则返回 false 如果它们不相同，则返回 true"
+      description: True if the object values are identical, false if they are not identical
   overload: Microsoft.Build.Framework.BuildEventContext.op_Equality*
   exceptions: []
   platform:
@@ -428,19 +428,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "重写 ！ = 因此，使用此运算符的相等比较将是相同 ！ 等于"
+  summary: Override != so the equals comparison using this operator will be the same as ! Equals
   syntax:
     content: public static bool op_Inequality (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);
     parameters:
     - id: left
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "左操作数"
+      description: Left hand side operand
     - id: right
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "右操作数"
+      description: Right hand side operand
     return:
       type: System.Boolean
-      description: "如果 false 对象值不相同，如果它们相同，则返回 true"
+      description: True if the object values are not identical, false if they are identical
   overload: Microsoft.Build.Framework.BuildEventContext.op_Inequality*
   exceptions: []
   platform:
@@ -457,12 +457,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取的事件发生在项目的 ID。"
+  summary: Gets the ID of the project where the event occurred.
   syntax:
     content: public int ProjectContextId { get; }
     return:
       type: System.Int32
-      description: "一个整数值，表示项目 id。"
+      description: An integer value representing the project ID.
   overload: Microsoft.Build.Framework.BuildEventContext.ProjectContextId*
   exceptions: []
   platform:
@@ -479,12 +479,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "检索项目的实例 id。"
+  summary: Retrieves the project instance id.
   syntax:
     content: public int ProjectInstanceId { get; }
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEventContext.ProjectInstanceId*
   exceptions: []
   platform:
@@ -501,12 +501,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "检索的提交的 id。"
+  summary: Retrieves the Submission id.
   syntax:
     content: public int SubmissionId { get; }
     return:
       type: System.Int32
-      description: "要添加。"
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEventContext.SubmissionId*
   exceptions: []
   platform:
@@ -523,12 +523,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取发生事件的目标 ID。"
+  summary: Gets the ID of the target where the event occurred.
   syntax:
     content: public int TargetId { get; }
     return:
       type: System.Int32
-      description: "一个整数值，表示目标 id。"
+      description: An integer value representing the target ID.
   overload: Microsoft.Build.Framework.BuildEventContext.TargetId*
   exceptions: []
   platform:
@@ -545,12 +545,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取发生事件的任务的 ID。"
+  summary: Gets the ID of the task where the event occurred.
   syntax:
     content: public int TaskId { get; }
     return:
       type: System.Int32
-      description: "一个整数值，表示任务 id。"
+      description: An integer value representing the task ID.
   overload: Microsoft.Build.Framework.BuildEventContext.TaskId*
   exceptions: []
   platform:

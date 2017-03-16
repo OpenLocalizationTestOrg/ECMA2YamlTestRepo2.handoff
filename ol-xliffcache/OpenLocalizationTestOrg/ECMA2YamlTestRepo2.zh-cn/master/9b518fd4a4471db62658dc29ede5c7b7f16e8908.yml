@@ -17,7 +17,7 @@ items:
   nameWithType: InvalidToolsetDefinitionException
   fullName: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException
   type: Class
-  summary: "用户的自定义工具集定义文件有问题时，将引发此异常。 该问题可能是语义或语法。 如果问题是在语法中，通常由 XSD 验证捕获。"
+  summary: This exception is thrown whenever there is a problem with the user's custom toolset definition file. The problem might be semantic or syntactical. If the problem is in the syntax, it can typically be caught by XSD validation.
   syntax:
     content: 'public class InvalidToolsetDefinitionException : Exception'
   inheritance:
@@ -38,8 +38,8 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException&quot;></xref>类。"
-  remarks: "此构造函数初始化<xref:System.Exception.Message%2A>属性为系统提供的消息描述诸如&quot;DefaultMessageDisplayedByParameterlessCtorWriterMustSupply&quot;此消息的错误的新实例的当前系统区域性考虑在内。</xref:System.Exception.Message%2A>       下表显示<xref:System.InsufficientMemoryException>.</xref:System.InsufficientMemoryException>实例的初始属性的值      |属性 |值 |  |--------------|-----------|  |<xref:System.Exception.InnerException%2A>|`null`.|  |<xref:System.Exception.Message%2A>|本地化的错误消息字符串。 |</xref:System.Exception.Message%2A> </xref:System.Exception.InnerException%2A>"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException"></xref> class.
+  remarks: "This constructor initializes the <xref:System.Exception.Message%2A> property of the new instance to a system-supplied message that describes the error, such as \"DefaultMessageDisplayedByParameterlessCtorWriterMustSupply\" This message takes into account the current system culture.  \n  \n The following table shows the initial property values for an instance of <xref:System.InsufficientMemoryException>.  \n  \n|Property|Value|  \n|--------------|-----------|  \n|<xref:System.Exception.InnerException%2A>|`null`.|  \n|<xref:System.Exception.Message%2A>|The localized error message string.|"
   syntax:
     content: public InvalidToolsetDefinitionException ();
     parameters: []
@@ -59,14 +59,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException&quot;></xref>类。"
-  remarks: "下表显示<xref:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException>.</xref:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException>实例的初始属性的值      |属性 |值 |  |--------------|-----------|  |<xref:System.Exception.InnerException%2A>|`null`.|  |<xref:System.Exception.Message%2A>|中指定的错误消息字符串`message`。 |</xref:System.Exception.Message%2A> </xref:System.Exception.InnerException%2A>"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException"></xref> class.
+  remarks: "The following table shows the initial property values for an instance of <xref:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException>.  \n  \n|Property|Value|  \n|--------------|-----------|  \n|<xref:System.Exception.InnerException%2A>|`null`.|  \n|<xref:System.Exception.Message%2A>|The error message string specified in `message`.|"
   syntax:
     content: public InvalidToolsetDefinitionException (string message);
     parameters:
     - id: message
       type: System.String
-      description: "解释异常原因的错误消息。"
+      description: The error message that explains the reason for the exception.
   overload: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -83,17 +83,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException&quot;></xref>类。"
-  remarks: "在反序列化，以便重建通过流传输的异常对象过程中调用此构造函数。 有关详细信息，请参阅[XML 和 SOAP 序列化](~/add/includes/ajax-current-ext-md.md)。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException"></xref> class.
+  remarks: This constructor is called during deserialization to reconstitute the exception object transmitted over a stream. For more information, see [XML and SOAP Serialization](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: protected InvalidToolsetDefinitionException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "<xref href=&quot;System.Runtime.Serialization.SerializationInfo&quot;> </xref>它保存关于所引发异常的序列化的对象数据。"
+      description: The <xref href="System.Runtime.Serialization.SerializationInfo"></xref> that holds the serialized object data about the exception being thrown.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "<xref:System.Runtime.Serialization.StreamingContext>它包含有关源或目标的上下文信息。</xref:System.Runtime.Serialization.StreamingContext>"
+      description: The <xref:System.Runtime.Serialization.StreamingContext> that contains contextual information about the source or destination.
   overload: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -110,17 +110,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException&quot;></xref>类。"
-  remarks: "前一个异常的直接结果应包含中的前一个异常的引用引发的异常，<xref:System.Exception.InnerException%2A>属性。</xref:System.Exception.InnerException%2A> <xref:System.Exception.InnerException%2A>属性返回相同的值传递到构造函数中，或`null`如果<xref:System.Exception.InnerException%2A>属性不会提供给构造函数的内部异常值。</xref:System.Exception.InnerException%2A> </xref:System.Exception.InnerException%2A>       下表显示<xref:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException>.</xref:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException>实例的初始属性的值      |属性 |值 |  |--------------|-----------|  |<xref:System.Exception.InnerException%2A>|`null`.|  |<xref:System.Exception.Message%2A>|中指定的错误消息字符串`message`。 |</xref:System.Exception.Message%2A> </xref:System.Exception.InnerException%2A>"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException"></xref> class.
+  remarks: "An exception that is thrown as a direct result of a previous exception should include a reference to the previous exception in the <xref:System.Exception.InnerException%2A> property. The <xref:System.Exception.InnerException%2A> property returns the same value that is passed into the constructor, or `null` if the <xref:System.Exception.InnerException%2A> property does not supply the inner exception value to the constructor.  \n  \n The following table shows the initial property values for an instance of <xref:Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException>.  \n  \n|Property|Value|  \n|--------------|-----------|  \n|<xref:System.Exception.InnerException%2A>|`null`.|  \n|<xref:System.Exception.Message%2A>|The error message string specified in `message`.|"
   syntax:
     content: public InvalidToolsetDefinitionException (string message, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "解释异常原因的错误消息。"
+      description: The error message that explains the reason for the exception.
     - id: innerException
       type: System.Exception
-      description: "错误代码。 此参数可以为空引用 (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)。"
+      description: The error code. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
   overload: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -137,16 +137,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException"></xref> class.
   syntax:
     content: public InvalidToolsetDefinitionException (string message, string errorCode);
     parameters:
     - id: message
       type: System.String
-      description: "解释异常原因的错误消息。"
+      description: The error message that explains the reason for the exception.
     - id: errorCode
       type: System.String
-      description: "错误代码。 此参数可以为空引用 (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)。"
+      description: The error code. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
   overload: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -163,19 +163,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException"></xref> class.
   syntax:
     content: public InvalidToolsetDefinitionException (string message, string errorCode, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "解释异常原因的错误消息。"
+      description: The error message that explains the reason for the exception.
     - id: errorCode
       type: System.String
-      description: "错误代码。 此参数可以为空引用 (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)。"
+      description: The error code. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
     - id: innerException
       type: System.Exception
-      description: "导致当前异常的异常。 如果`innerException`参数不是 null 引用 (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref>中[!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) 中, 引发当前异常<xref uid=&quot;langword_csharp_catch&quot; name=&quot;catch&quot; href=&quot;&quot;></xref>处理内部异常的块。"
+      description: The exception that is the cause of the current exception. If the `innerException` parameter is not a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]), the current exception is raised in a <xref uid="langword_csharp_catch" name="catch" href=""></xref> block that handles the inner exception.
   overload: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -192,12 +192,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "获取引发了异常错误代码。"
+  summary: Gets the exception error code that was thrown.
   syntax:
     content: public string ErrorCode { get; }
     return:
       type: System.String
-      description: "表示错误代码的字符串。"
+      description: A string representing the error code.
   overload: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.ErrorCode*
   exceptions: []
   platform:
@@ -214,17 +214,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "集<xref href=&quot;System.Runtime.Serialization.SerializationInfo&quot;></xref>使用有关异常的信息。"
-  remarks: "在反序列化，以便重建通过流传输的异常对象过程中调用此构造函数。 有关详细信息，请参阅[XML 和 SOAP 序列化](~/add/includes/ajax-current-ext-md.md)。"
+  summary: Sets the <xref href="System.Runtime.Serialization.SerializationInfo"></xref> with information about the exception.
+  remarks: This constructor is called during deserialization to reconstitute the exception object transmitted over a stream. For more information, see [XML and SOAP Serialization](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "<xref href=&quot;System.Runtime.Serialization.SerializationInfo&quot;> </xref>它保存关于所引发异常的序列化的对象数据。"
+      description: The <xref href="System.Runtime.Serialization.SerializationInfo"></xref> that holds the serialized object data about the exception being thrown.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "<xref:System.Runtime.Serialization.StreamingContext>它包含有关源或目标的上下文信息。</xref:System.Runtime.Serialization.StreamingContext>"
+      description: The <xref:System.Runtime.Serialization.StreamingContext> that contains contextual information about the source or destination.
   overload: Microsoft.Build.BuildEngine.InvalidToolsetDefinitionException.GetObjectData*
   exceptions: []
   platform:

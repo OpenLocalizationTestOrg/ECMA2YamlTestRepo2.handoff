@@ -25,7 +25,7 @@ items:
   nameWithType: BuildMessageEventArgs
   fullName: Microsoft.Build.Framework.BuildMessageEventArgs
   type: Class
-  summary: "提供有关数据<xref href=&quot;Microsoft.Build.Framework.IEventSource.MessageRaised&quot;></xref>事件。"
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.MessageRaised"></xref> event.
   syntax:
     content: 'public class BuildMessageEventArgs : Microsoft.Build.Framework.LazyFormattedBuildEventArgs'
   inheritance:
@@ -54,7 +54,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> class.
   syntax:
     content: protected BuildMessageEventArgs ();
     parameters: []
@@ -74,22 +74,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;></xref>使用指定的类<> *1>， <> </> *1>， <> </> *1>，和<> *1> 值。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> class with the specified <xref:Microsoft.Build.Framework.BuildEventArgs.Message*>, <xref:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword*>, <xref:Microsoft.Build.Framework.BuildEventArgs.SenderName*>, and <xref:Microsoft.Build.Framework.BuildMessageEventArgs.Importance*> values.
   syntax:
     content: public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance);
     parameters:
     - id: message
       type: System.String
-      description: "事件的文本。"
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "与事件关联的帮助关键字。"
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "事件源。"
+      description: The source of the event.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "A <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref>值，该值指示该事件的重要性。"
+      description: A <xref href="Microsoft.Build.Framework.MessageImportance"></xref> value indicating the importance of the event.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -106,25 +106,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "初始化<xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;></xref>对象。"
+  summary: Initializes the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> object.
   syntax:
     content: public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: "消息文本中。"
+      description: The message text.
     - id: helpKeyword
       type: System.String
-      description: "要将链接到帮助主题的关键字。"
+      description: The keyword to link to a help topic.
     - id: senderName
       type: System.String
-      description: "将事件发送方的名称。"
+      description: The name of the event sender.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "消息的重要性"
+      description: The importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "日期和时间与事件关联。"
+      description: The data and time associated with the event.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -141,28 +141,28 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "初始化<xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;></xref>对象。"
+  summary: Initializes the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> object.
   syntax:
     content: public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "消息文本中。"
+      description: The message text.
     - id: helpKeyword
       type: System.String
-      description: "要将链接到帮助主题的关键字。"
+      description: The keyword to link to a help topic.
     - id: senderName
       type: System.String
-      description: "将事件发送方的名称。"
+      description: The name of the event sender.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "消息的重要性"
+      description: The importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "日期和时间与事件关联。"
+      description: The data and time associated with the event.
     - id: messageArgs
       type: System.Object[]
-      description: "消息参数。"
+      description: The message arguments.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -179,43 +179,43 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "此构造函数允许要初始化的所有事件数据"
+  summary: This constructor allows all event data to be initialized
   syntax:
     content: public BuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance);
     parameters:
     - id: subcategory
       type: System.String
-      description: "事件子类别"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "事件代码"
+      description: event code
     - id: file
       type: System.String
-      description: "与事件关联的文件"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "行号 (如果不适用，则为&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "列号 (如果不适用，则为&0;)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "结束行号 (如果不适用，则为&0;)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "结束列号 (如果不适用，则为&0;)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "短信"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "帮助关键字"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "事件发送方的名称"
+      description: name of event sender
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "消息的重要性"
+      description: importance of the message
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -232,46 +232,46 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "此构造函数允许来设置时间戳"
+  summary: This constructor allows timestamp to be set
   syntax:
     content: public BuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);
     parameters:
     - id: subcategory
       type: System.String
-      description: "事件子类别"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "事件代码"
+      description: event code
     - id: file
       type: System.String
-      description: "与事件关联的文件"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "行号 (如果不适用，则为&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "列号 (如果不适用，则为&0;)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "结束行号 (如果不适用，则为&0;)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "结束列号 (如果不适用，则为&0;)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "短信"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "帮助关键字"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "事件发送方的名称"
+      description: name of event sender
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "消息的重要性"
+      description: importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "自定义事件的时间戳"
+      description: custom timestamp for the event
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -288,49 +288,49 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "此构造函数允许来设置时间戳"
+  summary: This constructor allows timestamp to be set
   syntax:
     content: public BuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: subcategory
       type: System.String
-      description: "事件子类别"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "事件代码"
+      description: event code
     - id: file
       type: System.String
-      description: "与事件关联的文件"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "行号 (如果不适用，则为&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "列号 (如果不适用，则为&0;)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "结束行号 (如果不适用，则为&0;)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "结束列号 (如果不适用，则为&0;)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "短信"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "帮助关键字"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "事件发送方的名称"
+      description: name of event sender
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "消息的重要性"
+      description: importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "自定义事件的时间戳"
+      description: custom timestamp for the event
     - id: messageArgs
       type: System.Object[]
-      description: "消息参数"
+      description: message arguments
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -347,12 +347,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "与事件相关联的代码。"
+  summary: Code associated with event.
   syntax:
     content: public string Code { get; }
     return:
       type: System.String
-      description: "返回<xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.Code*
   exceptions: []
   platform:
@@ -369,12 +369,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "关联的文件感兴趣的列数。"
+  summary: Column number of interest in associated file.
   syntax:
     content: public int ColumnNumber { get; }
     return:
       type: System.Int32
-      description: "返回<xref:System.Int32>.</xref:System.Int32>"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.ColumnNumber*
   exceptions: []
   platform:
@@ -391,12 +391,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "结束列号关联的文件中的关注。"
+  summary: Ending column number of interest in associated file.
   syntax:
     content: public int EndColumnNumber { get; }
     return:
       type: System.Int32
-      description: "返回<xref:System.Int32>.</xref:System.Int32>"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.EndColumnNumber*
   exceptions: []
   platform:
@@ -413,12 +413,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "结束关联的文件中的关注的行号。"
+  summary: Ending line number of interest in associated file.
   syntax:
     content: public int EndLineNumber { get; }
     return:
       type: System.Int32
-      description: "返回<xref:System.Int32>.</xref:System.Int32>"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.EndLineNumber*
   exceptions: []
   platform:
@@ -435,12 +435,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "与事件相关联的文件。"
+  summary: File associated with event.
   syntax:
     content: public string File { get; }
     return:
       type: System.String
-      description: "返回<xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.File*
   exceptions: []
   platform:
@@ -457,12 +457,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "获取事件的重要性。"
+  summary: Gets the importance of the event.
   syntax:
     content: public Microsoft.Build.Framework.MessageImportance Importance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: "A <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref>值，该值指示该事件的重要性。"
+      description: A <xref href="Microsoft.Build.Framework.MessageImportance"></xref> value indicating the importance of the event.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.Importance*
   exceptions: []
   platform:
@@ -479,12 +479,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "关联的文件中的关注的行号。"
+  summary: Line number of interest in associated file.
   syntax:
     content: public int LineNumber { get; }
     return:
       type: System.Int32
-      description: "返回<xref:System.Int32>.</xref:System.Int32>"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.LineNumber*
   exceptions: []
   platform:
@@ -501,12 +501,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "已发出的消息时生成的项目。"
+  summary: The project which was building when the message was issued.
   syntax:
     content: public string ProjectFile { get; set; }
     return:
       type: System.String
-      description: "返回<xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.ProjectFile*
   exceptions: []
   platform:
@@ -523,12 +523,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "事件的自定义子类型。"
+  summary: The custom sub-type of the event.
   syntax:
     content: public string Subcategory { get; }
     return:
       type: System.String
-      description: "返回<xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.Subcategory*
   exceptions: []
   platform:

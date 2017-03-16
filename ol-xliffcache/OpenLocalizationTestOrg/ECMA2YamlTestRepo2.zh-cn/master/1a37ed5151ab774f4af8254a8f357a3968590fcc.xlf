@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1a37ed5151ab774f4af8254a8f357a3968590fcc</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Transactions.IPromotableSinglePhaseNotification.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">53b6cb31e460b1097762ddd64f6ff3c46ec25633</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bafc1aa6f3fb4c644475d0cb8d8d3fdb30a0c779</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Describes an object that acts as a commit delegate for a non-distributed transaction internal to a resource manager.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Promotable Enlistments (PSPE) allow a resource, such as a database, to take ownership of the transaction if it is the only entity participating in the transaction.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Later, if needed, the &lt;xref:System.Transactions&gt; infrastructure can still escalate the transaction to MSDTC.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Optimization Using Single Phase Commit and Promotable Single Phase Notification<ept id="p1">](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>A resource manager that implements this interface delegates control of the commit of it's internal non-distributed transaction to an enlistment on a &lt;xref:System.Transactions&gt; transaction through the &lt;xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A&gt; method on the &lt;xref:System.Transactions.Transaction&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If the &lt;xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName&gt; method is called, your implementation of this interface must produce a distributed transaction in the form of a propagation token, and return it to &lt;xref:System.Transactions&gt;.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>After you enlist an object that implements this interface as a participant of a transaction using the &lt;xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A&gt; method, the transaction manager then notifies the participant when the transaction is promoted, committed, or rolled back by invoking the &lt;xref:System.Transactions.ITransactionPromoter.Promote%2A&gt; method, the &lt;xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A&gt; method, or the &lt;xref:System.Transactions.IPromotableSinglePhaseNotification.Rollback%2A&gt; method of the object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Optimization Using Single Phase Commit and Promotable Single Phase Notification<ept id="p1">](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Notifies a transaction participant that enlistment has completed successfully.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If initialization logic is required to prepare an enlisted object to participate in a transaction, it is preferable to implement that logic in this method instead of in a constructor.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In this way, the initialization occurs only if the object is successfully enlisted as a transaction participant.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An attempt to enlist or serialize a transaction.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Notifies an enlisted object that the transaction is being rolled back.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>On receiving this notification, the PSPE should always rollback it's internal transaction and then reply with the &lt;xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A&gt; callback method on the <ph id="ph1">`singlePhaseEnlistment`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If the PSPE replies with  &lt;xref:System.Transactions.SinglePhaseEnlistment.Committed%2A&gt; or &lt;xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A&gt;, an &lt;xref:System.InvalidOperationException&gt; is thrown from the callback.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Transactions.SinglePhaseEnlistment"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object used to send a response to the transaction manager.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Notifies an enlisted object that the transaction is being committed.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This method notifies an enlisted object that the transaction is to be committed.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`singlePhaseEnlistment`</ph> parameters contain callbacks that allow the implementation of this interface to notify the transaction manager of the outcome of the transaction, since the transaction manager has delegated control of the transaction.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In the case of a promoted transaction, the transaction manager listens to the transaction outcome and overrides the response being sent.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>On receiving this notification, the resource manager should attempt to commit it's internal transaction (or the distributed transaction if it has been escalated), and invoke one of the callback methods on the <ph id="ph1">`singlePhaseEnlistment`</ph> parameter based on the outcome of committing it's transaction.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Transactions.SinglePhaseEnlistment"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> interface used to send a response to the transaction manager.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

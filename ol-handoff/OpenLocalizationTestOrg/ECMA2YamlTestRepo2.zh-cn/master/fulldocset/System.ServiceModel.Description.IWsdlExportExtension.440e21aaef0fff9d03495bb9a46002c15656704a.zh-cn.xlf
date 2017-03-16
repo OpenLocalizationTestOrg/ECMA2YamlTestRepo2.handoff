@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0ba187618e373706d3b156988802a92954fffae5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ServiceModel.Description.IWsdlExportExtension.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5cc429a19ddbecebe6d04b780d2c7040e5fc33bb</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3f810d9cb03881a072e6bd387dc79e6b9414ab0e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Defines endpoint or contract behaviors that can export custom metadata.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>To modify and extend the Web Services Description Language (WSDL) exported by &lt;xref:System.ServiceModel.Description.WsdlExporter&gt; objects, implement the IWsdlExportExtension interface on an endpoint, contract, or operation behavior (an object that implements either &lt;xref:System.ServiceModel.Description.IContractBehavior&gt;, &lt;xref:System.ServiceModel.Description.IEndpointBehavior&gt;, or &lt;xref:System.ServiceModel.Description.IOperationBehavior&gt;) and add the behavior to the &lt;xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A&gt;, &lt;xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A&gt;, or &lt;xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In addition, you can also implement IWsdlExportExtension on a &lt;xref:System.ServiceModel.Channels.BindingElement&gt;.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  IWsdlExportExtension implementations are never invoked if they are implemented as an &lt;xref:System.ServiceModel.Description.IServiceBehavior&gt;.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>IWsdlExportExtension does not export custom policy assertions even though <ph id="ph1">[!INCLUDE[indigo1](~/add/includes/ajax-current-ext-md.md)]</ph> exports custom binding policy assertions to the appropriate element inside WSDL.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If you want to export custom policy assertions, implement the &lt;xref:System.ServiceModel.Description.IPolicyExportExtension&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The metadata publication process begins by calling &lt;xref:System.ServiceModel.Description.WsdlExporter.ExportEndpoints%2A?displayProperty=fullName&gt; which in turn calls &lt;xref:System.ServiceModel.Description.WsdlExporter.ExportEndpoint%2A?displayProperty=fullName&gt; for each endpoint.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The endpoint is exported by first exporting its contract.When exporting a contract the &lt;xref:System.ServiceModel.Description.WsdlExporter?displayProperty=fullName&gt; calls the &lt;xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A?displayProperty=fullName&gt; method on all IWsdlExportExtension implementations on the contract, and operation behaviors for that contract.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Operations that use wildcard actions are not exported in metadata, so IWsdlExportExtension implementations on operation behaviors for these operations are not exported.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>After exporting the contract, the port and binding are exported and exported policy expressions are attached.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Both the &lt;xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A&gt; and the &lt;xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A&gt; methods provide access to the &lt;xref:System.ServiceModel.Description.WsdlExporter&gt; so that IWsdlExportExtension implementations can report recoverable errors and warnings through the &lt;xref:System.ServiceModel.Description.MetadataExporter.Errors%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The context objects passed into both methods provide convenient mappings from exported WSDL elements to properties of &lt;xref:System.ServiceModel.Description.ContractDescription&gt; and &lt;xref:System.ServiceModel.Description.ServiceEndpoint&gt; objects.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If an IWsdlExportExtension implementation throws an exception on export, the generated metadata is in an inconsistent state and the &lt;xref:System.ServiceModel.Description.WsdlExporter&gt; object should be discarded.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Custom export extension must run after the built-in serializer populates the service description.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Writes custom Web Services Description Language (WSDL) elements into the generated WSDL for a contract.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The ExportContract method is called when the metadata export system is exporting the contract.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Only contract and operation behaviors implementing &lt;xref:System.ServiceModel.Description.IWsdlExportExtension&gt; get the ExportContract call.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>All behaviors implementing &lt;xref:System.ServiceModel.Description.IWsdlExportExtension&gt; get the &lt;xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A&gt; call.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`context`</ph> parameter to modify the WSDL to be exported.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For an example, see the Example section.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.ServiceModel.Description.WsdlExporter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that exports the contract information.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Provides mappings from exported WSDL elements to the contract description.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Writes custom Web Services Description Language (WSDL) elements into the generated WSDL for an endpoint.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Implement the ExportEndpoint method to modify the WSDL exported for an endpoint.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This method is called after the contract has been exported by &lt;xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.ServiceModel.Description.WsdlExporter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that exports the endpoint information.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Provides mappings from exported WSDL elements to the endpoint description.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

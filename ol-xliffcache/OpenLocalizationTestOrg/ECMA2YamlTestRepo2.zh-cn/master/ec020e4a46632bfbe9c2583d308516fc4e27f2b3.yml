@@ -26,7 +26,7 @@ items:
   nameWithType: BaseReference
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference
   type: Class
-  summary: "描述文件引用和程序集引用所共有的基本功能。"
+  summary: Describes base functionality common to both file references and assembly references.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -50,7 +50,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference"></xref> class.
   syntax:
     content: protected BaseReference ();
     parameters: []
@@ -70,13 +70,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference"></xref> class.
   syntax:
     content: protected BaseReference (string path);
     parameters:
     - id: path
       type: System.String
-      description: "程序集基引用路径。"
+      description: The path for the assembly base reference.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.#ctor*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置按需下载功能的组。"
+  summary: Gets or sets the group for on-demand download functionality.
   syntax:
     content: public string Group { get; set; }
     return:
       type: System.String
-      description: "指示按需下载功能的组的字符串。 指示主文件的空白字符串。"
+      description: A string indicating the group for on-demand download functionality. A blank string indicates a primary file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Group*
   exceptions: []
   platform:
@@ -115,12 +115,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置文件的 SHA1 哈希。"
+  summary: Gets or sets the SHA1 hash of the file.
   syntax:
     content: public string Hash { get; set; }
     return:
       type: System.String
-      description: "指示该文件的 SHA1 哈希的字符串。"
+      description: A string indicating the SHA1 hash of the file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash*
   exceptions: []
   platform:
@@ -137,12 +137,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置文件是否可选用按需下载功能。"
+  summary: Gets or sets whether the file is optional for on-demand download functionality.
   syntax:
     content: public bool IsOptional { get; set; }
     return:
       type: System.Boolean
-      description: "一个布尔值，该值指示文件是否可选的按需下载功能。"
+      description: A Boolean value indicating whether the file is optional for on-demand download functionality.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional*
   exceptions: []
   platform:
@@ -159,12 +159,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置解析的路径的文件。 此路径由 Resolve 方法确定，用于计算文件信息通过<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo*>方法。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo*>"
+  summary: Gets or sets the resolved path to the file. This path is determined by the Resolve method, and is used to compute the file information by the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.UpdateFileInfo*> method.
   syntax:
     content: public string ResolvedPath { get; set; }
     return:
       type: System.String
-      description: "指示该文件的解析的路径的字符串。"
+      description: A string indicating the resolved path to the file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.ResolvedPath*
   exceptions: []
   platform:
@@ -181,12 +181,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置文件的大小，以字节为单位。"
+  summary: Gets or sets the file size in bytes.
   syntax:
     content: public long Size { get; set; }
     return:
       type: System.Int64
-      description: "文件大小 （字节）。"
+      description: The file size in bytes.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size*
   exceptions: []
   platform:
@@ -203,13 +203,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取一个值，用于对应用程序清单中引用的程序集进行排序。"
-  remarks: "此属性用于对应用程序清单中引用的程序集进行排序。 清单跟已安装的程序集，按字母顺序首先，列出按字母顺序的必备程序集。 程序集的引用 SortName 根据排序。"
+  summary: Gets a value that is used to sort the referenced assemblies in the application manifest.
+  remarks: This property is used to sort the referenced assemblies in the application manifest. The manifest lists prerequisite assemblies in alphabetical order first, followed by installed assemblies in alphabetical order. The assemblies are sorted according to the SortName of the reference.
   syntax:
     content: protected abstract string SortName { get; }
     return:
       type: System.String
-      description: "要作为排序依据的名称。"
+      description: The name to sort by.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.SortName*
   exceptions: []
   platform:
@@ -226,12 +226,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置文件的源路径。"
+  summary: Gets or sets the source path of the file.
   syntax:
     content: public string SourcePath { get; set; }
     return:
       type: System.String
-      description: "指示该文件的源路径的字符串。"
+      description: A string indicating the source path of the file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.SourcePath*
   exceptions: []
   platform:
@@ -248,12 +248,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置文件的目标路径。 这是用于生成清单中的规范的路径。"
+  summary: Gets or sets the target path of the file. This is the path that is used for specification in the generated manifest.
   syntax:
     content: public string TargetPath { get; set; }
     return:
       type: System.String
-      description: "指示该文件的目标路径的字符串。"
+      description: A string indicating the target path of the file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.TargetPath*
   exceptions: []
   platform:
@@ -270,13 +270,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "返回基引用名称。"
+  summary: Returns the base reference name.
   syntax:
     content: public override string ToString ();
     parameters: []
     return:
       type: System.String
-      description: "指示基引用名称的字符串。"
+      description: A string indicating the base reference name.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.ToString*
   exceptions: []
   platform:
@@ -293,12 +293,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置按需下载功能的组。"
+  summary: Gets or sets the group for on-demand download functionality.
   syntax:
     content: public string XmlGroup { get; set; }
     return:
       type: System.String
-      description: "要添加。"
+      description: To be added.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlGroup*
   exceptions: []
   platform:
@@ -315,12 +315,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash*> property to an XML file.
   syntax:
     content: public string XmlHash { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlHash*
   exceptions: []
   platform:
@@ -337,12 +337,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置一个属性，用于将序列化为 XML 文件的哈希算法。"
+  summary: Gets or sets a property that is used to serialize the hash algorithm to an XML file.
   syntax:
     content: public string XmlHashAlgorithm { get; set; }
     return:
       type: System.String
-      description: "哈希算法。"
+      description: The hash algorithm.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlHashAlgorithm*
   exceptions: []
   platform:
@@ -359,12 +359,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional*> property to an XML file.
   syntax:
     content: public string XmlIsOptional { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlIsOptional*
   exceptions: []
   platform:
@@ -381,12 +381,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置一个属性，用于将序列化为 XML 文件的路径。"
+  summary: Gets or sets a property that is used to serialize the path to an XML file.
   syntax:
     content: public string XmlPath { get; set; }
     return:
       type: System.String
-      description: "引用的路径。"
+      description: The path of the reference.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlPath*
   exceptions: []
   platform:
@@ -403,12 +403,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "获取或设置一个属性，用于将序列化为<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size*>XML 文件的属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size*> property to an XML file.
   syntax:
     content: public string XmlSize { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size*>属性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlSize*
   exceptions: []
   platform:

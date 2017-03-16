@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectPropertyInstance
   fullName: Microsoft.Build.Execution.ProjectPropertyInstance
   type: Class
-  summary: "包装计算的属性以进行生成。 这些属性的实例将添加和删除通过 ProjectInstance 对象上的方法。"
+  summary: Wraps an evaluated property for build purposes. Instances of these properties are added and removed via methods on the ProjectInstance object.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{name}={escapedValue}")]
@@ -39,12 +39,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取或设置此属性的计算的值。"
+  summary: Gets or sets the evaluated value of this property.
   syntax:
     content: public string EvaluatedValue { get; set; }
     return:
       type: System.String
-      description: "返回此属性的计算的值。"
+      description: Returns the evaluated value of this property.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.EvaluatedValue*
   exceptions: []
   platform:
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "如果此对象是不可变; 则返回 truefalse 否则为。       不能是可变的不可变对象。"
+  summary: "Returns true if this object is immutable; false otherwise.  \n  \n An immutable object cannot be made mutable."
   syntax:
     content: public virtual bool IsImmutable { get; }
     return:
       type: System.Boolean
-      description: "返回<xref:System.Boolean>.</xref:System.Boolean>"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.IsImmutable*
   exceptions: []
   platform:
@@ -83,13 +83,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取此属性的名称。"
-  remarks: "无法对此进行设置，因为它用作到项目的属性表中的键。"
+  summary: Gets the name of this property.
+  remarks: This cannot be set, as it is used as the key into the project's properties table.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "返回此属性的名称。"
+      description: Returns the name of this property.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.Name*
   exceptions: []
   platform:
@@ -112,10 +112,10 @@ items:
     parameters:
     - id: other
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "要添加。"
+      description: To be added.
     return:
       type: System.Boolean
-      description: "要添加。"
+      description: To be added.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.System#IEquatable<Microsoft#Build#Execution#ProjectPropertyInstance>#Equals*
   exceptions: []
   platform:
@@ -132,13 +132,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "获取此属性的字符串表示形式。"
+  summary: Gets a string representation for this property.
   syntax:
     content: public override string ToString ();
     parameters: []
     return:
       type: System.String
-      description: "返回此属性的字符串表示形式。"
+      description: Returns a string representation for this property.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.ToString*
   exceptions: []
   platform:

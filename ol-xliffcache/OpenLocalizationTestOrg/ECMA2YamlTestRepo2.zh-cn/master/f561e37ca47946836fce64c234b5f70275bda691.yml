@@ -45,7 +45,7 @@ items:
   nameWithType: Vbc
   fullName: Microsoft.Build.Tasks.Vbc
   type: Class
-  summary: "实现`Vbc`任务。 使用`Vbc`项目文件以创建和执行此任务中的元素。 有关用法和参数信息，请参阅[Vbc 任务](~/add/includes/ajax-current-ext-md.md)。"
+  summary: Implements the `Vbc` task. Use the `Vbc` element in your project file to create and execute this task. For usage and parameter information, see [Vbc Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class Vbc : Microsoft.Build.Tasks.ManagedCompiler'
   inheritance:
@@ -154,7 +154,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "初始化的新实例<xref href=&quot;Microsoft.Build.Tasks.Vbc&quot;></xref>类。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Vbc"></xref> class.
   syntax:
     content: public Vbc ();
     parameters: []
@@ -174,13 +174,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "填充指定<code> commandLine </code>使用开关和可以进入响应文件的其他信息。"
+  summary: Fills the specified <code>commandLine</code> parameter with switches and other information that can go into a response file.
   syntax:
     content: protected override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "若要添加到参数的命令行生成器。"
+      description: Command line builder to add arguments to.
   overload: Microsoft.Build.Tasks.Vbc.AddResponseFileCommands*
   exceptions: []
   platform:
@@ -197,12 +197,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置 DLL 的基址。"
+  summary: Gets or sets the base address of the DLL.
   syntax:
     content: public string BaseAddress { get; set; }
     return:
       type: System.String
-      description: "DLL 的基址。"
+      description: The base address of the DLL.
   overload: Microsoft.Build.Tasks.Vbc.BaseAddress*
   exceptions: []
   platform:
@@ -219,14 +219,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "编译该项目通过主机对象。"
-  remarks: "如果主机对象传递给此方法将会调用在执行期间`Vbc`任务。"
+  summary: Compiles the project through the host object.
+  remarks: This method will get called during execution if a host object was passed to the `Vbc` task.
   syntax:
     content: protected override bool CallHostObjectToExecute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果编译成功;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if compilation succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.CallHostObjectToExecute*
   exceptions: []
   platform:
@@ -243,13 +243,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个或多个条要取消显示由警告标识符数字部分指定。"
-  remarks: "多个警告之间用分号分隔。"
+  summary: Gets or sets one or more warnings to suppress that are specified by the numeric part of the warning identifier.
+  remarks: Multiple warnings are separated by semicolons.
   syntax:
     content: public string DisabledWarnings { get; set; }
     return:
       type: System.String
-      description: "由警告标识符数字部分指定要取消显示的警告。"
+      description: The warnings to suppress that are specified by the numeric part of the warning identifier.
   overload: Microsoft.Build.Tasks.Vbc.DisabledWarnings*
   exceptions: []
   platform:
@@ -266,13 +266,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "打开文档注释处理和获取或设置输出文档 XML 文件。"
-  remarks: "此属性将替代<xref:Microsoft.Build.Tasks.Vbc.GenerateDocumentation%2A>属性。</xref:Microsoft.Build.Tasks.Vbc.GenerateDocumentation%2A>"
+  summary: Turns on documentation comments processing and gets or sets the output documentation XML file.
+  remarks: This property overrides the <xref:Microsoft.Build.Tasks.Vbc.GenerateDocumentation%2A> property.
   syntax:
     content: public string DocumentationFile { get; set; }
     return:
       type: System.String
-      description: "输出文档 XML 文件。"
+      description: The output documentation XML file.
   overload: Microsoft.Build.Tasks.Vbc.DocumentationFile*
   exceptions: []
   platform:
@@ -289,13 +289,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个字符串值，指定该任务将如何报告内部编译器错误。"
-  remarks: "此属性可以具有以下值:- `prompt`       -    `send`       -    `none`如果`prompt`指定和内部编译器错误发生，则会提示用户是否向 Microsoft 发送错误数据的选项。       如果`send`指定并发生内部编译器错误，该任务会向 Microsoft 发送错误数据。       默认值是`none`，该报告中仅输出的文本的错误。"
+  summary: Gets or sets a string value that specifies how the task will report internal compiler errors.
+  remarks: "This property can have the following values:  \n  \n-   `prompt`  \n  \n-   `send`  \n  \n-   `none`  \n  \n If `prompt` is specified and an internal compiler error occurs, the user is prompted with an option of whether to send the error data to Microsoft.  \n  \n If `send` is specified and an internal compiler error occurs, the task sends the error data to Microsoft.  \n  \n The default value is `none`, which reports errors in text output only."
   syntax:
     content: public string ErrorReport { get; set; }
     return:
       type: System.String
-      description: "一个字符串值，指定该任务将如何报告内部编译器错误。"
+      description: A string value that specifies how the task will report internal compiler errors.
   overload: Microsoft.Build.Tasks.Vbc.ErrorReport*
   exceptions: []
   platform:
@@ -312,13 +312,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "重写 Execute，以便我们可以移动 PDB 文件中，如果编译器完成后，我们需要。"
+  summary: Override Execute so that we can move the PDB file, if we need to, after the compiler is done.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "返回<xref:System.Boolean>.</xref:System.Boolean>"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Tasks.Vbc.Execute*
   exceptions: []
   platform:
@@ -335,13 +335,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否处理文档注释转换为 XML 文件。"
-  remarks: "输出 XML 文件的名称是可执行文件或创建任务的库的名称。"
+  summary: Gets or sets a Boolean value that specifies whether to process documentation comments to an XML file.
+  remarks: The name of the output XML file is the name of the executable file or the library that the task is creating.
   syntax:
     content: public bool GenerateDocumentation { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果`Vbc`任务文档注释处理到一个 XML 文件; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task processes documentation comments to a XML file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.GenerateDocumentation*
   exceptions: []
   platform:
@@ -358,13 +358,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "返回工具的完整文件路径。"
+  summary: Returns the full file path of the tool.
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: "工具的完整文件路径。"
+      description: The full file path of the tool.
   overload: Microsoft.Build.Tasks.Vbc.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -381,12 +381,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置要导入的命名空间的项集合。"
+  summary: Gets or sets the item collections to import namespaces from.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Imports { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "要导入的命名空间的项集合。"
+      description: The item collections to import namespaces from.
   overload: Microsoft.Build.Tasks.Vbc.Imports*
   exceptions: []
   platform:
@@ -403,14 +403,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "返回的宿主对象初始化状态值，该值指示下一步操作应该是什么。"
-  remarks: "如果主机对象传递给此方法将会调用此任务执行期间`Vbc`任务。"
+  summary: Returns a host object initialization status value that indicates what the next action should be.
+  remarks: This method will get called during execution of this task if a host object was passed to the `Vbc` task.
   syntax:
     content: protected override Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject ();
     parameters: []
     return:
       type: Microsoft.Build.Utilities.HostObjectInitializationStatus
-      description: "主机对象初始化状态值，该值指示下一步操作应该是什么。"
+      description: A host object initialization status value that indicates what the next action should be.
   overload: Microsoft.Build.Tasks.Vbc.InitializeHostObject*
   exceptions: []
   platform:
@@ -427,12 +427,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置的语言版本。"
+  summary: Gets or sets the language version.
   syntax:
     content: public string LangVersion { get; set; }
     return:
       type: System.String
-      description: "返回的语言版本。"
+      description: Returns the language version.
   overload: Microsoft.Build.Tasks.Vbc.LangVersion*
   exceptions: []
   platform:
@@ -449,17 +449,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "此方法会截获要记录的行来自从 VBC STDOUT。"
-  remarks: "一旦我们看到标准 vb 警告或错误，然后我们将其捕获，并获取下一步 3 行，以便我们可以将转换的字符串形式的 FileName.vb(line) FileName.vb(line,column) 这将允许我们要向 IDE 中，报告的行和列，并因此筛选多目标的重复情况中的错误或只是波形曲线而不是整个行的相应令牌到窗体。"
+  summary: This method intercepts the lines to be logged coming from STDOUT from VBC.
+  remarks: Once we see a standard vb warning or error, then we capture it and grab the next 3 lines so we can transform the string form the form of FileName.vb(line) to FileName.vb(line,column) which will allow us to report the line and column to the IDE, and thus filter the error in the duplicate case for multi-targeting, or just squiggle the appropriate token instead of the entire line.
   syntax:
     content: protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);
     parameters:
     - id: singleLine
       type: System.String
-      description: "从 STDOUT 中的 vbc 编译器捕获单个行"
+      description: A single line captured from the STDOUT of the vbc compiler
     - id: messageImportance
       type: Microsoft.Build.Framework.MessageImportance
-      description: '消息的重要性︰ 高、 低或正常'
+      description: 'The message importance: High,Low, or Normal'
   overload: Microsoft.Build.Tasks.Vbc.LogEventsFromTextOutput*
   exceptions: []
   platform:
@@ -476,12 +476,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置包含此模块的程序集的名称。"
+  summary: Gets or sets the name of the assembly that this module will be a part of.
   syntax:
     content: public string ModuleAssemblyName { get; set; }
     return:
       type: System.String
-      description: "此模块的程序集的名称。"
+      description: The name of the assembly that this module will be a part of.
   overload: Microsoft.Build.Tasks.Vbc.ModuleAssemblyName*
   exceptions: []
   platform:
@@ -498,12 +498,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否编译器不应该引用标准库。"
+  summary: Gets or sets a Boolean value that specifies whether the compiler should not reference the standard libraries.
   syntax:
     content: public bool NoStandardLib { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果编译器不应该引用标准库;，否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the compiler should not reference the standard libraries; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.NoStandardLib*
   exceptions: []
   platform:
@@ -520,12 +520,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定编译器是否应编译而无需对 Visual Basic 运行时库的引用。"
+  summary: Gets or sets a Boolean value that specifies whether the compiler should compile without a reference to the Visual Basic Runtime Library.
   syntax:
     content: public bool NoVBRuntimeReference { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果编译器应编译而无需对 Visual Basic 运行时库; 的引用否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the compiler should compile without a reference to the Visual Basic Runtime Library; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.NoVBRuntimeReference*
   exceptions: []
   platform:
@@ -542,12 +542,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定任务是否将取消显示所有警告。"
+  summary: Gets or sets a Boolean value that specifies whether the task will suppress all warnings.
   syntax:
     content: public bool NoWarnings { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果任务将取消显示所有警告;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task will suppress all warnings; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.NoWarnings*
   exceptions: []
   platform:
@@ -564,13 +564,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个字符串值，指定如何进行字符串比较。"
-  remarks: "此属性可以具有以下值:- `binary`       -    `text`值`binary`指定该任务使用二进制字符串比较。 值`text`指定该任务使用的文本字符串比较。 默认值为 `binary`。"
+  summary: Gets or sets a string value that specifies how string comparisons are made.
+  remarks: "This property can have the following values:  \n  \n-   `binary`  \n  \n-   `text`  \n  \n The value `binary` specifies that the task uses binary string comparisons. The value `text` specifies that the task uses text string comparisons. The default value is `binary`."
   syntax:
     content: public string OptionCompare { get; set; }
     return:
       type: System.String
-      description: "一个字符串值，指定如何进行字符串比较。"
+      description: A string value that specifies how string comparisons are made.
   overload: Microsoft.Build.Tasks.Vbc.OptionCompare*
   exceptions: []
   platform:
@@ -587,12 +587,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否要求显式声明的变量。"
+  summary: Gets or sets a Boolean value that specifies whether explicit declaration of variables is required.
   syntax:
     content: public bool OptionExplicit { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果显式声明变量是必需的;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if explicit declaration of variables is required; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.OptionExplicit*
   exceptions: []
   platform:
@@ -609,12 +609,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否在变量声明中使用局部类型推理。"
+  summary: Gets or sets a Boolean value that specifies whether to use local type inference in variable declarations.
   syntax:
     content: public bool OptionInfer { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果`Vbc`任务将使用局部类型推理在变量声明; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task will use local type inference in variable declarations; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.OptionInfer*
   exceptions: []
   platform:
@@ -631,12 +631,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定任务是否强制执行严格类型语义来限制隐式类型转换。"
+  summary: Gets or sets a Boolean value that specifies whether the task enforces strict type semantics to restrict implicit type conversions.
   syntax:
     content: public bool OptionStrict { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果任务强制执行严格类型语义;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task enforces strict type semantics; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.OptionStrict*
   exceptions: []
   platform:
@@ -653,12 +653,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个值为<xref:Microsoft.Build.Tasks.Vbc.OptionStrict*>属性。</xref:Microsoft.Build.Tasks.Vbc.OptionStrict*> 目前，值可以设置为&quot;custom&quot;并指定任务是否生成警告的隐式收缩类型转换。"
+  summary: Gets or sets a value for the <xref:Microsoft.Build.Tasks.Vbc.OptionStrict*> property. Currently, the value can be set to "custom" and specifies whether the task generates warnings for implicit narrowing type conversions.
   syntax:
     content: public string OptionStrictType { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Vbc.OptionStrict*>属性。</xref:Microsoft.Build.Tasks.Vbc.OptionStrict*>"
+      description: A value for the <xref:Microsoft.Build.Tasks.Vbc.OptionStrict*> property.
   overload: Microsoft.Build.Tasks.Vbc.OptionStrictType*
   exceptions: []
   platform:
@@ -675,12 +675,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "路径。Pdb 文件。"
+  summary: The path to the .Pdb file.
   syntax:
     content: public string PdbFile { get; set; }
     return:
       type: System.String
-      description: "返回<xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.Vbc.PdbFile*
   exceptions: []
   platform:
@@ -697,13 +697,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否禁用整数溢出错误检查。"
-  remarks: "默认值为 `false`。"
+  summary: Gets or sets a Boolean value that specifies whether to disable integer overflow error checks.
+  remarks: The default value is `false`.
   syntax:
     content: public bool RemoveIntegerChecks { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果`Vbc`任务将禁用整数溢出错误检查; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task will disable integer overflow error checks; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.RemoveIntegerChecks*
   exceptions: []
   platform:
@@ -720,12 +720,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置所有类型声明的根命名空间。"
+  summary: Gets or sets the root namespace for all type declarations.
   syntax:
     content: public string RootNamespace { get; set; }
     return:
       type: System.String
-      description: "所有类型声明的根命名空间。"
+      description: The root namespace for all type declarations.
   overload: Microsoft.Build.Tasks.Vbc.RootNamespace*
   exceptions: []
   platform:
@@ -742,12 +742,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置 mscorlib.dll 和 microsoft.visualbasic.dll 的位置。"
+  summary: Gets or sets the location of mscorlib.dll and microsoft.visualbasic.dll.
   syntax:
     content: public string SdkPath { get; set; }
     return:
       type: System.String
-      description: "Mscorlib.dll 和 microsoft.visualbasic.dll 的位置。"
+      description: The location of mscorlib.dll and microsoft.visualbasic.dll.
   overload: Microsoft.Build.Tasks.Vbc.SdkPath*
   exceptions: []
   platform:
@@ -764,12 +764,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否面向[!INCLUDE[Compact](~/add/includes/compact-md.md)]。"
+  summary: Gets or sets a Boolean value that specifies whether to target the [!INCLUDE[Compact](~/add/includes/compact-md.md)].
   syntax:
     content: public bool TargetCompactFramework { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果`Vbc`任务应面向[!INCLUDE[Compact](~/add/includes/compact-md.md)]; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task should target the [!INCLUDE[Compact](~/add/includes/compact-md.md)]; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.TargetCompactFramework*
   exceptions: []
   platform:
@@ -786,12 +786,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取工具可执行文件 (vbc.exe) 的名称。"
+  summary: Gets the name of the tool executable file (vbc.exe).
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: "工具可执行文件的名称。"
+      description: The name of the tool executable file.
   overload: Microsoft.Build.Tasks.Vbc.ToolName*
   exceptions: []
   platform:
@@ -808,12 +808,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置一个布尔值，指定是否使用进程内编译器对象中，如果可用。 仅供[!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)]。"
+  summary: Gets or sets a Boolean value that specifies whether to use the in-process compiler object, if available. Used only by [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)].
   syntax:
     content: public bool UseHostCompilerIfAvailable { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果`Vbc`任务将使用进程内编译器对象中，如果可用; 否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task will use the in-process compiler object, if available; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.UseHostCompilerIfAvailable*
   exceptions: []
   platform:
@@ -830,13 +830,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "如果有，验证输入的参数和日志错误或警告。 返回一个布尔值，该值指示是否应继续执行任务。"
+  summary: Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果应继续执行任务;否则为<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should proceed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.ValidateParameters*
   exceptions: []
   platform:
@@ -853,12 +853,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "指定是否使用默认的 Visual Basic 运行时进行编译。"
+  summary: Specifies whether to compile with the default Visual Basic runtime.
   syntax:
     content: public string VBRuntime { get; set; }
     return:
       type: System.String
-      description: "返回<xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.Vbc.VBRuntime*
   exceptions: []
   platform:
@@ -875,12 +875,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Visual Basic 运行时，若要使用的路径。"
+  summary: The path to the Visual Basic runtime to use.
   syntax:
     content: public string VBRuntimePath { get; set; }
     return:
       type: System.String
-      description: "返回<xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.Vbc.VBRuntimePath*
   exceptions: []
   platform:
@@ -897,13 +897,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置编译器的输出，而可以是输出的详细级别`Quiet`， `Normal`，或`Verbose`。"
-  remarks: "默认详细信息是`Normal`。"
+  summary: Gets or sets the verbosity of the compiler’s output, which can be `Quiet`, `Normal`, or `Verbose`.
+  remarks: The default verbosity is `Normal`.
   syntax:
     content: public string Verbosity { get; set; }
     return:
       type: System.String
-      description: "编译器的详细级别的输出。"
+      description: The verbosity of the compiler’s output.
   overload: Microsoft.Build.Tasks.Vbc.Verbosity*
   exceptions: []
   platform:
@@ -920,12 +920,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置的警告视为错误的列表。"
+  summary: Gets or sets a list of warnings to treat as errors.
   syntax:
     content: public string WarningsAsErrors { get; set; }
     return:
       type: System.String
-      description: "警告视为错误的列表。"
+      description: A list of warnings to treat as errors.
   overload: Microsoft.Build.Tasks.Vbc.WarningsAsErrors*
   exceptions: []
   platform:
@@ -942,12 +942,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "获取或设置的不被视为错误的警告的列表。"
+  summary: Gets or sets a list of warnings that are not treated as errors.
   syntax:
     content: public string WarningsNotAsErrors { get; set; }
     return:
       type: System.String
-      description: "不被视为错误的警告的列表。"
+      description: A list of warnings that are not treated as errors.
   overload: Microsoft.Build.Tasks.Vbc.WarningsNotAsErrors*
   exceptions: []
   platform:
