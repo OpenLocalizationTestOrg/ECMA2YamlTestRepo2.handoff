@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-pt">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e83db45e8df203aef002defe83f967807816f181</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ServiceModel.Configuration.WSHttpBindingElement.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2979a97104602309cf38b21c0da1d41461e207d4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d45efc50a80bc24f6dc7c40f99b3f900801dc9d2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents an interoperable binding that supports distributed transactions and secure, reliable sessions.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The wsHttpBinding is a secure, reliable, interoperable binding suitable for non-duplex service contracts.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The binding implements the following specifications: WS-ReliableMessaging for reliability and WS-Security for message security and authentication.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The transport is HTTP and message encoding is Text/XML encoding.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.ServiceModel.Configuration.WSHttpBindingElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.ServiceModel.Configuration.WSHttpBindingElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The configuration name of the binding.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This value should be unique because it is used as identification for the binding.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the WCF client will automatically store and resend any cookies sent by a single web service.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Setting AllowCookies to <ph id="ph1">`true`</ph> is useful when a client is interacting with one web service that uses cookies.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you are accessing multiple services with the same cookie, set AllowCookies to <ph id="ph1">`false`</ph> and you will have to manually add the cookie header to each outgoing message.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following code shows how to do this:      <ph id="ph1">```c#   MyWebServiceClient client = new MyWebServiceClient();              using (new OperationContextScope(client.InnerChannel))           {               client.DoSomething();                  // Extract the cookie embedded in the received web service response               // and stores it locally               HttpResponseMessageProperty response = (HttpResponseMessageProperty)               OperationContext.Current.IncomingMessageProperties[                   HttpResponseMessageProperty.Name];               sharedCookie = response.Headers["Set-Cookie"];           }              MyOtherWebServiceClient otherClient = new MyOtherWebServiceClient();              using (new OperationContextScope(otherClient.InnerChannel))           {               // Embeds the extracted cookie in the next web service request               // Note that we manually have to create the request object since               // since it doesn't exist yet at this stage                HttpRequestMessageProperty request = new HttpRequestMessageProperty();               request.Headers["Cookie"] = sharedCookie;               OperationContext.Current.OutgoingMessageProperties[                   HttpRequestMessageProperty.Name] = request;                  otherClient.DoSomethingElse();           }      ```</ph></source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_True" name="True" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if automatic cookies processing is required; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Gets the type of this binding element.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of this binding element.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Initializes this binding configuration element with the content of the specified binding element.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A binding element.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Called when the content of a specified binding collection is applied to this binding configuration element.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A collection of binding elements.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Gets a <bpt id="p1">&lt;xref href="System.Configuration.ConfigurationPropertyCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance that contains a collection of <bpt id="p2">&lt;xref href="System.Configuration.ConfigurationProperty"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> objects that can be attributes or <bpt id="p3">&lt;xref href="System.Configuration.ConfigurationElement"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> objects of this configuration element.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.ConfigurationPropertyCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance that contains a collection of <bpt id="p2">&lt;xref href="System.Configuration.ConfigurationProperty"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> objects that can be attributes or <bpt id="p3">&lt;xref href="System.Configuration.ConfigurationElement"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> objects of this configuration element.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Gets the type of security to be used with this binding.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.ServiceModel.Configuration.WSHttpSecurityElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used with this binding.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

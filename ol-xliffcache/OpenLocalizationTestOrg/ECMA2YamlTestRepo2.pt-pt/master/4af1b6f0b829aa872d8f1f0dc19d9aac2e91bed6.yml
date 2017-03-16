@@ -32,7 +32,7 @@ items:
   nameWithType: GenerateManifestBase
   fullName: Microsoft.Build.Tasks.GenerateManifestBase
   type: Class
-  summary: "Representa a classe base para todas as tarefas de geração de manifesto."
+  summary: Represents the base class for all manifest generation tasks.
   syntax:
     content: 'public abstract class GenerateManifestBase : Microsoft.Build.Utilities.Task'
   inheritance:
@@ -62,7 +62,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inicializa uma nova instância do <xref href=&quot;Microsoft.Build.Tasks.GenerateManifestBase&quot;> </xref> classe."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.GenerateManifestBase"></xref> class.
   syntax:
     content: protected GenerateManifestBase ();
     parameters: []
@@ -82,16 +82,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Adiciona uma referência de assemblagem para o manifesto, baseadas no item especificado."
+  summary: Adds an assembly reference to the manifest, based on the specified item.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyFromItem (Microsoft.Build.Framework.ITaskItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O item a partir do qual pretende criar uma referência de assemblagem para adicionar o manifesto."
+      description: The item from which to create an assembly reference to add to the manifest.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: "A referência de assemblagem que foi adicionada ao manifesto."
+      description: The assembly reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyFromItem*
   exceptions: []
   platform:
@@ -108,19 +108,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Adiciona uma referência de assemblagem para o manifesto, consoante o item especificado e o tipo de referência de assemblagem."
+  summary: Adds an assembly reference to the manifest, based on the specified item and the assembly reference type.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyNameFromItem (Microsoft.Build.Framework.ITaskItem item, Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O item a partir do qual pretende criar uma referência de assemblagem para adicionar o manifesto."
+      description: The item from which to create an assembly reference to add to the manifest.
     - id: referenceType
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType
-      description: "O tipo de referência de assemblagem."
+      description: The assembly reference type.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: "A referência de assemblagem que foi adicionada ao manifesto."
+      description: The assembly reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyNameFromItem*
   exceptions: []
   platform:
@@ -137,19 +137,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Adiciona uma referência de ponto de entrada para o manifesto, consoante o item especificado e o tipo de referência de assemblagem."
+  summary: Adds an entry point reference to the manifest, based on the specified item and the assembly reference type.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddEntryPointFromItem (Microsoft.Build.Framework.ITaskItem item, Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O item a partir do qual pretende criar a entrada do ponto de referência para adicionar o manifesto."
+      description: The item from which to create the entry point reference to add to the manifest.
     - id: referenceType
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType
-      description: "Tipo de referência de assemblagem do ponto de entrada."
+      description: The entry point assembly reference type.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: "A referência do ponto de entrada que foi adicionada ao manifesto."
+      description: The entry point reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddEntryPointFromItem*
   exceptions: []
   platform:
@@ -166,16 +166,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Adiciona uma referência de ficheiro para o manifesto, baseadas no item especificado."
+  summary: Adds a file reference to the manifest, based on the specified item.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference AddFileFromItem (Microsoft.Build.Framework.ITaskItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O item a partir do qual pretende criar a referência de ficheiro a adicionar para o manifesto."
+      description: The item from which to create the file reference to add to the manifest.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference
-      description: "A referência de ficheiro que foi adicionada ao manifesto."
+      description: The file reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddFileFromItem*
   exceptions: []
   platform:
@@ -192,12 +192,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o nome da assemblagem."
+  summary: Gets or sets the name of the assembly.
   syntax:
     content: public string AssemblyName { get; set; }
     return:
       type: System.String
-      description: "O nome da assemblagem."
+      description: The name of the assembly.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AssemblyName*
   exceptions: []
   platform:
@@ -214,12 +214,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define a versão da assemblagem."
+  summary: Gets or sets the assembly version.
   syntax:
     content: public string AssemblyVersion { get; set; }
     return:
       type: System.String
-      description: "A versão da assemblagem."
+      description: The assembly version.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AssemblyVersion*
   exceptions: []
   platform:
@@ -236,12 +236,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o texto da descrição manifesto."
+  summary: Gets or sets the manifest description text.
   syntax:
     content: public string Description { get; set; }
     return:
       type: System.String
-      description: "O texto da descrição manifesto."
+      description: The manifest description text.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.Description*
   exceptions: []
   platform:
@@ -258,12 +258,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define a assemblagem gerida ou a referência de manifesto de ClickOnce que é o ponto de entrada para o manifesto."
+  summary: Gets or sets the managed assembly or ClickOnce manifest reference that is the entry point to the manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem EntryPoint { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "A assemblagem gerida ou a referência de manifesto de ClickOnce que é o ponto de entrada para a aplicação."
+      description: The managed assembly or ClickOnce manifest reference that is the entry point to the application.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.EntryPoint*
   exceptions: []
   platform:
@@ -280,13 +280,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Executa o `GenerateManifestBase` tarefas."
+  summary: Executes the `GenerateManifestBase` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se a execução da tarefa tiver êxito; caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.Execute*
   exceptions: []
   platform:
@@ -303,17 +303,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Devolve a referência do ficheiro de manifesto que corresponde ao item especificado."
-  remarks: "Se a referência de ficheiro não existe no manifesto para o item especificado, este método adiciona uma referência de ficheiro para este item."
+  summary: Returns the manifest file reference that matches the specified item.
+  remarks: If the file reference does not exist in the manifest for the specified item, then this method adds a file reference for this item.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference FindFileFromItem (Microsoft.Build.Framework.ITaskItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O item para obter uma referência de ficheiro para."
+      description: The item to get a file reference for.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference
-      description: "A referência do ficheiro de manifesto que corresponde ao item especificado."
+      description: The manifest file reference that matches the specified item.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.FindFileFromItem*
   exceptions: []
   platform:
@@ -330,13 +330,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Quando implementada numa classe derivada, devolve o tipo do manifesto."
+  summary: When implemented in a derived class, returns the type of the manifest.
   syntax:
     content: protected abstract Type GetObjectType ();
     parameters: []
     return:
       type: System.Type
-      description: "O tipo de manifesto."
+      description: The manifest type.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.GetObjectType*
   exceptions: []
   platform:
@@ -353,12 +353,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o manifesto de entrada."
+  summary: Gets or sets the input manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem InputManifest { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O manifesto de entrada."
+      description: The input manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.InputManifest*
   exceptions: []
   platform:
@@ -375,12 +375,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o comprimento do nome de ficheiro de manifesto máximo."
+  summary: Gets or sets the maximum manifest file name length.
   syntax:
     content: public int MaxTargetPath { get; set; }
     return:
       type: System.Int32
-      description: "O comprimento do nome de ficheiro de manifesto máximo."
+      description: The maximum manifest file name length.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.MaxTargetPath*
   exceptions: []
   platform:
@@ -397,16 +397,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Quando implementada numa classe derivada, conjuntos de manifesto propriedades e quaisquer dependências."
+  summary: When implemented in a derived class, sets manifest properties and any dependencies.
   syntax:
     content: protected abstract bool OnManifestLoaded (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);
     parameters:
     - id: manifest
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "O manifesto para definir propriedades para."
+      description: The manifest to set properties for.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se não existem erros ocorreram quando estão definidas as propriedades de manifesto; caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if no errors occurred when the manifest properties are set; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.OnManifestLoaded*
   exceptions: []
   platform:
@@ -423,17 +423,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Quando implementada numa classe derivada, conjuntos de resolvido propriedades manifesto."
-  remarks: "Por exemplo, propriedades manifesto resolvidas são o publisher e produto."
+  summary: When implemented in a derived class, sets resolved manifest properties.
+  remarks: For example, resolved manifest properties are the publisher and product.
   syntax:
     content: protected abstract bool OnManifestResolved (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);
     parameters:
     - id: manifest
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "O manifesto para definir propriedades para."
+      description: The manifest to set properties for.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se não existem erros ocorreram quando estão definidas as propriedades de manifesto; caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if no errors occurred when the manifest properties are set; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.OnManifestResolved*
   exceptions: []
   platform:
@@ -450,12 +450,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o manifesto gerado."
+  summary: Gets or sets the generated manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem OutputManifest { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O manifesto gerado."
+      description: The generated manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.OutputManifest*
   exceptions: []
   platform:
@@ -472,13 +472,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define a plataforma de manifesto."
-  remarks: 'A plataforma de manifesto pode ter um dos seguintes valores: `x86`, `x64`, `Itanium`, ou `AnyCPU`.'
+  summary: Gets or sets the manifest platform.
+  remarks: 'The manifest platform can have one of the following values: `x86`, `x64`, `Itanium`, or `AnyCPU`.'
   syntax:
     content: public string Platform { get; set; }
     return:
       type: System.String
-      description: "A plataforma de manifesto."
+      description: The manifest platform.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.Platform*
   exceptions: []
   platform:
@@ -495,13 +495,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o código de cultura manifesto de destino."
-  remarks: "Os valores válidos para a cultura de destino são quaisquer valores válidos para <xref:System.Globalization.CultureInfo>e também &quot;neutro&quot; ou &quot;*&quot; para culturas neutro.</xref:System.Globalization.CultureInfo>"
+  summary: Gets or sets the manifest target culture code.
+  remarks: Valid values for the target culture are any valid values for <xref:System.Globalization.CultureInfo>, and also "neutral" or "*" for neutral cultures.
   syntax:
     content: public string TargetCulture { get; set; }
     return:
       type: System.String
-      description: "O código de cultura de manifesto de destino."
+      description: The manifest target culture code.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.TargetCulture*
   exceptions: []
   platform:
@@ -518,12 +518,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o moniker de estrutura de destino."
+  summary: Gets or sets the target framework moniker.
   syntax:
     content: public string TargetFrameworkMoniker { get; set; }
     return:
       type: System.String
-      description: "Devolve o moniker de estrutura de destino."
+      description: Returns the target framework moniker.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkMoniker*
   exceptions: []
   platform:
@@ -540,13 +540,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "O destino [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] versão para o projeto."
-  remarks: "O valor predefinido está vazio, o que significa que não existe nenhum filtragem para as referências baseadas a estrutura de destino."
+  summary: The target [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version for the project.
+  remarks: The default value is empty, which means there is no filtering for the references based on the target framework.
   syntax:
     content: public string TargetFrameworkVersion { get; set; }
     return:
       type: System.String
-      description: "Uma cadeia que representa o [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] versão."
+      description: A string that represents the [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkVersion*
   exceptions: []
   platform:
@@ -563,13 +563,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Valida as entradas do `GenerateManifestBase` tarefas."
+  summary: Validates the inputs of the `GenerateManifestBase` task.
   syntax:
     content: protected virtual bool ValidateInputs ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se a validação de entrada foi bem sucedida; caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if input validation succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.ValidateInputs*
   exceptions: []
   platform:
@@ -586,13 +586,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Valida o manifesto gerado."
+  summary: Validates the generated manifest.
   syntax:
     content: protected virtual bool ValidateOutput ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se a validação de manifesto foi bem sucedida; caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if manifest validation succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.ValidateOutput*
   exceptions: []
   platform:

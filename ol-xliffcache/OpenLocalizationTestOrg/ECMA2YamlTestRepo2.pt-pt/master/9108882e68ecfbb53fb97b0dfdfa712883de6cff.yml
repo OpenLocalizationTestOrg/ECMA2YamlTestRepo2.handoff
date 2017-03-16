@@ -12,7 +12,7 @@ items:
   nameWithType: TaskLoggingHelperExtension
   fullName: Microsoft.Build.Tasks.TaskLoggingHelperExtension
   type: Class
-  summary: "Ativa o registo de várias mensagens. Além disso, permite a carregar e formatação dos recursos."
+  summary: Enables logging of various messages. Also, enables loading and formatting of resources.
   syntax:
     content: 'public class TaskLoggingHelperExtension : Microsoft.Build.Utilities.TaskLoggingHelper'
   inheritance:
@@ -79,22 +79,22 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inicializa uma nova instância do <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> classe com a instância de tarefas, recursos primários, recursos partilhados e um prefixo de palavra-chave de ajuda."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class with the task instance, primary resources, shared resources, and a Help keyword prefix.
   syntax:
     content: public TaskLoggingHelperExtension (Microsoft.Build.Framework.ITask taskInstance, System.Resources.ResourceManager primaryResources, System.Resources.ResourceManager sharedResources, string helpKeywordPrefix);
     parameters:
     - id: taskInstance
       type: Microsoft.Build.Framework.ITask
-      description: "Uma tarefa que contém uma instância do <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> classe."
+      description: A task containing an instance of the <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class.
     - id: primaryResources
       type: System.Resources.ResourceManager
-      description: "IU e a cadeia de recursos."
+      description: UI and string resources.
     - id: sharedResources
       type: System.Resources.ResourceManager
-      description: "Recursos partilhados da IU e a cadeia."
+      description: Shared UI and string resources.
     - id: helpKeywordPrefix
       type: System.String
-      description: "O prefixo para compor ajuda as palavras-chave."
+      description: The prefix for composing Help keywords.
   overload: Microsoft.Build.Tasks.TaskLoggingHelperExtension.#ctor*
   exceptions: []
   platform:
@@ -111,20 +111,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Carrega a cadeia de recurso especificado e, opcionalmente, formata-utilizando os argumentos indicados. Cultura o thread atual é utilizada para formatação."
-  remarks: "Este método requer que a tarefa de proprietário para registou respetivos recursos pelo <xref:Microsoft.Build.Utilities.Task>basear construtor de classe ou uma das seguintes propriedades: <xref:Microsoft.Build.Utilities.Task.TaskResources%2A>ou <xref:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources%2A>.</xref:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources%2A> </xref:Microsoft.Build.Utilities.Task.TaskResources%2A> </xref:Microsoft.Build.Utilities.Task>       Este método é seguros para threads."
+  summary: Loads the specified resource string and optionally formats it using the given arguments. The current thread's culture is used for formatting.
+  remarks: "This method requires the owner task to have registered its resources either via the <xref:Microsoft.Build.Utilities.Task> base class constructor, or one of the following properties: <xref:Microsoft.Build.Utilities.Task.TaskResources%2A> or <xref:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources%2A>.  \n  \n This method is thread-safe."
   syntax:
     content: public override string FormatResourceString (string resourceName, object[] args);
     parameters:
     - id: resourceName
       type: System.String
-      description: "O nome do recurso cadeia carregar."
+      description: The name of the string resource to load.
     - id: args
       type: System.Object[]
-      description: "Argumentos opcionais para a formatação de cadeia de carregados, ou <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref>."
+      description: Optional arguments for formatting the loaded string, or <xref uid="langword_csharp_null" name="null" href=""></xref>.
     return:
       type: System.String
-      description: "A cadeia formatada."
+      description: The formatted string.
   overload: Microsoft.Build.Tasks.TaskLoggingHelperExtension.FormatResourceString*
   exceptions: []
   platform:
@@ -141,13 +141,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define os recursos partilhados da IU e a cadeia."
-  remarks: "Esta propriedade é utilizada para carregar a cultura específicas recursos. Classes derivadas devem registar os respetivos recursos durante a construção, ou através desta propriedade, se estes tem localizados cadeias."
+  summary: Gets or sets the shared UI and string resources.
+  remarks: This property is used to load culture-specific resources. Derived classes should register their resources either during construction, or via this property, if they have localized strings.
   syntax:
     content: public System.Resources.ResourceManager TaskSharedResources { get; set; }
     return:
       type: System.Resources.ResourceManager
-      description: "Recursos partilhados de IU e a cadeia."
+      description: The shared UI and string resources.
   overload: Microsoft.Build.Tasks.TaskLoggingHelperExtension.TaskSharedResources*
   exceptions: []
   platform:

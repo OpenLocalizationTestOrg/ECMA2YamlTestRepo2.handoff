@@ -12,7 +12,7 @@ items:
   nameWithType: ForwardingLoggerRecord
   fullName: Microsoft.Build.Logging.ForwardingLoggerRecord
   type: Class
-  summary: "Representa um par de central/reencaminhamento logger utilizado no registo multiprocessadores."
+  summary: Represents a central/forwarding logger pair used in multiprocessor logging.
   syntax:
     content: public class ForwardingLoggerRecord
   inheritance:
@@ -33,16 +33,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Cria um logger de reencaminhamento."
+  summary: Creates a forwarding logger.
   syntax:
     content: public ForwardingLoggerRecord (Microsoft.Build.Framework.ILogger centralLogger, Microsoft.Build.Logging.LoggerDescription forwardingLoggerDescription);
     parameters:
     - id: centralLogger
       type: Microsoft.Build.Framework.ILogger
-      description: "Central logger."
+      description: The central logger.
     - id: forwardingLoggerDescription
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "A descrição para o logger de reencaminhamento."
+      description: The description for the forwarding logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.#ctor*
   exceptions: []
   platform:
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Obtém o logger central."
+  summary: Gets the central logger.
   syntax:
     content: public Microsoft.Build.Framework.ILogger CentralLogger { get; }
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: "Devolve o logger central."
+      description: Returns the central logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.CentralLogger*
   exceptions: []
   platform:
@@ -81,12 +81,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Obtém o reencaminhamento descrição logger."
+  summary: Gets the forwarding logger description.
   syntax:
     content: public Microsoft.Build.Logging.LoggerDescription ForwardingLoggerDescription { get; }
     return:
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "Devolve o logger reencaminhamento descrição."
+      description: Returns the forwarding logger description.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.ForwardingLoggerDescription*
   exceptions: []
   platform:

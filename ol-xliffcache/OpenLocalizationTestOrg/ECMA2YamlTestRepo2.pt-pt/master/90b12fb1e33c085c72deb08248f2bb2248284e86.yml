@@ -13,7 +13,7 @@ items:
   nameWithType: ManifestReader
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader
   type: Class
-  summary: "Lê um ficheiro de manifesto XML numa representação de um objeto."
+  summary: Reads an XML manifest file into an object representation.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -37,19 +37,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Lê o manifesto XML especificado e devolve uma representação de objeto."
+  summary: Reads the specified manifest XML and returns an object representation.
   syntax:
     content: public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (System.IO.Stream input, bool preserveStream);
     parameters:
     - id: input
       type: System.IO.Stream
-      description: "Especifica um fluxo de entrada."
+      description: Specifies an input stream.
     - id: preserveStream
       type: System.Boolean
-      description: "Especifica se é necessário preservar o fluxo de entrada no <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*>propriedade do objeto de manifesto resultante.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> Utilizado pelo <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter&quot;> </xref> para reconstitute entrada que não é representada na representação de objeto."
+      description: Specifies whether to preserve the input stream in the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> property of the resulting manifest object. Used by <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter"></xref> to reconstitute input which is not represented in the object representation.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "Um <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest&quot;> </xref> representação do manifesto do objeto. Pode ser convertido no <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest&quot;> </xref>, <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;> </xref>, ou <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest&quot;> </xref> para aceder a funcionalidades mais específicas."
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest"></xref> object representation of the manifest. Can be cast to <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest"></xref>, <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref>, or <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest"></xref> to access more specific functionality.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest*
   exceptions: []
   platform:
@@ -66,19 +66,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Lê o manifesto XML especificado e devolve uma representação de objeto."
+  summary: Reads the specified manifest XML and returns an object representation.
   syntax:
     content: public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (string path, bool preserveStream);
     parameters:
     - id: path
       type: System.String
-      description: "O nome de caminho completamente qualificado do ficheiro de entrada. Por exemplo, o caminho completo poderá ser c:\\directory\\folder\\filename.manifest."
+      description: The fully qualified path name of the input file. For example, the full path may be c:\directory\folder\filename.manifest.
     - id: preserveStream
       type: System.Boolean
-      description: "Especifica se é necessário preservar o fluxo de entrada no <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*>propriedade do objeto de manifesto resultante.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> Utilizado pelo <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter&quot;> </xref> para reconstitute entrada que não é representada na representação de objeto."
+      description: Specifies whether to preserve the input stream in the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> property of the resulting manifest object. Used by <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter"></xref> to reconstitute input which is not represented in the object representation.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "Um <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest&quot;> </xref> representação do manifesto do objeto. Pode ser convertido no <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest&quot;> </xref>, <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;> </xref>, ou <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest&quot;> </xref> para aceder a funcionalidades mais específicas."
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest"></xref> object representation of the manifest. Can be cast to <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest"></xref>, <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref>, or <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest"></xref> to access more specific functionality.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest*
   exceptions: []
   platform:
@@ -95,22 +95,22 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Lê o manifesto XML especificado e devolve uma representação de objeto."
+  summary: Reads the specified manifest XML and returns an object representation.
   syntax:
     content: public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (string manifestType, System.IO.Stream input, bool preserveStream);
     parameters:
     - id: manifestType
       type: System.String
-      description: "Especifica o tipo esperado do manifesto. Valid values are <xref uid=&quot;langword_csharp_AssemblyManifest&quot; name=&quot;AssemblyManifest&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_ApplicationManifest&quot; name=&quot;ApplicationManifest&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_DeployManifest&quot; name=&quot;DeployManifest&quot; href=&quot;&quot;></xref>."
+      description: Specifies the expected type of the manifest. Valid values are <xref uid="langword_csharp_AssemblyManifest" name="AssemblyManifest" href=""></xref>, <xref uid="langword_csharp_ApplicationManifest" name="ApplicationManifest" href=""></xref>, or <xref uid="langword_csharp_DeployManifest" name="DeployManifest" href=""></xref>.
     - id: input
       type: System.IO.Stream
-      description: "Especifica um fluxo de entrada."
+      description: Specifies an input stream.
     - id: preserveStream
       type: System.Boolean
-      description: "Especifica se é necessário preservar o fluxo de entrada no <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*>propriedade do objeto de manifesto resultante.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> Utilizado pelo <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter&quot;> </xref> para reconstitute entrada que não é representada na representação de objeto."
+      description: Specifies whether to preserve the input stream in the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> property of the resulting manifest object. Used by <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter"></xref> to reconstitute input which is not represented in the object representation.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "Um <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest&quot;> </xref> representação do manifesto do objeto. Pode ser convertido no <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest&quot;> </xref>, <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;> </xref>, ou <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest&quot;> </xref> para aceder a funcionalidades mais específicas."
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest"></xref> object representation of the manifest. Can be cast to <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest"></xref>, <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref>, or <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest"></xref> to access more specific functionality.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest*
   exceptions: []
   platform:
@@ -127,22 +127,22 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Lê o manifesto XML especificado e devolve uma representação de objeto."
+  summary: Reads the specified manifest XML and returns an object representation.
   syntax:
     content: public static Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest ReadManifest (string manifestType, string path, bool preserveStream);
     parameters:
     - id: manifestType
       type: System.String
-      description: "Especifica o tipo esperado do manifesto. Valid values are <xref uid=&quot;langword_csharp_AssemblyManifest&quot; name=&quot;AssemblyManifest&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_ApplicationManifest&quot; name=&quot;ApplicationManifest&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_DeployManifest&quot; name=&quot;DeployManifest&quot; href=&quot;&quot;></xref>."
+      description: Specifies the expected type of the manifest. Valid values are <xref uid="langword_csharp_AssemblyManifest" name="AssemblyManifest" href=""></xref>, <xref uid="langword_csharp_ApplicationManifest" name="ApplicationManifest" href=""></xref>, or <xref uid="langword_csharp_DeployManifest" name="DeployManifest" href=""></xref>.
     - id: path
       type: System.String
-      description: "O nome de caminho do ficheiro de entrada."
+      description: The path name of the input file.
     - id: preserveStream
       type: System.Boolean
-      description: "Especifica se é necessário preservar o fluxo de entrada no <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*>propriedade do objeto de manifesto resultante.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> Utilizado pelo <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter&quot;> </xref> para reconstitute entrada que não é representada na representação de objeto."
+      description: Specifies whether to preserve the input stream in the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream*> property of the resulting manifest object. Used by <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter"></xref> to reconstitute input which is not represented in the object representation.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "Um <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest&quot;> </xref> representação do manifesto do objeto. Pode ser convertido no <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest&quot;> </xref>, <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest&quot;> </xref>, ou <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest&quot;> </xref> para aceder a funcionalidades mais específicas."
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest"></xref> object representation of the manifest. Can be cast to <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest"></xref>, <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest"></xref>, or <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest"></xref> to access more specific functionality.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest*
   exceptions: []
   platform:

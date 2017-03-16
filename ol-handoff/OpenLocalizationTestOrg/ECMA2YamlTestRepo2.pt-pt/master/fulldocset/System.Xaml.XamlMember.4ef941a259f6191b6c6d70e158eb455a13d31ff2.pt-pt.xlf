@@ -1,0 +1,1182 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-pt">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">95fd6000be25aa34c764b63e2170c12445c646eb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Xaml.XamlMember.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d98968e4787d78092f0f6c5b611431fcc734852b</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">847af931ba8799ec08203b9f9c25be6d8148e483</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides the XAML type system identifier for members of XAML types.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The identifier is used by XAML readers and XAML writers during processing of member nodes (when the XAML reader is positioned on a <bpt id="p1">&lt;xref href="System.Xaml.XamlNodeType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>) and also for general XAML type system logic.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>XamlMember can use three methodologies for returning information about a XAML member: standard common language runtime (CLR) reflection; a reference-only reflection technique calling internal APIs that use optimized bit flags; or calling into virtual overrides of the <ph id="ph1">`Lookup*`</ph> API that is provided by possible XamlMember subclasses.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For most uses of .NET Framework XAML Services APIs and the XamlMember API, you use the default XAML schema context.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default XAML schema context for .NET Framework XAML Services uses CLR backing for the type system.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This enables the XAML readers and XAML writers to work with any type or member that is defined in, or otherwise available to, the CLR and its reflection techniques.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Lookup* APIs and XamlMember Derived Classes    XamlMember defines several virtual members that derived classes might override.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These members have names that always start with the string <ph id="ph1">`Lookup`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The remainder of the API name then references the property that the virtual method influences.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, a XamlMember derived class might override &lt;xref:System.Xaml.XamlMember.LookupTargetType%2A&gt; to influence what the base-defined property &lt;xref:System.Xaml.XamlMember.TargetType%2A&gt; returns in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can predict return values for such properties in XamlMember or existing derived classes by reading the documentation for the relevant <ph id="ph1">`Lookup*`</ph> methods.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The purpose of the <ph id="ph1">`Lookup*`</ph> methods is to provide a XAML type system extension technique that incorporates the XamlMember base class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By deriving from XamlMember and overriding the <ph id="ph1">`Lookup`</ph> virtual members, you can define the concept of a XAML member for a XAML schema in a XAML type system without being tied to the specifics of a backing type system or technology.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can also use a provided XAML schema context under this scheme and still return the results you want.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>As an example, consider the XamlMember property &lt;xref:System.Xaml.XamlMember.IsWritePublic%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property informs callers that operations such as using a &lt;xref:System.Xaml.XamlWriter&gt; for serialization can write a value for this member on a target object.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the default implementation, the determination of whether the member is writable is made by using reflection techniques against the backing CLR &lt;xref:System.Type&gt; and its members (the &lt;xref:System.Reflection.MemberInfo&gt;).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, by default, the XAML type system depends on the CLR type system.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, you can remove this dependency for your XAML type system reporting of &lt;xref:System.Xaml.XamlMember.IsWritePublic%2A&gt; by overriding the API &lt;xref:System.Xaml.XamlMember.LookupIsWritePublic%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Within your override, you can use other determinations, such as metadata that is specific to your technology, a master lookup table that is optimized for a fixed XAML vocabulary, or a variety of other strategies for determining whether a XAML member is writable in your XAML vocabulary.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Constructing XamlMember Without XAML Schema Context    Most constructors of XamlMember require a &lt;xref:System.Xaml.XamlSchemaContext&gt; as part of their initialization.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Xaml.XamlSchemaContext&gt; is also necessary for many internal &lt;xref:System.Xaml.XamlSchemaContext&gt; operations, such as obtaining information that is being forwarded from the backing type.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you are working with the XamlMember API, you typically have a &lt;xref:System.Xaml.XamlSchemaContext&gt; that is available from a surrounding construct such as a &lt;xref:System.Xaml.XamlWriter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this case, you can pass the &lt;xref:System.Xaml.XamlSchemaContext&gt; reference through to all XAML type system calls that require a XAML schema context.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>One specific constructor, &lt;xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29&gt;, does not require a &lt;xref:System.Xaml.XamlSchemaContext&gt;.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, a XamlMember that is constructed with the &lt;xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29&gt; signature returns <ph id="ph1">`true`</ph> for &lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a load path that involves &lt;xref:System.Xaml.XamlObjectWriter&gt;, such a member cannot be written into an object graph.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the .NET Framework XAML services implementation, the &lt;xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=fullName&gt; call throws a &lt;xref:System.Xaml.XamlObjectWriterException&gt; when the relevant XamlMember reports <ph id="ph1">`true`</ph> for &lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should not construct a XamlMember that has a value of <ph id="ph1">`true`</ph> for &lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt; unless your implementation can handle the exceptions from &lt;xref:System.Xaml.XamlObjectWriter&gt;, or you have other ways to adjust the &lt;xref:System.Xaml.XamlObjectWriter&gt; behavior.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, one or more of the  following might be true of your implementation:      -   The XAML schema context is available later.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   You use a member invoker pattern.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   You deliberately override &lt;xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=fullName&gt; in a custom XAML writer.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using CLR type system &lt;xref:System.Reflection.EventInfo&gt; and a <bpt id="p2">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor if the member represents an event (event handler connection-point property).</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.EventInfo&gt; that represents the event member.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using CLR type system &lt;xref:System.Reflection.PropertyInfo&gt; and a <bpt id="p2">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor if the member represents a property (and specifically is not an event handler connection).</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.PropertyInfo&gt; that represents the property member.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using CLR type system &lt;xref:System.Reflection.EventInfo&gt; and a <bpt id="p2">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, including <bpt id="p3">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> information.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor if the member represents an event (or an event handler connection-point property).</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.EventInfo&gt; that represents the event member.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation that handles run-time reflection calls against the <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using reflection &lt;xref:System.Reflection.PropertyInfo&gt; and a <bpt id="p2">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, including <bpt id="p3">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> information.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor only if the member represents a property and if it is not an event handler connection.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.PropertyInfo&gt; that represents the property member.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation that handles run-time invocation calls against the <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class for a <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that represents an attachable event.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor if the member represents an attachable event member.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The string name of the attachable event.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.MethodInfo&gt; for the handler <bpt id="p1">&lt;xref uid="langword_csharp_Add" name="Add" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> method of the attachable member's backing implementation.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using a string name and declaring <bpt id="p2">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> information.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is constructed with this signature has significant limitations; see Remarks.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A &lt;xref:System.Xaml.XamlMember&gt; that is constructed with the XamlMember signature returns <ph id="ph1">`true`</ph> for &lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a load path that involves &lt;xref:System.Xaml.XamlObjectWriter&gt;, such a member cannot be written into an object graph.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the .NET Framework XAML Services implementation, the &lt;xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=fullName&gt; call throws a &lt;xref:System.Xaml.XamlObjectWriterException&gt; when the relevant &lt;xref:System.Xaml.XamlMember&gt; reports <ph id="ph1">`true`</ph> for &lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should not construct a &lt;xref:System.Xaml.XamlMember&gt; with &lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt;<ph id="ph1">`true`</ph> unless your implementation can handle the exceptions from &lt;xref:System.Xaml.XamlObjectWriter&gt;, or you have other ways to adjust the &lt;xref:System.Xaml.XamlObjectWriter&gt; behavior.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, one or more of the following might be true of your implementation:      -   The XAML schema context is available later.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   You use a member invoker pattern.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   You deliberately override &lt;xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=fullName&gt; in a custom XAML writer.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The string name of the member.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> information for the declaring type.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to indicate that the member is attachable; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;name&lt;/code&gt;</ph> or <ph id="ph2">&lt;code&gt;declaringType&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class for a <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that represents an attachable property.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor if the member represents an attachable property.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The string name of the attachable property.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.MethodInfo&gt; for the <bpt id="p1">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor of the attachable member's backing implementation.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.MethodInfo&gt; for the <bpt id="p1">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor of the attachable member's backing implementation.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class for a <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that represents an attachable event, including <bpt id="p3">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> information.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor if the member represents an attachable event member.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The string name of the attachable event.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.MethodInfo&gt; for the handler <bpt id="p1">&lt;xref uid="langword_csharp_Add" name="Add" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> method of the attachable member's backing implementation.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation that handles run-time invocation calls against the <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class for a <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that represents an attachable property, including <bpt id="p3">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> information.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use this constructor if the member represents an attachable property member.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The string name of the attachable property.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.MethodInfo&gt; for the <bpt id="p1">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor of the attachable member's backing implementation.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The CLR type system &lt;xref:System.Reflection.MethodInfo&gt; for the <bpt id="p1">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor of the attachable member's backing implementation.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlSchemaContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> context that qualifies the member.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation that handles run-time invocation calls against the <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> for the type that declares the member that is associated with this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This value is typically set during initialization and is usually not <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  DeclaringType information can be passed in by constructors for initialization.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By calling directly into base constructors, initialization for &lt;xref:System.Xaml.XamlMember&gt; derived classes can omit some of the value-checks that are made in the base class.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, the derived initialization can change the reported type-member relationship information of a XAML member so that it no longer aligns in an expected way with the type system information of its underlying CLR declaration.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For any security-critical checks of declaring type information, use the underlying CLR type instead.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> for the type that declares the member that is associated with this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Gets a <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> object, which is used for deferred loading of XAML declared objects.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling DeferringLoader invokes &lt;xref:System.Xaml.XamlMember.LookupDeferringLoader%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior occurs in cases where the initial internal reflection logic has not already set the information.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> with <bpt id="p1">&lt;xref href="System.Xaml.XamlDeferringLoader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> constraint on the generic.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Gets a list of <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>These report the members where dependency relationships for initialization order exist relative to this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling DependsOn invokes &lt;xref:System.Xaml.XamlMember.LookupDependsOn%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior occurs in cases where the initial internal reflection logic has not already set the information.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`DependsOn`</ph> pattern can be applied to object model cases that deliberately contradict a general XAML rule.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The general XAML rule is that members of a type that are not passed as initialization text (or by a factory method in XAML 2009) must be able to be assigned in any order.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By applying a <ph id="ph1">`DependsOn`</ph> pattern to a member, you can instruct XAML writers to always process the referenced member before this member.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can apply this pattern in situations where the value of the current member requires context or other information that is only available after the other member is set.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`DependsOn`</ph> pattern should be applied judiciously and reserved for property scenarios where it serves an architectural purpose.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Large numbers of dependencies have the potential to slow down XAML processing.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Also, it is possible to produce circular dependencies, in which case the XAML processing behavior is undefined.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Example <ph id="ph1">`DependsOn`</ph> scenarios from WPF include certain properties on &lt;xref:System.Windows.Controls.ControlTemplate&gt; and &lt;xref:System.Windows.DataTemplate&gt;, on &lt;xref:System.Windows.Trigger&gt;, and on &lt;xref:System.Windows.Setter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>A list of <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Indicates whether the current object is equal to another object.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>The object to compare with this object.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the current object is equal to the <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">obj</ph><ept id="p2">&lt;/code&gt;</ept> parameter; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Indicates whether the current object is equal to another object of the same type.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>An object to compare with this object.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the current object is equal to the <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">other</ph><ept id="p2">&lt;/code&gt;</ept> parameter; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Returns the hash code for this object.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>An integer hash code.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Returns a list of XAML namespaces where this XAML member can exist.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns the &lt;xref:System.Xaml.XamlType.GetXamlNamespaces%2A?displayProperty=fullName&gt; call result from the &lt;xref:System.Xaml.XamlMember.DeclaringType%2A&gt; that is associated with this &lt;xref:System.Xaml.XamlMember&gt;.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>A list of XAML namespace identifiers as strings.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation that is associated with this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`Invoker`</ph> pattern is an advanced XAML type system extension technique.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`Invoker`</ph> pattern provides a way to inject different schema type mapping behavior, while still using XAML type system definitions from .NET Framework XAML Services.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If a &lt;xref:System.Xaml.XamlMember.LookupInvoker%2A&gt; override returns <ph id="ph1">`null`</ph>, or if the default implementation returns <ph id="ph2">`null`</ph> because it lacks the &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; for this &lt;xref:System.Xaml.XamlMember&gt;, the Invoker property returns &lt;xref:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker%2A?displayProperty=fullName&gt; is the default.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is true for most operations that use .NET Framework XAML Services and the default XAML schema context, and where no specific override <ph id="ph1">`Invoker`</ph> patterns are passed for construction of XAML type system entities.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling Invoker invokes &lt;xref:System.Xaml.XamlMember.LookupInvoker%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation that is associated with this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is reported as an ambient property.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling IsAmbient invokes &lt;xref:System.Xaml.XamlMember.LookupIsAmbient%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior occurs in implementations where the initial internal reflection logic has not already set the information.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Checking for ambient properties is are usually part of XAML processing logic to make sure that objects and values that rely on ambient usage for type qualification can function correctly.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The .NET Framework XAML Services APIs and the default XAML schema context populates this value based on attribution with &lt;xref:System.Windows.Markup.AmbientAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation of &lt;xref:System.Xaml.XamlMember.LookupIsAmbient%2A&gt; uses this existing &lt;xref:System.Windows.Markup.AmbientAttribute&gt; technique, and it returns <ph id="ph1">`true`</ph> if &lt;xref:System.Windows.Markup.AmbientAttribute&gt; exists on a member declaration.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Markup.AmbientAttribute&gt; is found on members of several WPF types, which include &lt;xref:System.Windows.Application&gt;, &lt;xref:System.Windows.Setter&gt;, and &lt;xref:System.Windows.Style&gt;.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is also found on the &lt;xref:System.Windows.ResourceDictionary&gt; type, which connotes that any member that uses &lt;xref:System.Windows.ResourceDictionary&gt; as its type should be considered ambient even if the member is not specifically attributed.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is reported as an ambient property; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is an attachable member.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The IsAttachable value is initialized based on which constructor was used to construct a &lt;xref:System.Xaml.XamlMember&gt;.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is an attachable member; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is a XAML directive.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The IsDirective value is initialized based on which constructor was used to construct a &lt;xref:System.Xaml.XamlMember&gt;.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The base &lt;xref:System.Xaml.XamlMember&gt; constructors initialize so that IsDirective is <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, the &lt;xref:System.Xaml.XamlDirective&gt; class (a &lt;xref:System.Xaml.XamlMember&gt; derived class) initializes so that IsDirective is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to report IsDirective as <ph id="ph1">`true`</ph> to callers of a custom XAML schema class for XAML members, make sure you derive from &lt;xref:System.Xaml.XamlDirective&gt; because that is the only way to enable that behavior.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is a XAML directive; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents an event member.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling IsEvent invokes &lt;xref:System.Xaml.XamlMember.LookupIsEvent%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents an event; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is initialized with a valid <bpt id="p2">&lt;xref uid="langword_csharp_xamlName" name="xamlName" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> string as its &lt;xref:System.Xaml.XamlMember.Name*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is initialized with a valid <bpt id="p3">&lt;xref uid="langword_csharp_xamlName" name="xamlName" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> string; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a read-only member.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling IsReadOnly invokes &lt;xref:System.Xaml.XamlMember.LookupIsReadOnly%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a read-only member; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a member with a callable public <bpt id="p2">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> accessor.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The IsReadPublic value checks whether the &lt;xref:System.Xaml.XamlMember.DeclaringType%2A&gt; is public.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If &lt;xref:System.Xaml.XamlMember.DeclaringType%2A&gt; is nonpublic, the <ph id="ph1">`get`</ph> accessor is not callable in a practical way, and IsReadPublic returns <ph id="ph2">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling IsReadPublic invokes &lt;xref:System.Xaml.XamlMember.LookupIsReadPublic%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  The &lt;xref:System.Xaml.XamlMember.LookupIsReadPublic%2A&gt; method is virtual and therefore, can be overridden.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The override has the potential to change (maliciously or otherwise) the reported access information of a XAML member so that it no longer aligns in an expected way with the type system access information of its underlying CLR declaration.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For any security-critical checks of access levels, use the underlying CLR type instead.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a callable public <bpt id="p3">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> accessor; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether the member is not resolvable by the backing system that is used for type and member resolution.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A &lt;xref:System.Xaml.XamlMember&gt; that is constructed with the &lt;xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29&gt; signature returns <ph id="ph1">`true`</ph> for IsUnknown.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a load path that involves &lt;xref:System.Xaml.XamlObjectWriter&gt;, a &lt;xref:System.Xaml.XamlMember&gt; with <ph id="ph1">`true`</ph> for IsUnknown cannot be written into an object graph.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Under the default implementations in .NET Framework XAML Services APIs, the &lt;xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A?displayProperty=fullName&gt; call throws a &lt;xref:System.Xaml.XamlObjectWriterException&gt; when the relevant &lt;xref:System.Xaml.XamlMember&gt; reports <ph id="ph1">`true`</ph> for IsUnknown.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should not construct a &lt;xref:System.Xaml.XamlMember&gt; that has a value of <ph id="ph1">`true`</ph> for IsUnknown unless your implementation can handle the exceptions from &lt;xref:System.Xaml.XamlObjectWriter&gt;, or you have other ways to adjust the &lt;xref:System.Xaml.XamlObjectWriter&gt; behavior.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling IsUnknown invokes &lt;xref:System.Xaml.XamlMember.LookupIsUnknown%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the member is not resolvable; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if the member is resolvable.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a write-only member.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling IsWriteOnly invokes &lt;xref:System.Xaml.XamlMember.LookupIsWriteOnly%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a write-only member; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a member that has a callable public <bpt id="p2">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> accessor.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The IsWritePublic value considers whether the &lt;xref:System.Xaml.XamlMember.DeclaringType%2A&gt; is public as part of the determination.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If &lt;xref:System.Xaml.XamlMember.DeclaringType%2A&gt; is nonpublic, the <ph id="ph1">`set`</ph> accessor is not callable in a practical way, and IsWritePublic returns <ph id="ph2">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling IsWritePublic invokes &lt;xref:System.Xaml.XamlMember.LookupIsWritePublic%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  The &lt;xref:System.Xaml.XamlMember.LookupIsWritePublic%2A&gt; method is virtual and therefore, can be overridden.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The override has the potential to change (maliciously or otherwise) the reported access information of a XAML member so that it no longer aligns in an expected way with the type system access information of its underlying CLR declaration.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For any security-critical checks of access levels, use the underlying CLR type instead.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a callable public <bpt id="p3">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> accessor; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>When implemented in a derived class, returns an <bpt id="p1">&lt;xref href="System.Reflection.ICustomAttributeProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method to provide the internal reflection with an alternative way to obtain CLR attribute values.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the absence of an override, the internal reflector uses typical CLR reflection logic such as calls to &lt;xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Reflection.ICustomAttributeProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implementation.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>Returns a <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> object, which is used for deferred loading of XAML declared objects.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from the &lt;xref:System.Xaml.XamlMember.DeferringLoader%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want &lt;xref:System.Xaml.XamlMember.DeferringLoader%2A&gt; to return a value that differs from the value that is enabled by default internal reflection, and if you are also providing custom &lt;xref:System.Xaml.Schema.XamlMemberInvoker&gt; information.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns an object either by reading &lt;xref:System.Windows.Markup.XamlDeferLoadAttribute&gt; or using a &lt;xref:System.Xaml.XamlDeferringLoader&gt; from the declaring type.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If neither object is available, this method might return <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> that has a <bpt id="p1">&lt;xref href="System.Xaml.XamlDeferringLoader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> constraint on the generic.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Returns a list of <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>Items in the list report the members where dependency relationships for initialization order exist relative to this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from the &lt;xref:System.Xaml.XamlMember.DependsOn%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want &lt;xref:System.Xaml.XamlMember.DependsOn%2A&gt; to return a value that differs from the value that is enabled by default internal reflection, and if you are also providing custom &lt;xref:System.Xaml.Schema.XamlMemberInvoker&gt; information.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The WPF XAML reader and writer implementations attribute this case with &lt;xref:System.Windows.Markup.DependsOnAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation uses this existing &lt;xref:System.Windows.Markup.DependsOnAttribute&gt; technique.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you are not using &lt;xref:System.Windows.Markup.DependsOnAttribute&gt; for this purpose and intend to replace that technique for indicating property processing order with your own technique.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you do not intend to support a property processing order, you can use the default implementation because it returns no results, which is appropriate.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The list is read-only.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>A list of <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Returns a <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is associated with this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked by calls to &lt;xref:System.Xaml.XamlMember.Invoker%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation does not require that a &lt;xref:System.Xaml.XamlMember&gt; be constructed by using one of the constructors that pass an initial &lt;xref:System.Xaml.Schema.XamlMemberInvoker&gt;.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, an &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; value must exist for the &lt;xref:System.Xaml.XamlMember&gt;; otherwise, the default implementation returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you also derive from &lt;xref:System.Xaml.Schema.XamlMemberInvoker&gt; and intend to return the derived class.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you return <ph id="ph1">`null`</ph>, &lt;xref:System.Xaml.XamlMember.Invoker%2A&gt; returns &lt;xref:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker%2A?displayProperty=fullName&gt; to callers.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.Schema.XamlMemberInvoker"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> information for this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>; or <bpt id="p3">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>Returns whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is reported as an ambient property.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked by internal calls that check for ambient XAML property information.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Ambient property behavior is accounted for in the public API behavior of XAML readers and XAML writers.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The internal calls that reference LookupIsAmbient are usually part of XAML processing logic to make sure that objects and values that rely on ambient usage for type qualification can function correctly.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default .NET Framework XAML Services implementation uses CLR attributing to obtain this information from reflection over backing types.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specifically, the default implementation checks for &lt;xref:System.Windows.Markup.AmbientAttribute&gt; and returns <ph id="ph1">`true`</ph> for LookupIsAmbient if &lt;xref:System.Windows.Markup.AmbientAttribute&gt; exists on a member definition.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you are not using &lt;xref:System.Windows.Markup.AmbientAttribute&gt; for this purpose and intend to replace that technique for indicating ambient XAML properties with your own technique.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Example APIs from WPF that attribute with &lt;xref:System.Windows.Markup.AmbientAttribute&gt; are &lt;xref:System.Windows.Trigger.Property%2A?displayProperty=fullName&gt; and &lt;xref:System.Windows.Style.BasedOn%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to report this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> as an ambient property; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>Returns whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents an event.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation checks whether &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; is of type &lt;xref:System.Reflection.EventInfo&gt;, and if it is, returns <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.IsEvent%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available that can be interpreted to determine XAML type system representations on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to report that this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents an event; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Returns whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents an intended read-only property.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns <ph id="ph1">`true`</ph> if &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; exists, but a public <ph id="ph2">`set`</ph> accessor does not exist for it, as determined by internal reflection.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.IsReadOnly%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available that can be interpreted to determine XAML type system representations on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to report this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> as an intended read-only property; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>Returns whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a property that has a public <bpt id="p2">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> accessor.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns results based either on internal reflection or the negation of &lt;xref:System.Xaml.XamlMember.IsWriteOnly%2A&gt;, processing in that order.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve" extradata="MT">
+          <source>LookupIsReadPublic returns whether the member itself is public; it returns <ph id="ph1">`true`</ph> for a public member on a nonpublic declaring type.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use &lt;xref:System.Xaml.XamlMember.IsReadPublic%2A&gt; instead, if you also want to consider the visibility of the declaring type.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.IsReadPublic%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  The LookupIsReadPublic method is virtual and therefore, can be overridden.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The override has the potential to change (maliciously or otherwise) the reported access information of a XAML member so that it no longer aligns in an expected way with the type system access information of its underlying CLR declaration.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For any security-critical checks of access levels, use the underlying CLR type instead.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a property that has a public <bpt id="p3">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> accessor; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>Returns whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a member that is not resolvable by the backing system that is used for type and member resolution.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method may be invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns results that are based on either internal reflection or checking for a <ph id="ph1">`null`</ph> value of &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt;, processing in that order.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a non-resolvable member; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>Returns whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a member that has a public <bpt id="p2">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> accessor but not a public <bpt id="p3">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> accessor.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns <ph id="ph1">`true`</ph> if an &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; exists that has a public <ph id="ph2">`set`</ph> accessor and a nonpublic <ph id="ph3">`get`</ph> accessor, as determined by internal reflection.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.IsWriteOnly%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a write-only member; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>Returns whether this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> represents a member that has a public <bpt id="p2">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> accessor.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns results based  either internal reflection or the negation of &lt;xref:System.Xaml.XamlMember.IsReadOnly%2A&gt;, processing in that order.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.IsWritePublic%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  The LookupIsWritePublic method is virtual and therefore, can be overridden.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The override has the potential to change (maliciously or otherwise) the reported access information of a XAML member so that it no longer aligns in an expected way with the type system access information of its underlying CLR declaration.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For any security-critical checks of access levels, use the underlying CLR type instead.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> represents a writable member; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>Returns the <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the type where the <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> can exist.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation distinguishes between attachable and non-attachable members.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For non-attachable members, LookupTargetType always returns &lt;xref:System.Xaml.XamlMember.DeclaringType%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For attachable members, LookupTargetType returns a result based on examining the &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; accessor parameter type and interprets that type based on XAML schema context.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.TargetType%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>The type where the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> can exist.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>See Remarks.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>Returns the <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the type that is used by the member.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>See Remarks.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.Type%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want &lt;xref:System.Xaml.XamlMember.Type%2A&gt; to return a value that differs from the value that is enabled by default internal reflection, and if you are also providing custom &lt;xref:System.Xaml.Schema.XamlMemberInvoker&gt; information.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation uses different code paths and conceptual meanings for the returned &lt;xref:System.Xaml.XamlType&gt; that is based on whether this &lt;xref:System.Xaml.XamlMember&gt; represents a property, method, or event.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   For a property, the returned &lt;xref:System.Xaml.XamlType&gt; is the type that sets the property or is returned by the property.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   For an event, the returned &lt;xref:System.Xaml.XamlType&gt; is the required event handler type (a delegate in a CLR implementation).</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   For a method, &lt;xref:System.Xaml.XamlType&gt; is the return type.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In each case, XAML schema context is used to evaluate the XAML type from the underlying system type.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.Type%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the type that is used by the member.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>See Remarks.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>Returns a type converter implementation that is associated with this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation uses the following logic and processing order:      -   If attributing exists at the member level (&lt;xref:System.ComponentModel.TypeConverterAttribute&gt;), the attribute information is used for a call to &lt;xref:System.Xaml.XamlSchemaContext.GetValueConverter%2A&gt; against the XAML schema context.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If &lt;xref:System.Xaml.XamlMember.Type%2A&gt; is valid, a type converter that is associated with the type is returned.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If the member is an event, an event-specific type converter is returned.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.TypeConverter%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> instance with <bpt id="p1">&lt;xref href="System.ComponentModel.TypeConverter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> constraint; or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>Returns a <bpt id="p1">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor that is associated with this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation interprets the &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; property as &lt;xref:System.Reflection.PropertyInfo&gt; and returns the value of &lt;xref:System.Reflection.PropertyInfo.GetGetMethod%2A?displayProperty=fullName&gt; (with the parameter set to <ph id="ph1">`true`</ph>), which means that the returned method can be nonpublic.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior can result in <ph id="ph1">`null`</ph> for certain cases.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve" extradata="MT">
+          <source>including cases where no associated accessor exists or the member is not a property.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from the &lt;xref:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter%2A&gt; property on an associated &lt;xref:System.Xaml.Schema.XamlMemberInvoker&gt;.</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Make sure to implement LookupUnderlyingGetter, &lt;xref:System.Xaml.XamlMember.LookupUnderlyingSetter%2A&gt;, and &lt;xref:System.Xaml.XamlMember.LookupUnderlyingMember%2A&gt; so that they all return correlated results.</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Reflection.MethodInfo&gt; for the associated <bpt id="p1">&lt;xref uid="langword_csharp_get" name="get" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor; or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve">
+          <source>Returns a CLR type system &lt;xref:System.Reflection.MemberInfo&gt; that is associated with this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns the underlying member information, which is based on construction.</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the &lt;xref:System.Reflection.MemberInfo&gt; object is constructed with a signature that does not provide enough information to set the underlying member, this method returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If an underlying member was set during construction, you should not need to call this method.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Make sure to implement &lt;xref:System.Xaml.XamlMember.LookupUnderlyingGetter%2A&gt;, &lt;xref:System.Xaml.XamlMember.LookupUnderlyingSetter%2A&gt;, and LookupUnderlyingMember so that they all return correlated results.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>A CLR type system &lt;xref:System.Reflection.MemberInfo&gt; object that is associated with this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>; or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve">
+          <source>Returns a <bpt id="p1">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor that is associated with this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation interprets &lt;xref:System.Xaml.XamlMember.UnderlyingMember%2A&gt; as &lt;xref:System.Reflection.PropertyInfo&gt; and returns the value of &lt;xref:System.Reflection.PropertyInfo.GetSetMethod%2A?displayProperty=fullName&gt; (with the parameter set to <ph id="ph1">`true`</ph>), which means that the returned method can be nonpublic.</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This can result in <ph id="ph1">`null`</ph> for certain cases, including cases where there is no such accessor, or the member is not a property.</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter%2A&gt; on an associated &lt;xref:System.Xaml.Schema.XamlMemberInvoker&gt;.Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Make sure to implement &lt;xref:System.Xaml.XamlMember.LookupUnderlyingGetter%2A&gt;, LookupUnderlyingSetter, and &lt;xref:System.Xaml.XamlMember.LookupUnderlyingMember%2A&gt; so that they all return correlated results.</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Reflection.MethodInfo&gt; for the associated <bpt id="p1">&lt;xref uid="langword_csharp_set" name="set" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> accessor; or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve">
+          <source>Returns a value serializer implementation that is associated with this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation uses the following logic and processing order:      -   If attributing exists at the member level (&lt;xref:System.Windows.Markup.ValueSerializerAttribute&gt;), the attribute information is used for a call to &lt;xref:System.Xaml.XamlSchemaContext.GetValueConverter%2A&gt; against the XAML schema context.</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If &lt;xref:System.Xaml.XamlMember.Type%2A&gt; is valid, a value converter that is associated with the type is returned.</source>
+        </trans-unit>
+        <trans-unit id="411" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If the previous conditions do not apply, <ph id="ph1">`null`</ph> is returned.</source>
+        </trans-unit>
+        <trans-unit id="412" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is invoked when a caller gets a value from &lt;xref:System.Xaml.XamlMember.ValueSerializer%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="413" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Override this method if you want to report uniform results for an entire &lt;xref:System.Xaml.XamlMember&gt; derived class, or if you have specialized metadata available to determine this on a per-case basis.</source>
+        </trans-unit>
+        <trans-unit id="414" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> instance with &lt;xref:System.Windows.Markup.ValueSerializer&gt; constraint, or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="415" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref uid="langword_csharp_xamlName" name="xamlName" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> name string that declares this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="416" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This value is always set during construction.</source>
+        </trans-unit>
+        <trans-unit id="417" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The constructors that are implemented by &lt;xref:System.Xaml.XamlMember&gt; typically throw an exception if an initial name is not specified; therefore, do not expect this property to be <ph id="ph1">`null`</ph> or an empty string, if you are using default .NET Framework XAML Services implementations.</source>
+        </trans-unit>
+        <trans-unit id="418" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[</bpt>XamlName Grammar<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept> and naming rules for CLR type and members are not an exact intersect.</source>
+        </trans-unit>
+        <trans-unit id="419" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is possible to declare a member name that is legal under CLR but not valid under XAML naming.</source>
+        </trans-unit>
+        <trans-unit id="420" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should avoid this situation if possible.</source>
+        </trans-unit>
+        <trans-unit id="421" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref uid="langword_csharp_xamlName" name="xamlName" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> name string that declares this <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="422" translate="yes" xml:space="preserve">
+          <source>Determines whether two specified <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects have the same value.</source>
+        </trans-unit>
+        <trans-unit id="423" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="424" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="425" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the value of <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">xamlMember1</ph><ept id="p2">&lt;/code&gt;</ept> is the same as the value of <bpt id="p3">&lt;code&gt;</bpt><ph id="ph2">xamlMember2</ph><ept id="p3">&lt;/code&gt;</ept>; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="426" translate="yes" xml:space="preserve">
+          <source>Determines whether two specified <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects have different values.</source>
+        </trans-unit>
+        <trans-unit id="427" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="428" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="429" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the value of <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">xamlMember1</ph><ept id="p2">&lt;/code&gt;</ept> differs from the value of <bpt id="p3">&lt;code&gt;</bpt><ph id="ph2">xamlMember2</ph><ept id="p3">&lt;/code&gt;</ept>; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="430" translate="yes" xml:space="preserve">
+          <source>Gets the single XAML namespace URI that identifies the primary XAML namespace for this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="431" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The PreferredXamlNamespace property provides the same value as calling &lt;xref:System.Xaml.XamlMember.GetXamlNamespaces%2A&gt; and then getting the first value string from the returned list.</source>
+        </trans-unit>
+        <trans-unit id="432" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The preferred XAML namespace should be used when writing the member back to text or other representations that preserve XAML namespace information.</source>
+        </trans-unit>
+        <trans-unit id="433" translate="yes" xml:space="preserve">
+          <source>The identifier for the primary XAML namespace for this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, as a string.</source>
+        </trans-unit>
+        <trans-unit id="434" translate="yes" xml:space="preserve">
+          <source>Gets a <bpt id="p1">&lt;xref href="System.ComponentModel.DesignerSerializationVisibility"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value, which indicates how a visual designer should process the member.</source>
+        </trans-unit>
+        <trans-unit id="435" translate="yes" xml:space="preserve">
+          <source>A value of the <bpt id="p1">&lt;xref href="System.ComponentModel.DesignerSerializationVisibility"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> enumeration.</source>
+        </trans-unit>
+        <trans-unit id="436" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.ComponentModel.DesignerSerializationVisibility"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="437" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the type where the <bpt id="p2">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> can exist.</source>
+        </trans-unit>
+        <trans-unit id="438" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The returned value is different for attachable and non-attachable members.</source>
+        </trans-unit>
+        <trans-unit id="439" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For non-attachable members, TargetType returns &lt;xref:System.Xaml.XamlMember.DeclaringType%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="440" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For attachable members, &lt;xref:System.Xaml.XamlMember.LookupTargetType%2A&gt; returns a result that is based on this logic:      -   If reflection cannot resolve a backing (&lt;xref:System.Xaml.XamlMember.IsUnknown%2A&gt; <ph id="ph1">`true`</ph>), this method returns an internal constant that represents a generic object type.</source>
+        </trans-unit>
+        <trans-unit id="441" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If the previous condition does not apply, &lt;xref:System.Xaml.XamlMember.LookupTargetType%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="442" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation returns a &lt;xref:System.Xaml.XamlType&gt; that is based on examining the methods that implement the <ph id="ph1">`get`</ph> and <ph id="ph2">`set`</ph> accessors.</source>
+        </trans-unit>
+        <trans-unit id="443" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A class might override &lt;xref:System.Xaml.XamlMember.LookupTargetType%2A&gt; to use a different behavior such as other metadata forms that might report target types for attachable members.</source>
+        </trans-unit>
+        <trans-unit id="444" translate="yes" xml:space="preserve">
+          <source>The type where the <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> can exist.</source>
+        </trans-unit>
+        <trans-unit id="445" translate="yes" xml:space="preserve">
+          <source>See Remarks.</source>
+        </trans-unit>
+        <trans-unit id="446" translate="yes" xml:space="preserve">
+          <source>Returns a string representation of this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="447" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This implementation returns &lt;xref:System.Xaml.XamlMember.Name%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="448" translate="yes" xml:space="preserve">
+          <source>A string representation of this <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="449" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the type that is used by the member.</source>
+        </trans-unit>
+        <trans-unit id="450" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling Type invokes &lt;xref:System.Xaml.XamlMember.LookupType%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="451" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This occurs when the initial internal reflection logic has not already set the information.</source>
+        </trans-unit>
+        <trans-unit id="452" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the default behavior (no &lt;xref:System.Xaml.XamlMember.LookupType%2A&gt; override), the returned &lt;xref:System.Xaml.XamlType&gt; can have different conceptual meanings.</source>
+        </trans-unit>
+        <trans-unit id="453" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Which meaning applies depends on whether this &lt;xref:System.Xaml.XamlMember&gt; represents a property, method, or event, as the following list shows:      -   For a property, the returned &lt;xref:System.Xaml.XamlType&gt; is the type that sets the property or is returned by the property.</source>
+        </trans-unit>
+        <trans-unit id="454" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   For an event, the returned &lt;xref:System.Xaml.XamlType&gt; is the required event handler type (a delegate in a CLR implementation).</source>
+        </trans-unit>
+        <trans-unit id="455" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   For a method, &lt;xref:System.Xaml.XamlType&gt; is the return type of that method, which may be <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="456" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In each case, the XAML schema context is used to evaluate the XAML type from the backing type.</source>
+        </trans-unit>
+        <trans-unit id="457" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xaml.XamlType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the type that is used by the member.</source>
+        </trans-unit>
+        <trans-unit id="458" translate="yes" xml:space="preserve">
+          <source>See Remarks.</source>
+        </trans-unit>
+        <trans-unit id="459" translate="yes" xml:space="preserve">
+          <source>Gets a <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> object, which can be used for type conversion construction of XAML declared objects.</source>
+        </trans-unit>
+        <trans-unit id="460" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling TypeConverter invokes &lt;xref:System.Xaml.XamlMember.LookupTypeConverter%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="461" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior occurs when the initial internal reflection logic has not already set the information.</source>
+        </trans-unit>
+        <trans-unit id="462" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Implementations that return a non-null property value for TypeConverter are not necessarily a working &lt;xref:System.ComponentModel.TypeConverter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="463" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following is a list of possible non-null return values for TypeConverter and what these values represent:      -   The return value reports a type converter that is attributed specifically to that member or more generally to the target type of the converter.</source>
+        </trans-unit>
+        <trans-unit id="464" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior is typically what most XAML type systems and XAML processors look for in order to instantiate a type converter and invoke its methods.</source>
+        </trans-unit>
+        <trans-unit id="465" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The return value reports a built-in value converter.</source>
+        </trans-unit>
+        <trans-unit id="466" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These converters exist for certain internal operations that are performed by a XAML writer.</source>
+        </trans-unit>
+        <trans-unit id="467" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In particular, these built-in value converters convert the raw attribute string values to the XAML language-level primitives.</source>
+        </trans-unit>
+        <trans-unit id="468" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For the .NET Framework XAML Services implementation, these built-in type conversions often forward to a type converter that is defined in the System assembly.</source>
+        </trans-unit>
+        <trans-unit id="469" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, a conversion for an &lt;xref:System.Int32&gt; value has built-in forwarded conversion, and therefore, the &lt;xref:System.Xaml.Schema.XamlValueConverter%601.ConverterType%2A&gt; value references &lt;xref:System.ComponentModel.Int32Converter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="470" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The return value reports the special case of an unconstrained object model; that is, the &lt;xref:System.Xaml.XamlMember&gt; has a &lt;xref:System.Xaml.XamlMember.Type%2A&gt; value of &lt;xref:System.Object&gt;.</source>
+        </trans-unit>
+        <trans-unit id="471" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this case, the &lt;xref:System.Xaml.Schema.XamlValueConverter%601&gt; reports that the &lt;xref:System.Xaml.Schema.XamlValueConverter%601.Name%2A?displayProperty=fullName&gt; is {<ph id="ph1">`Object}`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="472" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, &lt;xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A&gt; is <ph id="ph1">`null`</ph> because no actual type or instance is available to perform this conversion.</source>
+        </trans-unit>
+        <trans-unit id="473" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, the object model behavior cannot be determined until run time, when the runtime of the specific technology determines the handling of its object graph.</source>
+        </trans-unit>
+        <trans-unit id="474" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you can access a working &lt;xref:System.ComponentModel.TypeConverter&gt; from &lt;xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A&gt;, you can invoke its conversion methods.</source>
+        </trans-unit>
+        <trans-unit id="475" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, many conversion methods rely on service context.</source>
+        </trans-unit>
+        <trans-unit id="476" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you do not have the same service context available that the type converter expects for its typical role of writing objects for object graphs, the converter methods can throw exceptions.</source>
+        </trans-unit>
+        <trans-unit id="477" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> value, with a <bpt id="p1">&lt;xref href="System.ComponentModel.TypeConverter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> constraint on the generic.</source>
+        </trans-unit>
+        <trans-unit id="478" translate="yes" xml:space="preserve">
+          <source>See Remarks.</source>
+        </trans-unit>
+        <trans-unit id="479" translate="yes" xml:space="preserve">
+          <source>Gets the CLR type system &lt;xref:System.Reflection.MemberInfo&gt; that is available for a member that is constructed by &lt;xref:System.Reflection.PropertyInfo&gt;, &lt;xref:System.Reflection.MethodInfo&gt;, or &lt;xref:System.Reflection.EventInfo&gt;.</source>
+        </trans-unit>
+        <trans-unit id="480" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling UnderlyingMember invokes &lt;xref:System.Xaml.XamlMember.LookupUnderlyingMember%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="481" translate="yes" xml:space="preserve">
+          <source>CLR type system &lt;xref:System.Reflection.MemberInfo&gt; information, as cast from the initial constructor parameters.</source>
+        </trans-unit>
+        <trans-unit id="482" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Xaml.XamlMember"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is constructed with the <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.XamlMember.%23ctor%28System.String%2CSystem.Xaml.XamlType%2CSystem.Boolean%29<ph id="ph2">&amp;gt;</ph> signature returns <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="483" translate="yes" xml:space="preserve">
+          <source>Gets a <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> object, which is used for value serialization of XAML declared objects.</source>
+        </trans-unit>
+        <trans-unit id="484" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling ValueSerializer invokes &lt;xref:System.Xaml.XamlMember.LookupValueSerializer%2A&gt; or a specific override of that method.</source>
+        </trans-unit>
+        <trans-unit id="485" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior occurs when the initial internal reflection logic has not already set the information.</source>
+        </trans-unit>
+        <trans-unit id="486" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Not all cases that return a non-null property value for ValueSerializer are necessarily a working &lt;xref:System.Windows.Markup.ValueSerializer&gt;.</source>
+        </trans-unit>
+        <trans-unit id="487" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See Remarks in &lt;xref:System.Xaml.XamlMember.TypeConverter%2A&gt;; the same considerations apply to ValueSerializer.</source>
+        </trans-unit>
+        <trans-unit id="488" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Xaml.Schema.XamlValueConverter%601<ph id="ph2">&amp;gt;</ph> with &lt;xref:System.Windows.Markup.ValueSerializer&gt; constraint on the generic.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

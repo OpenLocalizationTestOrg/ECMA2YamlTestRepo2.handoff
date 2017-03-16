@@ -13,8 +13,8 @@ items:
   nameWithType: FileLogger
   fullName: Microsoft.Build.Logging.FileLogger
   type: Class
-  summary: "Uma especialização do ConsoleLogger regista num ficheiro em vez da consola."
-  remarks: "A saída em termos do que é escrito e aspeto é idêntica. Por exemplo, pode iniciar verbosely para um ficheiro utilizando o FileLogger ao simultaneamente registo de eventos de alta prioridade apenas para a consola utilizando um ConsoleLogger."
+  summary: A specialization of the ConsoleLogger that logs to a file instead of the console.
+  remarks: The output in terms of what is written and how it looks is identical. For example you can log verbosely to a file using the FileLogger while simultaneously logging only high priority events to the console using a ConsoleLogger.
   syntax:
     content: 'public class FileLogger : Microsoft.Build.Logging.ConsoleLogger'
   inheritance:
@@ -54,7 +54,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Cria um logger de ficheiro."
+  summary: Creates a file logger.
   syntax:
     content: public FileLogger ();
     parameters: []
@@ -74,13 +74,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Sinais cópia o logger de ficheiro de consola para os eventos de compilação indicado."
+  summary: Signs up the console file logger for the given build events.
   syntax:
     content: public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "Os eventos disponíveis."
+      description: The available events.
   overload: Microsoft.Build.Logging.FileLogger.Initialize*
   exceptions: []
   platform:
@@ -97,16 +97,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Inicializa uma logger ficheiro num ambiente multiprocessadores."
+  summary: Initializes a file logger in a multiprocessor environment.
   syntax:
     content: public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "A origem do evento."
+      description: The event source.
     - id: nodeCount
       type: System.Int32
-      description: "A contagem de nó."
+      description: The node count.
   overload: Microsoft.Build.Logging.FileLogger.Initialize*
   exceptions: []
   platform:
@@ -123,8 +123,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Chamado quando a compilação está concluída."
-  remarks: "O método tem de remover da cache e fechar o registo de ficheiro."
+  summary: Called when the build is finished.
+  remarks: The method must flush and close the file log.
   syntax:
     content: public override void Shutdown ();
     parameters: []

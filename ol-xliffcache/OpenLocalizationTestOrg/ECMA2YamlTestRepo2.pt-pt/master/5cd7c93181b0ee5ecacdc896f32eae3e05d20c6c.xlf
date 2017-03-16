@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-pt">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5cd7c93181b0ee5ecacdc896f32eae3e05d20c6c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.UI.WebControls.WebParts.ProxyWebPartManager.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e8c0b4d9493814873843ae78f18497b3564930bf</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ce2a65ceb90a93b99ca805326f7c84a01feda357</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides a way for developers to declare static connections in a content page when a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartManager"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control has been declared in the content page's associated master page.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ProxyWebPartManager control exists for the particular scenario of declaring static connections in content pages when a &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control has already been declared in a master page.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By design, a Web page that uses Web Parts controls must contain one (and only one) &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control that manages all Web Parts controls on the page.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a Web Parts application uses master pages, it is common to place the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control in the master page, because all the content pages are merged with the master page at run time and the single &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control will manage all the Web Parts controls from all content pages.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, when developers want to declare static connections in the content pages of such an application, they might seem to face a limitation.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A static Web Parts connection can be declared only by adding an &lt;<ph id="ph1">`asp:webpartconnection&gt;`</ph> element as a child of a <ph id="ph2">`&lt;staticconnections&gt;`</ph> element, which itself must be a child of a <ph id="ph3">`&lt;asp:webpartmanager&gt;`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>But because the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control was already declared in the master page, and is the one permitted &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control, developers cannot declare additional &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; controls in the content pages to add static connections.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ProxyWebPartManager control takes the place of the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control in this scenario.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Developers declare an <ph id="ph1">`&lt;asp:proxywebpartmanager&gt;`</ph> element instead of an <ph id="ph2">`&lt;asp:webpartmanager&gt;`</ph> element in their content pages, and can then declare static connections as child elements.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>At run time, the connections in the ProxyWebPartManager control are simply added to the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager.StaticConnections%2A&gt; collection of the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control and treated like any other connection.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because the ProxyWebPartManager control is used only in this particular development scenario, it has more limited functionality than the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In fact, although the ProxyWebPartManager control acts as a proxy to contain static connections for the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control in content pages, it does not inherit from the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It inherits directly from the &lt;xref:System.Web.UI.Control&gt; class, and overrides only a few of the base members.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.EnableTheming%2A&gt;, &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.Visible%2A&gt;, and &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.SkinID%2A&gt; properties are overridden and assigned values that prevent them from being used.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Other inherited properties are overridden to adjust their design-time behavior, but otherwise they have the same behavior as the base properties.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These include the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.Controls%2A&gt; and &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.ClientID%2A&gt; properties.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Finally, the ProxyWebPartManager class has one non-inherited property.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.StaticConnections%2A&gt; property returns its own collection of static connections (a &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection&gt; object).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>As for methods, the ProxyWebPartManager class similarly overrides only a few methods, mostly to restrict their use.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The inherited &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.Focus%2A&gt; method is made unusable by throwing an exception if called.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.CreateControlCollection%2A&gt; method always returns an empty control collection, which has the effect of preventing it from being able to contain a collection of controls.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Finally, the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.OnInit%2A&gt; method calls the base method, and then assigns the collection of connections referenced by the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.StaticConnections%2A&gt; property to the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager.StaticConnections%2A?displayProperty=fullName&gt; property of the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This has the effect of rolling up all the static connections declared in all content pages and making them part of the connections collection maintained by the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control in the master page.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.ProxyWebPartManager"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Gets the control ID for HTML markup that is generated by ASP.NET.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The control ID for HTML markup that is generated by ASP.NET.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Gets a <bpt id="p1">&lt;xref href="System.Web.UI.ControlCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object that represents the child controls for a specified server control in the UI hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The collection of child controls for the specified server control.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Overrides the base property to prevent the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.ProxyWebPartManager"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control from containing controls.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The CreateControlCollection method overrides the base method to prevent the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager&gt; control from containing and returning collections of controls.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Its only purpose is to enable static connections to be declared in content pages within an application that uses master pages.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Always returns an <bpt id="p1">&lt;xref href="System.Web.UI.EmptyControlCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Overrides the base property to prevent themes from being used.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The EnableTheming property overrides the base property to prevent themes from being used with the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is to prevent it coming into conflict with any themes being used with the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control in the master page (its &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager.EnableTheming%2A?displayProperty=fullName&gt; property always returns <ph id="ph1">`true`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Always returns <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, to prevent themes from being used.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>A caller tries to assign a value to this property.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Overrides the base method to prevent the method from being called.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Focus method overrides the base method and throws an exception if any caller attempts to call the method.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is because the inherited &lt;xref:System.Web.UI.Control.Focus%2A?displayProperty=fullName&gt; method is designed for controls with a user interface (UI), but the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager&gt; control has no UI and therefore has no need to set the focus.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>A caller tries to call this method.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Web.UI.Control.Init"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event and initializes the control.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnInit method calls the base method, and then carries out tasks to initialize the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An important task of this method is to assign the collection of connections referenced by the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager.StaticConnections%2A&gt; property to the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control's &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager.StaticConnections%2A?displayProperty=fullName&gt; collection.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartManager"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control from the associated master page is <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Overrides the base property to prevent a value from being assigned.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The SkinID property overrides the base property to prevent a value from being assigned to it, which has the effect of preventing skins from being used with the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is done because the control never exposes a user interface (UI) on a page.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The same behavior is implemented by the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control for its &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager.SkinID%2A?displayProperty=fullName&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Always returns an empty string ("").</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>A caller tries to assign a value to this property.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Gets a collection of static connections declared within the <bpt id="p1">&lt;xref uid="langword_csharp_&amp;lt;asp:proxywebpartmanager&amp;gt;" name="&amp;lt;asp:proxywebpartmanager&amp;gt;" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> element on a content page.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The StaticConnections property references the collection of &lt;xref:System.Web.UI.WebControls.WebParts.WebPartConnection&gt; objects declared in an <ph id="ph1">`&lt;asp:proxywebpartmanager&gt;`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The connections contained in this collection are added to the static connections of the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; controls (referenced by its &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager.StaticConnections%2A?displayProperty=fullName&gt; collection), and treated exactly like any other connections associated with the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The declarative element that corresponds to the StaticConnections property is the <ph id="ph1">`&lt;staticconnections&gt;`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In an application that uses master pages, the <ph id="ph1">`&lt;staticconnections&gt;`</ph> element is added as a child of the <ph id="ph2">`&lt;asp:proxywebpartmanager&gt;`</ph> element on a content page, and an <ph id="ph3">`&lt;asp:webpartconnection&gt;`</ph> element in turn is added as a child of the <ph id="ph4">`&lt;staticconnections&gt;`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Multiple <ph id="ph1">`&lt;asp:webpartconnection&gt;`</ph> elements can be added to one <ph id="ph2">`&lt;staticconnections&gt;`</ph> element, and multiple content pages can declare static connections as part of a master pages application.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.ProxyWebPartConnectionCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains all static <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartConnection"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> objects declared within an <bpt id="p3">&lt;xref uid="langword_csharp_&amp;lt;asp:proxywebpartmanager&amp;gt;" name="&amp;lt;asp:proxywebpartmanager&amp;gt;" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> element.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Overrides the base property to prevent a value from being assigned.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Visible property overrides the base property to prevent the &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager&gt; control from ever being made visible.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.WebParts.ProxyWebPartManager&gt; control, like the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartManager&gt; control, has no user interface (UI) and is never displayed to the user.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Always returns <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, to prevent the control from being made visible.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>A caller tries to assign a value to this property.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

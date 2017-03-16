@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-pt">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5cf028098272ef6fbabca9f520783c2394697c0c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ComponentModel.IEditableCollectionView.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">485251b6febb91f2a5f8d4dba86c31ad7f7007e8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">55b40a4a56730b4d965563e651c4b4ccde3a2c23</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Defines methods and properties that a <bpt id="p1">&lt;xref href="System.Windows.Data.CollectionView"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> implements to provide editing capabilities to a collection.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a collection view implements the IEditableCollectionView interface, you can directly change the underlying collection, if it allows changes to be made, by using the methods and properties that IEditableCollectionView exposes, regardless of the collection's type.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The types &lt;xref:System.Windows.Controls.ItemCollection&gt;, &lt;xref:System.Windows.Data.BindingListCollectionView&gt;, and &lt;xref:System.Windows.Data.ListCollectionView&gt; are the types that ship with <ph id="ph1">[!INCLUDE[TLA#tla_winclient](~/add/includes/ajax-current-ext-md.md)]</ph> that inherit from &lt;xref:System.Windows.Data.CollectionView&gt;.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These types also implement the IEditableCollectionView, so you can edit a collection that uses one of those types.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Controls.ItemCollection&gt;, in particular, is often used because the &lt;xref:System.Windows.Controls.ItemsControl.Items%2A?displayProperty=fullName&gt; property is an &lt;xref:System.Windows.Controls.ItemCollection&gt;.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Adds a new item to the collection.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling AddNew begins an add transaction.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should call &lt;xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A&gt; or &lt;xref:System.ComponentModel.IEditableCollectionView.CancelNew%2A&gt; to end the add transaction.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A new item always appears in the collection view.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Any filtering, sorting, or grouping that is applied to the view is applied to the new item when &lt;xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The new item that is added to the collection.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether a new item can be added to the collection.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An &lt;xref:System.ComponentModel.IEditableCollectionView&gt; can add a new item if the following are true:      -   An item can be added to the underlying collection.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the collection is read-only, CanAddNew is <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The &lt;xref:System.ComponentModel.IEditableCollectionView&gt; can create an object of the type that is in the collection.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the collection is of type &lt;xref:System.Collections.ObjectModel.ObservableCollection%601&gt;, the &lt;xref:System.ComponentModel.IEditableCollectionView&gt; must be able to create an object of type <ph id="ph1">`T`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if a new item can be added to the collection; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether the collection view can discard pending changes and restore the original values of an edited object.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>CanCancelEdit is <ph id="ph1">`true`</ph> if the view supports the notion of "pending changes" on the currently edited item.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, a collection view might return <ph id="ph1">`true`</ph> if the edited item implements &lt;xref:System.ComponentModel.IEditableObject&gt;, or if the view has information about the item's state that it can use to roll back changes.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>CanCancelEdit is <ph id="ph1">`false`</ph> if the view cannot revert changes on an object.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In that case, call &lt;xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A&gt; to cause the view to exit the edit state and provide logic to revert the changes on the object that was edited.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the collection view can discard pending changes and restore the original values of an edited object; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Ends the edit transaction and, if possible, restores the original value to the item.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>CancelEdit sets &lt;xref:System.ComponentModel.IEditableCollectionView.CurrentEditItem%2A&gt; to <ph id="ph1">`null`</ph> and causes the collection view to exit the edit state.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If &lt;xref:System.ComponentModel.IEditableCollectionView.CanCancelEdit%2A&gt; is <ph id="ph1">`true`</ph>, CancelEdit also restores the original values of the edited object.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Ends the add transaction and discards the pending new item.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether an item can be removed from the collection.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>CanRemove is <ph id="ph1">`false`</ph> if the underlying collection is read-only.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if an item can be removed from the collection; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Ends the edit transaction and saves the pending changes.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Ends the add transaction and saves the pending new item.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Any filtering, sorting, or grouping that is applied to the &lt;xref:System.Windows.Data.CollectionView&gt; is applied to the new item when CommitNew is called.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Gets the item that is being added during the current add transaction.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The item that is being added if &lt;xref:System.ComponentModel.IEditableCollectionView.IsAddingNew*&gt; is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Gets the item in the collection that is being edited.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The item in the collection that is being edited if &lt;xref:System.ComponentModel.IEditableCollectionView.IsEditingItem*&gt; is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Begins an edit transaction of the specified item.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The item to edit.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether an add transaction is in progress.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You begin an add transaction by calling &lt;xref:System.ComponentModel.IEditableCollectionView.AddNew%2A&gt; and end the add transaction by calling &lt;xref:System.ComponentModel.IEditableCollectionView.CommitNew%2A&gt; or &lt;xref:System.ComponentModel.IEditableCollectionView.CancelNew%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if an add transaction is in progress; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether an edit transaction is in progress.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You begin an edit transaction by calling &lt;xref:System.ComponentModel.IEditableCollectionView.EditItem%2A&gt; and end the transaction by calling &lt;xref:System.ComponentModel.IEditableCollectionView.CommitEdit%2A&gt; or &lt;xref:System.ComponentModel.IEditableCollectionView.CancelEdit%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if an edit transaction is in progress; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Gets or sets the position of the new item placeholder in the collection view.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>One of the enumeration values that specifies the position of the new item placeholder in the collection view.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Removes the specified item from the collection.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If <ph id="ph1">`item`</ph> is not in the collection, Remove does nothing.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The item to remove.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Removes the item at the specified position from the collection.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`index`</ph> is relative to the collection view, not the collection.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the collection has 10 items and the view has a &lt;xref:System.ComponentModel.ICollectionView.Filter%2A&gt; so that 7 items appear, the valid values of <ph id="ph1">`index`</ph> are 0 through 6.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The position of the item to remove.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;index&lt;/code&gt;</ph> is less than 0 or greater than the number of items in the collection view.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
