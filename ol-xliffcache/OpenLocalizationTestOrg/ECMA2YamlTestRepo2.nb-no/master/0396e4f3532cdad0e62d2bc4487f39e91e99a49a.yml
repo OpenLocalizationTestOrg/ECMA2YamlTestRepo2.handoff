@@ -11,7 +11,7 @@ items:
   nameWithType: ProjectImportGroupElement
   fullName: Microsoft.Build.Construction.ProjectImportGroupElement
   type: Class
-  summary: "Representerer ImportGroup-element i en MSBuild-prosjekt."
+  summary: Represents the ImportGroup element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#Imports={Count} Condition={Condition} Label={Label}")]
@@ -59,17 +59,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Legger til et nytt import etter siste importen i denne gruppen for import."
-  remarks: "Foretrekker metode som henter en plassering som er basert på heuristikk."
+  summary: Adds a new import after the last import in this import group.
+  remarks: Convenience method that picks a location based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement AddImport (string project);
     parameters:
     - id: project
       type: System.String
-      description: "Prosjekt til å importere."
+      description: The project to import.
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "Returnerer den nye importen."
+      description: Returns the new import.
   overload: Microsoft.Build.Construction.ProjectImportGroupElement.AddImport*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter alle egenskapene i denne importen av prosjektet."
+  summary: Gets all properties in this project import.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportElement> Imports { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportElement}
-      description: "Returnerer alle egenskapene i denne import av prosjektet."
+      description: Returns all properties in this project import.
   overload: Microsoft.Build.Construction.ProjectImportGroupElement.Imports*
   exceptions: []
   platform:

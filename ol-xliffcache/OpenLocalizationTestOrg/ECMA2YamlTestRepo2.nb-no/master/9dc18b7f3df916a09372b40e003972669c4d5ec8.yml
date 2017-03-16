@@ -12,7 +12,7 @@ items:
   nameWithType: ForwardingLoggerRecord
   fullName: Microsoft.Build.Logging.ForwardingLoggerRecord
   type: Class
-  summary: "Representerer en sentral/videresending transaksjonslogging verdipar som brukes i flere prosessorer logging."
+  summary: Represents a central/forwarding logger pair used in multiprocessor logging.
   syntax:
     content: public class ForwardingLoggerRecord
   inheritance:
@@ -33,16 +33,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Oppretter en videresendingsadresse meldingslogging."
+  summary: Creates a forwarding logger.
   syntax:
     content: public ForwardingLoggerRecord (Microsoft.Build.Framework.ILogger centralLogger, Microsoft.Build.Logging.LoggerDescription forwardingLoggerDescription);
     parameters:
     - id: centralLogger
       type: Microsoft.Build.Framework.ILogger
-      description: "Sentral meldingslogging."
+      description: The central logger.
     - id: forwardingLoggerDescription
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "Beskrivelsen videresending meldingslogging."
+      description: The description for the forwarding logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.#ctor*
   exceptions: []
   platform:
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Henter den sentrale meldingslogging."
+  summary: Gets the central logger.
   syntax:
     content: public Microsoft.Build.Framework.ILogger CentralLogger { get; }
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: "Returnerer den sentrale meldingslogging."
+      description: Returns the central logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.CentralLogger*
   exceptions: []
   platform:
@@ -81,12 +81,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Henter videresending transaksjonslogging beskrivelse."
+  summary: Gets the forwarding logger description.
   syntax:
     content: public Microsoft.Build.Logging.LoggerDescription ForwardingLoggerDescription { get; }
     return:
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "Returnerer videresending transaksjonslogging beskrivelse."
+      description: Returns the forwarding logger description.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.ForwardingLoggerDescription*
   exceptions: []
   platform:

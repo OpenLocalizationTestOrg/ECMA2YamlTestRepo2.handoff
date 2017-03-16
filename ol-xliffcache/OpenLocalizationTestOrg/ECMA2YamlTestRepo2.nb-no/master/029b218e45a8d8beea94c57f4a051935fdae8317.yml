@@ -14,7 +14,7 @@ items:
   nameWithType: ExternalProjectStartedEventArgs
   fullName: Microsoft.Build.Framework.ExternalProjectStartedEventArgs
   type: Class
-  summary: "Gir dataene for den <xref href=&quot;Microsoft.Build.Framework.IEventSource.CustomEventRaised&quot;> </xref> hendelsen."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.CustomEventRaised"></xref> event.
   syntax:
     content: 'public class ExternalProjectStartedEventArgs : Microsoft.Build.Framework.CustomBuildEventArgs'
   inheritance:
@@ -44,7 +44,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.Framework.ExternalProjectStartedEventArgs&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.ExternalProjectStartedEventArgs"></xref> class.
   syntax:
     content: protected ExternalProjectStartedEventArgs ();
     parameters: []
@@ -64,25 +64,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.Framework.ExternalProjectFinishedEventArgs&quot;> </xref> klassen med de angitte verdiene."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.ExternalProjectFinishedEventArgs"></xref> class, with the specified values.
   syntax:
     content: public ExternalProjectStartedEventArgs (string message, string helpKeyword, string senderName, string projectFile, string targetNames);
     parameters:
     - id: message
       type: System.String
-      description: "Teksten for hendelsen."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Nøkkelordet hjelp for hendelsen."
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "Kilden for hendelsen."
+      description: The source of the event.
     - id: projectFile
       type: System.String
-      description: "Navnet på prosjektfilen."
+      description: The project file name.
     - id: targetNames
       type: System.String
-      description: "Navnene på målene å bygge i det eksterne prosjektet. Dette kan være en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) Hvis det eksterne prosjektet bygges med standardmål."
+      description: The names of the targets to build in the external project. This can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) if the external project is being built with the default targets.
   overload: Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -99,28 +99,28 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.Framework.ExternalProjectFinishedEventArgs&quot;> </xref> klassen med de angitte verdiene."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.ExternalProjectFinishedEventArgs"></xref> class, with the specified values.
   syntax:
     content: public ExternalProjectStartedEventArgs (string message, string helpKeyword, string senderName, string projectFile, string targetNames, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: "Teksten for hendelsen."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Nøkkelordet hjelp for hendelsen."
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "Kilden for hendelsen."
+      description: The source of the event.
     - id: projectFile
       type: System.String
-      description: "Navnet på prosjektfilen."
+      description: The project file name.
     - id: targetNames
       type: System.String
-      description: "Navnene på målene å bygge i det eksterne prosjektet. Dette kan være en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) Hvis det eksterne prosjektet bygges med standardmål."
+      description: The names of the targets to build in the external project. This can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) if the external project is being built with the default targets.
     - id: eventTimestamp
       type: System.DateTime
-      description: "Datoen og klokkeslettet som skal knyttes til hendelsen."
+      description: The date and time to associate with the event.
   overload: Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -137,12 +137,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Henter prosjektfilen som hendelsen."
+  summary: Gets the project file that raised the event.
   syntax:
     content: public string ProjectFile { get; }
     return:
       type: System.String
-      description: "Prosjektfilen som hendelsen."
+      description: The project file that raised the event.
   overload: Microsoft.Build.Framework.ExternalProjectStartedEventArgs.ProjectFile*
   exceptions: []
   platform:
@@ -159,12 +159,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Henter target-navn som bygges i prosjektet."
+  summary: Gets the target names that are being built in the project.
   syntax:
     content: public string TargetNames { get; }
     return:
       type: System.String
-      description: "Navnene på målene blir bygget i det eksterne prosjektet. Dette kan være en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) Hvis det eksterne prosjektet bygges med standard målet."
+      description: The names of the targets being built in the external project. This can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) if the external project is being built with the default target.
   overload: Microsoft.Build.Framework.ExternalProjectStartedEventArgs.TargetNames*
   exceptions: []
   platform:

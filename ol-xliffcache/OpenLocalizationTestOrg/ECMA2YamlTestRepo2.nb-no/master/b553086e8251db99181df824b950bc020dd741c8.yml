@@ -15,7 +15,7 @@ items:
   nameWithType: BuildStartedEventArgs
   fullName: Microsoft.Build.Framework.BuildStartedEventArgs
   type: Class
-  summary: "Gir dataene for den <xref href=&quot;Microsoft.Build.Framework.IEventSource.BuildStarted&quot;> </xref> hendelsen."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.BuildStarted"></xref> event.
   remarks: 'WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a promise to never change the type''s fields i.e. the type is immutable; adding new fields in the next version of the type without following certain special FX guidelines, can break both forward and backward compatibility'
   syntax:
     content: 'public class BuildStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs'
@@ -46,7 +46,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.Framework.BuildStartedEventArgs&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildStartedEventArgs"></xref> class.
   syntax:
     content: protected BuildStartedEventArgs ();
     parameters: []
@@ -66,16 +66,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.Framework.BuildStartedEventArgs&quot;> </xref> klassen med den angitte meldings- og Hjelp-nøkkelordet."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildStartedEventArgs"></xref> class with the specified message and Help keyword.
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword);
     parameters:
     - id: message
       type: System.String
-      description: "Teksten for hendelsen."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Nøkkelordet hjelp for hendelsen."
+      description: The Help keyword associated with the event.
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -92,20 +92,20 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktøren for å starte alle parametere."
-  remarks: "Sender-feltet kan ikke angis her, og antas for å være &quot;MSBuild&quot;."
+  summary: Constructor to initialize all parameters.
+  remarks: Sender field cannot be set here and is assumed to be "MSBuild".
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, System.Collections.Generic.IDictionary<string,string> environmentOfBuild);
     parameters:
     - id: message
       type: System.String
-      description: "tekstmelding"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Hjelp nøkkelordet"
+      description: help keyword
     - id: environmentOfBuild
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "En ordliste som viser miljø av under byggingen er startet."
+      description: A dictionary which lists the environment of the build when the build is started.
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -122,19 +122,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktøren for å tillate tidsstempel er satt til"
+  summary: Constructor to allow timestamp to be set
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: "tekstmelding"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Hjelp nøkkelordet"
+      description: help keyword
     - id: eventTimestamp
       type: System.DateTime
-      description: "Tidsstempelet når hendelsen ble opprettet"
+      description: Timestamp when the event was created
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -151,22 +151,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktøren for å tillate tidsstempel er satt til"
+  summary: Constructor to allow timestamp to be set
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "tekstmelding"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Hjelp nøkkelordet"
+      description: help keyword
     - id: eventTimestamp
       type: System.DateTime
-      description: "Tidsstempelet når hendelsen ble opprettet"
+      description: Timestamp when the event was created
     - id: messageArgs
       type: System.Object[]
-      description: "meldingen argumenter"
+      description: message args
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -183,12 +183,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Henter miljøet ordlisten som brukes ved starten av."
+  summary: Gets the environment dictionary which is used at the start of the build.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> BuildEnvironment { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Returnerer miljøet ordlisten som brukes ved starten av."
+      description: Returns the environment dictionary which is used at the start of the build.
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.BuildEnvironment*
   exceptions: []
   platform:

@@ -11,7 +11,7 @@ items:
   nameWithType: ProjectItemDefinitionGroupElement
   fullName: Microsoft.Build.Construction.ProjectItemDefinitionGroupElement
   type: Class
-  summary: "Representerer en [ItemDefinitionGroup elementet (MSBuild)](~/add/includes/ajax-current-ext-md.md) i et MSBuild-prosjekt."
+  summary: Represents an [ItemDefinitionGroup Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#ItemDefinitions={Count} Condition={Condition} Label={Label}")]
@@ -59,17 +59,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Legger til en ny definisjon for elementet etter siste underordnede i denne gruppen for definisjonen av elementet."
-  remarks: "Denne metoden foretrekker plukker prosjektet DOM basert på heuristikk plassering."
+  summary: Adds a new item definition after the last child in this item definition group.
+  remarks: This convenience method picks a location in the project DOM based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionElement AddItemDefinition (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "Elementnavnet for elementet som skal legges til."
+      description: Element name of item to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionElement
-      description: "Returnerer den nye definisjonen for elementet."
+      description: Returns the new item definition.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionGroupElement.AddItemDefinition*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter alle underordnede elementet definisjoner."
+  summary: Gets all child item definitions.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemDefinitionElement> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemDefinitionElement}
-      description: "Returnerer alle underordnede elementet definisjoner."
+      description: Returns all child item definitions.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionGroupElement.ItemDefinitions*
   exceptions: []
   platform:

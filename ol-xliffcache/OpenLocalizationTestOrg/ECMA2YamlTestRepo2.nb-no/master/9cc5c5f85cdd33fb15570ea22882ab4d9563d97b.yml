@@ -17,7 +17,7 @@ items:
   nameWithType: InternalLoggerException
   fullName: Microsoft.Build.Exceptions.InternalLoggerException
   type: Class
-  summary: "Dette unntaket brukes til å utføre et ubehandlet unntak fra en meldingslogging. Dette unntaket avbryter byggingen, og den kan bare være forårsaket av MSBuild-motoren."
+  summary: This exception is used to wrap an unhandled exception from a logger. This exception aborts the build, and it can only be thrown by the MSBuild engine.
   remarks: 'WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a promise to never change the type''s fields i.e. the type is immutable; adding new fields in the next version of the type without following certain special FX guidelines, can break both forward and backward compatibility'
   syntax:
     content: 'public sealed class InternalLoggerException : Exception'
@@ -39,8 +39,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Standardkonstruktør."
-  remarks: "Denne konstruktøren finnes bare for å oppfylle .NET koding retningslinjene. Bruk rik konstruktøren i stedet."
+  summary: Default constructor.
+  remarks: This constructor only exists to satisfy .NET coding guidelines. Use the rich constructor instead.
   syntax:
     content: public InternalLoggerException ();
     parameters: []
@@ -48,7 +48,7 @@ items:
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "Operasjonen er ugyldig."
+    description: Operation is invalid.
   platform:
   - net462
 - uid: Microsoft.Build.Exceptions.InternalLoggerException.#ctor(System.String)
@@ -63,19 +63,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Oppretter en forekomst av dette unntaket ved å bruke den angitte feilmeldingen."
-  remarks: "Denne konstruktøren finnes bare for å oppfylle .NET koding retningslinjene. Bruk rik konstruktøren i stedet."
+  summary: Creates an instance of this exception using the specified error message.
+  remarks: This constructor only exists to satisfy .NET coding guidelines. Use the rich constructor instead.
   syntax:
     content: public InternalLoggerException (string message);
     parameters:
     - id: message
       type: System.String
-      description: "Feilmelding."
+      description: The error message.
   overload: Microsoft.Build.Exceptions.InternalLoggerException.#ctor*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "Operasjonen er ugyldig."
+    description: Operation is invalid.
   platform:
   - net462
 - uid: Microsoft.Build.Exceptions.InternalLoggerException.#ctor(System.String,System.Exception)
@@ -90,22 +90,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Oppretter en forekomst av dette unntaket ved hjelp av angitte feilmelding og indre unntaket."
-  remarks: "Denne konstruktøren finnes bare for å oppfylle .NET koding retningslinjene. Bruk rik konstruktøren i stedet."
+  summary: Creates an instance of this exception using the specified error message and inner exception.
+  remarks: This constructor only exists to satisfy .NET coding guidelines. Use the rich constructor instead.
   syntax:
     content: public InternalLoggerException (string message, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "Feilmelding."
+      description: The error message.
     - id: innerException
       type: System.Exception
-      description: "Det interne unntaket."
+      description: The inner exception.
   overload: Microsoft.Build.Exceptions.InternalLoggerException.#ctor*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "Operasjonen er ugyldig."
+    description: Operation is invalid.
   platform:
   - net462
 - uid: Microsoft.Build.Exceptions.InternalLoggerException.BuildEventArgs
@@ -120,12 +120,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Henter detaljer for hendelsen for å bygge (Hvis noen) som er i loggført."
+  summary: Gets the details of the build event (if any) that was being logged.
   syntax:
     content: public Microsoft.Build.Framework.BuildEventArgs BuildEventArgs { get; }
     return:
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "Kompilering hendelsesargumenter, eller null."
+      description: The build event args, or null.
   overload: Microsoft.Build.Exceptions.InternalLoggerException.BuildEventArgs*
   exceptions: []
   platform:
@@ -142,12 +142,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Henter feilkoden knyttet til dette unntaket melding (ikke det interne unntaket)."
+  summary: Gets the error code associated with this exception's message (not the inner exception).
   syntax:
     content: public string ErrorCode { get; }
     return:
       type: System.String
-      description: "Feil kodestrengen."
+      description: The error code string.
   overload: Microsoft.Build.Exceptions.InternalLoggerException.ErrorCode*
   exceptions: []
   platform:
@@ -164,16 +164,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Vi trenger å oppdatere denne iSerializable metoden som vi må overstyre siden unntak implementerer dette grensesnittet Hvis vi skulle legger til nye medlemmer i denne klassen."
+  summary: ISerializable method which we must override since Exception implements this interface If we ever add new members to this class, we'll need to update this.
   syntax:
     content: public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "Informasjon om feilen."
+      description: The error information.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "Feilkontekst."
+      description: The error context.
   overload: Microsoft.Build.Exceptions.InternalLoggerException.GetObjectData*
   exceptions: []
   platform:
@@ -190,12 +190,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Henter nøkkelordet F1 Hjelp assosiert med denne feilmeldingen for verts-IDE."
+  summary: Gets the F1-help keyword associated with this error, for the host IDE.
   syntax:
     content: public string HelpKeyword { get; }
     return:
       type: System.String
-      description: "Nøkkelordet-streng."
+      description: The keyword string.
   overload: Microsoft.Build.Exceptions.InternalLoggerException.HelpKeyword*
   exceptions: []
   platform:
@@ -212,12 +212,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "SANN hvis unntaket oppstod under initialisering av transaksjonslogging"
+  summary: True if the exception occured during logger initialization
   syntax:
     content: public bool InitializationException { get; }
     return:
       type: System.Boolean
-      description: "Som skal legges til."
+      description: To be added.
   overload: Microsoft.Build.Exceptions.InternalLoggerException.InitializationException*
   exceptions: []
   platform:

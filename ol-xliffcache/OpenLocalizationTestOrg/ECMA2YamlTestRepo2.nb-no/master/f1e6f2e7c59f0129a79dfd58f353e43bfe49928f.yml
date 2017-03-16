@@ -45,8 +45,8 @@ items:
   nameWithType: Engine
   fullName: Microsoft.Build.BuildEngine.Engine
   type: Class
-  summary: "Representerer den [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motoren."
-  remarks: "I et prosjekt til prosjekt avhengigheter-system opprettholder motoren bygging-prosjekter, gjør det mulig å unngå å bygge samme målet i samme prosjekt mer enn én gang i en gitt build."
+  summary: Represents the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine.
+  remarks: In a system of project-to-project dependencies, the Engine maintains the building projects, making it possible to avoid building the same target in the same project more than once in a given build.
   example:
   - "The following example creates an Engine object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  \n  \n [!code-vb[msbuild_BuildAProject#1](~/add/codesnippet/visualbasic/BuildAProjectVB/Module1.vb#1)]\n [!code-cs[msbuild_BuildAProject#1](~/add/codesnippet/csharp/BuildAProjectCS/Program.cs#1)]"
   syntax:
@@ -72,7 +72,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> class.
   remarks: ''
   example:
   - "The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  \n  \n [!code-vb[msbuild_BuildAProject#1](~/add/codesnippet/visualbasic/BuildAProjectVB/Module1.vb#1)]\n [!code-cs[msbuild_BuildAProject#1](~/add/codesnippet/csharp/BuildAProjectCS/Program.cs#1)]"
@@ -95,13 +95,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> class.
   syntax:
     content: public Engine (Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties);
     parameters:
     - id: globalProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> som representerer egenskapene som skal sendes til underordnet-motoren."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> that represents properties to be passed to the child engine.
   overload: Microsoft.Build.BuildEngine.Engine.#ctor*
   exceptions: []
   platform:
@@ -118,13 +118,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> class.
   syntax:
     content: public Engine (Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations);
     parameters:
     - id: locations
       type: Microsoft.Build.BuildEngine.ToolsetDefinitionLocations
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetDefinitionLocations&quot;> </xref> opplisting som angir plasseringen av verktøysettet definisjonen."
+      description: A <xref href="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations"></xref> enumeration that specifies the location of the Toolset definition.
   overload: Microsoft.Build.BuildEngine.Engine.#ctor*
   exceptions: []
   platform:
@@ -141,13 +141,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> klasse som ikke har den angitte <xref:Microsoft.Build.BuildEngine.Engine.BinPath*>.</xref:Microsoft.Build.BuildEngine.Engine.BinPath*>"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> class that has the specified <xref:Microsoft.Build.BuildEngine.Engine.BinPath*>.
   syntax:
     content: public Engine (string binPath);
     parameters:
     - id: binPath
       type: System.String
-      description: "Banen til MSBuild.exe."
+      description: The path to MSBuild.exe.
   overload: Microsoft.Build.BuildEngine.Engine.#ctor*
   exceptions: []
   platform:
@@ -164,16 +164,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> class.
   syntax:
     content: public Engine (Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations);
     parameters:
     - id: globalProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> som representerer egenskapene som skal sendes til underordnet-motoren."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> that represents properties to be passed to the child engine.
     - id: locations
       type: Microsoft.Build.BuildEngine.ToolsetDefinitionLocations
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetDefinitionLocations&quot;> </xref> opplisting angir plasseringen av verktøysettet definisjonen."
+      description: A <xref href="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations"></xref> enumeration specifies the location of the Toolset definition.
   overload: Microsoft.Build.BuildEngine.Engine.#ctor*
   exceptions: []
   platform:
@@ -190,19 +190,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiserer en ny forekomst av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> class.
   syntax:
     content: public Engine (Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, Microsoft.Build.BuildEngine.ToolsetDefinitionLocations locations, int numberOfCpus, string localNodeProviderParameters);
     parameters:
     - id: globalProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> som representerer egenskapene som skal sendes til underordnet-motoren."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> that represents properties to be passed to the child engine.
     - id: locations
       type: Microsoft.Build.BuildEngine.ToolsetDefinitionLocations
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetDefinitionLocations&quot;> </xref> opplisting angir plasseringen av verktøysettet definisjonen."
+      description: A <xref href="Microsoft.Build.BuildEngine.ToolsetDefinitionLocations"></xref> enumeration specifies the location of the Toolset definition.
     - id: numberOfCpus
       type: System.Int32
-      description: "Et heltall som angir antall CPUer eller kjerner i systemet."
+      description: An integer that specifies the number of CPUs or cores in the system.
     - id: localNodeProviderParameters
       type: System.String
       description: "A string of parameters that are used to configure the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine. You must format the parameters as `ParameterName`=`ParameterValue`. The valid semicolon-separated, optional parameters are as follows:  \n  \n <xref uid=\"langword_csharp_MSBUILDLOCATION\" name=\"MSBUILDLOCATION\" href=\"\"></xref> Indicates where the build process can find MSBuild.exe. This path enables the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine to locate MSBuild.exe and start it as a local node. <xref uid=\"langword_csharp_MSBUILDLOCATION\" name=\"MSBUILDLOCATION\" href=\"\"></xref> is the only essential parameter for a host. The default value is C:\\Windows\\Microsoft.Net\\Framework\\v3.5\\\\.  \n  \n <xref uid=\"langword_csharp_NODEREUSE\" name=\"NODEREUSE\" href=\"\"></xref> Indicates whether the child nodes should remain after the build finishes, in case they can be used later by another build. The nodes are discarded automatically after one minute of non-use. The default value is <xref uid=\"langword_csharp_true\" name=\"true\" href=\"\"></xref>."
@@ -222,15 +222,15 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Henter eller angir banen til MSBuild.exe."
-  remarks: "I [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] 3.5, &quot;BinPath&quot; er erstattet av &quot;ToolsPath&quot;. Derfor i den. Mål fil, bruker MSBuildToolsPath i stedet for MBBuildBinPath. I de [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] objektmodellen &quot;BinPath&quot; er knyttet til verktøysettet du kjører. Trinn for å hente banen fra build-motoren er som følger: 1.  Hent standard verktøy versjonen.      2.  Hent verktøysettet kartet.      3.  Finn verktøysettet, basert på strengen på kartet.      4.  Hent verktøysettet.      5.  Hente banen fra verktøysettet.       Denne prosedyren er ikke nødvendig hvis du oppretter motoren. I dette tilfellet kjenner du allerede verktøysettet-bane.       Siden prosjekter i en løsning kan bruke annen verktøysett, kan du også få MSBuild.exe banen fra prosjektet, som følger.      ```   project.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue    ```Du finner mer informasjon om verktøysett `MSBuild Tool Set (ToolsVersion)`."
+  summary: Gets or sets the path to MSBuild.exe.
+  remarks: "In [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] 3.5, the \"BinPath\" is superseded by the \"ToolsPath.\" Therefore, in the .Targets file, use MSBuildToolsPath rather than MBBuildBinPath. In the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] object model, \"BinPath\" relates to the Toolset you are running. The steps to get the path from the build engine are as follows:  \n  \n1.  Get the default tools version.  \n  \n2.  Get the Toolset map.  \n  \n3.  Find the Toolset, based on the string in the map.  \n  \n4.  Get the Toolset.  \n  \n5.  Get the path from the Toolset.  \n  \n This procedure is not required if you are creating the engine. In that case, you already know the Toolset path.  \n  \n Because projects in a solution can use different Toolsets, you can also obtain the MSBuild.exe path from the project, as follows.  \n  \n```  \nproject.EvaluatedProperties[ReservedPropertyNames.toolsPath].FinalValue   \n```  \n  \n For more information about Toolsets, see `MSBuild Tool Set (ToolsVersion)`."
   example:
   - "The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  \n  \n [!code-vb[msbuild_BuildAProject#1](~/add/codesnippet/visualbasic/BuildAProjectVB/Module1.vb#1)]\n [!code-cs[msbuild_BuildAProject#1](~/add/codesnippet/csharp/BuildAProjectCS/Program.cs#1)]"
   syntax:
     content: public string BinPath { get; set; }
     return:
       type: System.String
-      description: "Banen til MSBuild.exe."
+      description: The path to MSBuild.exe.
   overload: Microsoft.Build.BuildEngine.Engine.BinPath*
   exceptions: []
   platform:
@@ -247,12 +247,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Henter eller angir en verdi som angir om byggingen av mål i prosjektet er aktivert."
+  summary: Gets or sets a value that indicates whether the building of targets in the project is enabled.
   syntax:
     content: public bool BuildEnabled { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen av mål i prosjektet er aktivert. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the building of targets in the project is enabled; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildEnabled*
   exceptions: []
   platform:
@@ -269,16 +269,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Bygger angitt <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref>."
+  summary: Builds the specified <xref href="Microsoft.Build.BuildEngine.Project"></xref>.
   syntax:
     content: public bool BuildProject (Microsoft.Build.BuildEngine.Project project);
     parameters:
     - id: project
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> å bygge."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> to build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProject*
   exceptions: []
   platform:
@@ -295,19 +295,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Bygger det angitte målet for den angitte <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref>."
+  summary: Builds the specified target of the specified <xref href="Microsoft.Build.BuildEngine.Project"></xref>.
   syntax:
     content: public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string targetName);
     parameters:
     - id: project
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> å bygge."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> to build.
     - id: targetName
       type: System.String
-      description: "Den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> for Target-element for å bygge."
+      description: The <xref uid="langword_csharp_Name" name="Name" href=""></xref> attribute of the Target element to build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProject*
   exceptions: []
   platform:
@@ -324,19 +324,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Bygger angitte målene for den angitte <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref>."
+  summary: Builds the specified targets of the specified <xref href="Microsoft.Build.BuildEngine.Project"></xref>.
   syntax:
     content: public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string[] targetNames);
     parameters:
     - id: project
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> å bygge."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> to build.
     - id: targetNames
       type: System.String[]
-      description: "En matrise som inneholder den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> attributter for Target-elementer for å bygge."
+      description: An array that contains the <xref uid="langword_csharp_Name" name="Name" href=""></xref> attributes of the Target elements to build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProject*
   exceptions: []
   platform:
@@ -353,22 +353,22 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Bygger angitte målene for den angitte <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref>, og returnerer utdataene av målene."
+  summary: Builds the specified targets of the specified <xref href="Microsoft.Build.BuildEngine.Project"></xref>, and returns the outputs of the targets.
   syntax:
     content: public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string[] targetNames, System.Collections.IDictionary targetOutputs);
     parameters:
     - id: project
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> å bygge."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> to build.
     - id: targetNames
       type: System.String[]
-      description: "En matrise som inneholder den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> attributter for Target-elementer for å bygge."
+      description: An array that contains the <xref uid="langword_csharp_Name" name="Name" href=""></xref> attributes of the Target elements to build.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "Utdataene innebygd mål. Denne parameteren kan være en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) hvis utdataene er påkrevd."
+      description: The outputs of the built targets. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) if outputs are not required.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProject*
   exceptions: []
   platform:
@@ -385,25 +385,25 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Bygger angitte målene for den angitte <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> med angitt <xref href=&quot;Microsoft.Build.BuildEngine.BuildSettings&quot;> </xref>, og returnerer utdataene av målene."
+  summary: Builds the specified targets of the specified <xref href="Microsoft.Build.BuildEngine.Project"></xref> with the specified <xref href="Microsoft.Build.BuildEngine.BuildSettings"></xref>, and returns the outputs of the targets.
   syntax:
     content: public bool BuildProject (Microsoft.Build.BuildEngine.Project project, string[] targetNames, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags);
     parameters:
     - id: project
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> å bygge."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> to build.
     - id: targetNames
       type: System.String[]
-      description: "En matrise som inneholder den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> attributter for Target-elementer for å bygge."
+      description: An array that contains the <xref uid="langword_csharp_Name" name="Name" href=""></xref> attributes of the Target elements to build.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "Utdataene innebygd mål. Denne parameteren kan være en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) hvis utdataene er påkrevd."
+      description: The outputs of the built targets. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) if outputs are not required.
     - id: buildFlags
       type: Microsoft.Build.BuildEngine.BuildSettings
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.BuildSettings&quot;> </xref> skal brukes til versjonen."
+      description: The <xref href="Microsoft.Build.BuildEngine.BuildSettings"></xref> to apply to the build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProject*
   exceptions: []
   platform:
@@ -420,7 +420,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn den angitte prosjektfilen og bygger prosjektet."
+  summary: Loads the specified project file and builds the project.
   remarks: ''
   example:
   - "The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the BuildProjectFile method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  \n  \n [!code-vb[msbuild_BuildAProject#1](~/add/codesnippet/visualbasic/BuildAProjectVB/Module1.vb#1)]\n [!code-cs[msbuild_BuildAProject#1](~/add/codesnippet/csharp/BuildAProjectCS/Program.cs#1)]"
@@ -429,10 +429,10 @@ items:
     parameters:
     - id: projectFile
       type: System.String
-      description: "Prosjektfilen til å laste inn og bygge."
+      description: The project file to load and build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFile*
   exceptions: []
   platform:
@@ -449,19 +449,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn den angitte prosjektfilen og bygger det angitte målet av prosjektet."
+  summary: Loads the specified project file and builds the specified target of the project.
   syntax:
     content: public bool BuildProjectFile (string projectFile, string targetName);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Prosjektfilen til å laste inn og bygge."
+      description: The project file to load and build.
     - id: targetName
       type: System.String
-      description: "Den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> for Target-element for å bygge."
+      description: The <xref uid="langword_csharp_Name" name="Name" href=""></xref> attribute of the Target element to build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFile*
   exceptions: []
   platform:
@@ -478,19 +478,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn den angitte prosjektfilen og bygger angitte målene for prosjektet."
+  summary: Loads the specified project file and builds the specified targets of the project.
   syntax:
     content: public bool BuildProjectFile (string projectFile, string[] targetNames);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Prosjektfilen til å laste inn og bygge."
+      description: The project file to load and build.
     - id: targetNames
       type: System.String[]
-      description: "En matrise som inneholder den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> attributter for Target-elementer for å bygge."
+      description: An array that contains the <xref uid="langword_csharp_Name" name="Name" href=""></xref> attributes of the Target elements to build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFile*
   exceptions: []
   platform:
@@ -507,22 +507,22 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn den angitte prosjektfilen og bygger angitte målene for prosjektet med den angitte <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>, og returnerer utdataene av målene.</xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>"
+  summary: Loads the specified project file and builds the specified targets of the project with the specified <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>, and returns the outputs of the targets.
   syntax:
     content: public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Prosjektfilen til å laste inn og bygge."
+      description: The project file to load and build.
     - id: targetNames
       type: System.String[]
-      description: "En matrise som inneholder den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> attributter for Target-elementer for å bygge."
+      description: An array that contains the <xref uid="langword_csharp_Name" name="Name" href=""></xref> attributes of the Target elements to build.
     - id: globalProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "Den <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>å byggingen.</xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>"
+      description: The <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*> to apply to the build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFile*
   exceptions: []
   platform:
@@ -539,25 +539,25 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn den angitte prosjektfilen og bygger angitte målene for prosjektet med den angitte <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>, og returnerer utdataene av målene.</xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>"
+  summary: Loads the specified project file and builds the specified targets of the project with the specified <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>, and returns the outputs of the targets.
   syntax:
     content: public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, System.Collections.IDictionary targetOutputs);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Prosjektfilen til å laste inn og bygge."
+      description: The project file to load and build.
     - id: targetNames
       type: System.String[]
-      description: "En matrise som inneholder den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> attributter for Target-elementer for å bygge."
+      description: An array that contains the <xref uid="langword_csharp_Name" name="Name" href=""></xref> attributes of the Target elements to build.
     - id: globalProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "Den <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>å byggingen.</xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>"
+      description: The <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*> to apply to the build.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "Utdataene innebygd mål. Denne parameteren kan være en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) hvis utdataene er påkrevd."
+      description: The outputs of the built targets. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) if outputs are not required.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFile*
   exceptions: []
   platform:
@@ -574,28 +574,28 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn den angitte prosjektfilen og bygger angitte målene for prosjektet med den angitte <xref href=&quot;Microsoft.Build.BuildEngine.BuildSettings&quot;> </xref> og <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>, og returnerer utdataene av målene.</xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>"
+  summary: Loads the specified project file and builds the specified targets of the project with the specified <xref href="Microsoft.Build.BuildEngine.BuildSettings"></xref> and <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>, and returns the outputs of the targets.
   syntax:
     content: public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Prosjektfilen til å laste inn og bygge."
+      description: The project file to load and build.
     - id: targetNames
       type: System.String[]
-      description: "En matrise som inneholder den <xref uid=&quot;langword_csharp_Name&quot; name=&quot;Name&quot; href=&quot;&quot;> </xref> attributter for Target-elementer for å bygge."
+      description: An array that contains the <xref uid="langword_csharp_Name" name="Name" href=""></xref> attributes of the Target elements to build.
     - id: globalProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "Den <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>å byggingen.</xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*>"
+      description: The <xref:Microsoft.Build.BuildEngine.Engine.GlobalProperties*> to apply to the build.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "Utdataene innebygd mål. Denne parameteren kan være en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) hvis utdataene er påkrevd."
+      description: The outputs of the built targets. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) if outputs are not required.
     - id: buildFlags
       type: Microsoft.Build.BuildEngine.BuildSettings
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.BuildSettings&quot;> </xref> skal brukes til versjonen."
+      description: The <xref href="Microsoft.Build.BuildEngine.BuildSettings"></xref> to apply to the build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen var vellykket. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFile*
   exceptions: []
   platform:
@@ -612,32 +612,32 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn en prosjektfilen fra disk, og bygger angitt mål."
-  remarks: "Denne overlasten tar et sett med globale egenskaper for hvert prosjekt som skal brukes for byggingen returnerer target-utdataene og gjør det også mulig oppkalleren til å angi ytterligere build-flagg."
+  summary: Loads a project file from disk and builds the given targets.
+  remarks: This overload takes a set of global properties for each project to use for the build, returns the target outputs, and also enables the caller to specify additional build flags.
   syntax:
     content: public bool BuildProjectFile (string projectFile, string[] targetNames, Microsoft.Build.BuildEngine.BuildPropertyGroup globalProperties, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags, string toolsVersion);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Navnet på å bygge prosjektet."
+      description: The name of the project to build.
     - id: targetNames
       type: System.String[]
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> matrise mål for hvert prosjekt. Kan være <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref> Hvis du vil lage standardmål for prosjektet."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> array of targets for each project. Can be <xref uid="langword_csharp_null" name="null" href=""></xref> if you want to build the default targets for the project.
     - id: globalProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "En <xref:System.Collections.IDictionary>matrise med egenskaper for hvert prosjekt.</xref:System.Collections.IDictionary> Kan være <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref> Hvis det kreves ingen globale egenskaper."
+      description: An <xref:System.Collections.IDictionary> array of properties for each project. Can be <xref uid="langword_csharp_null" name="null" href=""></xref> if no global properties are required.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildSettings&quot;> </xref> matrise med tabeller for target utdataene. Kan være <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref> Hvis det ikke kreves utdataene."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildSettings"></xref> array of tables for target outputs. Can be <xref uid="langword_csharp_null" name="null" href=""></xref> if outputs are not required.
     - id: buildFlags
       type: Microsoft.Build.BuildEngine.BuildSettings
-      description: "En strengmatrise av flere kompilering."
+      description: A string array of additional build flags.
     - id: toolsVersion
       type: System.String
-      description: "ToolsVersion å legge for prosjektet i denne kompilering."
+      description: The ToolsVersion to impose on the project in this build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis byggingen lykkes. Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build succeeds; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFile*
   exceptions: []
   platform:
@@ -654,32 +654,32 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Laster inn et sett med prosjektet filer fra disk, og bygger deretter den angitte listen over mål for hvert prosjekt."
-  remarks: "Denne overlasten tar et sett med globale egenskaper for hvert prosjekt som skal brukes for byggingen returnerer target-utdataene og gjør det også mulig oppkalleren til å angi ytterligere build-flagg."
+  summary: Loads a set of project files from disk and then builds the given list of targets for each project.
+  remarks: This overload takes a set of global properties for each project to use for the build, returns the target outputs, and also enables the caller to specify additional build flags.
   syntax:
     content: public bool BuildProjectFiles (string[] projectFiles, string[][] targetNamesPerProject, Microsoft.Build.BuildEngine.BuildPropertyGroup[] globalPropertiesPerProject, System.Collections.IDictionary[] targetOutputsPerProject, Microsoft.Build.BuildEngine.BuildSettings buildFlags, string[] toolsVersions);
     parameters:
     - id: projectFiles
       type: System.String[]
-      description: "En streng filliste prosjektet å bygge. Denne verdien kan ikke være <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref>."
+      description: A string list of project files to build. This value cannot be <xref uid="langword_csharp_null" name="null" href=""></xref>.
     - id: targetNamesPerProject
       type: System.String[][]
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> matrise mål for hvert prosjekt."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> array of targets for each project.
     - id: globalPropertiesPerProject
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup[]
-      description: "En <xref:System.Collections.IDictionary>matrise med egenskaper for hvert prosjekt.</xref:System.Collections.IDictionary> Denne verdien kan ikke være <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref>."
+      description: An <xref:System.Collections.IDictionary> array of properties for each project. This value cannot be <xref uid="langword_csharp_null" name="null" href=""></xref>.
     - id: targetOutputsPerProject
       type: System.Collections.IDictionary[]
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildSettings&quot;> </xref> matrise med tabeller for target utdataene. Denne verdien kan ikke være <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref>."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildSettings"></xref> array of tables for target outputs. This value cannot be <xref uid="langword_csharp_null" name="null" href=""></xref>.
     - id: buildFlags
       type: Microsoft.Build.BuildEngine.BuildSettings
-      description: "En strengmatrise av flere kompilering."
+      description: A string array of additional build flags.
     - id: toolsVersions
       type: System.String[]
-      description: "ToolsVersion å legge for prosjektet i denne kompilering."
+      description: The ToolsVersion to impose on the project in this build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis prosjektet bygging vellykket; Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project built successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.BuildProjectFiles*
   exceptions: []
   platform:
@@ -696,13 +696,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Oppretter et tomt <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> objektet som er forbundet med denne <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+  summary: Creates an empty <xref href="Microsoft.Build.BuildEngine.Project"></xref> object that is associated with this <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   syntax:
     content: public Microsoft.Build.BuildEngine.Project CreateNewProject ();
     parameters: []
     return:
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den opprettede <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> objektet."
+      description: The created <xref href="Microsoft.Build.BuildEngine.Project"></xref> object.
   overload: Microsoft.Build.BuildEngine.Engine.CreateNewProject*
   exceptions: []
   platform:
@@ -719,13 +719,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Standard ToolsVersion av denne build-motoren."
-  remarks: "Prosjekter bruker denne ToolsVersion hvis de ikke ellers fortalte ToolsVersion som skal brukes. Denne verdien er hentet fra enten de. exe.config filen eller registret. Ingen angi standard ToolsVersion, og er versjonen hardkodet til versjon &quot;2.0.&quot; Du finner mer informasjon om ToolsVersion [bygge for bestemte versjoner av .NET Framework](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8)."
+  summary: The default ToolsVersion of this build engine.
+  remarks: Projects use this ToolsVersion if they are not otherwise told which ToolsVersion to use. This value is retrieved from either the .exe.config file or the registry. If neither specify a default ToolsVersion, then the version is hard-coded to version "2.0." For more information about ToolsVersion, see [Building for Specific Versions of the .NET Framework](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8).
   syntax:
     content: public string DefaultToolsVersion { get; set; }
     return:
       type: System.String
-      description: "En streng som representerer standard ToolsVersion."
+      description: A string that represents the default ToolsVersion.
   overload: Microsoft.Build.BuildEngine.Engine.DefaultToolsVersion*
   exceptions: []
   platform:
@@ -742,16 +742,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Returnerer den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> objektet som er knyttet til den angitte prosjektfilen."
+  summary: Returns the <xref href="Microsoft.Build.BuildEngine.Project"></xref> object that is associated with the specified project file.
   syntax:
     content: public Microsoft.Build.BuildEngine.Project GetLoadedProject (string projectFullFileName);
     parameters:
     - id: projectFullFileName
       type: System.String
-      description: "Den fullstendige filbanen til prosjektfilen for den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> objektet."
+      description: The fully qualified file path to the project file of the <xref href="Microsoft.Build.BuildEngine.Project"></xref> object.
     return:
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> objekt som er knyttet til den angitte prosjektfilen. Hvis ingen <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> objektet er knyttet til den angitte prosjektfilen, returneres en nullreferanse (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> i [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> object that associated with the specified project file. If no <xref href="Microsoft.Build.BuildEngine.Project"></xref> object is associated with the specified project file, the method returns a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
   overload: Microsoft.Build.BuildEngine.Engine.GetLoadedProject*
   exceptions: []
   platform:
@@ -768,12 +768,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Henter den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> som er global (delt) for denne <xref href=&quot;System.AppDomain&quot;> </xref>."
+  summary: Gets the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> that is global (shared) for this <xref href="System.AppDomain"></xref>.
   syntax:
     content: public static Microsoft.Build.BuildEngine.Engine GlobalEngine { get; }
     return:
       type: Microsoft.Build.BuildEngine.Engine
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> som er global (delt) for denne <xref href=&quot;System.AppDomain&quot;> </xref>."
+      description: The <xref href="Microsoft.Build.BuildEngine.Engine"></xref> that is global (shared) for this <xref href="System.AppDomain"></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.GlobalEngine*
   exceptions: []
   platform:
@@ -790,13 +790,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Henter eller angir en samling av globale egenskaper for prosjektet."
-  remarks: "Globale er egenskaper som er angitt av den **/property** bytte i kommandolinjen eller egenskaper som er angitt av det integrerte utviklingsmiljøet (IDE) før et prosjekt bygges. Egenskapene globale brukes på alle prosjekter som er bygget ved hjelp av <xref:Microsoft.Build.BuildEngine.Engine>.</xref:Microsoft.Build.BuildEngine.Engine>"
+  summary: Gets or sets a collection of the global properties for the project.
+  remarks: Global properties are properties that are set by using the **/property** switch on the command line, or properties that are set by the integrated development environment (IDE) before a project is built. These global properties are applied to all projects that are built by using this <xref:Microsoft.Build.BuildEngine.Engine>.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildPropertyGroup GlobalProperties { get; set; }
     return:
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> som inneholder egenskapene globale for prosjektet."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> that contains the global properties for the project.
   overload: Microsoft.Build.BuildEngine.Engine.GlobalProperties*
   exceptions: []
   platform:
@@ -813,13 +813,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Henter om et prosjekt for øyeblikket opprettes."
-  remarks: "Denne egenskapen kan kontrolleres for å hindre at et prosjekt som endres når det blir bygget."
+  summary: Gets whether a project is currently being built.
+  remarks: This property can be checked to prevent a project from being modified while it is being built.
   syntax:
     content: public bool IsBuilding { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis en build pågår; Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if a build is in progress; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.IsBuilding*
   exceptions: []
   platform:
@@ -836,12 +836,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Henter eller angir en verdi som angir om du skal logge bare kritiske hendelser, for eksempel advarsler og feil, under byggingen."
+  summary: Gets or sets a value that indicates whether to only log critical events, such as warnings and errors, during the build.
   syntax:
     content: public bool OnlyLogCriticalEvents { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Hvis det bare kritiske hendelser skal være logget; Ellers <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if only critical events should be logged; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.OnlyLogCriticalEvents*
   exceptions: []
   platform:
@@ -858,17 +858,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Registrerer distribuert tastetrykkregistratorer med build-motoren."
-  remarks: "Denne metoden er ikke sikker. For å sikre uniform virkemåte, bør alle tastetrykkregistratorer registrere før byggingen er startet. Hvis du vil ha mer informasjon, se [skriving flere-Processor-bevisste tastetrykkregistratorer](~/add/includes/ajax-current-ext-md.md)."
+  summary: Registers distributed loggers with the build engine.
+  remarks: This method is not thread-safe. To ensure uniform behavior, all loggers should register before the build is started. For more information, see [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: public void RegisterDistributedLogger (Microsoft.Build.Framework.ILogger centralLogger, Microsoft.Build.BuildEngine.LoggerDescription forwardingLogger);
     parameters:
     - id: centralLogger
       type: Microsoft.Build.Framework.ILogger
-      description: "En <xref href=&quot;Microsoft.Build.Framework.ILogger&quot;> </xref> som representerer den sentrale meldingslogging."
+      description: An <xref href="Microsoft.Build.Framework.ILogger"></xref> that represents the central logger.
     - id: forwardingLogger
       type: Microsoft.Build.BuildEngine.LoggerDescription
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.LoggerDescription&quot;> </xref> som representerer videresending meldingslogging."
+      description: A <xref href="Microsoft.Build.BuildEngine.LoggerDescription"></xref> that represents the forwarding logger.
   overload: Microsoft.Build.BuildEngine.Engine.RegisterDistributedLogger*
   exceptions: []
   platform:
@@ -885,8 +885,8 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Registrerer den angitte transaksjonslogging med den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
-  remarks: "Når en logger er registrert med den <xref:Microsoft.Build.BuildEngine.Engine>, den mottar alle build-hendelser.</xref:Microsoft.Build.BuildEngine.Engine>       For å avregistrere tastetrykkregistratorer, kan du bruke den <xref:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers%2A>metoden.</xref:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers%2A>"
+  summary: Registers the specified logger with the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
+  remarks: "When a logger is registered with the <xref:Microsoft.Build.BuildEngine.Engine>, it receives all build events.  \n  \n To unregister loggers, use the <xref:Microsoft.Build.BuildEngine.Engine.UnregisterAllLoggers%2A> method."
   example:
   - "The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  \n  \n [!code-vb[msbuild_BuildAProject#1](~/add/codesnippet/visualbasic/BuildAProjectVB/Module1.vb#1)]\n [!code-cs[msbuild_BuildAProject#1](~/add/codesnippet/csharp/BuildAProjectCS/Program.cs#1)]"
   syntax:
@@ -894,7 +894,7 @@ items:
     parameters:
     - id: logger
       type: Microsoft.Build.Framework.ILogger
-      description: "Transaksjonslogging å knytte til den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+      description: The logger to associate with the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.RegisterLogger*
   exceptions: []
   platform:
@@ -911,7 +911,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kalles når verten er ferdig med denne build-motoren. Den Avregistrerer tastetrykkregistratorer og avsluttes noder."
+  summary: Called when the host is finished with this build engine. It unregisters loggers and shuts down nodes.
   syntax:
     content: public void Shutdown ();
     parameters: []
@@ -931,13 +931,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Angir eller henter samlingen av verktøysett som identifiseres av databasemotorforekomsten denne kompilering."
-  remarks: "Du finner mer informasjon om verktøysett [bygge for bestemte versjoner av .NET Framework](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8)."
+  summary: Sets or Gets the collection of Toolsets that are recognized by this build engine instance.
+  remarks: For more information about ToolSets, see [Building for Specific Versions of the .NET Framework](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8).
   syntax:
     content: public Microsoft.Build.BuildEngine.ToolsetCollection Toolsets { get; }
     return:
       type: Microsoft.Build.BuildEngine.ToolsetCollection
-      description: "En <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref> på Verktøy settene gjenkjennes av denne databasemotorforekomsten."
+      description: A <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref> of the tools sets recognized by this engine instance.
   overload: Microsoft.Build.BuildEngine.Engine.Toolsets*
   exceptions: []
   platform:
@@ -954,7 +954,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Fjerner alle referanser til <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> objekter fra den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+  summary: Removes all references to <xref href="Microsoft.Build.BuildEngine.Project"></xref> objects from the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   syntax:
     content: public void UnloadAllProjects ();
     parameters: []
@@ -974,13 +974,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Fjerner referansen til den angitte <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> fra den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+  summary: Removes the reference to the specified <xref href="Microsoft.Build.BuildEngine.Project"></xref> from the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   syntax:
     content: public void UnloadProject (Microsoft.Build.BuildEngine.Project project);
     parameters:
     - id: project
       type: Microsoft.Build.BuildEngine.Project
-      description: "Den <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> fjerne fra den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> to remove from the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.UnloadProject*
   exceptions: []
   platform:
@@ -997,8 +997,8 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Avregistrerer alle tastetrykkregistratorer fra den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
-  remarks: "Metoden UnregisterAllLoggers kaller <xref:Microsoft.Build.Framework.ILogger.Shutdown%2A>-metoden på alle registrerte transaksjonslogging før under avregistrering av dem fra <xref:Microsoft.Build.BuildEngine.Engine>.</xref:Microsoft.Build.BuildEngine.Engine> </xref:Microsoft.Build.Framework.ILogger.Shutdown%2A>"
+  summary: Unregisters all loggers from the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
+  remarks: The UnregisterAllLoggers method calls the <xref:Microsoft.Build.Framework.ILogger.Shutdown%2A> method on every registered logger before unregistering each of them from the <xref:Microsoft.Build.BuildEngine.Engine>.
   example:
   - "The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  \n  \n [!code-vb[msbuild_BuildAProject#1](~/add/codesnippet/visualbasic/BuildAProjectVB/Module1.vb#1)]\n [!code-cs[msbuild_BuildAProject#1](~/add/codesnippet/csharp/BuildAProjectCS/Program.cs#1)]"
   syntax:
@@ -1020,12 +1020,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Henter versjonen av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+  summary: Gets the version of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   syntax:
     content: public static Version Version { get; }
     return:
       type: System.Version
-      description: "Versjonen av den <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+      description: The version of the <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   overload: Microsoft.Build.BuildEngine.Engine.Version*
   exceptions: []
   platform:

@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectTaskInstanceChild
   fullName: Microsoft.Build.Execution.ProjectTaskInstanceChild
   type: Class
-  summary: "Trekker basisklasse for TaskOutputItem og TaskOutputProperty klasser. Dette gjør at de kan brukes i en enkel samling."
+  summary: Abstracts the base class for the TaskOutputItem and TaskOutputProperty classes. This allows them to be used in a single collection.
   syntax:
     content: public abstract class ProjectTaskInstanceChild
   inheritance:
@@ -35,7 +35,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Abstrakte klasser kan ikke startes."
+  summary: Abstract classes cannot be instantiated.
   syntax:
     content: protected ProjectTaskInstanceChild ();
     parameters: []
@@ -55,12 +55,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter attributtet betingelsen for denne oppgaven."
+  summary: Gets the Condition attribute of this task.
   syntax:
     content: public abstract string Condition { get; }
     return:
       type: System.String
-      description: "Returnerer attributtverdien betingelse. Returnerer en tom streng hvis attributtet ikke finnes."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.Condition*
   exceptions: []
   platform:
@@ -77,12 +77,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Plasseringen av opprinnelige betingelse attributtet eventuell."
+  summary: The location of the original Condition attribute, if any.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returnerer plasseringen for vilkåret eller null."
+      description: Returns location of the condition, or null.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.ConditionLocation*
   exceptions: []
   platform:
@@ -99,12 +99,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter plasseringen for det opprinnelige elementet."
+  summary: Gets the location of the original element.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returnerer plasseringen for det opprinnelige elementet."
+      description: Returns the location of the original element.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.Location*
   exceptions: []
   platform:
@@ -121,12 +121,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter plasseringen av TaskParameter-attributtet."
+  summary: Gets the location of the TaskParameter attribute.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation TaskParameterLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returnerer TaskParameter plasseringen."
+      description: Returns the TaskParameter location.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.TaskParameterLocation*
   exceptions: []
   platform:

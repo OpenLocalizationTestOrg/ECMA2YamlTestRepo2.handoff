@@ -39,7 +39,7 @@ items:
   nameWithType: BuildParameters
   fullName: Microsoft.Build.Execution.BuildParameters
   type: Class
-  summary: "Denne klassen representerer alle innstillingene som må angis for å starte en kompilering."
+  summary: This class represents all of the settings which must be specified to start a build.
   syntax:
     content: public class BuildParameters
   inheritance:
@@ -60,8 +60,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Oppretter kompilering parametere."
-  remarks: "Konstruktøren for bruk i innstillingen alle bygge egenskaper programmatisk."
+  summary: Creates build parameters.
+  remarks: Constructor for use in setting all build properties programmatically.
   syntax:
     content: public BuildParameters ();
     parameters: []
@@ -81,13 +81,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Oppretter kompilering parametere og initialiserer dem fra en samling av prosjektet."
+  summary: Creates build parameters and initializes them from a project collection.
   syntax:
     content: public BuildParameters (Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "ProjectCollection som BuildParameters skal fylle ut seg selv."
+      description: The ProjectCollection from which the BuildParameters should populate itself.
   overload: Microsoft.Build.Execution.BuildParameters.#ctor*
   exceptions: []
   platform:
@@ -104,12 +104,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter miljøvariabler som ble angitt da denne kompilering ble opprettet."
+  summary: Gets the environment variables which were set when this build was created.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> BuildProcessEnvironment { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Returnerer miljøvariabler som er angitt under kompilering."
+      description: Returns environment variables set when build was created.
   overload: Microsoft.Build.Execution.BuildParameters.BuildProcessEnvironment*
   exceptions: []
   platform:
@@ -126,12 +126,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir ønsket tråd prioriteten for bygging."
+  summary: Gets or sets the desired thread priority for building.
   syntax:
     content: public System.Threading.ThreadPriority BuildThreadPriority { get; set; }
     return:
       type: System.Threading.ThreadPriority
-      description: "Returnerer tråd prioriteten for bygging"
+      description: Returns the thread priority for building
   overload: Microsoft.Build.Execution.BuildParameters.BuildThreadPriority*
   exceptions: []
   platform:
@@ -148,14 +148,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Oppretter en kopi av dette kompilering parametere objektet."
-  remarks: "Denne metoden oppretter en kopi av transaksjonslogging samlinger, men klone ikke tastetrykkregistratorer i dypt."
+  summary: Creates a clone of this build parameters object.
+  remarks: This method creates a clone of the logger collections, but does not deeply clone the loggers within.
   syntax:
     content: public Microsoft.Build.Execution.BuildParameters Clone ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.BuildParameters
-      description: "Returnerer en kopi av dette kompilering parameterne objektet."
+      description: Returns a clone of this build parameters object.
   overload: Microsoft.Build.Execution.BuildParameters.Clone*
   exceptions: []
   platform:
@@ -172,12 +172,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir navnet på kulturen som skal brukes under byggingen."
+  summary: Gets or sets the name of the culture to use during the build.
   syntax:
     content: public System.Globalization.CultureInfo Culture { get; set; }
     return:
       type: System.Globalization.CultureInfo
-      description: "Returnerer kulturen."
+      description: Returns the culture.
   overload: Microsoft.Build.Execution.BuildParameters.Culture*
   exceptions: []
   platform:
@@ -194,12 +194,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir verktøy standardversjonen for byggingen."
+  summary: Gets or sets the default tools version for the build.
   syntax:
     content: public string DefaultToolsVersion { get; set; }
     return:
       type: System.String
-      description: "Returnerer verktøy-versjon."
+      description: Returns the tools version.
   overload: Microsoft.Build.Execution.BuildParameters.DefaultToolsVersion*
   exceptions: []
   platform:
@@ -216,12 +216,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir en bryter som angir om byggingen skal sende en detaljert oversikt på slutten av loggen."
+  summary: Gets or sets a switch that specifies whether the build should emit a detailed summary at the end of the log.
   syntax:
     content: public bool DetailedSummary { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer verdien for en bryter som angir om byggingen skal sende en detaljert oversikt på slutten av loggen"
+      description: Returns the value of a switch that specifies whether the build should emit a detailed summary at the end of the log
   overload: Microsoft.Build.Execution.BuildParameters.DetailedSummary*
   exceptions: []
   platform:
@@ -238,12 +238,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir flagget som bestemmer om det skal brukes i prosessen noden."
+  summary: Gets or sets the flag determining whether to use the in process node.
   syntax:
     content: public bool DisableInProcNode { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer flagget."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.DisableInProcNode*
   exceptions: []
   platform:
@@ -260,12 +260,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir et flagg som fastsetter om utenfor prosessen noder skal vedvarer etter at versjonen og venter på flere versjoner."
+  summary: Gets or sets a flag determining whether out-of-process nodes should persist after the build and wait for further builds.
   syntax:
     content: public bool EnableNodeReuse { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer flagget."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.EnableNodeReuse*
   exceptions: []
   platform:
@@ -282,12 +282,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter en uforanderlig samling av egenskaper for miljø."
+  summary: Gets an immutable collection of environment properties.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> EnvironmentProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Returnerer en uforanderlig samling av egenskaper for miljø."
+      description: Returns an immutable collection of environment properties.
   overload: Microsoft.Build.Execution.BuildParameters.EnvironmentProperties*
   exceptions: []
   platform:
@@ -304,12 +304,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir samlingen av videresendt transaksjonslogging beskrivelse."
+  summary: Gets or sets the collection of forwarding logger descriptions.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> ForwardingLoggers { get; set; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "Returnerer samling av videresendt transaksjonslogging beskrivelse."
+      description: Returns the collection of forwarding logger descriptions.
   overload: Microsoft.Build.Execution.BuildParameters.ForwardingLoggers*
   exceptions: []
   platform:
@@ -326,16 +326,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter en gitt verktøysettet."
+  summary: Gets a given toolset.
   syntax:
     content: public Microsoft.Build.Evaluation.Toolset GetToolset (string toolsVersion);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Verktøysettet for å hente."
+      description: The toolset to retrieve.
     return:
       type: Microsoft.Build.Evaluation.Toolset
-      description: "Returnerer verktøysettet."
+      description: Returns the toolset.
   overload: Microsoft.Build.Execution.BuildParameters.GetToolset*
   exceptions: []
   platform:
@@ -352,12 +352,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir en uforanderlig samling globale egenskaper."
+  summary: Gets or sets an immutable collection of global properties.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; set; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Returnerer en uforanderlig samling av globale egenskaper."
+      description: Returns an immutable collection of global properties.
   overload: Microsoft.Build.Execution.BuildParameters.GlobalProperties*
   exceptions: []
   platform:
@@ -374,12 +374,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir en tjeneste som gjør det mulig å gir mer kontroll over build-prosessen."
+  summary: Gets or sets a service that allows the host to provide additional control over the build process.
   syntax:
     content: public Microsoft.Build.Execution.HostServices HostServices { get; set; }
     return:
       type: Microsoft.Build.Execution.HostServices
-      description: "Returnerer vertstjenesten."
+      description: Returns the host service.
   overload: Microsoft.Build.Execution.BuildParameters.HostServices*
   exceptions: []
   platform:
@@ -396,13 +396,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir en bryter som aktiverer eller deaktiverer eldre trådmodell semantikk."
-  remarks: "Eldre trådmodell semantikk indikerer at hvis en sending som skal bygges bare den i prosedyren node og innsending av utføres synkront og deretter på alle sine forespørsler vil bli bygget på tråden som aktiveres byggingen i stedet for en tråd som eies av BuildManager."
+  summary: Gets or sets a switch that enables or disables legacy threading semantics.
+  remarks: Legacy threading semantics indicate that if a submission is to be built only on the in-proc node and the submission is executed synchronously, then all of its requests will be built on the thread which invoked the build rather than a thread owned by the BuildManager.
   syntax:
     content: public bool LegacyThreadingSemantics { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer en bryter som aktiverer eller deaktiverer eldre trådmodell semantikk; SANN hvis aktivert, false ellers."
+      description: Returns a switch that enables or disables legacy threading semantics; true if enabled, false otherwise.
   overload: Microsoft.Build.Execution.BuildParameters.LegacyThreadingSemantics*
   exceptions: []
   platform:
@@ -419,12 +419,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir samlingen av tastetrykkregistratorer skal brukes under byggingen."
+  summary: Gets or sets the collection of loggers to use during the build.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> Loggers { get; set; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Returnerer samling av tastetrykkregistratorer skal brukes under byggingen."
+      description: Returns the collection of loggers to use during the build.
   overload: Microsoft.Build.Execution.BuildParameters.Loggers*
   exceptions: []
   platform:
@@ -441,12 +441,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir flagget som bestemmer om byggingen logger inndataparameterne."
+  summary: Gets or sets the flag determining whether the build logs the input parameters.
   syntax:
     content: public bool LogInitialPropertiesAndItems { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer flagget."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.LogInitialPropertiesAndItems*
   exceptions: []
   platform:
@@ -463,12 +463,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir flagget bestemme om byggingen logger oppgaven parametere."
+  summary: Gets or sets the flag determining whether the build logs the task parameters.
   syntax:
     content: public bool LogTaskInputs { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer flagget."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.LogTaskInputs*
   exceptions: []
   platform:
@@ -485,12 +485,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir maksimum antall noder kan bruke denne kompilering."
+  summary: Gets or sets the maximum number of nodes this build may use.
   syntax:
     content: public int MaxNodeCount { get; set; }
     return:
       type: System.Int32
-      description: "Returnerer det maksimale antallet noder kan bruke denne kompilering."
+      description: Returns the maximum number of nodes this build may use.
   overload: Microsoft.Build.Execution.BuildParameters.MaxNodeCount*
   exceptions: []
   platform:
@@ -507,12 +507,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir hvor mye minne byggingen bør begrense selve til å bruke, i megabyte."
+  summary: Gets or sets the amount of memory the build should limit itself to using, in megabytes.
   syntax:
     content: public int MemoryUseLimit { get; set; }
     return:
       type: System.Int32
-      description: "Returnerer hvor mye minne byggingen bør begrense selve til å bruke, i megabyte."
+      description: Returns the amount of memory the build should limit itself to using, in megabytes.
   overload: Microsoft.Build.Execution.BuildParameters.MemoryUseLimit*
   exceptions: []
   platform:
@@ -529,12 +529,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir plasseringen av noden kompilering kjørbare filen."
+  summary: Gets or sets the location of the build node executable.
   syntax:
     content: public string NodeExeLocation { get; set; }
     return:
       type: System.String
-      description: "Returnerer plasseringen for noden kompilering kjørbare filen."
+      description: Returns the location of the build node executable.
   overload: Microsoft.Build.Execution.BuildParameters.NodeExeLocation*
   exceptions: []
   platform:
@@ -551,12 +551,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir et flagg som bestemmer om ikke-kritiske loggingshendelser skal forkastes."
+  summary: Gets or sets a flag that determines if non-critical logging events should be discarded.
   syntax:
     content: public bool OnlyLogCriticalEvents { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer et flagg som bestemmer om ikke-kritiske loggingshendelser må forkastes."
+      description: Returns a flag that determines if non-critical logging events should be discarded.
   overload: Microsoft.Build.Execution.BuildParameters.OnlyLogCriticalEvents*
   exceptions: []
   platform:
@@ -573,12 +573,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir en bryter som angir om byggingen må tilbakestille konfigurasjonen og resultater fullført."
+  summary: Gets or sets a switch that specifies whether the build should reset the configuration and results caches.
   syntax:
     content: public bool ResetCaches { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer en bryter som angir om byggingen må tilbakestille konfigurasjonen og resultater hurtigbufrer; True hvis hurtigbufrer må tilbakestilles, false ellers."
+      description: Returns a switch that specifies whether the build should reset the configuration and results caches; true if the caches should be reset, false otherwise.
   overload: Microsoft.Build.Execution.BuildParameters.ResetCaches*
   exceptions: []
   platform:
@@ -595,13 +595,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir en switch som angir om drift miljøet, for eksempel gjeldende katalog og -miljøet ditt, må lagres og gjenopprettes mellom prosjektet bygger og oppgaven anrop."
-  remarks: "Dette må være satt til false for alle andre build-ledere kjører i systemet slik at vi ikke har to build-ledere trampling for hver andre miljøet."
+  summary: Gets or sets a switch specifying if the operating environment, such as the current directory and environment, should be saved and restored between project builds and task invocations.
+  remarks: This should be set to false for any other build managers running in the system so that we do not have two build managers trampling on each others environment.
   syntax:
     content: public bool SaveOperatingEnvironment { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer en bryter som angir om det operative miljøet skal lagres og gjenopprettet mellom prosjektet delversjoner og oppgaven anrop; SANN hvis miljøet skal lagres, false ellers."
+      description: Returns a switch indicating whether the operating environment should be saved and restored between project builds and task invocations; true if the environment should be saved, false otherwise.
   overload: Microsoft.Build.Execution.BuildParameters.SaveOperatingEnvironment*
   exceptions: []
   platform:
@@ -618,12 +618,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir flagget som bestemmer om å avslutte prosessen i noden når byggingen er fullført. Standard <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+  summary: Gets or sets the flag determining whether to shut down the in process node when the build finishes. The default is <xref uid="langword_csharp_false" name="false" href=""></xref>.
   syntax:
     content: public bool ShutdownInProcNodeOnBuildFinish { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer flagget."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.ShutdownInProcNodeOnBuildFinish*
   exceptions: []
   platform:
@@ -640,12 +640,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir steder til å søke etter verktøysett."
+  summary: Gets or sets locations to search for toolsets.
   syntax:
     content: public Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetDefinitionLocations { get; set; }
     return:
       type: Microsoft.Build.Evaluation.ToolsetDefinitionLocations
-      description: "Returnerer plasseringene til å søke etter verktøysett."
+      description: Returns locations to search for toolsets.
   overload: Microsoft.Build.Execution.BuildParameters.ToolsetDefinitionLocations*
   exceptions: []
   platform:
@@ -662,12 +662,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter alle verktøysett."
+  summary: Gets all of the toolsets.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.Toolset> Toolsets { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.Toolset}
-      description: "Returnerer alle verktøysett."
+      description: Returns all of the toolsets.
   overload: Microsoft.Build.Execution.BuildParameters.Toolsets*
   exceptions: []
   platform:
@@ -684,12 +684,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir navnet på Brukergrensesnittet kulturen som skal brukes under byggingen."
+  summary: Gets or sets the name of the UI culture to use during the build.
   syntax:
     content: public System.Globalization.CultureInfo UICulture { get; set; }
     return:
       type: System.Globalization.CultureInfo
-      description: "Returnerer navnet på Brukergrensesnittet kulturen som skal brukes under byggingen."
+      description: Returns the name of the UI culture to use during the build.
   overload: Microsoft.Build.Execution.BuildParameters.UICulture*
   exceptions: []
   platform:
@@ -706,12 +706,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter eller angir en bryter som angir om synkron logging brukes når det er bare en enkelt prosess."
+  summary: Gets or sets a switch that specifies whether synchronous logging is used when there is only a single process.
   syntax:
     content: public bool UseSynchronousLogging { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer en bryter som angir om synkron logging brukes når det er bare en enkelt prosess. Hvis SANN, synkron logging, ellers bruke asynkrone logging."
+      description: Returns a switch that specifies whether synchronous logging is used when there is only a single process; if true, use synchronous logging, otherwise use asynchronous logging.
   overload: Microsoft.Build.Execution.BuildParameters.UseSynchronousLogging*
   exceptions: []
   platform:

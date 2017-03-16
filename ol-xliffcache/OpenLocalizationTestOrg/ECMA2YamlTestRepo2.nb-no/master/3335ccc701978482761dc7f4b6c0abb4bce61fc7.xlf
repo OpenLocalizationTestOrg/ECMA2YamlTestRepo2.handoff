@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nb-no">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3335ccc701978482761dc7f4b6c0abb4bce61fc7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.IdentityModel.Policy.IAuthorizationPolicy.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">03ed3cd3c4ebcde57edb2bc80aa5542e4d6c7e5e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bc55de7a17ff90abb36f844c840c1e78899192d5</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Defines a set of rules for authorizing a user, given a set of claims.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Implement the IAuthorizationPolicy interface to add or map one set of claims to another.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An authorization policy examines a set of claims and adds additional claims based on the current set.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, an authorization policy might evaluate a claim that contains the date of birth and add a claim that asserts that the user is over 21 years old and add an Over21 claim to the &lt;xref:System.IdentityModel.Policy.EvaluationContext&gt;.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Classes that implement the IAuthorizationPolicy interface do not authorize users, but they enable the &lt;xref:System.ServiceModel.ServiceAuthorizationManager&gt; class to do so.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.ServiceModel.ServiceAuthorizationManager&gt; calls the &lt;xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A&gt; method for each authorization policy in effect.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A&gt; method determines whether additional claims should be added for the user, based on the current context.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An authorization policy's &lt;xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A&gt; method may be called multiple times, as claims are added to the &lt;xref:System.IdentityModel.Policy.EvaluationContext&gt; by other authorization policies.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When all authorization policies in effect are done, the &lt;xref:System.ServiceModel.ServiceAuthorizationManager&gt; class makes authorization decisions based upon the final set of claims.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.ServiceModel.ServiceAuthorizationManager&gt; class then creates an &lt;xref:System.IdentityModel.Policy.AuthorizationContext&gt; that contains an immutable set of claims that reflects these authorization decisions.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Evaluates whether a user meets the requirements for this authorization policy.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">&gt; [!NOTE]</ph> &gt;  Implementers of the &lt;xref:System.IdentityModel.Policy.IAuthorizationPolicy&gt; interface should expect the Evaluate method to be called multiple times by different threads.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Implementers of the &lt;xref:System.IdentityModel.Policy.IAuthorizationPolicy&gt; interface can use the <ph id="ph1">`state`</ph> parameter to track state between calls to the Evaluate method.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If a state object is set inside a given call to the Evaluate method, the same object instance is passed to each and every subsequent call to the Evaluate method in the current evaluation process.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.IdentityModel.Policy.EvaluationContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains the claim set that the authorization policy evaluates.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Object&gt;, passed by reference that represents the custom state for this authorization policy.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the Evaluate method for this authorization policy must be called if additional claims are added by other authorization policies to <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">evaluationContext</ph><ept id="p2">&lt;/code&gt;</ept>; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> to state no additional evaluation is required by this authorization policy.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Gets a claim set that represents the issuer of the authorization policy.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.IdentityModel.Claims.ClaimSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the issuer of the authorization policy.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -21,7 +21,7 @@ items:
   nameWithType: ProjectElementContainer
   fullName: Microsoft.Build.Construction.ProjectElementContainer
   type: Class
-  summary: "Inneholder en beholder abstrakt klasse for prosjektelementer."
+  summary: Provides an abstract container class for project elements.
   syntax:
     content: 'public abstract class ProjectElementContainer : Microsoft.Build.Construction.ProjectElement'
   inheritance:
@@ -53,13 +53,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter en rekursiv Dybde første enumeratoren over alle underordnede elementer."
-  remarks: "Rekursjon er mulig fordi prosjektet elementet beholdere kan inneholde underordnede som selv prosjektet elementet beholdere."
+  summary: Gets a recursive depth-first enumerator over all child elements.
+  remarks: Recursion is possible because project element containers may contain children that are themselves project element containers.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Construction.ProjectElement> AllChildren { get; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectElement}
-      description: "Returnerer en rekursiv dybden første enumerator over alle underordnede elementer."
+      description: Returns a recursive depth-first enumerator over all child elements.
   overload: Microsoft.Build.Construction.ProjectElementContainer.AllChildren*
   exceptions: []
   platform:
@@ -76,14 +76,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Tilføyer den <code> child </code> elementet som siste underordnede for denne beholderen er prosjektet."
-  remarks: "Oppstår det et unntak hvis denne beholderen er prosjektet ikke er overordnet eller i `child` elementet allerede er overordnet, eller hvis den `child` elementet ble opprettet av en annen <xref:Microsoft.Build.Construction.ProjectRootElement>.</xref:Microsoft.Build.Construction.ProjectRootElement>"
+  summary: Appends the <code>child</code> element as the last child of this project container.
+  remarks: Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>.
   syntax:
     content: public void AppendChild (Microsoft.Build.Construction.ProjectElement child);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Prosjektelement legges til."
+      description: The project element to be appended.
   overload: Microsoft.Build.Construction.ProjectElementContainer.AppendChild*
   exceptions: []
   platform:
@@ -100,12 +100,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter alle underordnede elementer."
+  summary: Gets all child elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectElement> Children { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectElement}
-      description: "Returnerer alle underordnede elementer."
+      description: Returns all child elements.
   overload: Microsoft.Build.Construction.ProjectElementContainer.Children*
   exceptions: []
   platform:
@@ -122,12 +122,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter alle underordnede elementer fra siste underordnede."
+  summary: Gets all child elements, starting from the last child.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectElement> ChildrenReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectElement}
-      description: "Returnerer alle underordnede elementer fra siste underordnede."
+      description: Returns all child elements, starting from the last child.
   overload: Microsoft.Build.Construction.ProjectElementContainer.ChildrenReversed*
   exceptions: []
   platform:
@@ -144,12 +144,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter antall underordnede elementer."
+  summary: Gets the number of child elements.
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: "Returnerer antall underordnede elementer."
+      description: Returns the number of child elements.
   overload: Microsoft.Build.Construction.ProjectElementContainer.Count*
   exceptions: []
   platform:
@@ -166,13 +166,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter det første underordnede elementet."
-  remarks: "Bruk <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>ikke denne egenskapen.</xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>"
+  summary: Gets the first child element.
+  remarks: Use <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A> to initialize this property.
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement FirstChild { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Returnerer det første underordnede elementet. Returnerer null hvis det finnes ingen underordnet element."
+      description: Returns the first child element. Returns null if no child element exists.
   overload: Microsoft.Build.Construction.ProjectElementContainer.FirstChild*
   exceptions: []
   platform:
@@ -189,17 +189,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Setter inn den <code> child </code> elementet etter den <code> reference </code> elementet."
-  remarks: "Hvis den `reference` elementet er null, denne metoden tilsvarer <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>.</xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>       Oppstår det et unntak hvis denne beholderen er prosjektet ikke er overordnet eller i `child` elementet allerede er overordnet, eller hvis den `child` elementet ble opprettet av en annen <xref:Microsoft.Build.Construction.ProjectRootElement>, eller hvis den `reference` elementet er ikke en underordnet av denne beholderen er prosjektet.</xref:Microsoft.Build.Construction.ProjectRootElement>"
+  summary: Inserts the <code>child</code> element after the <code>reference</code> element.
+  remarks: "If the `reference` element is null, this method is equivalent to <xref:Microsoft.Build.Construction.ProjectElementContainer.PrependChild%2A>.  \n  \n Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>, or if the `reference` element is not a child of this project container."
   syntax:
     content: public void InsertAfterChild (Microsoft.Build.Construction.ProjectElement child, Microsoft.Build.Construction.ProjectElement reference);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Prosjektelement som skal settes inn."
+      description: The project element to be inserted.
     - id: reference
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Prosjektelement som skal settes inn etter."
+      description: The project element to be inserted after.
   overload: Microsoft.Build.Construction.ProjectElementContainer.InsertAfterChild*
   exceptions: []
   platform:
@@ -216,17 +216,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Setter inn den <code> child </code> elementet før den <code> reference </code> elementet."
-  remarks: "Hvis den `reference` elementet er null, denne metoden, tilsvarer <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>.</xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>       Oppstår det et unntak hvis denne beholderen er prosjektet ikke er overordnet eller i `child` elementet allerede er overordnet, eller hvis den `child` elementet ble opprettet av en annen <xref:Microsoft.Build.Construction.ProjectRootElement>, eller hvis den `reference` elementet er ikke en underordnet av denne beholderen er prosjektet.</xref:Microsoft.Build.Construction.ProjectRootElement>"
+  summary: Inserts the <code>child</code> element before the <code>reference</code> element.
+  remarks: "If the `reference` element is null, this method is equivalent to <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>.  \n  \n Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>, or if the `reference` element is not a child of this project container."
   syntax:
     content: public void InsertBeforeChild (Microsoft.Build.Construction.ProjectElement child, Microsoft.Build.Construction.ProjectElement reference);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Prosjektelement som skal settes inn."
+      description: The project element to be inserted.
     - id: reference
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Prosjektelement som skal settes inn før."
+      description: The project element to be inserted before.
   overload: Microsoft.Build.Construction.ProjectElementContainer.InsertBeforeChild*
   exceptions: []
   platform:
@@ -243,13 +243,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Henter den siste underelement."
-  remarks: "Bruk <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>ikke denne egenskapen.</xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A>"
+  summary: Gets the last child element.
+  remarks: Use <xref:Microsoft.Build.Construction.ProjectElementContainer.AppendChild%2A> to initialize this property.
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement LastChild { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Returnerer siste underordnede elementet. Returnerer null hvis det finnes ingen underordnet element."
+      description: Returns the last child element. Returns null if no child element exists.
   overload: Microsoft.Build.Construction.ProjectElementContainer.LastChild*
   exceptions: []
   platform:
@@ -266,14 +266,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Setter inn den <code> child </code> elementet som første underordnede for denne beholderen er prosjektet."
-  remarks: "Oppstår det et unntak hvis denne beholderen er prosjektet ikke er overordnet eller i `child` elementet allerede er overordnet, eller hvis den `child` elementet ble opprettet av en annen <xref:Microsoft.Build.Construction.ProjectRootElement>.</xref:Microsoft.Build.Construction.ProjectRootElement>"
+  summary: Prepends the <code>child</code> element as the first child of this project container.
+  remarks: Throws an exception if this project container is not parented, or if the `child` element is already parented, or if the `child` element was created by a different <xref:Microsoft.Build.Construction.ProjectRootElement>.
   syntax:
     content: public void PrependChild (Microsoft.Build.Construction.ProjectElement child);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Prosjektelement til settes foran."
+      description: The project element to be prepended.
   overload: Microsoft.Build.Construction.ProjectElementContainer.PrependChild*
   exceptions: []
   platform:
@@ -290,8 +290,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Fjerner alle underordnede objekter, hvis noen fra denne beholderen er prosjektet."
-  remarks: "Det er trygt å endre barn på denne måten under opplisting."
+  summary: Removes all the children, if any, from this project container.
+  remarks: It is safe to modify the children in this way during enumeration.
   syntax:
     content: public void RemoveAllChildren ();
     parameters: []
@@ -311,14 +311,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Fjerner et <code> child </code> elementet fra denne beholderen er prosjektet."
-  remarks: "Oppstår et unntak hvis det underordnede elementet for øyeblikket ikke er overordnet av denne beholderen er prosjektet. Det er trygt å fjerne en underordnet dermed under opplisting."
+  summary: Removes a <code>child</code> element from this project container.
+  remarks: Throws an exception if the child element is not currently parented by this project container. It is safe to remove a child this way during enumeration.
   syntax:
     content: public void RemoveChild (Microsoft.Build.Construction.ProjectElement child);
     parameters:
     - id: child
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Prosjektelement som skal fjernes."
+      description: The project element to be removed.
   overload: Microsoft.Build.Construction.ProjectElementContainer.RemoveChild*
   exceptions: []
   platform:

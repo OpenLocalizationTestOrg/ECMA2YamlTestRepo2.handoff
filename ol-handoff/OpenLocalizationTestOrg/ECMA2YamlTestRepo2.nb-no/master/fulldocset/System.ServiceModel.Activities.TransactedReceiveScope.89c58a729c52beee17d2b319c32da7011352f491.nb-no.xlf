@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nb-no">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1151e7e6d4ebff680575d6fec4022a863659a49e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ServiceModel.Activities.TransactedReceiveScope.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8b63a7cd94ea487172ac960eeb04bef41140db41</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">86dc64c786b152f4ec09e5a00d091054a551dba5</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>An activity which scopes the lifetime of a transaction which is initiated by a received message.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The transaction may be flowed into the workflow on the initiating message, or be created by the dispatcher when the message is received.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TransactedReceiveScope activity enables you to control the lifetime of the flowed transaction.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!WARNING]</ph> &gt;  For an initiating TransactedReceiveScope activity (a TransactedReceiveScope that contains a &lt;xref:System.ServiceModel.Activities.Receive&gt; activity with &lt;xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A&gt; set to <ph id="ph2">`true`</ph>), the transaction is created before the runtime starts to execute the TransactedReceiveScope activity.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This transaction is not ambient at the workflow activity layer, but it is ambient in the underlying persistence layers.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If execution of the workflow encounters a &lt;xref:System.Activities.Statements.Persist&gt; activity before the TransactedReceiveScope activity, the runtime tries to persist under the ambient transaction.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior causes a block until the transaction is completed.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because the workflow execution has not reached the &lt;xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A&gt; section, the transaction cannot finish.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This deadlock causes the workflow to stop responding until the transaction times out.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the transaction times out, the newly created instance is aborted.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  Whenever you use a TransactedReceiveScope it is recommended to place all Receives in the workflow within TransactedReceiveScope activities.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  When using TransactedReceiveScope and messages arrive in the incorrect order, the workflow will be aborted when trying to deliver the first out of order message.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must make sure your workflow is always at a consistent stopping point when the workflow idles.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This will allow you to restart the workflow from a previous persistence point should the workflow be aborted.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.ServiceModel.Activities.TransactedReceiveScope"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Activities.Activity"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that makes up the body of the <bpt id="p2">&lt;xref href="System.ServiceModel.Activities.TransactedReceiveScope"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> activity.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The transaction is ambient for the entire duration of the body.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The body of the transacted receive scope.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.ServiceModel.Activities.Receive"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> activity associated with this <bpt id="p2">&lt;xref href="System.ServiceModel.Activities.TransactedReceiveScope"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> activity.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The receive activity associated with the transacted receive scope.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Gets the collection of <bpt id="p1">&lt;xref href="System.Activities.Variable"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> associated with this <bpt id="p2">&lt;xref href="System.ServiceModel.Activities.TransactedReceiveScope"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The variables associated with the transacted receive scope.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

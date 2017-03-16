@@ -13,7 +13,7 @@ items:
   nameWithType: LazyFormattedBuildEventArgs
   fullName: Microsoft.Build.Framework.LazyFormattedBuildEventArgs
   type: Class
-  summary: "Lagrer strenger for deler av en melding forsinke formateringen til det skal vises."
+  summary: Stores strings for parts of a message delaying the formatting until it needs to be shown.
   syntax:
     content: 'public class LazyFormattedBuildEventArgs : Microsoft.Build.Framework.BuildEventArgs'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Standardkonstruktør."
+  summary: Default constructor.
   syntax:
     content: protected LazyFormattedBuildEventArgs ();
     parameters: []
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Denne konstruktør tillater alle Hendelsesdata skal kunne initialiseres."
+  summary: This constuctor allows all event data to be initialized.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName);
     parameters:
     - id: message
       type: System.String
-      description: "tekstmelding."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "Hjelp-nøkkelordet."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "navnet på hendelsesavsender."
+      description: name of event sender.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -89,25 +89,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Denne konstruktør som tillater Meldingsargumenter som er formatert lazily."
+  summary: This constuctor that allows message arguments that are lazily formatted.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "tekstmelding."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "Hjelp-nøkkelordet."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "navnet på hendelsesavsender."
+      description: name of event sender.
     - id: eventTimestamp
       type: System.DateTime
-      description: "Tidsstempelet når hendelsen ble opprettet."
+      description: Timestamp when event was created.
     - id: messageArgs
       type: System.Object[]
-      description: "Meldingsargumenter."
+      description: Message arguments.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -124,12 +124,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Henter meldingen formatert."
+  summary: Gets the formatted message.
   syntax:
     content: public override string Message { get; }
     return:
       type: System.String
-      description: "Som skal legges til."
+      description: To be added.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.Message*
   exceptions: []
   platform:

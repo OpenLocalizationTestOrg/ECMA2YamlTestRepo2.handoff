@@ -15,8 +15,8 @@ items:
   nameWithType: BuildAbortedException
   fullName: Microsoft.Build.Exceptions.BuildAbortedException
   type: Class
-  summary: "Et unntak som representerer tilfeller der byggingen ble avbrutt etter forespørsel, i motsetning til bli unceremoniously ble avsluttet på grunn av en annen type feil unntak."
-  remarks: "Hvis du legger til felt i denne klassen, Legg til en egendefinert serialisering konstruktør og overstyre GetObjectData()."
+  summary: An exception representing the case where the build was aborted by request, as opposed to being unceremoniously shut down due to another kind of error exception.
+  remarks: If you add fields to this class, add a custom serialization constructor and override GetObjectData().
   syntax:
     content: 'public class BuildAbortedException : Exception'
   inheritance:
@@ -37,7 +37,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Oppretter et BuildAborted-unntak."
+  summary: Creates a BuildAborted exception.
   syntax:
     content: public BuildAbortedException ();
     parameters: []
@@ -57,13 +57,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Oppretter et BuildAborted-unntak."
+  summary: Creates a BuildAborted exception.
   syntax:
     content: public BuildAbortedException (string message);
     parameters:
     - id: message
       type: System.String
-      description: "Feilmelding."
+      description: The error message.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.#ctor*
   exceptions: []
   platform:
@@ -80,16 +80,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Beskyttet konstruktør er brukt for serialisering (de)."
+  summary: Protected constructor used for (de)serialization.
   syntax:
     content: protected BuildAbortedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "Informasjon om feilen."
+      description: The error information.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "Feilkontekst."
+      description: The error context.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.#ctor*
   exceptions: []
   platform:
@@ -106,16 +106,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Bygger en BuildAbortedException med en melding ved og et indre unntak."
+  summary: Constructs a BuildAbortedException with an additional message attached and an inner exception.
   syntax:
     content: public BuildAbortedException (string message, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "Feilmelding."
+      description: The error message.
     - id: innerException
       type: System.Exception
-      description: "Det interne unntaket."
+      description: The inner exception.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.#ctor*
   exceptions: []
   platform:
@@ -132,12 +132,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Henter feilkoden (Hvis noen) som er knyttet til Unntaksmeldingen."
+  summary: Gets the error code (if any) associated with the exception message.
   syntax:
     content: public string ErrorCode { get; }
     return:
       type: System.String
-      description: "Returnerer feilkoden som en streng; Returnerer en streng som er null hvis det finnes ingen feilkoden."
+      description: Returns the error code as a string; returns a null string if no error code exists.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.ErrorCode*
   exceptions: []
   platform:
@@ -154,16 +154,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "ISerializable metode som må overstyres fordi unntak implementerer dette grensesnittet."
+  summary: ISerializable method which must be overridden because Exception implements this interface.
   syntax:
     content: public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "Informasjon om feilen."
+      description: The error information.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "Feilkontekst."
+      description: The error context.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.GetObjectData*
   exceptions: []
   platform:

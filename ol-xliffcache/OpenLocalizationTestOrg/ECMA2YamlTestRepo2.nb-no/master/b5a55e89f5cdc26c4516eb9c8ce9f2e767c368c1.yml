@@ -59,8 +59,8 @@ items:
   nameWithType: ProjectCollection
   fullName: Microsoft.Build.Evaluation.ProjectCollection
   type: Class
-  summary: "Innkapsler et sett med relaterte prosjekter, deres verktøysett, et standardsett med globale egenskaper og tastetrykkregistratorer som skal brukes til å bygge dem. En global versjon av denne klassen fungerer som standardsamlingen for prosjektet."
-  remarks: "Flere prosjektet samlinger kan finnes i et programdomene. Imidlertid bygge disse ikke samtidig."
+  summary: Encapsulates a set of related projects, their toolsets, a default set of global properties, and the loggers that should be used to build them. A global version of this class acts as the default project collection.
+  remarks: Multiple project collections can exist within an app domain. However, these must not build concurrently.
   syntax:
     content: 'public class ProjectCollection : IDisposable'
   inheritance:
@@ -82,7 +82,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Oppretter en prosjektet samling uten globale egenskaper eller tastetrykkregistratorer. Prosjektet samlingen verktøysettet er initialisert fra konfigurasjonsfilen og registeret."
+  summary: Creates a project collection with no global properties or loggers. The project collection toolset is initialized from the configuration file and registry.
   syntax:
     content: public ProjectCollection ();
     parameters: []
@@ -102,13 +102,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Oppretter en prosjektet samling uten globale egenskaper eller tastetrykkregistratorer. Prosjektet samlingen verktøysettet er initialisert fra verktøysett i de angitte plasseringene."
+  summary: Creates a project collection with no global properties or loggers. The project collection toolset is initialized from toolsets in the given locations.
   syntax:
     content: public ProjectCollection (Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetLocations);
     parameters:
     - id: toolsetLocations
       type: Microsoft.Build.Evaluation.ToolsetDefinitionLocations
-      description: "Plasseringene fra å laste inn verktøysett."
+      description: The locations from which to load toolsets.
   overload: Microsoft.Build.Evaluation.ProjectCollection.#ctor*
   exceptions: []
   platform:
@@ -125,14 +125,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Starter en prosjektet samling med angitte globale egenskaper, ingen tastetrykkregistratorer og leseoperasjoner verktøysettet informasjonen fra konfigurasjonsfilen og registeret."
-  remarks: "Kan Iverksett InvalidToolsetDefinitionException."
+  summary: Instantiates a project collection with specified global properties, no loggers, and that reads toolset information from the configuration file and registry.
+  remarks: May throw InvalidToolsetDefinitionException.
   syntax:
     content: public ProjectCollection (System.Collections.Generic.IDictionary<string,string> globalProperties);
     parameters:
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Globale standardegenskaper å bruke. Kan være null."
+      description: The default global properties to use. May be null.
   overload: Microsoft.Build.Evaluation.ProjectCollection.#ctor*
   exceptions: []
   platform:
@@ -149,20 +149,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Starter en prosjektet samling med angitte globale egenskaper og tastetrykkregistratorer og ved hjelp av de angitte verktøysettet plasseringene."
-  remarks: "Kan Iverksett InvalidToolsetDefinitionException."
+  summary: Instantiates a project collection with specified global properties and loggers and using the specified toolset locations.
+  remarks: May throw InvalidToolsetDefinitionException.
   syntax:
     content: public ProjectCollection (System.Collections.Generic.IDictionary<string,string> globalProperties, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations);
     parameters:
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Globale standardegenskaper å bruke. Kan være null."
+      description: The default global properties to use. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Tastetrykkregistratorer til å registrere. Kan være null."
+      description: The loggers to register. May be null.
     - id: toolsetDefinitionLocations
       type: Microsoft.Build.Evaluation.ToolsetDefinitionLocations
-      description: "Plasseringene fra å laste inn verktøysett."
+      description: The locations from which to load toolsets.
   overload: Microsoft.Build.Evaluation.ProjectCollection.#ctor*
   exceptions: []
   platform:
@@ -179,29 +179,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Oppretter en samling av prosjektet med angitt globale egenskaper, tastetrykkregistratorer, noden count og onlyLogCriticalEvents verdi. Prosjektet samlingen verktøysettet er initialisert fra verktøysett i de angitte plasseringene."
-  remarks: "Oppstår InvalidProjectFileException Hvis noen av globale egenskaper er reservert."
+  summary: Creates a project collection with specified global properties, loggers, node count, and onlyLogCriticalEvents value. The project collection toolset is initialized from toolsets in the given locations.
+  remarks: Throws InvalidProjectFileException if any of the global properties are reserved.
   syntax:
     content: public ProjectCollection (System.Collections.Generic.IDictionary<string,string> globalProperties, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents);
     parameters:
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Globale standardegenskaper å bruke. Kan være null."
+      description: The default global properties to use. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Tastetrykkregistratorer til å registrere. Kan være null og som er angitt til noen build i stedet."
+      description: The loggers to register. May be null and specified to any build instead.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "Eksterne tastetrykkregistratorer til å registrere. Kan være null og som er angitt til noen build i stedet."
+      description: Any remote loggers to register. May be null and specified to any build instead.
     - id: toolsetDefinitionLocations
       type: Microsoft.Build.Evaluation.ToolsetDefinitionLocations
-      description: "Plasseringene fra å laste inn verktøysett."
+      description: The locations from which to load toolsets.
     - id: maxNodeCount
       type: System.Int32
-      description: "Maksimalt antall noder som skal brukes for bygging."
+      description: The maximum number of nodes to use for building.
     - id: onlyLogCriticalEvents
       type: System.Boolean
-      description: "Hvis satt til SANN, bare kritiske hendelser loggføres."
+      description: If set to true, only critical events will be logged.
   overload: Microsoft.Build.Evaluation.ProjectCollection.#ctor*
   exceptions: []
   platform:
@@ -218,13 +218,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Legger til en ny verktøysettet prosjektet-samlingen. Erstatter alle eksisterende verktøysettet med den samme versjonen."
+  summary: Adds a new toolset to the project collection. Replaces any existing toolset with the same tools version.
   syntax:
     content: public void AddToolset (Microsoft.Build.Evaluation.Toolset toolset);
     parameters:
     - id: toolset
       type: Microsoft.Build.Evaluation.Toolset
-      description: "Verktøysettet som skal legges til."
+      description: The toolset to be added.
   overload: Microsoft.Build.Evaluation.ProjectCollection.AddToolset*
   exceptions: []
   platform:
@@ -241,16 +241,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Bestemmer om en verktøysettet er definert for den angitte versjonen."
+  summary: Determines whether a toolset is defined for the given tools version.
   syntax:
     content: public bool ContainsToolset (string toolsVersion);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Versjonen verktøy til å søke etter."
+      description: The tools version to search for.
     return:
       type: System.Boolean
-      description: "Returnerer true Hvis det er en verktøysettet som er definert for den angitte versjonen; False ellers."
+      description: Returns true if there is a toolset defined for the given tools version; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectCollection.ContainsToolset*
   exceptions: []
   platform:
@@ -267,12 +267,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter antall prosjekter som er lastet inn i denne samlingen."
+  summary: Gets the number of projects currently loaded into this collection.
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: "Returnerer antall prosjekter som er lastet inn i denne samlingen."
+      description: Returns the number of projects currently loaded into this collection.
   overload: Microsoft.Build.Evaluation.ProjectCollection.Count*
   exceptions: []
   platform:
@@ -289,13 +289,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter verktøy standardversjonen av prosjektet samlingen."
-  remarks: "Denne standardverdien hentes fra det. exe.config-filen fra systemregistret, eller hvis ingen finnes, fra hardkodet verktøy versjon &quot;2.0&quot;.       Angi metoden kaster InvalidOperationException Hvis verktøysettet med den angitte verktøy-versjonen er ikke definert."
+  summary: Gets the default tools version of this project collection.
+  remarks: "This default value is obtained from the .exe.config file, from the system registry, or if neither is present, from the hard-coded tools version \"2.0\".  \n  \n The set method throws InvalidOperationException if a toolset with the provided tools version has not been defined."
   syntax:
     content: public string DefaultToolsVersion { get; set; }
     return:
       type: System.String
-      description: "Returnerer verktøy standardversjonen av prosjektet samlingen, som alltid er definert."
+      description: Returns the default tools version of this project collection, which is always defined.
   overload: Microsoft.Build.Evaluation.ProjectCollection.DefaultToolsVersion*
   exceptions: []
   platform:
@@ -312,12 +312,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter eller angir et flagg som bestemmer om <xref:Microsoft.Build.Evaluation.Project.MarkDirty*>er midlertidig deaktivert på prosjektene i denne samlingen.</xref:Microsoft.Build.Evaluation.Project.MarkDirty*> Dette kan for eksempel en global egenskapene som skal angis uten prosjekter komme merket endret for ny vurdering navnet."
+  summary: Gets or sets a flag that determines whether <xref:Microsoft.Build.Evaluation.Project.MarkDirty*> is temporarily disabled on projects in this collection. This allows, for example, a global properties to be set without projects getting marked dirty for reevaluation as a consequence.
   syntax:
     content: public bool DisableMarkDirty { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer et flagg som bestemmer om <xref uid=&quot;langword_csharp_MarkDirty&quot; name=&quot;MarkDirty&quot; href=&quot;&quot;> </xref> er midlertidig deaktivert."
+      description: Returns a flag that determines whether <xref uid="langword_csharp_MarkDirty" name="MarkDirty" href=""></xref> is temporarily disabled.
   overload: Microsoft.Build.Evaluation.ProjectCollection.DisableMarkDirty*
   exceptions: []
   platform:
@@ -334,8 +334,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Frigir både administrerte og uforvaltede ressurser.  Kalles når vert ikke lenger trenger prosjektet-samlingen."
-  remarks: "I MSBuild-versjoner som er levert med .net 4.5 og Visual Studio 12.0, må du kalle UnloadProject() før ProjectCollection er utenfor området.&quot;"
+  summary: Releases both managed and unmanaged resources.  Called when a host no longer needs the project collection.
+  remarks: In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject() before the ProjectCollection goes out of scope.”
   syntax:
     content: public void Dispose ();
     parameters: []
@@ -355,14 +355,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Frigir både administrerte og uforvaltede ressurser.  Kalles når vert ikke lenger trenger samlingen prosjektet.. Avslutter noen logging-tjenester som prosjektet samlingen eier og frigir transaksjonslogging-tråden."
-  remarks: "Følger ugyldige salg retningslinjene for .NET."
+  summary: Releases both managed and unmanaged resources.  Called when a host no longer needs the project collection.. Shuts down any logging services that the project collection owns and releases the logger thread.
+  remarks: Follows the garbage disposal guidelines of .NET.
   syntax:
     content: protected virtual void Dispose (bool disposing);
     parameters:
     - id: disposing
       type: System.Boolean
-      description: "Hvis SANN, frigir både administrerte og uforvaltede ressurser. Hvis frigir bare uforvaltede ressurser..."
+      description: If true, releases both managed and unmanaged resources; otherwise releases only unmanaged resources..
   overload: Microsoft.Build.Evaluation.ProjectCollection.Dispose*
   exceptions: []
   platform:
@@ -379,17 +379,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Konverterer spesialtegn i en streng til MSBuild escape-format."
-  remarks: "For eksempel &quot;%&3;b&quot;for&quot;;&quot;. Tegn som er spesielt viktige for MSBuild analyse konverteres. Brukere kan bruke denne metoden til å gjøre det trygt å bli analysert av andre metoder som ellers vil utvide den en streng. Brukere kan også bruke denne metoden til å gjøre det trygt å skrive til en prosjektfilen en streng."
+  summary: Converts special characters in a string to MSBuild escape format.
+  remarks: For example, "%3b" for ";". Only characters that are especially significant to MSBuild parsing are converted. Callers can use this method to make a string safe to be parsed by other methods that would otherwise expand it. Callers can also use this method to make a string safe to be written to a project file.
   syntax:
     content: public static string Escape (string unescapedString);
     parameters:
     - id: unescapedString
       type: System.String
-      description: "Strengen som skal konverteres."
+      description: The string to be converted.
     return:
       type: System.String
-      description: "Returnerer konvertere strengen."
+      description: Returns the converted string.
   overload: Microsoft.Build.Evaluation.ProjectCollection.Escape*
   exceptions: []
   platform:
@@ -406,16 +406,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Få en global egenskap på samlingen prosjektet med det angitte navnet."
+  summary: Get any global property on the project collection that has the specified name.
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance GetGlobalProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "Navnet på egenskapen som skal hentes."
+      description: The name of the property to be retrieved.
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Returnerer en global egenskap i samlingen prosjektet med det angitte navnet; Hvis ikke, returneres null."
+      description: Returns any global property on the project collection that has the specified name; otherwise returns null.
   overload: Microsoft.Build.Evaluation.ProjectCollection.GetGlobalProperty*
   exceptions: []
   platform:
@@ -432,17 +432,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter alle prosjekter der prosjektbane som samsvarer med den angitte banen."
-  remarks: "Det kan være mer enn ett prosjekt med den angitte banen fordi prosjekter er også identifiseres med globale egenskaper og/eller versjon."
+  summary: Gets all projects whose project path matches the given path.
+  remarks: There may be more than one project with the given path because projects are also distinguished by global properties and/or tools version.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.Project> GetLoadedProjects (string fullPath);
     parameters:
     - id: fullPath
       type: System.String
-      description: "Banen til en prosjektfil som skal sammenlignes."
+      description: The path to a project file to be matched.
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.Project}
-      description: "Returnerer alle prosjekter der prosjektbane som samsvarer med den angitte banen."
+      description: Returns all projects whose project path matches the given path.
   overload: Microsoft.Build.Evaluation.ProjectCollection.GetLoadedProjects*
   exceptions: []
   platform:
@@ -459,16 +459,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hent verktøysettet med den angitte versjonen."
+  summary: Get the toolset with the specified tools version.
   syntax:
     content: public Microsoft.Build.Evaluation.Toolset GetToolset (string toolsVersion);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Verktøy-versjonen som samsvarer med."
+      description: The tools version to match.
     return:
       type: Microsoft.Build.Evaluation.Toolset
-      description: "Returnerer verktøysettet med den angitte versjonen. Returnerer null hvis ingen samsvarende dette verktøysettet verktøy versjon finnes."
+      description: Returns the toolset with the specified tools version. Returns null if no toolset matching this tools version exists.
   overload: Microsoft.Build.Evaluation.ProjectCollection.GetToolset*
   exceptions: []
   platform:
@@ -485,13 +485,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter globalt prosjekt collection-objektet."
-  remarks: "Tråd trygt."
+  summary: Gets the global project collection object.
+  remarks: Thread safe.
   syntax:
     content: public static Microsoft.Build.Evaluation.ProjectCollection GlobalProjectCollection { get; }
     return:
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "Returnerer globalt prosjekt collection-objektet. Dette er en singleton prosjektet samling uten globale egenskaper eller tastetrykkregistratorer. Verktøysettet informasjonen hentes fra konfigurasjonsfilen og registeret."
+      description: Returns the global project collection object. This is a singleton project collection with no global properties or loggers. Toolset information is obtained from the configuration file and registry.
   overload: Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection*
   exceptions: []
   platform:
@@ -508,13 +508,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter skrivebeskyttet standard globale egenskaper for alle prosjekter i denne samlingen."
-  remarks: "Bruk <xref:Microsoft.Build.Evaluation.ProjectCollection.SetGlobalProperty%2A>og <xref:Microsoft.Build.Evaluation.ProjectCollection.RemoveGlobalProperty%2A>legge til, angi og fjerne globale egenskaper.</xref:Microsoft.Build.Evaluation.ProjectCollection.RemoveGlobalProperty%2A> </xref:Microsoft.Build.Evaluation.ProjectCollection.SetGlobalProperty%2A>"
+  summary: Gets the read-only default global properties for all projects in this collection.
+  remarks: Use <xref:Microsoft.Build.Evaluation.ProjectCollection.SetGlobalProperty%2A> and <xref:Microsoft.Build.Evaluation.ProjectCollection.RemoveGlobalProperty%2A> to add, set, and remove global properties.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Tilbakestiller skrivebeskyttet globale egenskaper for alle prosjekter i denne samlingen."
+      description: Returns the read-only default global properties for all projects in this collection.
   overload: Microsoft.Build.Evaluation.ProjectCollection.GlobalProperties*
   exceptions: []
   platform:
@@ -531,13 +531,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter eller angir et objekt som gir vertstjenestene oppgaver under bygger av prosjektene i prosjektet-samlingen."
-  remarks: "Som standard returnerer HostServices, som kan være null."
+  summary: Gets or sets an object that provides host services to tasks during builds of projects contained in the project collection.
+  remarks: By default, returns HostServices, which may be null.
   syntax:
     content: public Microsoft.Build.Execution.HostServices HostServices { get; set; }
     return:
       type: Microsoft.Build.Execution.HostServices
-      description: "Returnerer verten services-objektet."
+      description: Returns the host services object.
   overload: Microsoft.Build.Evaluation.ProjectCollection.HostServices*
   exceptions: []
   platform:
@@ -554,13 +554,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter eller angir en egenskap som velger som standard om mål og oppgaver for prosjektene i samlingen prosjektet kan bygges."
-  remarks: "Kan brukes av sikkerhetsgrunner. Som standard har et nytt prosjekt samme IsBuildEnabled innstilling som den overordnede prosjekt samlingen som inneholder den. Når IsBuildEnabled er USANN, mislykkes Build-metoden på dette prosjektet."
+  summary: Gets or sets a property that selects by default whether the targets and tasks of projects in the project collection can be built.
+  remarks: Can be used for security purposes. By default, a new project has the same IsBuildEnabled setting as the parent project collection that contains it. When IsBuildEnabled is false, the Build method on this project fails.
   syntax:
     content: public bool IsBuildEnabled { get; set; }
     return:
       type: System.Boolean
-      description: "Henter eller angir en egenskap som velger som standard om mål og oppgaver for prosjektene i denne samlingen for prosjektet kan bygges."
+      description: Gets or sets a property that selects by default whether the targets and tasks of projects in this project collection can be built.
   overload: Microsoft.Build.Evaluation.ProjectCollection.IsBuildEnabled*
   exceptions: []
   platform:
@@ -577,13 +577,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter alle prosjekter som er lastet inn i denne samlingen."
-  remarks: "Hvert prosjekt som har en unik kombinasjon av bane, globale egenskaper og versjon."
+  summary: Gets all the projects currently loaded into this collection.
+  remarks: Each project has a unique combination of path, global properties, and tools version.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.Project> LoadedProjects { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.Project}
-      description: "Returnerer alle prosjekter som er lastet inn i denne samlingen."
+      description: Returns all the projects currently loaded into this collection.
   overload: Microsoft.Build.Evaluation.ProjectCollection.LoadedProjects*
   exceptions: []
   platform:
@@ -600,17 +600,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Evaluerer et prosjekt fra kildekode i den angitte prosjektfilen. Kildekoden evalueres med den globale egenskaper og verktøy for versjonen av prosjektet samlingen."
-  remarks: "Du må kalle UnloadProject i MSBuild-versjoner som er levert med .net 4.5 og Visual Studio 12.0, før ProjectCollection er utenfor området."
+  summary: Evaluates a project from the source code in the given project file. The source code is evaluated with the global properties and tools version of this project collection.
+  remarks: In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.
   syntax:
     content: public Microsoft.Build.Evaluation.Project LoadProject (string fileName);
     parameters:
     - id: fileName
       type: System.String
-      description: "Prosjektfilen skal evalueres."
+      description: The project file to evaluate.
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Hvis et eksisterende prosjekt i samlingen er allerede evaluert fra den angitte prosjektfilen, returneres det eksisterende prosjektet. Ellers er et nytt prosjekt opprettet, evalueres, legges til i prosjektet-samlingen og returneres."
+      description: If an existing project in the collection has already been evaluated from the given project file, the existing project is returned. Otherwise, a new project is created, evaluated, added to the project collection, and returned.
   overload: Microsoft.Build.Evaluation.ProjectCollection.LoadProject*
   exceptions: []
   platform:
@@ -627,17 +627,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Evaluerer et prosjekt fra kildekode lese fra den gitte XML-leseren. Kildekoden evalueres med den globale egenskaper og verktøy for versjonen av prosjektet samlingen."
-  remarks: "Prosjektet er lagt til samlingen prosjektet når dette prosjektet eller gitt prosjekt roten er angitt den fullstendige banen til en prosjektfilen.       Du må kalle UnloadProject i MSBuild-versjoner som er levert med .net 4.5 og Visual Studio 12.0, før ProjectCollection er utenfor området."
+  summary: Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the global properties and tools version of this project collection.
+  remarks: "The project is added to this project collection when either this project or the given project root is given the full path to a project file.  \n  \n In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope."
   syntax:
     content: public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: "XML-leseren til å lese prosjektet kildekode fra."
+      description: Xml reader to read project source code from.
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Returnerer det nye prosjektet."
+      description: Returns the new project.
   overload: Microsoft.Build.Evaluation.ProjectCollection.LoadProject*
   exceptions: []
   platform:
@@ -654,20 +654,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Evaluerer et prosjekt basert på kildekode lese fra den angitte prosjektfilen. Kildekoden evalueres med globale egenskaper for prosjektet samlingen og den angitte versjonen."
-  remarks: "Du må kalle UnloadProject i MSBuild-versjoner som er levert med .net 4.5 og Visual Studio 12.0, før ProjectCollection er utenfor området."
+  summary: Evaluates a project from the source code read from the given project file. The source code is evaluated with the global properties of this project collection and the given tools version.
+  remarks: In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.
   syntax:
     content: public Microsoft.Build.Evaluation.Project LoadProject (string fileName, string toolsVersion);
     parameters:
     - id: fileName
       type: System.String
-      description: "Prosjektfilen skal evalueres."
+      description: The project file to evaluate.
     - id: toolsVersion
       type: System.String
-      description: "Verktøy-versjonen du bruker. Kan være null."
+      description: The tools version to use. May be null.
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Hvis et eksisterende prosjekt i samlingen er allerede evaluert fra den angitte prosjektfilen, og den angitte verktøy, returneres det eksisterende prosjektet. Ellers er et nytt prosjekt opprettet, evalueres, legges til i prosjektet-samlingen og returneres."
+      description: If an existing project in the collection has already been evaluated from the given project file, and with the given tools version, then the existing project is returned. Otherwise, a new project is created, evaluated, added to the project collection, and returned.
   overload: Microsoft.Build.Evaluation.ProjectCollection.LoadProject*
   exceptions: []
   platform:
@@ -684,20 +684,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Evaluerer et prosjekt fra kildekode lese fra den gitte XML-leseren. Kildekoden evalueres med globale egenskaper for prosjektet samlingen og den angitte versjonen."
-  remarks: "Prosjektet er lagt til samlingen prosjektet når dette prosjektet eller gitt prosjekt roten er angitt den fullstendige banen til en prosjektfilen.       Du må kalle UnloadProject i MSBuild-versjoner som er levert med .net 4.5 og Visual Studio 12.0, før ProjectCollection er utenfor området."
+  summary: Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the global properties of this project collection and the given tools version.
+  remarks: "The project is added to this project collection when either this project or the given project root is given the full path to a project file.  \n  \n In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope."
   syntax:
     content: public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader, string toolsVersion);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: "XML-leseren til å lese prosjektet kildekode fra."
+      description: Xml reader to read project source code from.
     - id: toolsVersion
       type: System.String
-      description: "Verktøy-versjonen du bruker. Kan være null."
+      description: The tools version to use. May be null.
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Returnerer det nye prosjektet."
+      description: Returns the new project.
   overload: Microsoft.Build.Evaluation.ProjectCollection.LoadProject*
   exceptions: []
   platform:
@@ -714,23 +714,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Evaluerer et prosjekt basert på kildekode lese fra den angitte prosjektfilen. Kildekoden evalueres med den angitte globale egenskaper og verktøy-versjonen."
-  remarks: "Du må kalle UnloadProject i MSBuild-versjoner som er levert med .net 4.5 og Visual Studio 12.0, før ProjectCollection er utenfor området."
+  summary: Evaluates a project from the source code read from the given project file. The source code is evaluated with the given global properties and tools version.
+  remarks: In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.
   syntax:
     content: public Microsoft.Build.Evaluation.Project LoadProject (string fileName, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: fileName
       type: System.String
-      description: "Prosjektfilen som skal evalueres."
+      description: The project file to be evaluated.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "De globale egenskapene som skal brukes. Kan være null, da inneholdende prosjektet-samlingens globale egenskapene vil bli brukt."
+      description: The global properties to use. May be null, in which case the containing project collection's global properties will be used.
     - id: toolsVersion
       type: System.String
-      description: "Verktøy-versjonen. Kan være null."
+      description: The tools version. May be null.
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Hvis et eksisterende prosjekt i samlingen er allerede evaluert fra den angitte prosjektfilen og med den angitte globale egenskaper og versjon, returneres det eksisterende prosjektet. Ellers er et nytt prosjekt opprettet, evalueres, legges til i prosjektet-samlingen og returneres."
+      description: If an existing project in the collection has already been evaluated from the given project file, and with the given global properties and tools version, then the existing project is returned. Otherwise, a new project is created, evaluated, added to the project collection, and returned.
   overload: Microsoft.Build.Evaluation.ProjectCollection.LoadProject*
   exceptions: []
   platform:
@@ -747,23 +747,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Evaluerer et prosjekt fra kildekode lese fra den gitte XML-leseren. Kildekoden evalueres med den angitte globale egenskaper og verktøy-versjonen."
-  remarks: "Prosjektet er lagt til samlingen prosjektet når dette prosjektet eller gitt prosjekt roten er angitt den fullstendige banen til en prosjektfilen.       Du må kalle UnloadProject i MSBuild-versjoner som er levert med .net 4.5 og Visual Studio 12.0, før ProjectCollection er utenfor området."
+  summary: Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the given global properties and tools version.
+  remarks: "The project is added to this project collection when either this project or the given project root is given the full path to a project file.  \n  \n In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope."
   syntax:
     content: public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: "XML-leseren til å lese prosjektet fra"
+      description: Xml reader to read project from
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "De globale egenskapene som skal brukes. Kan være null i som tilfelle inneholdende prosjektet-samlingens globale egenskapene vil bli brukt."
+      description: The global properties to use. May be null in which case the containing project collection's global properties will be used.
     - id: toolsVersion
       type: System.String
-      description: "Verktøy-versjonen. Kan være null."
+      description: The tools version. May be null.
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Returnerer det nye prosjektet."
+      description: Returns the new project.
   overload: Microsoft.Build.Evaluation.ProjectCollection.LoadProject*
   exceptions: []
   platform:
@@ -780,13 +780,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter alle tastetrykkregistratorer prosjektene i denne samlingen kan bruke for sine delversjoner."
-  remarks: "Tastetrykkregistratorer er lagt til med den <xref:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger%2A>metoden.</xref:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger%2A>"
+  summary: Gets all loggers that projects in this collection can use for their builds.
+  remarks: Loggers are added with the <xref:Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger%2A> method.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Framework.ILogger> Loggers { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Framework.ILogger}
-      description: "Returnerer alle tastetrykkregistratorer genererer i denne samlingen kan bruke for sine delversjoner."
+      description: Returns all loggers that projects in this collection can use for their builds.
   overload: Microsoft.Build.Evaluation.ProjectCollection.Loggers*
   exceptions: []
   platform:
@@ -803,12 +803,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter eller angir en bryter som bestemmer om kritiske hendelser som advarsler og feil logges."
+  summary: Gets or sets a switch that determines whether only critical events such as warnings and errors are logged.
   syntax:
     content: public bool OnlyLogCriticalEvents { get; set; }
     return:
       type: System.Boolean
-      description: "Hvis SANN, logges bare kritiske hendelser som advarsler og feil; False ellers."
+      description: If true, only critical events such as warnings and errors are logged; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectCollection.OnlyLogCriticalEvents*
   exceptions: []
   platform:
@@ -825,12 +825,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hendelse som aktiveres når en prosjektet er lagt til ProjectRootElementCache for prosjektet samlingen."
+  summary: Event that is fired when a project is added to the ProjectRootElementCache of this project collection.
   syntax:
     content: public event Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler ProjectAdded;
     return:
       type: Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler
-      description: "Som skal legges til."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -846,13 +846,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Starter når en <xref href=&quot;Microsoft.Build.Evaluation.Project&quot;> </xref> finnes i denne forekomsten direkte er endret."
-  remarks: "Denne hendelsen oppstår ikke for direkte XML endres via konstruksjon modellen."
+  summary: Raised when a <xref href="Microsoft.Build.Evaluation.Project"></xref> contained by this instance is directly changed.
+  remarks: This event is NOT raised for direct project XML changes via the construction model.
   syntax:
     content: public event EventHandler<Microsoft.Build.Evaluation.ProjectChangedEventArgs> ProjectChanged;
     return:
       type: System.EventHandler{Microsoft.Build.Evaluation.ProjectChangedEventArgs}
-      description: "Som skal legges til."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -868,13 +868,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Starter når tilstanden er endret i denne forekomsten."
-  remarks: "Denne hendelsen oppstår ikke endringer i individuelle prosjekter."
+  summary: Raised when state is changed on this instance.
+  remarks: This event is NOT raised for changes in individual projects.
   syntax:
     content: public event EventHandler<Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs> ProjectCollectionChanged;
     return:
       type: System.EventHandler{Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs}
-      description: "Som skal legges til."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -890,13 +890,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Starter når en <xref href=&quot;Microsoft.Build.Construction.ProjectRootElement&quot;> </xref> finnes i denne forekomsten er endret."
-  remarks: "Denne hendelsen oppstår ikke for endringer i globale egenskaper eller andre endringer som ikke faktisk dirty XML."
+  summary: Raised when a <xref href="Microsoft.Build.Construction.ProjectRootElement"></xref> contained by this instance is changed.
+  remarks: This event is NOT raised for changes to global properties, or any other change that doesn't actually dirty the XML.
   syntax:
     content: public event EventHandler<Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs> ProjectXmlChanged;
     return:
       type: System.EventHandler{Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs}
-      description: "Som skal legges til."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -912,13 +912,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Legger til de angitte eksterne tastetrykkregistratorer samlingen av eksterne tastetrykkregistratorer brukes for delversjoner av prosjektene i denne samlingen."
+  summary: Adds the given remote loggers to the collection of remote loggers used for builds of projects in this collection.
   syntax:
     content: public void RegisterForwardingLoggers (System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "De eksterne tastetrykkregistratorer å legge til. Kan være null."
+      description: The remote loggers to add. May be null.
   overload: Microsoft.Build.Evaluation.ProjectCollection.RegisterForwardingLoggers*
   exceptions: []
   platform:
@@ -935,14 +935,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Legger de angitte transaksjonslogging-samlingen for tastetrykkregistratorer brukes for bygger av prosjektene i denne samlingen."
-  remarks: "Hvis transaksjonslogging-objektet er allerede i samlingen, kan du gjøre noe."
+  summary: Adds the given logger to the collection of loggers used for builds of projects in this collection.
+  remarks: If the logger object is already in the collection, does nothing.
   syntax:
     content: public void RegisterLogger (Microsoft.Build.Framework.ILogger logger);
     parameters:
     - id: logger
       type: Microsoft.Build.Framework.ILogger
-      description: "Transaksjonslogging å legge til."
+      description: The logger to add.
   overload: Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger*
   exceptions: []
   platform:
@@ -959,14 +959,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Legger til de angitte tastetrykkregistratorer samlingen av tastetrykkregistratorer brukes for delversjoner av prosjektene i denne samlingen."
-  remarks: "Hopper over transaksjonslogging objekter som er allerede i samlingen."
+  summary: Adds the given loggers to the collection of loggers used for builds of projects in this collection.
+  remarks: Skips any logger objects that are already in the collection.
   syntax:
     content: public void RegisterLoggers (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Tastetrykkregistratorer som skal legges til. Kan være null."
+      description: The loggers to be added. May be null.
   overload: Microsoft.Build.Evaluation.ProjectCollection.RegisterLoggers*
   exceptions: []
   platform:
@@ -983,7 +983,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Fjerner alle verktøysett fra samlingen prosjektet."
+  summary: Removes all toolsets from the project collection.
   syntax:
     content: public void RemoveAllToolsets ();
     parameters: []
@@ -1003,16 +1003,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Fjerner en global egenskap fra settet med globale standardegenskapene."
+  summary: Removes a global property from the set of default global properties.
   syntax:
     content: public bool RemoveGlobalProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "Navnet på egenskapen default globale fjerne."
+      description: The name of the default global property to remove.
     return:
       type: System.Boolean
-      description: "Returnerer true hvis den globale egenskapen finnes før fjerning av; False ellers."
+      description: Returns true if the global property is present before removal; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectCollection.RemoveGlobalProperty*
   exceptions: []
   platform:
@@ -1029,16 +1029,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Fjerner et verktøysettet fra samlingen prosjektet."
+  summary: Removes a toolset from the project collection.
   syntax:
     content: public bool RemoveToolset (string toolsVersion);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Verktøysettet som skal fjernes."
+      description: The toolset to be removed.
     return:
       type: System.Boolean
-      description: "Returnerer true Hvis det finnes verktøysettet før fjerning av; False ellers."
+      description: Returns true if the toolset is present before removal; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectCollection.RemoveToolset*
   exceptions: []
   platform:
@@ -1055,17 +1055,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Angir verdien for egenskapen i standard sett med globale egenskaper."
-  remarks: "Hvis det finnes ingen samsvarende egenskap, egenskapen opprettes og klargjøres med den angitte verdien."
+  summary: Sets the value of a property in the default set of global properties.
+  remarks: If no matching property is found, the property is created and initialized with the given value.
   syntax:
     content: public void SetGlobalProperty (string name, string value);
     parameters:
     - id: name
       type: System.String
-      description: "Navnet på egenskapen default globale legges til eller angitt."
+      description: The name of the default global property to be added or set.
     - id: value
       type: System.String
-      description: "Den nye verdien for egenskapen default globale."
+      description: The new value of the default global property.
   overload: Microsoft.Build.Evaluation.ProjectCollection.SetGlobalProperty*
   exceptions: []
   platform:
@@ -1082,12 +1082,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter eller angir et flagg i bestemmer om ReevaluateIfNecessary er midlertidig deaktivert på prosjekter i denne samlingen. Dette er nyttig når verten forventer foreta et antall leseoperasjoner og skriver til prosjekter, og ønsker å ofre midlertidig korrekt for ytelsen."
+  summary: Gets or sets a flag the determines whether ReevaluateIfNecessary is temporarily disabled on projects in this collection. This is useful when the host expects to make a number of reads and writes to projects, and wants to temporarily sacrifice correctness for performance.
   syntax:
     content: public bool SkipEvaluation { get; set; }
     return:
       type: System.Boolean
-      description: "Returnerer et flagg i bestemmer om ReevaluateIfNecessary er midlertidig deaktivert."
+      description: Returns a flag the determines whether ReevaluateIfNecessary is temporarily disabled.
   overload: Microsoft.Build.Evaluation.ProjectCollection.SkipEvaluation*
   exceptions: []
   platform:
@@ -1104,12 +1104,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter plasseringer brukes til å finne verktøysett."
+  summary: Gets the locations used to find the toolsets.
   syntax:
     content: public Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetLocations { get; }
     return:
       type: Microsoft.Build.Evaluation.ToolsetDefinitionLocations
-      description: "Returnerer plasseringer brukes til å finne verktøysett."
+      description: Returns the locations used to find the toolsets.
   overload: Microsoft.Build.Evaluation.ProjectCollection.ToolsetLocations*
   exceptions: []
   platform:
@@ -1126,12 +1126,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter verktøysett tilgjengelig for denne samlingen for prosjektet."
+  summary: Gets the toolsets available to this project collection.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.Toolset> Toolsets { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.Toolset}
-      description: "Returnerer verktøysett tilgjengelig i denne samlingen for prosjektet."
+      description: Returns the toolsets available to this project collection.
   overload: Microsoft.Build.Evaluation.ProjectCollection.Toolsets*
   exceptions: []
   platform:
@@ -1148,16 +1148,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Forsøk på å fjerne et prosjekt fra samlingen."
+  summary: Attempts to remove a project from the collection.
   syntax:
     content: public bool TryUnloadProject (Microsoft.Build.Construction.ProjectRootElement projectRootElement);
     parameters:
     - id: projectRootElement
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Rotelementet for prosjektet for å laste ut."
+      description: The root element of the project to unload.
     return:
       type: System.Boolean
-      description: "Returnerer true Hvis prosjektet ble lastet ut."
+      description: Returns true if the project was unloaded.
   overload: Microsoft.Build.Evaluation.ProjectCollection.TryUnloadProject*
   exceptions: []
   platform:
@@ -1174,17 +1174,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Konverterer tegn i en streng i anførselstegn MSBuild-tegn med en spesialbetydning."
-  remarks: "For eksempel &quot;%&3;b&quot; konverteres til &quot;;&quot;."
+  summary: Converts escaped characters in a string to MSBuild characters with special meaning.
+  remarks: For example, "%3b" is converted to ";".
   syntax:
     content: public static string Unescape (string escapedString);
     parameters:
     - id: escapedString
       type: System.String
-      description: "Strengen som skal konverteres."
+      description: The string to be converted.
     return:
       type: System.String
-      description: "Returnerer konvertere strengen."
+      description: Returns the converted string.
   overload: Microsoft.Build.Evaluation.ProjectCollection.Unescape*
   exceptions: []
   platform:
@@ -1201,8 +1201,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Fjerner alle prosjekter i denne samlingen for prosjektet."
-  remarks: "Verten må kalle denne metoden når det ikke lenger trenger prosjektene."
+  summary: Removes all projects in this project collection.
+  remarks: The host should call this method when it no longer needs the projects.
   syntax:
     content: public void UnloadAllProjects ();
     parameters: []
@@ -1222,19 +1222,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Fjerner et prosjekt rotelement fra hurtigbufferen for prosjektet roten."
-  remarks: "Denne metoden er nyttig for tilfeller der verten vet at alle prosjekter ved hjelp av denne rotelementet er fjernet, og at ulagrede endringer skal bli forkastet."
+  summary: Removes a project root element from the project root cache.
+  remarks: This method is useful for the case where the host knows that all projects using this root element have been removed, and that any unsaved changes should be discarded.
   syntax:
     content: public void UnloadProject (Microsoft.Build.Construction.ProjectRootElement projectRootElement);
     parameters:
     - id: projectRootElement
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Prosjektet rotelementet til å laste ut."
+      description: The project root element to unload.
   overload: Microsoft.Build.Evaluation.ProjectCollection.UnloadProject*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "Oppstår hvis prosjektet rotelementet å laste er fremdeles i bruk av en laste inn prosjektet eller dens importerer."
+    description: Thrown if the project root element to unload is still in use by a loaded project or its imports.
   platform:
   - net462
 - uid: Microsoft.Build.Evaluation.ProjectCollection.UnloadProject(Microsoft.Build.Evaluation.Project)
@@ -1249,14 +1249,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Fjerner det angitte prosjektet fra samlingen prosjektet."
-  remarks: "Verten må kalle denne metoden når det ikke lenger trenger prosjektet.       Oppstår InvalidOperationException Hvis det angitte prosjektet ikke finnes i samlingen prosjektet."
+  summary: Removes the given project from the project collection.
+  remarks: "The host should call this method when it no longer needs the project.  \n  \n Throws InvalidOperationException if the given project is not present in the project collection."
   syntax:
     content: public void UnloadProject (Microsoft.Build.Evaluation.Project project);
     parameters:
     - id: project
       type: Microsoft.Build.Evaluation.Project
-      description: "Prosjekt til å fjerne."
+      description: The project to remove.
   overload: Microsoft.Build.Evaluation.ProjectCollection.UnloadProject*
   exceptions: []
   platform:
@@ -1273,7 +1273,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Fjerner alle tastetrykkregistratorer fra samlingen av tastetrykkregistratorer brukes av prosjektet bygger i denne samlingen."
+  summary: Removes all loggers from the collection of loggers used by project builds in this collection.
   syntax:
     content: public void UnregisterAllLoggers ();
     parameters: []
@@ -1293,13 +1293,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Henter filversjonen av samlingsfilen som inneholder MSBuild-motoren."
-  remarks: "Dette er Windows filversjonen (spesifikt verdien for ProductVersion ressursen), som ikke nødvendigvis er samlingsversjonen. For å få samlingsversjonen, kan du bruke Constants.AssemblyVersion.       Se også <xref:Microsoft.Build.Evaluation.ProjectCollection.ToolsetsVersion%2A>.</xref:Microsoft.Build.Evaluation.ProjectCollection.ToolsetsVersion%2A>"
+  summary: Gets the file version of the assembly file that contains the MSBuild engine.
+  remarks: "This is the Windows file version (specifically the value of the ProductVersion resource), which is not necessarily the assembly version. To obtain the assembly version, use Constants.AssemblyVersion.  \n  \n See also the <xref:Microsoft.Build.Evaluation.ProjectCollection.ToolsetsVersion%2A>."
   syntax:
     content: public static Version Version { get; }
     return:
       type: System.Version
-      description: "Returnerer filversjonen for samlingsfilen som inneholder MSBuild-motoren."
+      description: Returns the file version of the assembly file that contains the MSBuild engine.
   overload: Microsoft.Build.Evaluation.ProjectCollection.Version*
   exceptions: []
   platform:

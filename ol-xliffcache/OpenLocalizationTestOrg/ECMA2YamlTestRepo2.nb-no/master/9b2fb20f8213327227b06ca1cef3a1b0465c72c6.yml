@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectItemDefinitionInstance
   fullName: Microsoft.Build.Execution.ProjectItemDefinitionInstance
   type: Class
-  summary: "Representerer en evaluerte elementet definisjon for en bestemt elementtype divested for alle referanser til kildekode for prosjektet."
+  summary: Represents an evaluated item definition for a particular item type, divested of all references to project source code.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{itemType} #Metadata={MetadataCount}")]
@@ -38,16 +38,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Få en metadata i definisjonen av dette elementet med det angitte navnet."
+  summary: Get any metadata in this item definition with the given name.
   syntax:
     content: public Microsoft.Build.Execution.ProjectMetadataInstance GetMetadata (string name);
     parameters:
     - id: name
       type: System.String
-      description: "Navnet på metadata for å hente."
+      description: The name of the metadata to retrieve.
     return:
       type: Microsoft.Build.Execution.ProjectMetadataInstance
-      description: "Returnerer eventuelle metadata i definisjonen av dette elementet med det angitte navnet. Returnerer null hvis det finnes ingen metadata med dette navnet."
+      description: Returns any metadata in this item definition with the given name. Returns null if no metadata exists with this name.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.GetMetadata*
   exceptions: []
   platform:
@@ -64,12 +64,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter elementtypen definisjonen for dette elementet."
+  summary: Gets the item type of this item definition.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Returnerer elementtypen definisjonen for dette elementet."
+      description: Returns the item type of this item definition.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.ItemType*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter alle metadataene for dette elementet definisjonen. Dette er en skrivebeskyttet samling."
+  summary: Gets all the metadata for this item definition. This is a read-only collection.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectMetadataInstance> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectMetadataInstance}
-      description: "Returnerer alle metadataene for dette elementet definisjonen. Hvis det er ingen metadata, returnerer tom samling."
+      description: Returns all the metadata for this item definition. If there is no metadata, returns empty collection.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.Metadata*
   exceptions: []
   platform:
@@ -108,12 +108,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter antall enheter av metadata for denne definisjonen for elementet."
+  summary: Gets the number of pieces of metadata on this item definition.
   syntax:
     content: public int MetadataCount { get; }
     return:
       type: System.Int32
-      description: "Returnerer antall enheter av metadata på denne definisjonen for elementet."
+      description: Returns the number of pieces of metadata on this item definition.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.MetadataCount*
   exceptions: []
   platform:
@@ -130,12 +130,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Henter en opplisting over metadata navn for denne definisjon for elementet. Dette er en skrivebeskyttet samling."
+  summary: Gets an enumerator over the metadata names for this item definition. This is a read-only collection.
   syntax:
     content: public System.Collections.Generic.IEnumerable<string> MetadataNames { get; }
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: "Returnerer en opplisting over metadata navn for denne definisjon for elementet."
+      description: Returns an enumerator over the metadata names for this item definition.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.MetadataNames*
   exceptions: []
   platform:

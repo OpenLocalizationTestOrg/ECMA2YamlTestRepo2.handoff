@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nb-no">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2e5ae14095fb06fb18055b2eb6590d17c7f7fc0c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Speech.Recognition.SemanticResultValue.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">97c3ff1a31a001990a4ea30751c71acb871e9f6f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">307325b229d3b1cc2f16c9f0ddac57ed9b3fa67b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents a semantic value and optionally associates the value with a component of a speech recognition grammar.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use of SemanticResultValue and &lt;xref:System.Speech.Recognition.SemanticResultKey&gt; objects, in conjunction with &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; and &lt;xref:System.Speech.Recognition.Choices&gt;, is the easiest way to design a semantic structure for a &lt;xref:System.Speech.Recognition.Grammar&gt;.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Semantic information for a phrase is accessed by obtaining an instance of &lt;xref:System.Speech.Recognition.SemanticValue&gt;, through the &lt;xref:System.Speech.Recognition.RecognizedPhrase.Semantics%2A&gt; property on &lt;xref:System.Speech.Recognition.RecognizedPhrase&gt;.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Values managed by SemanticResultValue objects are defined by &lt;xref:System.Object&gt; instances passed to their constructors.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The underlying type of this &lt;xref:System.Object&gt; must be <ph id="ph1">`bool`</ph>, <ph id="ph2">`int`</ph>, <ph id="ph3">`float`</ph>, or <ph id="ph4">`string`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Any other type will prevent construction of a &lt;xref:System.Speech.Recognition.Grammar&gt; instance with the SemanticResultValue.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The typical use of a SemanticResultValue instance associates the instance with a recognizable component of a &lt;xref:System.Speech.Recognition.Grammar&gt;, such as a phrase, a rule, or a &lt;xref:System.Speech.Recognition.Choices&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the associated component is used as part of a recognition operation, the SemanticResultValue is used to define a value in the semantics of the returned phrase.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are two basic methods for associating a SemanticResultValue instance with a grammar element, depending on the constructor used to create the SemanticResultValue.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If only the value (specified by an instance of &lt;xref:System.Object&gt;) is used to construct a SemanticResultValue object, the SemanticResultValue is associated with the grammar component that preceded it, in addition to a &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For instance, in the code fragment below, if a &lt;xref:System.Speech.Recognition.Grammar&gt; constructed using this &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; instance recognizes the word "background", a value of <ph id="ph1">`true`</ph> is set in the recognized phrase semantics.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```c#       GrammarBuilder backgroundGB=new GrammarBuilder("background");       backgroundGB.Append(new SemanticResultValue(true));       ```</ph>           For more information, see the description of &lt;xref:System.Speech.Recognition.SemanticResultValue.%23ctor%28System.Object%29&gt;.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If a string value phrase or specific &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; instance is used, together with a &lt;xref:System.Object&gt; that specifies a SemanticResultValue value, that value is automatically associated with the string value phrase or the &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; instance.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the phrase or &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; object is used in the process of recognition, the value will be assigned to the semantics of the recognized phrase.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following example illustrates this, and is functionally equivalent to the preceding example, which used explicit calls to &lt;xref:System.Speech.Recognition.GrammarBuilder.Append%2A&gt; and &lt;xref:System.Speech.Recognition.SemanticResultValue.%23ctor%28System.Object%29&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the recognition logic uses the word "background", the value <ph id="ph1">`true`</ph> will be added to the recognized semantics.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```c#       fgOrbgChoice.Add((GrammarBuilder)new SemanticResultValue("background", true));       ```</ph>           For more information, see the description of &lt;xref:System.Speech.Recognition.SemanticResultValue.%23ctor%28System.Speech.Recognition.GrammarBuilder%2CSystem.Object%29&gt; and &lt;xref:System.Speech.Recognition.SemanticResultValue.%23ctor%28System.String%2CSystem.Object%29&gt;.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To be used by a &lt;xref:System.Speech.Recognition.Grammar&gt; in recognition, all SemanticResultValue instances must be associated with one of the &lt;xref:System.Speech.Recognition.SemanticValue&gt; objects used by that &lt;xref:System.Speech.Recognition.Grammar&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is done by associating a semantic key with the SemanticResultValue.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Semantic keys can be explicitly attached to a SemanticResultValue, using a &lt;xref:System.Speech.Recognition.SemanticResultKey&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>SemanticResultValue instances not explicitly attached to a key are attached to the root key of the default &lt;xref:System.Speech.Recognition.SemanticValue&gt;.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After a SemanticResultValue has been used to set the &lt;xref:System.Speech.Recognition.SemanticValue.Value%2A&gt;, whether it is tagged with the default root key or by any particular &lt;xref:System.Speech.Recognition.SemanticResultKey&gt;, that value must not be modified or an exception will occur during recognition operations.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following example will cause an exception because it sets and then modifies the root &lt;xref:System.Speech.Recognition.SemanticValue.Value%2A&gt; of a &lt;xref:System.Speech.Recognition.Grammar&gt;.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```c#   GrammarBuilder gb=new GrammarBuilder();   gb.Append(new SemanticResultValue("One"));   gb.Append(new SemanticResultValue("Two"));   ```</ph>       On the other hand, the code in the following example is permitted.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Although it defines multiple instances of SemanticResultValue, they are included in a &lt;xref:System.Speech.Recognition.Choices&gt; object, and only one will ever be used to set the value of the key <ph id="ph1">`bgOrfgText`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```c#   Choices fgOrbgChoice = new Choices();   fgOrbgChoice.Add((GrammarBuilder)new SemanticResultValue("background"));   fgOrbgChoice.Add((GrammarBuilder)new SemanticResultValue("foreground"));   SemanticResultKey fgOrbgChoiceKey = new SemanticResultKey("BgOrFgText", fgOrbgChoice);   ```</ph>       For more information about using SemanticResultValue and &lt;xref:System.Speech.Recognition.SemanticResultKey&gt; objects, see <bpt id="p1">[</bpt>Understanding SemanticResultValue and SemanticResultKey Objects<ept id="p1">](http://msdn.microsoft.com/en-us/0fea1236-5261-4608-89b3-9ce9ffc22a1c)</ept> and <bpt id="p2">[</bpt>Using a SemanticResultKey to Extract a SemanticResultValue<ept id="p2">](http://msdn.microsoft.com/en-us/198e29b8-845f-4cec-a25e-f55c0eaf46aa)</ept> in the <bpt id="p3">[</bpt>System Speech Programming Guide for .NET Framework 4.0<ept id="p3">](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class and specifies a semantic value.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A <ph id="ph1">`SemanticResultValue`</ph> returned by this constructor is not associated with any particular grammar element.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The association must be made explicit by using the instance of <ph id="ph1">`SemanticResultValue`</ph> in conjunction with &lt;xref:System.Speech.Recognition.GrammarBuilder&gt;.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For instance, in the code fragment below, if a &lt;xref:System.Speech.Recognition.Grammar&gt; constructed using this &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; instance recognizes the word "background", a value of <ph id="ph1">`true`</ph> is set in the recognized phrase semantics.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The value managed by <bpt id="p1">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Must be of type <bpt id="p1">&lt;xref uid="langword_csharp_bool" name="bool" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, <bpt id="p2">&lt;xref uid="langword_csharp_int" name="int" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, <bpt id="p3">&lt;xref uid="langword_csharp_float" name="float" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>, or <bpt id="p4">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class and associates a semantic value with a <bpt id="p2">&lt;xref href="System.Speech.Recognition.GrammarBuilder"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the grammar element specified by &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; is used in the recognition logic, <ph id="ph1">`value`</ph> will be set in the semantics of the recognized output.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the code fragment below, if the recognition logic constructed with the &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; instance (<ph id="ph1">`myGb`</ph>) uses the &lt;xref:System.Speech.Recognition.Choices&gt; object (<ph id="ph2">`myChoice`</ph>) to identify input, the value <ph id="ph3">`true`</ph> is added to the recognized semantics.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```c#   myGb.Append(new SemanticResultValue(myChoice, true);   ```</ph>       As &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; supports implicit conversion for &lt;xref:System.Speech.Recognition.Choices&gt;,  <ph id="ph2">`SemanticResultValue`</ph>, and &lt;xref:System.Speech.Recognition.SemanticResultKey&gt;, this constructor can use those objects as well.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>A grammar component to be used in recognition.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The value managed by <bpt id="p1">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Must be of type <bpt id="p1">&lt;xref uid="langword_csharp_bool" name="bool" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, <bpt id="p2">&lt;xref uid="langword_csharp_int" name="int" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, <bpt id="p3">&lt;xref uid="langword_csharp_float" name="float" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>, or <bpt id="p4">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class and associates a semantic value with a &lt;xref:System.String&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the string specified by <ph id="ph1">`phrase`</ph> is used in the recognition logic, <ph id="ph2">`value`</ph> will be set in the semantics of the recognized output.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the following code fragment, if the recognition logic constructed with the &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; instance (<ph id="ph1">`myGb`</ph>) uses the string "my mortgage" to identify input, the value <ph id="ph2">`true`</ph> will be added to the recognized semantics.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A phrase to be used in recognition.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The value managed by <bpt id="p1">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Must be of type <bpt id="p1">&lt;xref uid="langword_csharp_bool" name="bool" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, <bpt id="p2">&lt;xref uid="langword_csharp_int" name="int" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, <bpt id="p3">&lt;xref uid="langword_csharp_float" name="float" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>, or <bpt id="p4">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Returns an instance of <bpt id="p1">&lt;xref href="System.Speech.Recognition.GrammarBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> constructed from the current <bpt id="p2">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> instance.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The use of ToGrammarBuilder is equivalent to using the &lt;xref:System.Speech.Recognition.GrammarBuilder&gt; constructor that takes a &lt;xref:System.Speech.Recognition.SemanticResultValue&gt; as an argument (&lt;xref:System.Speech.Recognition.GrammarBuilder.%23ctor%28System.Speech.Recognition.SemanticResultValue%29&gt;).</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Returns an instance of <bpt id="p1">&lt;xref href="System.Speech.Recognition.GrammarBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> constructed from the current <bpt id="p2">&lt;xref href="System.Speech.Recognition.SemanticResultValue"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> instance.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
