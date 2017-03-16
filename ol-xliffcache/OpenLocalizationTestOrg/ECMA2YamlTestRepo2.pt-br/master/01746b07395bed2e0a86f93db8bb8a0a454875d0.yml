@@ -16,8 +16,8 @@ items:
   nameWithType: HostServices
   fullName: Microsoft.Build.Execution.HostServices
   type: Class
-  summary: "Implementação de um serviço de host atua como mediador acesso da compilação para o host."
-  remarks: "Consulte também <xref:Microsoft.Build.Utilities.Task.HostObject%2A>.</xref:Microsoft.Build.Utilities.Task.HostObject%2A>"
+  summary: Implementation of a host service that mediates access from the build to the host.
+  remarks: See also <xref:Microsoft.Build.Utilities.Task.HostObject%2A>.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#Entries={hostObjectMap.Count}")]
@@ -41,7 +41,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Cria um serviço de host."
+  summary: Creates a host service.
   syntax:
     content: public HostServices ();
     parameters: []
@@ -61,22 +61,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém o serviço de host para a tarefa específica em que a tarefa aparece dentro de um projeto com nomes e de destino."
+  summary: Gets the host service for the given task where the task appears within a target and project with the given names.
   syntax:
     content: public Microsoft.Build.Framework.ITaskHost GetHostObject (string projectFile, string targetName, string taskName);
     parameters:
     - id: projectFile
       type: System.String
-      description: "O nome do arquivo de projeto."
+      description: The name of the project file.
     - id: targetName
       type: System.String
-      description: "O nome do destino."
+      description: The name of the target.
     - id: taskName
       type: System.String
-      description: "O nome de tarefa associado com o serviço de host."
+      description: The task name associated with the host service.
     return:
       type: Microsoft.Build.Framework.ITaskHost
-      description: "Retorna o serviço de host para a tarefa específica em que a tarefa aparece dentro de um projeto com nomes e de destino. Se nenhum serviço de host existir, retornará null."
+      description: Returns the host service for the given task where the task appears within a target and project with the given names. If no host service exists, returns null.
   overload: Microsoft.Build.Execution.HostServices.GetHostObject*
   exceptions: []
   platform:
@@ -93,16 +93,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém a afinidade de nó para o arquivo de projeto específica."
+  summary: Gets the node affinity for the given project file.
   syntax:
     content: public Microsoft.Build.Execution.NodeAffinity GetNodeAffinity (string projectFile);
     parameters:
     - id: projectFile
       type: System.String
-      description: "O arquivo de projeto associado ao nó."
+      description: The project file associated with the node.
     return:
       type: Microsoft.Build.Execution.NodeAffinity
-      description: "Retorna a afinidade de nó para o arquivo de projeto específica."
+      description: Returns the node affinity for the given project file.
   overload: Microsoft.Build.Execution.HostServices.GetNodeAffinity*
   exceptions: []
   platform:
@@ -119,17 +119,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Atualiza a tabela de serviços de host quando um projeto é denominado ou renomeado."
-  remarks: "Um projeto é denominado quando ele recebe um novo caminho completo e o caminho antigo é nulo."
+  summary: Updates the host services table when a project is named or renamed.
+  remarks: A project is named when it is given a new full path and the old path is null.
   syntax:
     content: public void OnRenameProject (string oldFullPath, string newFullPath);
     parameters:
     - id: oldFullPath
       type: System.String
-      description: "O caminho atual para o arquivo de projeto."
+      description: The current path to the project file.
     - id: newFullPath
       type: System.String
-      description: "O novo caminho para o arquivo de projeto."
+      description: The new path to the project file.
   overload: Microsoft.Build.Execution.HostServices.OnRenameProject*
   exceptions: []
   platform:
@@ -146,23 +146,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Registre um serviço de host para o par de determinada tarefa/destino."
-  remarks: "Substitui qualquer serviço de host existente."
+  summary: Register a host service for the given task/target pair.
+  remarks: Overwrites any existing host service.
   syntax:
     content: public void RegisterHostObject (string projectFile, string targetName, string taskName, Microsoft.Build.Framework.ITaskHost hostObject);
     parameters:
     - id: projectFile
       type: System.String
-      description: "O arquivo de projeto que contém o par de tarefa/destino."
+      description: The project file containing the task/target pair.
     - id: targetName
       type: System.String
-      description: "O nome do destino."
+      description: The name of the target.
     - id: taskName
       type: System.String
-      description: "O nome da tarefa."
+      description: The name of the task.
     - id: hostObject
       type: Microsoft.Build.Framework.ITaskHost
-      description: "O serviço de host."
+      description: The host service.
   overload: Microsoft.Build.Execution.HostServices.RegisterHostObject*
   exceptions: []
   platform:
@@ -179,16 +179,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Define a afinidade de nó para o arquivo de projeto específica."
+  summary: Sets the node affinity for the given project file.
   syntax:
     content: public void SetNodeAffinity (string projectFile, Microsoft.Build.Execution.NodeAffinity nodeAffinity);
     parameters:
     - id: projectFile
       type: System.String
-      description: "O arquivo de projeto. Se definido como string. Empty, todos os projetos usarão a afinidade de nó específico. Se definido como null, todas as afinidades de nó será desmarcada."
+      description: The project file. If set to String.Empty, all projects will use the given node affinity. If set to null, all node affinities will be cleared.
     - id: nodeAffinity
       type: Microsoft.Build.Execution.NodeAffinity
-      description: "A afinidade de nó."
+      description: The node affinity.
   overload: Microsoft.Build.Execution.HostServices.SetNodeAffinity*
   exceptions: []
   platform:
@@ -205,13 +205,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Cancelar o registro de objetos do host do projeto, se houver e remova qualquer afinidades de nó associadas a ele."
+  summary: Unregister the project's host objects, if any and remove any node affinities associated with it.
   syntax:
     content: public void UnregisterProject (string projectFullPath);
     parameters:
     - id: projectFullPath
       type: System.String
-      description: "O caminho para o projeto para cancelar o registro."
+      description: The path to the project to unregister.
   overload: Microsoft.Build.Execution.HostServices.UnregisterProject*
   exceptions: []
   platform:

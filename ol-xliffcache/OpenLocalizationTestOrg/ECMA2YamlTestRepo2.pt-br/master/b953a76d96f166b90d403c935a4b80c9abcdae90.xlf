@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b953a76d96f166b90d403c935a4b80c9abcdae90</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Navigation.NavigationWindow.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0bcb8b34309ca4a790f4cc2bf4e7f08773542f80</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">73fc0d111256092ed9d2490e93d0f70a68046251</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents a window that supports content navigation.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>NavigationWindow derives from &lt;xref:System.Windows.Window&gt; and extends it with the ability to navigate to and display content.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Content can be any <ph id="ph1">[!INCLUDE[TLA2#tla_winfx](~/add/includes/tla2sharptla-winfx-md.md)]</ph> object or <ph id="ph2">[!INCLUDE[TLA#tla_html](~/add/includes/tlasharptla-html-md.md)]</ph> file.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In general, however, a &lt;xref:System.Windows.Controls.Page&gt; object is the preferred way to package content for navigation.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Content can be navigated to by setting the &lt;xref:System.Windows.Navigation.NavigationWindow.Source%2A&gt; property with the <ph id="ph1">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> for the desired content.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Additionally, content can be navigated to by using one of the following overloads of the &lt;xref:System.Windows.Navigation.NavigationWindow.Navigate%2A&gt; method:      -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Uri%29&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Uri%2CSystem.Object%29&gt;       When content is navigated to by <ph id="ph1">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph>, NavigationWindow will return an object that contains the content.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Navigation by <ph id="ph2">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> also supports navigation to a content fragment.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationWindow.FragmentNavigation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Alternatively, content can be navigated to by using one of the &lt;xref:System.Windows.Navigation.NavigationWindow.Navigate%2A&gt; method overloads that accepts an object:      -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Object%29&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigate%28System.Object%2CSystem.Object%29&gt;       The lifetime of a navigation can be tracked through the following events:      -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigating&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigated&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.NavigationProgress&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.NavigationFailed&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.NavigationStopped&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.LoadCompleted&gt;      -   &lt;xref:System.Windows.Navigation.NavigationWindow.FragmentNavigation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Not all events are raised each time that a navigation occurs; the set of events that are raised is determined by the type of navigation that occurs (content or content fragment) and how the navigation completes (canceled, stopped, or failed).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following figure illustrates the sequence in which these events will fire:       <bpt id="p1">![</bpt>Page navigation flow chart<ept id="p1">]</ept><bpt id="p2">(~/add/media/navigationoverviewfigure11.png "</bpt>Page navigation flow chart<ept id="p2">")</ept>       During or after a navigation, NavigationWindow provides information about the content that is being navigated to, including the <ph id="ph1">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> of the content being navigated to (&lt;xref:System.Windows.Navigation.NavigationWindow.Source%2A&gt;), the <ph id="ph2">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> of the current content (&lt;xref:System.Windows.Navigation.NavigationWindow.CurrentSource%2A&gt;), and an object that contains the content that was navigated to (&lt;xref:System.Windows.Controls.ContentControl.Content%2A&gt;).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When content is navigated to, NavigationWindow records the navigation as an entry in navigation history.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An entry is added to back navigation history when either a new navigation occurs, by calling the &lt;xref:System.Windows.Navigation.NavigationWindow.Navigate%2A&gt; method, or by navigating to an entry in forward navigation history, by calling &lt;xref:System.Windows.Navigation.NavigationWindow.GoForward%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An entry is added to forward navigation history by navigating to an entry in back navigation history, by calling &lt;xref:System.Windows.Navigation.NavigationWindow.GoBack%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Navigation.NavigationWindow.CanGoBack%2A&gt; and &lt;xref:System.Windows.Navigation.NavigationWindow.CanGoForward%2A&gt; report whether there are entries in back and forward navigation history, respectively.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The first time that one piece of content is navigated to from another piece of content, NavigationWindow automatically displays a navigation <ph id="ph1">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph> that allows users to navigate back and forwards through navigation history.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can configure when the navigation <ph id="ph1">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph> is shown by setting the &lt;xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The most recent entry in back navigation history can be removed by calling &lt;xref:System.Windows.Navigation.NavigationWindow.RemoveBackEntry%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>NavigationWindow does not store an instance of a content object in navigation history.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, NavigationWindow creates a new instance of the content object each time it is navigated to by using navigation history.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior is designed to avoid excessive memory consumption when large numbers and large pieces of content are being navigated to.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Consequently, the state of the content is not remembered from one navigation to the next.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, <ph id="ph1">[!INCLUDE[TLA2#tla_wpf](~/add/includes/ajax-current-ext-md.md)]</ph> provides several techniques by which you can store a piece of state for a piece of content in navigation history.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using &lt;xref:System.Windows.Navigation.NavigationWindow.AddBackEntry%2A&gt;, you can also remember multiple sets of state for a single page instance.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>NavigationWindow is one of two navigators in <ph id="ph1">[!INCLUDE[TLA2#tla_wpf](~/add/includes/ajax-current-ext-md.md)]</ph>, the other being &lt;xref:System.Windows.Controls.Frame&gt;.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Essentially, navigator is a class supports navigation and navigation history.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Visually, <ph id="ph1">[!INCLUDE[TLA2#tla_xbap#plural](~/add/includes/tla2sharptla-xbapsharpplural-md.md)]</ph> use <ph id="ph2">[!INCLUDE[TLA2#tla_ie7](~/add/includes/tla2sharptla-ie7-md.md)]</ph> as a navigator, to provide an integrated user experience.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, <ph id="ph1">[!INCLUDE[TLA2#tla_xbap#plural](~/add/includes/tla2sharptla-xbapsharpplural-md.md)]</ph> actually use NavigationWindow as the navigator; the &lt;xref:System.Windows.Application.MainWindow%2A&gt; property of an <ph id="ph2">[!INCLUDE[TLA2#tla_xbap](~/add/includes/ajax-current-ext-md.md)]</ph> running in <ph id="ph3">[!INCLUDE[TLA2#tla_ie7](~/add/includes/tla2sharptla-ie7-md.md)]</ph> will return a reference to the NavigationWindow, and the navigation history that is managed by the NavigationWindow is integrated with the navigation history that is managed by <ph id="ph4">[!INCLUDE[TLA2#tla_ie7](~/add/includes/tla2sharptla-ie7-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">**</bpt>Content Model:<ept id="p1">**</ept>  NavigationWindow is a &lt;xref:System.Windows.Controls.ContentControl&gt;, which means that NavigationWindow can contain content such as text, images, or panels.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Also, NavigationWindow is a root element and, consequently, cannot be part of another element's content.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about the content model for &lt;xref:System.Windows.Controls.Button&gt;, see <bpt id="p1">[</bpt>WPF Content Model<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Customizing the NavigationWindow Control    To apply the same property settings to multiple NavigationWindow controls, use the &lt;xref:System.Windows.FrameworkElement.Style%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can modify the default &lt;xref:System.Windows.Controls.ControlTemplate&gt; to give the control a unique appearance.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about creating a &lt;xref:System.Windows.Controls.ControlTemplate&gt;, see <bpt id="p1">[</bpt>Customizing the Appearance of an Existing Control by Creating a ControlTemplate<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To see the parts and states that are specific to the NavigationWindow, see <bpt id="p1">[</bpt>NavigationWindow Styles and Templates<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Dependency properties for this control might be set by the control’s default style.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If a property is set by a default style, the property might change from its default value when the control appears in the application.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default style is determined by which desktop theme is used when the application is running.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Default WPF Themes<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=158252)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Setting a visual property will only have an effect if that property is both present in NavigationWindow control's default template and is set by using a .</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can find a list of visual properties in the "Changing the Visual Structure of a Control" section in <bpt id="p1">[</bpt>Customizing the Appearance of an Existing Control by Creating a ControlTemplate<ept id="p1">](../Topic/Customizing%20the%20Appearance%20of%20an%20Existing%20Control%20by%20Creating%20a%20ControlTemplate.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Adds an entry to back navigation history that contains a <bpt id="p1">&lt;xref href="System.Windows.Navigation.CustomContentState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Navigation.CustomContentState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object that represents application-defined state that is associated with a specific piece of content.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;state&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, and a <bpt id="p2">&lt;xref href="System.Windows.Navigation.CustomContentState"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object isn't returned from <ph id="ph2">&lt;xref:System.Windows.Navigation.IProvideCustomContentState.GetContentState*&gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Adds a child object.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The child object to add.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>when this method is called.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This prevents content from being added to <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> using <ph id="ph1">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Adds text to the object.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The text to add to the object.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>if the text parameter value contains non-whitespace characters.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Gets an &lt;xref:System.Collections.IEnumerable&gt; that you use to enumerate the entries in back navigation history for a <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The entries that are returned by BackStack include whole content, fragment navigations, and custom state.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="dependencyPropertyInfo_NavigationWindowBackStack"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## Dependency Property Information      |||   |-|-|   |Identifier field|BackStack|   |Metadata properties set to <ph id="ph1">`true`</ph>|None|</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Collections.IEnumerable&gt; if at least one entry has been added to back navigation history, or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if there are not entries or the <bpt id="p2">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> does not own its own navigation history.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Navigation.NavigationWindow.BackStack*&gt; dependency property.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether there is at least one entry in back navigation history.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.CanGoBack%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="dependencyPropertyInfo_NavigationWindowCanGoBack"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## Dependency Property Information      |||   |-|-|   |Identifier field|CanGoBack|   |Metadata properties set to <ph id="ph1">`true`</ph>|None|</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if there is at least one entry in back navigation history; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if there are no entries in back navigation history or the <bpt id="p3">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> does not own its own navigation history.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Navigation.NavigationWindow.CanGoBack*&gt; dependency property.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether there is at least one entry in forward navigation history.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="dependencyPropertyInfo_NavigationWindowCanGoForward"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## Dependency Property Information      |||   |-|-|   |Identifier field|CanGoForward|   |Metadata properties set to <ph id="ph1">`true`</ph>|None|</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if there is at least one entry in forward navigation history; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if there are no entries in forward navigation history, or the <bpt id="p3">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> does not own its own navigation history.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Navigation.NavigationWindow.CanGoForward*&gt; dependency property.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Gets the <ph id="ph1">[!INCLUDE[TLA#tla_uri](~/add/includes/tlasharptla-uri-md.md)]</ph> of the content that was last navigated to.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See CurrentSource.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> for the content that was last navigated to, if navigated to by using a <ph id="ph2">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph>; otherwise, <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Gets an &lt;xref:System.Collections.IEnumerable&gt; that you use to enumerate the entries in back navigation history for a <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The entries that are returned by ForwardStack include whole content, fragment navigations, and custom state.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="dependencyPropertyInfo_NavigationWindowForwardStack"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## Dependency Property Information      |||   |-|-|   |Identifier field|ForwardStack|   |Metadata properties set to <ph id="ph1">`true`</ph>|None|</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Collections.IEnumerable&gt; if at least one entry has been added to forward navigation history, or null if there are no entries or the <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> does not own its own navigation history.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Navigation.NavigationWindow.ForwardStack*&gt; dependency property.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Occurs when navigation to a content fragment begins, which occurs immediately, if the desired fragment is in the current content, or after the source <ph id="ph1">[!INCLUDE[TLA2#tla_titlexaml](~/add/includes/tla2sharptla-titlexaml-md.md)]</ph> content has been loaded, if the desired fragment is in different content.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Navigates to the most recent item in back navigation history.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>GoBack is called when there are no entries in back navigation history.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Navigates to the most recent item in forward navigation history.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>GoForward is called when there are no entries in forward navigation history.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Occurs when content that was navigated to has been loaded, parsed, and has begun rendering.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.LoadCompleted?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Navigates asynchronously to content that is contained by an object.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%29?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Object&gt; that contains the content to navigate to.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if a navigation is not canceled; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Navigates asynchronously to content that is specified by a <ph id="ph1">[!INCLUDE[TLA#tla_uri](~/add/includes/tlasharptla-uri-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%29?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph><ph id="ph2"> &gt;  </ph><ph id="ph3">[!INCLUDE[TLA#tla_uri#initcap#plural](~/add/includes/tlasharptla-urisharpinitcapsharpplural-md.md)]</ph> can be either relative or absolute.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Pack URIs in WPF<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Uri&gt; object initialized with the <ph id="ph1">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> for the desired content.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if a navigation is not canceled; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Navigates asynchronously to content that is contained by an object, and passes an object that contains data to be used for processing during navigation.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%2CSystem.Object%29?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Object&gt; that contains the content to navigate to.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Object&gt; that contains data to be used for processing during navigation.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if a navigation is not canceled; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Navigates asynchronously to source content located at a <ph id="ph1">[!INCLUDE[TLA#tla_uri](~/add/includes/tlasharptla-uri-md.md)]</ph>, and pass an object that contains data to be used for processing during navigation.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%2CSystem.Object%29?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Uri&gt; object initialized with the <ph id="ph1">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> for the desired content.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Object&gt; that contains data to be used for processing during navigation.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if a navigation is not canceled; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Occurs when the content that is being navigated to has been found, and is available from the &lt;xref:System.Windows.Controls.ContentControl.Content*&gt; property, although it may not have completed loading.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Navigated?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Occurs when a new navigation is requested.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Occurs when an error is raised while navigating to the requested content.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.NavigationFailed?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Occurs periodically during a download to provide navigation progress information.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.NavigationProgress?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationService"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used by this <bpt id="p2">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to provide navigation services to its content.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Navigation.NavigationWindow&gt; uses a &lt;xref:System.Windows.Navigation.NavigationService&gt; to provide navigation services to content that is hosted by &lt;xref:System.Windows.Navigation.NavigationWindow&gt;.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The NavigationService property is useful for code in a custom &lt;xref:System.Windows.Navigation.NavigationWindow&gt; to get a reference to the &lt;xref:System.Windows.Navigation.NavigationService&gt;, to handle navigation events, for example.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Content that is hosted by a &lt;xref:System.Windows.Navigation.NavigationWindow&gt;, such as &lt;xref:System.Windows.Controls.Page&gt;, should use the &lt;xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=fullName&gt; method or &lt;xref:System.Windows.Controls.Page.NavigationService%2A?displayProperty=fullName&gt; property to get a reference to the &lt;xref:System.Windows.Navigation.NavigationService&gt;.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>The navigation service used by this <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Occurs when the &lt;xref:System.Windows.Navigation.NavigationWindow.StopLoading*&gt; method is called, or when a new navigation is requested while a current navigation is in progress.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.NavigationStopped?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Called when the template generation for the visual tree is created.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Window.Closed"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve" extradata="MT">
+          <source>OnClosed releases the &lt;xref:System.Windows.Navigation.NavigationService&gt; object that it is using to manage navigation, before raising &lt;xref:System.Windows.Window.Closed&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Creates and returns a <bpt id="p1">&lt;xref href="System.Windows.Automation.Peers.NavigationWindowAutomationPeer"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object for this <bpt id="p2">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method overrides &lt;xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Automation.Peers.NavigationWindowAutomationPeer"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object for this <bpt id="p2">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Reloads the current content.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Removes the most recent journal entry from back history.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.RemoveBackEntry%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>The most recent <bpt id="p1">&lt;xref href="System.Windows.Navigation.JournalEntry"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in back navigation history, if there is one.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether a <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> isolates external <ph id="ph1">[!INCLUDE[TLA#tla_xaml](~/add/includes/tlasharptla-xaml-md.md)]</ph> content within a partial trust security sandbox (with default Internet zone permission set).</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve" extradata="MT">
+          <source>External content is <ph id="ph1">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph> content that is not included with an application as either a resource file or a content file (for more information, see <bpt id="p1">[</bpt>WPF Application Resource, Content, and Data Files<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When SandboxExternalContent is true, and the content of the &lt;xref:System.Windows.Navigation.NavigationWindow&gt; is an external <ph id="ph1">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph> file, the content is loaded into a partial trust security sandbox that is limited to the default Internet zone permission set.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Additionally, the external content is loaded into a separate process.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Consequently, the external content becomes isolated and does not have access to application-scope resources, such as resource dictionaries (for more information, see &lt;xref:System.Windows.ResourceDictionary&gt;).</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  &lt;xref:System.Windows.Navigation.NavigationWindow&gt; contains external content only when the &lt;xref:System.Windows.Navigation.NavigationWindow.Source%2A&gt; property is set to the <ph id="ph2">[!INCLUDE[TLA#tla_uri](~/add/includes/tlasharptla-uri-md.md)]</ph> for an external <ph id="ph3">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph> file.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Navigation.NavigationWindow&gt; content that is provided using the &lt;xref:System.Windows.Controls.ContentControl.Content%2A&gt; property is considered internal content and, subsequently, is not isolated.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="dependencyPropertyInfo_NavigationWindowSandboxExternalContent"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## Dependency Property Information      |||   |-|-|   |Identifier field|SandboxExternalContent|   |Metadata properties set to <ph id="ph1">`true`</ph>|None|</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if content is isolated within a partial trust security sandbox; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>SandboxExternalContent is set when an application is executing in partial trust.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Navigation.NavigationWindow.SandboxExternalContent*&gt; dependency property.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>Indicates whether the &lt;xref:System.Windows.Controls.ContentControl.Content*&gt; property should be persisted.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This <ph id="ph1">`ShouldSerialize`</ph> method is provided because the &lt;xref:System.Windows.Controls.ContentControl.Content%2A&gt; property does not have a simple default value.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method indicates whether the property has changed from its default value.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You typically call this method if you are either developing a designer for the &lt;xref:System.Windows.Navigation.NavigationWindow&gt; or developing your own control incorporating the &lt;xref:System.Windows.Navigation.NavigationWindow&gt;.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the property value has changed from its default; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether a <bpt id="p1">&lt;xref href="System.Windows.Navigation.NavigationWindow"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> shows its navigation <ph id="ph1">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To aid back and forward navigation, &lt;xref:System.Windows.Navigation.NavigationWindow&gt; automatically displays a navigation <ph id="ph1">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph>       Navigation <ph id="ph2">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph> is displayed whether or not navigation has occurred.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="dependencyPropertyInfo_NavigationWindowShowsNavigationUI"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## Dependency Property Information      |||   |-|-|   |Identifier field|ShowsNavigationUI|   |Metadata properties set to <ph id="ph1">`true`</ph>|None|</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the navigation <ph id="ph1">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph> is displayed; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI*&gt; dependency property.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <ph id="ph1">[!INCLUDE[TLA#tla_uri](~/add/includes/tlasharptla-uri-md.md)]</ph> of the current content, or the <ph id="ph2">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> of new content that is currently being navigated to.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph><ph id="ph2"> &gt;  </ph><ph id="ph3">[!INCLUDE[TLA#tla_uri#initcap#plural](~/add/includes/tlasharptla-urisharpinitcapsharpplural-md.md)]</ph> can be either relative or absolute.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Pack URIs in WPF<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="dependencyPropertyInfo_NavigationWindowSource"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## Dependency Property Information      |||   |-|-|   |Identifier field|Source|   |Metadata properties set to <ph id="ph1">`true`</ph>|&lt;xref:System.Windows.FrameworkPropertyMetadata.Journal%2A&gt;|</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">[!INCLUDE[TLA2#tla_uri](~/add/includes/tla2sharptla-uri-md.md)]</ph> for the current content, or the content that is currently being navigated to.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Navigation.NavigationWindow.Source*&gt; dependency property.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>Stops further downloading of content for the current navigation request.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve" extradata="MT">
+          <source>StopLoading stops the download of the requested content, and causes the &lt;xref:System.Windows.Navigation.NavigationWindow.NavigationStopped&gt; event to be raised.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See &lt;xref:System.Windows.Navigation.NavigationService.StopLoading%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Gets or sets the base uniform resource identifier (URI) of the current context.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Windows.Navigation.NavigationWindow&gt; instance is cast to an &lt;xref:System.Windows.Markup.IUriContext&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>The base URI of the current context.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

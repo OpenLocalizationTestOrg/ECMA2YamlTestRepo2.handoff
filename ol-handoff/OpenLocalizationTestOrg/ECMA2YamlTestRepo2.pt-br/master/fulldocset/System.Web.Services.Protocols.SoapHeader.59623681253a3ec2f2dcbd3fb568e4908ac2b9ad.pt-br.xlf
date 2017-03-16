@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">794e7ed6ede7700f78ce7673a2ee37bdaba24d1f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.Services.Protocols.SoapHeader.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">553ad95d80a98384bf00fcaef615f51dbec12b16</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b003cd28596535c6d24304ccd5075a885c27a619</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, represents the content of a SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>SOAP headers offer a method for passing data to and from an XML Web service method if the data is not directly related to the XML Web service method's primary functionality.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For instance, an XML Web service might contain several XML Web service methods that each require a custom authentication scheme.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of adding parameters to each XML Web service method for the custom authentication scheme, a &lt;xref:System.Web.Services.Protocols.SoapHeaderAttribute&gt;, referring to a class deriving from SoapHeader, can be applied to each XML Web service method.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The implementation for the class deriving from SoapHeader handles the custom authentication scheme.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this manner, the XML Web service method implements only the functionality specific to it and adds additional functionality using a SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following list outlines the basic steps to receiving and processing a SOAP header:      1.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Create a class that derives from SoapHeader representing the data passed into the SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Add a member to the class implementing an XML Web service or an XML Web service client proxy class, of the type created in the first step.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Apply a &lt;xref:System.Web.Services.Protocols.SoapHeaderAttribute&gt; to the XML Web service method or the corresponding method in the proxy class, specifying the member created in the second step in the &lt;xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Within the XML Web service method or XML Web service client code, access the &lt;xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A&gt; property to process the data sent in the SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Web.Services.Protocols.SoapHeader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Gets or sets the recipient of the SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To set the recipient of a SOAP header, set the Actor property.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Regardless of the version of the SOAP protocol used to communicate with an XML Web service, the .NET Framework automatically generates the SOAP message specific to the version of the SOAP protocol.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specifically, the XML element and XML namespace representing the recipient differ for the two versions.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>XML Web services receiving the SOAP header can get the intended recipient by getting either the &lt;xref:System.Web.Services.Protocols.SoapHeader.Role%2A&gt; or Actor properties.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The recipient(s) for the <ph id="ph1">`Body`</ph> element and each of the SOAP headers within the <ph id="ph2">`Header`</ph> element of a SOAP message need not be the same.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If a <ph id="ph1">`Header`</ph> element exists in the SOAP message, it represents additional data that can be sent to and from the XML Web service method or an intermediary.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The recipient of that data, known as the SOAP <ph id="ph1">`Actor`</ph> in version 1.1, can be a different URI than the URI for the XML Web service method.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on the SOAP <ph id="ph1">`actor`</ph> attribute, see the SOAP specification at http://www.w3.org/TR/SOAP/.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The recipient of the SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The default is an empty string ("").</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether an XML Web service method properly processed a SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For SOAP headers defined by an XML Web service, ASP.NET assumes the XML Web service method properly processed the SOAP header by setting the initial value of DidUnderstand to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For SOAP headers not defined by the XML Web service, the initial value is <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If ASP.NET detects SOAP headers passed to an XML Web service method with DidUnderstand set to <ph id="ph1">`false`</ph> after the method returns, a &lt;xref:System.Web.Services.Protocols.SoapHeaderException&gt; is thrown back to the XML Web service client instead of the results from the XML Web service method.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the SOAP header was properly processed; otherwise <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Gets or sets the value of the <bpt id="p1">&lt;xref uid="langword_csharp_mustUnderstand" name="mustUnderstand" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> XML attribute for the SOAP header when communicating with SOAP protocol version 1.1.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Do not use this property.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead use the &lt;xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The value of the <bpt id="p1">&lt;xref uid="langword_csharp_mustUnderstand" name="mustUnderstand" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> attribute.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The default is "0".</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The property is set to a value other than: "0", "1", "true", or "false".</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Gets or sets the value of the <bpt id="p1">&lt;xref uid="langword_csharp_mustUnderstand" name="mustUnderstand" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> XML attribute for the SOAP header when communicating with SOAP protocol version 1.2.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Do not use this property.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead use the &lt;xref:System.Web.Services.Protocols.SoapHeader.MustUnderstand%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The value of the <bpt id="p1">&lt;xref uid="langword_csharp_mustUnderstand" name="mustUnderstand" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> XML attribute of a SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The default is "0".</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The property is set to a value other than: "0", "1", "true", or "false".</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Gets or sets the relay attribute of the SOAP 1.2 header.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The EncodedRelay property applies only to SOAP 1.2 and indicates whether the recipient of the message forwards this header when it forwards the message to the next node downstream.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because the .NET Framework does not support SOAP intermediaries, this property is serialized and deserialized but ignored.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Either "0", "false", "1", or "true".</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the <bpt id="p1">&lt;xref href="System.Web.Services.Protocols.SoapHeader"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> must be understood.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the XML Web service must properly interpret and process the <bpt id="p2">&lt;xref href="System.Web.Services.Protocols.SoapHeader"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the SOAP header is to be relayed to the next SOAP node if the current node does not understand the header.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default SOAP 1.2 processing rules require SOAP nodes to remove headers that are not understood by the SOAP processing node before passing the message on to the next node.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the SOAP header has a "relay" attribute set to "true"; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Gets or sets the recipient of the SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To set the recipient of a SOAP header, set the &lt;xref:System.Web.Services.Protocols.SoapHeader.Actor%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Regardless of the version of the SOAP protocol used to communicate with an XML Web service, the .NET Framework automatically generates the SOAP message specific to the version of the SOAP protocol.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specifically, the XML element and XML namespace representing the recipient differ for the two versions.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>XML Web services receiving the SOAP header can get the intended recipient by getting either the Role or &lt;xref:System.Web.Services.Protocols.SoapHeader.Actor%2A&gt; properties.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The recipient(s) for the <ph id="ph1">`Body`</ph> element and each of the SOAP headers within the <ph id="ph2">`Header`</ph> element of a SOAP message need not be the same.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If a <ph id="ph1">`Header`</ph> element exists in the SOAP message, it represents additional data that can be sent to and from the XML Web service method or an intermediary.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The recipient of that data, known as the SOAP <ph id="ph1">`Role`</ph> in version 1.2 of the SOAP specification and the SOAP <ph id="ph2">`Actor`</ph> in version 1.1, can be a different URI than the URI for the XML Web service method.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on the SOAP <ph id="ph1">`actor`</ph> attribute, see the SOAP specification at http://www.w3.org/TR/SOAP/.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>A URI that represents the recipient of the SOAP header.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The default is an empty string ("").</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

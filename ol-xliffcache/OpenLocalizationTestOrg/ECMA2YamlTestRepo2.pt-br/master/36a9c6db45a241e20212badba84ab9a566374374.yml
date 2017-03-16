@@ -13,7 +13,7 @@ items:
   nameWithType: ProjectPropertyGroupTaskInstance
   fullName: Microsoft.Build.Execution.ProjectPropertyGroupTaskInstance
   type: Class
-  summary: "Encapsula uma propertygroup não avaliada em um destino. Imutável."
+  summary: Wraps an unevaluated propertygroup under a target. Immutable.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("Condition={condition}")]
@@ -39,12 +39,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define o atributo de condição desse grupo de propriedade."
+  summary: Gets or sets the Condition attribute of this property group.
   syntax:
     content: public override string Condition { get; }
     return:
       type: System.String
-      description: "Retorna o valor do atributo de condição. Retorna uma cadeia de caracteres vazia se o atributo não estiver presente."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectPropertyGroupTaskInstance.Condition*
   exceptions: []
   platform:
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém o local do atributo Condition."
+  summary: Gets the location of the Condition attribute.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retorna o local do atributo Condition."
+      description: Returns location of the Condition attribute.
   overload: Microsoft.Build.Execution.ProjectPropertyGroupTaskInstance.ConditionLocation*
   exceptions: []
   platform:
@@ -83,12 +83,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém o local do próprio elemento."
+  summary: Gets the location of the element itself.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retorna o local do elemento."
+      description: Returns location of the element.
   overload: Microsoft.Build.Execution.ProjectPropertyGroupTaskInstance.Location*
   exceptions: []
   platform:
@@ -105,12 +105,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém todas as propriedades filho deste grupo de propriedade."
+  summary: Gets all child properties in this property group.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectPropertyGroupTaskPropertyInstance> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectPropertyGroupTaskPropertyInstance}
-      description: "Retorna todas as propriedades filho deste grupo de propriedade."
+      description: Returns all child properties in this property group.
   overload: Microsoft.Build.Execution.ProjectPropertyGroupTaskInstance.Properties*
   exceptions: []
   platform:

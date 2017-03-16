@@ -20,7 +20,7 @@ items:
   nameWithType: ProjectProperty
   fullName: Microsoft.Build.Evaluation.ProjectProperty
   type: Class
-  summary: "Representa uma propriedade de tempo de design avaliada."
+  summary: Represents an evaluated design-time property.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{Name}={EvaluatedValue} [{UnevaluatedValue}]")]
@@ -45,13 +45,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém o valor da propriedade avaliada."
-  remarks: "Não é possível definir diretamente. somente o valor não-avaliado pode ser definido. Valor avaliado não contém sequências de escape Nenhum caractere."
+  summary: Gets the evaluated property value.
+  remarks: Cannot be set directly; only the unevaluated value can be set. The evaluated value contains no character escape sequences.
   syntax:
     content: public string EvaluatedValue { get; }
     return:
       type: System.String
-      description: "Retorna o valor da propriedade avaliado, que nunca é nulo."
+      description: Returns the evaluated property value, which is never null.
   overload: Microsoft.Build.Evaluation.ProjectProperty.EvaluatedValue*
   exceptions: []
   platform:
@@ -68,12 +68,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Determina se a propriedade foi originado as variáveis de ambiente."
+  summary: Determines whether the property originated from the environment variables.
   syntax:
     content: public abstract bool IsEnvironmentProperty { get; }
     return:
       type: System.Boolean
-      description: "True se a propriedade proveniente de uma variável de ambiente; FALSO caso contrário."
+      description: True if the property originated from an environment variable; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectProperty.IsEnvironmentProperty*
   exceptions: []
   platform:
@@ -90,12 +90,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Determina se a propriedade é uma propriedade global."
+  summary: Determines whether the property is a global property.
   syntax:
     content: public abstract bool IsGlobalProperty { get; }
     return:
       type: System.Boolean
-      description: "True se a propriedade é uma propriedade global; FALSO caso contrário."
+      description: True if the property is a global property; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectProperty.IsGlobalProperty*
   exceptions: []
   platform:
@@ -112,12 +112,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Determina se a propriedade é originada em um arquivo importado."
+  summary: Determines whether the property originates from an imported file.
   syntax:
     content: public abstract bool IsImported { get; }
     return:
       type: System.Boolean
-      description: "Retorna VERDADEIRO se a propriedade se originar de um arquivo importado e não de uma variável de ambiente, uma propriedade global ou uma propriedade reservada. Caso contrário, retorna false."
+      description: Returns true if the property originates from an imported file and not from an environment variable, a global property, or a reserved property. Returns false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectProperty.IsImported*
   exceptions: []
   platform:
@@ -134,12 +134,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Determina se a propriedade é uma propriedade reservada, por exemplo &quot;MSBuildProjectFile&quot;."
+  summary: Determines whether the property is a reserved property, for example 'MSBuildProjectFile'.
   syntax:
     content: public abstract bool IsReservedProperty { get; }
     return:
       type: System.Boolean
-      description: "Retorna VERDADEIRO se a propriedade é uma propriedade reservada; FALSO caso contrário."
+      description: Returns true if the property is a reserved property; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectProperty.IsReservedProperty*
   exceptions: []
   platform:
@@ -156,12 +156,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém o nome da propriedade."
+  summary: Gets the name of the property.
   syntax:
     content: public abstract string Name { get; }
     return:
       type: System.String
-      description: "Retorna o nome da propriedade."
+      description: Returns the name of the property.
   overload: Microsoft.Build.Evaluation.ProjectProperty.Name*
   exceptions: []
   platform:
@@ -178,13 +178,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém a propriedade do último que foi substituída por esta propriedade durante a avaliação."
-  remarks: "Esse método procura todas as propriedades com o mesmo nome que acabam acima no arquivo de projeto lógico e cujas condições são avaliadas como true.       Se o projeto não tem sido reavaliado desde a última modificação, esse valor pode estar incorreto."
+  summary: Gets the last property that was overridden by this property during evaluation.
+  remarks: "This method searches for all properties with the same name that lie above in the logical project file, and whose conditions evaluate to true.  \n  \n If the project has not been reevaluated since the last modification, this value may be incorrect."
   syntax:
     content: public abstract Microsoft.Build.Evaluation.ProjectProperty Predecessor { get; }
     return:
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: "Retorna a última propriedade cujo valor foi substituído por esta propriedade durante a avaliação. Retorna null se a propriedade não foi substituída."
+      description: Returns the last property whose value was overridden by this property during evaluation. Returns null if the property has not been overridden.
   overload: Microsoft.Build.Evaluation.ProjectProperty.Predecessor*
   exceptions: []
   platform:
@@ -201,12 +201,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém o projeto que contém essa propriedade."
+  summary: Gets the project that contains this property.
   syntax:
     content: public Microsoft.Build.Evaluation.Project Project { get; }
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Retorna o projeto que contém essa propriedade, que nunca é nula."
+      description: Returns the project that contains this property, which is never null.
   overload: Microsoft.Build.Evaluation.ProjectProperty.Project*
   exceptions: []
   platform:
@@ -229,10 +229,10 @@ items:
     parameters:
     - id: other
       type: Microsoft.Build.Evaluation.ProjectProperty
-      description: "A ser adicionado."
+      description: To be added.
     return:
       type: System.Boolean
-      description: "A ser adicionado."
+      description: To be added.
   overload: Microsoft.Build.Evaluation.ProjectProperty.System#IEquatable<Microsoft#Build#Evaluation#ProjectProperty>#Equals*
   exceptions: []
   platform:
@@ -249,13 +249,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém ou define o valor da propriedade não avaliada."
-  remarks: "O método setter atualiza o valor não-avaliado e o valor avaliado, mas não afeta nada no projeto até reavaliação.       O projeto está marcado como modificada. Valores não-avaliadas são considerados conter escape sequências de caracteres conforme necessário."
+  summary: Gets or sets the unevaluated property value.
+  remarks: "The setter method updates both the unevaluated value and the evaluated value, but does not affect anything else in the project until reevaluation.  \n  \n The containing project is marked as modified. Unevaluated values are assumed to contain escaped character sequences as needed."
   syntax:
     content: public abstract string UnevaluatedValue { get; set; }
     return:
       type: System.String
-      description: "Retorna o valor da propriedade não avaliada."
+      description: Returns the unevaluated property value.
   overload: Microsoft.Build.Evaluation.ProjectProperty.UnevaluatedValue*
   exceptions: []
   platform:
@@ -272,12 +272,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém o elemento de propriedade associada. Propriedade XML de backup. NULL somente se isso for global, ambiente ou a propriedade interna."
+  summary: Gets the associated property element. Backing XML property. Null only if this is a global, environment, or built-in property.
   syntax:
     content: public abstract Microsoft.Build.Construction.ProjectPropertyElement Xml { get; }
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "Retorna o elemento de propriedade associada. Retorne nulo se esta é uma propriedade global ou reservada ou se origina de uma variável de ambiente."
+      description: Returns the associated property element. Return null if this is a global or reserved property, or originates from an environment variable.
   overload: Microsoft.Build.Evaluation.ProjectProperty.Xml*
   exceptions: []
   platform:

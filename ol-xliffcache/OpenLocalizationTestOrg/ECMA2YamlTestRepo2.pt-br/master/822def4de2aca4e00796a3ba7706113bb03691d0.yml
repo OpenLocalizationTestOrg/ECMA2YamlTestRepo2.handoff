@@ -16,8 +16,8 @@ items:
   nameWithType: ProjectItemDefinition
   fullName: Microsoft.Build.Evaluation.ProjectItemDefinition
   type: Class
-  summary: "Representa uma definição de item avaliada para um determinado tipo de item."
-  remarks: "Definições de item não são os mesmos itens. Como itens, definições de item podem ter metadados. Como as propriedades, novos metadados podem substituir metadados antigos com o mesmo nome.       Durante a avaliação, todas as definições de item para um tipo de item são coletadas juntos (supondo que suas condições forem verdadeiras) para criar um ProjectItemDefinition para cada tipo. Por esse motivo, uma definição de item de projeto pode se referir a mais de um elemento de definição de item de projeto. Os metadados dentro de uma definição de item de projeto, no entanto, se refere a um elemento de metadados único projeto, que pode ser adicionado, removido e modificado."
+  summary: Represents an evaluated item definition for a particular item-type.
+  remarks: "Item definitions are not the same as items. Like items, item definitions can have metadata. Like properties, new metadata can override old metadata with the same name.  \n  \n During evaluation, all the item definitions for an item type are collected together (assuming their conditions are true) to create one ProjectItemDefinition for each type. For this reason, a project item definition can refer to more than one project item definition element. The metadata within a project item definition, however, refers to a single project metadata element, which can be added, removed, and modified."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{itemType} #Metadata={MetadataCount}")]
@@ -41,16 +41,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obter todos os metadados na definição de item com o nome fornecido."
+  summary: Get any metadata in the item definition with the given name.
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata GetMetadata (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome dos metadados para recuperar."
+      description: The name of the metadata to retrieve.
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: "Obter todos os metadados na definição de item com o nome fornecido. Retorna null se não existem metadados com esse nome."
+      description: Get any metadata in the item definition with the given name. Returns null if no metadata exists with that name.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.GetMetadata*
   exceptions: []
   platform:
@@ -67,16 +67,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obter o valor de todos os metadados do item que tem o nome especificado."
+  summary: Get the value of any metadata in the item that has the specified name.
   syntax:
     content: public string GetMetadataValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome do item cujo valor de metadados deve ser recuperado."
+      description: The name of the item whose metadata value is to be retrieved.
     return:
       type: System.String
-      description: "Retorna o valor de todos os metadados do item que tem o nome especificado. Caso contrário, retornará null."
+      description: Returns the value of any metadata in the item that has the specified name; otherwise returns null.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.GetMetadataValue*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém o tipo de item desta definição de item."
+  summary: Gets the item type of this item definition.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Retorna o tipo de item desta definição de item."
+      description: Returns the item type of this item definition.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.ItemType*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém um enumerador sobre todos os metadados para a definição do item."
-  remarks: "Esta é uma coleção somente leitura."
+  summary: Gets an enumerator over all metadata for the item definition.
+  remarks: This is a read-only collection.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Evaluation.ProjectMetadata> Metadata { get; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectMetadata}
-      description: "Retorna um enumerador sobre todos os metadados para a definição do item."
+      description: Returns an enumerator over all metadata for the item definition.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.Metadata*
   exceptions: []
   platform:
@@ -138,12 +138,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém a contagem dos metadados na definição do item."
+  summary: Gets the count of the metadata on the item definition.
   syntax:
     content: public int MetadataCount { get; }
     return:
       type: System.Int32
-      description: "Retorna a contagem de metadados na definição do item."
+      description: Returns the count of the metadata on the item definition.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.MetadataCount*
   exceptions: []
   platform:
@@ -160,12 +160,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Obtém o projeto que contém a definição de item."
+  summary: Gets the project that contains this item definition.
   syntax:
     content: public Microsoft.Build.Evaluation.Project Project { get; }
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Retorna o projeto que contém esta definição de item, que nunca é nula."
+      description: Returns the project that contains this item definition, which is never null.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.Project*
   exceptions: []
   platform:
@@ -182,20 +182,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Define o valor de metadados especificado na definição do item."
-  remarks: "O valor não-avaliado devem para conter sequências de escape de caractere, conforme necessário."
+  summary: Sets the value of the given metadata in the item definition.
+  remarks: The unevaluated value is assumed to contain character escape sequences as needed.
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata SetMetadataValue (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "O nome de metadados para definir."
+      description: The name of the metadata to set.
     - id: unevaluatedValue
       type: System.String
-      description: "O novo valor não-avaliado dos metadados."
+      description: The new unevaluated value of the metadata.
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: "Retorna os metadados com o nome fornecido."
+      description: Returns the metadata with the given name.
   overload: Microsoft.Build.Evaluation.ProjectItemDefinition.SetMetadataValue*
   exceptions: []
   platform:

@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectItemDefinitionInstance
   fullName: Microsoft.Build.Execution.ProjectItemDefinitionInstance
   type: Class
-  summary: "Representa uma definição de item avaliada para um determinado tipo de item, divested de todas as referências ao código de origem do projeto."
+  summary: Represents an evaluated item definition for a particular item type, divested of all references to project source code.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{itemType} #Metadata={MetadataCount}")]
@@ -38,16 +38,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obter todos os metadados dessa definição de item com o nome fornecido."
+  summary: Get any metadata in this item definition with the given name.
   syntax:
     content: public Microsoft.Build.Execution.ProjectMetadataInstance GetMetadata (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome dos metadados para recuperar."
+      description: The name of the metadata to retrieve.
     return:
       type: Microsoft.Build.Execution.ProjectMetadataInstance
-      description: "Retorna todos os metadados dessa definição de item com o nome fornecido. Retorna null se não existem metadados com este nome."
+      description: Returns any metadata in this item definition with the given name. Returns null if no metadata exists with this name.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.GetMetadata*
   exceptions: []
   platform:
@@ -64,12 +64,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém o tipo de item desta definição de item."
+  summary: Gets the item type of this item definition.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Retorna o tipo de item desta definição de item."
+      description: Returns the item type of this item definition.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.ItemType*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém todos os metadados para essa definição de item. Esta é uma coleção somente leitura."
+  summary: Gets all the metadata for this item definition. This is a read-only collection.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectMetadataInstance> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectMetadataInstance}
-      description: "Retorna todos os metadados para essa definição de item. Se não houver nenhum metadado, retorna a coleção vazia."
+      description: Returns all the metadata for this item definition. If there is no metadata, returns empty collection.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.Metadata*
   exceptions: []
   platform:
@@ -108,12 +108,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém o número de itens de metadados nessa definição de item."
+  summary: Gets the number of pieces of metadata on this item definition.
   syntax:
     content: public int MetadataCount { get; }
     return:
       type: System.Int32
-      description: "Retorna o número de itens de metadados nessa definição de item."
+      description: Returns the number of pieces of metadata on this item definition.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.MetadataCount*
   exceptions: []
   platform:
@@ -130,12 +130,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém um enumerador sobre os nomes de metadados para essa definição de item. Esta é uma coleção somente leitura."
+  summary: Gets an enumerator over the metadata names for this item definition. This is a read-only collection.
   syntax:
     content: public System.Collections.Generic.IEnumerable<string> MetadataNames { get; }
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: "Retorna um enumerador sobre os nomes de metadados para essa definição de item."
+      description: Returns an enumerator over the metadata names for this item definition.
   overload: Microsoft.Build.Execution.ProjectItemDefinitionInstance.MetadataNames*
   exceptions: []
   platform:

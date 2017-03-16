@@ -12,7 +12,7 @@ items:
   nameWithType: ForwardingLoggerRecord
   fullName: Microsoft.Build.Logging.ForwardingLoggerRecord
   type: Class
-  summary: "Representa um par de agente central/encaminhamento usado no log com vários processadores."
+  summary: Represents a central/forwarding logger pair used in multiprocessor logging.
   syntax:
     content: public class ForwardingLoggerRecord
   inheritance:
@@ -33,16 +33,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Cria um agente de log de encaminhamento."
+  summary: Creates a forwarding logger.
   syntax:
     content: public ForwardingLoggerRecord (Microsoft.Build.Framework.ILogger centralLogger, Microsoft.Build.Logging.LoggerDescription forwardingLoggerDescription);
     parameters:
     - id: centralLogger
       type: Microsoft.Build.Framework.ILogger
-      description: "O agente de log central."
+      description: The central logger.
     - id: forwardingLoggerDescription
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "A descrição para o agente de log de encaminhamento."
+      description: The description for the forwarding logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.#ctor*
   exceptions: []
   platform:
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Obtém o agente central."
+  summary: Gets the central logger.
   syntax:
     content: public Microsoft.Build.Framework.ILogger CentralLogger { get; }
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: "Retorna o registrador central."
+      description: Returns the central logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.CentralLogger*
   exceptions: []
   platform:
@@ -81,12 +81,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Obtém o encaminhamento descrição do agente de log."
+  summary: Gets the forwarding logger description.
   syntax:
     content: public Microsoft.Build.Logging.LoggerDescription ForwardingLoggerDescription { get; }
     return:
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "Retorna o agente de log de encaminhamento de descrição."
+      description: Returns the forwarding logger description.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.ForwardingLoggerDescription*
   exceptions: []
   platform:

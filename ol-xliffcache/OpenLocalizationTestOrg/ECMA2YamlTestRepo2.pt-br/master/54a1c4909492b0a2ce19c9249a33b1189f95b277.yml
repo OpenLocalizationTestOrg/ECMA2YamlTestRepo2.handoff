@@ -23,7 +23,7 @@ items:
   nameWithType: BuildRequestData
   fullName: Microsoft.Build.Execution.BuildRequestData
   type: Class
-  summary: "Encapsula todos os dados necessários para enviar uma solicitação de compilação."
+  summary: Encapsulates all of the data needed to submit a build request.
   syntax:
     content: public class BuildRequestData
   inheritance:
@@ -44,16 +44,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Construções criar dados de solicitação para solicitações de compilação com base em instâncias do projeto."
+  summary: Constructs build request data for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "A instância de compilação."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "Os destinos de compilação."
+      description: The targets to build.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -70,19 +70,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Construções criar dados de solicitação para solicitações de compilação com base em instâncias do projeto."
+  summary: Constructs build request data for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "A instância de compilação."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "Os destinos de compilação."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "Os serviços de host a ser usado, se houver.  Pode ser nulo."
+      description: The host services to use, if any.  May be null.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -99,22 +99,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Constrói um BuildRequestData para solicitações de compilação com base em instâncias do projeto."
+  summary: Constructs a BuildRequestData for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "A instância de compilação."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "Os destinos de compilação."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "Os serviços de host a ser usado, se houver.  Pode ser nulo."
+      description: The host services to use, if any.  May be null.
     - id: flags
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "Os sinalizadores a serem usados para a compilação."
+      description: The flags to use for the build.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -131,25 +131,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Constrói um BuildRequestData para solicitações de compilação com base em instâncias do projeto."
+  summary: Constructs a BuildRequestData for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable<string> propertiesToTransfer);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "A instância de compilação."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "Os destinos de compilação."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "Os serviços de host a ser usado, se houver.  Pode ser nulo."
+      description: The host services to use, if any.  May be null.
     - id: flags
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "Os sinalizadores a serem usados para a compilação."
+      description: The flags to use for the build.
     - id: propertiesToTransfer
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: "A lista de propriedades para transferir do projeto para qualquer fora do nó de processo."
+      description: The list of properties to transfer from the project to any out of process node.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -166,25 +166,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Constrói um BuildRequestData para solicitações de compilação com um caminho de determinado projeto."
+  summary: Constructs a BuildRequestData for build requests with a given project path.
   syntax:
     content: public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);
     parameters:
     - id: projectFullPath
       type: System.String
-      description: "O caminho completo para o arquivo de projeto."
+      description: The full path to the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "As propriedades globais para usar durante a avaliação do projeto."
+      description: The global properties to use during evaluation of the project.
     - id: toolsVersion
       type: System.String
-      description: "A versão de ferramentas para usar para a compilação.  Pode ser nulo."
+      description: The tools version to use for the build.  May be null.
     - id: targetsToBuild
       type: System.String[]
-      description: "Os destinos de compilação."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "Os serviços de host a ser usado, se houver.  Pode ser nulo."
+      description: The host services to use, if any.  May be null.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -201,28 +201,28 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Constrói um BuildRequestData para solicitações de compilação com um caminho de determinado projeto."
+  summary: Constructs a BuildRequestData for build requests with a given project path.
   syntax:
     content: public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);
     parameters:
     - id: projectFullPath
       type: System.String
-      description: "O caminho completo para o arquivo de projeto."
+      description: The full path to the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "As propriedades globais para usar durante a avaliação do projeto."
+      description: The global properties to use during evaluation of the project.
     - id: toolsVersion
       type: System.String
-      description: "A versão de ferramentas para usar para a compilação.  Pode ser nulo."
+      description: The tools version to use for the build.  May be null.
     - id: targetsToBuild
       type: System.String[]
-      description: "Os destinos de compilação."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "Os serviços de host a ser usado, se houver.  Pode ser nulo."
+      description: The host services to use, if any.  May be null.
     - id: flags
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "Os sinalizadores a serem usados para a compilação."
+      description: The flags to use for the build.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -239,12 +239,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define a versão de ferramentas para usar para a compilação."
+  summary: Gets or sets the tools version to use for the build.
   syntax:
     content: public string ExplicitlySpecifiedToolsVersion { get; }
     return:
       type: System.String
-      description: "Retorna a versão de ferramentas para usar para a compilação."
+      description: Returns the tools version to use for the build.
   overload: Microsoft.Build.Execution.BuildRequestData.ExplicitlySpecifiedToolsVersion*
   exceptions: []
   platform:
@@ -261,12 +261,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define os sinalizadores adicionais para esta solicitação de compilação."
+  summary: Gets or sets additional flags for this build request.
   syntax:
     content: public Microsoft.Build.Execution.BuildRequestDataFlags Flags { get; }
     return:
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "Retorna os sinalizadores de solicitação de compilação."
+      description: Returns the build request flags.
   overload: Microsoft.Build.Execution.BuildRequestData.Flags*
   exceptions: []
   platform:
@@ -283,12 +283,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém as propriedades globais para usar para esta solicitação de compilação."
+  summary: Gets the global properties to use for this build request.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectPropertyInstance> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectPropertyInstance}
-      description: "Retorna as propriedades globais para usar para esta solicitação de compilação."
+      description: Returns the global properties to use for this build request.
   overload: Microsoft.Build.Execution.BuildRequestData.GlobalProperties*
   exceptions: []
   platform:
@@ -305,12 +305,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém o serviço de host para esta compilação."
+  summary: Gets the host service for this build.
   syntax:
     content: public Microsoft.Build.Execution.HostServices HostServices { get; }
     return:
       type: Microsoft.Build.Execution.HostServices
-      description: "Retorna o serviço de host para esta compilação."
+      description: Returns the host service for this build.
   overload: Microsoft.Build.Execution.BuildRequestData.HostServices*
   exceptions: []
   platform:
@@ -327,12 +327,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define o caminho para o arquivo de projeto para esta compilação."
+  summary: Gets of sets the path to the project file for this build.
   syntax:
     content: public string ProjectFullPath { get; }
     return:
       type: System.String
-      description: "Retorna o caminho para o arquivo de projeto para esta compilação."
+      description: Returns the path to the project file for this build.
   overload: Microsoft.Build.Execution.BuildRequestData.ProjectFullPath*
   exceptions: []
   platform:
@@ -349,13 +349,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define a instância do projeto para esta compilação."
-  remarks: "Usado no caso em que o projeto não for localizado no armazenamento em disco."
+  summary: Gets or sets project instance for this build.
+  remarks: Used in the case where the project is not located in disk storage.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance ProjectInstance { get; }
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "A instância do projeto, que pode ser nula."
+      description: The project instance, which may be null.
   overload: Microsoft.Build.Execution.BuildRequestData.ProjectInstance*
   exceptions: []
   platform:
@@ -372,12 +372,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém a lista de propriedades para transferir para fora de um nó de processo para a compilação."
+  summary: Gets the list of properties to transfer to an out of process node for the build.
   syntax:
     content: public System.Collections.Generic.IEnumerable<string> PropertiesToTransfer { get; }
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: "Retorna a lista de propriedades."
+      description: Returns the list of properties.
   overload: Microsoft.Build.Execution.BuildRequestData.PropertiesToTransfer*
   exceptions: []
   platform:
@@ -394,12 +394,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém os nomes dos destinos de compilação."
+  summary: Gets the names of the targets to build.
   syntax:
     content: public System.Collections.Generic.ICollection<string> TargetNames { get; }
     return:
       type: System.Collections.Generic.ICollection{System.String}
-      description: "Retorna os nomes dos destinos de compilação."
+      description: Returns the names of the targets to build.
   overload: Microsoft.Build.Execution.BuildRequestData.TargetNames*
   exceptions: []
   platform:

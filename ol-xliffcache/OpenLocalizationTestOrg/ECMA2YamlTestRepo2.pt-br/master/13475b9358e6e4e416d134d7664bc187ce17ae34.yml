@@ -21,7 +21,7 @@ items:
   nameWithType: LC
   fullName: Microsoft.Build.Tasks.LC
   type: Class
-  summary: "Implementa o `LC` tarefa. Use o `LC` elemento em seu arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e parâmetro, consulte [tarefa LC](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `LC` task. Use the `LC` element in your project file to create and execute this task. For usage and parameter information, see [LC Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class LC : Microsoft.Build.Tasks.ToolTaskExtension'
   inheritance:
@@ -96,7 +96,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inicializa uma nova instância de <xref href=&quot;Microsoft.Build.Tasks.LC&quot;> </xref> classe."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.LC"></xref> class.
   syntax:
     content: public LC ();
     parameters: []
@@ -116,13 +116,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Gera os argumentos de linha de comando que a ferramenta de compilador de licença (lc.exe) deve ser executados diretamente da linha de comando e não a partir de um arquivo de resposta."
+  summary: Generates command line arguments that the license compiler tool (lc.exe) must run directly from the command line and not from a response file.
   syntax:
     content: protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "Construtor de linha de comando para adicionar argumentos."
+      description: Command line builder to add arguments to.
   overload: Microsoft.Build.Tasks.LC.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -139,13 +139,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Retorna o caminho completo do arquivo da ferramenta de compilador de licença (lc.exe)."
+  summary: Returns the full file path of the license compiler tool (lc.exe).
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: "O caminho completo do arquivo da ferramenta de compilador de licença, ou <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref> se o arquivo de ferramenta do compilador de licença não for encontrado."
+      description: The full file path of the license compiler tool, or <xref uid="langword_csharp_null" name="null" href=""></xref> if the license compiler tool file is not found.
   overload: Microsoft.Build.Tasks.LC.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -162,12 +162,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o executável para o qual os arquivos. Licenses são gerados."
+  summary: Gets or sets the executable for which the .licenses files are generated.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem LicenseTarget { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O executável para o qual os arquivos. Licenses são gerados."
+      description: The executable for which the .licenses files are generated.
   overload: Microsoft.Build.Tasks.LC.LicenseTarget*
   exceptions: []
   platform:
@@ -184,12 +184,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define um valor booleano que especifica se é suprimir a exibição de faixa de inicialização da Microsoft."
+  summary: Gets or sets a Boolean value that specifies whether to suppress the Microsoft startup banner display.
   syntax:
     content: public bool NoLogo { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se exibir a faixa de inicialização da Microsoft é suprimida; Caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the Microsoft startup banner display is suppressed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.LC.NoLogo*
   exceptions: []
   platform:
@@ -206,12 +206,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o diretório no qual colocar os arquivos. Licenses de saída."
+  summary: Gets or sets the directory in which to place the output .licenses files.
   syntax:
     content: public string OutputDirectory { get; set; }
     return:
       type: System.String
-      description: "O diretório no qual colocar os arquivos. Licenses de saída."
+      description: The directory in which to place the output .licenses files.
   overload: Microsoft.Build.Tasks.LC.OutputDirectory*
   exceptions: []
   platform:
@@ -228,13 +228,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o nome do arquivo. licenses."
-  remarks: "Se você não especificar um nome, o nome do arquivo. licx é usado e o arquivo. Licenses é colocado no diretório que contém o arquivo. licx."
+  summary: Gets or sets the name of the .licenses file.
+  remarks: If you do not specify a name, the name of the .licx file is used and the .licenses file is placed in the directory that contains the .licx file.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem OutputLicense { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "O nome do arquivo. licenses."
+      description: The name of the .licenses file.
   overload: Microsoft.Build.Tasks.LC.OutputLicense*
   exceptions: []
   platform:
@@ -251,12 +251,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define os componentes referenciados carregar ao gerar o arquivo. licenses."
+  summary: Gets or sets the referenced components to load when generating the .licenses file.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ReferencedAssemblies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Os componentes referenciados carregar ao gerar o arquivo. licenses."
+      description: The referenced components to load when generating the .licenses file.
   overload: Microsoft.Build.Tasks.LC.ReferencedAssemblies*
   exceptions: []
   platform:
@@ -273,12 +273,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o caminho a ser usado para pesquisar as ferramentas do SDK."
+  summary: Gets or sets the path to use to search for the SDK tools.
   syntax:
     content: public string SdkToolsPath { get; set; }
     return:
       type: System.String
-      description: "Retorna o caminho de ferramentas do SDK."
+      description: Returns the SDK tools path.
   overload: Microsoft.Build.Tasks.LC.SdkToolsPath*
   exceptions: []
   platform:
@@ -295,13 +295,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define os itens que contêm componentes licenciados para incluir o arquivo. licenses."
-  remarks: "Para obter mais informações, consulte a documentação para o `/complist` alternar em [Lc.exe (compilador de licença)](~/add/includes/ajax-current-ext-md.md)."
+  summary: Gets or sets the items that contain licensed components to include in the .licenses file.
+  remarks: For more information, see the documentation for the `/complist` switch in [Lc.exe (License Compiler)](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Sources { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Os itens que contêm componentes licenciados para incluir o arquivo. licenses."
+      description: The items that contain licensed components to include in the .licenses file.
   overload: Microsoft.Build.Tasks.LC.Sources*
   exceptions: []
   platform:
@@ -318,12 +318,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém o nome da ferramenta do compilador de licença."
+  summary: Gets the name of the license compiler tool.
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: "O nome da ferramenta do compilador de licença."
+      description: The name of the license compiler tool.
   overload: Microsoft.Build.Tasks.LC.ToolName*
   exceptions: []
   platform:
@@ -340,13 +340,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Valida os erros de logs e parâmetros de entrada ou avisos, se houver. Retorna um valor booliano que indica se a execução da tarefa deve continuar."
+  summary: Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se a execução da tarefa deve continuar. Caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should proceed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.LC.ValidateParameters*
   exceptions: []
   platform:

@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ac4162547698a48fe39e08ff26df179b6f737c0c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Xml.XmlTextWriter.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">42aacef2fea067c0ef9bb42b09693b780c510bc9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a34e831f49b89fd11c3e958e52e11db9d61ef1c8</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents a writer that provides a fast, non-cached, forward-only way of generating streams or files containing XML data that conforms to the W3C Extensible Markup Language (XML) 1.0 and the Namespaces in XML recommendations.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Starting with the .NET Framework 2.0, we recommend that you use the <ph id="ph1">&amp;lt;</ph>xref:System.Xml.XmlWriter?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> class instead.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This class implements the &lt;xref:System.Xml.XmlWriter&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Starting with the .NET Framework 2.0, we recommend that you create &lt;xref:System.Xml.XmlWriter&gt; instances by using the &lt;xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName&gt; method and the &lt;xref:System.Xml.XmlWriterSettings&gt; class to take advantage of new functionality.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`XmlTextWriter`</ph> maintains a namespace stack corresponding to all the namespaces defined in the current element stack.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using <ph id="ph1">`XmlTextWriter`</ph> you can declare namespaces manually.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   w.WriteStartElement("root");   w.WriteAttributeString("xmlns", "x", null, "urn:1");    w.WriteStartElement("item","urn:1");    w.WriteEndElement();    w.WriteStartElement("item","urn:1");    w.WriteEndElement();   w.WriteEndElement();   ```</ph>       The above C# code produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`XmlTextWriter`</ph> promotes the namespace declaration to the root element to avoid having it duplicated on the two child elements.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The child elements pick up the prefix from the namespace declaration.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   &lt;root xmlns:x="urn:1"&gt;    &lt;x:item/&gt;    &lt;x:item/&gt;   &lt;/x:root&gt;   ```</ph>       <ph id="ph2">`XmlTextWriter`</ph> also allows you to override the current namespace declaration.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the following example, the namespace URI "123" is overridden by "abc" to produce the XML element <ph id="ph1">`&lt;x:node xmlns:x="abc"/&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   w.WriteStartElement("x","node","123");   w.WriteAttributeString("xmlns","x",null,"abc");   ```</ph>       By using the write methods that take a prefix as an argument you can also specify which prefix to use.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the following example, two different prefixes are mapped to the same namespace URI to produce the XML text <ph id="ph1">`&lt;x:root xmlns:x="urn:1"&gt;&lt;y:item xmlns:y="urn:1"/&gt;&lt;/x:root&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   XmlTextWriter w = new XmlTextWriter(Console.Out);   w.WriteStartElement("x","root","urn:1");    w.WriteStartElement("y","item","urn:1");    w.WriteEndElement();   w.WriteEndElement();   w.Close();   ```</ph>       If there are multiple namespace declarations mapping different prefixes to the same namespace URI, <ph id="ph2">`XmlTextWriter`</ph> walks the stack of namespace declarations backwards and picks the closest one.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   XmlTextWriter w = new XmlTextWriter(Console.Out);   w.Formatting = Formatting.Indented;   w.WriteStartElement("x","root","urn:1");   w.WriteStartElement("y","item","urn:1");   w.WriteAttributeString("attr","urn:1","123");   w.WriteEndElement();   w.WriteEndElement();   w.Close();   ```</ph>       In the above C# example, because the <ph id="ph2">`WriteAttributeString`</ph> call does not specify a prefix, the writer uses the last prefix pushed onto the namespace stack, and produces the following XML:      <ph id="ph3">```   &lt;x:root xmlns:x="urn:1"&gt;    &lt;y:item y:attr="123" xmlns:y="urn:1" /&gt;   &lt;/x:root&gt;   ```</ph>       If namespace conflicts occur, <ph id="ph4">`XmlTextWriter`</ph> resolves them by generating alternate prefixes.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if an attribute and element have the same prefix but different namespaces, <ph id="ph1">`XmlWriter`</ph> generates an alternate prefix for the attribute.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The generated prefixes are named <ph id="ph1">`n{i}`</ph> where <ph id="ph2">`i`</ph> is a number beginning at 1.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The number is reset to 1 for each element.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Attributes which are associated with a namespace URI must have a prefix (default namespaces do not apply to attributes).</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This conforms to section 5.2 of the W3C Namespaces in XML recommendation.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If an attribute references a namespace URI, but does not specify a prefix, the writer generates a prefix for the attribute.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When writing an empty element, an additional space is added between tag name and the closing tag, for example <ph id="ph1">`&lt;item /&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This provides compatibility with older browsers.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a <ph id="ph1">`String`</ph> is used as method parameter, <ph id="ph2">`null`</ph> and <ph id="ph3">`String.Empty`</ph> are equivalent.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`String.Empty`</ph> follows the W3C rules.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To write strongly typed data, use the &lt;xref:System.Xml.XmlConvert&gt; class to convert data types to string.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the following C# code converts the data from <ph id="ph1">`Double`</ph> to <ph id="ph2">`String`</ph> and writes the element <ph id="ph3">`&lt;price&gt;19.95&lt;/price&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   Double price = 19.95;   writer.WriteElementString("price", XmlConvert.ToString(price));   ```</ph>       <ph id="ph2">`XmlTextWriter`</ph> does not check for the following:      -   Invalid characters in attribute and element names.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Unicode characters that do not fit the specified encoding.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the Unicode characters do not fit the specified encoding, the <ph id="ph1">`XmlTextWriter`</ph> does not escape the Unicode characters into character entities.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Duplicate attributes.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Characters in the DOCTYPE public identifier or system identifier.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Security Considerations    The following items are things to consider when working with the XmlTextWriter class.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Exceptions thrown by the XmlTextWriter can disclose path information that you do not want bubbled up to the application.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Your applications must catch exceptions and process them appropriately.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   When you pass the XmlTextWriter to another application the underlying stream is exposed to that application.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you need to pass the XmlTextWriter to a semi-trusted application, you should use an &lt;xref:System.Xml.XmlWriter&gt; object created by the &lt;xref:System.Xml.XmlWriter.Create%2A&gt; method instead.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The XmlTextWriter does not validate any data that is passed to the &lt;xref:System.Xml.XmlTextWriter.WriteDocType%2A&gt; or &lt;xref:System.Xml.XmlTextWriter.WriteRaw%2A&gt; methods.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should not pass arbitrary data to these methods.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If the default settings are changed, there is no guarantee that the generated output is well-formed XML data.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Do not accept supporting components, such as an &lt;xref:System.Text.Encoding&gt; object, from an untrusted source.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Creates an instance of the <bpt id="p1">&lt;xref uid="langword_csharp_XmlTextWriter" name="XmlTextWriter" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the specified &lt;xref:System.IO.TextWriter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">&gt; [!NOTE]</ph> &gt;  Starting with the .NET Framework 2.0, we recommend that you create &lt;xref:System.Xml.XmlWriter&gt; instances by using the &lt;xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName&gt; method and the &lt;xref:System.Xml.XmlWriterSettings&gt; class to take advantage of new functionality.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

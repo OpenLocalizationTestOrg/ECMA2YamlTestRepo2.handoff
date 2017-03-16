@@ -15,8 +15,8 @@ items:
   nameWithType: Toolset
   fullName: Microsoft.Build.BuildEngine.Toolset
   type: Class
-  summary: "Representa um conjunto de ferramentas no MSBuild. Para obter mais informações sobre conjuntos de ferramentas, consulte [padrão e as configurações do conjunto de ferramentas personalizada](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Um objeto de conjunto de ferramentas tem um correspondente `ToolsVersion` valor que representa o valor da `ToolsVersion` atributo o [elemento Project (MSBuild)](~/add/includes/ajax-current-ext-md.md) , bem como um `ToolsPath` valor que indica onde se encontra o conjunto de ferramentas."
+  summary: Represents a Toolset in MSBuild. For more information about Toolsets, see [Standard and Custom Toolset Configurations](~/add/includes/ajax-current-ext-md.md).
+  remarks: A Toolset object has a corresponding `ToolsVersion` value that represents the value of the `ToolsVersion` attribute on the [Project Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) as well as a `ToolsPath` value that indicates where the Toolset is located.
   syntax:
     content: public class Toolset
   inheritance:
@@ -37,17 +37,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Cria um <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> objeto."
-  remarks: "Um **ArgumentNullException** erro será gerado se o valor do parâmetro é `null`. Um **ArgumentException** erro é lançado para valores de argumento inválido, como cadeias de caracteres vazias."
+  summary: Creates a <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> object.
+  remarks: An **ArgumentNullException** error is thrown if either parameter value is `null`. An **ArgumentException** error is thrown for invalid argument values such as empty strings.
   syntax:
     content: public Toolset (string toolsVersion, string toolsPath);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Uma cadeia de caracteres que representa a versão do <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> atualmente em uso."
+      description: A string representing the version of the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> currently in use.
     - id: toolsPath
       type: System.String
-      description: "Uma cadeia de caracteres que representa o caminho para o <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> atualmente em uso."
+      description: A string representing the path to the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> currently in use.
   overload: Microsoft.Build.BuildEngine.Toolset.#ctor*
   exceptions: []
   platform:
@@ -64,20 +64,20 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Cria um <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> objeto."
-  remarks: "Um **ArgumentNullException** erro será gerado se qualquer um dos valores de parâmetro são `null`. Um **ArgumentException** erro é lançado para valores de argumento inválido, como cadeias de caracteres vazias."
+  summary: Creates a <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> object.
+  remarks: An **ArgumentNullException** error is thrown if any of the parameter values are `null`. An **ArgumentException** error is thrown for invalid argument values such as empty strings.
   syntax:
     content: public Toolset (string toolsVersion, string toolsPath, Microsoft.Build.BuildEngine.BuildPropertyGroup buildProperties);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Uma cadeia de caracteres que representa a versão do <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> atualmente em uso."
+      description: A string representing the version of the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> currently in use.
     - id: toolsPath
       type: System.String
-      description: "Uma cadeia de caracteres que representa o caminho para o <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> atualmente em uso."
+      description: A string representing the path to the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> currently in use.
     - id: buildProperties
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "Uma cadeia de caracteres que representa o <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>-propriedades personalizadas específicas."
+      description: A string representing the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>-specific custom properties.
   overload: Microsoft.Build.BuildEngine.Toolset.#ctor*
   exceptions: []
   platform:
@@ -94,12 +94,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Obtém o <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> que é usado para definir <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>-propriedades personalizadas específicas."
+  summary: Gets the <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> that is used to set <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>-specific custom properties.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildPropertyGroup BuildProperties { get; }
     return:
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;></xref> object."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> object.
   overload: Microsoft.Build.BuildEngine.Toolset.BuildProperties*
   exceptions: []
   platform:
@@ -116,13 +116,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Cria uma cópia do especificado <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+  summary: Creates a copy of the specified <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
   syntax:
     content: public Microsoft.Build.BuildEngine.Toolset Clone ();
     parameters: []
     return:
       type: Microsoft.Build.BuildEngine.Toolset
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;></xref> object."
+      description: A <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> object.
   overload: Microsoft.Build.BuildEngine.Toolset.Clone*
   exceptions: []
   platform:
@@ -139,12 +139,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Obtém o caminho especificado <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+  summary: Gets the path to the specified <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
   syntax:
     content: public string ToolsPath { get; }
     return:
       type: System.String
-      description: "Uma cadeia de caracteres que representa o caminho para o <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+      description: A string representing the path to the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
   overload: Microsoft.Build.BuildEngine.Toolset.ToolsPath*
   exceptions: []
   platform:
@@ -161,12 +161,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Obtém a versão especificada <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+  summary: Gets the version of the specified <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: "Uma cadeia de caracteres que representa a versão do <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+      description: A string representing the version of the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
   overload: Microsoft.Build.BuildEngine.Toolset.ToolsVersion*
   exceptions: []
   platform:

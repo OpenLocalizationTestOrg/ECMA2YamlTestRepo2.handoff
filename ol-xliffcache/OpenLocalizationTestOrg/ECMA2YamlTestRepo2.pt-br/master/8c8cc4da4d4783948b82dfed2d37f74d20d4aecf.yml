@@ -24,7 +24,7 @@ items:
   nameWithType: ProjectStartedEventArgs
   fullName: Microsoft.Build.Framework.ProjectStartedEventArgs
   type: Class
-  summary: "Fornece dados para o <xref href=&quot;Microsoft.Build.Framework.IEventSource.ProjectStarted&quot;> </xref> eventos."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.ProjectStarted"></xref> event.
   remarks: 'WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a promise to never change the type''s fields i.e. the type is immutable; adding new fields in the next version of the type without following certain special FX guidelines, can break both forward and backward compatibility'
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -57,7 +57,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicializa uma nova instância de <xref href=&quot;Microsoft.Build.Framework.ProjectStartedEventArgs&quot;> </xref> classe."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.ProjectStartedEventArgs"></xref> class.
   syntax:
     content: protected ProjectStartedEventArgs ();
     parameters: []
@@ -77,28 +77,28 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicializa uma nova instância de <xref href=&quot;Microsoft.Build.Framework.ProjectStartedEventArgs&quot;> </xref> classe com os valores especificados."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.ProjectStartedEventArgs"></xref> class with the specified values.
   syntax:
     content: public ProjectStartedEventArgs (string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items);
     parameters:
     - id: message
       type: System.String
-      description: "O texto do evento."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "A palavra-chave ajuda associada ao evento."
+      description: The Help keyword associated with the event.
     - id: projectFile
       type: System.String
-      description: "O nome do arquivo de projeto."
+      description: The project file name.
     - id: targetNames
       type: System.String
-      description: "Os destinos a serem compilados."
+      description: The targets to be built.
     - id: properties
       type: System.Collections.IEnumerable
-      description: "Uma lista de propriedades"
+      description: A list of properties
     - id: items
       type: System.Collections.IEnumerable
-      description: "Uma lista de itens."
+      description: A list of items.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -115,31 +115,31 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Este construtor permite que os dados de evento a ser inicializado. Também o carimbo de hora pode ser definido remetente é considerado &quot;MSBuild&quot;."
+  summary: This constructor allows event data to be initialized. Also the timestamp can be set Sender is assumed to be "MSBuild".
   syntax:
     content: public ProjectStartedEventArgs (string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: "mensagem de texto"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "palavra-chave de ajuda"
+      description: help keyword
     - id: projectFile
       type: System.String
-      description: "nome do projeto"
+      description: project name
     - id: targetNames
       type: System.String
-      description: "destinos, vamos criar (vazia indica destinos padrão)"
+      description: targets we are going to build (empty indicates default targets)
     - id: properties
       type: System.Collections.IEnumerable
-      description: "lista de propriedades"
+      description: list of properties
     - id: items
       type: System.Collections.IEnumerable
-      description: "lista de itens"
+      description: list of items
     - id: eventTimestamp
       type: System.DateTime
-      description: "hora do evento"
+      description: time the event occurred
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -156,34 +156,34 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicializa uma nova instância de <xref href=&quot;Microsoft.Build.Framework.ProjectStartedEventArgs&quot;> </xref> classe com os valores especificados."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.ProjectStartedEventArgs"></xref> class with the specified values.
   syntax:
     content: public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext);
     parameters:
     - id: projectId
       type: System.Int32
-      description: "O exclusivo <xref:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId*>identificador para o projeto.</xref:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId*>"
+      description: The unique <xref:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId*> identifier for the project.
     - id: message
       type: System.String
-      description: "O texto do evento."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "A palavra-chave ajuda associada ao evento."
+      description: The Help keyword associated with the event.
     - id: projectFile
       type: System.String
-      description: "O nome do arquivo de projeto."
+      description: The project file name.
     - id: targetNames
       type: System.String
-      description: "Os destinos a serem compilados."
+      description: The targets to be built.
     - id: properties
       type: System.Collections.IEnumerable
-      description: "Uma lista de propriedades."
+      description: A list of properties.
     - id: items
       type: System.Collections.IEnumerable
-      description: "Uma lista de itens."
+      description: A list of items.
     - id: parentBuildEventContext
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "A <xref href=&quot;Microsoft.Build.Framework.BuildEventContext&quot;> </xref> valor que define as informações contextuais local. Isso é anexado aos eventos de log para definir onde estão localizados em relação a processos, mecanismo, projeto, destino ou tarefa que está em execução."
+      description: A <xref href="Microsoft.Build.Framework.BuildEventContext"></xref> value that defines location contextual information. This is attached to logging events to define where they are located in relation to the process, engine, project, target, or task that is executing.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -200,37 +200,37 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Este construtor permite que os dados de evento a ser inicializado. O remetente é considerado &quot;MSBuild&quot;."
+  summary: This constructor allows event data to be initialized. Sender is assumed to be "MSBuild".
   syntax:
     content: public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, DateTime eventTimestamp);
     parameters:
     - id: projectId
       type: System.Int32
-      description: "id do projeto"
+      description: project id
     - id: message
       type: System.String
-      description: "mensagem de texto"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "palavra-chave de ajuda"
+      description: help keyword
     - id: projectFile
       type: System.String
-      description: "nome do projeto"
+      description: project name
     - id: targetNames
       type: System.String
-      description: "destinos, vamos criar (vazia indica destinos padrão)"
+      description: targets we are going to build (empty indicates default targets)
     - id: properties
       type: System.Collections.IEnumerable
-      description: "lista de propriedades"
+      description: list of properties
     - id: items
       type: System.Collections.IEnumerable
-      description: "lista de itens"
+      description: list of items
     - id: parentBuildEventContext
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "informações de contexto de evento para o projeto pai"
+      description: event context info for the parent project
     - id: eventTimestamp
       type: System.DateTime
-      description: "hora do evento"
+      description: time the event occurred
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -247,40 +247,40 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Este construtor permite que os dados de evento a ser inicializado.       O remetente é considerado &quot;MSBuild&quot;."
+  summary: "This constructor allows event data to be initialized.  \n  \n Sender is assumed to be \"MSBuild\"."
   syntax:
     content: public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: projectId
       type: System.Int32
-      description: "id do projeto"
+      description: project id
     - id: message
       type: System.String
-      description: "mensagem de texto"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "palavra-chave de ajuda"
+      description: help keyword
     - id: projectFile
       type: System.String
-      description: "nome do projeto"
+      description: project name
     - id: targetNames
       type: System.String
-      description: "destinos, vamos criar (vazia indica destinos padrão)"
+      description: targets we are going to build (empty indicates default targets)
     - id: properties
       type: System.Collections.IEnumerable
-      description: "lista de propriedades"
+      description: list of properties
     - id: items
       type: System.Collections.IEnumerable
-      description: "lista de itens"
+      description: list of items
     - id: parentBuildEventContext
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "informações de contexto de evento para o projeto pai"
+      description: event context info for the parent project
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Uma lista de propriedades globais"
+      description: A list of global properties
     - id: toolsVersion
       type: System.String
-      description: "A versão das ferramentas"
+      description: The tools version
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -297,12 +297,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém o conjunto de propriedades globais usadas para avaliar este projeto."
+  summary: Gets the set of global properties used to evaluate this project.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Retorna &lt;xref:System.Collections.Generic.IDictionary%602&gt;."
+      description: Returns &lt;xref:System.Collections.Generic.IDictionary%602&gt;.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.GlobalProperties*
   exceptions: []
   platform:
@@ -319,12 +319,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Um valor que representa uma ID de projeto inválido."
+  summary: A value representing an invalid project ID.
   syntax:
     content: public const int InvalidProjectId = -1;
     return:
       type: System.Int32
-      description: "A ser adicionado."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -340,13 +340,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém a lista de itens para o evento."
-  remarks: "Os itens e acessados por meio de itens de metadados são mantidos atualizados e podem ser enumeradas durante a compilação do projeto. No entanto, a alteração de um item na lista não afetará o processo de compilação.      > [!NOTE] > Esta propriedade não funciona com compilações de proc múltiplo. Para obter resultados adequados, você pode desativar proc múltiplo que esteja compilando especificando `/m:1` (que é o padrão)."
+  summary: Gets the list of items for the event.
+  remarks: "The items and metadata accessed through Items are kept up-to-date and can be enumerated throughout the build of the project. However, changing an item in this list will not affect the build process.  \n  \n> [!NOTE]\n>  This property does not work with multi-proc builds. To get proper results, you can turn off multi-proc building by specifying `/m:1` (which is the default)."
   syntax:
     content: public System.Collections.IEnumerable Items { get; }
     return:
       type: System.Collections.IEnumerable
-      description: "A lista de itens para o evento."
+      description: The list of items for the event.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.Items*
   exceptions: []
   platform:
@@ -363,12 +363,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Fornece informações de localização contextual, incluindo o projeto se qualquer que invocou a compilação deste projeto."
+  summary: Provides contextual location information, including the project if any that invoked the build of this project.
   syntax:
     content: public Microsoft.Build.Framework.BuildEventContext ParentProjectBuildEventContext { get; }
     return:
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "A <xref href=&quot;Microsoft.Build.Framework.BuildEventContext&quot;> </xref> objeto que representa a lista de itens para o evento."
+      description: A <xref href="Microsoft.Build.Framework.BuildEventContext"></xref> object representing the list of items for the event.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.ParentProjectBuildEventContext*
   exceptions: []
   platform:
@@ -385,12 +385,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém o arquivo de projeto associado ao evento."
+  summary: Gets the project file associated with the event.
   syntax:
     content: public string ProjectFile { get; }
     return:
       type: System.String
-      description: "O arquivo de projeto associado ao evento."
+      description: The project file associated with the event.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectFile*
   exceptions: []
   platform:
@@ -407,12 +407,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém o arquivo de projeto associado ao evento."
+  summary: Gets the project file associated with the event.
   syntax:
     content: public int ProjectId { get; }
     return:
       type: System.Int32
-      description: "Um inteiro que representa a ID do arquivo de projeto associado ao evento."
+      description: An integer representing the ID of the project file associated with the event.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId*
   exceptions: []
   platform:
@@ -429,13 +429,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém a lista de propriedades para o evento."
-  remarks: "Os nomes de propriedade e valores acessados por meio de propriedades são mantidos atualizados e podem ser enumeradas durante a compilação do projeto. No entanto, a alteração de uma propriedade na lista não afetará o processo de compilação.      > [!NOTE] > Esta propriedade não funciona com compilações de proc múltiplo. Para obter resultados adequados, você pode o proc múltiplo que esteja compilando especificando desativar `/m:1` (que é o padrão), ou você pode contornar a limitação, definindo uma variável de ambiente. Por exemplo, a configuração `MSBuildForwardPropertiesFromChild=configuration;platform` encaminha as propriedades &quot;configuração&quot; e &quot;plataforma&quot; de filho nós. A menos que essa variável de ambiente é definida, nada será encaminhado. Para obter mais informações, consulte [como: Use variáveis de ambiente em uma compilação](~/add/includes/ajax-current-ext-md.md)."
+  summary: Gets the list of properties for the event.
+  remarks: "The property names and values accessed through Properties are kept up-to-date and can be enumerated throughout the build of the project. However, changing a property in this list will not affect the build process.  \n  \n> [!NOTE]\n>  This property does not work with multi-proc builds. To get proper results, you can either turn off multi-proc building by specifying `/m:1` (which is the default), or you can work around the limitation by setting an environment variable. For example, setting `MSBuildForwardPropertiesFromChild=configuration;platform` forwards the \"configuration\" and \"platform\" properties from the child nodes. Unless this environment variable is defined, nothing will be forwarded. For more information, see [How to: Use Environment Variables in a Build](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: public System.Collections.IEnumerable Properties { get; }
     return:
       type: System.Collections.IEnumerable
-      description: "A lista de propriedades para o evento."
+      description: The list of properties for the event.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.Properties*
   exceptions: []
   platform:
@@ -452,12 +452,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém a lista de destinos a serem compilados no projeto."
+  summary: Gets the list of targets to be built in the project.
   syntax:
     content: public string TargetNames { get; }
     return:
       type: System.String
-      description: "A lista de destinos a serem compilados no projeto."
+      description: The list of targets to be built in the project.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.TargetNames*
   exceptions: []
   platform:
@@ -474,12 +474,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém a versão das ferramentas usada para avaliar este projeto."
+  summary: Gets the tools version used to evaluate this project.
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: "Retorna <xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion*
   exceptions: []
   platform:

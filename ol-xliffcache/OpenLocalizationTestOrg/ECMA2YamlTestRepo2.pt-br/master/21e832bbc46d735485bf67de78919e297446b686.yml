@@ -28,7 +28,7 @@ items:
   nameWithType: WinMDExp
   fullName: Microsoft.Build.Tasks.WinMDExp
   type: Class
-  summary: "Exporta um assembly gerenciado para um metadados de tempo de execução do windows."
+  summary: Exports a managed assembly to a windows runtime metadata.
   syntax:
     content: 'public class WinMDExp : Microsoft.Build.Tasks.ToolTaskExtension'
   inheritance:
@@ -100,7 +100,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Cria uma instância de WinMDExp."
+  summary: Creates an instance of WinMDExp.
   syntax:
     content: public WinMDExp ();
     parameters: []
@@ -120,13 +120,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Preenche o CommandLineBuilderExtension fornecido com todas as opções de linha de comando usadas durante a execução dessa ferramenta"
+  summary: Fills the provided CommandLineBuilderExtension with all the command line options used when executing this tool
   syntax:
     content: protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "Obtém preenchido com comandos de linha de comando"
+      description: Gets filled with command line commands
   overload: Microsoft.Build.Tasks.WinMDExp.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -143,12 +143,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Códigos de aviso para desabilitar"
+  summary: Warning codes to disable
   syntax:
     content: public string DisabledWarnings { get; set; }
     return:
       type: System.String
-      description: "Retorna os códigos de aviso para desabilitar."
+      description: Returns the warning codes to disable.
   overload: Microsoft.Build.Tasks.WinMDExp.DisabledWarnings*
   exceptions: []
   platform:
@@ -165,13 +165,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "O caminho completo da ferramenta para executar."
+  summary: The full path of the tool to execute.
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: "Retorna o caminho completo da ferramenta para executar."
+      description: Returns the full path of the tool to execute.
   overload: Microsoft.Build.Tasks.WinMDExp.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -188,12 +188,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Arquivo de entrada de documentação"
+  summary: Input documentation file
   syntax:
     content: public string InputDocumentationFile { get; set; }
     return:
       type: System.String
-      description: "Retorna o arquivo de documentação de entrada."
+      description: Returns the input documentation file.
   overload: Microsoft.Build.Tasks.WinMDExp.InputDocumentationFile*
   exceptions: []
   platform:
@@ -210,12 +210,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Arquivo PDB de entrada"
+  summary: Input PDB file
   syntax:
     content: public string InputPDBFile { get; set; }
     return:
       type: System.String
-      description: "Retorna o arquivo PDB de entrada."
+      description: Returns the input PDB file.
   overload: Microsoft.Build.Tasks.WinMDExp.InputPDBFile*
   exceptions: []
   platform:
@@ -232,12 +232,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Arquivo de documentação de saída"
+  summary: Output documentation file
   syntax:
     content: public string OutputDocumentationFile { get; set; }
     return:
       type: System.String
-      description: "Retorna o arquivo de documentação de saída."
+      description: Returns the output documentation file.
   overload: Microsoft.Build.Tasks.WinMDExp.OutputDocumentationFile*
   exceptions: []
   platform:
@@ -254,12 +254,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Arquivo PDB de saída"
+  summary: Output PDB file
   syntax:
     content: public string OutputPDBFile { get; set; }
     return:
       type: System.String
-      description: "Retorna o arquivo PDB de saída."
+      description: Returns the output PDB file.
   overload: Microsoft.Build.Tasks.WinMDExp.OutputPDBFile*
   exceptions: []
   platform:
@@ -276,12 +276,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Windows. winmd arquivo de metadados de saída"
+  summary: Output windows metadata file .winmd
   syntax:
     content: public string OutputWindowsMetadataFile { get; set; }
     return:
       type: System.String
-      description: "Retorna o arquivo de metadados do windows de saída."
+      description: Returns the output windows metadata file.
   overload: Microsoft.Build.Tasks.WinMDExp.OutputWindowsMetadataFile*
   exceptions: []
   platform:
@@ -298,12 +298,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Conjunto de referências para passar para a ferramenta winmdexp."
+  summary: Set of references to pass to the winmdexp tool.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] References { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Retornao conjunto de referências."
+      description: Returnsthe set of references.
   overload: Microsoft.Build.Tasks.WinMDExp.References*
   exceptions: []
   platform:
@@ -320,12 +320,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Caminho para o diretório SDK que contém essa ferramenta"
+  summary: Path to the SDK directory which contains this tool
   syntax:
     content: public string SdkToolsPath { get; set; }
     return:
       type: System.String
-      description: "Retorna o caminho do diretório SDK."
+      description: Returns the SDK directory path.
   overload: Microsoft.Build.Tasks.WinMDExp.SdkToolsPath*
   exceptions: []
   platform:
@@ -342,13 +342,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Retornará true se a execução da tarefa não é necessária. Executado após ValidateParameters"
+  summary: Returns true if task execution is not necessary. Executed after ValidateParameters
   syntax:
     content: protected override bool SkipTaskExecution ();
     parameters: []
     return:
       type: System.Boolean
-      description: "Retorna o sinalizador que indica se a execução da tarefa é ignorada."
+      description: Returns the flag indicating whether task execution is skipped.
   overload: Microsoft.Build.Tasks.WinMDExp.SkipTaskExecution*
   exceptions: []
   platform:
@@ -365,12 +365,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém o valor que especifica a codificação do fluxo de erro padrão de tarefa capturada."
+  summary: Gets the value which specifies the encoding of the captured task standard error stream.
   syntax:
     content: protected override System.Text.Encoding StandardErrorEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: "Retorna o valor que especifica a codificação de fluxo de erro."
+      description: Returns the value specifying the error stream encoding.
   overload: Microsoft.Build.Tasks.WinMDExp.StandardErrorEncoding*
   exceptions: []
   platform:
@@ -387,12 +387,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém o valor que especifica a codificação do fluxo de saída padrão de tarefa capturada."
+  summary: Gets the value which specifies the encoding of the captured task standard output stream.
   syntax:
     content: protected override System.Text.Encoding StandardOutputEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: "Retorna o valor que especifica a codificação do fluxo de saída."
+      description: Returns the value specifying the output stream encoding.
   overload: Microsoft.Build.Tasks.WinMDExp.StandardOutputEncoding*
   exceptions: []
   platform:
@@ -409,12 +409,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "O nome da ferramenta para executar."
+  summary: The name of the tool to execute.
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: "Retorna o nome da ferramenta."
+      description: Returns the tool name.
   overload: Microsoft.Build.Tasks.WinMDExp.ToolName*
   exceptions: []
   platform:
@@ -431,12 +431,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o sinalizador que indica se deve tratar avisos como erros."
+  summary: Gets or sets the flag indicating whether to treat warnings as errors.
   syntax:
     content: public bool TreatWarningsAsErrors { get; set; }
     return:
       type: System.Boolean
-      description: "Retorna o sinalizador que indica se deve tratar avisos como erros."
+      description: Returns the flag indicating whether to treat warnings as errors.
   overload: Microsoft.Build.Tasks.WinMDExp.TreatWarningsAsErrors*
   exceptions: []
   platform:
@@ -453,12 +453,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o sinalizador que indica se deve usar a codificação de fluxo de saída do UTF-8."
+  summary: Gets or sets the flag indicating whether to use UTF-8 output stream encoding.
   syntax:
     content: public bool UTF8Output { get; set; }
     return:
       type: System.Boolean
-      description: "Retorna o sinalizador que indica a codificação de fluxo de saída do UTF-8."
+      description: Returns the flag indicating UTF-8 output stream encoding.
   overload: Microsoft.Build.Tasks.WinMDExp.UTF8Output*
   exceptions: []
   platform:
@@ -475,13 +475,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Validar os parâmetros de log de erros e avisos e retornam VERDADEIRO se a execução deve continuar."
+  summary: Validate parameters, log errors and warnings and return true if Execute should proceed.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "Retorna o sinalizador que indica se executar deve prosseguir."
+      description: Returns the flag indicating whether execute should proceed.
   overload: Microsoft.Build.Tasks.WinMDExp.ValidateParameters*
   exceptions: []
   platform:
@@ -498,12 +498,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "WinMDModule para gerar o WinMDFile para."
+  summary: WinMDModule to generate the WinMDFile for.
   syntax:
     content: public string WinMDModule { get; set; }
     return:
       type: System.String
-      description: "Retorna o WinMDModule."
+      description: Returns the WinMDModule.
   overload: Microsoft.Build.Tasks.WinMDExp.WinMDModule*
   exceptions: []
   platform:

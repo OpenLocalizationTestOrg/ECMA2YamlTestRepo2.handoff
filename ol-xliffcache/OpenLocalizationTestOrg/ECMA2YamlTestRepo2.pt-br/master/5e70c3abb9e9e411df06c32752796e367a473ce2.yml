@@ -10,8 +10,8 @@ items:
   nameWithType: IEventRedirector
   fullName: Microsoft.Build.Framework.IEventRedirector
   type: Interface
-  summary: "Encaminhar eventos para outros agentes de compilação."
-  remarks: "Consulte [escrevendo agentes Multi-com reconhecimento](~/add/includes/ajax-current-ext-md.md) para obter mais informações."
+  summary: Forwards build events to other loggers.
+  remarks: See [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md) for more information.
   syntax:
     content: public interface IEventRedirector
   implements: []
@@ -29,14 +29,14 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Chamado pelos agentes de nó para eventos de compilação para frente ao agente de log central."
-  remarks: "Consulte [escrevendo agentes Multi-com reconhecimento](~/add/includes/ajax-current-ext-md.md) para obter mais informações."
+  summary: Called by the node loggers to forward build events to the central logger.
+  remarks: See [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md) for more information.
   syntax:
     content: public void ForwardEvent (Microsoft.Build.Framework.BuildEventArgs buildEvent);
     parameters:
     - id: buildEvent
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "O <xref href=&quot;Microsoft.Build.Framework.BuildEventArgs&quot;> </xref> para encaminhar."
+      description: The <xref href="Microsoft.Build.Framework.BuildEventArgs"></xref> to forward.
   overload: Microsoft.Build.Framework.IEventRedirector.ForwardEvent*
   exceptions: []
   platform:

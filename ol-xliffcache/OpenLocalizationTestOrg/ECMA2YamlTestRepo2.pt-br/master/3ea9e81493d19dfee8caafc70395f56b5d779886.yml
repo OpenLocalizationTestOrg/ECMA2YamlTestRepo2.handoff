@@ -17,8 +17,8 @@ items:
   nameWithType: BuildSubmission
   fullName: Microsoft.Build.Execution.BuildSubmission
   type: Class
-  summary: "Representa uma solicitação de compilação que foi enviada ao gerente de compilação para processamento. Os métodos dessa classe podem ser usados para executar solicitações de compilação síncrona ou assíncrona e fornecer acesso aos resultados após a conclusão."
-  remarks: "Essa classe é thread-safe."
+  summary: Represents a build request that has been submitted to the build manager for processing. The methods of this class may be used to execute synchronous or asynchronous build requests and to provide access to the results upon completion.
+  remarks: This class is thread-safe.
   syntax:
     content: public class BuildSubmission
   inheritance:
@@ -39,12 +39,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define o contexto assíncrono fornecido para <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>, se houver.</xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>"
+  summary: Gets or sets the asynchronous context provided to <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>, if any.
   syntax:
     content: public object AsyncContext { get; }
     return:
       type: System.Object
-      description: "Retorna o contexto assíncrono fornecido para <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>.</xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*> Retorna null se nenhum contexto for fornecido."
+      description: Returns the asynchronous context provided to <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>. Returns null if no context is provided.
   overload: Microsoft.Build.Execution.BuildSubmission.AsyncContext*
   exceptions: []
   platform:
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define o Gerenciador de compilação que o envio de compilação está associado."
+  summary: Gets or sets the build manager this build submission is associated with.
   syntax:
     content: public Microsoft.Build.Execution.BuildManager BuildManager { get; }
     return:
       type: Microsoft.Build.Execution.BuildManager
-      description: "Retorna o envio de compilação está associado com o Gerenciador de compilação."
+      description: Returns the build manager this build submission is associated with.
   overload: Microsoft.Build.Execution.BuildSubmission.BuildManager*
   exceptions: []
   platform:
@@ -83,13 +83,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define o resultado da compilação."
-  remarks: "O resultado não é válido até <xref:Microsoft.Build.Execution.BuildSubmission.WaitHandle%2A>é sinalizado.</xref:Microsoft.Build.Execution.BuildSubmission.WaitHandle%2A>"
+  summary: Gets or sets the result of the build.
+  remarks: The result is not valid until <xref:Microsoft.Build.Execution.BuildSubmission.WaitHandle%2A> is signalled.
   syntax:
     content: public Microsoft.Build.Execution.BuildResult BuildResult { get; set; }
     return:
       type: Microsoft.Build.Execution.BuildResult
-      description: "Retorna o resultado da compilação."
+      description: Returns the result of the build.
   overload: Microsoft.Build.Execution.BuildSubmission.BuildResult*
   exceptions: []
   platform:
@@ -106,18 +106,18 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Inicia uma solicitação de compilação de forma síncrona e aguarda até que os resultados estão disponíveis."
+  summary: Starts a build request synchronously and waits until results are available.
   syntax:
     content: public Microsoft.Build.Execution.BuildResult Execute ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.BuildResult
-      description: "Retorna a solicitação de compilação."
+      description: Returns the build request.
   overload: Microsoft.Build.Execution.BuildSubmission.Execute*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "A solicitação já foi iniciada ou já foi concluída."
+    description: The request has already been started or is already complete.
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)
@@ -132,21 +132,21 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Inicia uma solicitação de compilação e de forma assíncrona dentro do contexto especificado. Retorna o controle ao chamador."
+  summary: Starts a build request asynchronously and within the given context. Immediately returns control to the caller.
   syntax:
     content: public void ExecuteAsync (Microsoft.Build.Execution.BuildSubmissionCompleteCallback callback, object context);
     parameters:
     - id: callback
       type: Microsoft.Build.Execution.BuildSubmissionCompleteCallback
-      description: "O método de retorno de chamada para chamar quando o envio de compilação for concluído."
+      description: The callback method to call when the build submission is complete.
     - id: context
       type: System.Object
-      description: "O contexto no qual ocorre o envio de compilação."
+      description: The context in which the build submission occurs.
   overload: Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "A solicitação já foi iniciada ou já foi concluída."
+    description: The request has already been started or is already complete.
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildSubmission.IsCompleted
@@ -161,12 +161,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Determina se o envio de compilação é concluído."
+  summary: Determines whether this build submission is complete.
   syntax:
     content: public bool IsCompleted { get; }
     return:
       type: System.Boolean
-      description: "Retorna VERDADEIRO se o envio de compilação foi concluído; FALSO caso contrário."
+      description: Returns true if this build submission is complete; false otherwise.
   overload: Microsoft.Build.Execution.BuildSubmission.IsCompleted*
   exceptions: []
   platform:
@@ -183,13 +183,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém ou define uma ID que identifica exclusivamente o envio de compilação."
-  remarks: "Essa ID é usada para distinguir o envio de compilação de outros envios de compilação na mesma compilação."
+  summary: Gets or sets an ID uniquely identifying this build submission.
+  remarks: This ID is used to distinguish this build submission from other build submissions within the same build.
   syntax:
     content: public int SubmissionId { get; }
     return:
       type: System.Int32
-      description: "Retorna uma ID que identifica exclusivamente o envio de compilação."
+      description: Returns an ID uniquely identifying this build submission.
   overload: Microsoft.Build.Execution.BuildSubmission.SubmissionId*
   exceptions: []
   platform:
@@ -206,12 +206,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Obtém uma <xref:System.Threading.WaitHandle>objeto será sinalizado quando a compilação estiver concluída.</xref:System.Threading.WaitHandle>"
+  summary: Gets a <xref:System.Threading.WaitHandle> object that will be signalled when the build is complete.
   syntax:
     content: public System.Threading.WaitHandle WaitHandle { get; }
     return:
       type: System.Threading.WaitHandle
-      description: "Retorna null até <> </> *> ou <> </> *> retorna, em seguida, retorna o objeto WaitHandle."
+      description: Returns null until <xref:Microsoft.Build.Execution.BuildSubmission.Execute*> or <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*> returns, then returns the WaitHandle object.
   overload: Microsoft.Build.Execution.BuildSubmission.WaitHandle*
   exceptions: []
   platform:

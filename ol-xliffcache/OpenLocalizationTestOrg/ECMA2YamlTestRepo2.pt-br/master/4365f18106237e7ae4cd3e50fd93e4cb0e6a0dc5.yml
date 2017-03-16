@@ -18,7 +18,7 @@ items:
   nameWithType: IBuildEngine
   fullName: Microsoft.Build.Framework.IBuildEngine
   type: Interface
-  summary: "Fornece uma maneira para que os autores de tarefa usar um subconjunto da funcionalidade do [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] mecanismo."
+  summary: Provides a way for task authors to use a subset of the functionality of the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine.
   syntax:
     content: public interface IBuildEngine
   implements: []
@@ -36,26 +36,26 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicia uma compilação de um arquivo de projeto. Se a compilação for bem-sucedida, as saídas, se houver, os destinos especificados são retornadas."
-  remarks: "O `targetNames`, `globalProperties`, e `targetOutputs` os parâmetros podem ser `null`.       Se nenhum destino for especificado, [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] compilações destinos padrão do projeto.       Saídas de destino são retornadas como <xref:Microsoft.Build.Framework.ITaskItem>matrizes indexadas pelo nome do destino.</xref:Microsoft.Build.Framework.ITaskItem>"
+  summary: Initiates a build of a project file. If the build is successful, the outputs, if any, of the specified targets are returned.
+  remarks: "The `targetNames`, `globalProperties`, and `targetOutputs` parameters can be `null`.  \n  \n If no targets are specified, [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] builds the default targets of the project.  \n  \n Target outputs are returned as <xref:Microsoft.Build.Framework.ITaskItem> arrays indexed by target name."
   syntax:
     content: public bool BuildProjectFile (string projectFileName, string[] targetNames, System.Collections.IDictionary globalProperties, System.Collections.IDictionary targetOutputs);
     parameters:
     - id: projectFileName
       type: System.String
-      description: "O nome do arquivo de projeto para criar."
+      description: The name of the project file to build.
     - id: targetNames
       type: System.String[]
-      description: "Os nomes de destino do projeto para criar. Separe vários destinos com um ponto e vírgula (;)."
+      description: The names of the target in the project to build. Separate multiple targets with a semicolon (;).
     - id: globalProperties
       type: System.Collections.IDictionary
-      description: "Um <xref:System.Collections.IDictionary>de propriedades adicionais de global para aplicar ao projeto.</xref:System.Collections.IDictionary> A chave e o valor devem ser <xref uid=&quot;langword_csharp_String&quot; name=&quot;String&quot; href=&quot;&quot;> </xref> tipos de dados."
+      description: An <xref:System.Collections.IDictionary> of additional global properties to apply to the project. The key and value must be <xref uid="langword_csharp_String" name="String" href=""></xref> data types.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "As saídas de cada destino especificado."
+      description: The outputs of each specified target.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se a compilação for bem-sucedida; Caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Framework.IBuildEngine.BuildProjectFile*
   exceptions: []
   platform:
@@ -72,12 +72,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém o número da linha do nó de tarefa dentro do arquivo de projeto que o chamou."
+  summary: Gets the line number of the task node within the project file that called it.
   syntax:
     content: public int ColumnNumberOfTaskNode { get; }
     return:
       type: System.Int32
-      description: "O número da linha do nó tarefa dentro do arquivo de projeto que o chamou."
+      description: The line number of the task node within the project file that called it.
   overload: Microsoft.Build.Framework.IBuildEngine.ColumnNumberOfTaskNode*
   exceptions: []
   platform:
@@ -94,12 +94,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Retorna <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> se o sinalizador ContinueOnError foi definido como <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> para essa tarefa específica no arquivo de projeto."
+  summary: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if the ContinueOnError flag was set to <xref uid="langword_csharp_true" name="true" href=""></xref> for this particular task in the project file.
   syntax:
     content: public bool ContinueOnError { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se o sinalizador ContinueOnError foi definido como <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> para essa tarefa específica no arquivo de projeto."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the ContinueOnError flag was set to <xref uid="langword_csharp_true" name="true" href=""></xref> for this particular task in the project file.
   overload: Microsoft.Build.Framework.IBuildEngine.ContinueOnError*
   exceptions: []
   platform:
@@ -116,12 +116,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém o número da linha do nó de tarefa dentro do arquivo de projeto que o chamou."
+  summary: Gets the line number of the task node within the project file that called it.
   syntax:
     content: public int LineNumberOfTaskNode { get; }
     return:
       type: System.Int32
-      description: "O número da linha do nó tarefa dentro do arquivo de projeto que o chamou."
+      description: The line number of the task node within the project file that called it.
   overload: Microsoft.Build.Framework.IBuildEngine.LineNumberOfTaskNode*
   exceptions: []
   platform:
@@ -138,13 +138,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Gera um evento personalizado para todos os agentes registrados."
+  summary: Raises a custom event to all registered loggers.
   syntax:
     content: public void LogCustomEvent (Microsoft.Build.Framework.CustomBuildEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.CustomBuildEventArgs
-      description: "Os dados do evento."
+      description: The event data.
   overload: Microsoft.Build.Framework.IBuildEngine.LogCustomEvent*
   exceptions: []
   platform:
@@ -161,13 +161,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Gera um evento de erro para todos os agentes registrados."
+  summary: Raises an error event to all registered loggers.
   syntax:
     content: public void LogErrorEvent (Microsoft.Build.Framework.BuildErrorEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.BuildErrorEventArgs
-      description: "Os dados do evento."
+      description: The event data.
   overload: Microsoft.Build.Framework.IBuildEngine.LogErrorEvent*
   exceptions: []
   platform:
@@ -184,13 +184,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Gera um evento de mensagem para todos os agentes registrados."
+  summary: Raises a message event to all registered loggers.
   syntax:
     content: public void LogMessageEvent (Microsoft.Build.Framework.BuildMessageEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.BuildMessageEventArgs
-      description: "Os dados do evento."
+      description: The event data.
   overload: Microsoft.Build.Framework.IBuildEngine.LogMessageEvent*
   exceptions: []
   platform:
@@ -207,13 +207,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Gera um evento de aviso para todos os agentes registrados."
+  summary: Raises a warning event to all registered loggers.
   syntax:
     content: public void LogWarningEvent (Microsoft.Build.Framework.BuildWarningEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.BuildWarningEventArgs
-      description: "Os dados do evento."
+      description: The event data.
   overload: Microsoft.Build.Framework.IBuildEngine.LogWarningEvent*
   exceptions: []
   platform:
@@ -230,12 +230,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém o caminho completo para o arquivo de projeto que continha a chamada para essa tarefa."
+  summary: Gets the full path to the project file that contained the call to this task.
   syntax:
     content: public string ProjectFileOfTaskNode { get; }
     return:
       type: System.String
-      description: "O caminho completo para o arquivo de projeto que continha a chamada para essa tarefa."
+      description: The full path to the project file that contained the call to this task.
   overload: Microsoft.Build.Framework.IBuildEngine.ProjectFileOfTaskNode*
   exceptions: []
   platform:

@@ -93,8 +93,8 @@ items:
   nameWithType: ProjectRootElement
   fullName: Microsoft.Build.Construction.ProjectRootElement
   type: Class
-  summary: "Representa um projeto do MSBuild, um arquivo de destino ou qualquer outro arquivo que esteja de acordo com o esquema de arquivo de projeto MSBuild. Essa classe e suas classes relacionadas permitem um MSBuild project ou destinos de arquivo completo ser lida e gravada."
-  remarks: "Comentários e espaços em branco não não possível editar esse modelo no momento. Cada elemento raiz do projeto é associado a exatamente uma coleção de projetos. Isso permite que o proprietário dessa coleção de projeto controlar seu tempo de vida e não se surpreenda com edições que vêm de outra coleção de projeto."
+  summary: Represents an MSBuild project, a targets file, or any other file that conforms to MSBuild project file schema. This class and its related classes allow a complete MSBuild project or targets file to be read and written.
+  remarks: Comments and white space cannot be edited through this model at present. Each project root element is associated with exactly one project collection. This allows the owner of that project collection to control its lifetime and not be surprised by edits that come from another project collection.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{FullPath} #Children={Count} DefaultTargets={DefaultTargets} ToolsVersion={ToolsVersion} InitialTargets={InitialTargets} ExplicitlyLoaded={IsExplicitlyLoaded}")]
@@ -140,17 +140,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona uma importação de projeto para este projeto."
-  remarks: "Se existem grupos de importação, insere a importação de projeto para o último grupo de importação que não tem nenhum atributo de condição; Caso contrário, cria uma importação ao final do projeto."
+  summary: Adds a project import to this project.
+  remarks: If import groups exist, inserts the project import into the last import group that has no Condition attribute; otherwise, creates an import at the end of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement AddImport (string project);
     parameters:
     - id: project
       type: System.String
-      description: "O projeto a ser importado."
+      description: The project to be imported.
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "Retorna a importação de projeto adicionado."
+      description: Returns the added project import.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddImport*
   exceptions: []
   platform:
@@ -167,14 +167,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um grupo de importação no final deste projeto."
-  remarks: "Este método prático escolhe um local no DOM MSBuild com base em uma heurística."
+  summary: Creates an import group at the end of this project.
+  remarks: This convenience method picks a location in the MSBuild DOM based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportGroupElement AddImportGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectImportGroupElement
-      description: "Retorna o grupo de importação ao final deste projeto."
+      description: Returns the import group created at the end of this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddImportGroup*
   exceptions: []
   platform:
@@ -191,20 +191,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um item ao projeto."
-  remarks: "Cria um item, em seguida, adiciona a um grupo de itens com nenhum atributo de condição e pelo menos um item do mesmo tipo de item. Se nenhum grupo de itens for encontrado, cria um novo grupo de item e adiciona o item a ele. Itens são ordenados por valores de inclusão.       Não faz nada se o item corresponde a uma expressão curinga existente para esse tipo de item."
+  summary: Adds an item to this project.
+  remarks: "Creates an item, then adds it to an item group with no Condition attribute and at least one item of same item type. If no such item group is found, creates a new item group and adds the item to it. Items are ordered by Include values.  \n  \n Does nothing if the item matches an existing wildcard expression for this item type."
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include);
     parameters:
     - id: itemType
       type: System.String
-      description: "O tipo de item do item a ser adicionado."
+      description: The item type of the item to be added.
     - id: include
       type: System.String
-      description: "O valor Include do item a ser adicionado."
+      description: The Include value of the item to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "Retorna o item adicionado."
+      description: Returns the added item.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItem*
   exceptions: []
   platform:
@@ -221,23 +221,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um item com os metadados para este projeto."
-  remarks: "Cria um item, em seguida, adiciona a um grupo de itens com nenhum atributo de condição e pelo menos um item do mesmo tipo de item. Se nenhum grupo de itens for encontrado, cria um novo grupo de item e adiciona o item a ele. Itens são ordenados por valores de inclusão."
+  summary: Adds an item with metadata to this project.
+  remarks: Creates an item, then adds it to an item group with no Condition attribute and at least one item of same item type. If no such item group is found, creates a new item group and adds the item to it. Items are ordered by Include values.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: "O tipo de item do item a ser adicionado."
+      description: The item type of the item to be added.
     - id: include
       type: System.String
-      description: "O valor Include do item a ser adicionado."
+      description: The Include value of the item to be added.
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: "Os metadados a serem adicionados."
+      description: The metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "Retorna o item adicionado."
+      description: Returns the added item.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItem*
   exceptions: []
   platform:
@@ -254,17 +254,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona uma definição de item a este projeto."
-  remarks: "Cria um item, em seguida, adiciona a um grupo de itens com nenhum atributo de condição e pelo menos um item do mesmo tipo de item. Se nenhum grupo de itens for encontrado, cria um novo grupo de item e adiciona o item a ele. Itens são ordenados por valores de inclusão."
+  summary: Adds an item definition to this project.
+  remarks: Creates an item, then adds it to an item group with no Condition attribute and at least one item of same item type. If no such item group is found, creates a new item group and adds the item to it. Items are ordered by Include values.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionElement AddItemDefinition (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "O tipo de item da definição do item a ser adicionado."
+      description: The item type of the item definition to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionElement
-      description: "Retorna a definição de item adicionado."
+      description: Returns the added item definition.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItemDefinition*
   exceptions: []
   platform:
@@ -281,14 +281,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um grupo de definição de item a este projeto."
-  remarks: "Cria e adiciona um grupo de definição de item após o último existente item definição grupo, se houver. Caso contrário, cria um grupo de definição de item após o último grupo de propriedade existente, se houver. Se nenhum grupo de propriedade existir, cria um novo grupo de definição de item ao final do projeto."
+  summary: Adds an item definition group to this project.
+  remarks: Creates and adds an item definition group after the last existing item definition group, if any. Otherwise, creates an item definition group after the last existing property group, if any. If no property group exists, creates a new item definition group at the end of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionGroupElement AddItemDefinitionGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionGroupElement
-      description: "Retorna o grupo de definição de item adicionado."
+      description: Returns the added item definition group.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItemDefinitionGroup*
   exceptions: []
   platform:
@@ -305,14 +305,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria e adiciona um grupo de itens para este projeto."
-  remarks: "Cria e adiciona um grupo de itens após o último grupo de item existente, se houver. Cria um grupo de itens após o último grupo de propriedade existente, caso contrário, se houver. Se nenhum grupo de propriedade existir, cria um novo grupo de itens no final do projeto."
+  summary: Creates and adds an item group to this project.
+  remarks: Creates and adds an item group after the last existing item group, if any. Otherwise, creates an item group after the last existing property group, if any. If no property group exists, creates a new item group at the end of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemGroupElement AddItemGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemGroupElement
-      description: "Retorna o grupo de item adicionado."
+      description: Returns the added item group.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddItemGroup*
   exceptions: []
   platform:
@@ -329,20 +329,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Atualiza ou adiciona uma propriedade para este projeto."
-  remarks: "Atualiza a última propriedade existente com especificado `name` que não tem nenhum atributo de condição em si mesmo ou no grupo de propriedade que o contém. Caso contrário, cria uma propriedade e o adiciona ao primeiro grupo de propriedade que não tem nenhum atributo de condição. Se nenhum desses grupos de propriedade existir, cria um grupo de propriedades após o último grupo de propriedade existente, se houver e adiciona a propriedade a ele. Caso contrário, cria e adiciona um grupo de propriedades para o início do projeto e adiciona a propriedade a ele."
+  summary: Updates or adds a property to this project.
+  remarks: Updates the last existing property with the specified `name` that has no Condition attribute on itself or on the property group that contains it. Otherwise, creates a property and adds it to the first property group that has no Condition attribute. If no such property group exists, creates a property group after the last existing property group, if any, and adds the property to it . Otherwise, creates and adds a property group to the start of the project, and adds the property to it.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement AddProperty (string name, string value);
     parameters:
     - id: name
       type: System.String
-      description: "O nome da propriedade a ser atualizado ou adicionado."
+      description: The name of the property to be updated or added.
     - id: value
       type: System.String
-      description: "O valor da propriedade a ser atualizado ou adicionado."
+      description: The value of the property to be updated or added.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "Retorna a propriedade adicionada ou atualizada."
+      description: Returns the updated or added property.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddProperty*
   exceptions: []
   platform:
@@ -359,14 +359,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um novo grupo de propriedade para este projeto."
-  remarks: "Cria um grupo de propriedade e adiciona-lo após o último grupo de propriedade existente, se houver. Caso contrário, adiciona o grupo de propriedade para o início do projeto."
+  summary: Adds a new property group to this project.
+  remarks: Creates a property group and adds it after the last existing property group, if any. Otherwise, adds the property group to the start of the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyGroupElement AddPropertyGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectPropertyGroupElement
-      description: "Retorna o grupo de propriedade adicionada."
+      description: Returns the added property group.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddPropertyGroup*
   exceptions: []
   platform:
@@ -383,17 +383,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um destino para o projeto."
-  remarks: 'Método prático que escolhe um local com base em uma heurística: cria um destino no final do projeto.'
+  summary: Adds a target to the project.
+  remarks: 'Convenience method that picks a location based on a heuristic: Creates a target at the end of the project.'
   syntax:
     content: public Microsoft.Build.Construction.ProjectTargetElement AddTarget (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome do destino a ser adicionado."
+      description: The name of the target to be added.
     return:
       type: Microsoft.Build.Construction.ProjectTargetElement
-      description: "Retorna o destino adicionado."
+      description: Returns the added target.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddTarget*
   exceptions: []
   platform:
@@ -410,23 +410,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um [elemento UsingTask (MSBuild)](~/add/includes/ajax-current-ext-md.md) para o projeto."
-  remarks: "Tanto o `assemblyName` ou `assemblyFile` deve ser null, mas não ambos."
+  summary: Adds a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) to the project.
+  remarks: Either the `assemblyName` or `assemblyFile` must be null, but not both.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskElement AddUsingTask (string name, string assemblyFile, string assemblyName);
     parameters:
     - id: name
       type: System.String
-      description: "O nome da tarefa."
+      description: The task name.
     - id: assemblyFile
       type: System.String
-      description: "O caminho para o assembly."
+      description: The file path to the assembly.
     - id: assemblyName
       type: System.String
-      description: "O nome do assembly a ser carregado."
+      description: The name of the assembly to load.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskElement
-      description: "Retorna o elemento UsingTask adicionado."
+      description: Returns the added UsingTask element.
   overload: Microsoft.Build.Construction.ProjectRootElement.AddUsingTask*
   exceptions: []
   platform:
@@ -443,12 +443,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos [elemento escolha (MSBuild)](~/add/includes/ajax-current-ext-md.md) neste projeto."
+  summary: Gets all child [Choose Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectChooseElement> ChooseElements { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectChooseElement}
-      description: "Retorna todos os filhos de elementos de escolha."
+      description: Returns all child Choose elements.
   overload: Microsoft.Build.Construction.ProjectRootElement.ChooseElements*
   exceptions: []
   platform:
@@ -465,12 +465,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém nulo porque o atributo de condição existe para esse elemento e uma condição que não existe é implicitamente verdadeira."
+  summary: Gets null because the Condition attribute is nonexistent for this element and a nonexistent condition is implicitly true.
   syntax:
     content: public override string Condition { get; set; }
     return:
       type: System.String
-      description: "Retorna um valor nulo."
+      description: Returns a null.
   overload: Microsoft.Build.Construction.ProjectRootElement.Condition*
   exceptions: []
   platform:
@@ -487,12 +487,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Não use. O atributo de condição existe para <xref href=&quot;Microsoft.Build.Construction.ProjectRootElement&quot;> </xref>. Get lança um erro interno."
+  summary: Do not use. The Condition attribute is nonexistent for <xref href="Microsoft.Build.Construction.ProjectRootElement"></xref>. Get throws an internal error.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Lança um erro interno e retorna nulo."
+      description: Throws an internal error and returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.ConditionLocation*
   exceptions: []
   platform:
@@ -509,13 +509,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria e inicializa uma instância de ProjectRootElement vazia, na memória e o adiciona à coleção de projeto global."
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the global project collection.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a nova raiz do projeto."
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -532,16 +532,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria e inicializa uma instância de ProjectRootElement vazia, na memória e o adiciona à coleção de projeto especificado."
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the specified project collection.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A coleção de projeto a ser adicionado ao."
+      description: The project collection to be added to.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a nova raiz do projeto."
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -558,16 +558,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria e inicializa uma instância de ProjectRootElement vazia, na memória e o adiciona à coleção de projeto global. A nova raiz do projeto é inicializada de dados encontrados no caminho do arquivo especificado."
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the global project collection. The new project root is initialized from data found at the specified file path.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (string path);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho de arquivo para os dados usados para a inicialização."
+      description: The file path to the data used for initialization.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a nova raiz do projeto."
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -584,17 +584,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria e inicializa uma instância de ProjectRootElement vazia, na memória e o adiciona à coleção de projeto global. A nova raiz do projeto é inicializada a partir de dados lidos do XmlReader especificado."
-  remarks: "Pode lançar InvalidProjectFileException."
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the global project collection. The new project root is initialized from data read from the specified XmlReader.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (System.Xml.XmlReader xmlReader);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: "O leitor XML usado para inicialização."
+      description: The XML reader used for initialization.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a nova raiz do projeto."
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -611,19 +611,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria e inicializa uma instância de ProjectRootElement vazia, na memória e o adiciona à coleção de projeto especificado. A nova raiz do projeto é inicializada de dados encontrados no caminho do arquivo especificado."
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the specified project collection. The new project root is initialized from data found at the specified file path.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho de arquivo para os dados usados para a inicialização."
+      description: The file path to the data used for initialization.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A coleção de projeto a ser adicionado ao."
+      description: The project collection to be added to.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a nova raiz do projeto."
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -640,20 +640,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria e inicializa uma instância de ProjectRootElement vazia, na memória e o adiciona à coleção de projeto especificado. A nova raiz do projeto é inicializada a partir de dados lidos do XmlReader especificado."
-  remarks: "Pode lançar InvalidProjectFileException."
+  summary: Creates and initializes an in-memory, empty ProjectRootElement instance and adds it to the specified project collection. The new project root is initialized from data read from the specified XmlReader.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Create (System.Xml.XmlReader xmlReader, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xmlReader
       type: System.Xml.XmlReader
-      description: "O leitor XML usado para inicialização."
+      description: The XML reader used for initialization.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A coleção de projeto a ser adicionado ao."
+      description: The project collection to be added to.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a nova raiz do projeto."
+      description: Returns the new project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Create*
   exceptions: []
   platform:
@@ -670,14 +670,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um [elemento Choose (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Chamador deve adicionar o elemento de escolher o local de escolha no projeto."
+  summary: Creates a [Choose Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the Choose element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectChooseElement CreateChooseElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectChooseElement
-      description: "A <xref href=&quot;Microsoft.Build.Construction.ProjectChooseElement&quot;></xref> object."
+      description: A <xref href="Microsoft.Build.Construction.ProjectChooseElement"></xref> object.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateChooseElement*
   exceptions: []
   platform:
@@ -694,17 +694,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um [(MSBuild) do elemento de importação](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Chamador deve adicionar o elemento de importação para o local de opção no projeto."
+  summary: Creates an [Import Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the Import element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement CreateImportElement (string project);
     parameters:
     - id: project
       type: System.String
-      description: "O projeto a ser importado."
+      description: The project to be imported.
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "Retorna o elemento de importação criado."
+      description: Returns the created Import element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateImportElement*
   exceptions: []
   platform:
@@ -721,14 +721,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um grupo de importação."
-  remarks: "O chamador deve adicionar o grupo de importação para o local de opção no projeto."
+  summary: Creates an import group.
+  remarks: Caller must add the import group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportGroupElement CreateImportGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectImportGroupElement
-      description: "Retorna o grupo de importação."
+      description: Returns the import group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateImportGroupElement*
   exceptions: []
   platform:
@@ -745,17 +745,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria uma definição de item."
-  remarks: "O chamador deve adicionar a definição de item para o local de opção no projeto."
+  summary: Creates an item definition.
+  remarks: Caller must add the item definition to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionElement CreateItemDefinitionElement (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "O tipo de item da definição do item."
+      description: The item type of the item definition.
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionElement
-      description: "Retorna a definição do item."
+      description: Returns the item definition.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionElement*
   exceptions: []
   platform:
@@ -772,14 +772,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um grupo de definição de item."
-  remarks: "O chamador deve adicionar o grupo de definições de item para o local de opção no projeto."
+  summary: Creates an item definition group.
+  remarks: Caller must add the item definition group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemDefinitionGroupElement CreateItemDefinitionGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemDefinitionGroupElement
-      description: "Retorna o grupo de definição de item."
+      description: Returns the item definition group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemDefinitionGroupElement*
   exceptions: []
   platform:
@@ -796,17 +796,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um item."
-  remarks: "Chamador deve adicionar o item para o local de opção no projeto."
+  summary: Creates an item.
+  remarks: Caller must add the item to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement CreateItemElement (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "O tipo de item do item."
+      description: The item type of the item.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "Retorna o item."
+      description: Returns the item.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemElement*
   exceptions: []
   platform:
@@ -823,20 +823,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um item com o valor de inclusão especificado."
-  remarks: "Chamador deve adicionar o item para o local de opção no projeto."
+  summary: Creates an item with the specifed Include value.
+  remarks: Caller must add the item to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement CreateItemElement (string itemType, string include);
     parameters:
     - id: itemType
       type: System.String
-      description: "O tipo de item do item."
+      description: The item type of the item.
     - id: include
       type: System.String
-      description: "O valor Include do item."
+      description: The Include value of the item.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "Retorna o item."
+      description: Returns the item.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemElement*
   exceptions: []
   platform:
@@ -853,14 +853,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um grupo de itens."
-  remarks: "O chamador deve adicionar o grupo de itens para o local de opção no projeto."
+  summary: Creates an item group.
+  remarks: Caller must add the item group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemGroupElement CreateItemGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectItemGroupElement
-      description: "Retorna o grupo de itens."
+      description: Returns the item group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateItemGroupElement*
   exceptions: []
   platform:
@@ -877,17 +877,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um nó de metadados com o nome especificado."
-  remarks: "Chamador deve adicionar o nó de metadados para o local de opção no projeto."
+  summary: Creates a metadata node with the specified name.
+  remarks: Caller must add the metadata node to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome dos metadados."
+      description: The name of the metadata.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "Retorna o nó de metadados."
+      description: Returns the metadata node.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement*
   exceptions: []
   platform:
@@ -904,20 +904,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um nó de metadados com o nome especificado e o valor."
-  remarks: "Chamador deve adicionar o nó de metadados para o local de opção no projeto."
+  summary: Creates a metadata node with the specified name and value.
+  remarks: Caller must add the metadata node to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement CreateMetadataElement (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "O nome dos metadados."
+      description: The name of the metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "O valor dos metadados."
+      description: The value of the metadata.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "Retorna o elemento de metadados."
+      description: Returns the metadata element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateMetadataElement*
   exceptions: []
   platform:
@@ -934,17 +934,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um [elemento OnError (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Chamador deve adicionar o elemento OnError para o local de opção no projeto."
+  summary: Creates an [OnError Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the OnError element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOnErrorElement CreateOnErrorElement (string executeTargets);
     parameters:
     - id: executeTargets
       type: System.String
-      description: "Os destinos a serem executados se uma tarefa falhar."
+      description: The targets to execute if a task fails.
     return:
       type: Microsoft.Build.Construction.ProjectOnErrorElement
-      description: "Retorna o elemento OnError."
+      description: Returns the OnError element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateOnErrorElement*
   exceptions: []
   platform:
@@ -961,14 +961,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um [elemento Otherwise (MSBuild)](~/add/includes/ajax-current-ext-md.md). O chamador deve adicionar o local de escolha no projeto."
-  remarks: "Chamador deve adicionar o elemento caso contrário o local de escolha no projeto."
+  summary: Creates an [Otherwise Element (MSBuild)](~/add/includes/ajax-current-ext-md.md). Caller must add it to the location of choice in the project.
+  remarks: Caller must add the Otherwise element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOtherwiseElement CreateOtherwiseElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectOtherwiseElement
-      description: "Retorna o elemento caso contrário."
+      description: Returns the Otherwise element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateOtherwiseElement*
   exceptions: []
   platform:
@@ -985,23 +985,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um [(MSBuild) do elemento de saída](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Chamador deve adicionar o elemento de saída para o local de opção no projeto. ItemType ou propertyName deve ser especificado, mas não ambos."
+  summary: Creates an [Output Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the Output element to the location of choice in the project. Either itemType or propertyName must be specified, but not both.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement CreateOutputElement (string taskParameter, string itemType, string propertyName);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "O nome da tarefa do parâmetro de saída."
+      description: The name of the task's output parameter.
     - id: itemType
       type: System.String
-      description: "O item que recebe a tarefa de valor de parâmetro de saída."
+      description: The item that receives the task's output parameter value.
     - id: propertyName
       type: System.String
-      description: "A propriedade que recebe a tarefa de valor de parâmetro de saída."
+      description: The property that receives the task's output parameter value.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "Retorna o elemento de saída."
+      description: Returns the Output element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateOutputElement*
   exceptions: []
   platform:
@@ -1018,14 +1018,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um [elemento ProjectExtensions (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Chamador deve adicionar o elemento ProjectExtensions para o local de opção no projeto."
+  summary: Creates a [ProjectExtensions Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the ProjectExtensions element to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectExtensionsElement CreateProjectExtensionsElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectExtensionsElement
-      description: "Retorna o elemento ProjectExtensions."
+      description: Returns the ProjectExtensions element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateProjectExtensionsElement*
   exceptions: []
   platform:
@@ -1042,17 +1042,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria uma propriedade."
-  remarks: "Chamador deve adicionar a propriedade para o local de opção no projeto."
+  summary: Creates a property.
+  remarks: Caller must add the property to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement CreatePropertyElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome da propriedade."
+      description: The name of the property.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "Retorna a propriedade."
+      description: Returns the property.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreatePropertyElement*
   exceptions: []
   platform:
@@ -1069,14 +1069,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um grupo de propriedades."
-  remarks: "O chamador deve adicionar o grupo de propriedades para o local de opção no projeto."
+  summary: Creates a property group.
+  remarks: Caller must add the property group to the location of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyGroupElement CreatePropertyGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectPropertyGroupElement
-      description: "Retorna o grupo de propriedades."
+      description: Returns the property group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreatePropertyGroupElement*
   exceptions: []
   platform:
@@ -1093,17 +1093,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um destino."
-  remarks: "O chamador deve adicionar o destino para o local de escolha neste projeto."
+  summary: Creates a target.
+  remarks: Caller must add the target to the location of choice in this project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectTargetElement CreateTargetElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome do destino."
+      description: The name of the target.
     return:
       type: Microsoft.Build.Construction.ProjectTargetElement
-      description: "Retorna o destino."
+      description: Returns the target.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateTargetElement*
   exceptions: []
   platform:
@@ -1120,17 +1120,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria uma tarefa."
-  remarks: "Chamador deve adicionar a tarefa para o local de escolha neste projeto."
+  summary: Creates a task.
+  remarks: Caller must add the task to the location of choice in this project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectTaskElement CreateTaskElement (string name);
     parameters:
     - id: name
       type: System.String
-      description: "O nome da tarefa."
+      description: The name of the task.
     return:
       type: Microsoft.Build.Construction.ProjectTaskElement
-      description: "Retorna a tarefa."
+      description: Returns the task.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateTaskElement*
   exceptions: []
   platform:
@@ -1147,20 +1147,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria uma tarefa para ser referenciado por uma [elemento UsingTask (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "O chamador deve adicionar a tarefa para o elemento UsingTask da opção no projeto."
+  summary: Creates a task to be referenced by a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the task to the UsingTask element of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskBodyElement CreateUsingTaskBodyElement (string evaluate, string body);
     parameters:
     - id: evaluate
       type: System.String
-      description: "A cadeia de caracteres para avaliar."
+      description: The string to evaluate.
     - id: body
       type: System.String
-      description: "O corpo para adicionar."
+      description: The body to add.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskBodyElement
-      description: "Retorna a tarefa."
+      description: Returns the task.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskBodyElement*
   exceptions: []
   platform:
@@ -1177,23 +1177,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um [elemento UsingTask (MSBuild)](~/add/includes/ajax-current-ext-md.md) para o projeto."
-  remarks: "Chamador deve adicionar o elemento UsingTask ao local de opção no projeto. Tanto o `assemblyName` ou `assemblyFile` deve ser null, mas não ambos."
+  summary: Adds a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) to the project.
+  remarks: Caller must add the UsingTask element to the location of choice in the project. Either the `assemblyName` or `assemblyFile` must be null, but not both.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement (string taskName, string assemblyFile, string assemblyName);
     parameters:
     - id: taskName
       type: System.String
-      description: "O nome da tarefa."
+      description: The task name.
     - id: assemblyFile
       type: System.String
-      description: "O caminho para o assembly."
+      description: The file path to the assembly.
     - id: assemblyName
       type: System.String
-      description: "O nome do assembly a ser carregado."
+      description: The name of the assembly to load.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskElement
-      description: "Retorna o elemento UsingTask."
+      description: Returns the UsingTask element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement*
   exceptions: []
   platform:
@@ -1210,29 +1210,29 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um [elemento UsingTask (MSBuild)](~/add/includes/ajax-current-ext-md.md) para o projeto."
-  remarks: "Chamador deve adicionar o elemento UsingTask ao local de opção no projeto. Tanto o `assemblyName` ou `assemblyFile` deve ser null, mas não ambos. Tanto o `runtime` e `architecture` pode ser nulo."
+  summary: Adds a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) to the project.
+  remarks: Caller must add the UsingTask element to the location of choice in the project. Either the `assemblyName` or `assemblyFile` must be null, but not both. Both the `runtime` and `architecture` can be null.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskElement CreateUsingTaskElement (string taskName, string assemblyFile, string assemblyName, string runtime, string architecture);
     parameters:
     - id: taskName
       type: System.String
-      description: "O nome da tarefa."
+      description: The task name.
     - id: assemblyFile
       type: System.String
-      description: "O caminho para o assembly."
+      description: The file path to the assembly.
     - id: assemblyName
       type: System.String
-      description: "O nome do assembly a ser carregado."
+      description: The name of the assembly to load.
     - id: runtime
       type: System.String
-      description: "Especificador de tempo de execução opcional."
+      description: Optional runtime specifier.
     - id: architecture
       type: System.String
-      description: "Especificador de arquitetura opcional."
+      description: Optional architecture specifier.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskElement
-      description: "Retorna o elemento UsingTask."
+      description: Returns the UsingTask element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskElement*
   exceptions: []
   platform:
@@ -1249,26 +1249,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um parâmetro para uso em uma [elemento UsingTask (MSBuild)](~/add/includes/ajax-current-ext-md.md) grupo de parâmetros."
-  remarks: "O chamador deve adicionar o parâmetro ao grupo UsingTask parâmetro de opção no projeto."
+  summary: Creates a parameter for use in a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) parameter group.
+  remarks: Caller must add the parameter to the UsingTask parameter group of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskParameterElement CreateUsingTaskParameterElement (string name, string output, string required, string parameterType);
     parameters:
     - id: name
       type: System.String
-      description: "O nome do `UsingTask` elemento."
+      description: The name of the `UsingTask` element.
     - id: output
       type: System.String
-      description: "Repositórios de saída da tarefa no arquivo de projeto."
+      description: Stores outputs from the task in the project file.
     - id: required
       type: System.String
-      description: "Um parâmetro de tarefa definida pelo usuário que contém o valor do parâmetro como seu valor."
+      description: A user-defined task parameter that contains the parameter value as its value.
     - id: parameterType
       type: System.String
-      description: "O tipo do parâmetro."
+      description: The type of the parameter.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskParameterElement
-      description: "Retorna o parâmetro."
+      description: Returns the parameter.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterElement*
   exceptions: []
   platform:
@@ -1285,14 +1285,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um grupo de parâmetro para um [elemento UsingTask (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "O chamador deve adicionar o grupo de parâmetro para o elemento UsingTask da opção no projeto."
+  summary: Creates a parameter group for a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Caller must add the parameter group to the UsingTask element of choice in the project.
   syntax:
     content: public Microsoft.Build.Construction.UsingTaskParameterGroupElement CreateUsingTaskParameterGroupElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.UsingTaskParameterGroupElement
-      description: "Retorna o grupo do parâmetro."
+      description: Returns the parameter group.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateUsingTaskParameterGroupElement*
   exceptions: []
   platform:
@@ -1309,17 +1309,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Cria um [ao elemento (MSBuild)](~/add/includes/ajax-current-ext-md.md) com um atributo de condição especificado."
-  remarks: "O chamador deve adicionar quando o elemento para o local de escolha neste projeto."
+  summary: Creates a [When Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) with a specified Condition attribute.
+  remarks: Caller must add the When element to the location of choice in this project.
   syntax:
     content: public Microsoft.Build.Construction.ProjectWhenElement CreateWhenElement (string condition);
     parameters:
     - id: condition
       type: System.String
-      description: "O valor do atributo Condition."
+      description: The value of the Condition attribute.
     return:
       type: Microsoft.Build.Construction.ProjectWhenElement
-      description: "Retorna quando elemento."
+      description: Returns the When element.
   overload: Microsoft.Build.Construction.ProjectRootElement.CreateWhenElement*
   exceptions: []
   platform:
@@ -1336,13 +1336,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém ou define o valor do atributo DefaultTargets."
-  remarks: "Remove o atributo DefaultTargets se o valor definido é uma cadeia de caracteres vazia ou null."
+  summary: Gets or sets the value of the DefaultTargets attribute.
+  remarks: Removes the DefaultTargets attribute if the value to set is an empty string or null.
   syntax:
     content: public string DefaultTargets { get; set; }
     return:
       type: System.String
-      description: "Retorna o valor do atributo DefaultTargets. Retorna uma cadeia de caracteres vazia se o atributo não estiver presente."
+      description: Returns the value of the DefaultTargets attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.DefaultTargets*
   exceptions: []
   platform:
@@ -1359,13 +1359,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Local do atributo DefaultTargets neste elemento, se houver."
-  remarks: "Pode não ser correto se o arquivo não é salvo ou arquivo foi editado desde que ele foi salvo pela última vez."
+  summary: Location of the DefaultTargets attribute on this element, if any.
+  remarks: May not be correct if file is not saved, or file has been edited since it was last saved.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation DefaultTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retorna o local do atributo DefaultTargets. Se não houver nenhum atributo, retorna null."
+      description: Returns  the DefaultTargets attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.DefaultTargetsLocation*
   exceptions: []
   platform:
@@ -1382,13 +1382,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o caminho do diretório para o arquivo de projeto."
-  remarks: "Esse método é necessário para avaliar os caminhos relativos."
+  summary: Gets the directory path to the project file.
+  remarks: This method is required for evaluating relative paths.
   syntax:
     content: public string DirectoryPath { get; }
     return:
       type: System.String
-      description: "Retorna o caminho de diretório, que nunca é nulo. Se o projeto não é carregado do disco, retorna o diretório atual no momento em que o projeto foi carregado."
+      description: Returns the directory path, which is never null. If the project is not loaded from disk, returns the current-directory at the time the project was loaded.
   overload: Microsoft.Build.Construction.ProjectRootElement.DirectoryPath*
   exceptions: []
   platform:
@@ -1405,13 +1405,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Especifica a codificação de caracteres que o arquivo de projeto deve ser salvo em."
-  remarks: "Retorna a codificação fornecida pela declaração Xml no arquivo de projeto. Se nenhuma codificação for especificado, o padrão é UTF 8."
+  summary: Specifies the character encoding that the project file is to be saved in.
+  remarks: Returns the encoding given by the Xml declaration in the project file. If no encoding is specified, this defaults to UTF 8.
   syntax:
     content: public System.Text.Encoding Encoding { get; }
     return:
       type: System.Text.Encoding
-      description: "Retorna o caractere de codificação que o arquivo de projeto deve ser salvo em."
+      description: Returns the character encoding that the project file is to be saved in.
   overload: Microsoft.Build.Construction.ProjectRootElement.Encoding*
   exceptions: []
   platform:
@@ -1428,12 +1428,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o caminho completo para o arquivo de projeto."
+  summary: Gets the full path to the project file.
   syntax:
     content: public string FullPath { get; set; }
     return:
       type: System.String
-      description: "Retorna o caminho completo para o arquivo de projeto. Se o projeto não é carregado do disco, retornará null."
+      description: Returns the full path to the project file. If the project is not loaded from disk, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.FullPath*
   exceptions: []
   platform:
@@ -1450,12 +1450,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Determina se o projeto foi modificado desde a última que foi carregado ou salvo."
+  summary: Determines whether the project has been modified since it was last loaded or saved.
   syntax:
     content: public bool HasUnsavedChanges { get; }
     return:
       type: System.Boolean
-      description: "Retorna VERDADEIRO se o projeto tiver sido modificado; FALSO caso contrário."
+      description: Returns true if the project has been modified; false otherwise.
   overload: Microsoft.Build.Construction.ProjectRootElement.HasUnsavedChanges*
   exceptions: []
   platform:
@@ -1472,12 +1472,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos importar grupos neste projeto."
+  summary: Gets all the child import groups in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportGroupElement> ImportGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportGroupElement}
-      description: "Retorna todos os grupos de importação filho nesse projeto."
+      description: Returns all the child import groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ImportGroups*
   exceptions: []
   platform:
@@ -1494,12 +1494,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos importar grupos neste projeto, começando com o último grupo."
+  summary: Gets all the child import groups in this project, starting with the last group.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportGroupElement> ImportGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportGroupElement}
-      description: "Retorna todos os filhos importar grupos neste projeto, começando com o último grupo."
+      description: Returns all the child import groups in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.ImportGroupsReversed*
   exceptions: []
   platform:
@@ -1516,12 +1516,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos elementos import neste projeto."
+  summary: Gets all the child import elements in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportElement> Imports { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportElement}
-      description: "Obtém todos os filhos elementos import neste projeto."
+      description: Gets all the child import elements in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Imports*
   exceptions: []
   platform:
@@ -1538,13 +1538,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém ou define o valor do atributo InitialTargets."
-  remarks: "Remove o atributo InitialTargets se o valor definido é uma cadeia de caracteres vazia ou null."
+  summary: Gets or sets the value of the InitialTargets attribute.
+  remarks: Removes the InitialTargets attribute if the value to set is an empty string or null.
   syntax:
     content: public string InitialTargets { get; set; }
     return:
       type: System.String
-      description: "Retorna o valor do atributo InitialTargets. Retorna uma cadeia de caracteres vazia se o atributo não estiver presente."
+      description: Returns the InitialTargets attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.InitialTargets*
   exceptions: []
   platform:
@@ -1561,12 +1561,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Local do atributo InitialTargets neste elemento, se houver."
+  summary: Location of the InitialTargets attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation InitialTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retorna o local do atributo InitialTargets. Se não houver nenhum atributo, retorna null."
+      description: Returns InitialTargets attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.InitialTargetsLocation*
   exceptions: []
   platform:
@@ -1583,12 +1583,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos grupos de definição de item neste projeto."
+  summary: Gets all the child item definition groups in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemDefinitionGroupElement> ItemDefinitionGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemDefinitionGroupElement}
-      description: "Retorna todos os filhos grupos de definição de item neste projeto."
+      description: Returns all the child item definition groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroups*
   exceptions: []
   platform:
@@ -1605,12 +1605,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos grupos de definição de item neste projeto, começando com o último grupo."
+  summary: Gets all the child item definition groups in this project, starting with the last group.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemDefinitionGroupElement> ItemDefinitionGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemDefinitionGroupElement}
-      description: "Retorna o item de filho grupos de definição neste projeto, começando com o último grupo."
+      description: Returns all the child item definition groups in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemDefinitionGroupsReversed*
   exceptions: []
   platform:
@@ -1627,12 +1627,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o filho todas as definições de item em todos os grupos de definição de item em qualquer lugar no projeto."
+  summary: Gets all child item definitions in all item definition groups anywhere in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemDefinitionElement> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemDefinitionElement}
-      description: "Obtém o filho todas as definições de item em todos os grupos de definição de item em qualquer lugar no projeto."
+      description: Gets all child item definitions in all item definition groups anywhere in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemDefinitions*
   exceptions: []
   platform:
@@ -1649,13 +1649,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o filho todos os grupos de itens neste projeto."
-  remarks: "Não inclui grupos de itens contidos em elementos de escolha."
+  summary: Gets all the child item groups in this project.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemGroupElement> ItemGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemGroupElement}
-      description: "Retorna todos os filhos grupos de itens no projeto."
+      description: Returns all the child item groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemGroups*
   exceptions: []
   platform:
@@ -1672,13 +1672,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o filho todos os grupos de itens presentes neste projeto, começando com o último grupo."
-  remarks: "Não inclui grupos de itens contidos em elementos de escolha."
+  summary: Gets all the child item groups present in this project, starting with the last group.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemGroupElement> ItemGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemGroupElement}
-      description: "Retorna todos os filhos de grupos de itens presentes neste projeto, começando com o último grupo."
+      description: Returns all the child item groups present in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.ItemGroupsReversed*
   exceptions: []
   platform:
@@ -1695,12 +1695,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os itens filho neste projeto."
+  summary: Gets all child items in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemElement> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemElement}
-      description: "Retorna todos os itens filho neste projeto, mesmo se eles estiverem contidos por elementos de escolha."
+      description: Returns all child items in this project, even if they are contained by Choose elements.
   overload: Microsoft.Build.Construction.ProjectRootElement.Items*
   exceptions: []
   platform:
@@ -1717,13 +1717,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém a hora última de gravação do arquivo de projeto."
-  remarks: "Essa propriedade pode ser usada para determinar se um arquivo foi alterado no disco por um processo diferente do processo MSBuild."
+  summary: Gets the last-write-time of the project file.
+  remarks: This property can be used to determine whether a file has been changed on disk by a process other than the MSBuild process.
   syntax:
     content: public DateTime LastWriteTimeWhenRead { get; }
     return:
       type: System.DateTime
-      description: "Obtém a hora última de gravação do arquivo de projeto."
+      description: Gets the last-write-time of the project file.
   overload: Microsoft.Build.Construction.ProjectRootElement.LastWriteTimeWhenRead*
   exceptions: []
   platform:
@@ -1740,17 +1740,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Inicializa uma raiz do projeto na coleção de projetos global Carregando dados do caminho do arquivo especificado."
-  remarks: "Pode lançar InvalidProjectFileException."
+  summary: Initializes a project root in the global project collection by loading data from the specified file path.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Open (string path);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho de arquivo para os dados."
+      description: The file path to the data.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a raiz do projeto inicializado."
+      description: Returns the initialized project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Open*
   exceptions: []
   platform:
@@ -1767,20 +1767,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Inicializa uma raiz do projeto na coleção de projeto especificado ao carregar dados de caminho do arquivo especificado."
-  remarks: "Pode lançar InvalidProjectFileException."
+  summary: Initializes a project root in the specified project collection by loading data from the specified file path.
+  remarks: May throw InvalidProjectFileException.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement Open (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho de arquivo para os dados."
+      description: The file path to the data.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A coleção de projeto que contém o projeto a ser inicializado."
+      description: The project collection containing the project to be initialized.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a raiz do projeto inicializado."
+      description: Returns the initialized project root.
   overload: Microsoft.Build.Construction.ProjectRootElement.Open*
   exceptions: []
   platform:
@@ -1797,12 +1797,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "O local de origem de arquivos em si, não qualquer conteúdo específico dentro dele. Se o arquivo não tem um nome, este é um local vazio. Esse é um caso legítimo de não ter nenhum local."
+  summary: The location of the originating file itself, not any specific content within it. If the file has not been given a name, this is an empty location. This is a legitimate case of having no location.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retorna o local do arquivo de origem ou em um local vazio."
+      description: Returns the originating file location or an empty location.
   overload: Microsoft.Build.Construction.ProjectRootElement.ProjectFileLocation*
   exceptions: []
   platform:
@@ -1819,12 +1819,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o filho todas as propriedades neste projeto."
+  summary: Gets all the child properties in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyElement> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyElement}
-      description: "Retorna todas as propriedades filho neste projeto, mesmo se eles estiverem contidos por elementos de escolha."
+      description: Returns all child properties in this project, even if they are contained by Choose elements.
   overload: Microsoft.Build.Construction.ProjectRootElement.Properties*
   exceptions: []
   platform:
@@ -1841,13 +1841,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos grupos de propriedade neste projeto."
-  remarks: "Não inclui grupos de itens contidos em elementos de escolha."
+  summary: Gets all the child property groups in this project.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyGroupElement> PropertyGroups { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyGroupElement}
-      description: "Retorna todos os filhos grupos de propriedade neste projeto."
+      description: Returns all the child property groups in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.PropertyGroups*
   exceptions: []
   platform:
@@ -1864,13 +1864,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos grupos de propriedade presentes neste projeto, começando com o último grupo."
-  remarks: "Não inclui grupos de itens contidos em elementos de escolha."
+  summary: Gets all the child property groups present in this project, starting with the last group.
+  remarks: Does not include any item groups contained by Choose elements.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyGroupElement> PropertyGroupsReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyGroupElement}
-      description: "Retorna todos os filhos grupos de propriedade presentes neste projeto, começando com o último grupo."
+      description: Returns all the child property groups present in this project, starting with the last group.
   overload: Microsoft.Build.Construction.ProjectRootElement.PropertyGroupsReversed*
   exceptions: []
   platform:
@@ -1887,13 +1887,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o XML conteúdo que representa este projeto."
-  remarks: "Não marcar o conteúdo como não modificado. O modelo de objeto do MSBuild não fornece nenhuma outra maneira de acessar o conteúdo XML."
+  summary: Gets the XML content that represents this project.
+  remarks: Does not mark the content as unmodified. The MSBuild object model provides no other way to access the XML content.
   syntax:
     content: public string RawXml { get; }
     return:
       type: System.String
-      description: "Retorna o XML que representa esse projeto como uma cadeia de caracteres de conteúdo."
+      description: Returns the XML content that represents this project as a string.
   overload: Microsoft.Build.Construction.ProjectRootElement.RawXml*
   exceptions: []
   platform:
@@ -1910,8 +1910,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Salva o projeto, se modificado, o sistema de arquivos."
-  remarks: "Usa o caractere de codificação retornada pela propriedade Encoding. Marca o projeto como não modificado."
+  summary: Saves the project, if modified, to the file system.
+  remarks: Uses the character Encoding returned by the Encoding property. Marks the project as unmodified.
   syntax:
     content: public void Save ();
     parameters: []
@@ -1931,14 +1931,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Salva o projeto para o gravador de texto especificado, se modificado ou não."
-  remarks: "Usa a codificação de caracteres da TextWriter. Marca o projeto como não modificado."
+  summary: Saves the project to the specified text writer, whether modified or not.
+  remarks: Uses the character encoding of the TextWriter. Marks the project as unmodified.
   syntax:
     content: public void Save (System.IO.TextWriter writer);
     parameters:
     - id: writer
       type: System.IO.TextWriter
-      description: "O gravador de texto para gravar o projeto."
+      description: The text writer to write the project to.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -1955,14 +1955,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Salva o projeto, se modificado ou se o caminho do arquivo para o armazenamento foi alterada."
-  remarks: "Marca o projeto como não modificado."
+  summary: Saves the project, if modified or if the file path to storage has changed.
+  remarks: Marks the project as unmodified.
   syntax:
     content: public void Save (string path);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho do arquivo para o projeto no armazenamento."
+      description: The file path to the project in storage.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -1979,14 +1979,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Salva o projeto, se modificado, usando a codificação de caractere especificado."
-  remarks: "Marca o projeto como não modificado."
+  summary: Saves the project, if modified, using the specified character encoding.
+  remarks: Marks the project as unmodified.
   syntax:
     content: public void Save (System.Text.Encoding saveEncoding);
     parameters:
     - id: saveEncoding
       type: System.Text.Encoding
-      description: "A codificação de caracteres usada para salvar o projeto."
+      description: The character encoding used to save the project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -2003,17 +2003,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Salva o projeto, se modificado ou se o caminho do arquivo para o armazenamento foi alterada. Usa a codificação de caractere especificado."
-  remarks: "Marca o projeto como não modificado."
+  summary: Saves the project, if modified or if the file path to storage has changed. Uses the specified character encoding..
+  remarks: Marks the project as unmodified.
   syntax:
     content: public void Save (string path, System.Text.Encoding encoding);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho do arquivo para o projeto no armazenamento."
+      description: The file path to the project in storage.
     - id: encoding
       type: System.Text.Encoding
-      description: "A codificação de caracteres usada para salvar o projeto."
+      description: The character encoding used to save the project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Save*
   exceptions: []
   platform:
@@ -2030,12 +2030,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o filho todos os destinos neste projeto."
+  summary: Gets all the child targets in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectTargetElement> Targets { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectTargetElement}
-      description: "Retorna todos os filhos destinos neste projeto."
+      description: Returns all the child targets in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.Targets*
   exceptions: []
   platform:
@@ -2052,12 +2052,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém a hora em que esse projeto foi modificado pela última vez."
+  summary: Gets the time that this project was last modified.
   syntax:
     content: public DateTime TimeLastChanged { get; }
     return:
       type: System.DateTime
-      description: "Retorna a hora em que esse projeto foi modificado pela última vez. Retorna null se o projeto não foi modificado desde que está sendo criado ou carregado."
+      description: Returns the time that this project was last modified. Returns null if the project hasn't been modified since being created or loaded.
   overload: Microsoft.Build.Construction.ProjectRootElement.TimeLastChanged*
   exceptions: []
   platform:
@@ -2074,13 +2074,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém ou define o valor do atributo ToolsVersion."
-  remarks: "Remove o atributo ToolsVersion se o valor definido é uma cadeia de caracteres vazia ou null."
+  summary: Gets or sets the value of the ToolsVersion attribute.
+  remarks: Removes the ToolsVersion attribute if the value to set is an empty string or null.
   syntax:
     content: public string ToolsVersion { get; set; }
     return:
       type: System.String
-      description: "Retorna o valor do atributo ToolsVersion. Retorna uma cadeia de caracteres vazia se o atributo não estiver presente."
+      description: Returns the ToolsVersion attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.ToolsVersion*
   exceptions: []
   platform:
@@ -2097,12 +2097,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "O local do atributo ToolsVersion neste elemento, se houver."
+  summary: The location of the ToolsVersion attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ToolsVersionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retorna o local do atributo ToolsVersion. Se não houver nenhum atributo, retorna null."
+      description: Returns the ToolsVersion attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.ToolsVersionLocation*
   exceptions: []
   platform:
@@ -2119,13 +2119,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém ou define o valor do atributo TreatAsLocalProperty."
-  remarks: "Remove o atributo TreatAsLocalProperty se o valor definido é uma cadeia de caracteres vazia ou null.       Para obter mais informações sobre o `TreatAsLocalProperty` de atributo, consulte [elemento Project (MSBuild)](~/add/includes/ajax-current-ext-md.md) e [como: compilar os mesmos arquivos de origem com opções diferentes](~/add/includes/ajax-current-ext-md.md)."
+  summary: Gets or sets the value of the TreatAsLocalProperty attribute.
+  remarks: "Removes the TreatAsLocalProperty attribute if the value to set is an empty string or null.  \n  \n For more information about the `TreatAsLocalProperty` attribute, see [Project Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) and [How to: Build the Same Source Files with Different Options](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: public string TreatAsLocalProperty { get; set; }
     return:
       type: System.String
-      description: "Retorna o valor do atributo TreatAsLocalProperty. Retorna uma cadeia de caracteres vazia se o atributo não estiver presente."
+      description: Returns the TreatAsLocalProperty attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalProperty*
   exceptions: []
   platform:
@@ -2142,12 +2142,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "O local do atributo TreatAsLocalProperty neste elemento, se houver."
+  summary: The location of the TreatAsLocalProperty attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation TreatAsLocalPropertyLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retorna o local do atributo TreatAsLocalProperty. Se não houver nenhum atributo, retorna null."
+      description: Returns the TreatAsLocalProperty attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectRootElement.TreatAsLocalPropertyLocation*
   exceptions: []
   platform:
@@ -2164,17 +2164,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém a raiz do projeto na coleção de projetos global que foi carregada na memória do caminho do arquivo especificado. ou nulo se ele não está na memória."
-  remarks: "É possível que projectrootelements seja colocado na memória e descartado devido à pressão de memória. Se TryOpen retornar nulo não indica que a raiz do projeto jamais foi carregada, só que ele não está na memória."
+  summary: Gets the project root in the global project collection that was loaded into memory from the specified file path. or null if it is not currently in memory.
+  remarks: It is possible for ProjectRootElements to be brought into memory and discarded due to memory pressure. If TryOpen returns null it does not indicate that the project root has never been loaded, only that it is not currently in memory.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement TryOpen (string path);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho do ProjectRootElement não pode ser nulo."
+      description: The path of the ProjectRootElement, cannot be null.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a raiz do projeto. Retorna null se nenhum projeto foi carregado na memória do caminho do arquivo especificado."
+      description: Returns the project root. Returns null if no project was loaded into memory from the specified file path.
   overload: Microsoft.Build.Construction.ProjectRootElement.TryOpen*
   exceptions: []
   platform:
@@ -2191,20 +2191,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém a raiz do projeto na coleção de projeto especificado que foi carregada na memória do caminho do arquivo especificado. ou nulo se ele não está na memória."
-  remarks: "É possível que projectrootelements seja colocado na memória e descartado devido à pressão de memória. Se TryOpen retornar nulo não indica que a raiz do projeto jamais foi carregada, só que ele não está na memória."
+  summary: Gets the project root in the specified project collection that was loaded into memory from the specified file path. or null if it is not currently in memory.
+  remarks: It is possible for ProjectRootElements to be brought into memory and discarded due to memory pressure. If TryOpen returns null it does not indicate that the project root has never been loaded, only that it is not currently in memory.
   syntax:
     content: public static Microsoft.Build.Construction.ProjectRootElement TryOpen (string path, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: path
       type: System.String
-      description: "O caminho do ProjectRootElement não pode ser nulo."
+      description: The path of the ProjectRootElement, cannot be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A coleção de projeto para procurar a raiz do projeto."
+      description: The project collection to search for the project root.
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retorna a raiz do projeto. Retorna null se nenhum projeto foi carregado na memória do caminho do arquivo especificado."
+      description: Returns the project root. Returns null if no project was loaded into memory from the specified file path.
   overload: Microsoft.Build.Construction.ProjectRootElement.TryOpen*
   exceptions: []
   platform:
@@ -2221,12 +2221,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os filhos [elemento UsingTask (MSBuild)](~/add/includes/ajax-current-ext-md.md) neste projeto."
+  summary: Gets all child [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectUsingTaskElement> UsingTasks { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectUsingTaskElement}
-      description: "Retorna todos os filhos UsingTask elementos neste projeto."
+      description: Returns all child UsingTask elements in this project.
   overload: Microsoft.Build.Construction.ProjectRootElement.UsingTasks*
   exceptions: []
   platform:
@@ -2243,13 +2243,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém o número de versão deste objeto."
-  remarks: "Compare esse número de versão para um número de versão armazenado para determinar se o projeto de conteúdo XML foi alterado, mesmo que o projeto é salvo após a alteração. Uma edição pode incrementar o número da versão mais de uma vez, a versão só deve ser comparado com um valor armazenado."
+  summary: Gets the version number of this object.
+  remarks: Compare this version number to a stored version number to determine whether the project XML content has changed, even if the project is saved after the change. An edit may increment the version number more than once, so Version should only be compared to a stored value.
   syntax:
     content: public int Version { get; }
     return:
       type: System.Int32
-      description: "Retorna o número de versão deste objeto."
+      description: Returns the version number of this object.
   overload: Microsoft.Build.Construction.ProjectRootElement.Version*
   exceptions: []
   platform:

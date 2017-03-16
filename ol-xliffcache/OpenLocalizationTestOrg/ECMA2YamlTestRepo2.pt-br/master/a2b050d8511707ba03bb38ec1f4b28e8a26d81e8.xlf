@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a2b050d8511707ba03bb38ec1f4b28e8a26d81e8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Automation.Provider.IInvokeProvider.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">793739a608277f56f01925d1f1390c4c42754a92</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4dd9d71bc4d3ceaabc59ae6c05999cf731c4faab</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Exposes methods and properties to support UI Automation client access to controls that initiate or perform a single, unambiguous action and do not maintain state when activated.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Implemented on a UI Automation provider that must support the &lt;xref:System.Windows.Automation.InvokePattern&gt; control pattern.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Controls implement IInvokeProvider if the same behavior is not exposed through another control pattern provider.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the &lt;xref:System.Windows.Automation.InvokePattern.Invoke%2A&gt; method on a control performs the same action as the &lt;xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A&gt; or &lt;xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A&gt; method, the control should not implement IInvokeProvider.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Sends a request to activate a control and initiate its single, unambiguous action.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Invoke is an asynchronous call and must return immediately without blocking.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  This behavior is particularly critical for controls that, directly or indirectly, launch a modal dialog when invoked.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Any UI Automation client that instigated the event will remain blocked until the modal dialog is closed.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Invoke raises the &lt;xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If possible, the event should be raised after the control has completed its associated action.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent&gt; should be raised before servicing the Invoke request in the following scenarios:      -   It is not possible or practical to wait until the action is complete.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The action requires user interaction.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The action is time-consuming and will cause the calling client to block for a significant length of time.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If the control is not enabled.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

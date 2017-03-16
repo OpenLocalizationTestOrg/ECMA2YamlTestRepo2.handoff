@@ -13,8 +13,8 @@ items:
   nameWithType: ILogger
   fullName: Microsoft.Build.Framework.ILogger
   type: Interface
-  summary: "Define um [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] agente, que assina os eventos de sistema de compilação."
-  remarks: "Todas as classes de agente de log devem implementar essa interface seja reconhecida pelo [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] mecanismo.       Em vez de implementar essa interface diretamente, você também pode derivar a classe da classe auxiliar, <xref:Microsoft.Build.Utilities.Logger>, que fornece implementações padrão de alguns membros ILogger.</xref:Microsoft.Build.Utilities.Logger>"
+  summary: Defines an [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] logger, which subscribes to build system events.
+  remarks: "All logger classes must implement this interface to be recognized by the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine.  \n  \n Instead of implementing this interface directly, you can also derive your class from the helper class, <xref:Microsoft.Build.Utilities.Logger>, which provides default implementations of some ILogger members."
   example:
   - "The following example shows how to write a basic logger.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
   syntax:
@@ -37,13 +37,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Assina os agentes de log de eventos específicos. Este método é chamado quando o agente é registrado com o mecanismo de compilação antes de todos os eventos são gerados."
+  summary: Subscribes loggers to specific events. This method is called when the logger is registered with the build engine, before any events are raised.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "Os eventos disponíveis para agentes de log."
+      description: The events available to loggers.
   overload: Microsoft.Build.Framework.ILogger.Initialize*
   exceptions: []
   platform:
@@ -60,13 +60,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém ou define os parâmetros definidos pelo usuário do agente de log."
-  remarks: "Parâmetros podem ser representados nessa propriedade em qualquer formato. Por exemplo, para representar dois parâmetros e valores, você pode usar a cadeia de caracteres &quot;parameter1 = value1; parameter2 = value2&quot;.       Esta propriedade pode ser uma referência nula (`Nothing` em [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+  summary: Gets or sets the user-defined parameters of the logger.
+  remarks: "Parameters may be represented in this property in any format. For example, to represent two parameters and values, you could use the string \"parameter1=value1;parameter2=value2\".  \n  \n This property can be a null reference (`Nothing` in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "Os parâmetros de agente de log."
+      description: The logger parameters.
   overload: Microsoft.Build.Framework.ILogger.Parameters*
   exceptions: []
   platform:
@@ -83,7 +83,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Libera os recursos alocados para o agente de log no momento da inicialização ou durante a compilação. Este método é chamado quando o agente de log é cancelado do mecanismo, depois que todos os eventos são gerados. Um host de [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] normalmente cancela o registro de agentes de log imediatamente antes de sair."
+  summary: Releases the resources allocated to the logger at the time of initialization or during the build. This method is called when the logger is unregistered from the engine, after all events are raised. A host of [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] typically unregisters loggers immediately before quitting.
   syntax:
     content: public void Shutdown ();
     parameters: []
@@ -103,13 +103,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém ou define o nível de detalhe para mostrar no log de eventos."
-  remarks: "Embora um agente de log está livre para escolher os eventos de logon, as diretrizes de detalhamento a seguir cria uma experiência de usuário consistente."
+  summary: Gets or sets the level of detail to show in the event log.
+  remarks: While a logger is free to choose the events it logs, following the verbosity guidelines creates a consistent user experience.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Um dos valores de enumeração. O padrão é <xref href=&quot;Microsoft.Build.Framework.LoggerVerbosity&quot;> </xref>."
+      description: One of the enumeration values. The default is <xref href="Microsoft.Build.Framework.LoggerVerbosity"></xref>.
   overload: Microsoft.Build.Framework.ILogger.Verbosity*
   exceptions: []
   platform:

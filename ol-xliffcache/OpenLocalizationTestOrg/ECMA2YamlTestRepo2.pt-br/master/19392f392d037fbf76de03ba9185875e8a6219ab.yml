@@ -17,7 +17,7 @@ items:
   nameWithType: InvalidToolsetDefinitionException
   fullName: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException
   type: Class
-  summary: "Subclasse de exceção que deve lançar ToolsetReaders."
+  summary: Exception subclass that ToolsetReaders should throw.
   syntax:
     content: 'public class InvalidToolsetDefinitionException : Exception'
   inheritance:
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Construtor básico."
+  summary: Basic constructor.
   syntax:
     content: public InvalidToolsetDefinitionException ();
     parameters: []
@@ -58,13 +58,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Construtor básico."
+  summary: Basic constructor.
   syntax:
     content: public InvalidToolsetDefinitionException (string message);
     parameters:
     - id: message
       type: System.String
-      description: "A mensagem de erro."
+      description: The error message.
   overload: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -81,16 +81,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Construtor básico."
+  summary: Basic constructor.
   syntax:
     content: protected InvalidToolsetDefinitionException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "As informações de erro."
+      description: The error information.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "O contexto de erro."
+      description: The error context.
   overload: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -107,16 +107,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Construtor básico."
+  summary: Basic constructor.
   syntax:
     content: public InvalidToolsetDefinitionException (string message, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "A mensagem de erro."
+      description: The error message.
     - id: innerException
       type: System.Exception
-      description: "A exceção interna."
+      description: The inner exception.
   overload: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -133,16 +133,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Construtor que usa um código de erro do MSBuild"
+  summary: Constructor that takes an MSBuild error code
   syntax:
     content: public InvalidToolsetDefinitionException (string message, string errorCode);
     parameters:
     - id: message
       type: System.String
-      description: "A mensagem de erro."
+      description: The error message.
     - id: errorCode
       type: System.String
-      description: "O código do erro."
+      description: The error code.
   overload: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -159,19 +159,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Construtor que usa um código de erro do MSBuild"
+  summary: Constructor that takes an MSBuild error code
   syntax:
     content: public InvalidToolsetDefinitionException (string message, string errorCode, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "A mensagem de erro."
+      description: The error message.
     - id: errorCode
       type: System.String
-      description: "O código do erro."
+      description: The error code.
     - id: innerException
       type: System.Exception
-      description: "A exceção interna."
+      description: The inner exception.
   overload: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.#ctor*
   exceptions: []
   platform:
@@ -188,12 +188,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "O código de erro do MSBuild correspondente com esta exceção, ou nulo se nenhuma foi especificada."
+  summary: The MSBuild error code corresponding with this exception, or null if none was specified.
   syntax:
     content: public string ErrorCode { get; }
     return:
       type: System.String
-      description: "A ser adicionado."
+      description: To be added.
   overload: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.ErrorCode*
   exceptions: []
   platform:
@@ -210,16 +210,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Método iSerializable que devem ser substituídas desde exceção implementa essa interface se nós nunca adicionar novos membros a essa classe, vamos precisar atualizá-lo."
+  summary: ISerializable method which we must override since Exception implements this interface If we ever add new members to this class, we'll need to update this.
   syntax:
     content: public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "As informações de erro."
+      description: The error information.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "O contexto de erro."
+      description: The error context.
   overload: Microsoft.Build.Exceptions.InvalidToolsetDefinitionException.GetObjectData*
   exceptions: []
   platform:

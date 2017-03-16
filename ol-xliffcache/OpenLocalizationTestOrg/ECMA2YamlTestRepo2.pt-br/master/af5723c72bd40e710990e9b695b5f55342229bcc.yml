@@ -12,7 +12,7 @@ items:
   nameWithType: ProjectItemGroupElement
   fullName: Microsoft.Build.Construction.ProjectItemGroupElement
   type: Class
-  summary: "Representa uma [elemento ItemGroup (MSBuild)](~/add/includes/ajax-current-ext-md.md) em um projeto do MSBuild."
+  summary: Represents an [ItemGroup Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#Items={Count} Condition={Condition} Label={Label}")]
@@ -60,20 +60,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um novo item ao grupo de itens. Itens são ordenados pela primeira vez por nome de elemento do item e, em seguida, pelo atributo Include."
-  remarks: "Este método prático escolhe um local no DOM MSBuild com base em uma heurística."
+  summary: Adds a new item to the item group. Items are ordered first by item element name, and then by the Include attribute.
+  remarks: This convenience method picks a location in the MSBuild DOM based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include);
     parameters:
     - id: itemType
       type: System.String
-      description: "Nome de elemento do item do item a ser adicionado."
+      description: Item element name of the item to be added.
     - id: include
       type: System.String
-      description: "Inclua o atributo do item a ser adicionado."
+      description: Include attribute of the item to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "Retorna o novo elemento de item."
+      description: Returns the new item element.
   overload: Microsoft.Build.Construction.ProjectItemGroupElement.AddItem*
   exceptions: []
   platform:
@@ -90,23 +90,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Adiciona um novo item com metadados para o grupo de itens. Itens são ordenados pela primeira vez por nome de elemento do item e, em seguida, pelo atributo Include."
-  remarks: "O `Metadata` parâmetro pode ser nulo, que indica que não há metadados estão presente."
+  summary: Adds a new item with metadata to the item group. Items are ordered first by item element name, and then by the Include attribute.
+  remarks: The `Metadata` parameter may be null, which indicates no metadata is present.
   syntax:
     content: public Microsoft.Build.Construction.ProjectItemElement AddItem (string itemType, string include, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: "Nome de elemento do item do item a ser adicionado."
+      description: Item element name of the item to be added.
     - id: include
       type: System.String
-      description: "Inclua o atributo do item a ser adicionado."
+      description: Include attribute of the item to be added.
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: "Metadados a ser adicionado."
+      description: Metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectItemElement
-      description: "Retorna o novo elemento de item."
+      description: Returns the new item element.
   overload: Microsoft.Build.Construction.ProjectItemGroupElement.AddItem*
   exceptions: []
   platform:
@@ -123,13 +123,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Obtém todos os itens filho."
-  remarks: "A coleção pode ser modificada durante a enumeração."
+  summary: Gets all child items.
+  remarks: The collection can be modified during enumeration.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectItemElement> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectItemElement}
-      description: "Retorna todos os itens filho."
+      description: Returns all child items.
   overload: Microsoft.Build.Construction.ProjectItemGroupElement.Items*
   exceptions: []
   platform:

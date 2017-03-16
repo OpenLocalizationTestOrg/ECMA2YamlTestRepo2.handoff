@@ -24,7 +24,7 @@ items:
   nameWithType: AssignProjectConfiguration
   fullName: Microsoft.Build.Tasks.AssignProjectConfiguration
   type: Class
-  summary: "Atribui configurações de projeto XML para itens de tarefa de referência de projeto."
+  summary: Assigns XML project configurations to project reference task items.
   syntax:
     content: 'public class AssignProjectConfiguration : Microsoft.Build.Tasks.ResolveProjectBase'
   inheritance:
@@ -60,7 +60,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inicializa uma nova instância de <xref href=&quot;Microsoft.Build.Tasks.AssignProjectConfiguration&quot;> </xref> classe."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.AssignProjectConfiguration"></xref> class.
   syntax:
     content: public AssignProjectConfiguration ();
     parameters: []
@@ -80,12 +80,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define um sinalizador que determina se usar as informações de dependência de solução passou no blob de solução para adicionar referências de projeto sintético para fins de ordenação de compilação."
+  summary: Gets or sets a flag determining whether to use the solution dependency information passed in the solution blob to add synthetic project references for the purposes of build ordering.
   syntax:
     content: public bool AddSyntheticProjectReferencesForSolutionDependencies { get; set; }
     return:
       type: System.Boolean
-      description: "Retorna o sinalizador."
+      description: Returns the flag.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.AddSyntheticProjectReferencesForSolutionDependencies*
   exceptions: []
   platform:
@@ -102,12 +102,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define a lista de caminhos de referência de projeto resolvido, preservando os atributos de referência do projeto original."
+  summary: Gets or sets the list of resolved project reference paths while preserving the original project reference attributes.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] AssignedProjects { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "A lista de caminhos de referência de projeto resolvido."
+      description: The list of resolved project reference paths.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.AssignedProjects*
   exceptions: []
   platform:
@@ -124,12 +124,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o caminho completo do projeto."
+  summary: Gets or sets the project’s full path.
   syntax:
     content: public string CurrentProject { get; set; }
     return:
       type: System.String
-      description: "Retorna o caminho completo do projeto."
+      description: Returns the full path of the project.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProject*
   exceptions: []
   platform:
@@ -146,12 +146,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define a configuração do projeto atual."
+  summary: Gets or sets the current project's configuration.
   syntax:
     content: public string CurrentProjectConfiguration { get; set; }
     return:
       type: System.String
-      description: "Retorna a configuração do projeto atual."
+      description: Returns the current project's configuration.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectConfiguration*
   exceptions: []
   platform:
@@ -168,12 +168,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define a plataforma do projeto atual."
+  summary: Gets or sets the current project's platform.
   syntax:
     content: public string CurrentProjectPlatform { get; set; }
     return:
       type: System.String
-      description: "Retorna a plataforma do projeto atual."
+      description: Returns the current project's platform.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectPlatform*
   exceptions: []
   platform:
@@ -190,13 +190,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define uma lista de mapeamentos separados por ponto-e-vírgula dos nomes da plataforma usados pela maioria dos tipos de VS aos usados pelo .vcxprojs."
-  remarks: "Por exemplo &quot;AnyCPU = Win32&quot;"
+  summary: Gets or sets a semicolon-delimited list of mappings from the platform names used by most VS types to those used by .vcxprojs.
+  remarks: E.g. "AnyCPU=Win32"
   syntax:
     content: public string DefaultToVcxPlatformMapping { get; set; }
     return:
       type: System.String
-      description: "Retorna uma lista delimitada por ponto e vírgula de mapeamentos dos nomes da plataforma usados pela maioria dos tipos de VS aos usados pelo .vcxprojs."
+      description: Returns a semicolon-delimited list of mappings from the platform names used by most VS types to those used by .vcxprojs.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.DefaultToVcxPlatformMapping*
   exceptions: []
   platform:
@@ -213,13 +213,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Executa o `AssignProjectConfiguration` tarefa."
+  summary: Executes the `AssignProjectConfiguration` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se a execução da tarefa foi bem-sucedida. Caso contrário, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.Execute*
   exceptions: []
   platform:
@@ -236,12 +236,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Especifica se as referências devem ser criadas, mesmo se eles tiverem sido desabilitados na configuração do projeto."
+  summary: Specifies whether references should be built, even if they were disabled in the project configuration.
   syntax:
     content: public bool OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration { get; set; }
     return:
       type: System.Boolean
-      description: "Returns <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>. Se as referências devem ser criadas; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> caso contrário. O padrão é <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref>."
+      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref>. if references should be built; <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise. Defaults to <xref uid="langword_csharp_true" name="true" href=""></xref>.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration*
   exceptions: []
   platform:
@@ -258,12 +258,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define o tipo de saída para o projeto."
+  summary: Gets or sets the output type for the project.
   syntax:
     content: public string OutputType { get; set; }
     return:
       type: System.String
-      description: "Retorna o tipo de saída para o projeto."
+      description: Returns the output type for the project.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.OutputType*
   exceptions: []
   platform:
@@ -280,12 +280,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define uma opção que especifica se os mapeamentos padrão devem ser usados para resolver a configuração/plataforma do passado no projeto faz referência."
+  summary: Gets or sets a switch that specifies whether default mappings should be used to resolve the configuration/platform of the passed in project references.
   syntax:
     content: public bool ResolveConfigurationPlatformUsingMappings { get; set; }
     return:
       type: System.Boolean
-      description: "Retornará true se mapeamentos padrão devem ser usados; FALSO caso contrário."
+      description: Returns true if default mappings should be used; false otherwise.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.ResolveConfigurationPlatformUsingMappings*
   exceptions: []
   platform:
@@ -302,12 +302,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define uma opção que determina se é necessário definir os metadados GlobalPropertiesToRemove na referência de projeto, de modo que em uma chamada do MSBuild, os metadados de configuração e plataforma será definido, permitindo que o projeto filho em sua configuração padrão de compilação / plataforma."
+  summary: Gets or sets a switch that determines whether to set the GlobalPropertiesToRemove metadata on the project reference such that on an MSBuild call, the Configuration and Platform metadata will be unset, allowing the child project to build in its default configuration / platform.
   syntax:
     content: public bool ShouldUnsetParentConfigurationAndPlatform { get; set; }
     return:
       type: System.Boolean
-      description: "Retorna VERDADEIRO se os metadados de configuração e plataforma será definido; FALSO caso contrário. O padrão é false."
+      description: Returns true if the Configuration and Platform metadata will be unset; false otherwise. The default is false.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.ShouldUnsetParentConfigurationAndPlatform*
   exceptions: []
   platform:
@@ -324,12 +324,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define uma cadeia de caracteres XML que contém a configuração de projeto."
+  summary: Gets or sets an XML string that contains the project configuration.
   syntax:
     content: public string SolutionConfigurationContents { get; set; }
     return:
       type: System.String
-      description: "Uma cadeia de caracteres XML que contém a configuração de projeto."
+      description: An XML string that contains the project configuration.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.SolutionConfigurationContents*
   exceptions: []
   platform:
@@ -346,13 +346,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define a lista de projeto referenciar itens que não puderam ser resolvidos usando a lista previamente resolvida de saídas."
-  remarks: "Como [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)] somente pré-resolve não -[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projetos, isso significa que as referências de projeto nessa lista são no [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] formato."
+  summary: Gets or sets the list of project reference items that could not be resolved using the pre-resolved list of outputs.
+  remarks: Since [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)] only pre-resolves non-[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projects, this means that project references in this list are in the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] format.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] UnassignedProjects { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "A lista de itens de projeto de referência que não puderam ser resolvidos usando a lista previamente resolvida de saídas."
+      description: The list of project reference items that could not be resolved using the pre-resolved list of outputs.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.UnassignedProjects*
   exceptions: []
   platform:
@@ -369,13 +369,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Obtém ou define uma lista delimitada por ponto e vírgula de mapeamentos de nomes de plataforma vcxproj para o uso de nomes de plataforma, a maioria dos outros tipos de projeto do VS."
-  remarks: "Por exemplo &quot;Win32 = AnyCPU&quot;"
+  summary: Gets or sets a semicolon-delimited list of mappings from .vcxproj platform names to the platform names use by most other VS project types.
+  remarks: E.g. "Win32=AnyCPU"
   syntax:
     content: public string VcxToDefaultPlatformMapping { get; set; }
     return:
       type: System.String
-      description: "Retorna a lista de mapeamentos separados por ponto-e-vírgula."
+      description: Returns the semicolon-delimited list of mappings.
   overload: Microsoft.Build.Tasks.AssignProjectConfiguration.VcxToDefaultPlatformMapping*
   exceptions: []
   platform:

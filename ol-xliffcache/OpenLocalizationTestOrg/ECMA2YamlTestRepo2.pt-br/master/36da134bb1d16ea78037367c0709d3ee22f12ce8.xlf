@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">36da134bb1d16ea78037367c0709d3ee22f12ce8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Configuration.SettingsProvider.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ec33b47e90767ecd1f042985943a51285c64ad78</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">45f9be8e3f06fd366d6ff88b5053da662d44505e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Acts as a base class for deriving custom settings providers in the application settings architecture.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A settings provider defines the mechanism for storing configuration data used in the application settings architecture.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The .NET Framework contains a single default settings provider, &lt;xref:System.Configuration.LocalFileSettingsProvider&gt;, which stores configuration data to the local file system.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, you can create alternate storage mechanisms by deriving from the abstract SettingsProvider class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The provider that a wrapper class uses is determined by decorating the wrapper class with the &lt;xref:System.Configuration.SettingsProviderAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If this attribute is not provided, the default, &lt;xref:System.Configuration.LocalFileSettingsProvider&gt;, is used.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you create a custom settings provider, at minimum, you must provide implementations for the three methods of this class: &lt;xref:System.Configuration.SettingsProvider.GetPropertyValues%2A&gt;, &lt;xref:System.Configuration.SettingsProvider.SetPropertyValues%2A&gt; and &lt;xref:System.Configuration.SettingsProvider.ApplicationName%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For client applications, you can add more standardized functionality to a custom provider by also implementing the &lt;xref:System.Configuration.IApplicationSettingsProvider&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This interface mirrors methods found in the &lt;xref:System.Configuration.ApplicationSettingsBase&gt; class, which mainly enables versioning support.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Typically, you should design settings providers to be single-instanced to avoid storage resource contention.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Providers should also be thread-safe because they can be called simultaneously from multiple wrapper instances in a single application domain or from multiple applications in different domains.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>At minimum, a settings provider must recognize three attributes—&lt;xref:System.Configuration.ApplicationScopedSettingAttribute&gt;, &lt;xref:System.Configuration.UserScopedSettingAttribute&gt;, and &lt;xref:System.Configuration.DefaultSettingValueAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a full listing of attributes that can be applied to application settings, see <bpt id="p1">[</bpt>Application Settings Attributes<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A custom setting provider should resolve attributes applied to settings properties in the following manner:      1.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the provider can fulfill the request implied by the attribute, obviously it should do so.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the provider cannot fulfill the request, it should ignore it silently.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If two or more properties conflict; for example, a property being decorated with both &lt;xref:System.Configuration.ApplicationScopedSettingAttribute&gt; and &lt;xref:System.Configuration.UserScopedSettingAttribute&gt;; the provider should throw a &lt;xref:System.Configuration.ConfigurationException&gt;.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Initializes an instance of the <bpt id="p1">&lt;xref href="System.Configuration.SettingsProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is this default protected constructor for this abstract class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Derived custom settings providers are not required to provide an explicit constructor because the &lt;xref:System.Configuration.Provider.ProviderBase.Initialize%2A&gt; method typically performs all initialization.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Client code typically does not directly instantiate a settings provider; instead, you use the following procedure to find a settings provider for a particular settings property:      1.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Call the &lt;xref:System.ComponentModel.Component.GetService%2A&gt; method on the current &lt;xref:System.ComponentModel.Component&gt; or &lt;xref:System.ComponentModel.ISite&gt; to return a reference to the current &lt;xref:System.Configuration.ISettingsProviderService&gt;.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Call the &lt;xref:System.Configuration.ISettingsProviderService.GetSettingsProvider%2A&gt; method of the &lt;xref:System.Configuration.ISettingsProviderService&gt; retrieved in the first step to return the settings provider.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the currently running application.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ApplicationName and &lt;xref:System.Configuration.Provider.ProviderBase.Name%2A&gt; properties help to disambiguate similarly named setting properties in different applications.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; that contains the application's shortened name, which does not contain a full path or extension, for example, <ph id="ph1">`SimpleAppSettings`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Returns the collection of settings property values for the specified application instance and settings property group.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetPropertyValues method must be implemented to handle special settings, those marked with &lt;xref:System.Configuration.SpecialSettingAttribute&gt;, as well as reconcile application and user settings.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> describing the current application use.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsPropertyCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing the settings property group whose values are to be retrieved.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsPropertyValueCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing the values for the specified settings property group.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Sets the values of the specified group of property settings.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Configuration.ApplicationSettingsBase&gt; contains the &lt;xref:System.Configuration.ApplicationSettingsBase.Save%2A&gt; method, which is called to persist the values of all of its settings properties.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method enumerates through all the settings providers associated with its settings properties, and calls the SetPropertyValues method for each &lt;xref:System.Configuration.SettingsProvider&gt; to perform the actual serialization operation.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The SetPropertyValues method should be implemented with security in mind:      -   Only fully trusted code should be allowed to update application settings.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Partially trusted code should be allowed to update only user application settings.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Untrusted code is not typically allowed to update application settings.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Usage quotas should be considered to guard against resource attacks by partially trusted applications.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> describing the current application usage.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsPropertyValueCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> representing the group of property settings to set.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

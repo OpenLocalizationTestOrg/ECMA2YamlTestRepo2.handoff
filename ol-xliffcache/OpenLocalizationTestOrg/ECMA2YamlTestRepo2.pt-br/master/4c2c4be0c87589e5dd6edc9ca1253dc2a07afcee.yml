@@ -11,8 +11,8 @@ items:
   nameWithType: RequiredRuntimeAttribute
   fullName: Microsoft.Build.Framework.RequiredRuntimeAttribute
   type: Class
-  summary: "Define o atributo de metadados que os autores de tarefa usam para identificar se a tarefa requer uma versão específica do tempo de execução do CLR."
-  remarks: "Uma tarefa marcada com o RequiredRuntimeAttribute indica que ele tem um requisito mais estrito do tempo de execução de uma tarefa regular. Ele alerta MSBuild que seja necessário iniciar um processo separado para a tarefa se a versão atual de tempo de execução CLR não coincide com a versão necessária.      > [!NOTE] > Esse atributo atualmente não está funcionando porque apenas uma versão do CLR (2.0) é capaz de executar o [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] versão 2.0 ou 3.5.       Para obter mais informações sobre como usar atributos, consulte [Estendendo metadados usando atributos](~/add/includes/ajax-current-ext-md.md)."
+  summary: Defines the metadata attribute that task authors use to identify whether the task requires a specific version of the CLR runtime.
+  remarks: "A task marked with the RequiredRuntimeAttribute indicates that it has a stricter runtime requirement than a regular task. It alerts MSBuild that it may need to start a separate process for the task if the current CLR runtime version does not match the required version.  \n  \n> [!NOTE]\n>  This attribute is currently non-functional because only one version of the CLR (2.0) is capable of running either [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] version 2.0 or 3.5.  \n  \n For more information about using attributes, see [Extending Metadata Using Attributes](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: >-
       [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)]
@@ -36,13 +36,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicializa uma nova instância de <xref href=&quot;Microsoft.Build.Framework.RequiredRuntimeAttribute&quot;> </xref> classe."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.RequiredRuntimeAttribute"></xref> class.
   syntax:
     content: public RequiredRuntimeAttribute (string runtimeVersion);
     parameters:
     - id: runtimeVersion
       type: System.String
-      description: "A versão do tempo de execução do CLR necessários prefaciada com &quot;v&quot;, como &quot;v&2;.0.&quot;"
+      description: The version of the CLR runtime required prefaced with a "v," such as "v2.0."
   overload: Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor*
   exceptions: []
   platform:
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Obtém a versão de tempo de execução CLR que o atributo foi construído com, como &quot;v&2;.0.&quot;"
+  summary: Gets the CLR runtime version the attribute was constructed with, such as "v2.0."
   syntax:
     content: public string RuntimeVersion { get; }
     return:
       type: System.String
-      description: "Uma cadeia de caracteres que contém a versão de tempo de execução CLR necessários."
+      description: A string containing the CLR runtime version required.
   overload: Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion*
   exceptions: []
   platform:
