@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ff2c4ee0aa28807a0733a11d49219e153d661500</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Data.OracleClient.OracleParameter.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a5b2c121189fb48c726c4a781dfa7c9fc8329813</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">94d42feef6eff031eb9d4b6826aab0c29768089c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents a parameter to an <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and optionally its mapping to a <bpt id="p2">&lt;xref href="System.Data.DataColumn"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Parameter names are not case-sensitive.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When querying an Oracle database using the Microsoft OLE DB Provider for Oracle (MSDAORA) and the ODBC.NET Framework Data Provider, using the <ph id="ph1">`LIKE`</ph> clause to query values in fixed-length fields may not return all expected matches.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The reason is that when Oracle matches values for fixed-length fields in a <ph id="ph1">`LIKE`</ph> clause, it matches the entire length of the string, including any padding trailing spaces.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if a table in an Oracle database contains a field named "Field1" that is defined as <ph id="ph1">`char(3)`</ph>, and you enter the value "a" into a row of that table, the following code will not return the row.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```vb#   Dim queryString As String = "SELECT * FROM Table1 WHERE Field1 LIKE ?"   Dim command As OleDbCommand = New OleDbCommand(queryString, connection)   command.Parameters.Add("@p1", OleDbType.Char, 3).Value = "a"   Dim reader As OleDbDataReader = command.ExecuteReader()   ```</ph>      <ph id="ph2">```c#   string queryString = "SELECT * FROM Table1 WHERE Field1 LIKE ?";   OleDbCommand command = new OleDbCommand(queryString, connection);   command.Parameters.Add("@p1", OleDbType.Char, 3).Value = "a";   OleDbDataReader reader = command.ExecuteReader();   ```</ph>       This is because Oracle stores the column value as "a  " (padding "a", with trailing spaces, to the fixed field length of 3), which Oracle does not treat as a match for the parameter value of "a" in the case of a <ph id="ph3">`LIKE`</ph> comparison of fixed-length fields.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To resolve this problem, append a percentage ("%") wildcard character to the parameter value (<ph id="ph1">`"a%"`</ph>), or use an SQL <ph id="ph2">`=`</ph> comparison instead.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that uses the parameter name and data type.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The name of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The value supplied in the <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">oracleType</ph><ept id="p1">&lt;/code&gt;</ept> parameter is an invalid back-end data type.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that uses the parameter name and an <bpt id="p2">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you specify an &lt;xref:System.Object&gt; in the <ph id="ph1">`value`</ph> parameter, the &lt;xref:System.Data.DbType&gt; is inferred from the Microsoft .NET Framework type of the &lt;xref:System.Object&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use caution when you are using this overload of the &lt;xref:System.Data.OracleClient.OracleParameter&gt; constructor.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because this overload takes a <ph id="ph1">`value`</ph> of type &lt;xref:System.Object&gt;, you must convert the integral value to an &lt;xref:System.Object&gt; type when the value is zero, as the following Microsoft Visual C# example demonstrates.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   Parameter = new OracleParameter("pname", Convert.ToInt32(0));   ```</ph>       If you do not perform this conversion, the compiler will assume that you are trying to call the <ph id="ph2">`OracleParameter`</ph>(<ph id="ph3">`string`</ph>, <ph id="ph4">`OracleType`</ph>) constructor overload.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The name of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that uses the parameter name, data type, and length.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The name of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The length of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The value supplied in the <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">oracleType</ph><ept id="p1">&lt;/code&gt;</ept> parameter is an invalid back-end data type.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that uses the parameter name, data type, length, and source column name.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The name of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The length of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The name of the source column.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The value supplied in the <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">oracleType</ph><ept id="p1">&lt;/code&gt;</ept> parameter is an invalid back-end data type.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that uses the parameter name, data type, size, direction, source column, source version, and other properties.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The name of the parameter to map.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The length of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.ParameterDirection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The name of the source column.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.DataRowVersion"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the source column is nullable, otherwise <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Object&gt; that is the value of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The value supplied in the <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">oracleType</ph><ept id="p1">&lt;/code&gt;</ept> parameter is an invalid back-end data type.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that uses the parameter name, data type, length, source column name, parameter direction, numeric precision, and other properties.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The name of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The length of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.ParameterDirection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the value of the field can be null, otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The total number of digits to the left and right of the decimal point to which &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt; is resolved.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The total number of decimal places to which &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt; is resolved.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The name of the source column.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.DataRowVersion"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Object&gt; that is the value of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The value supplied in the <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">oracleType</ph><ept id="p1">&lt;/code&gt;</ept> parameter is an invalid back-end data type.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Data.DbType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt; and DbType are linked.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, setting the DbType changes the &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt; to a supporting &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The DbType, &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt;, and &lt;xref:System.Data.OracleClient.OracleParameter.Size%2A&gt; properties of a parameter can be inferred by setting &lt;xref:System.Data.OracleClient.OracleParameter.Value%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you are not required to specify them.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, they are not exposed in &lt;xref:System.Data.OracleClient.OracleParameter&gt; property settings.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the size of the parameter has been inferred, &lt;xref:System.Data.OracleClient.OracleParameter.Size%2A&gt; does not contain inferred value after statement execution.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For <ph id="ph1">`String`</ph> data types the default is &lt;xref:System.Data.DbType&gt;.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a list of the supported data types, see the appropriate &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt; member.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>DataAdapter Parameters<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.DbType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Data.DbType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The property was not set to a valid <bpt id="p1">&lt;xref href="System.Data.DbType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the parameter is input-only, output-only, bidirectional, or a stored procedure return value parameter.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the &lt;xref:System.Data.ParameterDirection&gt; is output, and execution of the associated &lt;xref:System.Data.OracleClient.OracleCommand&gt; does not return a value, the &lt;xref:System.Data.OracleClient.OracleParameter&gt; contains a null value.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`Output`</ph>, <ph id="ph2">`InputOut`</ph>, and <ph id="ph3">`ReturnValue`</ph> parameters returned by calling &lt;xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A&gt; cannot be accessed until you call &lt;xref:System.Data.OracleClient.OracleDataReader.Close%2A&gt; on the &lt;xref:System.Data.OracleClient.OracleDataReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.ParameterDirection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_Input" name="Input" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The property was not set to one of the valid <bpt id="p1">&lt;xref href="System.Data.ParameterDirection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the parameter accepts null values.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Null values are handled using the &lt;xref:System.DBNull&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if null values are accepted, otherwise <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Gets or sets the offset to the &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`Offset`</ph> property is used for client-side chunking of binary and string data.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, in order to insert 10MB of text into a column on a server, a user might execute 10 parameterized inserts of 1MB chunks, shifting the value of <ph id="ph1">`Offset`</ph> on each iteration by 1MB.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`Offset`</ph> specifies the number of bytes for binary types, and the number of characters for strings.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The count for strings does not include the terminating character.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The offset to the &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The default is 0.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OracleType and &lt;xref:System.Data.OracleClient.OracleParameter.DbType%2A&gt; are linked.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, setting the &lt;xref:System.Data.OracleClient.OracleParameter.DbType%2A&gt; changes the OracleType to a supporting &lt;xref:System.Data.OracleClient.OracleType&gt;.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.OracleClient.OracleParameter.DbType%2A&gt;, OracleType, and &lt;xref:System.Data.OracleClient.OracleParameter.Size%2A&gt; properties of a parameter can be inferred by setting &lt;xref:System.Data.OracleClient.OracleParameter.Value%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you are not required to specify them.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, they are not exposed in &lt;xref:System.Data.OracleClient.OracleParameter&gt; property settings.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the size of the parameter has been inferred, &lt;xref:System.Data.OracleClient.OracleParameter.Size%2A&gt; does not contain inferred value after statement execution.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For <ph id="ph1">`String`</ph> data types the default is &lt;xref:System.Data.OracleClient.OracleType&gt;.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a list of the supported data types, see the appropriate &lt;xref:System.Data.OracleClient.OracleType&gt; member.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>DataAdapter Parameters<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value that is the <bpt id="p2">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The .NET Framework Data Provider for Oracle does not support positional parameters that are marked with a question mark (?).</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The name of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The default is an empty string.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Gets or sets the maximum number of digits used to represent the &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Setting the Precision or &lt;xref:System.Data.OracleClient.OracleParameter.Scale%2A&gt; properties has no effect.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The maximum number of digits used to represent the &lt;xref:System.Data.OracleClient.OracleParameter.Value<bpt id="p1">*</bpt>&gt; property. The default value is 0, which indicates that the data provider sets the precision for &lt;xref:System.Data.OracleClient.OracleParameter.Value<ept id="p1">*</ept>&gt;.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Resets the type associated with this <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When executing a command that includes parameter values, code can either set the type of a parameter explicitly, or the parameter can infer its type from its value.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling this method resets the parameter so that it can again infer its type from the value passed in the parameter.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling this method affects both the &lt;xref:System.Data.Odbc.OdbcParameter.DbType%2A&gt; and &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt; properties of the &lt;xref:System.Data.OracleClient.OracleParameter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Resets the type associated with this <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleParameter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When executing a command that includes parameter values, code can either set the type of a parameter explicitly, or the parameter can infer its type from its value.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling this method resets the parameter so that it can again infer its type from the value passed in the parameter.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Calling this method affects both the &lt;xref:System.Data.Odbc.OdbcParameter.DbType%2A&gt; and &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt; properties of the &lt;xref:System.Data.OracleClient.OracleParameter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Gets or sets the number of decimal places to which &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt; is resolved.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Setting the &lt;xref:System.Data.OracleClient.OracleParameter.Precision%2A&gt; or Scale properties has no effect.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>The number of decimal places to which &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt; is resolved.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The default is 0.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Gets or sets the maximum size, in bytes, of the data within the column.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Setting Size affects only the input value of a parameter.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Return values and output parameters are not affected by this property.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Size property is used for binary and string types.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For nonstring data types and ANSI string data, the Size property refers to the number of bytes.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For Unicode string data, Size refers to the number of characters.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The count for strings does not include the terminating character.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For variable-length data types, Size describes the maximum amount of data to transmit to the server.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, for a Unicode string value, Size could be used to limit the amount of data sent to the server to the first one hundred characters.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For bidirectional and output parameters, and return values, you must set the value of Size.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is not required for input parameters, and if not explicitly set, the value of is inferred from the actual size of the specified parameter when a parameterized statement is executed.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.OracleClient.OracleParameter.DbType%2A&gt;, &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt;, and Size properties of a parameter can be inferred by setting &lt;xref:System.Data.OracleClient.OracleParameter.Value%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you are not required to specify them.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, they are not exposed in &lt;xref:System.Data.OracleClient.OracleParameter&gt; property settings.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the size of the parameter has been inferred, Size does not contain inferred value after statement execution.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For fixed length data types, the value of Size is ignored.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be retrieved for informational purposes, and returns the maximum amount of bytes the provider uses when transmitting the value of the parameter to the server.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>The maximum size, in bytes, of the data within the column.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>The default value is 0 (to be used when you do not want to specify the maximum size of the value).</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the source column mapped to the <bpt id="p1">&lt;xref href="System.Data.DataSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and used for loading or returning the &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt;</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The link between the value of the &lt;xref:System.Data.OracleClient.OracleParameter&gt; and the &lt;xref:System.Data.DataTable&gt; may be bidirectional depending on the value of the &lt;xref:System.Data.OracleClient.OracleParameter.Direction%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The name of the source column mapped to the <bpt id="p1">&lt;xref href="System.Data.DataSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>The default is an empty string ("").</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Sets or gets a value which indicates whether the source column is nullable.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>This allows <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleCommandBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to correctly generate Update statements for nullable columns.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve" extradata="MT">
+          <source>SourceColumnNullMapping is used by the &lt;xref:System.Data.OracleClient.OracleCommandBuilder&gt; to correctly generate update commands when dealing with nullable columns.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Generally, use of SourceColumnNullMapping is limited to developers inheriting from &lt;xref:System.Data.OracleClient.OracleCommandBuilder&gt;.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Data.Common.DbCommandBuilder&gt; uses this property to determine whether the source column is nullable, and sets this property to <ph id="ph1">`true`</ph> if it is nullable, and <ph id="ph2">`false`</ph> if it is not.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When &lt;xref:System.Data.OracleClient.OracleCommandBuilder&gt; is generating its Update statement, it examines the SourceColumnNullMapping for each parameter.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the property is <ph id="ph1">`true`</ph>, &lt;xref:System.Data.OracleClient.OracleCommandBuilder&gt; generates a WHERE clauses like the following (in this query expression, "FieldName" represents the name of the field):      <ph id="ph2">```   ((@IsNull_FieldName = 1 AND FieldName IS NULL) OR      (FieldName = @Original_FieldName))   ```</ph>       If SourceColumnNullMapping for the field is false, &lt;xref:System.Data.OracleClient.OracleCommandBuilder&gt; generates the following WHERE clause:      <ph id="ph3">```   FieldName = @OriginalFieldName   ```</ph>       In addition, <ph id="ph4">@IsNull_FieldName</ph> contains 1 if the source field contains null, and 0 if it does not.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This mechanism allows for a performance optimization in Oracle Server, and provides for common code that works across multiple providers.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_True" name="True" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the source column is nullable, otherwise <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Gets or sets the <bpt id="p1">&lt;xref href="System.Data.DataRowVersion"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to use when you load &lt;xref:System.Data.OracleClient.OracleParameter.Value*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property is used by the &lt;xref:System.Data.OracleClient.OracleDataAdapter.UpdateCommand%2A&gt; during the &lt;xref:System.Data.Common.DbDataAdapter.Update%2A?displayProperty=fullName&gt; to determine whether the original or current value is used for a parameter value.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This lets primary keys be updated.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property is set to the version of the &lt;xref:System.Data.DataRow&gt; used by the &lt;xref:System.Data.DataRow.Item%2A?displayProperty=fullName&gt; property (&lt;xref:System.Data.DataRow&gt; indexer), or the &lt;xref:System.Data.DataRow.GetChildRows%2A?displayProperty=fullName&gt; method of the &lt;xref:System.Data.DataRow&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Data.DataRowVersion"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_Current" name="Current" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see <ph id="ph1">&amp;lt;</ph>xref:System.ICloneable.Clone%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Data.OracleClient.OracleParameter&gt; instance is cast to an &lt;xref:System.ICloneable&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>A new object that is a copy of this instance.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Gets a string that contains the &lt;xref:System.Data.OracleClient.OracleParameter.ParameterName*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>A string that contains the &lt;xref:System.Data.OracleClient.OracleParameter.ParameterName*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Gets or sets the value of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For input parameters, the value is bound to the &lt;xref:System.Data.OracleClient.OracleCommand&gt; that is sent to the server.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For output and return-value parameters, the value is set on completion of the &lt;xref:System.Data.OracleClient.OracleCommand&gt; and after the &lt;xref:System.Data.OracleClient.OracleDataReader&gt; is closed.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an input parameter, Value can be set to an object of either a Microsoft .NET Framework data type or an Oracle data type (for example, an &lt;xref:System.Data.OracleClient.OracleNumber&gt; or &lt;xref:System.Data.OracleClient.OracleString&gt;).</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you send a null parameter value to the server, you must specify DBNull, not null.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A null value in the system is an empty object that has no value.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve" extradata="MT">
+          <source>DBNull is used to represent null values.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the application specifies the database type, the bound value is converted to that type when the provider sends the data to the server.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The provider tries to convert any type of value if it supports the &lt;xref:System.IConvertible&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Conversion errors may result if the specified type is not compatible with the value.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.OracleClient.OracleParameter.DbType%2A&gt;, &lt;xref:System.Data.OracleClient.OracleParameter.OracleType%2A&gt;, and &lt;xref:System.Data.OracleClient.OracleParameter.Size%2A&gt; properties of a parameter can be inferred by setting Value.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you are not required to specify them.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, they are not exposed in &lt;xref:System.Data.OracleClient.OracleParameter&gt; property settings.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the size of the parameter has been inferred, Size does not contain inferred value after statement execution.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`InputOutput`</ph>, <ph id="ph2">`Output`</ph>, and <ph id="ph3">`ReturnValue`</ph>&lt;xref:System.Data.ParameterDirection&gt; values used by the Value property will be Microsoft .NET Framework data types, unless the input value was an Oracle data type (for example, &lt;xref:System.Data.OracleClient.OracleNumber&gt; or &lt;xref:System.Data.OracleClient.OracleString&gt;).</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This does not apply to REF CURSOR, BFILE, or LOB data types.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Value property is overwritten by the <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>An object that is the value of the parameter.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>The default value is null.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

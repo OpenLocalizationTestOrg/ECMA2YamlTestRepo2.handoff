@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">53c5b4d14039f65e8b1aa50c1a05e93d67d49ce6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.AttachedPropertyBrowsableForChildrenAttribute.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4cb2b6e19a2aaf8d5ba98cc1d6a00bcf5118b4c6</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3fbc4331ce8eb322ad5c5df0dddf544459c21efa</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Specifies that an attached property has a browsable scope that extends to child elements in the logical tree.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The meaning of the term <ph id="ph1">`browsable`</ph> as used in descriptions for this <ph id="ph2">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> is analogous to the descriptions given for &lt;xref:System.ComponentModel.BrowsableAttribute&gt;, but the browsable state for an attached property is particularly relevant to property information for <ph id="ph3">[!INCLUDE[TLA#tla_xaml](~/add/includes/tlasharptla-xaml-md.md)]</ph>, because an attached property is primarily a <ph id="ph4">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph> concept.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When this  <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> is applied to the get accessor for an attached property, this  <ph id="ph2">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> specifies that an attached property is browsable when the attached property owner is a parent element of other elements.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When interpreted by a designer that uses type descriptor information, the designer should add this property as a browsable property to all child elements in the logical tree, based on the parent element with this  <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> applied.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Generally, the browsable state parallels functionality.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, &lt;xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=fullName&gt; is designated browsable on elements that are child elements of a &lt;xref:System.Windows.Controls.Canvas&gt;, because &lt;xref:System.Windows.Controls.Canvas&gt; includes code for checking any set values of &lt;xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=fullName&gt; on child elements.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This  <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> supports two types of tree detection modes for parent element positions:  a shallow mode, and a deep mode.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The shallow mode, which is the default mode for an applied AttachedPropertyBrowsableForChildrenAttribute <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph>, requires that the immediate parent element be the owner type of the property in order for the attached property to be browsable.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The deep mode is declared by applying the attribute with &lt;xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A&gt; as <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The deep mode is less restrictive because it only requires that the owner type be somewhere in the ancestor direction of the logical tree., and therefore the attached property is browsable on all child elements, not just immediate child elements.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The deep mode is applied for attached property usages where intervening elements in the logical tree should not be reported as the true parent element.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Implicit collections (for example, the &lt;xref:System.Windows.Controls.UIElementCollection&gt; that is implicit in the &lt;xref:System.Windows.Controls.Panel.Children%2A&gt; of a &lt;xref:System.Windows.Controls.Panel&gt;) are not considered to be parent elements for purposes of how this  <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> declares the tree detection mode.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> should only be applied on the get accessor of attached property definitions.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Do not apply this <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> to the set accessor.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Although intuitively it is the set operation that is being made browsable for <ph id="ph1">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph> on child elements, it is the presence and characteristics of the get accessor on the parent element that controls the true behavior.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Whether an attached property is browsable on a child element is not an absolute guarantee that the attached property value is really processed by the parent element in some manner.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Also, the &lt;xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A&gt; value is not an absolute guarantee that the processing scope does or does not extend beyond the immediate parent element.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>All this is implementation specific.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, this  <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> for reporting the browsable state is the best available mechanism for reporting the usage information and functional information for an attached property.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you can generally assume that the browsable state of an attached property is analogous to the behavior of how an attached property value on a child element is processed or interpreted by the relevant parent element in your application code.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For general information on declaring attached properties, see <bpt id="p1">[</bpt>Attached Properties Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="xamlTextUsage_AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## XAML Text Usage    Members of this type are not typically used in <ph id="ph1">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Windows.AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default for &lt;xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A&gt; is <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Determines whether the current <bpt id="p1">&lt;xref href="System.Windows.AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> is equal to a specified object.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This implementation supports value equality of the one possible settable value exposed by this <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph>, &lt;xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Windows.AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to compare to the current <bpt id="p2">&lt;xref href="System.Windows.AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the specified <bpt id="p2">&lt;xref href="System.Windows.AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is equal to the current <bpt id="p3">&lt;xref href="System.Windows.AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Returns the hash code for this <bpt id="p1">&lt;xref href="System.Windows.AttachedPropertyBrowsableForChildrenAttribute"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This implementation supports two possible hash values based on the one possible settable value exposed by this <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph>, &lt;xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>An unsigned 32-bit integer value.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that declares whether to use the deep mode for detection of parent elements on the attached property where this  <ph id="ph1">[!INCLUDE[TLA#tla_netframewkattr](~/add/includes/tlasharptla-netframewkattr-md.md)]</ph> is applied.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Most of the attached properties defined by <ph id="ph1">[!INCLUDE[TLA2#tla_winclient](~/add/includes/tla2sharptla-winclient-md.md)]</ph> that apply &lt;xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute&gt; do so with the default of IncludeDescendants as <ph id="ph2">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">&lt;a name="xamlTextUsage_IncludeDescendants"&gt;</bpt><ept id="p1">&lt;/a&gt;</ept>    ## XAML Text Usage    Members of this type are not typically used in <ph id="ph1">[!INCLUDE[TLA2#tla_xaml](~/add/includes/tla2sharptla-xaml-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the attached property is browsable for all child elements in the logical tree of the parent element that owns the attached property.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the attached property is only browsable for immediate child elements of a parent element that owns the attached property.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

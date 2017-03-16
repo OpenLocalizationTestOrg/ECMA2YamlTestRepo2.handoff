@@ -29,8 +29,8 @@ items:
   nameWithType: ResolveComReference
   fullName: Microsoft.Build.Tasks.ResolveComReference
   type: Class
-  summary: "Implementa il `ResolveComReference` attività. Utilizzare il `ResolveComReference` elemento nel file di progetto per creare ed eseguire questa attività. Per informazioni sull&quot;utilizzo e sui parametri, vedere [ResolveComReference (attività)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "In un computer a 64 bit, Framework64 /\\<versione > msbuild non può risolvere gli oggetti COM registrata come componenti a 32 bit. Ad esempio, se si registra un oggetto COM con regsvr32 e tentare di creare un progetto destinato al x86 piattaforma con Framework64 /\\<versione > / msbuild, la compilazione non è in grado di risolvere l&quot;oggetto COM. Se invece si compila con Framework /\\<versione > / msbuild, la compilazione è in grado di risolvere l&quot;oggetto COM."
+  summary: Implements the `ResolveComReference` task. Use the `ResolveComReference` element in your project file to create and execute this task. For usage and parameter information, see [ResolveComReference Task](~/add/includes/ajax-current-ext-md.md).
+  remarks: On a 64-bit machine, Framework64/\<version>/msbuild cannot resolve COM objects registered as 32-bit components. For example, if you register a COM object with regsvr32 and then try to build a project targeting the x86 platform with Framework64/\<version>/msbuild, the build is unable to resolve the COM object. If instead you build with Framework/\<version>/msbuild, the build is able to resolve the COM object.
   syntax:
     content: 'public sealed class ResolveComReference : Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension'
   inheritance:
@@ -63,7 +63,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inizializza una nuova istanza di <xref href=&quot;Microsoft.Build.Tasks.ResolveComReference&quot;> </xref> (classe)."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.ResolveComReference"></xref> class.
   syntax:
     content: public ResolveComReference ();
     parameters: []
@@ -83,12 +83,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se il `ResolveComReference` attività colloca la chiave pubblica nell&quot;assembly (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) o l&quot;assembly firmato completamente (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
+  summary: Gets or sets a Boolean value that specifies whether the `ResolveComReference` task places the public key in the assembly (<xref uid="langword_csharp_true" name="true" href=""></xref>) or fully signs the assembly (<xref uid="langword_csharp_false" name="false" href=""></xref>).
   syntax:
     content: public bool DelaySign { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se il `ResolveComReference` attività colloca la chiave pubblica nell&quot;assembly. <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> se il `ResolveComReference` viene firmato completamente l&quot;assembly."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `ResolveComReference` task places the public key in the assembly; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `ResolveComReference` task fully signs the assembly.
   overload: Microsoft.Build.Tasks.ResolveComReference.DelaySign*
   exceptions: []
   platform:
@@ -105,12 +105,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta una matrice di coppie nome-valore delle variabili di ambiente che devono essere passato al tlbimp.exe generato e aximp.exe oltre a (o eseguendo l&quot;override selettivo) il blocco di ambiente regolare."
+  summary: Gets or sets an array of name-value pairs of environment variables that should be passed to the spawned tlbimp.exe and aximp.exe in addition to (or selectively overriding) the regular environment block.
   syntax:
     content: public string[] EnvironmentVariables { get; set; }
     return:
       type: System.String[]
-      description: "Restituisce una matrice di coppie nome-valore delle variabili di ambiente."
+      description: Returns an array of name-value pairs of environment variables.
   overload: Microsoft.Build.Tasks.ResolveComReference.EnvironmentVariables*
   exceptions: []
   platform:
@@ -127,13 +127,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Esegue il `ResolveComReference` attività."
+  summary: Executes the `ResolveComReference` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se l&quot;esecuzione dell&quot;attività ha esito positivo. in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveComReference.Execute*
   exceptions: []
   platform:
@@ -150,12 +150,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: 'Proprietà che consente il multitargeting ResolveComReferences: se true, tlbimp.exe e aximp.exe dal framework di destinazione appropriata verrà eseguite out-of-process per generare gli assembly wrapper necessari.'
+  summary: 'Property to allow multitargeting of ResolveComReferences: If true, tlbimp.exe and aximp.exe from the appropriate target framework will be run out-of-proc to generate the necessary wrapper assemblies.'
   syntax:
     content: public bool ExecuteAsTool { get; set; }
     return:
       type: System.Boolean
-      description: "Da aggiungere."
+      description: To be added.
   overload: Microsoft.Build.Tasks.ResolveComReference.ExecuteAsTool*
   exceptions: []
   platform:
@@ -172,12 +172,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Quando impostato su true, la versione della libreria dei tipi verrà inclusi nel nome del wrapper. L&quot;impostazione predefinita è False."
+  summary: When set to true, the typelib version will be included in the wrapper name. Default is false.
   syntax:
     content: public bool IncludeVersionInInteropName { get; set; }
     return:
       type: System.Boolean
-      description: "Da aggiungere."
+      description: To be added.
   overload: Microsoft.Build.Tasks.ResolveComReference.IncludeVersionInInteropName*
   exceptions: []
   platform:
@@ -194,12 +194,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un contenitore che contiene una coppia di chiavi."
+  summary: Gets or sets a container that holds a key pair.
   syntax:
     content: public string KeyContainer { get; set; }
     return:
       type: System.String
-      description: "Un contenitore che contiene una coppia di chiavi."
+      description: A container that holds a key pair.
   overload: Microsoft.Build.Tasks.ResolveComReference.KeyContainer*
   exceptions: []
   platform:
@@ -216,12 +216,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un elemento che contiene una coppia di chiavi."
+  summary: Gets or sets an item that contains a key pair.
   syntax:
     content: public string KeyFile { get; set; }
     return:
       type: System.String
-      description: "Un elemento che contiene una coppia di chiavi."
+      description: An item that contains a key pair.
   overload: Microsoft.Build.Tasks.ResolveComReference.KeyFile*
   exceptions: []
   platform:
@@ -238,12 +238,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se passare il <xref href=&quot;System.Runtime.InteropServices.TypeLibImporterFlags&quot;> </xref> flag di generazione del wrapper tlb."
+  summary: Gets or sets a Boolean value that specifies whether to pass the <xref href="System.Runtime.InteropServices.TypeLibImporterFlags"></xref> flag to .tlb wrapper generation.
   syntax:
     content: public bool NoClassMembers { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se l&quot;attività deve passare il <xref href=&quot;System.Runtime.InteropServices.TypeLibImporterFlags&quot;> </xref> flag alla generazione del wrapper tlb; in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task should pass the <xref href="System.Runtime.InteropServices.TypeLibImporterFlags"></xref> flag to .tlb wrapper generation; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveComReference.NoClassMembers*
   exceptions: []
   platform:
@@ -260,12 +260,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta i riferimenti all&quot;assembly risolto."
+  summary: Gets or sets the resolved assembly references.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedAssemblyReferences { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I riferimenti all&quot;assembly risolto."
+      description: The resolved assembly references.
   overload: Microsoft.Build.Tasks.ResolveComReference.ResolvedAssemblyReferences*
   exceptions: []
   platform:
@@ -282,12 +282,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta i file con nomi completi sul disco che corrispondono alle posizioni fisiche delle librerie di tipi che sono state fornite come input per questa attività."
+  summary: Gets or sets the fully qualified files on disk that correspond to the physical locations of the type libraries that were provided as input to this task.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I file con nomi completi sul disco che corrispondono alle posizioni fisiche delle librerie di tipi che sono state fornite come input per questa attività."
+      description: The fully qualified files on disk that correspond to the physical locations of the type libraries that were provided as input to this task.
   overload: Microsoft.Build.Tasks.ResolveComReference.ResolvedFiles*
   exceptions: []
   platform:
@@ -304,12 +304,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta i percorsi per i moduli che sono stati trovati."
+  summary: Gets or sets the paths to the modules that were found.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedModules { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I percorsi per i moduli che sono stati trovati."
+      description: The paths to the modules that were found.
   overload: Microsoft.Build.Tasks.ResolveComReference.ResolvedModules*
   exceptions: []
   platform:
@@ -326,12 +326,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Se ExecuteAsTool è true, deve essere impostato per il percorso degli strumenti SDK per la versione del framework di destinazione."
+  summary: If ExecuteAsTool is true, this must be set to the SDK tools path for the framework version being targeted.
   syntax:
     content: public string SdkToolsPath { get; set; }
     return:
       type: System.String
-      description: "Da aggiungere."
+      description: To be added.
   overload: Microsoft.Build.Tasks.ResolveComReference.SdkToolsPath*
   exceptions: []
   platform:
@@ -348,12 +348,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un flag che specifica se i messaggi o gli avvisi vengono registrati. Valore predefinito è <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>, vengono registrati i messaggi e avvisi."
+  summary: Gets or sets a flag specifying whether messages or warnings are logged. Default is <xref uid="langword_csharp_false" name="false" href=""></xref>, messages and warnings are logged.
   syntax:
     content: public bool Silent { get; set; }
     return:
       type: System.Boolean
-      description: "Restituisce il flag."
+      description: Returns the flag.
   overload: Microsoft.Build.Tasks.ResolveComReference.Silent*
   exceptions: []
   platform:
@@ -370,12 +370,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il file di cache per i timestamp dei componenti COM."
+  summary: Gets or sets the cache file for COM component timestamps.
   syntax:
     content: public string StateFile { get; set; }
     return:
       type: System.String
-      description: "Il file di cache per i timestamp dei componenti COM."
+      description: The cache file for COM component timestamps.
   overload: Microsoft.Build.Tasks.ResolveComReference.StateFile*
   exceptions: []
   platform:
@@ -392,12 +392,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "La versione del framework di destinazione al progetto. Valore predefinito è vuoto. che significa che non vi sarà alcun filtro per il riferimento in base al framework di destinazione."
+  summary: The project target framework version. Default is empty. which means there will be no filtering for the reference based on their target framework.
   syntax:
     content: public string TargetFrameworkVersion { get; set; }
     return:
       type: System.String
-      description: "Da aggiungere."
+      description: To be added.
   overload: Microsoft.Build.Tasks.ResolveComReference.TargetFrameworkVersion*
   exceptions: []
   platform:
@@ -414,12 +414,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il nome dell&quot;architettura di processore di destinazione preferita, che viene passata al flag /machine tlbimp.exe dopo la traduzione, ad esempio x86, ia64, amd64 o msil."
+  summary: Gets or sets the name of the preferred target processor architecture, which is passed to the tlbimp.exe /machine flag after translation, for example x86, ia64, amd64 or msil.
   syntax:
     content: public string TargetProcessorArchitecture { get; set; }
     return:
       type: System.String
-      description: "Restituisce il nome dell&quot;architettura del processore di destinazione preferita."
+      description: Returns the name of the preferred target processor architecture.
   overload: Microsoft.Build.Tasks.ResolveComReference.TargetProcessorArchitecture*
   exceptions: []
   platform:
@@ -436,13 +436,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il percorso del file di libreria di tipi di riferimenti COM."
-  remarks: "Questa proprietà può contenere i metadati dell&quot;elemento. Per ulteriori informazioni, vedere la sezione &quot;Dell&quot;elemento TypeLibFiles&quot; in [ResolveComReference (attività)](~/add/includes/ajax-current-ext-md.md)."
+  summary: Gets or sets the type library file path to COM references.
+  remarks: This property may contain item metadata. For more information, see the section "TypeLibFiles Item Metadata" in [ResolveComReference Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TypeLibFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Percorso del file tipo libreria dei riferimenti COM."
+      description: The type library file path to COM references.
   overload: Microsoft.Build.Tasks.ResolveComReference.TypeLibFiles*
   exceptions: []
   platform:
@@ -459,13 +459,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il tipo di nomi di libreria da risolvere."
-  remarks: "Questa proprietà può contenere i metadati dell&quot;elemento. Per ulteriori informazioni, vedere la sezione &quot;Dell&quot;elemento TypeLibFiles&quot; in [ResolveComReference (attività)](~/add/includes/ajax-current-ext-md.md)."
+  summary: Gets or sets the type library names to resolve.
+  remarks: This property may contain item metadata. For more information, see the section "TypeLibFiles Item Metadata" in [ResolveComReference Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TypeLibNames { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I nomi di libreria di tipo da risolvere."
+      description: The type library names to resolve.
   overload: Microsoft.Build.Tasks.ResolveComReference.TypeLibNames*
   exceptions: []
   platform:
@@ -482,12 +482,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il percorso su disco in cui viene inserito l&quot;assembly di interoperabilità generato."
+  summary: Gets or sets the location on disk where the generated interop assembly is placed.
   syntax:
     content: public string WrapperOutputDirectory { get; set; }
     return:
       type: System.String
-      description: "Il percorso nel disco in cui viene inserito l&quot;assembly di interoperabilità generato."
+      description: The location on disk where the generated interop assembly is placed.
   overload: Microsoft.Build.Tasks.ResolveComReference.WrapperOutputDirectory*
   exceptions: []
   platform:

@@ -13,7 +13,7 @@ items:
   nameWithType: ITaskItem2
   fullName: Microsoft.Build.Framework.ITaskItem2
   type: Interface
-  summary: "Questa interfaccia aggiunge il supporto dei caratteri di escape all&quot;interfaccia ITaskItem."
+  summary: This interface adds escaping support to the ITaskItem interface.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -37,13 +37,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Implementazione ITaskItem2 che restituisce un clone dei metadati per questo oggetto.  Valori restituiti sono nel formato di escape originale."
+  summary: ITaskItem2 implementation which returns a clone of the metadata on this object.  Values returned are in their original escaped form.
   syntax:
     content: public System.Collections.IDictionary CloneCustomMetadataEscaped ();
     parameters: []
     return:
       type: System.Collections.IDictionary
-      description: "Restituisce i metadati clonati, con l&quot;escape dei valori mantenuta."
+      description: Returns the cloned metadata, with values' escaping preserved.
   overload: Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped*
   exceptions: []
   platform:
@@ -60,12 +60,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ottiene o imposta l&quot;elemento di inclusione valore, ad esempio per gli elementi basati su disco sarebbe il percorso del file."
+  summary: Gets or sets the item include value e.g. for disk-based items this would be the file path.
   syntax:
     content: public string EvaluatedIncludeEscaped { get; set; }
     return:
       type: System.String
-      description: "Restituisce l&quot;elemento valore."
+      description: Returns the item include value.
   overload: Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped*
   exceptions: []
   platform:
@@ -82,17 +82,17 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Consente i valori dei metadati dell&quot;elemento deve essere sottoposto a query."
-  remarks: "Approfitta dell&quot;opportunità di correggere il nome di proprietà, anche se ciò non è ovvio, costituisce un miglioramento per GetMetadata."
+  summary: Allows the values of metadata on the item to be queried.
+  remarks: Taking the opportunity to fix the property name, although this doesn't make it obvious it's an improvement on GetMetadata.
   syntax:
     content: public string GetMetadataValueEscaped (string metadataName);
     parameters:
     - id: metadataName
       type: System.String
-      description: "Metadati da recuperare."
+      description: The metadata to be queried.
     return:
       type: System.String
-      description: "Restituisce il valore dei metadati di escape."
+      description: Returns the escaped metadata value.
   overload: Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -109,17 +109,17 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Consente una parte dei metadati personalizzati da impostare per l&quot;elemento. Si presuppone che il valore passato è senza caratteri escape e ignora il valore in base alle esigenze per mantenerne il valore."
-  remarks: "Approfitta dell&quot;opportunità di correggere il nome di proprietà, anche se ciò non è ovvio è un miglioramento per SetMetadata."
+  summary: Allows a piece of custom metadata to be set on the item. Assumes that the value passed in is unescaped, and escapes the value as necessary in order to maintain its value.
+  remarks: Taking the opportunity to fix the property name, although this doesn't make it obvious it's an improvement on SetMetadata.
   syntax:
     content: public void SetMetadataValueLiteral (string metadataName, string metadataValue);
     parameters:
     - id: metadataName
       type: System.String
-      description: "Il nome dei metadati."
+      description: The metadata name.
     - id: metadataValue
       type: System.String
-      description: "Il valore dei metadati."
+      description: The metadata value.
   overload: Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral*
   exceptions: []
   platform:

@@ -12,7 +12,7 @@ items:
   nameWithType: IBootstrapperBuilder
   fullName: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder
   type: Interface
-  summary: "Espone le funzionalità necessarie per creare un programma di avvio automatico."
+  summary: Exposes functionality that you must have to create a bootstrapper.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -37,16 +37,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Genera un programma di avvio automatico in base alle impostazioni specificate."
+  summary: Generates a bootstrapper based on the specified settings.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults Build (Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings
-      description: "Le proprietà utilizzate per creare il programma di avvio automatico."
+      description: The properties used to create the bootstrapper.
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults
-      description: "Oggetto <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults&quot;> </xref> oggetto che rappresenta i risultati della generazione del programma di avvio automatico."
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults"></xref> object that represents the results of the bootstrapper generation.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Build*
   exceptions: []
   platform:
@@ -63,12 +63,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Ottiene o imposta il percorso del programma di avvio automatico necessario i file."
+  summary: Gets or sets the location of the required bootstrapper files.
   syntax:
     content: public string Path { get; set; }
     return:
       type: System.String
-      description: "Valore stringa che rappresenta il percorso dei file di programma di avvio necessari."
+      description: A string value that represents the location of the required bootstrapper files.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*
   exceptions: []
   platform:
@@ -85,12 +85,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Ottiene tutti i prodotti disponibili nel percorso del programma di avvio corrente."
+  summary: Gets all products available at the current bootstrapper path.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection Products { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection
-      description: "Oggetto <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection&quot;> </xref> oggetto che rappresenta tutti i prodotti disponibili all&quot;avvio automatico corrente <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection"></xref> object that represents all products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Products*
   exceptions: []
   platform:

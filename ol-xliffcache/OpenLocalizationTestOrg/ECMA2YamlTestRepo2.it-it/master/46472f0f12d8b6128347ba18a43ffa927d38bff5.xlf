@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">46472f0f12d8b6128347ba18a43ffa927d38bff5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Xaml.IDestinationTypeProvider.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a5c10c8d71c3592b30325620b79537be054fd845</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a2e3e000ddc2eb2558d5403d35e69b0433f8c800</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents a service that can return a CLR type system identifier for the destination type.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The destination type is relevant when the destination type for a property-setting operation is indirectly reported by reflection or other mechanisms.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The type that is returned by &lt;xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A&gt; is resolved from the current position of the XAML node stream by using current XAML schema context.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you use the XAML type system as implemented by .NET Framework XAML Services and access the service context under these conditions, &lt;xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A&gt; returns the &lt;xref:System.Xaml.XamlType.UnderlyingType%2A&gt; based on available XAML type system information and CLR-based XAML schema context.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This service is relevant for situations where pure CLR reflection or other mechanisms might not provide enough information about a destination type.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following is a list of some relevant scenarios for IDestinationTypeProvider:      -   The CLR type system reports an indirect type because of how the CLR defines and uses types, and you want a true destination type.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the APIs in .NET Framework XAML Services use this service internally when they process event members.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Events are reported by pure CLR reflection as a &lt;xref:System.Delegate&gt;.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   You want to ensure that the destination type of a type converter usage matches the expected type that the type converter can produce.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This scenario is useful when the destination type is parameterized or generic.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Your value converter is being called from a usage that nested in another value converter.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this case, &lt;xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A&gt; unwinds the nesting and returns the destination type of the actual property being set, instead of returning the output type of any intervening value converter.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Type converters and markup extensions can query for IDestinationTypeProvider as a service on the service context that is provided by a XAML object writer, when the XAML object writer invokes value conversion behavior.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Type Converters and Markup Extensions for XAML<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept> and <bpt id="p2">[</bpt>Service Contexts Available to Type Converters and Markup Extensions<ept id="p2">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Returns the CLR &lt;xref:System.Type&gt; that identifies the destination type for the relevant type converter or markup extension.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method has no input parameter.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>What to return (and whether to return anything other than <ph id="ph1">`null`</ph>) is determined by the current node position in the XAML node stream.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Service Implementers    If you reimplement this service, the GetDestinationType method should return the type that a markup extension or type converter expects to check against its most specific conversion or output type.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A CLR &lt;xref:System.Type&gt; value for the destination type.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

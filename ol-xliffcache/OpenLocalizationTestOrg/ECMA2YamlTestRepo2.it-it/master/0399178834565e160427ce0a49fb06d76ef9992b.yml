@@ -16,7 +16,7 @@ items:
   nameWithType: CodeTaskFactory
   fullName: Microsoft.Build.Tasks.CodeTaskFactory
   type: Class
-  summary: "Factory delle attività che può richiedere un codice DOM lingua supportata e utilizzarlo per creare un&quot;attività."
+  summary: A task factory which can take a code DOM supported language and create a task from it.
   syntax:
     content: 'public class CodeTaskFactory : Microsoft.Build.Framework.ITaskFactory'
   inheritance:
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Crea la factory delle attività."
+  summary: Creates the task factory.
   syntax:
     content: public CodeTaskFactory ();
     parameters: []
@@ -58,13 +58,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pulisce qualsiasi contesto o stato utilizzato in un&quot;attività."
+  summary: Cleans up any context or state used in a task.
   syntax:
     content: public void CleanupTask (Microsoft.Build.Framework.ITask task);
     parameters:
     - id: task
       type: Microsoft.Build.Framework.ITask
-      description: "L&quot;attività di pulizia."
+      description: The task to clean up.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CleanupTask*
   exceptions: []
   platform:
@@ -81,16 +81,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Creare un `taskfactory` istanza che contiene i dati che devono essere aggiornate tra le chiamate all&quot;attività."
+  summary: Create a `taskfactory` instance which contains the data that needs to be refreshed between task invocations.
   syntax:
     content: public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine loggingHost);
     parameters:
     - id: loggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "L&quot;host che registra informazioni dalla factory delle attività."
+      description: The host that logs information from the task factory.
     return:
       type: Microsoft.Build.Framework.ITask
-      description: "Restituisce la nuova attività."
+      description: Returns the new task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CreateTask*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Il motore MSBuild utilizza per la registrazione."
+  summary: The MSBuild engine uses this for logging.
   syntax:
     content: public string FactoryName { get; }
     return:
       type: System.String
-      description: "Restituisce il nome dell&quot;attività."
+      description: Returns the name of the task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.FactoryName*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene le informazioni sul tipo per tutti i parametri di attività."
+  summary: Gets the type information for all task parameters.
   syntax:
     content: public Microsoft.Build.Framework.TaskPropertyInfo[] GetTaskParameters ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.TaskPropertyInfo[]
-      description: "Restituisce una matrice delle informazioni sul tipo per tutti i parametri di attività."
+      description: Returns an array of the type information for all task parameters.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.GetTaskParameters*
   exceptions: []
   platform:
@@ -152,25 +152,25 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Initialzes la factory delle attività."
+  summary: Initialzes the task factory.
   syntax:
     content: public bool Initialize (string taskName, System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.TaskPropertyInfo> taskParameters, string taskElementContents, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);
     parameters:
     - id: taskName
       type: System.String
-      description: "Il nome dell&quot;attività."
+      description: The name of the task.
     - id: taskParameters
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo}
-      description: "I parametri per l&quot;attività."
+      description: The parameters for the task.
     - id: taskElementContents
       type: System.String
-      description: "Contenuto dell&quot;elemento per l&quot;attività."
+      description: The element contents for the task.
     - id: taskFactoryLoggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "Host di registrazione che ottiene informazioni sulle attività."
+      description: The logging host that gets information about tasks.
     return:
       type: System.Boolean
-      description: "Restituisce la nuova factory delle attività."
+      description: Returns the new task factory.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.Initialize*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Rappresenta il tipo di attività."
+  summary: Represents the type of task.
   syntax:
     content: public Type TaskType { get; }
     return:
       type: System.Type
-      description: "Restituisce il tipo di attività."
+      description: Returns the task type.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.TaskType*
   exceptions: []
   platform:

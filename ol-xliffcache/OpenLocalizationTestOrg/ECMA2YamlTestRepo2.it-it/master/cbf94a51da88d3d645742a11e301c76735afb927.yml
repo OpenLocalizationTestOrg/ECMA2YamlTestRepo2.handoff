@@ -55,7 +55,7 @@ items:
   nameWithType: ResolveAssemblyReference
   fullName: Microsoft.Build.Tasks.ResolveAssemblyReference
   type: Class
-  summary: "Implementa il `ResolveAssemblyReference` attività. Utilizzare il `ResolveAssemblyReference` elemento nel file di progetto per creare ed eseguire questa attività. Per informazioni sull&quot;utilizzo e sui parametri, vedere [ResolveAssemblyReference (attività)](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `ResolveAssemblyReference` task. Use the `ResolveAssemblyReference` element in your project file to create and execute this task. For usage and parameter information, see [ResolveAssemblyReference Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class ResolveAssemblyReference : Microsoft.Build.Tasks.TaskExtension'
   inheritance:
@@ -86,7 +86,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inizializza una nuova istanza di <xref href=&quot;Microsoft.Build.Tasks.ResolveAssemblyReference&quot;> </xref> (classe)."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.ResolveAssemblyReference"></xref> class.
   syntax:
     content: public ResolveAssemblyReference ();
     parameters: []
@@ -106,13 +106,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta le estensioni degli assembly che verranno considerate durante la risoluzione dei riferimenti."
-  remarks: "Le estensioni predefinite sono .exe e DLL."
+  summary: Gets or sets the assembly extensions that will be considered during references resolution.
+  remarks: The default extensions are .dll and .exe.
   syntax:
     content: public string[] AllowedAssemblyExtensions { get; set; }
     return:
       type: System.String[]
-      description: "Le estensioni di assembly che verranno considerate durante la risoluzione dei riferimenti."
+      description: The assembly extensions that will be considered during references resolution.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedAssemblyExtensions*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta le estensioni che verranno considerate quando la ricerca di file correlati."
-  remarks: "Le estensioni predefinite sono pdb e XML."
+  summary: Gets or sets the extensions that will be considered when searching for related files.
+  remarks: The default extensions are .pdb and .xml.
   syntax:
     content: public string[] AllowedRelatedFileExtensions { get; set; }
     return:
       type: System.String[]
-      description: "Le estensioni che verranno considerate quando la ricerca di file correlati."
+      description: The extensions that will be considered when searching for related files.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedRelatedFileExtensions*
   exceptions: []
   platform:
@@ -152,13 +152,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il percorso del file app. config."
-  remarks: "Se questa proprietà viene specificata, il <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify%2A>proprietà deve essere false.</xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify%2A>"
+  summary: Gets or sets the App.Config file path.
+  remarks: If this property is specified, the <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify%2A> property must be false.
   syntax:
     content: public string AppConfigFile { get; set; }
     return:
       type: System.String
-      description: "Il percorso del file app. config."
+      description: The App.Config file path.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile*
   exceptions: []
   platform:
@@ -175,13 +175,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta i nomi degli assembly per risolvere in percorsi completi e trovare le dipendenze."
-  remarks: "I nomi degli assembly può essere nomi semplici o complesse."
+  summary: Gets or sets the assembly names to resolve into full paths and to find dependencies for.
+  remarks: The assembly names can either be simple or strong names.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Assemblies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I nomi degli assembly per risolvere in percorsi completi e trovare le dipendenze."
+      description: The assembly names to resolve into full paths and to find dependencies for.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.Assemblies*
   exceptions: []
   platform:
@@ -198,12 +198,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un elenco di percorsi di assembly completi per trovare le dipendenze."
+  summary: Gets or sets a list of fully qualified assembly paths to find dependencies for.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] AssemblyFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Elenco di percorsi di assembly completi per trovare le dipendenze."
+      description: The list of fully qualified assembly paths to find dependencies for.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyFiles*
   exceptions: []
   platform:
@@ -220,13 +220,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se il grafico delle dipendenze risultante viene automaticamente considerato come se venisse passato un file app. config di <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile*>proprietà.</xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile*>"
-  remarks: "Il valore predefinito è `false`.       Per ulteriori informazioni su questa proprietà, vedere [ResolveAssemblyReference (attività)](~/add/includes/ajax-current-ext-md.md)"
+  summary: Gets or sets a Boolean value that specifies whether the resulting dependency graph is automatically treated as if there were an App.Config file passed in to the <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile*> property.
+  remarks: "The default value is `false`.  \n  \n For more information about this property, see [ResolveAssemblyReference Task](~/add/includes/ajax-current-ext-md.md)"
   syntax:
     content: public bool AutoUnify { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se il grafico delle dipendenze risultante viene considerato automaticamente come se venisse passato un file app. config di <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile*>proprietà.</xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile*>"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the resulting dependency graph is automatically treated as if there were an App.Config file passed in to the <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile*> property.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify*
   exceptions: []
   platform:
@@ -243,13 +243,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un elenco di assembly, che devono essere nomi di file assoluto o nomi di file relativi al progetto, da utilizzare per il processo di ricerca e risoluzione."
-  remarks: "Gli assembly in questo elenco verranno considerati quando la <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.SearchPaths%2A>proprietà conterrà {CandidateAssemblyFiles} come uno dei percorsi da considerare.</xref:Microsoft.Build.Tasks.ResolveAssemblyReference.SearchPaths%2A>"
+  summary: Gets or sets a list of assemblies, which must be absolute file names or project-relative file names, to use for the search and resolution process.
+  remarks: Assemblies in this list will be considered when the <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.SearchPaths%2A> property contains {CandidateAssemblyFiles} as one of the paths to consider.
   syntax:
     content: public string[] CandidateAssemblyFiles { get; set; }
     return:
       type: System.String[]
-      description: "Elenco di assembly da utilizzare per il processo di ricerca e risoluzione."
+      description: The list of assemblies to use for the search and resolution process.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.CandidateAssemblyFiles*
   exceptions: []
   platform:
@@ -266,12 +266,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un&quot;opzione che determina come le dipendenze vengono determinate e o meno una dipendenza viene copiata in locale."
+  summary: Gets or sets a switch that determines how dependencies are determined, and whether or not a dependency is copied locally.
   syntax:
     content: public bool CopyLocalDependenciesWhenParentReferenceInGac { get; set; }
     return:
       type: System.Boolean
-      description: "Restituisce true se per determinare se una dipendenza deve essere copiata localmente uno dei controlli effettuati per vedere che se il riferimento padre nel file di progetto è i metadati privato è o non impostato. Se i metadati sono impostati quindi utilizzeremo che per la dipendenza anche.       Se i metadati non sono impostato la dipendenza entra tramite gli stessi controlli del riferimento padre. Uno di questi controlli è per verificare se il riferimento nella Global Assembly Cache. Se non è un riferimento nella GAC quindi abbiamo non verrà copiato in locale, si presuppone che sia nella gac del computer di destinazione. Ciò vale solo per tale riferimento specifico e non le relative dipendenze.       Ciò significa un riferimento nel file di progetto può risultare false poiché i file sono nella GAC, ma le dipendenze possono essere copiate in locale perché non sono nella Global Assembly Cache. Questo è il comportamento predefinito per RAR e fa sì che il valore predefinito per questa proprietà su true.       Restituisce false se si sarà comunque controllare i riferimenti di file di progetto per vedere che si trovano nella Global Assembly Cache e impostare lo stato locale di copia come appropriato.       Tuttavia per le dipendenze è non solo verificherà se che si trovano nella Global Assembly Cache ma si verificherà anche se il riferimento padre dal file di progetto è presente nella GAC.       Se il riferimento padre dal file di progetto nella GAC è non verrà copiata la dipendenza in locale.       <div class=&quot;alert NOTE&quot;>    Se sono presenti più riferimenti padre e uno di essi non proviene dalla GAC quindi si imposterà copia locale su true.      </div>"
+      description: "Returns true if when determining if a dependency should be copied locally one of the checks done is to see if the parent reference in the project file has the Private metadata set or not. If that metadata is set then we will use that for the dependency as well.  \n  \n If the metadata is not set then the dependency will go through the same checks as the parent reference. One of these checks is to see if the reference is in the GAC. If a reference is in the GAC then we will not copy it locally as it is assumed it will be in the gac on the target machine as well. However this only applies to that specific reference and not its dependencies.  \n  \n This means a reference in the project file may be copy local false due to it being in the GAC but the dependencies may still be copied locally because they are not in the GAC. This is the default behavior for RAR and causes the default value for this property to be true.  \n  \n Returns false if we will still check project file references to see if they are in the GAC and set their copy local state as appropriate.  \n  \n However for dependencies we will not only check to see if they are in the GAC but we will also check to see if the parent reference from the project file is in the GAC.  \n  \n If the parent reference from the project file is in the GAC then we will not copy the dependency locally.  \n  \n <div class=\"alert NOTE\">  \n If there are multiple parent reference and ANY of them does not come from the GAC then we will set copy local to true.  \n  \n</div>"
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.CopyLocalDependenciesWhenParentReferenceInGac*
   exceptions: []
   platform:
@@ -288,12 +288,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Restituisce tutti i file di <> </> *>, <> </> *>, <> </> *>, <> </> *>, e <xref href=&quot;Microsoft.Build.Tasks.ResolveAssemblyReference&quot;> </xref> le proprietà che dispongono di `CopyLocal` metadati dell&quot;elemento con un valore di <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref>."
+  summary: Returns all files in the <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedFiles*>, <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedDependencyFiles*>, <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.RelatedFiles*>, <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.SatelliteFiles*>, and <xref href="Microsoft.Build.Tasks.ResolveAssemblyReference"></xref> properties that have the `CopyLocal` item metadata with a value of <xref uid="langword_csharp_true" name="true" href=""></xref>.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] CopyLocalFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Tutti i file di <> </> *>, <> </> *>, <> </> *>, <> </> *>, e <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.ScatterFiles*>le proprietà che dispongono di `CopyLocal` metadati dell&quot;elemento con un valore di <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref>.</xref:Microsoft.Build.Tasks.ResolveAssemblyReference.ScatterFiles*>"
+      description: All files in the <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedFiles*>, <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedDependencyFiles*>, <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.RelatedFiles*>, <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.SatelliteFiles*>, and <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.ScatterFiles*> properties that have the `CopyLocal` item metadata with a value of <xref uid="langword_csharp_true" name="true" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.CopyLocalFiles*
   exceptions: []
   platform:
@@ -310,13 +310,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Esegue il `ResolveAssemblyReference` attività."
+  summary: Executes the `ResolveAssemblyReference` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se l&quot;esecuzione dell&quot;attività ha esito positivo. in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.Execute*
   exceptions: []
   platform:
@@ -333,12 +333,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta gli elementi scritti su disco."
+  summary: Gets or sets the items written to disk.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] FilesWritten { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Gli elementi scritti su disco."
+      description: The items written to disk.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FilesWritten*
   exceptions: []
   platform:
@@ -355,13 +355,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se verranno trovate dipendenze (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) o solo i riferimenti primario (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
-  remarks: "Il valore predefinito è `true`."
+  summary: Gets or sets a Boolean value that specifies whether dependencies will be found (<xref uid="langword_csharp_true" name="true" href=""></xref>) or only primary references will be found (<xref uid="langword_csharp_false" name="false" href=""></xref>).
+  remarks: The default value is `true`.
   syntax:
     content: public bool FindDependencies { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se verranno trovate dipendenze; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> se solo i riferimenti primario."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if dependencies will be found; <xref uid="langword_csharp_false" name="false" href=""></xref> if only primary references will be found.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependencies*
   exceptions: []
   platform:
@@ -378,13 +378,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se verranno trovati i file correlati, ad esempio file con estensione pdb e XML."
-  remarks: "Il valore predefinito è `true`."
+  summary: Gets or sets a Boolean value that specifies whether related files such as .pdb files and .xml files will be found.
+  remarks: The default value is `true`.
   syntax:
     content: public bool FindRelatedFiles { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se i file correlati, ad esempio file con estensione pdb e XML, verranno trovati; in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if related files such as .pdb files and .xml files will be found; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FindRelatedFiles*
   exceptions: []
   platform:
@@ -401,13 +401,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se gli assembly satellite verranno trovati."
-  remarks: "Il valore predefinito è `true.`"
+  summary: Gets or sets a Boolean value that specifies whether satellite assemblies will be found.
+  remarks: The default value is `true.`
   syntax:
     content: public bool FindSatellites { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se gli assembly satellite verranno trovati; in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if satellite assemblies will be found; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FindSatellites*
   exceptions: []
   platform:
@@ -424,13 +424,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se verranno trovati gli assembly di serializzazione."
-  remarks: "Il valore predefinito è `true`."
+  summary: Gets or sets a Boolean value that specifies whether the serialization assemblies will be found.
+  remarks: The default value is `true`.
   syntax:
     content: public bool FindSerializationAssemblies { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se gli assembly di serializzazione verranno trovati; in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the serialization assemblies will be found; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FindSerializationAssemblies*
   exceptions: []
   platform:
@@ -447,13 +447,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un elenco di elementi che rappresentano file XML che contengono il framework completo per il profilo."
-  remarks: "In genere non viene passato qui, nei casi in cui il percorso del file xml per il framework completo non è in una cartella RedistList.       Formato del file è simile a: e così via.      ```   <FileList Redist=&quot;MatchingRedistListName&quot; >     <File AssemblyName=&quot;System&quot; Version=&quot;2.0.0.0&quot;       PublicKeyToken=&quot;b77a5c561934e089&quot; Culture=&quot;neutral&quot;       ProcessorArchitecture=&quot;MSIL&quot; FileVersion=&quot;2.0.40824.0&quot; InGAC=&quot;true&quot;     />   // etc.   </FileList>   ```Gli elementi in questo elenco è necessario specificare i metadati &quot;FrameworkDirectory&quot; per associare un elenco redist a una particolare directory del framework. Se l&quot;associazione non è un errore verrà registrato. Il motivo è la logica in RAR presuppone se non è impostata una FrameworkDirectory utilizzerà la directory del framework di destinazione."
+  summary: Gets or sets a list of items representing XML files that contain the full framework for the profile.
+  remarks: "Normally nothing is passed in here, this is for the cases where the location of the xml file for the full framework is not under a RedistList folder.  \n  \n Format of the file is like:  etc.  \n  \n```  \n<FileList Redist=\"MatchingRedistListName\" >  \n  <File AssemblyName=\"System\" Version=\"2.0.0.0\"  \n    PublicKeyToken=\"b77a5c561934e089\" Culture=\"neutral\"  \n    ProcessorArchitecture=\"MSIL\" FileVersion=\"2.0.40824.0\" InGAC=\"true\"  \n  />  \n// etc.  \n</FileList>  \n```  \n  \n Items in this list must specify the \"FrameworkDirectory\" metadata to associate an redist list with a particular framework directory. If the association is not made an error will be logged. The reason is, The logic in RAR assumes if a FrameworkDirectory is not set it will use the target framework directory."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] FullFrameworkAssemblyTables { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Restituisce un elenco di elementi che rappresentano file XML che contengono il framework completo per il profilo."
+      description: Returns a list of items representing XML files that contain the full framework for the profile.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FullFrameworkAssemblyTables*
   exceptions: []
   platform:
@@ -470,12 +470,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un elenco di cartelle che contengono una directory RedistList che rappresenta il framework completo per un determinato profilo client, per example:%programfiles%\\reference assemblies\\microsoft\\framework\\v4.0."
+  summary: Gets or sets a list of folders which contain a RedistList directory which represent the full framework for a given client profile, for example:%programfiles%\reference assemblies\microsoft\framework\v4.0
   syntax:
     content: public string[] FullFrameworkFolders { get; set; }
     return:
       type: System.String[]
-      description: "Restituisce un elenco di cartelle che contengono una directory RedistList che rappresenta il framework completo per un determinato profilo client"
+      description: Returns a list of folders which contain a RedistList directory which represent the full framework for a given client profile
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FullFrameworkFolders*
   exceptions: []
   platform:
@@ -492,13 +492,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Stringa che contiene i nomi dei subset del framework di destinazione specificato."
-  remarks: "Fornisce un set di nomi che, se presenti nell&quot;elenco TargetFrameworkSubset, ingorare verrà ignorato."
+  summary: A string that contains the names of the subsets of the specified target framework.
+  remarks: Provides a set of names that, if seen in the TargetFrameworkSubset list, causes TargetFrameworkSubsets to be ignored.
   syntax:
     content: public string[] FullTargetFrameworkSubsetNames { get; set; }
     return:
       type: System.String[]
-      description: "Valore stringa che contiene i nomi di subset."
+      description: A string value that contains subset names.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.FullTargetFrameworkSubsetNames*
   exceptions: []
   platform:
@@ -515,12 +515,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se l&quot;attività deve cercare e utilizzare tabelle di subset assembly aggiuntive installate (noto anche come elenchi Subset), che sono disponibili nella directory SubsetList negli TargetFrameworkDirectories fornito."
+  summary: Gets or sets a Boolean value that specifies whether the task should look for and use additional installed assembly subset tables (also known as Subset Lists), which are found in the SubsetList directory under the provided TargetFrameworkDirectories.
   syntax:
     content: public bool IgnoreDefaultInstalledAssemblySubsetTables { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se vengono utilizzate le tabelle di subset di assembly aggiuntivi; in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if additional assembly subset tables are used; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreDefaultInstalledAssemblySubsetTables*
   exceptions: []
   platform:
@@ -537,13 +537,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se il `ResolveAssemblyReference` attività deve ignorare le tabelle di assembly aggiuntive installate nella directory RedistList forniti <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories*>(<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) o deve cercare e utilizzare queste tabelle assembly installato (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>).</xref:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories*>"
-  remarks: "Il valore predefinito è `false`."
+  summary: Gets or sets a Boolean value that specifies whether the `ResolveAssemblyReference` task should ignore additional installed assembly tables found in the RedistList directory underneath the provided <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories*> (<xref uid="langword_csharp_true" name="true" href=""></xref>) or should search for and use these installed assembly tables (<xref uid="langword_csharp_false" name="false" href=""></xref>).
+  remarks: The default value is `false`.
   syntax:
     content: public bool IgnoreDefaultInstalledAssemblyTables { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se l&quot;attività deve ignorare le tabelle di assembly aggiuntive installate. <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> se l&quot;attività deve cercare e utilizzare le tabelle di assembly aggiuntive installate."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task should ignore the additional installed assembly tables; <xref uid="langword_csharp_false" name="false" href=""></xref> if the task should search for and use the additional installed assembly tables.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreDefaultInstalledAssemblyTables*
   exceptions: []
   platform:
@@ -560,12 +560,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un flag che indica se ignorare l&quot;attributo framework quando si verifica se l&quot;assembly è compatibile con il framework di destinazione."
+  summary: Gets or sets a flag indicating whether to ignore the framework attribute when checking if an assembly is compatible with the targeted framework.
   syntax:
     content: public bool IgnoreTargetFrameworkAttributeVersionMismatch { get; set; }
     return:
       type: System.Boolean
-      description: "Restituisce il flag."
+      description: Returns the flag.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreTargetFrameworkAttributeVersionMismatch*
   exceptions: []
   platform:
@@ -582,12 +582,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un flag che indica se ignorare le informazioni sulla versione dell&quot;assembly del framework e risolvere l&quot;assembly del framework dal framework di destinazione attualmente. Flag si applica se il riferimento principale è un assembly di framework."
+  summary: Gets or sets a flag indicating whether to ignore the version information on the framework assembly and actually resolve the framework assembly from the currently targeted framework. Flag applies if the primary reference is a framework assembly.
   syntax:
     content: public bool IgnoreVersionForFrameworkReferences { get; set; }
     return:
       type: System.Boolean
-      description: "Restituisce il flag."
+      description: Returns the flag.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreVersionForFrameworkReferences*
   exceptions: []
   platform:
@@ -604,13 +604,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Un <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;> </xref> che rappresenta un elenco di file XML che contengono gli assembly che devono essere nel subset di destinazione."
-  remarks: "Il formato del file: ```   <FileList Redist=&quot;ClientSubset&quot; >       <File AssemblyName=&quot;System&quot; Version=&quot;2.0.0.0&quot;          PublicKeyToken=&quot;b77a5c561934e089&quot; Culture=&quot;neutral&quot;          ProcessorArchitecture=&quot;MSIL&quot; FileVersion=&quot;2.0.40824.0&quot;          InGAC=&quot;true&quot; />       etc.   </FileList>   ``` gli elementi in questo elenco possono facoltativamente specificare i metadati &quot;FrameworkDirectory&quot; per associare una directory particolare framework InstalledAssemblySubsetTable. Se è presente un solo elemento TargetFrameworkDirectories, quindi gli elementi che non dispongono di metadati &quot;FrameworkDirectory&quot; in questo elenco verranno considerati come se i metadati è l&quot;unico valore univoco passato a TargetFrameworkDirectories."
+  summary: An <xref href="Microsoft.Build.Framework.ITaskItem"></xref> that represents a list of XML files that contain assemblies that are expected to be in the target subset.
+  remarks: "This is the format of the file:  \n  \n```  \n<FileList Redist=\"ClientSubset\" >  \n    <File AssemblyName=\"System\" Version=\"2.0.0.0\"   \n      PublicKeyToken=\"b77a5c561934e089\" Culture=\"neutral\"   \n      ProcessorArchitecture=\"MSIL\" FileVersion=\"2.0.40824.0\"   \n      InGAC=\"true\" />  \n    etc.  \n</FileList>  \n```  \n  \n Items in this list may optionally specify the \"FrameworkDirectory\" metadata to associate an InstalledAssemblySubsetTable with a particular framework directory. If there is only a single TargetFrameworkDirectories element, then any items in this list that do not have the \"FrameworkDirectory\" metadata will be treated as though the metadata is set to the lone (unique) value passed to TargetFrameworkDirectories."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] InstalledAssemblySubsetTables { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Un <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;> </xref> elenco di file XML."
+      description: An <xref href="Microsoft.Build.Framework.ITaskItem"></xref> list of XML files.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblySubsetTables*
   exceptions: []
   platform:
@@ -627,12 +627,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un elenco di file XML che contengono gli assembly che devono essere installati nel computer di destinazione."
+  summary: Gets or sets a list of XML files that contain assemblies that are expected to be installed on the target machine.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] InstalledAssemblyTables { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Un elenco di file XML che contengono gli assembly che devono essere installati nel computer di destinazione."
+      description: A list of XML files that contain assemblies that are expected to be installed on the target machine.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables*
   exceptions: []
   platform:
@@ -649,12 +649,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta l&quot;elenco delle directory contenenti gli elenchi redist per il framework più recente che nel computer di destinazione."
+  summary: Gets or sets the list of directories which contain the redist lists for the most current framework which can be targeted on the machine.
   syntax:
     content: public string[] LatestTargetFrameworkDirectories { get; set; }
     return:
       type: System.String[]
-      description: "Restituisce l&quot;elenco di directory contenenti gli elenchi redist per il framework più recente che può essere impostato come destinazione nel computer.  Se questo non è impostato, verrà Cerca il framework più alto installato nel computer per un identificatore del framework di destinazione specificata e utilizzarla che."
+      description: Returns the list of directories which contain the redist lists for the most current framework which can be targeted on the machine.  If this is not set Then we will looks for the highest framework installed on the machine for a given target framework identifier and use that.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.LatestTargetFrameworkDirectories*
   exceptions: []
   platform:
@@ -671,12 +671,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il nome del profilo del framework di che destinazione, ad esempio Client, Web o rete"
+  summary: Gets or sets the name of the target framework profile we are targeting, for example  Client, Web, or Network
   syntax:
     content: public string ProfileName { get; set; }
     return:
       type: System.String
-      description: "Restituisce il nome del profilo del framework di che destinazione, ad esempio Client, Web o rete"
+      description: Returns the name of the target framework profile we are targeting, for example  Client, Web, or Network
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.ProfileName*
   exceptions: []
   platform:
@@ -693,12 +693,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene i file correlati, ad esempio XML e PDB con lo stesso nome di base come riferimento."
+  summary: Gets related files, such as .xml and .pdb files with the same base name as a reference.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] RelatedFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I file correlati."
+      description: The related files.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.RelatedFiles*
   exceptions: []
   platform:
@@ -715,12 +715,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene il *n*percorsi ordine alle dipendenze."
+  summary: Gets the *n*th order paths to dependencies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedDependencyFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Il *n*percorsi ordine alle dipendenze."
+      description: The *n*th order paths to dependencies.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedDependencyFiles*
   exceptions: []
   platform:
@@ -737,12 +737,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene un elenco di tutti i riferimenti primari risolti in percorsi completi."
+  summary: Gets a list of all primary references resolved to full paths.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Elenco di tutti i riferimenti primari risolti in percorsi completi."
+      description: The list of all primary references resolved to full paths.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedFiles*
   exceptions: []
   platform:
@@ -759,12 +759,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Un elenco di riferimenti SDK risolti che contengono il nome di sdk, percorso sdk e la configurazione di destinazione.       Questi percorsi verranno cercati solo se il riferimento è i metadati SDKName collegati a esso."
+  summary: "A list of resolved SDK references which contain the sdk name, sdk location and the targeted configuration.  \n  \n These locations will only be searched if the reference has the SDKName metadata attached to it."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedSDKReferences { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedSDKReferences*
   exceptions: []
   platform:
@@ -781,13 +781,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene i file satellite trovati."
-  remarks: "I file satellite avranno il `CopyLocal` metadati dell&quot;elemento con un valore di `true` se il riferimento o una dipendenza che ha causato questo elemento dispone di un `CopyLocal` metadati dell&quot;elemento impostato su `true`."
+  summary: Gets any satellite files found.
+  remarks: The satellite files will have the `CopyLocal` item metadata with a value of `true` if the reference or dependency that caused this item to exist also has a `CopyLocal` item metadata set to `true`.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SatelliteFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I file satellite trovati."
+      description: Any satellite files found.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.SatelliteFiles*
   exceptions: []
   platform:
@@ -804,12 +804,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene i file a dispersione associati a uno degli assembly specificati."
+  summary: Gets the scatter files associated with one of the given assemblies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ScatterFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "I file a dispersione associati a uno degli assembly specificati."
+      description: The scatter files associated with one of the given assemblies.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.ScatterFiles*
   exceptions: []
   platform:
@@ -826,12 +826,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Specifica la directory o percorsi speciali che vengono eseguite la ricerca dei file su disco che rappresentano gli assembly."
+  summary: Specifies the directories or special locations that are searched to find the files on disk that represent the assemblies.
   syntax:
     content: public string[] SearchPaths { get; set; }
     return:
       type: System.String[]
-      description: "La directory o percorsi speciali che vengono eseguite la ricerca dei file su disco che rappresentano gli assembly."
+      description: The directories or special locations that are searched to find the files on disk that represent the assemblies.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.SearchPaths*
   exceptions: []
   platform:
@@ -848,12 +848,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene gli assembly di serializzazione."
+  summary: Gets the serialization assemblies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SerializationAssemblyFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Gli assembly di serializzazione."
+      description: The serialization assemblies.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.SerializationAssemblyFiles*
   exceptions: []
   platform:
@@ -870,13 +870,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore booleano che specifica se non vengono registrati messaggi."
-  remarks: "Il valore predefinito è `false`."
+  summary: Gets or sets a Boolean value that specifies whether no messages are logged.
+  remarks: The default value is `false`.
   syntax:
     content: public bool Silent { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Se non vengono registrati messaggi; in caso contrario, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if no messages are logged; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.Silent*
   exceptions: []
   platform:
@@ -893,12 +893,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un nome di file che indica la posizione in cui salvare lo stato di compilazione intermedio per questa attività."
+  summary: Gets or sets a file name that indicates where to save the intermediate build state for this task.
   syntax:
     content: public string StateFile { get; set; }
     return:
       type: System.String
-      description: "Il nome di file che indica dove salvare intermedie stato di compilazione per questa attività."
+      description: The file name that indicates where to save the intermediate build state for this task.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.StateFile*
   exceptions: []
   platform:
@@ -915,13 +915,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene un elemento per ogni singola identità dell&quot;assembly in conflitto, indipendentemente dal valore della <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify*>proprietà.</xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify*>"
-  remarks: "Gli elementi includono le impostazioni cultura e PKT che sono stati trovati e che non esisteva una voce bindingRedirect nel file di configurazione dell&quot;applicazione."
+  summary: Gets one item for every distinct conflicting assembly identity, regardless of the value of the <xref:Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify*> property.
+  remarks: The items include culture and PKT that were found and that did not have a suitable bindingRedirect entry in the application configuration file.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SuggestedRedirects { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Gli elementi che corrispondono alle identità dell&quot;assembly in conflitto distinti."
+      description: The items that correspond to distinct conflicting assembly identities.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.SuggestedRedirects*
   exceptions: []
   platform:
@@ -938,12 +938,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il nome del runtime di che destinazione, ad esempio 2.0.57027."
+  summary: Gets or sets the name of the runtime we are targeting, for example, 2.0.57027.
   syntax:
     content: public string TargetedRuntimeVersion { get; set; }
     return:
       type: System.String
-      description: "Restituisce il nome del runtime di che destinazione, ad esempio 2.0.57027. Il nome può essere preceduto &quot;v&quot;."
+      description: Returns the name of the runtime we are targeting, for example, 2.0.57027. A "v" may be prefixed to the name.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.TargetedRuntimeVersion*
   exceptions: []
   platform:
@@ -960,13 +960,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il percorso di directory del framework di destinazione."
-  remarks: "Questa proprietà è obbligatoria per determinare la `CopyLocal` stato degli elementi risultanti.       Se questa proprietà non è specificata, nessun elemento risultante avrà un `CopyLocal` valore `true` a meno che non hanno in modo esplicito un `Private` valore dei metadati di `true` nel relativo elemento di origine."
+  summary: Gets or sets the path to the target framework directory.
+  remarks: "This property is required to determine the `CopyLocal` status for resulting items.  \n  \n If this property is not specified, no resulting items will be have a `CopyLocal` value of `true` unless they explicitly have a `Private` metadata value of `true` on their source item."
   syntax:
     content: public string[] TargetFrameworkDirectories { get; set; }
     return:
       type: System.String[]
-      description: "Percorso di directory del framework di destinazione."
+      description: The path to the target framework directory.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories*
   exceptions: []
   platform:
@@ -983,13 +983,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il moniker del framework di destinazione di destinazione, se presente."
-  remarks: "Viene utilizzato per scopi di registrazione."
+  summary: Gets or sets the target framework moniker being targeted, if any.
+  remarks: This is used for logging purposes.
   syntax:
     content: public string TargetFrameworkMoniker { get; set; }
     return:
       type: System.String
-      description: "Restituisce il moniker del framework di destinazione di destinazione, se presente. Restituisce una stringa vuota per impostazione predefinita."
+      description: Returns the target framework moniker being targeted, if any. Returns an empty string by default.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkMoniker*
   exceptions: []
   platform:
@@ -1006,13 +1006,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta il nome visualizzato del moniker del framework di destinazione di destinazione, se presente."
-  remarks: "Viene utilizzato solo per la registrazione."
+  summary: Gets or sets the display name of the target framework moniker being targeted, if any.
+  remarks: This is used only for logging.
   syntax:
     content: public string TargetFrameworkMonikerDisplayName { get; set; }
     return:
       type: System.String
-      description: "Restituisce il nome visualizzato del moniker del framework di destinazione di destinazione, se presente."
+      description: Returns the display name of the target framework moniker being targeted, if any.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkMonikerDisplayName*
   exceptions: []
   platform:
@@ -1029,12 +1029,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Un elenco di nomi di subset framework di destinazione che verrà cercato nella directory di framework di destinazione."
+  summary: A list of target framework subset names that will be searched for in the target framework directories.
   syntax:
     content: public string[] TargetFrameworkSubsets { get; set; }
     return:
       type: System.String[]
-      description: "Da aggiungere."
+      description: To be added.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkSubsets*
   exceptions: []
   platform:
@@ -1051,13 +1051,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta la versione di framework di destinazione di progetto utilizzata per filtrare i riferimenti."
-  remarks: "Il valore predefinito è una stringa vuota."
+  summary: Gets or sets the project target framework version used for reference filtering.
+  remarks: The default value is an empty string.
   syntax:
     content: public string TargetFrameworkVersion { get; set; }
     return:
       type: System.String
-      description: "Il progetto versione framework di destinazione utilizzata per filtrare i riferimenti."
+      description: The project target framework version used for reference filtering.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkVersion*
   exceptions: []
   platform:
@@ -1074,12 +1074,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta l&quot;architettura del processore di destinazione preferita consente di risolvere i riferimenti Global Assembly Cache (GAC), che può avere un valore di `x86`, `IA64`, o `AMD64`."
+  summary: Gets or sets the preferred target processor architecture used for resolving Global Assembly Cache (GAC) references, which can have a value of `x86`, `IA64`, or `AMD64`.
   syntax:
     content: public string TargetProcessorArchitecture { get; set; }
     return:
       type: System.String
-      description: "L&quot;architettura del processore di destinazione preferita utilizzato per risolvere i riferimenti Global Assembly Cache (GAC)."
+      description: The preferred target processor architecture used for resolving Global Assembly Cache (GAC) references.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.TargetProcessorArchitecture*
   exceptions: []
   platform:
@@ -1096,12 +1096,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ottiene o imposta un valore stringa che specifica il comportamento quando una mancata corrispondenza tra l&quot;architettura del processore di destinazione e l&quot;architettura di un riferimento principale. Quando questo è &quot;Error&quot;, verrà registrato un errore per una mancata corrispondenza. Quando questo è &quot;avviso&quot;, verrà registrato un avviso per una mancata corrispondenza. Quando questo è &quot;None&quot;, non verrà registrata alcun errore o avviso per una mancata corrispondenza."
+  summary: Gets or sets a string value specifying the behavior when a mismatch between the target processor architecture and the architecture of a primary reference. When this is “Error”, an error will be logged for a mismatch. When this is “Warning”, a warning will be logged for a mismatch. When this is “None”, no error or warning will be logged for a mismatch.
   syntax:
     content: public string WarnOrErrorOnTargetArchitectureMismatch { get; set; }
     return:
       type: System.String
-      description: "Restituisce un valore stringa &quot;Error&quot;, &quot;Warning&quot; o &quot;None&quot;."
+      description: Returns a string value of “Error”, “Warning” or “None”.
   overload: Microsoft.Build.Tasks.ResolveAssemblyReference.WarnOrErrorOnTargetArchitectureMismatch*
   exceptions: []
   platform:
