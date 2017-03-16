@@ -11,7 +11,7 @@ items:
   nameWithType: IForwardingLogger
   fullName: Microsoft.Build.Framework.IForwardingLogger
   type: Interface
-  summary: "Расширяет <xref href=&quot;Microsoft.Build.Framework.ILogger&quot;> </xref> интерфейс, чтобы предоставить свойства для передачи событий в средство ведения журнала в другом процессе. Также можно создать средств ведения журнала фильтрации."
+  summary: Extends the <xref href="Microsoft.Build.Framework.ILogger"></xref> interface to provide properties to forward events to a logger running in a different process. It can also be used create filtering loggers.
   syntax:
     content: 'public interface IForwardingLogger : Microsoft.Build.Framework.INodeLogger'
   implements:
@@ -30,12 +30,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Возвращает или задает обработчиком построения, чтобы разрешить средствам ведения журнала узла перенаправлять сообщения в центральное средство ведения журнала."
+  summary: Get or set by the build engine to allow node loggers to forward messages to the central logger.
   syntax:
     content: public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }
     return:
       type: Microsoft.Build.Framework.IEventRedirector
-      description: "<xref href=&quot;Microsoft.Build.Framework.IEventRedirector&quot;> </xref> Представляющий перенаправления событий для пересылки сообщений."
+      description: An <xref href="Microsoft.Build.Framework.IEventRedirector"></xref> representing the event redirector to forward messages to.
   overload: Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector*
   exceptions: []
   platform:
@@ -52,12 +52,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Возвращает или задает обработчик построения или узел для информирования переадресации, на каком узле выполняется."
+  summary: Get or set by the build engine or node to inform the forwarding logger on which node it is running.
   syntax:
     content: public int NodeId { get; set; }
     return:
       type: System.Int32
-      description: "Целое число, представляющее идентификатор узла, на котором запущен обработчик построения."
+      description: An integer representing the node ID on which the build engine is running.
   overload: Microsoft.Build.Framework.IForwardingLogger.NodeId*
   exceptions: []
   platform:

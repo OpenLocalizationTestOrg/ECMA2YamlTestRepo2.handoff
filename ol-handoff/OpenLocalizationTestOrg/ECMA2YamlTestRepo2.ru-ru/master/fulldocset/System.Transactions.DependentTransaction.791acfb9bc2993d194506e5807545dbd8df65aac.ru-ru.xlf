@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">91b5b3d9a48a7ab24577f5cf25e25ed68303846d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Transactions.DependentTransaction.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">95632a06fcdcc5589577633a3e98cc3e02ee5635</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">43c9af301b888ff4e45a9fcd74d3fdeb4cfce574</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Describes a clone of a transaction providing guarantee that the transaction cannot be committed until the application comes to rest regarding work on the transaction.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The DependentTransaction is a clone of a &lt;xref:System.Transactions.Transaction&gt; object created using the &lt;xref:System.Transactions.Transaction.DependentClone%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Its sole purpose is to allow the application to come to rest and guarantee that the transaction cannot commit while work is still being performed on the transaction (for example, on a worker thread).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the work done within the cloned transaction is finally complete and ready to be committed, it can inform the creator of the transaction using the &lt;xref:System.Transactions.DependentTransaction.Complete%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Thus you can preserve the consistency and correctness of data.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Transactions.DependentCloneOption&gt; enumeration is used to determine the behavior on commit.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior control allows an application to come to rest, as well as provides concurrency support.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on how this enumeration is used, see <bpt id="p1">[</bpt>Managing Concurrency with DependentTransaction<ept id="p1">](http://msdn.microsoft.com/en-us/bdad8468-2a90-4b81-8375-278067120cab)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Attempts to complete the dependent transaction.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Call this method when the dependent clone wants to inform the creator of the transaction that it has finished its work, and the transaction can be committed if the parent is also ready.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After this call is invoked, you should not attempt any additional work on the transaction, or an exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the application domain goes down after this method is called, and before the transaction is completed, the transaction might abort.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">**</bpt>Note<ept id="p1">**</ept> This method should be called only once during the dependent transaction's lifetime.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Any attempt for additional work on the transaction after this method is called.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>These include invoking methods such as &lt;xref:System.Transactions.Transaction.EnlistVolatile<bpt id="p1">*</bpt>&gt;, &lt;xref:System.Transactions.Transaction.EnlistDurable<ept id="p1">*</ept>&gt;, &lt;xref:System.Transactions.Transaction.Clone<bpt id="p2">*</bpt>&gt;, &lt;xref:System.Transactions.Transaction.DependentClone<ept id="p2">*</ept>&gt; , or any serialization operations on the transaction.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

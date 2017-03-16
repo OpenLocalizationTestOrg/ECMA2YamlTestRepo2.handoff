@@ -40,8 +40,8 @@ items:
   nameWithType: Rule
   fullName: Microsoft.Build.Framework.XamlTypes.Rule
   type: Class
-  summary: "Используется для представления сведения о схеме для инструмента, настраиваемого правила построения, страницу свойств и т. д."
-  remarks: "Обычно представляемый на диск как XAML, только один экземпляр этого класса сохраняется в XAML-файла ядра проекта (решение).       Если вручную экземпляра этого класса вызовите <xref:Microsoft.Build.Framework.XamlTypes.Rule.BeginInit%2A>перед установкой первого свойства объекта и <xref:Microsoft.Build.Framework.XamlTypes.Rule.EndInit%2A>после установки последнего свойства.</xref:Microsoft.Build.Framework.XamlTypes.Rule.EndInit%2A> </xref:Microsoft.Build.Framework.XamlTypes.Rule.BeginInit%2A>"
+  summary: Used to represent the schema information for a Tool, a Custom Build Rule, a PropertyPage, and so on.
+  remarks: "Typically represented on disk as XAML, only one instance of this class is maintained per XAML file per project engine (solution).  \n  \n If you manually instantiate this class, call <xref:Microsoft.Build.Framework.XamlTypes.Rule.BeginInit%2A> before you set the first property of the object and <xref:Microsoft.Build.Framework.XamlTypes.Rule.EndInit%2A> after you set the last property."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("Rule: {Name}")]
@@ -70,7 +70,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Конструктор по умолчанию. Необходим для десериализации из сохраненного формата."
+  summary: Default constructor. Required for deserialization from a persisted format.
   syntax:
     content: public Rule ();
     parameters: []
@@ -90,13 +90,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "При этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> представляет настройку построения, это поле определяет разделенный точками с запятыми список дополнительных входных данных, которые необходимо оценить для целевого объекта настройки построения."
-  remarks: "Это поле является необязательным."
+  summary: When this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> represents a Build Customization, this field defines the semicolon-separated list of additional inputs to be evaluated for the Build Customization target.
+  remarks: This field is optional.
   syntax:
     content: public string AdditionalInputs { get; set; }
     return:
       type: System.String
-      description: "Возвращает разделенный точками с запятыми список дополнительных входных данных."
+      description: Returns a semicolon-separated list of additional inputs.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.AdditionalInputs*
   exceptions: []
   platform:
@@ -113,7 +113,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "В разделе <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.</xref:System.ComponentModel.ISupportInitialize.BeginInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.
   syntax:
     content: public void BeginInit ();
     parameters: []
@@ -133,13 +133,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает список <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Category&quot;> </xref> категории, свойства в этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> принадлежат."
-  remarks: "Это поле является необязательным. Поле возвращает только те категории, которые были явно определены и не содержат все автоматически сгенерированные категории. При <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>, содержащихся в данном <xref:Microsoft.Build.Framework.XamlTypes.Rule>объявляет категории на что-то, которого нет в списке, а затем <xref:Microsoft.Build.Framework.XamlTypes.Category>, имеет имя auto создается и добавляется во внутренний список категорий.</xref:Microsoft.Build.Framework.XamlTypes.Category> </xref:Microsoft.Build.Framework.XamlTypes.Rule> </xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> Автоматически сгенерированные категории не возвращаются по этому полю."
+  summary: Gets or sets the list of <xref href="Microsoft.Build.Framework.XamlTypes.Category"></xref> categories that the properties in this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> belong to.
+  remarks: This field is optional. The field returns only the categories that were explicitly defined and that do not contain any auto-generated categories. When a <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> that is contained in this <xref:Microsoft.Build.Framework.XamlTypes.Rule> declares its category to be something that is not present in this list, then a <xref:Microsoft.Build.Framework.XamlTypes.Category> that has that name is auto-generated and added to the internal list of categories. That auto-generated category is not returned by this field.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.Category> Categories { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.Category}
-      description: "Возвращает список свойств."
+      description: Returns the list of properties.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Categories*
   exceptions: []
   platform:
@@ -156,13 +156,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "При этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> представляет настройку построения, это поле представляет шаблон командной строки, используемый задачей настройки построения для вызова инструмента."
-  remarks: "Это поле является необязательным."
+  summary: When this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> represents a Build Customization, this field represents the command-line template to be used by a Build Customization task to invoke the tool.
+  remarks: This field is optional.
   syntax:
     content: public string CommandLine { get; set; }
     return:
       type: System.String
-      description: "Возвращает шаблон командной строки."
+      description: Returns the command-line template.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.CommandLine*
   exceptions: []
   platform:
@@ -179,13 +179,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Источник данных для свойства в этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref>. Это значение переопределяется любой источник данных, определенные локально для свойства."
-  remarks: "Необходимо указать в этом поле, если все отдельные свойства источников данных определенные локально."
+  summary: The DataSource for the properties in this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref>. This is overridden by any data source that is defined locally for a property.
+  remarks: You do not have to specify this field if all individual properties have data sources defined locally.
   syntax:
     content: public Microsoft.Build.Framework.XamlTypes.DataSource DataSource { get; set; }
     return:
       type: Microsoft.Build.Framework.XamlTypes.DataSource
-      description: "Возвращает источник данных."
+      description: Returns the data source.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.DataSource*
   exceptions: []
   platform:
@@ -202,13 +202,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает описание данного <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> для использования клиентом потенциального пользовательского интерфейса."
-  remarks: "Это поле является необязательным и зависящих от языка и региональных параметров."
+  summary: Gets or sets a description of this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> for use by a prospective UI client.
+  remarks: This field is optional and is culture-sensitive.
   syntax:
     content: public string Description { get; set; }
     return:
       type: System.String
-      description: "Возвращает описание."
+      description: Returns the description.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Description*
   exceptions: []
   platform:
@@ -225,13 +225,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает имя, которое может использоваться потенциальному клиенту пользовательского интерфейса для отображения <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref>."
-  remarks: "Это поле является необязательным и зависящих от языка и региональных параметров.       Когда это свойство не задано, ей назначается значение совпадает с <xref:Microsoft.Build.Framework.XamlTypes.Rule.Name%2A>свойство (и, следовательно, может не быть локализовано).</xref:Microsoft.Build.Framework.XamlTypes.Rule.Name%2A>"
+  summary: Gets or sets a name that can be used by a prospective UI client to display this <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref>.
+  remarks: "This field is optional and is culture-sensitive.  \n  \n When this property is not set, it is assigned the same value as the <xref:Microsoft.Build.Framework.XamlTypes.Rule.Name%2A> property (and, therefore, would not be localized)."
   syntax:
     content: public string DisplayName { get; set; }
     return:
       type: System.String
-      description: "Возвращает имя."
+      description: Returns the name.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.DisplayName*
   exceptions: []
   platform:
@@ -248,7 +248,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "В разделе <xref:System.ComponentModel.ISupportInitialize.EndInit*>.</xref:System.ComponentModel.ISupportInitialize.EndInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.EndInit*>.
   syntax:
     content: public void EndInit ();
     parameters: []
@@ -268,12 +268,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает объединение XAML указано <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Category&quot;> </xref> категории и автоматически генерируемым <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Category&quot;> </xref> категории. Последние создаются из отсутствующих категорий, на которые ссылаются свойства в этом правиле. Автоматически сгенерированный <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Category&quot;> </xref> категории достаточно задать имена."
+  summary: Returns the union of XAML specified <xref href="Microsoft.Build.Framework.XamlTypes.Category"></xref> categories and auto-generated <xref href="Microsoft.Build.Framework.XamlTypes.Category"></xref> categories. The latter are created from any missing categories that are referred to by the properties in this Rule. The auto-generated <xref href="Microsoft.Build.Framework.XamlTypes.Category"></xref> categories only have their names set.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.Category> EvaluatedCategories { get; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.Category}
-      description: "Возвращает объединение категорий."
+      description: Returns the union of categories.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.EvaluatedCategories*
   exceptions: []
   platform:
@@ -290,13 +290,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "При этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> представляет настройку построения, это поле представляет сообщение, отображаемое перед выполнением настройки построения во время построения."
-  remarks: "Это поле является необязательным."
+  summary: When this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> represents a Build Customization, this field represents the message to be displayed before a Build Customization is executed during the build.
+  remarks: This field is optional.
   syntax:
     content: public string ExecutionDescription { get; set; }
     return:
       type: System.String
-      description: "Возвращает сообщение."
+      description: Returns the message.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.ExecutionDescription*
   exceptions: []
   platform:
@@ -313,13 +313,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "При этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> представляет настройку построения, это поле представляет расширение имени файла для связывания."
-  remarks: "Это поле является необязательным."
+  summary: When this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> represents a Build Customization, this field represents the file name extension to associate.
+  remarks: This field is optional.
   syntax:
     content: public string FileExtension { get; set; }
     return:
       type: System.String
-      description: "Возвращает расширение имени файла."
+      description: Returns the file name extension.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.FileExtension*
   exceptions: []
   platform:
@@ -336,14 +336,14 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает словарь всех свойств, разделенных по категориям."
-  remarks: "Возвращаемый список может содержать автоматически сгенерированные категории. Если <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>(или его производные классы) см. свойство, которое не указан, то для него создается новая категория</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> Если категория не указана для свойства, свойство будет помещено в категории «Общие».       Именно это список категорий как указано в файле XAML. Автоматически сгенерированные категории поставляются после указанной категории, но не по порядку."
+  summary: Returns a dictionary of all properties partitioned into categories.
+  remarks: "The returned list may contain auto-generated categories. If a <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> (or its derived classes) refer to a property that is not specified, then an new Category is generated for it. If no category is specified for the property, then the property is put in the \"General\" category.  \n  \n The list of categories is exactly as specified in the XAML file. The auto-generated categories come after the specified categories but in no strict order."
   syntax:
     content: public System.Collections.Specialized.OrderedDictionary GetPropertiesByCategory ();
     parameters: []
     return:
       type: System.Collections.Specialized.OrderedDictionary
-      description: "Возвращает словарь, где ключи — это <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Category&quot;> </xref> имена и значения которого являются список свойств в этой категории. Возвращаемое значение не может быть <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref>."
+      description: Returns a dictionary whose keys are the <xref href="Microsoft.Build.Framework.XamlTypes.Category"></xref> names and whose values are the list of properties in that category. The returned value is never <xref uid="langword_csharp_null" name="null" href=""></xref>.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesByCategory*
   exceptions: []
   platform:
@@ -360,16 +360,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает список свойств в <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Category&quot;> </xref>."
+  summary: Returns the list of properties in a <xref href="Microsoft.Build.Framework.XamlTypes.Category"></xref>.
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Framework.XamlTypes.BaseProperty> GetPropertiesInCategory (string categoryName);
     parameters:
     - id: categoryName
       type: System.String
-      description: "Имя категории, свойства которого должны быть возвращены."
+      description: The name of the category whose properties are to be returned.
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Framework.XamlTypes.BaseProperty}
-      description: "Возвращает список свойств в <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Category&quot;> </xref>. Возвращает <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref> при этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> не содержит этой категории."
+      description: Returns the list of properties in a <xref href="Microsoft.Build.Framework.XamlTypes.Category"></xref>. Returns <xref uid="langword_csharp_null" name="null" href=""></xref> if this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> does not contain this category.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesInCategory*
   exceptions: []
   platform:
@@ -386,16 +386,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает свойство с указанным именем."
+  summary: Gets the property with the specified name.
   syntax:
     content: public Microsoft.Build.Framework.XamlTypes.BaseProperty GetProperty (string propertyName);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Имя свойства."
+      description: The name of the property.
     return:
       type: Microsoft.Build.Framework.XamlTypes.BaseProperty
-      description: "Возвращает свойство с указанным именем или значение null, если свойство с совпадающим именем не найдено."
+      description: Returns the property with the specified name, or null if no property with a matching name is found.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.GetProperty*
   exceptions: []
   platform:
@@ -412,16 +412,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает перечислитель по всем экземплярам статических данных, принадлежащих к заданному типу."
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "Тип извлекаемых статических данных."
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "Возвращает перечислитель по всем экземплярам статических данных, принадлежащих к заданному типу. Возвращает <xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;> </xref> или пустой список, если не имеется ни одного объекта заданного типа данным узлом."
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if no objects of the given type are provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjects*
   exceptions: []
   platform:
@@ -438,13 +438,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает перечислитель по всем типам статических данных для управляемых данными функций, которые содержит этот узел."
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "Возвращает перечислитель по всем типам статических данных для управляемых данными функций, которые содержит этот узел."
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -461,13 +461,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает справочной информации для этого <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref>."
-  remarks: "Может использоваться для указания URL-адрес справки. Это поле является необязательным и зависящих от языка и региональных параметров."
+  summary: Gets or sets Help information for this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref>.
+  remarks: Can be used to specify a Help URL. This field is optional and is culture-sensitive.
   syntax:
     content: public string HelpString { get; set; }
     return:
       type: System.String
-      description: "Возвращает текст справки."
+      description: Returns the Help information.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.HelpString*
   exceptions: []
   platform:
@@ -484,12 +484,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает произвольные метаданные, которые может быть задана для правила."
+  summary: Gets or sets arbitrary metadata that may be set on a rule.
   syntax:
     content: public System.Collections.Generic.Dictionary<string,object> Metadata { get; set; }
     return:
       type: System.Collections.Generic.Dictionary{System.String,System.Object}
-      description: "Возвращает &lt;xref:System.Collections.Generic.Dictionary%602&gt;."
+      description: Returns &lt;xref:System.Collections.Generic.Dictionary%602&gt;.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Metadata*
   exceptions: []
   platform:
@@ -506,13 +506,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Имя данного <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref>."
-  remarks: "Это поле является обязательным и языка и региональных параметров. Значение этого поля нельзя задать пустую строку."
+  summary: The name of this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref>.
+  remarks: This field is mandatory and culture-invariant. The value of this field cannot be set to the empty string.
   syntax:
     content: public string Name { get; set; }
     return:
       type: System.String
-      description: "Возвращает имя."
+      description: Returns the name.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Name*
   exceptions: []
   platform:
@@ -529,12 +529,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Получает или задает предложение потенциальному клиенту пользовательского интерфейса для относительное расположение <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> по сравнению с другими правилами в системе."
+  summary: Gets or sets a suggestion to a prospective UI client for the relative location of this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> compared to all other Rules in the system.
   syntax:
     content: public int Order { get; set; }
     return:
       type: System.Int32
-      description: "Возвращает предложение."
+      description: Returns the suggestion.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Order*
   exceptions: []
   platform:
@@ -551,13 +551,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "При этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> представляет настройку построения, это поле определяет разделенный точками с запятыми список выходных данных, которые необходимо оценить для целевого объекта настройки построения."
-  remarks: "Это поле является необязательным."
+  summary: When this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> represents a Build Customization, this field defines the semicolon-separated list of outputs that are to be evaluated for the Build Customization target.
+  remarks: This field is optional.
   syntax:
     content: public string Outputs { get; set; }
     return:
       type: System.String
-      description: "Возвращает выходные данные."
+      description: Returns the outputs.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Outputs*
   exceptions: []
   platform:
@@ -574,12 +574,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает метод, используемый, когда появляются несколько правил с тем же именем в проекте, чтобы согласовать правила в одном экземпляре."
+  summary: Gets or sets the method to use when multiple rules with the same name appear in the project to reconcile the rules into one instance.
   syntax:
     content: public Microsoft.Build.Framework.XamlTypes.RuleOverrideMode OverrideMode { get; set; }
     return:
       type: Microsoft.Build.Framework.XamlTypes.RuleOverrideMode
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.XamlTypes.RuleOverrideMode&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.XamlTypes.RuleOverrideMode"></xref>.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.OverrideMode*
   exceptions: []
   platform:
@@ -596,13 +596,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает шаблон визуализации пользовательского интерфейса, который используется для отображения этого правила."
-  remarks: "Значение, используемое для этого поля может быть что-либо, при условии, что распознается предполагаемым шаблоном отрисовки.       Это поле является обязательным только в том случае, если это правило предназначено для отображения в качестве страницы свойств."
+  summary: Gets or sets the UI rendering template that is used to display this Rule.
+  remarks: "The value used to set this field can be anything as long as it is recognized by the intended rendering template.  \n  \n This field is required only if this Rule is meant to be displayed as a property page."
   syntax:
     content: public string PageTemplate { get; set; }
     return:
       type: System.String
-      description: "Возвращает шаблон пользовательского интерфейса."
+      description: Returns the UI template.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.PageTemplate*
   exceptions: []
   platform:
@@ -619,13 +619,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает список свойств в этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref>."
-  remarks: "Необходимо указать хотя бы одно свойство. Список, возвращаемый этим свойством, не должно изменяться."
+  summary: Gets or sets the list of properties in this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref>.
+  remarks: At least one property must be specified. The list returned by this property should not be modified.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.BaseProperty> Properties { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.BaseProperty}
-      description: "Возвращает список свойств."
+      description: Returns the list of properties.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Properties*
   exceptions: []
   platform:
@@ -642,12 +642,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает флаг, указывающий, будут ли скрыты страницы свойств для этого правила."
+  summary: Gets or sets a flag indicating whether property pages for this rule are hidden.
   syntax:
     content: public bool PropertyPagesHidden { get; set; }
     return:
       type: System.Boolean
-      description: "Возвращает флаг, указывающий значение."
+      description: Returns flag value.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.PropertyPagesHidden*
   exceptions: []
   platform:
@@ -664,13 +664,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Получает или задает токен, используемый для разделения ключа свойства и его значение."
-  remarks: "Указанное здесь значение переопределяется значение, указанное в <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator%2A>дочерних <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> </xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator%2A>       Это поле является необязательным и языка и региональных параметров."
+  summary: Gets or sets a token that is used to separate a property switch from its value.
+  remarks: "The value specified here is overridden by the value specified by the <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator%2A> of the child <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.  \n  \n This field is optional and culture-invariant."
   syntax:
     content: public string Separator { get; set; }
     return:
       type: System.String
-      description: "Возвращает разделитель токена."
+      description: Returns the token separator.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.Separator*
   exceptions: []
   platform:
@@ -687,13 +687,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает флаг, определяющий, следует ли скрывать категория командной строки."
-  remarks: "Это поле является необязательным.       Значение по умолчанию — `true`."
+  summary: Gets or sets a flag that determines whether to hide the command-line category.
+  remarks: "This field is optional.  \n  \n The default value is `true`."
   syntax:
     content: public bool ShowOnlyRuleProperties { get; set; }
     return:
       type: System.Boolean
-      description: "Возвращает <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> Если категории командной строки, скрытые, в противном случае — <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if command-line categories are hidden; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.ShowOnlyRuleProperties*
   exceptions: []
   platform:
@@ -710,13 +710,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает флаг, который определяет, является ли несколько файлов могут быть объединены в один вызов командной строки."
-  remarks: "Это поле является необязательным."
+  summary: Gets or sets a flag that determines whether multiple files can be batched on one command-line invocation.
+  remarks: This field is optional.
   syntax:
     content: public bool SupportsFileBatching { get; set; }
     return:
       type: System.Boolean
-      description: "Возвращает <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> Если можно несколько файлов в пакетном режиме, в противном случае — <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if multiple files can be batched; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.SupportsFileBatching*
   exceptions: []
   platform:
@@ -733,13 +733,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает префикс, используемый для всех коммутаторов свойства в этом <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> для случая, когда это свойство <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> представляет собой инструмент."
-  remarks: "Значение, указанное могут быть переопределены значения, указанного в <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix%2A>дочерних <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> </xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix%2A>       Это поле является необязательным и языка и региональных параметров."
+  summary: Gets or sets the prefix to use for all property switches in this <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> for the case when this property <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> represents a tool.
+  remarks: "The value specified can be overridden by the value specified by the <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix%2A> of a child <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.  \n  \n This field is optional and culture-invariant."
   syntax:
     content: public string SwitchPrefix { get; set; }
     return:
       type: System.String
-      description: "Возвращает префикс."
+      description: Returns the prefix.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.SwitchPrefix*
   exceptions: []
   platform:
@@ -756,12 +756,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Возвращает или задает имя инструмента, если правило представляет инструмент."
+  summary: Gets or sets the name of the tool when this rule represents a tool.
   syntax:
     content: public string ToolName { get; set; }
     return:
       type: System.String
-      description: "Возвращает имя средства."
+      description: Returns the name of the tool.
   overload: Microsoft.Build.Framework.XamlTypes.Rule.ToolName*
   exceptions: []
   platform:

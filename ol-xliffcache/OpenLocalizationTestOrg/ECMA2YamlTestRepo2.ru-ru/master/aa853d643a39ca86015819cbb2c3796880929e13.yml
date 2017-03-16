@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectUsingTaskBodyElement
   fullName: Microsoft.Build.Construction.ProjectUsingTaskBodyElement
   type: Class
-  summary: "Представляет тело встроенной задачи."
+  summary: Represents the body of an inline task.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("Evaluate={Evaluate} TaskBody={TaskBody}")]
@@ -47,12 +47,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Получает значение null, так как атрибут Condition не существует для данного элемента и несуществующее условие неявно устанавливается на true."
+  summary: Gets null because the Condition attribute is nonexistent for this element and a nonexistent condition is implicitly true.
   syntax:
     content: public override string Condition { get; set; }
     return:
       type: System.String
-      description: "Возвращает значение null."
+      description: Returns a null.
   overload: Microsoft.Build.Construction.ProjectUsingTaskBodyElement.Condition*
   exceptions: []
   platform:
@@ -69,12 +69,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Не используйте. Атрибут Condition не существует для <xref href=&quot;Microsoft.Build.Construction.ProjectUsingTaskBodyElement&quot;> </xref>. Get вызывает внутреннюю ошибку."
+  summary: Do not use. The Condition attribute is nonexistent for <xref href="Microsoft.Build.Construction.ProjectUsingTaskBodyElement"></xref>. Get throws an internal error.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Вызывает внутреннюю ошибку и возвращает значение null."
+      description: Throws an internal error and returns null.
   overload: Microsoft.Build.Construction.ProjectUsingTaskBodyElement.ConditionLocation*
   exceptions: []
   platform:
@@ -91,13 +91,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Возвращает значение атрибута Evaluate."
-  remarks: "Если «true», расширяет элемент и значения свойств в теле встроенной задачи."
+  summary: Gets the value of the Evaluate attribute.
+  remarks: If "true", expands the item and property values in the inline task body.
   syntax:
     content: public string Evaluate { get; set; }
     return:
       type: System.String
-      description: "Возвращает значение атрибута Evaluate, который является «true» или «false». Возвращает значение «true», если атрибут не присутствует."
+      description: Returns the value of the Evaluate attribute, which is either "true" or "false". Returns "true" if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskBodyElement.Evaluate*
   exceptions: []
   platform:
@@ -114,12 +114,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Расположение атрибута оценить этот элемент, если таковые имеются."
+  summary: Location of the Evaluate attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation EvaluateLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Возвращает расположение атрибута Evaluate. Если атрибут отсутствует, возвращает расположение элемента, вместо расположение атрибута по умолчанию."
+      description: Returns Evaluate attribute location. If there is no such attribute, returns the location of the element, instead of the location of the default attribute.
   overload: Microsoft.Build.Construction.ProjectUsingTaskBodyElement.EvaluateLocation*
   exceptions: []
   platform:
@@ -136,12 +136,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Возвращает или задает неоцененные значение содержимого встроенной задачи."
+  summary: Gets or sets the unevaluated value of the contents of the inline task.
   syntax:
     content: public string TaskBody { get; set; }
     return:
       type: System.String
-      description: "Возвращает неоцененные внутреннее XML-содержимое встроенной задачи. Если тело встроенной задачи отсутствует, возвращает пустую строку."
+      description: Returns the unevaluated inner XML content of the inline task. Returns an empty string if no inline task body is present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskBodyElement.TaskBody*
   exceptions: []
   platform:

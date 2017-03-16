@@ -18,7 +18,7 @@ items:
   nameWithType: ToolTaskExtension
   fullName: Microsoft.Build.Tasks.ToolTaskExtension
   type: Class
-  summary: "Содержит расширенные служебные методы для построения задачи, которая служит оболочкой для программы командной строки."
+  summary: Comprises extended utility methods for constructing a task that wraps a command line tool.
   syntax:
     content: 'public abstract class ToolTaskExtension : Microsoft.Build.Utilities.ToolTask'
   inheritance:
@@ -87,13 +87,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Заполняет указанный <xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> с переключатели и другие сведения, которые средство командной строки необходимо запустить из командной строки, а не из файла ответов."
+  summary: Fills the specified <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> with the switches and other information that the command line tool must run from the command line and not from a response file.
   syntax:
     content: protected virtual void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "<xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> Для заполнения."
+      description: The <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> to fill.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -110,13 +110,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Заполняет указанный <xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> с переключатели и другие сведения, которые можно запустить средство командной строки из файла ответов."
+  summary: Fills the specified <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> with the switches and other information that the command line tool can run from a response file.
   syntax:
     content: protected virtual void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "<xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> Для заполнения."
+      description: The <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> to fill.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.AddResponseFileCommands*
   exceptions: []
   platform:
@@ -133,12 +133,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает коллекцию параметров, используемых производным классом задачи."
+  summary: Gets the collection of parameters used by the derived task class.
   syntax:
     content: protected System.Collections.Hashtable Bag { get; }
     return:
       type: System.Collections.Hashtable
-      description: "Коллекция параметров, используемых производным классом задачи."
+      description: The collection of parameters used by the derived task class.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.Bag*
   exceptions: []
   platform:
@@ -155,13 +155,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает параметры и другие сведения, которые средство командной строки должно запускать непосредственно из командной строки, а не из файла ответов."
+  summary: Gets the switches and other information that the command line tool must run directly from the command line and not from a response file.
   syntax:
     content: protected override string GenerateCommandLineCommands ();
     parameters: []
     return:
       type: System.String
-      description: "Строка, содержащая переключатели и другие сведения, которые средство командной строки должно запускать непосредственно из командной строки, а не из файла ответов."
+      description: A string containing the switches and other information that the command line tool must run directly from the command line and not from a response file.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GenerateCommandLineCommands*
   exceptions: []
   platform:
@@ -178,13 +178,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает ключ, используемый средством командной строки для указания файла ответов."
+  summary: Gets the switch used by the command line tool to specify the response file.
   syntax:
     content: protected override string GenerateResponseFileCommands ();
     parameters: []
     return:
       type: System.String
-      description: "Ключ, используемый средством командной строки для указания файла ответов."
+      description: The switch used by the command line tool to specify the response file.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GenerateResponseFileCommands*
   exceptions: []
   platform:
@@ -201,20 +201,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает значение заданного логического параметра."
-  remarks: "Если `parameterName` не существует в <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` возвращается.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>"
+  summary: Gets the value of the specified Boolean parameter.
+  remarks: If `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` is returned.
   syntax:
     content: protected bool GetBoolParameterWithDefault (string parameterName, bool defaultValue);
     parameters:
     - id: parameterName
       type: System.String
-      description: "Имя возвращаемого параметра запроса."
+      description: The name of the parameter to return.
     - id: defaultValue
       type: System.Boolean
-      description: "Значение, возвращаемое, если `parameterName` не существует в списке <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>"
+      description: The value to return if `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.
     return:
       type: System.Boolean
-      description: "Значение параметра."
+      description: The parameter value.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GetBoolParameterWithDefault*
   exceptions: []
   platform:
@@ -231,20 +231,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Получает значение заданного целочисленного параметра."
-  remarks: "Если `parameterName` не существует в <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` возвращается.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>"
+  summary: Gets the value of the specified integer parameter.
+  remarks: If `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` is returned.
   syntax:
     content: protected int GetIntParameterWithDefault (string parameterName, int defaultValue);
     parameters:
     - id: parameterName
       type: System.String
-      description: "Имя возвращаемого параметра запроса."
+      description: The name of the parameter to return.
     - id: defaultValue
       type: System.Int32
-      description: "Значение, возвращаемое, если `parameterName` не существует в списке <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>"
+      description: The value to return if `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.
     return:
       type: System.Int32
-      description: "Значение параметра."
+      description: The parameter value.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GetIntParameterWithDefault*
   exceptions: []
   platform:
@@ -261,12 +261,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает ли ToolTask ошибки в журнал."
+  summary: Returns whether this ToolTask has logged any errors.
   syntax:
     content: protected override bool HasLoggedErrors { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Если ошибки компонентом ToolTask <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Если в противном случае."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the ToolTask logged errors, <xref uid="langword_csharp_false" name="false" href=""></xref> if otherwise.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.HasLoggedErrors*
   exceptions: []
   platform:
@@ -283,12 +283,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает экземпляр <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> класс, содержащий методы ведения журнала."
+  summary: Gets an instance of a <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class containing task logging methods.
   syntax:
     content: public Microsoft.Build.Utilities.TaskLoggingHelper Log { get; }
     return:
       type: Microsoft.Build.Utilities.TaskLoggingHelper
-      description: "Экземпляр <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> класс, содержащий методы ведения журнала."
+      description: An instance of a <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class containing task logging methods.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.Log*
   exceptions: []
   platform:

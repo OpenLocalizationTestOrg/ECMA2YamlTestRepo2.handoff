@@ -10,8 +10,8 @@ items:
   nameWithType: INodeLogger
   fullName: Microsoft.Build.Framework.INodeLogger
   type: Interface
-  summary: "Определяет «параллельные учитывать средства ведения журнала» в системе построения."
-  remarks: "Параллельные учитывать ведения журнала принимает значение счетчика ЦП. Число ЦП больше 1 означает получения событий из средства ведения журнала каждого ЦП по мере регистрации событий построения."
+  summary: Defines a "parallel aware logger" in the build system.
+  remarks: A parallel aware logger accepts a CPU count. A CPU count greater than 1 means that build events are received from each CPU's logger as the events are logged.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -33,16 +33,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Инициализирует средство ведения журнала."
+  summary: Initializes the logger.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "<xref href=&quot;Microsoft.Build.Framework.IEventSource&quot;> </xref> Объект, представляющий источник события построения."
+      description: An <xref href="Microsoft.Build.Framework.IEventSource"></xref> object representing the build event source.
     - id: nodeCount
       type: System.Int32
-      description: "Количество процессоров."
+      description: The number of CPUs.
   overload: Microsoft.Build.Framework.INodeLogger.Initialize*
   exceptions: []
   platform:

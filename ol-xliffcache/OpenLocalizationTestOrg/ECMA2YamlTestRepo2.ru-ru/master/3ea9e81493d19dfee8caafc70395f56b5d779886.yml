@@ -17,8 +17,8 @@ items:
   nameWithType: BuildSubmission
   fullName: Microsoft.Build.Execution.BuildSubmission
   type: Class
-  summary: "Представляет запрос построения, который был отправлен в диспетчере построений для обработки. Методы этого класса может использоваться для выполнения запросов на построение синхронной или асинхронной и для предоставления доступа к результатам по завершении."
-  remarks: "Этот класс является потокобезопасным."
+  summary: Represents a build request that has been submitted to the build manager for processing. The methods of this class may be used to execute synchronous or asynchronous build requests and to provide access to the results upon completion.
+  remarks: This class is thread-safe.
   syntax:
     content: public class BuildSubmission
   inheritance:
@@ -39,12 +39,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает или задает асинхронной контекст, предоставляемый для <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>, если таковые имеются.</xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>"
+  summary: Gets or sets the asynchronous context provided to <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>, if any.
   syntax:
     content: public object AsyncContext { get; }
     return:
       type: System.Object
-      description: "Возвращает контекст асинхронной для <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>.</xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*> Возвращает значение null, если контекст отсутствует."
+      description: Returns the asynchronous context provided to <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*>. Returns null if no context is provided.
   overload: Microsoft.Build.Execution.BuildSubmission.AsyncContext*
   exceptions: []
   platform:
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Получает или задает диспетчер построения, связанного с передача данного построения."
+  summary: Gets or sets the build manager this build submission is associated with.
   syntax:
     content: public Microsoft.Build.Execution.BuildManager BuildManager { get; }
     return:
       type: Microsoft.Build.Execution.BuildManager
-      description: "Возвращает диспетчер построения, сопоставлена передача данного построения."
+      description: Returns the build manager this build submission is associated with.
   overload: Microsoft.Build.Execution.BuildSubmission.BuildManager*
   exceptions: []
   platform:
@@ -83,13 +83,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает или задает результат построения."
-  remarks: "Результат не является допустимым до <xref:Microsoft.Build.Execution.BuildSubmission.WaitHandle%2A>дал сигнал.</xref:Microsoft.Build.Execution.BuildSubmission.WaitHandle%2A>"
+  summary: Gets or sets the result of the build.
+  remarks: The result is not valid until <xref:Microsoft.Build.Execution.BuildSubmission.WaitHandle%2A> is signalled.
   syntax:
     content: public Microsoft.Build.Execution.BuildResult BuildResult { get; set; }
     return:
       type: Microsoft.Build.Execution.BuildResult
-      description: "Возвращает результат построения."
+      description: Returns the result of the build.
   overload: Microsoft.Build.Execution.BuildSubmission.BuildResult*
   exceptions: []
   platform:
@@ -106,18 +106,18 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Синхронно запускает запрос на построение и ожидает, пока не станут доступными результаты."
+  summary: Starts a build request synchronously and waits until results are available.
   syntax:
     content: public Microsoft.Build.Execution.BuildResult Execute ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.BuildResult
-      description: "Возвращает запрос сборки."
+      description: Returns the build request.
   overload: Microsoft.Build.Execution.BuildSubmission.Execute*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "Запрос уже запущен или уже завершена."
+    description: The request has already been started or is already complete.
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildSubmission.ExecuteAsync(Microsoft.Build.Execution.BuildSubmissionCompleteCallback,System.Object)
@@ -132,21 +132,21 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Запускает запрос на построение асинхронно и в данном контексте. Немедленно возвращает управление вызывающему объекту."
+  summary: Starts a build request asynchronously and within the given context. Immediately returns control to the caller.
   syntax:
     content: public void ExecuteAsync (Microsoft.Build.Execution.BuildSubmissionCompleteCallback callback, object context);
     parameters:
     - id: callback
       type: Microsoft.Build.Execution.BuildSubmissionCompleteCallback
-      description: "Метод обратного вызова вызывается по завершении передачи построения."
+      description: The callback method to call when the build submission is complete.
     - id: context
       type: System.Object
-      description: "Контекст, в котором происходит передача построения."
+      description: The context in which the build submission occurs.
   overload: Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*
   exceptions:
   - type: System.InvalidOperationException
     commentId: T:System.InvalidOperationException
-    description: "Запрос уже запущен или уже завершена."
+    description: The request has already been started or is already complete.
   platform:
   - net462
 - uid: Microsoft.Build.Execution.BuildSubmission.IsCompleted
@@ -161,12 +161,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Определяет, завершена ли передача данного построения."
+  summary: Determines whether this build submission is complete.
   syntax:
     content: public bool IsCompleted { get; }
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если передача данного построения завершена; значение false в противном случае."
+      description: Returns true if this build submission is complete; false otherwise.
   overload: Microsoft.Build.Execution.BuildSubmission.IsCompleted*
   exceptions: []
   platform:
@@ -183,13 +183,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает или задает идентификатор, который однозначно идентифицирует передачу данного построения."
-  remarks: "Этот идентификатор используется, чтобы различать отправку этого построения от других отправок построения в пределах той же сборки."
+  summary: Gets or sets an ID uniquely identifying this build submission.
+  remarks: This ID is used to distinguish this build submission from other build submissions within the same build.
   syntax:
     content: public int SubmissionId { get; }
     return:
       type: System.Int32
-      description: "Возвращает идентификатор, который однозначно идентифицирует передачу данного построения."
+      description: Returns an ID uniquely identifying this build submission.
   overload: Microsoft.Build.Execution.BuildSubmission.SubmissionId*
   exceptions: []
   platform:
@@ -206,12 +206,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает <xref:System.Threading.WaitHandle>объект, который будет дал сигнал после завершения построения.</xref:System.Threading.WaitHandle>"
+  summary: Gets a <xref:System.Threading.WaitHandle> object that will be signalled when the build is complete.
   syntax:
     content: public System.Threading.WaitHandle WaitHandle { get; }
     return:
       type: System.Threading.WaitHandle
-      description: "Возвращает значение null, пока не <> </> *настроек или <> </> *настроек возвращает, а затем возвращает объект WaitHandle."
+      description: Returns null until <xref:Microsoft.Build.Execution.BuildSubmission.Execute*> or <xref:Microsoft.Build.Execution.BuildSubmission.ExecuteAsync*> returns, then returns the WaitHandle object.
   overload: Microsoft.Build.Execution.BuildSubmission.WaitHandle*
   exceptions: []
   platform:

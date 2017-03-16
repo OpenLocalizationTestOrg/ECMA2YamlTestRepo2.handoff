@@ -59,8 +59,8 @@ items:
   nameWithType: ProjectInstance
   fullName: Microsoft.Build.Execution.ProjectInstance
   type: Class
-  summary: "Представляет экземпляр проекта."
-  remarks: "Экземпляры этого класса привести при клонировании проекта. Конструкторы являются внутренними, чтобы от пользователей требовалось создавать экземпляры проекта из существующих проектов.       Новые экземпляры проекта являются неизменяемыми, за исключением того, что на них можно добавить элементы экземпляра и устанавливать им свойства экземпляра. Экземпляры проекта полезны, поскольку изменения и построение несколько раз без вмешательства в исходный проект.       Может иметь ссылки на этот класс ни ни его составляющие <xref:Microsoft.Build.Construction>или <xref:Microsoft.Build.Evaluation>объектов.</xref:Microsoft.Build.Evaluation> </xref:Microsoft.Build.Construction>       Целевые объекты экземпляра проекта, службы узла и реестр задач не предоставляются."
+  summary: Represents a project instance.
+  remarks: "Instances of this class result when a project is cloned. Constructors are internal in order to require users to create project instances from existing projects.  \n  \n New project instances are immutable, except that instance items can be added to them and instance properties set on them. Project instances are useful because they can be modified and built several times without disturbing the original project.  \n  \n Neither this class nor any of its constituents is allowed to have references to <xref:Microsoft.Build.Construction> or <xref:Microsoft.Build.Evaluation> objects.  \n  \n Project instance targets, host services, and the task registry are not exposed."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{FullPath} #Targets={TargetsCount} DefaultTargets={(DefaultTargets == null) ? System.String.Empty : System.String.Join(";", DefaultTargets.ToArray())} ToolsVersion={Toolset.ToolsVersion} InitialTargets={(InitialTargets == null) ? System.String.Empty : System.String.Join(";", InitialTargets.ToArray())} #GlobalProperties={globalProperties.Count} #Properties={properties.Count} #ItemTypes={items.ItemTypes.Count} #Items={items.Count}")]
@@ -84,14 +84,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает новый экземпляр проекта и инициализирует его из заданной корневой папки проекта, с помощью коллекции проектов по умолчанию."
-  remarks: "Без промежуточного <xref:Microsoft.Build.Evaluation.Project>создается объект.</xref:Microsoft.Build.Evaluation.Project> Это полезно, если проект будет построен, но не отображать или изменять."
+  summary: Creates a new project instance and initializes it from the given project root, using the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Элемент корневой папки проекта."
+      description: The project root element.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -108,14 +108,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает новый экземпляр проекта и инициализирует его из заданного файла проекта, с помощью коллекции проектов по умолчанию."
-  remarks: "Без промежуточного <xref:Microsoft.Build.Evaluation.Project>создается объект.</xref:Microsoft.Build.Evaluation.Project> Это полезно, если проект будет построен, но не отображать или изменять."
+  summary: Creates a new project instance and initializes it from the given project file, using the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Имя файла проекта."
+      description: The name of the project file.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -132,20 +132,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает новый экземпляр проекта и инициализирует его из заданного файла проекта с помощью заданных глобальных свойств, версии инструментов и коллекции проектов по умолчанию."
-  remarks: "Без промежуточного <xref:Microsoft.Build.Evaluation.Project>создается объект.</xref:Microsoft.Build.Evaluation.Project> Это полезно, если проект будет построен, но не отображать или изменять."
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, and the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Имя файла проекта."
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Используемые глобальные свойства."
+      description: The global properties to use.
     - id: toolsVersion
       type: System.String
-      description: "Версия инструментов."
+      description: The tools version.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -162,23 +162,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает новый экземпляр проекта и инициализирует его из заданной корневой папки проекта, с помощью заданных глобальных свойств, версии инструментов и коллекции проектов."
-  remarks: "Без промежуточного <xref:Microsoft.Build.Evaluation.Project>создается объект.</xref:Microsoft.Build.Evaluation.Project> Это полезно, если проект будет построен, но не отображать или изменять."
+  summary: Creates a new project instance and initializes it from the given project root, using the given global properties, tools version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Элемент корневой папки проекта"
+      description: The project root element
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Используемые глобальные свойства. Может принимать значение null."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Версия инструментов. Может принимать значение null."
+      description: The tools version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "Коллекция проектов"
+      description: Project collection
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -195,23 +195,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает новый экземпляр проекта и инициализирует его из заданного файла проекта с помощью заданных глобальных свойств, версии инструментов и коллекции проектов."
-  remarks: "Без промежуточного <xref:Microsoft.Build.Evaluation.Project>создается объект.</xref:Microsoft.Build.Evaluation.Project> Это полезно, если проект будет построен, но не отображать или изменять."
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Имя файла проекта."
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Используемые глобальные свойства. Может принимать значение null."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Версия инструментов. Может принимать значение null."
+      description: The tools version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "Коллекция проектов"
+      description: Project collection
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -228,26 +228,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает новый экземпляр проекта и инициализирует его из заданной корневой папки проекта, с помощью заданных глобальных свойств, версии инструментов и коллекции проектов"
-  remarks: "Без промежуточного <xref:Microsoft.Build.Evaluation.Project>создается объект.</xref:Microsoft.Build.Evaluation.Project> Это полезно, если проект будет построен, но не отображать или изменять."
+  summary: Creates a new project instance and initializes it from the given project root, using the given global properties, tools version, and project collection
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Элемент корневой папки проекта."
+      description: The project root element.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Используемые глобальные свойства. Может принимать значение null."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Версия инструментов. Может принимать значение null."
+      description: The tools version. May be null.
     - id: subToolsetVersion
       type: System.String
-      description: "Версия набора инструментов sub. Может принимать значение null."
+      description: The sub toolset version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "Коллекция проектов."
+      description: Project collection.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -264,26 +264,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает новый экземпляр проекта и инициализирует его из заданного файла проекта с помощью заданных глобальных свойств, версии инструментов, sub версии инструментов и коллекции проектов."
-  remarks: "Без промежуточного <xref:Microsoft.Build.Evaluation.Project>создается объект.</xref:Microsoft.Build.Evaluation.Project> Это полезно, если проект будет построен, но не отображать или изменять."
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, sub toolset version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Имя файла проекта."
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Используемые глобальные свойства. Может принимать значение null."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Версия инструментов. Может принимать значение null."
+      description: The tools version. May be null.
     - id: subToolsetVersion
       type: System.String
-      description: "Версия набора инструментов sub. Может принимать значение null."
+      description: The sub toolset version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "Коллекция проектов."
+      description: Project collection.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -300,20 +300,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Добавляет элемент без метаданных в проект."
-  remarks: "Мы не используем ProjectItemInstance, чтобы убедиться в том, что мы уже используется другой ProjectInstance нет."
+  summary: Adds an item with no metadata to the project.
+  remarks: We don't take a ProjectItemInstance to make sure we don't have one that's already in use by another ProjectInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectItemInstance AddItem (string itemType, string evaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: "Тип элемента для добавляемого элемента."
+      description: The item type of the item to be added.
     - id: evaluatedInclude
       type: System.String
-      description: "Оцененный атрибут Include элемента."
+      description: The evaluated Include attribute of the item.
     return:
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Возвращает новый элемент."
+      description: Returns the new item.
   overload: Microsoft.Build.Execution.ProjectInstance.AddItem*
   exceptions: []
   platform:
@@ -330,23 +330,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Добавляет элемент с заданными метаданными в проект."
-  remarks: "Мы не используем ProjectItemInstance, чтобы убедиться в том, что мы уже используется другой ProjectInstance нет."
+  summary: Adds an item with the given metadata to the project.
+  remarks: We don't take a ProjectItemInstance to make sure we don't have one that's already in use by another ProjectInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectItemInstance AddItem (string itemType, string evaluatedInclude, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: "Тип элемента для добавляемого элемента."
+      description: The item type of the item to be added.
     - id: evaluatedInclude
       type: System.String
-      description: "Оцененный атрибут Include элемента."
+      description: The evaluated Include attribute of the item.
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: "Метаданные элемента."
+      description: The metadata of the item.
     return:
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Возвращает новый элемент."
+      description: Return the new item.
   overload: Microsoft.Build.Execution.ProjectInstance.AddItem*
   exceptions: []
   platform:
@@ -363,13 +363,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает целевые объекты по умолчанию проекта со средствами ведения журнала коллекции проектов."
+  summary: Builds the default targets of the project with loggers of the project collection.
   syntax:
     content: public bool Build ();
     parameters: []
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -386,17 +386,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Выполняет построение целевых объектов по умолчанию проекта с заданными средствами ведения журнала."
-  remarks: "Создает исключение InvalidOperationException, если любой из предоставленных средств ведения журнала уже присоединено к службе ведения журнала."
+  summary: Builds the default targets of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Ведения журнала, используемых для построения. Может принимать значение null."
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -413,20 +413,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Выполняет построение целевых объектов по умолчанию проекта с заданными и удаленными средствами ведения журнала."
-  remarks: "Создает исключение InvalidOperationException, если любой из предоставленных средств ведения журнала уже присоединено к службе ведения журнала."
+  summary: Builds the default targets of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Ведения журнала, используемых для построения. Может принимать значение null."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "Удаленные средства ведения журнала для сборки. Может принимать значение null."
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -443,20 +443,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Выполняет построение заданного целевого объекта проекта с заданными средствами ведения журнала."
-  remarks: "Создает исключение InvalidOperationException, если любой из предоставленных средств ведения журнала уже присоединено к службе ведения журнала."
+  summary: Builds the given target of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: target
       type: System.String
-      description: "Целевой объект для построения. Может принимать значение null."
+      description: The target to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Ведения журнала, используемых для построения. Может принимать значение null."
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -473,20 +473,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Строит заданные целевые объекты проекта с заданными средствами ведения журнала."
-  remarks: "Создает исключение InvalidOperationException, если любой из предоставленных средств ведения журнала уже присоединено к службе ведения журнала."
+  summary: Builds the given targets of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: "Целевые объекты для построения. Может принимать значение null."
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Ведения журнала, используемых для построения. Может принимать значение null."
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -503,23 +503,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Выполняет построение заданного целевого объекта проекта с заданными и удаленными средствами ведения журнала."
-  remarks: "Создает исключение InvalidOperationException, если любой из предоставленных средств ведения журнала уже присоединено к службе ведения журнала."
+  summary: Builds the given target of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: target
       type: System.String
-      description: "Целевой объект для построения. Может принимать значение null."
+      description: The target to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Ведения журнала, используемых для построения. Может принимать значение null."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "Удаленные средства ведения журнала для сборки. Может принимать значение null."
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -536,23 +536,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создать список целевых объектов с заданными средствами ведения журнала. Целевые объекты могут иметь значение null. Средства ведения журнала может иметь значение null."
-  remarks: "Если любой из предоставленных средств ведения журнала уже присоединено к переданной нами службы ведения журнала, создает исключение InvalidOperationException."
+  summary: Build a list of targets with specified loggers. Targets may be null. Loggers may be null.
+  remarks: If any of the loggers supplied are already attached to the logging service we were passed, throws InvalidOperationException.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, out System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.TargetResult> targetOutputs);
     parameters:
     - id: targets
       type: System.String[]
-      description: "Список целевых объектов для построения. Может принимать значение null."
+      description: List of targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Нумерованный список средств ведения журнала для использования при построении целевых объектов."
+      description: Enumerated list of loggers to use for building targets.
     - id: targetOutputs
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.TargetResult}
-      description: "Создает выходные данные целевого объекта."
+      description: Outputs of target builds.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если операция выполнена успешно; значение false в случае сбоя."
+      description: Returns true on success, false on failure.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -569,23 +569,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Строит заданные целевые объекты проекта с заданными и удаленными средствами ведения журнала."
-  remarks: "Создает исключение InvalidOperationException, если любой из предоставленных средств ведения журнала уже присоединено к службе ведения журнала."
+  summary: Builds the given targets of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: "Целевые объекты для построения. Может принимать значение null."
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Ведения журнала, используемых для построения. Может принимать значение null."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "Удаленные средства ведения журнала для сборки. Может принимать значение null."
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -602,26 +602,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает целевой с выходами заданного целевого объекта и с заданными и удаленными средствами ведения журнала."
-  remarks: "Создает исключение InvalidOperationException, если любой из предоставленных средств ведения журнала уже присоединено к службе ведения журнала."
+  summary: Builds the given targets with the given target outputs and with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers, out System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.TargetResult> targetOutputs);
     parameters:
     - id: targets
       type: System.String[]
-      description: "Целевые объекты для построения. Может принимать значение null."
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Ведения журнала, используемых для построения. Может принимать значение null."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "Удаленные средства ведения журнала для сборки. Может принимать значение null."
+      description: The remote loggers to use for the build. May be null.
     - id: targetOutputs
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.TargetResult}
-      description: "Выходные данные целевого объекта."
+      description: The target outputs.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если построение выполнено успешно; значение false в противном случае."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -638,13 +638,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает независимый глубокий клон данного проекта и все, что в нем. Копия имеет Изменяемость же, что и исходный. Удобно использовать для компиляции отдельного файла или сохранения результатов построения между построениями."
+  summary: Creates an independent, deep clone of this project and everything in it. Clone has the same mutability as the original. Useful for compiling a single file or for keeping build results between builds.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance DeepCopy ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "Создает независимый глубокий клон данного проекта."
+      description: Creates an independent, deep clone of this project.
   overload: Microsoft.Build.Execution.ProjectInstance.DeepCopy*
   exceptions: []
   platform:
@@ -661,16 +661,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает независимый глубокий клон данного проекта и все, что в ней, с указанным Изменяемость. Удобно использовать для компиляции отдельного файла или сохранения результатов построения между построениями."
+  summary: Creates an independent, deep clone of this project and everything in it, with specified mutability. Useful for compiling a single file or for keeping build results between builds.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance DeepCopy (bool isImmutable);
     parameters:
     - id: isImmutable
       type: System.Boolean
-      description: "Флаг, указывающий, клонировать Изменяемость."
+      description: Flag indicating clone mutability.
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "Возвращает указанный Изменяемость независимый глубокий клон данного проекта."
+      description: Returns an independent, deep clone of this project, with specified mutability.
   overload: Microsoft.Build.Execution.ProjectInstance.DeepCopy*
   exceptions: []
   platform:
@@ -687,13 +687,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает или задает список целевых объектов по умолчанию для этого проекта."
-  remarks: "Выполняется построение целевых объектов по умолчанию, если целевые объекты не заданы явно."
+  summary: Gets or sets the list of default targets for this project.
+  remarks: Default targets are built if no targets are explicitly specified.
   syntax:
     content: public System.Collections.Generic.List<string> DefaultTargets { get; }
     return:
       type: System.Collections.Generic.List{System.String}
-      description: "Возвращает список целевых объектов по умолчанию для этого проекта."
+      description: Returns the list of default targets for this project.
   overload: Microsoft.Build.Execution.ProjectInstance.DefaultTargets*
   exceptions: []
   platform:
@@ -710,12 +710,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: 'Возвращает корневой каталог проекта. Используется для оценки относительных путей и настройки текущего каталога во время построения. Никогда не имеет значение null: проекты, не загруженные с диска используют текущий каталог со времени запуска сборки.'
+  summary: 'Gets the project root directory. Used for evaluation of relative paths and setting the current directory during build. Is never null: projects not loaded from disk use the current directory from the time the build started.'
   syntax:
     content: public string Directory { get; }
     return:
       type: System.String
-      description: "Возвращает корневой каталог проекта, который никогда не бывает null. Проекты, не загруженные с диска, возвращают текущий каталог во время запуска построения."
+      description: Returns the project root directory, which is never null. Projects not loaded from disk return the current directory at the time the build was started.
   overload: Microsoft.Build.Execution.ProjectInstance.Directory*
   exceptions: []
   platform:
@@ -732,17 +732,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Оценивает предоставленную строку как условие, разворачивая элементы и свойства с помощью текущих элементов и свойств, доступных, выполнив логической оценкой."
-  remarks: "Это полезно для окна интерпретации.       Не разворачивает простые выражения метаданных."
+  summary: Evaluates the provided string as a condition by expanding items and properties, using the current items and properties available, then doing a logical evaluation.
+  remarks: "This is useful for the immediate window.  \n  \n Does not expand bare metadata expressions."
   syntax:
     content: public bool EvaluateCondition (string condition);
     parameters:
     - id: condition
       type: System.String
-      description: "Разворачиваемая строка."
+      description: The string to be expanded.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если строка имеет значение true. значение false в противном случае."
+      description: Returns true if the string evaluates to true; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.EvaluateCondition*
   exceptions: []
   platform:
@@ -759,17 +759,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Оценивает предоставленную строку, разворачивая элементы и свойства с помощью текущих элементов и свойств, доступных."
-  remarks: "Это полезно для некоторых узлов или в окне интерпретации отладчика.       Не разворачивает простые выражения метаданных."
+  summary: Evaluates the provided string by expanding items and properties, using the current items and properties available.
+  remarks: "This is useful for some hosts, or for the debugger immediate window.  \n  \n Does not expand bare metadata expressions."
   syntax:
     content: public string ExpandString (string unexpandedValue);
     parameters:
     - id: unexpandedValue
       type: System.String
-      description: "Разворачиваемая строка."
+      description: The string to be expanded.
     return:
       type: System.String
-      description: "Возвращает значение развернутой строки."
+      description: Returns the expanded string value.
   overload: Microsoft.Build.Execution.ProjectInstance.ExpandString*
   exceptions: []
   platform:
@@ -786,12 +786,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает полный путь к файлу проекта. Используется для ведения журнала."
+  summary: Gets the full path to the project file. Used for logging.
   syntax:
     content: public string FullPath { get; }
     return:
       type: System.String
-      description: "Возвращает полный путь к файлу проекта. Возвращает значение null, если проект не был именован."
+      description: Returns the full path to the project file. Returns null if the project was never named.
   overload: Microsoft.Build.Execution.ProjectInstance.FullPath*
   exceptions: []
   platform:
@@ -808,16 +808,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает escape-вычисленное значение атрибута Include указанного определения элемента."
+  summary: Gets the evaluated, escaped value of the Include attribute of the provided item definition.
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Execution.ProjectItemDefinitionInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemDefinitionInstance
-      description: "Определение элемента, которое необходимо оценить и escape-последовательность."
+      description: The item definition to be evaluated and escaped.
     return:
       type: System.String
-      description: "Возвращает вычисленное значение атрибута Include указанного определения элемента в escape-последовательность."
+      description: Returns the evaluated, escaped value of the Include attribute of the provided item definition.
   overload: Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -834,16 +834,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает escape-вычисленное значение атрибута Include указанных элементов."
+  summary: Gets the evaluated, escaped value of the Include attribute of the provided item.
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Execution.ProjectItemInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Элемент, который необходимо оценить и escape-последовательность."
+      description: The item to be evaluated and escaped.
     return:
       type: System.String
-      description: "Возвращает вычисленное значение атрибута Include указанного элемента в escape-последовательность."
+      description: Returns the evaluated, escaped value of the Include attribute of the provided item.
   overload: Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -860,16 +860,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает все элементы в этом проекте указанного типа. Это список только для чтения."
+  summary: Gets all the items in this project of the specified type. This is a read-only list.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemInstance> GetItems (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "Тип элемента для извлечения элементов."
+      description: The item type of the items to be retrieved.
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "Возвращает все элементы в этом проекте указанного типа. Возвращает пустой список, если их нет."
+      description: Returns all the items in this project of the specified type. Returns an empty list if there are none.
   overload: Microsoft.Build.Execution.ProjectInstance.GetItems*
   exceptions: []
   platform:
@@ -886,19 +886,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает все элементы в этом проекте указанного типа и вычисляется включать значение. Это список только для чтения."
+  summary: Gets all the items in this project of the specified type and evaluated include value. This is a read-only list.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Execution.ProjectItemInstance> GetItemsByItemTypeAndEvaluatedInclude (string itemType, string evaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: "Тип элемента для извлечения элементов."
+      description: The item type of the items to be retrieved.
     - id: evaluatedInclude
       type: System.String
-      description: "Значение вычисленного include элементов для извлечения"
+      description: The evaluated include value of the items to be retrieved
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "Возвращает все элементы в этом проекте указанного типа и вычисляется включать значение. Возвращает пустую коллекцию, если их нет."
+      description: Returns all the items in this project of the specified type and evaluated include value. Returns an empty collection if there are none.
   overload: Microsoft.Build.Execution.ProjectInstance.GetItemsByItemTypeAndEvaluatedInclude*
   exceptions: []
   platform:
@@ -915,16 +915,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает escape-значение указанных метаданных."
+  summary: Gets the escaped value of the provided metadatum.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectMetadataInstance metadatum);
     parameters:
     - id: metadatum
       type: Microsoft.Build.Execution.ProjectMetadataInstance
-      description: "В escape-метаданных."
+      description: The metadatum to be escaped.
     return:
       type: System.String
-      description: "Возвращает escape-значение указанных метаданных."
+      description: Returns the escaped value of the provided metadatum.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -941,19 +941,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает escape-значение метаданных с заданным именем указанного определения элемента."
+  summary: Gets the escaped value of the metadatum with the provided name of the provided item definition.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectItemDefinitionInstance item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemDefinitionInstance
-      description: "Определение элемента для получения значения метаданных."
+      description: The item definition to provide the metadatum value.
     - id: name
       type: System.String
-      description: "Имя метаданных."
+      description: The name of the metadatum.
     return:
       type: System.String
-      description: "Возвращает escape-значение метаданных с заданным именем указанного определения элемента."
+      description: Returns the escaped value of the metadatum with the provided name of the provided item definition.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -970,19 +970,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает escape-значение метаданных с заданным именем для указанного элемента."
+  summary: Gets the escaped value of the metadatum with the provided name on the provided item.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectItemInstance item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Элемент для получения значения метаданных."
+      description: The item to provide the metadatum value.
     - id: name
       type: System.String
-      description: "Имя метаданных."
+      description: The name of the metadatum.
     return:
       type: System.String
-      description: "Возвращает escape-значение метаданных с заданным именем для указанного элемента."
+      description: Returns the escaped value of the metadatum with the provided name on the provided item.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -999,16 +999,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Получите свойство с заданным именем."
+  summary: Get the property with the given name.
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance GetProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "Имя извлекаемого свойства."
+      description: The name of the property to retrieve.
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Возвращает свойство с заданным именем. Возвращает значение null, если свойство не существует с таким именем."
+      description: Returns the property with the given name. Returns null if no property exists with that name.
   overload: Microsoft.Build.Execution.ProjectInstance.GetProperty*
   exceptions: []
   platform:
@@ -1025,17 +1025,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Получите значение свойства с заданным именем."
-  remarks: "Этот метод не различает свойство со значением пустой строки и отсутствие свойства с заданным именем."
+  summary: Get the value of the property with the given name.
+  remarks: This method does not distinguish between a property with a value of empty string and no property with the given name.
   syntax:
     content: public string GetPropertyValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: "Имя свойства, значение которого требуется получить."
+      description: The name of the property whose value is to be retrieved.
     return:
       type: System.String
-      description: "Возвращает значение свойства с заданным именем. Если отсутствует свойство с таким именем существует, возвращается пустая строка. Возвращаемое значение имеет не последовательностей escape-символов."
+      description: Returns the value of the property with the given name. Returns an empty string if no property exists with that name. The value returned has no escaped character sequences.
   overload: Microsoft.Build.Execution.ProjectInstance.GetPropertyValue*
   exceptions: []
   platform:
@@ -1052,16 +1052,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Получите escape-значение указанного свойства."
+  summary: Get the escaped value of the provided property.
   syntax:
     content: public static string GetPropertyValueEscaped (Microsoft.Build.Execution.ProjectPropertyInstance property);
     parameters:
     - id: property
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Свойство необходимо экранировать."
+      description: The property to be escaped.
     return:
       type: System.String
-      description: "Возвращает escape-значение указанного свойства."
+      description: Returns the escaped value of the provided property.
   overload: Microsoft.Build.Execution.ProjectInstance.GetPropertyValueEscaped*
   exceptions: []
   platform:
@@ -1078,13 +1078,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Получает словарь глобальных свойств, использованную для оценки проекта, если таковые имеются."
+  summary: Gets the dictionary of global properties this project was evaluated with, if any.
   remarks: "Read only collection.  \n  \n Traverses project references.  \n  \n This is the publicly exposed getter, that translates into a read-only dead IDictionary\\<string, string>."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Возвращает словарь глобальных свойств, использованную для оценки этого проекта."
+      description: Returns the dictionary of global properties this project was evaluated with.
   overload: Microsoft.Build.Execution.ProjectInstance.GlobalProperties*
   exceptions: []
   platform:
@@ -1101,12 +1101,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает список начальных целевых объектов для проекта и всех его импортов глубину. Эти целевые объекты строятся перед любыми другими объектами."
+  summary: Gets the list of initial targets for the project and all its imports, depth-first. These targets are built before any other targets.
   syntax:
     content: public System.Collections.Generic.List<string> InitialTargets { get; }
     return:
       type: System.Collections.Generic.List{System.String}
-      description: "Возвращает список начальных целевых объектов для проекта и всех его импортов глубину."
+      description: Returns the list of initial targets for the project and all its imports, depth-first.
   overload: Microsoft.Build.Execution.ProjectInstance.InitialTargets*
   exceptions: []
   platform:
@@ -1123,12 +1123,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает флаг, указывающий, что экземпляр проекта является неизменяемым. Этот флаг установлен без возможности восстановления при создании экземпляра."
+  summary: Gets a flag indicating that the project instance is immutable. This flag is set permanently when the instance is created.
   syntax:
     content: public bool IsImmutable { get; }
     return:
       type: System.Boolean
-      description: "Возвращает флаг."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.ProjectInstance.IsImmutable*
   exceptions: []
   platform:
@@ -1145,12 +1145,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает словарь только для чтения определений элементов проекта, ключом которого является тип элемента."
+  summary: Gets a read-only dictionary of the item definitions in the project, keyed by item type.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectItemDefinitionInstance> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectItemDefinitionInstance}
-      description: "Возвращает словарь только для чтения определений элементов проекта, ключом которого является тип элемента."
+      description: Returns a read-only dictionary of the item definitions in the project, keyed by item type.
   overload: Microsoft.Build.Execution.ProjectInstance.ItemDefinitions*
   exceptions: []
   platform:
@@ -1167,12 +1167,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает все элементы в этом проекте."
+  summary: Gets all items in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemInstance> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "Возвращает все элементы в этом проекте."
+      description: Returns all items in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Items*
   exceptions: []
   platform:
@@ -1189,12 +1189,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает все типы элементов в этом проекте."
+  summary: Gets all item types in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<string> ItemTypes { get; }
     return:
       type: System.Collections.Generic.ICollection{System.String}
-      description: "Возвращает все типы элементов в этом проекте."
+      description: Returns all item types in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.ItemTypes*
   exceptions: []
   platform:
@@ -1211,12 +1211,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает расположение исходного файла. Никогда не равно null."
+  summary: Gets the location of the originating file itself. Never null.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Возвращает расположение исходного файла. Никогда не возвращает значение null."
+      description: Returns the location of the originating file. Never returns null.
   overload: Microsoft.Build.Execution.ProjectInstance.ProjectFileLocation*
   exceptions: []
   platform:
@@ -1233,12 +1233,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Получает все свойства в этом проекте."
+  summary: Gets all properties in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectPropertyInstance> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectPropertyInstance}
-      description: "Возвращает все свойства в этом проекте."
+      description: Returns all properties in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Properties*
   exceptions: []
   platform:
@@ -1255,16 +1255,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Удаляет элемент из проекта, если он имеется. Возвращает значение true, если он присутствует, значение false в противном случае."
+  summary: Removes an item from the project, if present. Returns true if it was present, false otherwise.
   syntax:
     content: public bool RemoveItem (Microsoft.Build.Execution.ProjectItemInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Удаляемый элемент."
+      description: The item to be removed.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если элемент присутствовал до удаления; значение false в противном случае."
+      description: Returns true if the item was present before removal; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.RemoveItem*
   exceptions: []
   platform:
@@ -1281,16 +1281,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Удаляет свойство с заданным именем. Возвращает значение true, если свойство имело значение (возможно пустую строку), в противном случае — значение false."
+  summary: Removes a property with the given name. Returns true if the property had a value (possibly empty string), otherwise false.
   syntax:
     content: public bool RemoveProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "Имя удаляемого свойства."
+      description: The name of the property to be removed.
     return:
       type: System.Boolean
-      description: "Возвращает значение true, если свойство имело значение (возможно пустую строку) до удаления; значение false в противном случае."
+      description: Returns true if the property had a value (possibly an empty string) before removal; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.RemoveProperty*
   exceptions: []
   platform:
@@ -1307,20 +1307,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Добавьте свойство с заданным именем и значением в проект. Перезаписывает свойство с тем же именем уже существует в коллекции свойств."
-  remarks: "Мы не используем ProjectPropertyInstance, чтобы убедиться в том, что мы уже используется другой ProjectPropertyInstance нет."
+  summary: Add a property with the specified name and value to the project. Overwrites any property with the same name already in the property collection.
+  remarks: We don't take a ProjectPropertyInstance to make sure we don't have one that's already in use by another ProjectPropertyInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance SetProperty (string name, string evaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "Имя добавляемого свойства."
+      description: The name of the property to add.
     - id: evaluatedValue
       type: System.String
-      description: "Вычисленное значение свойства."
+      description: The evaluated value of the property to add.
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Возвращает новое свойство."
+      description: Returns the new property.
   overload: Microsoft.Build.Execution.ProjectInstance.SetProperty*
   exceptions: []
   platform:
@@ -1337,12 +1337,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает перечислитель по всем целевым объектам в данном проекте. Эта коллекция доступна только для чтения."
+  summary: Gets an enumerator over all targets in this project. This collection is read-only.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectTargetInstance> Targets { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectTargetInstance}
-      description: "Возвращает перечислитель по всем целевым объектам в данном проекте."
+      description: Returns an enumerator over all targets in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Targets*
   exceptions: []
   platform:
@@ -1359,13 +1359,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает версию инструментов, использованную для оценки проекта, если таковые имеются."
-  remarks: "Результат не обязательно совпадает с версией средств на теге проекта при его наличии; он может извне указано, например с помощью переключателя /tv."
+  summary: Gets the tools version this project was evaluated with, if any.
+  remarks: The result is not necessarily the same as the tools version on the Project tag, if any; it may have been externally specified, for example with a /tv switch.
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: "Возвращает версию инструментов, использованную для оценки проекта, если он существует."
+      description: Returns the tools version this project was evaluated with, if any.
   overload: Microsoft.Build.Execution.ProjectInstance.ToolsVersion*
   exceptions: []
   platform:
@@ -1382,13 +1382,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Создает ProjectRootElement из содержимого этого ProjectInstance."
+  summary: Creates a ProjectRootElement from the contents of this ProjectInstance.
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement ToProjectRootElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Возвращает ProjectRootElement, представляющую данный экземпляр."
+      description: Returns a ProjectRootElement which represents this instance.
   overload: Microsoft.Build.Execution.ProjectInstance.ToProjectRootElement*
   exceptions: []
   platform:
@@ -1405,13 +1405,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Заменяет состояние проекта <> </> *настроек, <> </> *настроек и <xref:Microsoft.Build.Execution.ProjectInstance.Items*>с записями из указанного <xref href=&quot;Microsoft.Build.Execution.ProjectInstance&quot;> </xref>.</xref:Microsoft.Build.Execution.ProjectInstance.Items*>"
+  summary: Replaces the project state <xref:Microsoft.Build.Execution.ProjectInstance.GlobalProperties*>, <xref:Microsoft.Build.Execution.ProjectInstance.Properties*> and <xref:Microsoft.Build.Execution.ProjectInstance.Items*> with those from the specified <xref href="Microsoft.Build.Execution.ProjectInstance"></xref>.
   syntax:
     content: public void UpdateStateFrom (Microsoft.Build.Execution.ProjectInstance projectState);
     parameters:
     - id: projectState
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "<xref uid=&quot;langword_csharp_ProjectInstance&quot; name=&quot;ProjectInstance&quot; href=&quot;&quot;> </xref> Обновление из."
+      description: The <xref uid="langword_csharp_ProjectInstance" name="ProjectInstance" href=""></xref> to update from.
   overload: Microsoft.Build.Execution.ProjectInstance.UpdateStateFrom*
   exceptions: []
   platform:

@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b48c44018bcd2c0ed87cf4ae70ea47ba568238f8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Xml.XmlSecureResolver.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">93af47368d0e89b8228c6d70c271e096618964f4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">25e1709720e08d989221f53579d3c1131ce0b2bc</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Helps to secure another implementation of <bpt id="p1">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> by wrapping the <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object and restricting the resources that the underlying <bpt id="p3">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> has access to.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Xml.XmlUrlResolver&gt; class is the default resolver for all classes in the &lt;xref:System.Xml&gt; namespace.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is used to load XML documents and to resolve external resources such as entities, DTDs or schemas, and import or include directives.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can override this default by specifying the &lt;xref:System.Xml.XmlResolver&gt; object to use.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if you want to restrict the resources that the underlying &lt;xref:System.Xml.XmlResolver&gt; can access, you can use an XmlSecureResolver object.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>XmlSecureResolver wraps around a concrete implementation of &lt;xref:System.Xml.XmlResolver&gt; and restricts the resources that the underlying &lt;xref:System.Xml.XmlResolver&gt; has access to.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, XmlSecureResolver has the ability to prohibit cross-domain redirection, which occurs from an embedded Uniform Resource Identifier (URI) reference.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you construct an XmlSecureResolver object, you provide a valid &lt;xref:System.Xml.XmlResolver&gt; implementation along with a URL, an instance of an evidence object, or a permission set, which is used by the XmlSecureResolver to determine security.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Either a &lt;xref:System.Security.PermissionSet?displayProperty=fullName&gt; is generated or the existing one is used and &lt;xref:System.Security.PermissionSet.PermitOnly%2A?displayProperty=fullName&gt; is called on it to help secure the underlying &lt;xref:System.Xml.XmlResolver&gt;.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  XmlSecureResolver objects can contain sensitive information such as user credentials.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should be careful when caching XmlSecureResolver objects and should not pass the XmlSecureResolver object to an untrusted component.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  There are differences in the security infrastructure for code running on the .NET Framework common language runtime (CLR) and for code running on the CLR that is integrated within Microsoft SQL Server 2005.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This can lead to cases where code developed for the .NET Framework CLR operates differently when used on the SQL Server integrated CLR.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>One of these differences affects the XmlSecureResolver class when you have evidence that is based on a URL (that is, when you use the &lt;xref:System.Xml.XmlSecureResolver.CreateEvidenceForUrl%28System.String%29&gt; method or the &lt;xref:System.Xml.XmlSecureResolver.%23ctor%2A&gt; constructor).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The policy resolution mechanism of the SQL Server integrated CLR does not use the &lt;xref:System.Security.Policy.Url&gt; or &lt;xref:System.Security.Policy.Zone&gt; information.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, it grants permissions based on the GUID that the server adds when assemblies are loaded.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you use the XmlSecureResolver in the SQL Server integrated CLR, provide any required evidence directly by using a specified &lt;xref:System.Security.PermissionSet&gt;.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use a secure resolver      1.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Create an XmlSecureResolver with the correct permission set.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Create an &lt;xref:System.Xml.XmlReaderSettings&gt; object that uses the XmlSecureResolver object.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#5a<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_1.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#5a<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_1.cs)</ept><ept id="p3">]</ept>      3.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Pass  the &lt;xref:System.Xml.XmlReaderSettings&gt; object to the &lt;xref:System.Xml.XmlReader.Create%2A&gt; method when you're creating the &lt;xref:System.Xml.XmlReader&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#5b<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_2.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#5b<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_2.cs)</ept><ept id="p3">]</ept>      ## To restrict access by using a URL    Use the &lt;xref:System.Xml.XmlSecureResolver.%23ctor%28System.Xml.XmlResolver%2CSystem.String%29&gt; constructor to create an XmlSecureResolver object that is allowed to access your local intranet site only.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#3<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_3.vb)</ept><ept id="p1">]</ept>  <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#3<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_3.cs)</ept><ept id="p3">]</ept>      ## To restrict access by using a permission set      1.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Create a &lt;xref:System.Net.WebPermission&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#4a<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_4.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#4a<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_4.cs)</ept><ept id="p3">]</ept>      2.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specify the URLs that you want to allow access to.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#4b<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_5.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#4b<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_5.cs)</ept><ept id="p3">]</ept>      3.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Add the web permissions to the &lt;xref:System.Security.PermissionSet&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#4c<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_6.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#4c<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_6.cs)</ept><ept id="p3">]</ept>      4.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the &lt;xref:System.Xml.XmlSecureResolver.%23ctor%28System.Xml.XmlResolver%2CSystem.Security.PermissionSet%29&gt; constructor to create an XmlSecureResolver object by using the permission set.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#4d<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_7.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#4d<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_7.cs)</ept><ept id="p3">]</ept>           See the &lt;xref:System.Xml.XmlSecureResolver.%23ctor%2A&gt; reference page for another example.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To restrict access by using evidence    You can restrict access by using the &lt;xref:System.Xml.XmlSecureResolver.%23ctor%28System.Xml.XmlResolver%2CSystem.Security.Policy.Evidence%29&gt; constructor and specifying &lt;xref:System.Security.Policy.Evidence&gt;.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Security.Policy.Evidence&gt; is used to create the &lt;xref:System.Security.PermissionSet&gt; that is applied to the underlying &lt;xref:System.Xml.XmlResolver&gt;.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The XmlSecureResolver calls &lt;xref:System.Security.PermissionSet.PermitOnly%2A&gt; on the created &lt;xref:System.Security.PermissionSet&gt; before opening any resources.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Here are some common scenarios and the type of evidence to provide for each:      -   If you are working in a fully trusted environment, use your assembly to create the evidence:           <bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#1<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_8.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#1<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_8.cs)</ept><ept id="p3">]</ept>      -   If you are working in a semi-trusted environment, you have code or data coming from an outside source, and you know the origin of the outside source and have a verifiable URI, use the URI to create the evidence:           <bpt id="p5">[!code-vb</bpt><bpt id="p6">[</bpt>XmlSecureResolver_Samples#2<ept id="p6">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_9.vb)</ept><ept id="p5">]</ept>      <bpt id="p7">[!code-cs</bpt><bpt id="p8">[</bpt>XmlSecureResolver_Samples#2<ept id="p8">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_9.cs)</ept><ept id="p7">]</ept>      -   If you are working in a semi-trusted environment and you have code or data coming from an outside source, but you don't know the origin of the outside source, either:           Set the <ph id="ph1">`evidence`</ph> parameter to <ph id="ph2">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This allows no access to resources.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-or-           If your application requires some access to resources, request evidence from the caller.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use the secure resolver to load an XSLT style sheet      1.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Create an XmlSecureResolver with the correct permission set.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Pass the XmlSecureResolver to the &lt;xref:System.Xml.Xsl.XslCompiledTransform.Load%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#6<ept id="p2">](~/add/codesnippet/visualbasic/t-system.xml.xmlsecurere_10.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#6<ept id="p4">](~/add/codesnippet/csharp/t-system.xml.xmlsecurere_10.cs)</ept><ept id="p3">]</ept></source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> and <bpt id="p3">&lt;xref href="System.Security.PermissionSet"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> specified.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The XML resolver that is wrapped by the <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The permission set to apply to the underlying <bpt id="p1">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> calls the <ph id="ph1">&amp;lt;</ph>xref:System.Security.PermissionSet.PermitOnly%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> method on the permission set before calling the &lt;xref:System.Xml.XmlSecureResolver.GetEntity*&gt; method on the underlying XML resolver.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> and <bpt id="p3">&lt;xref href="System.Security.Policy.Evidence"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> specified.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Here are some possible scenarios and the type of evidence to provide for each scenario:      -   If you are working in a fully trusted environment, use your assembly to create the evidence:           <bpt id="p1">[!code-vb</bpt><bpt id="p2">[</bpt>XmlSecureResolver_Samples#1<ept id="p2">](~/add/codesnippet/visualbasic/74601da4-12bd-44fe-a117-_1.vb)</ept><ept id="p1">]</ept>      <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>XmlSecureResolver_Samples#1<ept id="p4">](~/add/codesnippet/csharp/74601da4-12bd-44fe-a117-_1.cs)</ept><ept id="p3">]</ept>      -   If you are working in a semi-trusted environment, you have code or data coming from an outside source, and you know the origin of the outside source and have a verifiable URI, use the URI to create the evidence:           <bpt id="p5">[!code-vb</bpt><bpt id="p6">[</bpt>XmlSecureResolver_Samples#2<ept id="p6">](~/add/codesnippet/visualbasic/74601da4-12bd-44fe-a117-_2.vb)</ept><ept id="p5">]</ept>      <bpt id="p7">[!code-cs</bpt><bpt id="p8">[</bpt>XmlSecureResolver_Samples#2<ept id="p8">](~/add/codesnippet/csharp/74601da4-12bd-44fe-a117-_2.cs)</ept><ept id="p7">]</ept>      -   If you are working in a semi-trusted environment and you have code or data coming from an outside source, but you don't know the origin of the outside source, either:           Set the <ph id="ph1">`evidence`</ph> parameter to <ph id="ph2">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This allows no access to resources.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-or-           If your application requires some access to resources, request evidence from the caller.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The XML resolver that is wrapped by the <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The evidence used to create the <bpt id="p1">&lt;xref href="System.Security.PermissionSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that will be applied to the underlying <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> calls the <ph id="ph1">&amp;lt;</ph>xref:System.Security.PermissionSet.PermitOnly%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> method on the created <bpt id="p2">&lt;xref href="System.Security.PermissionSet"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> before calling &lt;xref:System.Xml.XmlSecureResolver.GetEntity*&gt; on the underlying <bpt id="p3">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> and URL provided.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The XML resolver that is wrapped by the <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The URL used to create the <bpt id="p1">&lt;xref href="System.Security.PermissionSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that will be applied to the underlying <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> calls <ph id="ph1">&amp;lt;</ph>xref:System.Security.PermissionSet.PermitOnly%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> on the created <bpt id="p2">&lt;xref href="System.Security.PermissionSet"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> before calling &lt;xref:System.Xml.XmlSecureResolver.GetEntity*&gt; on the underlying <bpt id="p3">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Creates evidence using the supplied URL.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The URL used to create the evidence.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The evidence generated from the supplied URL as defined by the default policy.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Sets credentials used to authenticate web requests.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The credentials to be used to authenticate web requests.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> sets the given credentials on the underlying <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>If this property is not set, the value defaults to <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>; that is, the <bpt id="p2">&lt;xref href="System.Xml.XmlSecureResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> has no user credentials.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Maps a URI to an object that contains the actual resource.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>This method temporarily sets the <bpt id="p1">&lt;xref href="System.Security.PermissionSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> created in the constructor by calling <ph id="ph1">&amp;lt;</ph>xref:System.Security.PermissionSet.PermitOnly%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> before calling <bpt id="p2">&lt;xref uid="langword_csharp_GetEntity" name="GetEntity" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> on the underlying <bpt id="p3">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> to open the resource.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The URI that is returned from &lt;xref:System.Xml.XmlSecureResolver.ResolveUri*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Currently not used.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The type of object to return.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The current version only returns &lt;xref:System.IO.Stream&gt; objects.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The stream returned by calling <bpt id="p1">&lt;xref uid="langword_csharp_GetEntity" name="GetEntity" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> on the underlying <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>If a type other than &lt;xref:System.IO.Stream&gt; is specified, the method returns <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;ofObjectToReturn&lt;/code&gt;</ph> is neither <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> nor a <ph id="ph2">&lt;xref:System.IO.Stream&gt;</ph> type.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The specified URI is not an absolute URI.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;absoluteUri&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>There is a runtime error (for example, an interrupted server connection).</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Asynchronously maps a URI to an object that contains the actual resource.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The URI returned from &lt;xref:System.Xml.XmlSecureResolver.ResolveUri*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Currently not used.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The type of object to return.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The current version only returns &lt;xref:System.IO.Stream&gt; objects.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The stream returned by calling <bpt id="p1">&lt;xref uid="langword_csharp_GetEntity" name="GetEntity" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> on the underlying <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>If a type other than &lt;xref:System.IO.Stream&gt; is specified, the method returns <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Resolves the absolute URI from the base and relative URIs by calling <bpt id="p1">&lt;xref uid="langword_csharp_ResolveUri" name="ResolveUri" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> on the underlying <bpt id="p2">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The base URI used to resolve the relative URI.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The URI to resolve.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The URI can be absolute or relative.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>If absolute, this value effectively replaces the <ph id="ph1">`baseUri`</ph> value.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>If relative, it combines with the <ph id="ph1">`baseUri`</ph> to make an absolute URI.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The absolute URI or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the relative URI cannot be resolved (returned by calling <bpt id="p2">&lt;xref uid="langword_csharp_ResolveUri" name="ResolveUri" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> on the underlying <bpt id="p3">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>).</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;relativeUri&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

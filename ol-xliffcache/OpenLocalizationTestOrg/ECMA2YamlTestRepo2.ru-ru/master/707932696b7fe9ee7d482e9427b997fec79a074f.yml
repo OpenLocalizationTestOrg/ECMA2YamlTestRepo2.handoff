@@ -11,7 +11,7 @@ items:
   nameWithType: OutOfProcNode
   fullName: Microsoft.Build.Execution.OutOfProcNode
   type: Class
-  summary: "Этот класс представляет реализацию узла вне процесса построения.  Этот класс является устаревшим и не имеет альтернативы."
+  summary: This class represents an implementation of an out-of-proc build node.  This class is deprecated and has no alternative.
   syntax:
     content: public class OutOfProcNode
   inheritance:
@@ -32,7 +32,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Конструктор."
+  summary: Constructor.
   syntax:
     content: public OutOfProcNode ();
     parameters: []
@@ -52,16 +52,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Запускает узел и обрабатывает сообщения, пока узел, запрос на завершение работы."
+  summary: Starts up the node and processes messages until the node is requested to shut down.
   syntax:
     content: public Microsoft.Build.Execution.NodeEngineShutdownReason Run (out Exception shutdownException);
     parameters:
     - id: shutdownException
       type: System.Exception
-      description: "Исключение, которое вызвало завершение работы, если таковые имеются."
+      description: The exception which caused shutdown, if any.
     return:
       type: Microsoft.Build.Execution.NodeEngineShutdownReason
-      description: "Причина завершения работы."
+      description: The reason for shutting down.
   overload: Microsoft.Build.Execution.OutOfProcNode.Run*
   exceptions: []
   platform:

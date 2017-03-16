@@ -12,7 +12,7 @@ items:
   nameWithType: TaskLoggingHelperExtension
   fullName: Microsoft.Build.Tasks.TaskLoggingHelperExtension
   type: Class
-  summary: "Позволяет вести журнал различных сообщений. Кроме того позволяет загружать и форматировать ресурсы."
+  summary: Enables logging of various messages. Also, enables loading and formatting of resources.
   syntax:
     content: 'public class TaskLoggingHelperExtension : Microsoft.Build.Utilities.TaskLoggingHelper'
   inheritance:
@@ -79,22 +79,22 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Инициализирует новый экземпляр <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> класса экземпляр задачи, основными ресурсами, общими ресурсами и префикс ключевого слова справки."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class with the task instance, primary resources, shared resources, and a Help keyword prefix.
   syntax:
     content: public TaskLoggingHelperExtension (Microsoft.Build.Framework.ITask taskInstance, System.Resources.ResourceManager primaryResources, System.Resources.ResourceManager sharedResources, string helpKeywordPrefix);
     parameters:
     - id: taskInstance
       type: Microsoft.Build.Framework.ITask
-      description: "Задача, содержащая экземпляр <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> класса."
+      description: A task containing an instance of the <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class.
     - id: primaryResources
       type: System.Resources.ResourceManager
-      description: "Пользовательский Интерфейс и строковые ресурсы."
+      description: UI and string resources.
     - id: sharedResources
       type: System.Resources.ResourceManager
-      description: "Общий пользовательский Интерфейс и строковые ресурсы."
+      description: Shared UI and string resources.
     - id: helpKeywordPrefix
       type: System.String
-      description: "Префикс для составления ключевых слов справки."
+      description: The prefix for composing Help keywords.
   overload: Microsoft.Build.Tasks.TaskLoggingHelperExtension.#ctor*
   exceptions: []
   platform:
@@ -111,20 +111,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Загружает заданную строку ресурса и при необходимости форматирует ее с использованием заданных аргументов. Для форматирования используются язык и региональные параметры текущего потока."
-  remarks: "Этот метод требует владельца задачи зарегистрировали свои ресурсы либо с помощью <xref:Microsoft.Build.Utilities.Task>базового конструктора класса, или одно из следующих свойств: <xref:Microsoft.Build.Utilities.Task.TaskResources%2A>или <xref:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources%2A>.</xref:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources%2A> </xref:Microsoft.Build.Utilities.Task.TaskResources%2A> </xref:Microsoft.Build.Utilities.Task>       Этот метод является потокобезопасным."
+  summary: Loads the specified resource string and optionally formats it using the given arguments. The current thread's culture is used for formatting.
+  remarks: "This method requires the owner task to have registered its resources either via the <xref:Microsoft.Build.Utilities.Task> base class constructor, or one of the following properties: <xref:Microsoft.Build.Utilities.Task.TaskResources%2A> or <xref:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources%2A>.  \n  \n This method is thread-safe."
   syntax:
     content: public override string FormatResourceString (string resourceName, object[] args);
     parameters:
     - id: resourceName
       type: System.String
-      description: "Имя строкового ресурса для загрузки."
+      description: The name of the string resource to load.
     - id: args
       type: System.Object[]
-      description: "Необязательные аргументы для форматирования загружаемой строки или <xref uid=&quot;langword_csharp_null&quot; name=&quot;null&quot; href=&quot;&quot;> </xref>."
+      description: Optional arguments for formatting the loaded string, or <xref uid="langword_csharp_null" name="null" href=""></xref>.
     return:
       type: System.String
-      description: "Форматированная строка."
+      description: The formatted string.
   overload: Microsoft.Build.Tasks.TaskLoggingHelperExtension.FormatResourceString*
   exceptions: []
   platform:
@@ -141,13 +141,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает или задает общие ресурсы пользовательского интерфейса и строки."
-  remarks: "Это свойство используется для загрузки ресурсов, связанных с языком и региональными параметрами. Производные классы должны регистрировать свои ресурсы во время построения или с помощью этого свойства, если они присутствуют локализованные строки."
+  summary: Gets or sets the shared UI and string resources.
+  remarks: This property is used to load culture-specific resources. Derived classes should register their resources either during construction, or via this property, if they have localized strings.
   syntax:
     content: public System.Resources.ResourceManager TaskSharedResources { get; set; }
     return:
       type: System.Resources.ResourceManager
-      description: "Общий пользовательский Интерфейс и строковые ресурсы."
+      description: The shared UI and string resources.
   overload: Microsoft.Build.Tasks.TaskLoggingHelperExtension.TaskSharedResources*
   exceptions: []
   platform:

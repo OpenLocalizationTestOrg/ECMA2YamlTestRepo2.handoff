@@ -17,7 +17,7 @@ items:
   nameWithType: GenerateTrustInfo
   fullName: Microsoft.Build.Tasks.GenerateTrustInfo
   type: Class
-  summary: "Формирование доверия к приложению из базового манифеста и из <> </> *настроек и <> </> *настроек свойств."
+  summary: Generates the application trust from the base manifest, and from the <xref:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone*> and <xref:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions*> properties.
   syntax:
     content: 'public sealed class GenerateTrustInfo : Microsoft.Build.Tasks.TaskExtension'
   inheritance:
@@ -48,7 +48,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Инициализирует новый экземпляр <xref href=&quot;Microsoft.Build.Tasks.GenerateTrustInfo&quot;> </xref> класса."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.GenerateTrustInfo"></xref> class.
   syntax:
     content: public GenerateTrustInfo ();
     parameters: []
@@ -68,12 +68,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает или задает зависимые сборки."
+  summary: Gets or sets the dependent assemblies.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ApplicationDependencies { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Зависимые сборки."
+      description: The dependent assemblies.
   overload: Microsoft.Build.Tasks.GenerateTrustInfo.ApplicationDependencies*
   exceptions: []
   platform:
@@ -90,12 +90,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает или задает базовый манифест, чтобы создать доверие к приложению."
+  summary: Gets or sets the base manifest to generate the application trust from.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem BaseManifest { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Базовый манифест, чтобы создать доверие к приложению."
+      description: The base manifest to generate the application trust from.
   overload: Microsoft.Build.Tasks.GenerateTrustInfo.BaseManifest*
   exceptions: []
   platform:
@@ -112,12 +112,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает или задает одно или несколько значений идентификаторов разрешений, разделенных точкой с запятой, должны быть исключены из набора разрешений зоны по умолчанию."
+  summary: Gets or sets one or more permission identity values separated by a semicolon to be excluded from the zone default permission set.
   syntax:
     content: public string ExcludedPermissions { get; set; }
     return:
       type: System.String
-      description: "Задайте значения идентификаторов разрешений, исключаемые из разрешений зоны по умолчанию."
+      description: The permission identity values to be excluded from the zone default permission set.
   overload: Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions*
   exceptions: []
   platform:
@@ -134,13 +134,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Выполняет `GenerateTrustInfo` задачи."
+  summary: Executes the `GenerateTrustInfo` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Если задача была выполнена успешно; в противном случае — <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateTrustInfo.Execute*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает или задает моникер целевой платформы."
+  summary: Gets or sets the target framework moniker.
   syntax:
     content: public string TargetFrameworkMoniker { get; set; }
     return:
       type: System.String
-      description: "Возвращает моникер целевой платформы."
+      description: Returns the target framework moniker.
   overload: Microsoft.Build.Tasks.GenerateTrustInfo.TargetFrameworkMoniker*
   exceptions: []
   platform:
@@ -179,13 +179,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает или задает набор разрешений зоны по умолчанию, получаемый из политики компьютера."
-  remarks: "Допустимый целевой зоны значения `Internet`, `LocalIntranet`, или `Custom`."
+  summary: Gets or sets a zone default permission set, which is obtained from machine policy.
+  remarks: Valid target zone values are `Internet`, `LocalIntranet`, or `Custom`.
   syntax:
     content: public string TargetZone { get; set; }
     return:
       type: System.String
-      description: "Набор разрешений зоны по умолчанию."
+      description: The zone default permission set.
   overload: Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone*
   exceptions: []
   platform:
@@ -202,12 +202,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Возвращает или задает файл, содержащий сведения о доверии безопасности приложения."
+  summary: Gets or sets the file that contains the application security trust information.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem TrustInfoFile { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Файл, содержащий сведения о доверии безопасности приложения."
+      description: The file that contains the application security trust information.
   overload: Microsoft.Build.Tasks.GenerateTrustInfo.TrustInfoFile*
   exceptions: []
   platform:

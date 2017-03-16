@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectTargetInstanceChild
   fullName: Microsoft.Build.Execution.ProjectTargetInstanceChild
   type: Class
-  summary: "Abstracts the <xref href=&quot;Microsoft.Build.Execution.ProjectTaskInstance&quot;></xref>, <xref href=&quot;Microsoft.Build.Execution.ProjectPropertyGroupTaskInstance&quot;></xref> and <xref href=&quot;Microsoft.Build.Execution.ProjectItemGroupTaskInstance&quot;></xref> classes. Это позволяет этих типов для использования в отдельной коллекции целевых дочерних элементов."
+  summary: Abstracts the <xref href="Microsoft.Build.Execution.ProjectTaskInstance"></xref>, <xref href="Microsoft.Build.Execution.ProjectPropertyGroupTaskInstance"></xref> and <xref href="Microsoft.Build.Execution.ProjectItemGroupTaskInstance"></xref> classes. This allows these types to be used in a single collection of target children
   syntax:
     content: public abstract class ProjectTargetInstanceChild
   inheritance:
@@ -35,7 +35,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Абстрактные классы нельзя."
+  summary: Abstract classes cannot be instantiated.
   syntax:
     content: protected ProjectTargetInstanceChild ();
     parameters: []
@@ -55,12 +55,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает или задает атрибут Condition данного целевого объекта."
+  summary: Gets or sets the Condition attribute of this target.
   syntax:
     content: public abstract string Condition { get; }
     return:
       type: System.String
-      description: "Возвращает значение атрибута Condition. Возвращает пустую строку, если атрибут не присутствует."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectTargetInstanceChild.Condition*
   exceptions: []
   platform:
@@ -77,12 +77,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает расположение атрибута Condition."
+  summary: Gets the location of the Condition attribute.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Возвращает расположение атрибута Condition."
+      description: Returns the Condition attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstanceChild.ConditionLocation*
   exceptions: []
   platform:
@@ -99,12 +99,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает полный путь к файлу, из которого произошла данная задача."
+  summary: Gets the full path to the file from which this task originated.
   syntax:
     content: public string FullPath { get; }
     return:
       type: System.String
-      description: "Возвращает полный путь к файлу, из которого произошла данная задача. Возвращает пустую строку, если задача сгенерирована в проекте, не был загружен и никогда не был задан путь."
+      description: Returns the full path to the file from which this task originated. Returns an empty string if the task originated in a project that was not loaded and has never been given a path.
   overload: Microsoft.Build.Execution.ProjectTargetInstanceChild.FullPath*
   exceptions: []
   platform:
@@ -121,12 +121,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Возвращает местоположение самого элемента."
+  summary: Gets the location of the element itself.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Возвращает расположение элемента."
+      description: Returns the element location.
   overload: Microsoft.Build.Execution.ProjectTargetInstanceChild.Location*
   exceptions: []
   platform:

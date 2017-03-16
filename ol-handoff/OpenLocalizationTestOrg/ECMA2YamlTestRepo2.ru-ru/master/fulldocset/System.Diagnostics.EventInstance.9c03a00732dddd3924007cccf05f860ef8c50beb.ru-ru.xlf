@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e1cd8bfb9cf67423af9f400645f5a37817279863</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Diagnostics.EventInstance.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4f2b688e566c0b1f9ea1eb6af2625416b0022085</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9ae21ae61b4bed74f7fb9cb5d5d2338a7f6a62ee</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents language-neutral information for an event log entry.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use EventInstance to write an event log entry with a resource identifier rather than a string value.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To write an event log entry, initialize the &lt;xref:System.Diagnostics.EventInstance.InstanceId%2A&gt; property and pass the instance to the &lt;xref:System.Diagnostics.EventLog.WriteEvent%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer uses the instance identifier to find and display the corresponding string from the localized resource file based on current language settings.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must register the event source with the corresponding resource file before you write events using resource identifiers.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When writing events, you can set the &lt;xref:System.Diagnostics.EventInstance.EntryType%2A&gt; property to specify the icon that the Event Viewer displays for the entry.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can also specify a &lt;xref:System.Diagnostics.EventInstance.CategoryId%2A&gt; property to specify the category that the Event Viewer displays for the entry.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer uses the category to filter events written by an event source.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer can display the category as a numeric value, or it can use the category as a resource identifier to display a localized category string.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To display localized category strings in the Event Viewer, you must use an event source configured with a category resource file, and set the &lt;xref:System.Diagnostics.EventInstance.CategoryId%2A&gt; to a resource identifier in the category resource file.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the event source does not have a configured category resource file, or the specified &lt;xref:System.Diagnostics.EventInstance.CategoryId%2A&gt; does not index a string in the category resource file, and then the Event Viewer displays the numeric category value for that entry.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Configure the category resource file, along with the number of category strings in the resource file, using the &lt;xref:System.Diagnostics.EventLogInstaller&gt; or the &lt;xref:System.Diagnostics.EventSourceCreationData&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must register a source for an event log before using EventInstance to write an event with the &lt;xref:System.Diagnostics.EventLog.WriteEvent%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The source must be configured for writing localized entries to the log and the source must define at least a message resource file.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Create the new event source during the installation of your application.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This allows time for the operating system to refresh its list of registered event sources and their configurations.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the operating system has not refreshed its list of event sources, and you attempt to write an event with the new source, the write operation will fail.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can configure a new source using an &lt;xref:System.Diagnostics.EventLogInstaller&gt;, or using the &lt;xref:System.Diagnostics.EventLog.CreateEventSource%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must have administrative rights on the computer to create a new event source.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For details about defining event messages and building event log resource files, see the "Message Compiler" topic in the Platform SDK documentation at <bpt id="p1">[</bpt>http://msdn.microsoft.com<ept id="p1">](http://msdn.microsoft.com)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Diagnostics.EventInstance"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the specified resource identifiers for the localized message and category text of the event entry.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To write an informational entry to an event log, initialize an &lt;xref:System.Diagnostics.EventInstance&gt; and pass it to the &lt;xref:System.Diagnostics.EventLog.WriteEvent%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Set the <ph id="ph1">`instanceId`</ph> to the resource identifier of the event message in the corresponding &lt;xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A&gt; property for the source.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Set the <ph id="ph1">`categoryId`</ph> to a numeric category value, or the resource identifier of the event category in the &lt;xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A&gt; property for the source; set the <ph id="ph2">`categoryId`</ph> to zero for no event category.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Diagnostics.EventInstance.EntryType%2A&gt; property for the new instance is set to &lt;xref:System.Diagnostics.EventLogEntryType&gt; by default.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer uses the resource identifiers to display the corresponding strings from the localized resource files for the source.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must register the source with the corresponding resource files before you can write events using resource identifiers.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>A resource identifier that corresponds to a string defined in the message resource file of the event source.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A resource identifier that corresponds to a string defined in the category resource file of the event source, or zero to specify no category for the event.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">instanceId</ph><ept id="p1">&lt;/code&gt;</ept> parameter is a negative value or a value larger than <ph id="ph2">&amp;lt;</ph>xref:System.UInt32.MaxValue?displayProperty=fullName<ph id="ph3">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>-or-       The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">categoryId</ph><ept id="p1">&lt;/code&gt;</ept> parameter is a negative value or a value larger than <ph id="ph2">&amp;lt;</ph>xref:System.UInt16.MaxValue?displayProperty=fullName<ph id="ph3">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Diagnostics.EventInstance"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the specified resource identifiers for the localized message and category text of the event entry and the specified event log entry type.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To write an entry to an event log, initialize an &lt;xref:System.Diagnostics.EventInstance&gt; and pass it to the &lt;xref:System.Diagnostics.EventLog.WriteEvent%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Set the <ph id="ph1">`instanceId`</ph> to the resource identifier of the event message in the corresponding &lt;xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A&gt; property for the source.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Set the <ph id="ph1">`categoryId`</ph> to a numeric category value, or the resource identifier of the event category in the &lt;xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A&gt; property for the source; set the <ph id="ph2">`categoryId`</ph> to zero for no event category.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer uses the resource identifiers to display the corresponding strings from the localized resource files for the source.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must register the source with the corresponding resource files before you can write events using resource identifiers.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Set the <ph id="ph1">`entryType`</ph> to one of the pre-defined entry types.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer uses the event type to determine which icon to display in the list view of the event log.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>A resource identifier that corresponds to a string defined in the message resource file of the event source.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>A resource identifier that corresponds to a string defined in the category resource file of the event source, or zero to specify no category for the event.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Diagnostics.EventLogEntryType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value that indicates the event type.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;entryType&lt;/code&gt;</ph> is not a valid <bpt id="p1">&lt;xref href="System.Diagnostics.EventLogEntryType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;instanceId&lt;/code&gt;</ph> is a negative value or a value larger than <ph id="ph2">&amp;lt;</ph>xref:System.UInt32.MaxValue?displayProperty=fullName<ph id="ph3">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>-or-       <ph id="ph1">&lt;code&gt;categoryId&lt;/code&gt;</ph> is a negative value or a value larger than <ph id="ph2">&amp;lt;</ph>xref:System.UInt16.MaxValue?displayProperty=fullName<ph id="ph3">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Gets or sets the resource identifier that specifies the application-defined category of the event entry.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Event log categories are application-defined values that help filter events, or provide further information about the event.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, your application can define separate categories for different components or different operations.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Set the CategoryId property to specify the category that the Event Viewer displays for the entry.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer can display the category as a numeric value, or it can use the CategoryId as a resource identifier to display a localized category string based on the current language settings.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To display localized category strings in the Event Viewer, you must use an event source configured with a category resource file, and set the CategoryId to a resource identifier in the category resource file.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the event source does not have a configured category resource file, or the specified CategoryId does not index a string in the category resource file, and then the Event Viewer displays the numeric category value for that entry.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must register the source with the corresponding resource file before you write event categories using resource identifiers.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Configure the category resource file, along with the number of category strings in the resource file, using the &lt;xref:System.Diagnostics.EventLogInstaller&gt; or the &lt;xref:System.Diagnostics.EventSourceCreationData&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When defining category strings in a resource file, the category resource identifiers must be numbered consecutively starting at 1, up to the configured &lt;xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A&gt; property value.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Event categories are optional.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If your application does not use categories, do not set the CategoryId for the event log entry.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For details about defining event messages and building event resource files, see the "Message Compiler" topic in the Platform SDK documentation at <bpt id="p1">[</bpt>http://msdn.microsoft.com<ept id="p1">](http://msdn.microsoft.com/)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For details about defining event categories in resource files, see the "Event Categories" topic in the Platform SDK</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>A numeric category value or resource identifier that corresponds to a string defined in the category resource file of the event source.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The default is zero, which signifies that no category will be displayed for the event entry.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The property is set to a negative value or to a value larger than <ph id="ph1">&amp;lt;</ph>xref:System.UInt16.MaxValue?displayProperty=fullName<ph id="ph2">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Gets or sets the event type of the event log entry.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Each event is of a single type, which the application indicates when it reports the event.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer uses the event type to determine which icon to display in the list view of the event log.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Diagnostics.EventLogEntryType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value that indicates the event entry type.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The default value is <bpt id="p1">&lt;xref href="System.Diagnostics.EventLogEntryType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The property is not set to a valid <bpt id="p1">&lt;xref href="System.Diagnostics.EventLogEntryType"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Gets or sets the resource identifier that designates the message text of the event entry.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The InstanceId property uniquely identifies an event entry for a configured event source.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For events defined in message resource files, the InstanceId corresponds to the resource identifier compiled from the message definition fields in the message text file.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Your application can write localized event log entries by setting the InstanceId to a resource identifier.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Event Viewer uses the InstanceId resource identifier to find and display the corresponding string from the localized resource file based on current language settings.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must register the source with the corresponding resource file before you write events using resource identifiers.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For details about defining event messages and building event log resource files, see the "Message Compiler" topic in the Platform SDK documentation at <bpt id="p1">[</bpt>http://msdn.microsoft.com<ept id="p1">](http://msdn.microsoft.com/)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For details about event log identifiers, see the "Event Identifiers" topic in the Platform SDK.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>A resource identifier that corresponds to a string defined in the message resource file of the event source.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The property is set to a negative value or to a value larger than <ph id="ph1">&amp;lt;</ph>xref:System.UInt32.MaxValue?displayProperty=fullName<ph id="ph2">&amp;gt;</ph>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

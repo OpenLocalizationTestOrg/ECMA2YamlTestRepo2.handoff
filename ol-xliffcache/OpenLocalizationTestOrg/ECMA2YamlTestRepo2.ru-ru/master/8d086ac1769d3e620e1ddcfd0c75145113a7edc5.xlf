@@ -1,0 +1,1326 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8d086ac1769d3e620e1ddcfd0c75145113a7edc5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Forms.MaskedTextBox.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0bfebebffe67b48184ba1db50d8ff91d50951d38</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f44fb0476464abdc7e530396cc3fa1841506229a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Uses a mask to distinguish between proper and improper user input.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The MaskedTextBox class is an enhanced &lt;xref:System.Windows.Forms.TextBox&gt; control that supports a declarative syntax for accepting or rejecting user input.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; property, you can specify the following input without writing any custom validation logic in your application:      -   Required input characters.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Optional input characters.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The type of input expected at a given position in the mask; for example, a digit, or an alphabetic or alphanumeric character.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Mask literals, or characters that should appear directly in the MaskedTextBox; for example, the hyphens (-) in a phone number, or the currency symbol in a price.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Special processing for input characters; for example, to convert alphabetic characters to uppercase.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a MaskedTextBox control is displayed at run time, it represents the mask as a series of prompt characters and optional literal characters.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Each editable mask position, representing a required or optional input, is shown with a single prompt character.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the number sign (#) is often used as a placeholder for a numeric character input.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can use the &lt;xref:System.Windows.Forms.MaskedTextBox.PromptChar%2A&gt; property to specify a custom prompt character.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox.HidePromptOnLeave%2A&gt; property determines if the user sees the prompt characters when the control loses input focus.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>As the user types input into the masked text box, valid input characters replace their respective prompt characters in a sequential fashion.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the user types an invalid input character, no replacement occurs, but instead a beep is issued if the &lt;xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A&gt; property is set to <ph id="ph1">`true`</ph>, and the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can provide your own custom error logic by handing this event.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the current insertion point is at a literal character, the user has a number of options:      -   If a character other than the prompt character is typed, the literal will automatically be skipped and the input character will be applied to the next editable position, represented by the next prompt character.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If the prompt character is typed and the &lt;xref:System.Windows.Forms.MaskedTextBox.AllowPromptAsInput%2A&gt; property is true, the input will overtype the prompt character and insertion point will be moved to the next position in the mask.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   As is always the case, the arrow keys can be used to navigate to a previous or subsequent position.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can use the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskFull%2A&gt; property to verify whether or not the user has entered all of the required input.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; property will always retrieve the user's input formatted according to the mask and the &lt;xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The MaskedTextBox control actually defers all mask processing to the &lt;xref:System.ComponentModel.MaskedTextProvider?displayProperty=fullName&gt; class specified by the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskedTextProvider%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This standard provider supports all Unicode characters except for surrogates and vertically combined characters; however, the &lt;xref:System.Windows.Forms.MaskedTextBox.AsciiOnly%2A&gt; property can be used to restrict input to the characters sets a-z, A-Z, and 0-9.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Masks do not necessarily guarantee that a user's input will represent a valid value for a given type; for example, -9 could be entered for an age in years.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can verify that a user's input represents a valid value by assigning an instance of that value's type to the &lt;xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can detect whether the user removes focus from MaskedTextBox when it contains an invalid value by monitoring for the &lt;xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If type validation succeeds, the object representing the value will be available through the &lt;xref:System.Windows.Forms.TypeValidationEventArgs.ReturnValue%2A&gt; property of the &lt;xref:System.Windows.Forms.TypeValidationEventArgs&gt; parameter.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>As with the &lt;xref:System.Windows.Forms.TextBox&gt; control, several common keyboard shortcuts do not work with MaskedTextBox.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In particular, CTRL-R (right justify text), CTRL-L (left justify text), and CTRL-L (center text) have no effect.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Compatibility with Visual Basic 6.0    MaskedTextBox was designed to retain most of the functionality of the Masked Edit control in <ph id="ph1">[!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]</ph> 6.0.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following table lists common properties on the Masked Edit control and gives their equivalents on MaskedTextBox.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|Masked Edit control (<ph id="ph1">[!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]</ph> 6.0) property|Equivalent MaskedTextBox (<ph id="ph2">[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]</ph>) property|   |-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|   |<ph id="ph3">`AllowPrompt`</ph> property|&lt;xref:System.Windows.Forms.MaskedTextBox.AllowPromptAsInput%2A&gt;|   |<ph id="ph4">`AutoTab`</ph> property|None|   |<ph id="ph5">`ClipMode`</ph> property|&lt;xref:System.Windows.Forms.MaskedTextBox.CutCopyMaskFormat%2A&gt;|   |<ph id="ph6">`ClipText`</ph> property|&lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; (when &lt;xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A&gt; is set to &lt;xref:System.Windows.Forms.MaskFormat&gt;)|   |<ph id="ph7">`Format`</ph> property|None|   |<ph id="ph8">`FormattedText`</ph> property|&lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; (when &lt;xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A&gt; is set to &lt;xref:System.Windows.Forms.MaskFormat&gt;)|   |<ph id="ph9">`Mask`</ph> property|&lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt;|   |<ph id="ph10">`PromptChar`</ph> property|&lt;xref:System.Windows.Forms.MaskedTextBox.PromptChar%2A&gt;|   |<ph id="ph11">`PromptInclude`</ph> property|&lt;xref:System.Windows.Forms.MaskedTextBox.ResetOnPrompt%2A&gt;|   |<ph id="ph12">`ValidationError`</ph> event|&lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt;|      &gt; <ph id="ph13">[!CAUTION]</ph> &gt;  The MaskedTextBox control does not support multiline configuration or undo functionality.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, while the members associated with these features have been retained for compatibility with the &lt;xref:System.Windows.Forms.TextBoxBase&gt; base class, their implementations perform no actions.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using defaults.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default MaskedTextBox constructor sets the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskedTextProvider%2A&gt; property to a null mask, represented by the string "&lt;&gt;".</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A null mask will accept any combination of characters as input.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the specified custom mask language provider.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`maskedTextProvider`</ph> parameter defines the masking language used by &lt;xref:System.Windows.Forms.MaskedTextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is responsible for parsing the mask and determining whether user input conforms to the current mask position.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can derive a new class from &lt;xref:System.ComponentModel.MaskedTextProvider?displayProperty=fullName&gt; to define your own custom masking language, and use the MaskedTextBox constructor to replace the standard &lt;xref:System.ComponentModel.MaskedTextProvider?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use the default masking language and supply your own input mask, you do not need to use this constructor.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, you can either use the &lt;xref:System.Windows.Forms.MaskedTextBox.%23ctor%28System.String%29&gt; constructor, or use the default constructor then set the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>A custom mask language provider, derived from the <bpt id="p1">&lt;xref href="System.ComponentModel.MaskedTextProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;maskedTextProvider&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the specified input mask.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The MaskedTextBox constructor uses the standard &lt;xref:System.ComponentModel.MaskedTextProvider?displayProperty=fullName&gt; with the input <ph id="ph1">`mask`</ph> to parse user input into the &lt;xref:System.Windows.Forms.MaskedTextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you assign a new mask to the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; property, it will override the value set by this constructor.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; representing the input mask.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The initial value of the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask*&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;mask&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value determining how TAB keys are handled for multiline configurations.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>This property is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The AcceptsTab property is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this property is not supported.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in all cases.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Occurs when the value of the &lt;xref:System.Windows.Forms.MaskedTextBox.AcceptsTab*&gt; property has changed.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>This event is not raised by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The AcceptsTabChanged event is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this event is not supported.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether &lt;xref:System.Windows.Forms.MaskedTextBox.PromptChar*&gt; can be entered as valid data by the user.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the user can enter the prompt character into the control; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control accepts characters outside of the ASCII character set.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If <ph id="ph1">`true`</ph>, AsciiOnly restricts user input to the characters a-z and A-Z.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ASCII control characters are not allowed.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if only ASCII is accepted; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if the <bpt id="p3">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> control can accept any arbitrary Unicode character.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the masked text box control raises the system beep for each user key stroke that it rejects.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt; event will still occur if the BeepOnError property is set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the <bpt id="p2">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> control should beep on invalid input; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Gets a value indicating whether the user can undo the previous operation.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This property is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The CanUndo property is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because &lt;xref:System.Windows.Forms.MaskedTextBox&gt; does not support undo functionality, this property always has a value of <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in all cases.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Clears information about the most recent operation from the undo buffer of the text box.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>This method is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ClearUndo method is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, &lt;xref:System.Windows.Forms.MaskedTextBox&gt; does not support undo functionality.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Creates a handle for the control.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Gets the required creation parameters when the control handle is created.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Forms.CreateParams"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> representing the information needed when creating a control.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Gets or sets the culture information associated with the masked text box.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Globalization.CultureInfo&gt; representing the culture supported by the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Culture was set to <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that determines whether literals and prompt characters are copied to the clipboard.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The CutCopyMaskFormat property determines how text, selected within the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control, is interpreted when it is copied to the clipboard or retrieved through the &lt;xref:System.Windows.Forms.MaskedTextBox.SelectedText%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specifically, it determines whether literal characters, prompt characters, or both are included when selected text is accessed.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When prompt characters are excluded, they are transformed into spaces in the copied string.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  The &lt;xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A&gt; property serves a similar purpose with respect to how the &lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; property is interpreted.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskFormat"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskFormat"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Property set with a <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskFormat"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value that is not valid.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Gets or sets the &lt;xref:System.IFormatProvider&gt; to use when performing type validation.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve" extradata="MT">
+          <source>FormatProvider determines which symbols are used for the currency, date, and other culture-specific mask placeholders when type validation occurs and the control has a non-null &lt;xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>An object that implements the &lt;xref:System.IFormatProvider&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Retrieves the character that is closest to the specified location within the control.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The location from which to seek the nearest character.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The character at the specified location.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Retrieves the index of the character nearest to the specified location.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The location to search.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>The zero-based character index at the specified location.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Retrieves the index of the first character of a given line.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>This method is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetFirstCharIndexFromLine method is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this method is not supported.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>This parameter is not used.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>This method will always return 0.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Retrieves the index of the first character of the current line.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>This method is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetFirstCharIndexOfCurrentLine method is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this method is not supported.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>This method will always return 0.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Retrieves the line number from the specified character position within the text of the control.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>This method is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetLineFromCharIndex method is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this method is not supported.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>This parameter is not used.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>This method will always return 0.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Retrieves the location within the control at the specified character index.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>The index of the character for which to retrieve the location.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>The location of the specified character within the client rectangle of the control.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the prompt characters in the input mask are hidden when the masked text box loses focus.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if &lt;xref:System.Windows.Forms.MaskedTextBox.PromptChar*&gt; is hidden when <bpt id="p2">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> does not have focus; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Gets or sets the text insertion mode of the masked text box control.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The InsertKeyMode property controls the character insertion behavior of the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The state of this property is defined by the &lt;xref:System.Windows.Forms.InsertKeyMode&gt; enumeration, which can be always on, always off or set to respect the setting of the user's keyboard.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property supersedes the insertion mode of the keyboard.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if the keyboard is set to overwrite, but InsertKeyMode is set to <ph id="ph1">`Insert`</ph>, the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; will operate in insert mode.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox.IsOverwriteMode%2A&gt; property will access the true insertion mode of the &lt;xref:System.Windows.Forms.MaskedTextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If changing InsertKeyMode changes the value of &lt;xref:System.Windows.Forms.MaskedTextBox.IsOverwriteMode%2A&gt;, &lt;xref:System.Windows.Forms.MaskedTextBox&gt; will raise the &lt;xref:System.Windows.Forms.MaskedTextBox.IsOverwriteModeChanged&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property has no effect if no mask has been set.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Windows.Forms.InsertKeyMode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value that indicates the current insertion mode.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Windows.Forms.InsertKeyMode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>An invalid <bpt id="p1">&lt;xref href="System.Windows.Forms.InsertKeyMode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value was supplied when setting this property.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Determines whether the specified key is an input key or a special key that requires preprocessing.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Windows.Forms.Keys"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Determines whether the specified key is an input key or a special key that requires preprocessing.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>Gets a value that specifies whether new user input overwrites existing input.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve" extradata="MT">
+          <source>IsOverwriteMode takes into account both the value of the &lt;xref:System.Windows.Forms.MaskedTextBox.InsertKeyMode%2A&gt; property and the state of the user's keyboard.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If &lt;xref:System.Windows.Forms.MaskedTextBox.InsertKeyMode%2A&gt; is set to either &lt;xref:System.Windows.Forms.InsertKeyMode&gt; or &lt;xref:System.Windows.Forms.InsertKeyMode&gt;, IsOverwriteMode will return <ph id="ph1">`false`</ph> or <ph id="ph2">`true`</ph>, respectively.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If &lt;xref:System.Windows.Forms.MaskedTextBox.InsertKeyMode%2A&gt; is set to &lt;xref:System.Windows.Forms.InsertKeyMode&gt;, it will return the state of the INSERT key.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When IsOverwriteMode is <ph id="ph1">`false`</ph>, &lt;xref:System.Windows.Forms.MaskedTextBox&gt; will reject as invalid any character entry that would result in a violation anywhere in the mask.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In explanation, if inserting a character would cause a character to be shifted over into a mask position where it would not be valid, the character insertion will be rejected.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if <bpt id="p2">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> will overwrite existing characters as the user enters new ones; <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> if <bpt id="p4">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept> will shift existing characters forward.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Occurs after the insert mode has changed.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The IsOverwriteModeChanged event is raised after value of the &lt;xref:System.Windows.Forms.MaskedTextBox.IsOverwriteMode%2A&gt; property is changed.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This event is required to properly bind data to a &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Gets or sets the lines of text in multiline configurations.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>This property is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Lines property is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this property is not supported.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>An array of type &lt;xref:System.String&gt; that contains a single line.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>Gets or sets the input mask to use at run time.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; representing the current mask.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>The default value is the empty string which allows any input.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>The string supplied to the Mask property is not a valid mask.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Invalid masks include masks containing non-printable characters.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Occurs after the input mask is changed.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The MaskChanged event is raised after the value of the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; property is changed.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This event is also raised if the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskedTextProvider%2A&gt; is indirectly altered by a member such as &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt;, &lt;xref:System.Windows.Forms.MaskedTextBox.AllowPromptAsInput%2A&gt;, &lt;xref:System.Windows.Forms.MaskedTextBox.AsciiOnly%2A&gt;, and &lt;xref:System.Windows.Forms.MaskedTextBox.Culture%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Gets a value indicating whether all required inputs have been entered into the input mask.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve" extradata="MT">
+          <source>MaskCompleted checks only required input elements.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To determine whether all required and optional input elements have been filled in, use the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskFull%2A&gt; property instead.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if all required input has been entered into the mask; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>Gets a clone of the mask provider associated with this instance of the masked text box control.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The MaskedTextProvider property defines the mask-parsing engine and the masking language used by the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default provider is the &lt;xref:System.ComponentModel.MaskedTextProvider?displayProperty=fullName&gt; class; however, a custom provider can be specified using the &lt;xref:System.Windows.Forms.MaskedTextBox.%23ctor%28System.ComponentModel.MaskedTextProvider%29&gt; constructor.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve" extradata="MT">
+          <source>MaskedTextProvider cannot be set directly.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, setting some of the properties of &lt;xref:System.Windows.Forms.MaskedTextBox&gt;—such as &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt;, &lt;xref:System.Windows.Forms.MaskedTextBox.AllowPromptAsInput%2A&gt;, &lt;xref:System.Windows.Forms.MaskedTextBox.AsciiOnly%2A&gt;, and &lt;xref:System.Windows.Forms.MaskedTextBox.Culture%2A&gt;—may internally cause the creation of a new MaskedTextProvider.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>A masking language provider of type MaskedTextProvider.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>Gets a value indicating whether all required and optional inputs have been entered into the input mask.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can use the MaskFull property within the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt; event handler to determine if the user's input was rejected because there are no remaining inputs in the mask.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To determine whether only required input elements have been entered, use the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskCompleted%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if all required and optional inputs have been entered; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>Occurs when the user's input or assigned character does not match the corresponding format element of the input mask.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve" extradata="MT">
+          <source>MaskInputRejected is the default event for the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The MaskInputRejected event occurs when a character is rejected by the input mask.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The input mask, represented by the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; property, is interpreted by the masked text provider associated with the control through the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskedTextProvider%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve" extradata="MT">
+          <source>MaskInputRejected is raised in the following situations:      -   An input character does not match the corresponding format element.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the user enters an alphabetic character when a digit is required.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is probably the most common reason why this event is raised.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The user is trying to input extraneous characters beyond the end of the mask either because the mask has already been filled or the current caret position has been moved to the very end of the displayed input mask string.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   A paste operation either inserts a character that does not match its associated format element, or if the &lt;xref:System.Windows.Forms.MaskedTextBox.IsOverwriteMode%2A&gt; property is <ph id="ph1">`false`</ph>, it shifts existing characters into new positions where they do not match their format elements.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   A cut operation shifts existing characters to the left, and one or more characters do not match their newly associated format elements.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   An assignment was made to the &lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; property and the assigned string caused one or more mask violations.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If a string was assigned to the control that causes MaskInputRejected to occur, no part of the string will appear in &lt;xref:System.Windows.Forms.MaskedTextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default handling for MaskInputRejected will play a beep sound if the &lt;xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A&gt; property is set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This event is often handled to implement custom error handling, for example, to move to the next user input control if the mask is full, or to display a custom error dialog box or ToolTip if the input character is invalid.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>Gets or sets the maximum number of characters the user can type or paste into the text box control.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>This property is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; property and the &lt;xref:System.Windows.Forms.MaskInputRejectedEventArgs.Position%2A&gt; property in the &lt;xref:System.Windows.Forms.MaskInputRejectedEventArgs&gt; class for information about how to determine the maximum length of a string in a &lt;xref:System.Windows.Forms.MaskedTextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>This property always returns 0.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether this is a multiline text box control.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>This property is not fully supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox.AcceptsTab%2A&gt; property is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this property is not fully supported; it cannot be set and it always resolves to <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>This property always returns <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>Typically occurs when the value of the &lt;xref:System.Windows.Forms.MaskedTextBox.Multiline*&gt; property has changed; however, this event is not raised by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The MultilineChanged event is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this event is not implemented in &lt;xref:System.Windows.Forms.MaskedTextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Occurs when the value of the &lt;xref:System.Windows.Forms.Control.BackColor*&gt; property changes.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.Control.HandleCreated"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox.IsOverwriteModeChanged"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Events<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnIsOverwriteModeChanged method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains event data.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.Control.KeyDown"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Forms.KeyEventArgs"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.Control.KeyPress"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Forms.KeyPressEventArgs"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.Control.KeyUp"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Forms.KeyEventArgs"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox.MaskChanged"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Events<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnMaskChanged method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains event data.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>Typically raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox.MultilineChanged"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event, but disabled for <bpt id="p2">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnMultilineChanged method is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this method is overridden to perform no actions.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains event data.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox.TextAlignChanged"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Events<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnTextAlignChanged method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains event data.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.Control.TextChanged"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Events<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnTextChanged method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.EventArgs&gt; that contains event data.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Windows.Forms.Control.Validating"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnValidating method causes the input string to be validated against the &lt;xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A&gt; property, if a &lt;xref:System.Type&gt; has been specified for this property.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It will then also raise the &lt;xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  To ensure consistency with text-based controls, validation will occur even if the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; is read-only (its &lt;xref:System.Windows.Forms.MaskedTextBox.ReadOnly%2A&gt; property is set to <ph id="ph2">`true`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Events<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OnValidating method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.ComponentModel.CancelEventArgs&gt; that contains event data.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>A critical exception occurred during the parsing of the input string.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>Gets or sets the character to be displayed in substitute for user input.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For sensitive user input, it is common practice to conceal the actual information entered by the user.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the PasswordChar property is set to a non-null character, &lt;xref:System.Windows.Forms.MaskedTextBox&gt; will display this character for all input into the control.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Setting this property to <ph id="ph1">`null`</ph> will disable this functionality.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use the operating system supplied password character, which is defined in COMCTL32.dll, use the &lt;xref:System.Windows.Forms.MaskedTextBox.UseSystemPasswordChar%2A&gt; property instead.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If both the PasswordChar and &lt;xref:System.Windows.Forms.MaskedTextBox.UseSystemPasswordChar%2A&gt; properties are activated, the latter takes precedence.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  As a security consideration, the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control disables cut and copy operations on password-protected strings.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Char&gt; value used as the password character.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>The character specified when setting this property is not a valid password character, as determined by the &lt;xref:System.ComponentModel.MaskedTextProvider.IsValidPasswordChar*&gt; method of the <bpt id="p1">&lt;xref href="System.ComponentModel.MaskedTextProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>The password character specified is the same as the current prompt character, &lt;xref:System.Windows.Forms.MaskedTextBox.PromptChar*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>The two are required to be different.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>Processes a command key.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Forms.Message"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, passed by reference that represents the window message to process.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Windows.Forms.Keys"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values that represents the shortcut key to process.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the command key was processed by the control; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>Overrides the base implementation of this method to handle input language changes.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Forms.MaskedTextBox&gt; overrides its base control's implementation of ProcessKeyMessage to properly handle character events when the user is entering characters using an Input Method Editor (IME), such as is used for entering Japanese, Chinese, and other complex non-Latin scripts.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ProcessKeyMessage detects any WM_CHAR messages that occur after it receives a WM_IME_CHAR message and suppresses them in order to prevent these characters from showing up in the control.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you derive from this control and override this message, you should duplicate this behavior if you wish your new control to work with IMEs.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Windows.Forms.Message"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, passed by reference that represents the window message to process.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the message was processed by the control; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>Gets or sets the character used to represent the absence of user input in <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve" extradata="MT">
+          <source>PromptChar will be displayed in &lt;xref:System.Windows.Forms.MaskedTextBox&gt; for any mask position that the user has not yet filled in.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the &lt;xref:System.Windows.Forms.MaskedTextBox.HidePromptOnLeave%2A&gt; property to specify whether the prompt is displayed when &lt;xref:System.Windows.Forms.MaskedTextBox&gt; does not have focus.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>The character used to prompt the user for input.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>The default is an underscore (_).</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>The character specified when setting this property is not a valid prompt character, as determined by the &lt;xref:System.ComponentModel.MaskedTextProvider.IsValidPasswordChar*&gt; method of the <bpt id="p1">&lt;xref href="System.ComponentModel.MaskedTextProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>The prompt character specified is the same as the current password character, &lt;xref:System.Windows.Forms.MaskedTextBox.PasswordChar*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>The two are required to be different.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether text in the text box is read-only.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to indicate the text is read only; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the parsing of user input should stop after the first invalid character is reached.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Sometimes the user will enter several characters into a &lt;xref:System.Windows.Forms.MaskedTextBox&gt; in a single input operation, typically by copying and pasting a string.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the entire string only contains valid characters, according to their paste position in the input mask, then the entire operation will succeed.</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, when a parsing error occurs, the behavior of &lt;xref:System.Windows.Forms.MaskedTextBox&gt; depends on the value of RejectInputOnFirstFailure, as follows:      -   If this property is <ph id="ph1">`true`</ph>, then processing of the input string stops at the invalid character.</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve" extradata="MT">
+          <source>All subsequent characters are ignored.</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A single &lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If this property is <ph id="ph1">`false`</ph>, then the invalid character is rejected, but parsing continues with the next character in the input string.</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A &lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt; event is raised for every invalid character in the input string.</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox.ResetOnPrompt%2A&gt;, &lt;xref:System.Windows.Forms.MaskedTextBox.ResetOnSpace%2A&gt; and &lt;xref:System.Windows.Forms.MaskedTextBox.SkipLiterals%2A&gt; properties can also influence the interpretation of the user input.</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the &lt;xref:System.Windows.Forms.MaskedTextBox.IsOverwriteMode%2A&gt; property is <ph id="ph1">`false`</ph>, then any characters already in the input mask to the right of the insertion point will be displaced by the accepted number of characters.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This shifting may cause additional parsing errors.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A pasting operation can be mimicked programmatically by setting the &lt;xref:System.Windows.Forms.MaskedTextBox.SelectedText%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if processing of the input string should be terminated at the first parsing error; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if processing should ignore all errors.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that determines how an input character that matches the prompt character should be handled.</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox&gt; can treat two categories of characters—spaces and prompt characters—specially.</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Typically, each input character will be tested against the mask and either accepted or rejected.</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Assuming that the &lt;xref:System.Windows.Forms.MaskedTextBox.PromptChar%2A&gt; property is set to non-<ph id="ph1">`null`</ph>, then setting the ResetOnPrompt property to <ph id="ph2">`true`</ph> will result in special processing for the prompt character.</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the user enters the prompt character into the mask, it causes the current mask character position to be cleared and the current position to be advanced to the next editable character.</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ResetOnPrompt takes precedence over the &lt;xref:System.Windows.Forms.MaskedTextBox.AllowPromptAsInput%2A&gt; property, as shown in the following table.</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|ResetOnPrompt value|AllowPromptAsInput value|Resulting behavior|   |-------------------------|------------------------------|------------------------|   |<ph id="ph1">`true`</ph><ph id="ph2">|</ph><ph id="ph3">`true`</ph>|The prompt character can be entered and it causes the current mask position to be reset.</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is the default.|   |<ph id="ph1">`true`</ph><ph id="ph2">|</ph><ph id="ph3">`false`</ph>|The prompt character can be entered and it causes the current mask position to be reset.|   |<ph id="ph4">`false`</ph><ph id="ph5">|</ph><ph id="ph6">`true`</ph>|The prompt character is processed as a standard input character.|   |<ph id="ph7">`false`</ph><ph id="ph8">|</ph><ph id="ph9">`false`</ph>|The prompt character is not valid and raises a &lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt; event.|</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the prompt character entered as input causes the current editable position in the mask to be reset; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to indicate that the prompt character is to be processed as a normal input character.</source>
+        </trans-unit>
+        <trans-unit id="411" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="412" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that determines how a space input character should be handled.</source>
+        </trans-unit>
+        <trans-unit id="413" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox&gt; can treat two categories of characters—spaces and prompt characters—specially.</source>
+        </trans-unit>
+        <trans-unit id="414" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Typically, each input character will be tested against the mask and either accepted or rejected.</source>
+        </trans-unit>
+        <trans-unit id="415" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Setting the ResetOnSpace property to <ph id="ph1">`true`</ph> will result in the current mask character position to be cleared and the current position to be advanced to the next editable character.</source>
+        </trans-unit>
+        <trans-unit id="416" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The type of character input will determine whether the masking engine moves forward to the next character in the mask, or stays at the current position and waits for a matching character.</source>
+        </trans-unit>
+        <trans-unit id="417" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the input character is a space, and does not match the current non-editable character in the mask, the masking engine will skip ahead to the next character in the mask.</source>
+        </trans-unit>
+        <trans-unit id="418" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the input character is not a space, and does not match the current non-editable character in the mask, the masking engine will remain at the current mask position, and attempt to match the next input character against it.</source>
+        </trans-unit>
+        <trans-unit id="419" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the space input character causes the current editable position in the mask to be reset; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to indicate that it is to be processed as a normal input character.</source>
+        </trans-unit>
+        <trans-unit id="420" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="421" translate="yes" xml:space="preserve">
+          <source>Scrolls the contents of the control to the current caret position.</source>
+        </trans-unit>
+        <trans-unit id="422" translate="yes" xml:space="preserve">
+          <source>This method is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="423" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ScrollToCaret method is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="424" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, because the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control does not support multiline configuration, this method is overridden to perform no actions.</source>
+        </trans-unit>
+        <trans-unit id="425" translate="yes" xml:space="preserve">
+          <source>Gets or sets the current selection in the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="426" translate="yes" xml:space="preserve">
+          <source>The currently selected text as a &lt;xref:System.String&gt;.</source>
+        </trans-unit>
+        <trans-unit id="427" translate="yes" xml:space="preserve">
+          <source>If no text is currently selected, this property resolves to an empty string.</source>
+        </trans-unit>
+        <trans-unit id="428" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the user is allowed to reenter literal values.</source>
+        </trans-unit>
+        <trans-unit id="429" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Input masks commonly contain literals.</source>
+        </trans-unit>
+        <trans-unit id="430" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the user enters characters into the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; at runtime, the current character position will sometimes fall on a literal.</source>
+        </trans-unit>
+        <trans-unit id="431" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The SkipLiterals property describes how user input for the next character is to be handled, as follows:      -   If this property is <ph id="ph1">`true`</ph>, the user can either redundantly enter the same character as the literal at the current position, or can enter the next editable character, thereby jumping the current position to that position.</source>
+        </trans-unit>
+        <trans-unit id="432" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If this property is <ph id="ph1">`false`</ph>, the user can only enter the next editable character.</source>
+        </trans-unit>
+        <trans-unit id="433" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the next position in the mask will not accept the literal character (for example, the user types "/" and the next position only accepts digits), the control will raise the &lt;xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="434" translate="yes" xml:space="preserve" extradata="MT">
+          <source>As an example, in the "90/90/0000" date entry mask, the forward slash characters are literals.</source>
+        </trans-unit>
+        <trans-unit id="435" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Assume that the user has entered two initial digits, "11", so the current position in the mask is at the first forward slash (/) literal.</source>
+        </trans-unit>
+        <trans-unit id="436" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If SkipLiterals is <ph id="ph1">`true`</ph>, then the user has the following valid choices:      -   The user can enter a "/" character.</source>
+        </trans-unit>
+        <trans-unit id="437" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This results in the position being moved to the next character, which in this example is the fourth position, a 9 masking element.</source>
+        </trans-unit>
+        <trans-unit id="438" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The user can enter the next editable character, which in this example is a digit.</source>
+        </trans-unit>
+        <trans-unit id="439" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The digit would be validated and the current position would automatically be moved to the fifth position, which is a 0 masking element.</source>
+        </trans-unit>
+        <trans-unit id="440" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If SkipLiterals is <ph id="ph1">`false`</ph>, then only a valid data input is allowed, which in this example would be a digit.</source>
+        </trans-unit>
+        <trans-unit id="441" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to allow literals to be reentered; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to prevent the user from overwriting literal characters.</source>
+        </trans-unit>
+        <trans-unit id="442" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="443" translate="yes" xml:space="preserve">
+          <source>Gets or sets the text as it is currently displayed to the user.</source>
+        </trans-unit>
+        <trans-unit id="444" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Text is the default binding property for the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="445" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Strings retrieved using this property are formatted according to the control's formatting properties, such as &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; and &lt;xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="446" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can assign a string with or without literal characters to Text depending on the values of &lt;xref:System.Windows.Forms.MaskedTextBox.ResetOnPrompt%2A&gt;, &lt;xref:System.Windows.Forms.MaskedTextBox.ResetOnSpace%2A&gt;, and &lt;xref:System.Windows.Forms.MaskedTextBox.SkipLiterals%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="447" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Text is the default binding property for &lt;xref:System.Windows.Forms.MaskedTextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="448" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Forms.MaskedTextBox&gt; will raise the &lt;xref:System.Windows.Forms.Control.TextChanged&gt; event whenever the formatted text value changes.</source>
+        </trans-unit>
+        <trans-unit id="449" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Different properties may or may not cause this value to change.</source>
+        </trans-unit>
+        <trans-unit id="450" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, changing the &lt;xref:System.Windows.Forms.MaskedTextBox.PasswordChar%2A&gt; property will not raise the &lt;xref:System.Windows.Forms.Control.TextChanged&gt; event, but changing the &lt;xref:System.Windows.Forms.MaskedTextBox.Mask%2A&gt; property will.</source>
+        </trans-unit>
+        <trans-unit id="451" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; containing the text currently displayed by the control.</source>
+        </trans-unit>
+        <trans-unit id="452" translate="yes" xml:space="preserve">
+          <source>The default is an empty string.</source>
+        </trans-unit>
+        <trans-unit id="453" translate="yes" xml:space="preserve">
+          <source>Gets or sets how text is aligned in a masked text box control.</source>
+        </trans-unit>
+        <trans-unit id="454" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can use the TextAlign property to align the displayed text within a &lt;xref:System.Windows.Forms.MaskedTextBox&gt; to match the layout of visual elements on your form.</source>
+        </trans-unit>
+        <trans-unit id="455" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if your controls are all located on the right side of the form, you can set the TextAlign property to &lt;xref:System.Windows.Forms.HorizontalAlignment&gt;, and the text will be aligned with the right side of the control instead of the default left alignment.</source>
+        </trans-unit>
+        <trans-unit id="456" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Windows.Forms.HorizontalAlignment"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> enumeration values that specifies how text is aligned relative to the control.</source>
+        </trans-unit>
+        <trans-unit id="457" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Windows.Forms.HorizontalAlignment"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="458" translate="yes" xml:space="preserve">
+          <source>The value assigned to this property is not of type <bpt id="p1">&lt;xref href="System.Windows.Forms.HorizontalAlignment"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="459" translate="yes" xml:space="preserve">
+          <source>Occurs when the text alignment is changed.</source>
+        </trans-unit>
+        <trans-unit id="460" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TextAlignChanged event is raised after the &lt;xref:System.Windows.Forms.MaskedTextBox.TextAlign%2A&gt; property is changed.</source>
+        </trans-unit>
+        <trans-unit id="461" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="462" translate="yes" xml:space="preserve">
+          <source>Gets the length of the displayed text.</source>
+        </trans-unit>
+        <trans-unit id="463" translate="yes" xml:space="preserve">
+          <source>An Int32 representing the number of characters in the &lt;xref:System.Windows.Forms.MaskedTextBox.Text<bpt id="p1">*</bpt>&gt; property. TextLength respects properties such as &lt;xref:System.Windows.Forms.MaskedTextBox.HidePromptOnLeave<ept id="p1">*</ept>&gt;, which means that the return results may be different depending on whether the control has focus.</source>
+        </trans-unit>
+        <trans-unit id="464" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that determines whether literals and prompt characters are included in the formatted string.</source>
+        </trans-unit>
+        <trans-unit id="465" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TextMaskFormat property determines how the literal and prompt characters in the mask are processed when the generating the formatted string.</source>
+        </trans-unit>
+        <trans-unit id="466" translate="yes" xml:space="preserve" extradata="MT">
+          <source>More specifically, it determines whether literal characters, prompt characters, or both are included in the &lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="467" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When prompt characters are excluded, they are transformed into spaces in the formatted string.</source>
+        </trans-unit>
+        <trans-unit id="468" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  The &lt;xref:System.Windows.Forms.MaskedTextBox.CutCopyMaskFormat%2A&gt; property serves a similar purpose with respect to how the &lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; property is interpreted.</source>
+        </trans-unit>
+        <trans-unit id="469" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskFormat"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="470" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskFormat"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="471" translate="yes" xml:space="preserve">
+          <source>Property set with a <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskFormat"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value that is not valid.</source>
+        </trans-unit>
+        <trans-unit id="472" translate="yes" xml:space="preserve">
+          <source>Returns a string that represents the current masked text box.</source>
+        </trans-unit>
+        <trans-unit id="473" translate="yes" xml:space="preserve">
+          <source>This method overrides &lt;xref:System.Windows.Forms.TextBoxBase.ToString*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="474" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This version of the ToString method calls the base class implementation of this method, &lt;xref:System.Windows.Forms.TextBoxBase.ToString%2A?displayProperty=fullName&gt;, then appends the input string after processing by the mask.</source>
+        </trans-unit>
+        <trans-unit id="475" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method honors properties that alter the appearance of the formatted string, with the following exceptions:      -   The returned string always includes prompt and literal characters, regardless of the values of the &lt;xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="476" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Password characters are ignored, so that the actual user-typed characters are returned.</source>
+        </trans-unit>
+        <trans-unit id="477" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In other words, the values of the &lt;xref:System.Windows.Forms.MaskedTextBox.PasswordChar%2A&gt; and &lt;xref:System.Windows.Forms.MaskedTextBox.UseSystemPasswordChar%2A&gt; properties are ignored.</source>
+        </trans-unit>
+        <trans-unit id="478" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; that contains information about the current <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="479" translate="yes" xml:space="preserve">
+          <source>The string includes the type, a simplified view of the input string, and the formatted input string.</source>
+        </trans-unit>
+        <trans-unit id="480" translate="yes" xml:space="preserve">
+          <source>Occurs when <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> has finished parsing the current value using the &lt;xref:System.Windows.Forms.MaskedTextBox.ValidatingType*&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="481" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control will optionally validate user input against the type defined by its &lt;xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A?displayProperty=fullName&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="482" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When this property is not <ph id="ph1">`null`</ph>, the following series of events occurs:      1.</source>
+        </trans-unit>
+        <trans-unit id="483" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The validation sequence begins when one of the following occurs:          -   &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control looses focus.</source>
+        </trans-unit>
+        <trans-unit id="484" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The &lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; property is retrieved.</source>
+        </trans-unit>
+        <trans-unit id="485" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The &lt;xref:System.Windows.Forms.MaskedTextBox.ValidateText%2A&gt; method is called.</source>
+        </trans-unit>
+        <trans-unit id="486" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="487" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Any of these events result in a call to the <ph id="ph1">`Parse`</ph> method of the type specified with the &lt;xref:System.Windows.Forms.TypeValidationEventArgs.ValidatingType%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="488" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">`Parse`</ph> is responsible for the conversion of the formatted input string to the target type.</source>
+        </trans-unit>
+        <trans-unit id="489" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A successful conversion equates to a successful validation.</source>
+        </trans-unit>
+        <trans-unit id="490" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="491" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After <ph id="ph1">`Parse`</ph> returns, the TypeValidationCompleted event is raised.</source>
+        </trans-unit>
+        <trans-unit id="492" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The event handler for this event is most commonly implemented to perform type or mask validation processing.</source>
+        </trans-unit>
+        <trans-unit id="493" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It receives a &lt;xref:System.Windows.Forms.TypeValidationEventArgs&gt; parameter containing information about the conversion; for example, the &lt;xref:System.Windows.Forms.TypeValidationEventArgs.IsValidInput%2A&gt; member indicates whether the conversion was successful.</source>
+        </trans-unit>
+        <trans-unit id="494" translate="yes" xml:space="preserve" extradata="MT">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="495" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After the event handler for the TypeValidationCompleted event returns, the standard validation event, &lt;xref:System.Windows.Forms.Control.Validating&gt;, is raised.</source>
+        </trans-unit>
+        <trans-unit id="496" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A handler can be implemented to perform standard validation, perhaps including canceling the event.</source>
+        </trans-unit>
+        <trans-unit id="497" translate="yes" xml:space="preserve" extradata="MT">
+          <source>5.</source>
+        </trans-unit>
+        <trans-unit id="498" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the event is not canceled in step 3, the standard control validation event &lt;xref:System.Windows.Forms.Control.Validated&gt; is raised.</source>
+        </trans-unit>
+        <trans-unit id="499" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the &lt;xref:System.Windows.Forms.TypeValidationEventArgs.Cancel%2A&gt; property is set to <ph id="ph1">`true`</ph> in the TypeValidationCompleted event handler, the event will be canceled and the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control retains focus, unless the subsequent &lt;xref:System.Windows.Forms.Control.Validating&gt; event sets its version of the &lt;xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=fullName&gt; property back to <ph id="ph2">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="500" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="501" translate="yes" xml:space="preserve">
+          <source>Undoes the last edit operation in the text box.</source>
+        </trans-unit>
+        <trans-unit id="502" translate="yes" xml:space="preserve">
+          <source>This method is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="503" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Undo method is inherited from the base &lt;xref:System.Windows.Forms.TextBoxBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="504" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, &lt;xref:System.Windows.Forms.MaskedTextBox&gt; does not support undo functionality.</source>
+        </trans-unit>
+        <trans-unit id="505" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the operating system-supplied password character should be used.</source>
+        </trans-unit>
+        <trans-unit id="506" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The UseSystemPasswordChar property determines whether user-supplied input should be displayed in the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; as multiple occurrences of a password character defined by the operating system.</source>
+        </trans-unit>
+        <trans-unit id="507" translate="yes" xml:space="preserve" extradata="MT">
+          <source>UseSystemPasswordChar functions similarly to the &lt;xref:System.Windows.Forms.MaskedTextBox.PasswordChar%2A&gt; property, but instead of using a programmer-supplied character for the prompt, UseSystemPasswordChar uses a prompt defined by the operating system.</source>
+        </trans-unit>
+        <trans-unit id="508" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property has precedence over &lt;xref:System.Windows.Forms.MaskedTextBox.PasswordChar%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="509" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  As a security consideration, the &lt;xref:System.Windows.Forms.MaskedTextBox&gt; control disables cut and copy operations on password-protected strings.</source>
+        </trans-unit>
+        <trans-unit id="510" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the system password should be used as the prompt character; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="511" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="512" translate="yes" xml:space="preserve">
+          <source>The password character specified is the same as the current prompt character, &lt;xref:System.Windows.Forms.MaskedTextBox.PromptChar*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="513" translate="yes" xml:space="preserve">
+          <source>The two are required to be different.</source>
+        </trans-unit>
+        <trans-unit id="514" translate="yes" xml:space="preserve">
+          <source>Converts the user input string to an instance of the validating type.</source>
+        </trans-unit>
+        <trans-unit id="515" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ValidateText method attempts to convert the formatted string contained in the &lt;xref:System.Windows.Forms.MaskedTextBox.Text%2A&gt; property to an instance of the type that is specified by the &lt;xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="516" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Prompt characters are ignored in the formatted string, but literals are handled in accordance with the current value of the &lt;xref:System.Windows.Forms.MaskedTextBox.TextMaskFormat%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="517" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ValidateText raises the &lt;xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted&gt; event after the conversion is attempted, regardless of its success.</source>
+        </trans-unit>
+        <trans-unit id="518" translate="yes" xml:space="preserve">
+          <source>If successful, an &lt;xref:System.Object&gt; of the type specified by the &lt;xref:System.Windows.Forms.MaskedTextBox.ValidatingType*&gt; property; otherwise, <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to indicate conversion failure.</source>
+        </trans-unit>
+        <trans-unit id="519" translate="yes" xml:space="preserve">
+          <source>A critical exception occurred during the parsing of the input string.</source>
+        </trans-unit>
+        <trans-unit id="520" translate="yes" xml:space="preserve">
+          <source>Gets or sets the data type used to verify the data input by the user.</source>
+        </trans-unit>
+        <trans-unit id="521" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Masks do not in themselves guarantee that a user's input will represent a valid value for a given type.</source>
+        </trans-unit>
+        <trans-unit id="522" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following C# code shows a mask:      <ph id="ph1">```   maskedTextBox1.Mask = "99/99/9999";   ```</ph>       The following <ph id="ph2">[!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]</ph> code shows a mask:       <ph id="ph3">`MaskedTextBox1.Mask = "99/99/9999"`</ph>       This mask can demand that the user enter eight digits, but cannot verify that the user enters month, date, and year values in the correct range; "12/20/2003" and "70/90/0000" are equally valid as far as the mask is concerned.</source>
+        </trans-unit>
+        <trans-unit id="523" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can use ValidatingType to verify whether the data entered by the user falls within the correct range—in the previously mentioned case, by assigning it an instance of the &lt;xref:System.DateTime&gt; type.</source>
+        </trans-unit>
+        <trans-unit id="524" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The current text in the control will be validated either when the user leaves the control.</source>
+        </trans-unit>
+        <trans-unit id="525" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can determine whether or not the data fails validation by monitoring for the &lt;xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="526" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Forms.MaskedTextBox&gt; will only perform the check against ValidatingType if &lt;xref:System.Windows.Forms.MaskedTextBox.MaskCompleted%2A&gt; is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="527" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use your own custom data types with ValidatingType, you must implement a static <ph id="ph1">`Parse`</ph> method that takes a string as a parameter.</source>
+        </trans-unit>
+        <trans-unit id="528" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method must be implemented with one or both of the following signatures:       <ph id="ph1">`public static Object Parse(string)`</ph>       <ph id="ph2">`public static Object Parse(string, IFormatProvider)`</ph></source>
+        </trans-unit>
+        <trans-unit id="529" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Type&gt; representing the data type used in validation.</source>
+        </trans-unit>
+        <trans-unit id="530" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="531" translate="yes" xml:space="preserve">
+          <source>Processes Windows messages.</source>
+        </trans-unit>
+        <trans-unit id="532" translate="yes" xml:space="preserve">
+          <source>The Windows <bpt id="p1">&lt;xref href="System.Windows.Forms.Message"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to process.</source>
+        </trans-unit>
+        <trans-unit id="533" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether a multiline text box control automatically wraps words to the beginning of the next line when necessary.</source>
+        </trans-unit>
+        <trans-unit id="534" translate="yes" xml:space="preserve">
+          <source>This property is not supported by <bpt id="p1">&lt;xref href="System.Windows.Forms.MaskedTextBox"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="535" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because &lt;xref:System.Windows.Forms.MaskedTextBox&gt; does not support multiple lines of input, the WordWrap property is ignored.</source>
+        </trans-unit>
+        <trans-unit id="536" translate="yes" xml:space="preserve">
+          <source>The WordWrap property always returns <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

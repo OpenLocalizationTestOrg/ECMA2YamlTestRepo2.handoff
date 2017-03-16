@@ -10,8 +10,8 @@ items:
   nameWithType: IEventRedirector
   fullName: Microsoft.Build.Framework.IEventRedirector
   type: Interface
-  summary: "Передает события построения в другие средства ведения журнала."
-  remarks: "В разделе [записи несколькими поддержкой ведения журнала](~/add/includes/ajax-current-ext-md.md) подробнее."
+  summary: Forwards build events to other loggers.
+  remarks: See [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md) for more information.
   syntax:
     content: public interface IEventRedirector
   implements: []
@@ -29,14 +29,14 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Вызывается средствами ведения журнала узла для передачи событий построения центральное средство ведения журнала."
-  remarks: "В разделе [записи несколькими поддержкой ведения журнала](~/add/includes/ajax-current-ext-md.md) подробнее."
+  summary: Called by the node loggers to forward build events to the central logger.
+  remarks: See [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md) for more information.
   syntax:
     content: public void ForwardEvent (Microsoft.Build.Framework.BuildEventArgs buildEvent);
     parameters:
     - id: buildEvent
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "<xref href=&quot;Microsoft.Build.Framework.BuildEventArgs&quot;> </xref> Для пересылки."
+      description: The <xref href="Microsoft.Build.Framework.BuildEventArgs"></xref> to forward.
   overload: Microsoft.Build.Framework.IEventRedirector.ForwardEvent*
   exceptions: []
   platform:

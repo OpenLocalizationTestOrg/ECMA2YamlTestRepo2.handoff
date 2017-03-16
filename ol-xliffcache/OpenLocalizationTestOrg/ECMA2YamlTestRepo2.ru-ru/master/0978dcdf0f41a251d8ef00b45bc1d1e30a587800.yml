@@ -13,7 +13,7 @@ items:
   nameWithType: LazyFormattedBuildEventArgs
   fullName: Microsoft.Build.Framework.LazyFormattedBuildEventArgs
   type: Class
-  summary: "Сохраняет строки для частей сообщения, задерживая форматирование, пока он должен отображаться."
+  summary: Stores strings for parts of a message delaying the formatting until it needs to be shown.
   syntax:
     content: 'public class LazyFormattedBuildEventArgs : Microsoft.Build.Framework.BuildEventArgs'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Конструктор по умолчанию."
+  summary: Default constructor.
   syntax:
     content: protected LazyFormattedBuildEventArgs ();
     parameters: []
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Данный конструктор позволяет инициализировать все данные события."
+  summary: This constuctor allows all event data to be initialized.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName);
     parameters:
     - id: message
       type: System.String
-      description: "сообщение об ошибке."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "Ключевое слово справки."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "Имя отправителя события."
+      description: name of event sender.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -89,25 +89,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Этот конструктор позволяет использовать аргументы сообщения с отложенным форматированием."
+  summary: This constuctor that allows message arguments that are lazily formatted.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "сообщение об ошибке."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "Ключевое слово справки."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "Имя отправителя события."
+      description: name of event sender.
     - id: eventTimestamp
       type: System.DateTime
-      description: "Отметка времени создания события."
+      description: Timestamp when event was created.
     - id: messageArgs
       type: System.Object[]
-      description: "Аргументы сообщения."
+      description: Message arguments.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -124,12 +124,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Возвращает отформатированное сообщение."
+  summary: Gets the formatted message.
   syntax:
     content: public override string Message { get; }
     return:
       type: System.String
-      description: "Для добавления."
+      description: To be added.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.Message*
   exceptions: []
   platform:
