@@ -25,7 +25,7 @@ items:
   nameWithType: BuildMessageEventArgs
   fullName: Microsoft.Build.Framework.BuildMessageEventArgs
   type: Class
-  summary: "Adja meg az adatait a <xref href=&quot;Microsoft.Build.Framework.IEventSource.MessageRaised&quot;> </xref> esemény."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.MessageRaised"></xref> event.
   syntax:
     content: 'public class BuildMessageEventArgs : Microsoft.Build.Framework.LazyFormattedBuildEventArgs'
   inheritance:
@@ -54,7 +54,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> class.
   syntax:
     content: protected BuildMessageEventArgs ();
     parameters: []
@@ -74,22 +74,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;> </xref> és a megadott osztály <> </> *>, <> </> *>, <> </> *>, és <> </> *> értékeket."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> class with the specified <xref:Microsoft.Build.Framework.BuildEventArgs.Message*>, <xref:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword*>, <xref:Microsoft.Build.Framework.BuildEventArgs.SenderName*>, and <xref:Microsoft.Build.Framework.BuildMessageEventArgs.Importance*> values.
   syntax:
     content: public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance);
     parameters:
     - id: message
       type: System.String
-      description: "Az esemény szövegét."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Az eseményhez tartozó súgókulcsszót."
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "Az esemény forrását."
+      description: The source of the event.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "A <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref> érték azt jelzi, az esemény fontosságát."
+      description: A <xref href="Microsoft.Build.Framework.MessageImportance"></xref> value indicating the importance of the event.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -106,25 +106,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicializálja a <xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;> </xref> objektum."
+  summary: Initializes the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> object.
   syntax:
     content: public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: "Az üzenet szövege."
+      description: The message text.
     - id: helpKeyword
       type: System.String
-      description: "A kulcsszó egy súgótémakör csatolása."
+      description: The keyword to link to a help topic.
     - id: senderName
       type: System.String
-      description: "Az esemény küldője neve."
+      description: The name of the event sender.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "Az üzenet fontosságát"
+      description: The importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "Az adatok és az eseményhez tartozó időpontja."
+      description: The data and time associated with the event.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -141,28 +141,28 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicializálja a <xref href=&quot;Microsoft.Build.Framework.BuildMessageEventArgs&quot;> </xref> objektum."
+  summary: Initializes the <xref href="Microsoft.Build.Framework.BuildMessageEventArgs"></xref> object.
   syntax:
     content: public BuildMessageEventArgs (string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "Az üzenet szövege."
+      description: The message text.
     - id: helpKeyword
       type: System.String
-      description: "A kulcsszó egy súgótémakör csatolása."
+      description: The keyword to link to a help topic.
     - id: senderName
       type: System.String
-      description: "Az esemény küldője neve."
+      description: The name of the event sender.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "Az üzenet fontosságát"
+      description: The importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "Az adatok és az eseményhez tartozó időpontja."
+      description: The data and time associated with the event.
     - id: messageArgs
       type: System.Object[]
-      description: "Az üzenet argumentumokat."
+      description: The message arguments.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -179,43 +179,43 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ez a konstruktor lehetővé teszi, hogy az összes esemény adatai inicializálása"
+  summary: This constructor allows all event data to be initialized
   syntax:
     content: public BuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance);
     parameters:
     - id: subcategory
       type: System.String
-      description: "esemény alkategória"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "Eseménykód"
+      description: event code
     - id: file
       type: System.String
-      description: "az eseményhez tartozó fájl"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "sor száma (a nem megfelelő&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "Oszlopszám (0, a nem megfelelő)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "a sor végén szám (0, a nem megfelelő)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "befejező oszlopszám (0, a nem megfelelő)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "szöveges üzenet"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Súgó"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "esemény küldője neve"
+      description: name of event sender
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "az üzenet fontosságát"
+      description: importance of the message
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -232,46 +232,46 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ez a konstruktor lehetővé teszi, hogy az időbélyegző kell beállítani"
+  summary: This constructor allows timestamp to be set
   syntax:
     content: public BuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);
     parameters:
     - id: subcategory
       type: System.String
-      description: "esemény alkategória"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "Eseménykód"
+      description: event code
     - id: file
       type: System.String
-      description: "az eseményhez tartozó fájl"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "sor száma (a nem megfelelő&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "Oszlopszám (0, a nem megfelelő)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "a sor végén szám (0, a nem megfelelő)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "befejező oszlopszám (0, a nem megfelelő)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "szöveges üzenet"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Súgó"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "esemény küldője neve"
+      description: name of event sender
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "az üzenet fontosságát"
+      description: importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "az esemény egyéni időbélyeg"
+      description: custom timestamp for the event
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -288,49 +288,49 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ez a konstruktor lehetővé teszi, hogy az időbélyegző kell beállítani"
+  summary: This constructor allows timestamp to be set
   syntax:
     content: public BuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: subcategory
       type: System.String
-      description: "esemény alkategória"
+      description: event subcategory
     - id: code
       type: System.String
-      description: "Eseménykód"
+      description: event code
     - id: file
       type: System.String
-      description: "az eseményhez tartozó fájl"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "sor száma (a nem megfelelő&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "Oszlopszám (0, a nem megfelelő)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "a sor végén szám (0, a nem megfelelő)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "befejező oszlopszám (0, a nem megfelelő)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "szöveges üzenet"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Súgó"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "esemény küldője neve"
+      description: name of event sender
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "az üzenet fontosságát"
+      description: importance of the message
     - id: eventTimestamp
       type: System.DateTime
-      description: "az esemény egyéni időbélyeg"
+      description: custom timestamp for the event
     - id: messageArgs
       type: System.Object[]
-      description: "üzenet argumentumok"
+      description: message arguments
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.#ctor*
   exceptions: []
   platform:
@@ -347,12 +347,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Esemény társított kód."
+  summary: Code associated with event.
   syntax:
     content: public string Code { get; }
     return:
       type: System.String
-      description: "<xref:System.String>.</xref:System.String> Beolvasása"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.Code*
   exceptions: []
   platform:
@@ -369,12 +369,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Oszlopszám társított fájlban lévő egyik fontos."
+  summary: Column number of interest in associated file.
   syntax:
     content: public int ColumnNumber { get; }
     return:
       type: System.Int32
-      description: "<xref:System.Int32>.</xref:System.Int32> Beolvasása"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.ColumnNumber*
   exceptions: []
   platform:
@@ -391,12 +391,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Befejezési oszlopszám társított fájlban lévő egyik fontos."
+  summary: Ending column number of interest in associated file.
   syntax:
     content: public int EndColumnNumber { get; }
     return:
       type: System.Int32
-      description: "<xref:System.Int32>.</xref:System.Int32> Beolvasása"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.EndColumnNumber*
   exceptions: []
   platform:
@@ -413,12 +413,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Záró sorszámot társított fájlban lévő egyik fontos."
+  summary: Ending line number of interest in associated file.
   syntax:
     content: public int EndLineNumber { get; }
     return:
       type: System.Int32
-      description: "<xref:System.Int32>.</xref:System.Int32> Beolvasása"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.EndLineNumber*
   exceptions: []
   platform:
@@ -435,12 +435,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "A fájl eseményhez tartozó."
+  summary: File associated with event.
   syntax:
     content: public string File { get; }
     return:
       type: System.String
-      description: "<xref:System.String>.</xref:System.String> Beolvasása"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.File*
   exceptions: []
   platform:
@@ -457,12 +457,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi az esemény fontosságát."
+  summary: Gets the importance of the event.
   syntax:
     content: public Microsoft.Build.Framework.MessageImportance Importance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: "A <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref> érték azt jelzi, az esemény fontosságát."
+      description: A <xref href="Microsoft.Build.Framework.MessageImportance"></xref> value indicating the importance of the event.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.Importance*
   exceptions: []
   platform:
@@ -479,12 +479,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Adott fájl érdeklődik számát."
+  summary: Line number of interest in associated file.
   syntax:
     content: public int LineNumber { get; }
     return:
       type: System.Int32
-      description: "<xref:System.Int32>.</xref:System.Int32> Beolvasása"
+      description: Returns <xref:System.Int32>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.LineNumber*
   exceptions: []
   platform:
@@ -501,12 +501,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "A projekt, amely az üzenet elküldésekor lett felépítése."
+  summary: The project which was building when the message was issued.
   syntax:
     content: public string ProjectFile { get; set; }
     return:
       type: System.String
-      description: "<xref:System.String>.</xref:System.String> Beolvasása"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.ProjectFile*
   exceptions: []
   platform:
@@ -523,12 +523,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Az esemény egyéni altípusa."
+  summary: The custom sub-type of the event.
   syntax:
     content: public string Subcategory { get; }
     return:
       type: System.String
-      description: "<xref:System.String>.</xref:System.String> Beolvasása"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Framework.BuildMessageEventArgs.Subcategory*
   exceptions: []
   platform:

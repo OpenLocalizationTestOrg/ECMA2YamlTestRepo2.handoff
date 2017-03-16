@@ -11,7 +11,7 @@ items:
   nameWithType: ProjectImportGroupElement
   fullName: Microsoft.Build.Construction.ProjectImportGroupElement
   type: Class
-  summary: "Az MSBuild projektben ImportGroup elem jelöli."
+  summary: Represents the ImportGroup element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#Imports={Count} Condition={Condition} Label={Label}")]
@@ -59,17 +59,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Az utolsó importálás a importálási csoport után is elhelyez egy új importálhat."
-  remarks: "Kényelmi módszere, amely egy helyre heurisztikát alapján választja."
+  summary: Adds a new import after the last import in this import group.
+  remarks: Convenience method that picks a location based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement AddImport (string project);
     parameters:
     - id: project
       type: System.String
-      description: "A projekt importálása."
+      description: The project to import.
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "Az új importálás adja vissza."
+      description: Returns the new import.
   overload: Microsoft.Build.Construction.ProjectImportGroupElement.AddImport*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "A projekt importálása lévő összes tulajdonság lekérése."
+  summary: Gets all properties in this project import.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportElement> Imports { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportElement}
-      description: "A projekt importálása adja vissza az összes tulajdonság."
+      description: Returns all properties in this project import.
   overload: Microsoft.Build.Construction.ProjectImportGroupElement.Imports*
   exceptions: []
   platform:

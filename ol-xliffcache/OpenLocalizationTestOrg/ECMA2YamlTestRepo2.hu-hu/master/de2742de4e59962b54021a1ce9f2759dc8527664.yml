@@ -15,7 +15,7 @@ items:
   nameWithType: CallTarget
   fullName: Microsoft.Build.Tasks.CallTarget
   type: Class
-  summary: "Megvalósítja a `CallTarget` feladat. Használja a `CallTarget` létrehozásához, és ez a feladat végrehajtása a projekt fájlban. Használati és paraméter információkért lásd: [CallTarget feladat](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `CallTarget` task. Use the `CallTarget` element in your project file to create and execute this task. For usage and parameter information, see [CallTarget Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: >-
       [Microsoft.Build.Framework.RunInMTA]
@@ -49,7 +49,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Tasks.CallTarget&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.CallTarget"></xref> class.
   syntax:
     content: public CallTarget ();
     parameters: []
@@ -69,13 +69,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Arra utasítja a [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motor hozhat létre egy vagy több cél az aktuális projektben."
+  summary: Instructs the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine to build one or more targets in the current project.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha az összes cél létrehozása sikeres volt; Ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if all targets built successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.CallTarget.Execute*
   exceptions: []
   platform:
@@ -92,12 +92,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a logikai értéket, amely jelzi, hogy a [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motor meghívása egyszer cél (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) vagy a [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motor meghívása egyszer hozhat létre az összes cél (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
+  summary: Gets or sets a Boolean value that indicates whether the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once per target (<xref uid="langword_csharp_true" name="true" href=""></xref>) or the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once to build all targets (<xref uid="langword_csharp_false" name="false" href=""></xref>).
   syntax:
     content: public bool RunEachTargetSeparately { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motor meghívása egyszer target; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Ha a [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motor hozhat létre az összes cél egyszer nevezik."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once per target; <xref uid="langword_csharp_false" name="false" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once to build all targets.
   overload: Microsoft.Build.Tasks.CallTarget.RunEachTargetSeparately*
   exceptions: []
   platform:
@@ -114,12 +114,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A beépített céltól kimenetének beolvasása."
+  summary: Gets the outputs of all built targets.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TargetOutputs { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "A beépített céltól kimenetének."
+      description: The outputs of all built targets.
   overload: Microsoft.Build.Tasks.CallTarget.TargetOutputs*
   exceptions: []
   platform:
@@ -136,12 +136,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a cél- vagy célok hozhat létre."
+  summary: Gets or sets the target or targets to build.
   syntax:
     content: public string[] Targets { get; set; }
     return:
       type: System.String[]
-      description: "A cél vagy célok hozhat létre."
+      description: The target or targets to build.
   overload: Microsoft.Build.Tasks.CallTarget.Targets*
   exceptions: []
   platform:
@@ -158,13 +158,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a logikai értéket, amely jelzi, hogy az MSBuild motor adja vissza a beépített célokat a gyorsítótárból."
-  remarks: "A beépített célok a pénzbeli hatóköre (ProjectFileName, GlobalProperties) [TargetNames] build elemeket tartalmazó lista."
+  summary: Gets or sets a Boolean value that indicates whether the MSBuild engine will return the built targets from the cache.
+  remarks: The scope of built targets in the cash is (ProjectFileName, GlobalProperties)[TargetNames] as a list of build items.
   syntax:
     content: public bool UseResultsCache { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha az MSBuild motor a beépített célokat adja vissza a gyorsítótárból; Ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the MSBuild engine will return the built targets from the cache; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.CallTarget.UseResultsCache*
   exceptions: []
   platform:

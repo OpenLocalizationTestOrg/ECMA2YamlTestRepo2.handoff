@@ -12,7 +12,7 @@ items:
   nameWithType: ProjectItemDefinitionElement
   fullName: Microsoft.Build.Construction.ProjectItemDefinitionElement
   type: Class
-  summary: "Az MSBuild projektek ItemDefinition eleme jelöli."
+  summary: Represents an ItemDefinition element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{ItemType} #Metadata={Count} Condition={Condition}")]
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hozzáadja a metaadatokat a cikk definíciójához. A metaadatok hozzáfűzi a meglévő metaadatokat."
+  summary: Adds metadata to this item definition. Appends the metadata to any existing metadata.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement AddMetadata (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "A metaadat neve."
+      description: Name of the metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "A metaadatok lehet hozzáadni."
+      description: Metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "A módosított metaadatokat adja vissza."
+      description: Returns the modified metadata.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.AddMetadata*
   exceptions: []
   platform:
@@ -89,12 +89,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Az elem definíciója elemnév beolvasása."
+  summary: Gets the item definition element name.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Az elem definíciója elem nevét adja vissza."
+      description: Returns the item definition element name.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.ItemType*
   exceptions: []
   platform:
@@ -111,12 +111,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Lekéri az összes alárendelt metaadat-definíciók."
+  summary: Gets all child metadata definitions.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectMetadataElement> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectMetadataElement}
-      description: "Metaadat-definíciók minden gyermekét adja vissza."
+      description: Returns all child metadata definitions.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.Metadata*
   exceptions: []
   platform:

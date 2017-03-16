@@ -19,7 +19,7 @@ items:
   nameWithType: ResolveSDKReference
   fullName: Microsoft.Build.Tasks.ResolveSDKReference
   type: Class
-  summary: "Egy SDKReference oldja fel a lemezen a teljes elérési útja"
+  summary: Resolves an SDKReference to a full path on disk
   syntax:
     content: 'public class ResolveSDKReference : Microsoft.Build.Tasks.TaskExtension'
   inheritance:
@@ -50,7 +50,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Létrehoz egy új példányát ResolveSDKReference."
+  summary: Creates a new instance of ResolveSDKReference.
   syntax:
     content: public ResolveSDKReference ();
     parameters: []
@@ -70,13 +70,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A tevékenység végrehajtását."
+  summary: Execute the task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref:System.Boolean>.</xref:System.Boolean> Beolvasása"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.Execute*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Listájának telepítve SDK-k helyét, az SDK-t, SDKName metaadatai a SDKName."
+  summary: The list of installed SDKs the location of the SDK, the SDKName metadata is the SDKName.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] InstalledSDKs { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.InstalledSDKs*
   exceptions: []
   platform:
@@ -115,12 +115,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Meghatározza, hogy a figyelmeztetések vagy hibák naplózza a problémák megoldása SDK-k.       Ha a névfeloldási hiba kerül a hibát a létrehozás sikertelen lesz.       Ha a névfeloldási hiba kerül a naplóba, azt fogja figyelmeztetés és folytatás a feladatokat."
+  summary: "Specifies whether problems resolving SDKs are logged as warnings or errors.  \n  \n If the resolution problem is logged as an error the build will fail.  \n  \n If the resolution problem is logged as a warning we will warn and continue."
   syntax:
     content: public bool LogResolutionErrorsAsWarnings { get; set; }
     return:
       type: System.Boolean
-      description: "<xref:System.Boolean>.</xref:System.Boolean> Beolvasása"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.LogResolutionErrorsAsWarnings*
   exceptions: []
   platform:
@@ -137,12 +137,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A build alkalmazott Prefer32Bit jelző értéke"
+  summary: The value of the Prefer32Bit flag used in the build
   syntax:
     content: public bool Prefer32Bit { get; set; }
     return:
       type: System.Boolean
-      description: "A jelző adja vissza."
+      description: Returns the flag.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.Prefer32Bit*
   exceptions: []
   platform:
@@ -159,12 +159,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hivatkozások lehet átadni, hogy a SDKNames oldható meg. Feloldva, miután sdkroot elérési utak is hozzáfűzi a hivatkozásokat, RAR a szerelvény megfelelően az sdk helyen található."
+  summary: References may be passed in so that the SDKNames can be resolved. Once resolved, the sdkroot paths can be appended to the references so RAR can find the assembly correctly in the sdk location.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] References { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.References*
   exceptions: []
   platform:
@@ -181,12 +181,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "SDK-hivatkozások feloldása"
+  summary: Resolved SDK References
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedSDKReferences { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.ResolvedSDKReferences*
   exceptions: []
   platform:
@@ -203,12 +203,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A lemezen található elérési útra feloldható SDK hivatkozások beállítása"
+  summary: Set of SDK References to resolve to paths on disk
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SDKReferences { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.SDKReferences*
   exceptions: []
   platform:
@@ -225,12 +225,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Az SDK-k érdekében architektúrája"
+  summary: Architecture of the SDKs we are targeting
   syntax:
     content: public string TargetedSDKArchitecture { get; set; }
     return:
       type: System.String
-      description: "<xref:System.String>.</xref:System.String> Beolvasása"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.TargetedSDKArchitecture*
   exceptions: []
   platform:
@@ -247,12 +247,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "SDK-ban konfigurációs tartozó, amely fakadó problémák megoldásával"
+  summary: Configuration for SDK's which are resolved
   syntax:
     content: public string TargetedSDKConfiguration { get; set; }
     return:
       type: System.String
-      description: "<xref:System.String>.</xref:System.String> Beolvasása"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.ResolveSDKReference.TargetedSDKConfiguration*
   exceptions: []
   platform:

@@ -18,7 +18,7 @@ items:
   nameWithType: ToolTaskExtension
   fullName: Microsoft.Build.Tasks.ToolTaskExtension
   type: Class
-  summary: "Magában foglalja a kiterjesztett segédprogram módszert hozhat létre egy feladatot, amely a parancssori eszköz burkolja."
+  summary: Comprises extended utility methods for constructing a task that wraps a command line tool.
   syntax:
     content: 'public abstract class ToolTaskExtension : Microsoft.Build.Utilities.ToolTask'
   inheritance:
@@ -87,13 +87,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A megadott tölti <xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> a kapcsolók és egyéb információkat, amelyek a parancssori eszköz kell futtatnia a parancssorból, és nem egy válaszfájlt."
+  summary: Fills the specified <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> with the switches and other information that the command line tool must run from the command line and not from a response file.
   syntax:
     content: protected virtual void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> kitöltéséhez."
+      description: The <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> to fill.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -110,13 +110,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A megadott tölti <xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> a kapcsolók és egyéb információkat, amelyek a parancssori eszköz futtatásához egy válaszfájlt a."
+  summary: Fills the specified <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> with the switches and other information that the command line tool can run from a response file.
   syntax:
     content: protected virtual void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.CommandLineBuilderExtension&quot;> </xref> kitöltéséhez."
+      description: The <xref href="Microsoft.Build.Tasks.CommandLineBuilderExtension"></xref> to fill.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.AddResponseFileCommands*
   exceptions: []
   platform:
@@ -133,12 +133,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a származtatott feladat osztály által használt paraméterek gyűjteménye."
+  summary: Gets the collection of parameters used by the derived task class.
   syntax:
     content: protected System.Collections.Hashtable Bag { get; }
     return:
       type: System.Collections.Hashtable
-      description: "A származtatott feladat osztály által használt paraméterek gyűjteménye."
+      description: The collection of parameters used by the derived task class.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.Bag*
   exceptions: []
   platform:
@@ -155,13 +155,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a kapcsolók és egyéb információkat, amelyek a parancssori eszköz kell futtatnia, közvetlenül a parancssorból, és nem egy válaszfájlt."
+  summary: Gets the switches and other information that the command line tool must run directly from the command line and not from a response file.
   syntax:
     content: protected override string GenerateCommandLineCommands ();
     parameters: []
     return:
       type: System.String
-      description: "A kapcsolók és egyéb információkat, amelyek a parancssori eszköz kell futtatnia, közvetlenül a parancssorból, és nem egy válaszfájl tartalmazó karakterlánc."
+      description: A string containing the switches and other information that the command line tool must run directly from the command line and not from a response file.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GenerateCommandLineCommands*
   exceptions: []
   platform:
@@ -178,13 +178,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a kapcsolót, adja meg a válaszfájlt a parancssori eszköz segítségével."
+  summary: Gets the switch used by the command line tool to specify the response file.
   syntax:
     content: protected override string GenerateResponseFileCommands ();
     parameters: []
     return:
       type: System.String
-      description: "A kapcsoló, a válasz-fájlt ad meg a parancssori eszköz segítségével."
+      description: The switch used by the command line tool to specify the response file.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GenerateResponseFileCommands*
   exceptions: []
   platform:
@@ -201,20 +201,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a megadott logikai paraméter értéke."
-  remarks: "Ha `parameterName` nem szerepel a <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` adja vissza.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>"
+  summary: Gets the value of the specified Boolean parameter.
+  remarks: If `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` is returned.
   syntax:
     content: protected bool GetBoolParameterWithDefault (string parameterName, bool defaultValue);
     parameters:
     - id: parameterName
       type: System.String
-      description: "Vissza a paraméter neve."
+      description: The name of the parameter to return.
     - id: defaultValue
       type: System.Boolean
-      description: "A visszatérési érték, ha `parameterName` nem létezik a <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>"
+      description: The value to return if `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.
     return:
       type: System.Boolean
-      description: "A paraméter értéke."
+      description: The parameter value.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GetBoolParameterWithDefault*
   exceptions: []
   platform:
@@ -231,20 +231,20 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a megadott egész szám paraméter értékét."
-  remarks: "Ha `parameterName` nem szerepel a <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` adja vissza.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>"
+  summary: Gets the value of the specified integer parameter.
+  remarks: If `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag%2A>, `defaultValue` is returned.
   syntax:
     content: protected int GetIntParameterWithDefault (string parameterName, int defaultValue);
     parameters:
     - id: parameterName
       type: System.String
-      description: "Vissza a paraméter neve."
+      description: The name of the parameter to return.
     - id: defaultValue
       type: System.Int32
-      description: "A visszatérési érték, ha `parameterName` nem létezik a <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.</xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>"
+      description: The value to return if `parameterName` does not exist in the <xref:Microsoft.Build.Tasks.ToolTaskExtension.Bag*>.
     return:
       type: System.Int32
-      description: "A paraméter értéke."
+      description: The parameter value.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.GetIntParameterWithDefault*
   exceptions: []
   platform:
@@ -261,12 +261,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Adja vissza, hogy a ToolTask bejelentkezett ki a hibákat."
+  summary: Returns whether this ToolTask has logged any errors.
   syntax:
     content: protected override bool HasLoggedErrors { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a ToolTask naplózza a hibát, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Ha más módon."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the ToolTask logged errors, <xref uid="langword_csharp_false" name="false" href=""></xref> if otherwise.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.HasLoggedErrors*
   exceptions: []
   platform:
@@ -283,12 +283,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi egy példányát a <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> osztály, amely tartalmazza a feladat naplózási módszert."
+  summary: Gets an instance of a <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class containing task logging methods.
   syntax:
     content: public Microsoft.Build.Utilities.TaskLoggingHelper Log { get; }
     return:
       type: Microsoft.Build.Utilities.TaskLoggingHelper
-      description: "Egy példányát a <xref href=&quot;Microsoft.Build.Tasks.TaskLoggingHelperExtension&quot;> </xref> osztály, amely tartalmazza a feladat naplózási módszert."
+      description: An instance of a <xref href="Microsoft.Build.Tasks.TaskLoggingHelperExtension"></xref> class containing task logging methods.
   overload: Microsoft.Build.Tasks.ToolTaskExtension.Log*
   exceptions: []
   platform:

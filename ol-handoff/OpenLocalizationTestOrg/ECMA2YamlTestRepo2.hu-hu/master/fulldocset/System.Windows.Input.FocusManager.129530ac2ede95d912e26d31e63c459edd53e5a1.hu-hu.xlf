@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="hu-hu">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1ae7a6aa20930920a3b72fec9521a24c6b0fb72d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Input.FocusManager.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e05ac425d51ee1a32fad90df0e0e4505ea12647a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8871911a69778f24aeaa2299cdb47a993e7d4ba3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides a set of static methods, attached properties, and events for determining and setting focus scopes and for setting the focused element within the scope.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In <ph id="ph1">[!INCLUDE[TLA#tla_wpf](~/add/includes/tlasharptla-wpf-md.md)]</ph> there are two concepts concerning focus: keyboard focus and logical focus.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Keyboard focus pertains to the element which is currently receiving keyboard input.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There can be only one element with keyboard focus.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This element with keyboard focus has &lt;xref:System.Windows.IInputElement.IsKeyboardFocused%2A&gt; set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Input.Keyboard.FocusedElement%2A?displayProperty=fullName&gt; returns the element with keyboard focus.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Logical focus pertains to the &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=fullName&gt; within a specific focus scope.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A focus scope is a container element that keeps track of the &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=fullName&gt; within its scope.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By default, the &lt;xref:System.Windows.Window&gt; class is a focus scope as are the &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ContextMenu&gt;, and &lt;xref:System.Windows.Controls.ToolBar&gt; classes.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An element which is a focus scope has &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There can be multiple elements with logical focus, but there can only be one element with logical focus within a single focus scope.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An element with logical focus does not necessarily have keyboard focus, but an element with keyboard focus will have logical focus.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is possible to define a focus scope within a focus scope.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this case, both the parent focus scope and the child focus scope can have a &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following scenario illustrates how keyboard focus and logical focus change in a <ph id="ph1">[!INCLUDE[TLA#tla_wpf](~/add/includes/tlasharptla-wpf-md.md)]</ph> application that has a &lt;xref:System.Windows.Window&gt; with a &lt;xref:System.Windows.Controls.TextBox&gt; and a &lt;xref:System.Windows.Controls.Menu&gt; which has a &lt;xref:System.Windows.Controls.MenuItem&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When keyboard focus changes from the &lt;xref:System.Windows.Controls.TextBox&gt; to the &lt;xref:System.Windows.Controls.MenuItem&gt;, the &lt;xref:System.Windows.Controls.TextBox&gt; losses keyboard focus but retains logical focus for the &lt;xref:System.Windows.Window&gt; focus scope.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Controls.MenuItem&gt; obtains keyboard focus and obtains logical focus for the &lt;xref:System.Windows.Controls.Menu&gt; focus scope.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When keyboard focus returns to the root &lt;xref:System.Windows.Window&gt;, the element in &lt;xref:System.Windows.Window&gt; focus scope with logical focus will obtain keyboard focus, which in this case is the &lt;xref:System.Windows.Controls.TextBox&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Controls.TextBox&gt; now has keyboard focus and logical focus.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Controls.MenuItem&gt; loses keyboard focus, but retains logical focus for the &lt;xref:System.Windows.Controls.Menu&gt; focus scope.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default value of &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; on a &lt;xref:System.Windows.Window&gt;, &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ToolBar&gt;, and &lt;xref:System.Windows.Controls.ContextMenu&gt; is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on focus, see the <bpt id="p1">[</bpt>Input Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept> and the <bpt id="p2">[</bpt>Focus Overview<ept id="p2">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Adds a handler for the &lt;xref:System.Windows.Input.FocusManager.GotFocus&gt; attached event.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Windows.UIElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref href="System.Windows.ContentElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that listens to this event.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The event handler to be added.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Adds a handler for the &lt;xref:System.Windows.Input.FocusManager.LostFocus&gt; attached event.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Windows.UIElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref href="System.Windows.ContentElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that listens to this event.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The event handler to be added.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Input.FocusManager.FocusedElement*&gt; attached property.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Gets the element with logical focus within the specified focus scope.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A&gt; is the element which has logical focus for a specific focus scope.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This object may or may not have keyboard focus.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Keyboard focus refers to the element that receives keyboard input.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on focus, keyboard focus, and logical focus, see the <bpt id="p1">[</bpt>Input Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If <ph id="ph1">`element`</ph> is not a focus scope, this method will return <ph id="ph2">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use &lt;xref:System.Windows.Input.FocusManager.SetFocusedElement%2A&gt;, to specify the element with logical focus within a specified focus scope.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The element with logical focus in the specified focus scope.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The element in the specified focus scope with logical focus.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;element&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Determines the closest ancestor of the specified element that has &lt;xref:System.Windows.Input.FocusManager.IsFocusScope*&gt; set to <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default value of &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; on a &lt;xref:System.Windows.Window&gt;, &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ToolBar&gt;, &lt;xref:System.Windows.Controls.ContextMenu&gt; is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A focus scope is a container element that keeps track of the &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=fullName&gt; within its scope.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By default, the &lt;xref:System.Windows.Window&gt; class is a focus scope as are the &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ContextMenu&gt;, and &lt;xref:System.Windows.Controls.ToolBar&gt; classes.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An element which is a focus scope has &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on focus, keyboard focus, and logical focus, see the <bpt id="p1">[</bpt>Input Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The element to get the closest focus scope for.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The focus scope for the specified element.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;element&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Determines whether the specified <bpt id="p1">&lt;xref href="System.Windows.DependencyObject"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is a focus scope.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A focus scope is a container element that keeps track of the &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=fullName&gt; within its scope.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By default, the &lt;xref:System.Windows.Window&gt; class is a focus scope as are the &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ContextMenu&gt;, and &lt;xref:System.Windows.Controls.ToolBar&gt; classes.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An element which is a focus scope has &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on focus, keyboard focus, and logical focus, see the <bpt id="p1">[</bpt>Input Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The element from which to read the attached property.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if &lt;xref:System.Windows.Input.FocusManager.IsFocusScope*&gt; is set to <bpt id="p2">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> on the specified element; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Input.FocusManager.GotFocus&gt; attached event.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Input.FocusManager.IsFocusScope*&gt; attached property.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default value of &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; on a &lt;xref:System.Windows.Window&gt;, &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ToolBar&gt;, &lt;xref:System.Windows.Controls.ContextMenu&gt; is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A focus scope is a container element that keeps track of the &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=fullName&gt; within its scope.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By default, the &lt;xref:System.Windows.Window&gt; class is a focus scope as are the &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ContextMenu&gt;, and &lt;xref:System.Windows.Controls.ToolBar&gt; classes.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An element which is a focus scope has &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on focus, keyboard focus, and logical focus, see the <bpt id="p1">[</bpt>Input Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Identifies the &lt;xref:System.Windows.Input.FocusManager.LostFocus&gt; attached event.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Removes a handler for the &lt;xref:System.Windows.Input.FocusManager.GotFocus&gt; attached event.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Windows.UIElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref href="System.Windows.ContentElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that listens to this event.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The event handler to be removed.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Removes a handler for the &lt;xref:System.Windows.Input.FocusManager.LostFocus&gt; attached event.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Windows.UIElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref href="System.Windows.ContentElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> that listens to this event.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The event handler to be removed.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Sets logical focus on the specified element.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A&gt; is the element which has logical focus for the specific focus scope.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This object may or may not have keyboard focus.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Keyboard focus refers to the element that receives keyboard input.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on focus, keyboard focus, and logical focus, see the <bpt id="p1">[</bpt>Input Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is possible to specify a focus scope that is an ancestor of the focus scope the element is in.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if a &lt;xref:System.Windows.Controls.StackPanel&gt; is a focus scope and its parent &lt;xref:System.Windows.Window&gt; is a focus scope, a &lt;xref:System.Windows.Controls.TextBox&gt; child of the &lt;xref:System.Windows.Controls.StackPanel&gt; could specify the &lt;xref:System.Windows.Window&gt; as the focus scope when calling SetFocusedElement.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Controls.TextBox&gt; is then &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A&gt; for both the &lt;xref:System.Windows.Window&gt; focus scope and the &lt;xref:System.Windows.Controls.StackPanel&gt; focus scope.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve" extradata="MT">
+          <source>SetFocusedElement will give the specified element logical focus in the specified focus scope and will attempt to give the element keyboard focus.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The focus scope in which to make the specified element the &lt;xref:System.Windows.Input.FocusManager.FocusedElement*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The element to give logical focus to.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Sets the specified <bpt id="p1">&lt;xref href="System.Windows.DependencyObject"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> as a focus scope.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A focus scope is a container element that keeps track of the &lt;xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=fullName&gt; within its scope.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By default, the &lt;xref:System.Windows.Window&gt; class is a focus scope as are the &lt;xref:System.Windows.Controls.Menu&gt;, &lt;xref:System.Windows.Controls.ContextMenu&gt;, and &lt;xref:System.Windows.Controls.ToolBar&gt; classes.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An element which is a focus scope has &lt;xref:System.Windows.Input.FocusManager.IsFocusScope%2A&gt; set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on focus, keyboard focus, and logical focus, see the <bpt id="p1">[</bpt>Input Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The element to make a focus scope.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if <ph id="ph1">`element`</ph> is a focus scope; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

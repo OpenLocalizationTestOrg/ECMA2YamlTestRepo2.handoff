@@ -21,7 +21,7 @@ items:
   nameWithType: BuildErrorEventArgs
   fullName: Microsoft.Build.Framework.BuildErrorEventArgs
   type: Class
-  summary: "Adja meg az adatait a <xref href=&quot;Microsoft.Build.Framework.IEventSource.ErrorRaised&quot;> </xref> esemény."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.ErrorRaised"></xref> event.
   remarks: 'WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a promise to never change the type''s fields i.e. the type is immutable; adding new fields in the next version of the type without following certain special FX guidelines, can break both forward and backward compatibility'
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -53,7 +53,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Framework.BuildErrorEventArgs&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildErrorEventArgs"></xref> class.
   syntax:
     content: protected BuildErrorEventArgs ();
     parameters: []
@@ -73,40 +73,40 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initializes a new instance of the <xref href=&quot;Microsoft.Build.Framework.BuildErrorEventArgs&quot;></xref> class with the specified <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, <>*>, and <>*> values."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildErrorEventArgs"></xref> class with the specified <xref:Microsoft.Build.Framework.BuildErrorEventArgs.SubCategory*>, <xref:Microsoft.Build.Framework.BuildErrorEventArgs.Code*>, <xref:Microsoft.Build.Framework.BuildErrorEventArgs.File*>, <xref:Microsoft.Build.Framework.BuildErrorEventArgs.LineNumber*>, <xref:Microsoft.Build.Framework.BuildErrorEventArgs.ColumnNumber*>, <xref:Microsoft.Build.Framework.BuildErrorEventArgs.EndLineNumber*>, <xref:Microsoft.Build.Framework.BuildErrorEventArgs.EndColumnNumber*>, <xref:Microsoft.Build.Framework.BuildEventArgs.Message*>, <xref:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword*>, and <xref:Microsoft.Build.Framework.BuildEventArgs.SenderName*> values.
   syntax:
     content: public BuildErrorEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName);
     parameters:
     - id: subcategory
       type: System.String
-      description: "Az esemény egyéni alkategória."
+      description: The custom subcategory of the event.
     - id: code
       type: System.String
-      description: "Az esemény a hibakód."
+      description: The error code of the event.
     - id: file
       type: System.String
-      description: "Az eseményhez tartozó fájl nevét."
+      description: The name of the file associated with the event.
     - id: lineNumber
       type: System.Int32
-      description: "A sor száma, amely megfelel az eseményt kiváltó kódrészletben elejére."
+      description: The line number that corresponds to the beginning of the section of code that raised the event.
     - id: columnNumber
       type: System.Int32
-      description: "A oszlopszám, amely megfelel az eseményt kiváltó kódrészletben elejére."
+      description: The column number that corresponds to the beginning of the section of code that raised the event.
     - id: endLineNumber
       type: System.Int32
-      description: "A sor száma, amely megfelel az eseményt kiváltó kódrészletben végén."
+      description: The line number that corresponds to the end of the section of code that raised the event.
     - id: endColumnNumber
       type: System.Int32
-      description: "A oszlopszám, amely megfelel az eseményt kiváltó kódrészletben végén."
+      description: The column number that corresponds to the end of the section of code that raised the event.
     - id: message
       type: System.String
-      description: "Az esemény szövegét."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Az eseményhez tartozó súgókulcsszót."
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "Az esemény forrását."
+      description: The source of the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.#ctor*
   exceptions: []
   platform:
@@ -123,43 +123,43 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ez a konstruktor, amely lehetővé teszi egy Timestamp típusú kell beállítani"
+  summary: This constructor which allows a timestamp to be set
   syntax:
     content: public BuildErrorEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, DateTime eventTimestamp);
     parameters:
     - id: subcategory
       type: System.String
-      description: "esemény alkategória"
+      description: event sub-category
     - id: code
       type: System.String
-      description: "Eseménykód"
+      description: event code
     - id: file
       type: System.String
-      description: "az eseményhez tartozó fájl"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "sor száma (a nem megfelelő&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "Oszlopszám (0, a nem megfelelő)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "a sor végén szám (0, a nem megfelelő)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "befejező oszlopszám (0, a nem megfelelő)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "szöveges üzenet"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Súgó"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "esemény küldője neve"
+      description: name of event sender
     - id: eventTimestamp
       type: System.DateTime
-      description: "Esemény létrehozásának idejét jelző időbélyegző"
+      description: Timestamp when event was created
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.#ctor*
   exceptions: []
   platform:
@@ -176,46 +176,46 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ez a konstruktor, amely lehetővé teszi egy Timestamp típusú kell beállítani"
+  summary: This constructor which allows a timestamp to be set
   syntax:
     content: public BuildErrorEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: subcategory
       type: System.String
-      description: "esemény alkategória"
+      description: event sub-category
     - id: code
       type: System.String
-      description: "Eseménykód"
+      description: event code
     - id: file
       type: System.String
-      description: "az eseményhez tartozó fájl"
+      description: file associated with the event
     - id: lineNumber
       type: System.Int32
-      description: "sor száma (a nem megfelelő&0;)"
+      description: line number (0 if not applicable)
     - id: columnNumber
       type: System.Int32
-      description: "Oszlopszám (0, a nem megfelelő)"
+      description: column number (0 if not applicable)
     - id: endLineNumber
       type: System.Int32
-      description: "a sor végén szám (0, a nem megfelelő)"
+      description: end line number (0 if not applicable)
     - id: endColumnNumber
       type: System.Int32
-      description: "befejező oszlopszám (0, a nem megfelelő)"
+      description: end column number (0 if not applicable)
     - id: message
       type: System.String
-      description: "szöveges üzenet"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "Súgó"
+      description: help keyword
     - id: senderName
       type: System.String
-      description: "esemény küldője neve"
+      description: name of event sender
     - id: eventTimestamp
       type: System.DateTime
-      description: "Esemény létrehozásának idejét jelző időbélyegző"
+      description: Timestamp when event was created
     - id: messageArgs
       type: System.Object[]
-      description: "üzenet argumentumok"
+      description: message arguments
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.#ctor*
   exceptions: []
   platform:
@@ -232,12 +232,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Az esemény a hibakód lekérése."
+  summary: Gets the error code of the event.
   syntax:
     content: public string Code { get; }
     return:
       type: System.String
-      description: "Az esemény a hibakód."
+      description: The error code of the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.Code*
   exceptions: []
   platform:
@@ -254,7 +254,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi az oszlopnak a számát, amely megfelel az eseményt kiváltó kódrészletben elejére."
+  summary: Gets the column number that corresponds to the beginning of the section of code that raised the event.
   remarks: ''
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -262,7 +262,7 @@ items:
     content: public int ColumnNumber { get; }
     return:
       type: System.Int32
-      description: "A oszlopszám, amely megfelel az eseményt kiváltó kódrészletben elejére."
+      description: The column number that corresponds to the beginning of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.ColumnNumber*
   exceptions: []
   platform:
@@ -279,12 +279,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi az oszlopnak a számát, amely megfelel az eseményt kiváltó kódrészletben végéig."
+  summary: Gets the column number that corresponds to the end of the section of code that raised the event.
   syntax:
     content: public int EndColumnNumber { get; }
     return:
       type: System.Int32
-      description: "A oszlopszám, amely megfelel az eseményt kiváltó kódrészletben végén."
+      description: The column number that corresponds to the end of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.EndColumnNumber*
   exceptions: []
   platform:
@@ -301,12 +301,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi a sor számát, amely megfelel az eseményt kiváltó kódrészletben végéig."
+  summary: Gets the line number that corresponds to the end of the section of code that raised the event.
   syntax:
     content: public int EndLineNumber { get; }
     return:
       type: System.Int32
-      description: "A sor száma, amely megfelel az eseményt kiváltó kódrészletben végén."
+      description: The line number that corresponds to the end of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.EndLineNumber*
   exceptions: []
   platform:
@@ -323,7 +323,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi az eseményt kiváltó a fájl nevét."
+  summary: Gets the name of the file that raised the event.
   remarks: ''
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -331,7 +331,7 @@ items:
     content: public string File { get; }
     return:
       type: System.String
-      description: "Az eseményt kiváltó a fájl nevét."
+      description: The name of the file that raised the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.File*
   exceptions: []
   platform:
@@ -348,7 +348,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi a sor számát, amely megfelel az eseményt kiváltó kódrészletben elejére."
+  summary: Gets the line number that corresponds to the beginning of the section of code that raised the event.
   remarks: ''
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -356,7 +356,7 @@ items:
     content: public int LineNumber { get; }
     return:
       type: System.Int32
-      description: "A sor száma, amely megfelel az eseményt kiváltó kódrészletben elejére."
+      description: The line number that corresponds to the beginning of the section of code that raised the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.LineNumber*
   exceptions: []
   platform:
@@ -373,12 +373,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi vagy beállítja azt a projektfájl ezt az eseményt kiadó nevét."
+  summary: Gets or set the name of the project file which issued this event.
   syntax:
     content: public string ProjectFile { get; set; }
     return:
       type: System.String
-      description: "A projektfájl ezt az eseményt kiadó nevét adja vissza."
+      description: Returns the name of the project file which issued this event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.ProjectFile*
   exceptions: []
   platform:
@@ -395,12 +395,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi az esemény egyéni altípusa."
+  summary: Gets the custom subtype of the event.
   syntax:
     content: public string Subcategory { get; }
     return:
       type: System.String
-      description: "Az esemény egyéni altípusa."
+      description: The custom subtype of the event.
   overload: Microsoft.Build.Framework.BuildErrorEventArgs.Subcategory*
   exceptions: []
   platform:

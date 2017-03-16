@@ -14,7 +14,7 @@ items:
   nameWithType: BuildItemGroupCollection
   fullName: Microsoft.Build.BuildEngine.BuildItemGroupCollection
   type: Class
-  summary: "Számoknak <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> objektumok."
+  summary: Represents a collection of <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> objects.
   syntax:
     content: 'public class BuildItemGroupCollection : System.Collections.ICollection'
   inheritance:
@@ -36,16 +36,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Másolja a gyűjtemény egy kompatibilis egydimenziós <xref:System.Array>, a megadott index a céltömb induló.</xref:System.Array>"
+  summary: Copies the collection to a compatible one-dimensional <xref:System.Array>, starting at the specified index of the target array.
   syntax:
     content: public void CopyTo (Array array, int index);
     parameters:
     - id: array
       type: System.Array
-      description: "Az egydimenziós <xref:System.Array>átmásolva elem, amely a cél <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroupCollection&quot;> </xref>.</xref:System.Array> A <xref:System.Array>kell rendelkeznie a nulla alapú indexelést.</xref:System.Array>"
+      description: The one-dimensional <xref:System.Array> that is the destination of the elements copied from <xref href="Microsoft.Build.BuildEngine.BuildItemGroupCollection"></xref>. The <xref:System.Array> must have zero-based indexing.
     - id: index
       type: System.Int32
-      description: "A nulla alapú indexét `array` mely másolása megkezdődik."
+      description: The zero-based index in `array` at which copying begins.
   overload: Microsoft.Build.BuildEngine.BuildItemGroupCollection.CopyTo*
   exceptions: []
   platform:
@@ -62,13 +62,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Egy érték szám, amely lekérdezi <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> objektumok a gyűjteményben."
-  remarks: "Minden egyes <xref:Microsoft.Build.BuildEngine.BuildItemGroup>a gyűjteményben lévő objektum által jelképezett a projekt eleme.</xref:Microsoft.Build.BuildEngine.BuildItemGroup>"
+  summary: Gets a value indicating the number of <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> objects in the collection.
+  remarks: Each <xref:Microsoft.Build.BuildEngine.BuildItemGroup> object in the collection represents an  element in the project.
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: "Számát jelző egész értéket <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> objektumok a gyűjteményben."
+      description: An integer value representing the number of <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> objects in the collection.
   overload: Microsoft.Build.BuildEngine.BuildItemGroupCollection.Count*
   exceptions: []
   platform:
@@ -85,14 +85,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Lekérdezi számbavevő, amely megismétli a gyűjtemény keresztül."
-  remarks: "Ez a módszer lehetővé teszi, hogy a hívó használatára a `foreach` utasítás a C# nyelv (`for each` a [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) az iterációt az egyes <xref:Microsoft.Build.BuildEngine.BuildItemGroup>objektumok az <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection>.</xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> </xref:Microsoft.Build.BuildEngine.BuildItemGroup>"
+  summary: Gets an enumerator that iterates through the collection.
+  remarks: This method allows the caller to use the `foreach` statement of the C# language (`for each` in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) to iterate through the individual <xref:Microsoft.Build.BuildEngine.BuildItemGroup> objects in the <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection>.
   syntax:
     content: public System.Collections.IEnumerator GetEnumerator ();
     parameters: []
     return:
       type: System.Collections.IEnumerator
-      description: "Egy <xref:System.Collections.IEnumerator>a teljes <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroupCollection&quot;> </xref>.</xref:System.Collections.IEnumerator>"
+      description: An <xref:System.Collections.IEnumerator> for the entire <xref href="Microsoft.Build.BuildEngine.BuildItemGroupCollection"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItemGroupCollection.GetEnumerator*
   exceptions: []
   platform:
@@ -109,12 +109,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Egy érték, amely jelzi, hogy hozzáférést lekérdezi a <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroupCollection&quot;> </xref> van (a többszálú futtatásra) szinkronizálva."
+  summary: Gets a value indicating whether access to the <xref href="Microsoft.Build.BuildEngine.BuildItemGroupCollection"></xref> is synchronized (thread safe).
   syntax:
     content: public bool IsSynchronized { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a hozzáférést a <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroupCollection&quot;> </xref> van (a többszálú futtatásra) szinkronizált; ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>. Az alapértelmezett érték <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if access to the <xref href="Microsoft.Build.BuildEngine.BuildItemGroupCollection"></xref> is synchronized (thread safe); otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>. The default is <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItemGroupCollection.IsSynchronized*
   exceptions: []
   platform:
@@ -131,12 +131,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Olyan objektum, amely segítségével való hozzáférés szinkronizálása lekérdezi a <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroupCollection&quot;> </xref>."
+  summary: Gets an object that can be used to synchronize access to the <xref href="Microsoft.Build.BuildEngine.BuildItemGroupCollection"></xref>.
   syntax:
     content: public object SyncRoot { get; }
     return:
       type: System.Object
-      description: "Olyan objektum, amely segítségével való hozzáférés szinkronizálása a <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroupCollection&quot;> </xref>."
+      description: An object that can be used to synchronize access to the <xref href="Microsoft.Build.BuildEngine.BuildItemGroupCollection"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItemGroupCollection.SyncRoot*
   exceptions: []
   platform:

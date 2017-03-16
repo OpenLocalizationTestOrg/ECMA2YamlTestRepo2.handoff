@@ -39,7 +39,7 @@ items:
   nameWithType: BuildParameters
   fullName: Microsoft.Build.Execution.BuildParameters
   type: Class
-  summary: "Ez az osztály a beállítások, amelyeket meg kell adni egy elkészítési start jelenti."
+  summary: This class represents all of the settings which must be specified to start a build.
   syntax:
     content: public class BuildParameters
   inheritance:
@@ -60,8 +60,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Build paraméterek hoz létre."
-  remarks: "Minden beállítás használható konstruktort programozott módon build tulajdonságok."
+  summary: Creates build parameters.
+  remarks: Constructor for use in setting all build properties programmatically.
   syntax:
     content: public BuildParameters ();
     parameters: []
@@ -81,13 +81,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Build paraméterek hoz létre, és inicializálja a projekt gyűjteményből."
+  summary: Creates build parameters and initializes them from a project collection.
   syntax:
     content: public BuildParameters (Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A ProjectCollection, amelyből a BuildParameters fel kell töltenie magát."
+      description: The ProjectCollection from which the BuildParameters should populate itself.
   overload: Microsoft.Build.Execution.BuildParameters.#ctor*
   exceptions: []
   platform:
@@ -104,12 +104,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a környezeti változókat, amelyek a build létrehozásakor beállított."
+  summary: Gets the environment variables which were set when this build was created.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> BuildProcessEnvironment { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Build létrehozásakor beállított környezeti változókat ad vissza."
+      description: Returns environment variables set when build was created.
   overload: Microsoft.Build.Execution.BuildParameters.BuildProcessEnvironment*
   exceptions: []
   platform:
@@ -126,12 +126,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja az épület kívánt szál prioritását."
+  summary: Gets or sets the desired thread priority for building.
   syntax:
     content: public System.Threading.ThreadPriority BuildThreadPriority { get; set; }
     return:
       type: System.Threading.ThreadPriority
-      description: "A szál prioritását épület adja vissza"
+      description: Returns the thread priority for building
   overload: Microsoft.Build.Execution.BuildParameters.BuildThreadPriority*
   exceptions: []
   platform:
@@ -148,14 +148,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A build paraméterek objektum másolat hoz létre."
-  remarks: "Ezzel a módszerrel hoz létre a klón a tranzakciónaplókat tartalmazó gyűjtemények, de nem mélyen klónozza a figyelő szoftverek belül."
+  summary: Creates a clone of this build parameters object.
+  remarks: This method creates a clone of the logger collections, but does not deeply clone the loggers within.
   syntax:
     content: public Microsoft.Build.Execution.BuildParameters Clone ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.BuildParameters
-      description: "A build paraméterek objektum másolat adja vissza."
+      description: Returns a clone of this build parameters object.
   overload: Microsoft.Build.Execution.BuildParameters.Clone*
   exceptions: []
   platform:
@@ -172,12 +172,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a nevét a létrehozás során használandó kulturális környezetet."
+  summary: Gets or sets the name of the culture to use during the build.
   syntax:
     content: public System.Globalization.CultureInfo Culture { get; set; }
     return:
       type: System.Globalization.CultureInfo
-      description: "A kulturális környezet adja vissza."
+      description: Returns the culture.
   overload: Microsoft.Build.Execution.BuildParameters.Culture*
   exceptions: []
   platform:
@@ -194,12 +194,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a build alapértelmezett eszközök verzióját."
+  summary: Gets or sets the default tools version for the build.
   syntax:
     content: public string DefaultToolsVersion { get; set; }
     return:
       type: System.String
-      description: "Az eszközök verziója adja vissza."
+      description: Returns the tools version.
   overload: Microsoft.Build.Execution.BuildParameters.DefaultToolsVersion*
   exceptions: []
   platform:
@@ -216,12 +216,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a kapcsoló, amely meghatározza, hogy a build hozható létre a folyamat végén a napló részletes összegzését."
+  summary: Gets or sets a switch that specifies whether the build should emit a detailed summary at the end of the log.
   syntax:
     content: public bool DetailedSummary { get; set; }
     return:
       type: System.Boolean
-      description: "A kapcsoló, amely meghatározza, hogy a build hozható létre a folyamat végén a napló részletes összegzését értékét adja vissza"
+      description: Returns the value of a switch that specifies whether the build should emit a detailed summary at the end of the log
   overload: Microsoft.Build.Execution.BuildParameters.DetailedSummary*
   exceptions: []
   platform:
@@ -238,12 +238,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja azt a jelzőt, a folyamatban lévő használ-e meghatározása csomópont."
+  summary: Gets or sets the flag determining whether to use the in process node.
   syntax:
     content: public bool DisableInProcNode { get; set; }
     return:
       type: System.Boolean
-      description: "A jelző adja vissza."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.DisableInProcNode*
   exceptions: []
   platform:
@@ -260,12 +260,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja azt a jelzőt, hogy folyamaton-csomópontok a létrehozás után is megmaradjanak és további buildek várja."
+  summary: Gets or sets a flag determining whether out-of-process nodes should persist after the build and wait for further builds.
   syntax:
     content: public bool EnableNodeReuse { get; set; }
     return:
       type: System.Boolean
-      description: "A jelző adja vissza."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.EnableNodeReuse*
   exceptions: []
   platform:
@@ -282,12 +282,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi egy környezeti tulajdonságok nem módosítható gyűjteménye."
+  summary: Gets an immutable collection of environment properties.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> EnvironmentProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Egy környezeti tulajdonságok nem módosítható gyűjteménye adja vissza."
+      description: Returns an immutable collection of environment properties.
   overload: Microsoft.Build.Execution.BuildParameters.EnvironmentProperties*
   exceptions: []
   platform:
@@ -304,12 +304,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a tranzakciónaplókat tartalmazó leírások továbbítási gyűjteménye."
+  summary: Gets or sets the collection of forwarding logger descriptions.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> ForwardingLoggers { get; set; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "Naplózó leírások továbbítási gyűjteményét adja vissza."
+      description: Returns the collection of forwarding logger descriptions.
   overload: Microsoft.Build.Execution.BuildParameters.ForwardingLoggers*
   exceptions: []
   platform:
@@ -326,16 +326,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekéri egy adott eszközkészlet."
+  summary: Gets a given toolset.
   syntax:
     content: public Microsoft.Build.Evaluation.Toolset GetToolset (string toolsVersion);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Az eszközkészlet beolvasása."
+      description: The toolset to retrieve.
     return:
       type: Microsoft.Build.Evaluation.Toolset
-      description: "Az eszközkészlet adja vissza."
+      description: Returns the toolset.
   overload: Microsoft.Build.Execution.BuildParameters.GetToolset*
   exceptions: []
   platform:
@@ -352,12 +352,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja egy globális tulajdonságok nem módosítható gyűjteménye."
+  summary: Gets or sets an immutable collection of global properties.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; set; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Egy globális tulajdonságok nem módosítható gyűjteménye adja vissza."
+      description: Returns an immutable collection of global properties.
   overload: Microsoft.Build.Execution.BuildParameters.GlobalProperties*
   exceptions: []
   platform:
@@ -374,12 +374,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja egy szolgáltatás, amely lehetővé teszi, hogy a gazdagép adja meg a létrehozási folyamat további ellenőrzését."
+  summary: Gets or sets a service that allows the host to provide additional control over the build process.
   syntax:
     content: public Microsoft.Build.Execution.HostServices HostServices { get; set; }
     return:
       type: Microsoft.Build.Execution.HostServices
-      description: "A gazdaszolgáltatás adja vissza."
+      description: Returns the host service.
   overload: Microsoft.Build.Execution.BuildParameters.HostServices*
   exceptions: []
   platform:
@@ -396,13 +396,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja egy kapcsoló, amely engedélyezi vagy letiltja a hagyományos szálkezelési szemantikáját."
-  remarks: "A hagyományos szálkezelési szemantikáját jelzi, hogy ha egy közleményt kialakítani, csak a folyamaton belül csomópont és a küldése végrehajtja a rendszer szinkron módon történik, ezután minden, a kérelem egy szál a tulajdonosa a BuildManager helyett a szál, amely meghívni a build épül."
+  summary: Gets or sets a switch that enables or disables legacy threading semantics.
+  remarks: Legacy threading semantics indicate that if a submission is to be built only on the in-proc node and the submission is executed synchronously, then all of its requests will be built on the thread which invoked the build rather than a thread owned by the BuildManager.
   syntax:
     content: public bool LegacyThreadingSemantics { get; set; }
     return:
       type: System.Boolean
-      description: "Visszaadja egy kapcsoló, amely engedélyezi vagy letiltja a hagyományos szálkezelési szemantikáját; értéke TRUE, ha engedélyezve van, hamis más módon."
+      description: Returns a switch that enables or disables legacy threading semantics; true if enabled, false otherwise.
   overload: Microsoft.Build.Execution.BuildParameters.LegacyThreadingSemantics*
   exceptions: []
   platform:
@@ -419,12 +419,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a létrehozás során használt figyelő szoftverek gyűjteménye."
+  summary: Gets or sets the collection of loggers to use during the build.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> Loggers { get; set; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A létrehozás során használt figyelő szoftverek gyűjteményét adja vissza."
+      description: Returns the collection of loggers to use during the build.
   overload: Microsoft.Build.Execution.BuildParameters.Loggers*
   exceptions: []
   platform:
@@ -441,12 +441,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja azt a jelzőt, meghatározása, hogy a build naplózza a bemeneti paramétereket."
+  summary: Gets or sets the flag determining whether the build logs the input parameters.
   syntax:
     content: public bool LogInitialPropertiesAndItems { get; set; }
     return:
       type: System.Boolean
-      description: "A jelző adja vissza."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.LogInitialPropertiesAndItems*
   exceptions: []
   platform:
@@ -463,12 +463,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja azt a jelzőt, meghatározása, hogy a build naplózza a feladat paramétereit."
+  summary: Gets or sets the flag determining whether the build logs the task parameters.
   syntax:
     content: public bool LogTaskInputs { get; set; }
     return:
       type: System.Boolean
-      description: "A jelző adja vissza."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.LogTaskInputs*
   exceptions: []
   platform:
@@ -485,12 +485,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a build használhat csomópontok maximális száma."
+  summary: Gets or sets the maximum number of nodes this build may use.
   syntax:
     content: public int MaxNodeCount { get; set; }
     return:
       type: System.Int32
-      description: "A build használhat csomópontok maximális számát adja vissza."
+      description: Returns the maximum number of nodes this build may use.
   overload: Microsoft.Build.Execution.BuildParameters.MaxNodeCount*
   exceptions: []
   platform:
@@ -507,12 +507,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a build kell korlátoznia maga használ, mérete (MB) a memória."
+  summary: Gets or sets the amount of memory the build should limit itself to using, in megabytes.
   syntax:
     content: public int MemoryUseLimit { get; set; }
     return:
       type: System.Int32
-      description: "A build kell korlátoznia magát a használ, mérete (MB) memória adja vissza."
+      description: Returns the amount of memory the build should limit itself to using, in megabytes.
   overload: Microsoft.Build.Execution.BuildParameters.MemoryUseLimit*
   exceptions: []
   platform:
@@ -529,12 +529,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a build csomópont helyének végrehajtható."
+  summary: Gets or sets the location of the build node executable.
   syntax:
     content: public string NodeExeLocation { get; set; }
     return:
       type: System.String
-      description: "Helyét adja meg a build csomópont végrehajtható."
+      description: Returns the location of the build node executable.
   overload: Microsoft.Build.Execution.BuildParameters.NodeExeLocation*
   exceptions: []
   platform:
@@ -551,12 +551,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja azt a jelzőt, amely azt határozza meg, ha a nem kritikus naplózási események kellene."
+  summary: Gets or sets a flag that determines if non-critical logging events should be discarded.
   syntax:
     content: public bool OnlyLogCriticalEvents { get; set; }
     return:
       type: System.Boolean
-      description: "A jelzőt, amely azt határozza meg, ha a nem kritikus naplózási események kellene adja vissza."
+      description: Returns a flag that determines if non-critical logging events should be discarded.
   overload: Microsoft.Build.Execution.BuildParameters.OnlyLogCriticalEvents*
   exceptions: []
   platform:
@@ -573,12 +573,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja egy kapcsoló, amely megadja, hogy a build visszaállítsa a konfigurációs és az eredmények gyorsítótárát."
+  summary: Gets or sets a switch that specifies whether the build should reset the configuration and results caches.
   syntax:
     content: public bool ResetCaches { get; set; }
     return:
       type: System.Boolean
-      description: "Visszaadja egy kapcsoló, amely megadja, hogy a build visszaállítsa a konfigurációs és az eredmények gyorsítótárak; Ha a gyorsítótárak vissza kell állítani az IGAZ, hamis más módon."
+      description: Returns a switch that specifies whether the build should reset the configuration and results caches; true if the caches should be reset, false otherwise.
   overload: Microsoft.Build.Execution.BuildParameters.ResetCaches*
   exceptions: []
   platform:
@@ -595,13 +595,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a kapcsoló megadásával, ha a működési környezetben, például az aktuális könyvtár és a környezet, legyen mentve és közötti vissza projekt buildek és a feladat meghívásához."
-  remarks: "Ez meg kell hamis más build vezetőknek fut a rendszeren, így nem tudunk az egymás trampling környezet két build kezelők."
+  summary: Gets or sets a switch specifying if the operating environment, such as the current directory and environment, should be saved and restored between project builds and task invocations.
+  remarks: This should be set to false for any other build managers running in the system so that we do not have two build managers trampling on each others environment.
   syntax:
     content: public bool SaveOperatingEnvironment { get; set; }
     return:
       type: System.Boolean
-      description: "A kapcsoló, amely jelzi, hogy a működési környezetben kell lennie menti, majd visszaállítja projekt buildek és a feladat indítások; közötti adja vissza IGAZ, ha a környezet mentésére, hamis más módon."
+      description: Returns a switch indicating whether the operating environment should be saved and restored between project builds and task invocations; true if the environment should be saved, false otherwise.
   overload: Microsoft.Build.Execution.BuildParameters.SaveOperatingEnvironment*
   exceptions: []
   platform:
@@ -618,12 +618,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja azt a jelzőt meghatározásához először állítsa le a folyamatban lévő csomópont a létrehozás befejezése után. Az alapértelmezett érték <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+  summary: Gets or sets the flag determining whether to shut down the in process node when the build finishes. The default is <xref uid="langword_csharp_false" name="false" href=""></xref>.
   syntax:
     content: public bool ShutdownInProcNodeOnBuildFinish { get; set; }
     return:
       type: System.Boolean
-      description: "A jelző adja vissza."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.BuildParameters.ShutdownInProcNodeOnBuildFinish*
   exceptions: []
   platform:
@@ -640,12 +640,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a helyek toolsets kereséséhez."
+  summary: Gets or sets locations to search for toolsets.
   syntax:
     content: public Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetDefinitionLocations { get; set; }
     return:
       type: Microsoft.Build.Evaluation.ToolsetDefinitionLocations
-      description: "Helyek toolsets kereséséhez adja vissza."
+      description: Returns locations to search for toolsets.
   overload: Microsoft.Build.Execution.BuildParameters.ToolsetDefinitionLocations*
   exceptions: []
   platform:
@@ -662,12 +662,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a toolsets mindegyikét."
+  summary: Gets all of the toolsets.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Evaluation.Toolset> Toolsets { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Evaluation.Toolset}
-      description: "Visszaadja a toolsets mindegyikét."
+      description: Returns all of the toolsets.
   overload: Microsoft.Build.Execution.BuildParameters.Toolsets*
   exceptions: []
   platform:
@@ -684,12 +684,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a létrehozás során használt a felhasználói felületi kulturális környezet neve."
+  summary: Gets or sets the name of the UI culture to use during the build.
   syntax:
     content: public System.Globalization.CultureInfo UICulture { get; set; }
     return:
       type: System.Globalization.CultureInfo
-      description: "A létrehozás során használt a felhasználói felületi kulturális környezet nevét adja vissza."
+      description: Returns the name of the UI culture to use during the build.
   overload: Microsoft.Build.Execution.BuildParameters.UICulture*
   exceptions: []
   platform:
@@ -706,12 +706,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja egy kapcsoló, amely megadja, hogy szinkron naplózási csak egyetlen folyamat esetén."
+  summary: Gets or sets a switch that specifies whether synchronous logging is used when there is only a single process.
   syntax:
     content: public bool UseSynchronousLogging { get; set; }
     return:
       type: System.Boolean
-      description: "Visszaadja egy kapcsoló, amely megadja, hogy szinkron naplózási használható, ha csak egyetlen folyamat; Igaz értéke esetén szinkron naplózási használnak, ellenkező esetben a aszinkron naplózási használni."
+      description: Returns a switch that specifies whether synchronous logging is used when there is only a single process; if true, use synchronous logging, otherwise use asynchronous logging.
   overload: Microsoft.Build.Execution.BuildParameters.UseSynchronousLogging*
   exceptions: []
   platform:

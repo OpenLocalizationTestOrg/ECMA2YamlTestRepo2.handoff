@@ -20,7 +20,7 @@ items:
   nameWithType: CreateManifestResourceName
   fullName: Microsoft.Build.Tasks.CreateManifestResourceName
   type: Class
-  summary: "Meghatározza, hogy a jegyzékerőforrás név, hozzárendelése egy erőforráshoz."
+  summary: Determines the manifest resource name to assign to a resource.
   syntax:
     content: 'public abstract class CreateManifestResourceName : Microsoft.Build.Tasks.TaskExtension'
   inheritance:
@@ -51,7 +51,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Tasks.CreateManifestResourceName&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.CreateManifestResourceName"></xref> class.
   syntax:
     content: protected CreateManifestResourceName ();
     parameters: []
@@ -71,28 +71,28 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ha a származtatott osztály felülbírálva, hozza létre a jegyzékerőforrás nevét."
+  summary: When overridden in a derived class, creates the manifest resource name.
   syntax:
     content: protected abstract string CreateManifestName (string fileName, string linkFileName, string rootNamespaceName, string dependentUponFileName, System.IO.Stream binaryStream);
     parameters:
     - id: fileName
       type: System.String
-      description: "A függő fájl nevét."
+      description: The name of the dependent file.
     - id: linkFileName
       type: System.String
-      description: "A hivatkozás attribútum által megadott fájl neve."
+      description: The name of the file specified by the Link attribute.
     - id: rootNamespaceName
       type: System.String
-      description: "A legfelső szintű névtér. Ez a paraméter lehet null hivatkozás (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> a [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+      description: The root namespace. This parameter may be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
     - id: dependentUponFileName
       type: System.String
-      description: "A függőség szülőjének fájl neve. Ez a paraméter lehet null hivatkozás (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)."
+      description: The file name of the parent of this dependency. This parameter may be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
     - id: binaryStream
       type: System.IO.Stream
-      description: "A fájl bináris adatfolyam tartalmát. Ez a paraméter lehet null hivatkozás (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)."
+      description: The binary stream contents of the file. This parameter may be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
     return:
       type: System.String
-      description: "A jegyzékerőforrás neve."
+      description: The manifest resource name.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.CreateManifestName*
   exceptions: []
   platform:
@@ -109,13 +109,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A feladat fut."
+  summary: Runs the task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a metódus sikeres volt. Ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.Execute*
   exceptions: []
   platform:
@@ -132,16 +132,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ha a származtatott osztály felülbírálva, azt jelzi, hogy a megadott fájl érvényes forrásfájl."
+  summary: When overridden in a derived class, indicates whether the specified file is a valid source file.
   syntax:
     content: protected abstract bool IsSourceFile (string fileName);
     parameters:
     - id: fileName
       type: System.String
-      description: "A fájl neve."
+      description: The file name.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a fájl érvényes forrásfájl; Ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the file is a valid source file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.IsSourceFile*
   exceptions: []
   platform:
@@ -158,12 +158,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Szótárból származtatott osztályból gyors hozzáférést biztosít a feladat elemet tartalmaz."
+  summary: Contains the task item in a dictionary to provide quick access from a derived class.
   syntax:
     content: protected System.Collections.Generic.Dictionary<string,Microsoft.Build.Framework.ITaskItem> itemSpecToTaskitem;
     return:
       type: System.Collections.Generic.Dictionary{System.String,Microsoft.Build.Framework.ITaskItem}
-      description: "Fel kell venni a párbeszédpanelre."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -179,16 +179,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Visual Studio 2003 hoz létre egy érvényes azonosítót használja."
+  summary: Creates a valid identifier for use with Visual Studio 2003.
   syntax:
     content: public static string MakeValidEverettIdentifier (string name);
     parameters:
     - id: name
       type: System.String
-      description: "A fájl neve."
+      description: The file name.
     return:
       type: System.String
-      description: "A Visual Studio 2003 használandó azonosítója."
+      description: The identifier to use with Visual Studio 2003.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier*
   exceptions: []
   platform:
@@ -205,12 +205,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A létrehozott jegyzékerőforrás nevének beolvasása."
+  summary: Gets the created manifest resource names.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ManifestResourceNames { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "A létrehozott jegyzékerőforrás nevei."
+      description: The created manifest resource names.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames*
   exceptions: []
   platform:
@@ -227,13 +227,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja, hogy a kulturális környezet neve kell $a, könyvtárként jegyzékerőforrás nevét."
-  remarks: "Ez az `true` alapértelmezés szerint."
+  summary: Gets or sets whether the culture name should be prepended to the manifest resource name as a directory.
+  remarks: This is `true` by default.
   syntax:
     content: public bool PrependCultureAsDirectory { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a kulturális környezet neve kell $a, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Ha más módon."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the culture name should be prepended, <xref uid="langword_csharp_false" name="false" href=""></xref> if otherwise.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory*
   exceptions: []
   platform:
@@ -250,12 +250,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a függő erőforrás-fájlokat."
+  summary: Gets or sets the dependent resource files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResourceFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "A függő erőforrás-fájlokat."
+      description: The dependent resource files.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles*
   exceptions: []
   platform:
@@ -272,12 +272,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja az erőforrás nevét, valamint a jegyzékerőforrás nevekkel metaadatokat listájának."
+  summary: Gets or sets the initial list of resource names, along with additional metadata for manifest resource names.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResourceFilesWithManifestResourceNames { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Egy <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;> </xref> erőforrásnevek és metaadat-objektum."
+      description: An <xref href="Microsoft.Build.Framework.ITaskItem"></xref> object, representing the resource names and metadata.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames*
   exceptions: []
   platform:
@@ -294,12 +294,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a legfelső szintű névtér elnevezési használatára."
+  summary: Gets or sets the root namespace to use for naming.
   syntax:
     content: public string RootNamespace { get; set; }
     return:
       type: System.String
-      description: "A legfelső szintű névtér elnevezési használatára."
+      description: The root namespace to use for naming.
   overload: Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace*
   exceptions: []
   platform:

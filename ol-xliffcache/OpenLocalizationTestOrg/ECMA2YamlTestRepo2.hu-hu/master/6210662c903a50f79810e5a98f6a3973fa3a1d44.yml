@@ -13,7 +13,7 @@ items:
   nameWithType: ProjectSchemaDefinitions
   fullName: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions
   type: Class
-  summary: "Adatalapú XAML parancsfájl projekt séma jelöli."
+  summary: Represents a data-driven XAML script project schema.
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Nodes")]
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Az alapértelmezett konstruktort a schema definíció."
+  summary: The default constructor of a schema definition.
   syntax:
     content: public ProjectSchemaDefinitions ();
     parameters: []
@@ -58,16 +58,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Adja vissza a számbavevő keresztül, amely az adott típus rendelkezik statikus adatok összes példányát."
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "A típusú statikus adatok beolvasása."
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "Adja vissza a számbavevő keresztül, amely az adott típus rendelkezik statikus adatok összes példányát. Beolvasása <xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;> </xref> , vagy ha nincsenek a megadott típusú, ez a csomópont által biztosított objektumok listája üres."
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if there are no objects of the given type provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjects*
   exceptions: []
   platform:
@@ -84,13 +84,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Ez a csomópont tartalmazza az adatvezérelt szolgáltatások statikus adatok minden típusú adja vissza számbevevőre."
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "Ez a csomópont tartalmazza az adatvezérelt szolgáltatások statikus adatok minden típusú adja vissza számbevevőre."
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Lekérdezi vagy beállítja a schema definíció csomópontok listáját."
+  summary: Gets or sets the list of nodes for this schema definition.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode> Nodes { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode}
-      description: "A schema definíció csomópontok listáját adja vissza."
+      description: Returns the list of nodes for this schema definition.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes*
   exceptions: []
   platform:

@@ -28,7 +28,7 @@ items:
   nameWithType: SGen
   fullName: Microsoft.Build.Tasks.SGen
   type: Class
-  summary: "Megvalósítja a `SGen` feladat. Használja a `SGen` létrehozásához, és ez a feladat végrehajtása a projekt fájlban. Használati és paraméter információkért lásd: [SGen feladat](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `SGen` task. Use the `SGen` element in your project file to create and execute this task. For usage and parameter information, see [SGen Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class SGen : Microsoft.Build.Tasks.ToolTaskExtension'
   inheritance:
@@ -102,7 +102,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Tasks.SGen&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.SGen"></xref> class.
   syntax:
     content: public SGen ();
     parameters: []
@@ -122,12 +122,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a szerelvény szerializálás kódjának létrehozásához."
+  summary: Gets or sets the assembly to generate serialization code for.
   syntax:
     content: public string BuildAssemblyName { get; set; }
     return:
       type: System.String
-      description: "A szerelvény a szerializálás kódjának létrehozásához."
+      description: The assembly to generate serialization code for.
   overload: Microsoft.Build.Tasks.SGen.BuildAssemblyName*
   exceptions: []
   platform:
@@ -144,12 +144,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja az elérési út a szerelvény-szerializálás kódjának létrehozásához."
+  summary: Gets or sets the path to the assembly to generate serialization code for.
   syntax:
     content: public string BuildAssemblyPath { get; set; }
     return:
       type: System.String
-      description: "A szerializálás kódjának létrehozásához szerelvény elérési útja."
+      description: The path to the assembly to generate serialization code for.
   overload: Microsoft.Build.Tasks.SGen.BuildAssemblyPath*
   exceptions: []
   platform:
@@ -166,12 +166,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a logikai értéket, amely megadja e a `SGen` feladat helyezi el a nyilvános kulcsot a szerelvényben (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) vagy a szerelvény teljesen aláírja (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
+  summary: Gets or sets a Boolean value that specifies whether the `SGen` task places the public key in the assembly (<xref uid="langword_csharp_true" name="true" href=""></xref>) or fully signs the assembly (<xref uid="langword_csharp_false" name="false" href=""></xref>).
   syntax:
     content: public bool DelaySign { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a `SGen` feladat helyezi a nyilvános kulcsot a szerelvény; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Ha a `SGen` feladat teljesen aláírja a szerelvényt."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `SGen` task places the public key in the assembly; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `SGen` task fully signs the assembly.
   overload: Microsoft.Build.Tasks.SGen.DelaySign*
   exceptions: []
   platform:
@@ -188,13 +188,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a kapcsolók és egyéb információkat, amelyek a parancssori eszköz kell futtatnia, közvetlenül a parancssorból, és nem egy válaszfájlt."
+  summary: Gets the switches and other information that the command line tool must run directly from the command line and not from a response file.
   syntax:
     content: protected override string GenerateCommandLineCommands ();
     parameters: []
     return:
       type: System.String
-      description: "A kapcsolók és egyéb információkat, amelyek a parancssori eszköz kell futtatnia, közvetlenül a parancssorból, és nem egy válaszfájl tartalmazó karakterlánc."
+      description: A string containing the switches and other information that the command line tool must run directly from the command line and not from a response file.
   overload: Microsoft.Build.Tasks.SGen.GenerateCommandLineCommands*
   exceptions: []
   platform:
@@ -211,13 +211,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "A fájl teljes elérési útja a SGen eszköz beolvasása"
+  summary: Gets the full file path of the SGen tool.
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: "A teljes elérési útja a SGen eszköz."
+      description: The full file path of the SGen tool.
   overload: Microsoft.Build.Tasks.SGen.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -234,13 +234,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a tároló, amely egy kulcspárt."
-  remarks: "A `SGen` feladat nyilvános kulcs beszúrása a szerelvény jegyzékének a szerelvény alá, és ezután lesz majd bejelentkezési az összeállítási a titkos kulccsal."
+  summary: Gets or sets a container that holds a key pair.
+  remarks: The `SGen` task will sign the assembly by inserting a public key into the assembly manifest, and then will then sign the final assembly with the private key.
   syntax:
     content: public string KeyContainer { get; set; }
     return:
       type: System.String
-      description: "A tároló, amely egy kulcspárt."
+      description: The container that holds a key pair.
   overload: Microsoft.Build.Tasks.SGen.KeyContainer*
   exceptions: []
   platform:
@@ -257,13 +257,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a kulcspár, vagy a nyilvános kulcs segítségével bejelentkezhetnek a szerelvényt."
-  remarks: "A fordítóprogram szúrja be a nyilvános kulcsot a szerelvény jegyzékének, és majd jelentkezik az összeállítási a titkos kulccsal."
+  summary: Gets or sets a key pair or a public key to use to sign an assembly.
+  remarks: The compiler inserts the public key in the assembly manifest and then signs the final assembly with the private key.
   syntax:
     content: public string KeyFile { get; set; }
     return:
       type: System.String
-      description: "Egy kulcspár vagy nyilvános kulcs segítségével bejelentkezhetnek a szerelvényt."
+      description: A key pair or a public key to use to sign an assembly.
   overload: Microsoft.Build.Tasks.SGen.KeyFile*
   exceptions: []
   platform:
@@ -280,12 +280,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a fordító platform használandó a kimeneti szerelvény létrehozásához."
+  summary: Gets or sets the compiler platform to use to generate the output assembly.
   syntax:
     content: public string Platform { get; set; }
     return:
       type: System.String
-      description: "A fordítóprogram platform használatával adja vissza."
+      description: Returns the compiler platform to use.
   overload: Microsoft.Build.Tasks.SGen.Platform*
   exceptions: []
   platform:
@@ -302,12 +302,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a igénylő XML-szerializálási típusok által hivatkozott szerelvényeket."
+  summary: Gets or sets the assemblies that are referenced by the types requiring XML serialization.
   syntax:
     content: public string[] References { get; set; }
     return:
       type: System.String[]
-      description: "Az XML-szerializáláshoz igénylő típusok által hivatkozott szerelvényeket."
+      description: The assemblies that are referenced by the types requiring XML serialization.
   overload: Microsoft.Build.Tasks.SGen.References*
   exceptions: []
   platform:
@@ -324,12 +324,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja az SDK-eszközök elérési útját."
+  summary: Gets or sets the SDK Tools path.
   syntax:
     content: public string SdkToolsPath { get; set; }
     return:
       type: System.String
-      description: "Az SDK-eszközök elérési útját adja vissza."
+      description: Returns the SDK Tools path.
   overload: Microsoft.Build.Tasks.SGen.SdkToolsPath*
   exceptions: []
   platform:
@@ -346,12 +346,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a generált szerializálási szerelvényt."
+  summary: Gets or sets the generated serialization assembly.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SerializationAssembly { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "A generált szerializálási szerelvényt."
+      description: The generated serialization assembly.
   overload: Microsoft.Build.Tasks.SGen.SerializationAssembly*
   exceptions: []
   platform:
@@ -368,12 +368,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a generált szerializálási szerelvény nevét."
+  summary: Gets the name of the generated serialization assembly.
   syntax:
     content: public string SerializationAssemblyName { get; }
     return:
       type: System.String
-      description: "A generált szerializálási szerelvény neve."
+      description: The name of the generated serialization assembly.
   overload: Microsoft.Build.Tasks.SGen.SerializationAssemblyName*
   exceptions: []
   platform:
@@ -390,13 +390,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a logikai értéket, amely megadja, hogy a `SGen` feladat kell létrehozni a szerializálási szerelvény."
-  remarks: "Ha ez a tulajdonság `true`, a [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motor hajtja végre a `SGen` feladatot, és a szerializálási szerelvényt létrehozni. Ez a tulajdonság értéke HAMIS, ha a [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] motor nem futtatja a `SGen` feladat."
+  summary: Gets or sets a Boolean value that specifies whether the `SGen` task should generate a serialization assembly.
+  remarks: If this property is `true`, the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine will execute the `SGen` task and generate a serialization assembly. If this property is false, the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine will not execute the `SGen` task.
   syntax:
     content: public bool ShouldGenerateSerializer { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a `SGen` feladat kell létrehozni a szerializálási szerelvény; ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `SGen` task should generate a serialization assembly; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.SGen.ShouldGenerateSerializer*
   exceptions: []
   platform:
@@ -413,13 +413,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Azt jelzi, hogy kihagyja a feladat végrehajtása."
+  summary: Indicates whether task execution should be skipped.
   syntax:
     content: protected override bool SkipTaskExecution ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a program kihagyja a feladat a végrehajtás; Ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should be skipped; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.SGen.SkipTaskExecution*
   exceptions: []
   platform:
@@ -436,12 +436,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi az eszköz végrehajtható fájl (sgen.exe) nevét."
+  summary: Gets the name of the tool executable file (sgen.exe).
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: "Az eszköz végrehajtható fájl nevét."
+      description: The name of the tool executable file.
   overload: Microsoft.Build.Tasks.SGen.ToolName*
   exceptions: []
   platform:
@@ -458,12 +458,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a szerializálás kódjának létrehozásához adott típusainak listáját. <xref uid=&quot;langword_csharp_SGen&quot; name=&quot;SGen&quot; href=&quot;&quot;></xref>Ezek a típusok csak kódot generál."
+  summary: Gets or sets a list of specific types to generate serialization code for. <xref uid="langword_csharp_SGen" name="SGen" href=""></xref> generates code only for these types.
   syntax:
     content: public string[] Types { get; set; }
     return:
       type: System.String[]
-      description: "Speciális típusokat listáját adja vissza."
+      description: Returns a list of specific types.
   overload: Microsoft.Build.Tasks.SGen.Types*
   exceptions: []
   platform:
@@ -480,12 +480,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a logikai értéket, amely megadja, hogy a `SGen` feladat csak az XML-webszolgáltatás szolgáltatástípusok proxy szerializálási kódot generál."
+  summary: Gets or sets a Boolean value that specifies whether the `SGen` task generates serialization code only for the XML Web service proxy types.
   syntax:
     content: public bool UseProxyTypes { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a `SGen` feladatot hoz létre a szerializálás kódjának csak az XML-webszolgáltatás proxy szolgáltatástípusok; ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `SGen` task generates serialization code only for the XML Web service proxy types; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.SGen.UseProxyTypes*
   exceptions: []
   platform:
@@ -502,13 +502,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Ellenőrzi a bemeneti paraméterek és a naplók hiba vagy figyelmeztetés, ha van ilyen. Egy logikai értéket, amely jelzi, hogy folytatódjon-e a feladat a végrehajtás ad vissza."
+  summary: Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a feladat a végrehajtás kell tenni; Ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should proceed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.SGen.ValidateParameters*
   exceptions: []
   platform:

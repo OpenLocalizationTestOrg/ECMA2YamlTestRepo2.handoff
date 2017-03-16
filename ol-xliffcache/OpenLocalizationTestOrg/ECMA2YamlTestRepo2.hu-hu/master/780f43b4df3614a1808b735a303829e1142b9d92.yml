@@ -10,8 +10,8 @@ items:
   nameWithType: IAccIdentity
   fullName: Accessibility.IAccIdentity
   type: Interface
-  summary: "A IAccIdentity és elérhetőségi tagjait burkoló a Component Object Model (COM) <xref uid=&quot;langword_csharp_IAccIdentity&quot; name=&quot;IAccIdentity&quot; href=&quot;&quot;> </xref> felületet."
-  remarks: "További információ a IAccIdentity dokumentációjában `IAccIdentity::GetIdentityString` az MSDN Library http://msdn.microsoft.com/library: a Microsoft Active kisegítő lehetőségek dokumentációjában."
+  summary: The IAccIdentity and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) <xref uid="langword_csharp_IAccIdentity" name="IAccIdentity" href=""></xref> interface.
+  remarks: For more information about IAccIdentity, see the documentation for `IAccIdentity::GetIdentityString` in the Microsoft Active Accessibility documentation in the MSDN library at http://msdn.microsoft.com/library.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComConversionLoss]
@@ -36,20 +36,20 @@ items:
   assemblies:
   - Accessibility
   namespace: Accessibility
-  summary: "A <xref href=&quot;Accessibility.IAccIdentity&quot;> </xref> és elérhetőségi tagjait burkoló a Component Object Model (COM) részei <xref uid=&quot;langword_csharp_IAccIndentity&quot; name=&quot;IAccIndentity&quot; href=&quot;&quot;> </xref> felületet."
-  remarks: "További információ a GetIdentityString dokumentációjában `IAccIdentity::GetIdentityString` http://msdn.microsoft.com/library, az MSDN Library Microsoft Active kisegítő lehetőségek dokumentációjában."
+  summary: The <xref href="Accessibility.IAccIdentity"></xref> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) <xref uid="langword_csharp_IAccIndentity" name="IAccIndentity" href=""></xref> interface.
+  remarks: For more information about GetIdentityString, see the documentation for `IAccIdentity::GetIdentityString` in the Microsoft Active Accessibility documentation in the MSDN library at http://msdn.microsoft.com/library.
   syntax:
     content: public void GetIdentityString (uint dwIDChild, IntPtr ppIDString, out uint pdwIDStringLen);
     parameters:
     - id: dwIDChild
       type: System.UInt32
-      description: "Itt adhatja meg, mely az internetes hozzáférési eljárások objektum gyermeke a hívó szeretné azonosítani."
+      description: Specifies which child of the IAccessible object the caller wants to identify.
     - id: ppIDString
       type: System.IntPtr
-      description: "A hívott fél által kiosztott identitás-karakterlánc mutató változó címe. A hívott fél foglal le, az identitás karakterlánc használatával <xref uid=&quot;langword_csharp_CoTaskMemAlloc&quot; name=&quot;CoTaskMemAlloc&quot; href=&quot;&quot;> </xref>; a hívó fel kell szabadítania az identitás-karakterlánc használatával <xref uid=&quot;langword_csharp_CoTaskMemFree&quot; name=&quot;CoTaskMemFree&quot; href=&quot;&quot;> </xref> befejezésekor."
+      description: Address of a variable that receives a pointer to a callee-allocated identity string. The callee allocates the identity string using <xref uid="langword_csharp_CoTaskMemAlloc" name="CoTaskMemAlloc" href=""></xref>; the caller must release the identity string by using <xref uid="langword_csharp_CoTaskMemFree" name="CoTaskMemFree" href=""></xref> when finished.
     - id: pdwIDStringLen
       type: System.UInt32
-      description: "Változó hossza (bájt), a hívott fél által kiosztott identitás-karakterlánc címe."
+      description: Address of a variable that receives the length, in bytes, of the callee-allocated identity string.
   overload: Accessibility.IAccIdentity.GetIdentityString*
   exceptions: []
   platform:

@@ -21,7 +21,7 @@ items:
   nameWithType: Copy
   fullName: Microsoft.Build.Tasks.Copy
   type: Class
-  summary: "Megvalósítja a `Copy` feladat. Használja a `Copy` létrehozásához, és ez a feladat végrehajtása a projekt fájlban. Használati és paraméter információkért lásd: [másolási feladat](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `Copy` task. Use the `Copy` element in your project file to create and execute this task. For usage and parameter information, see [Copy Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class Copy : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask'
   inheritance:
@@ -53,7 +53,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Tasks.Copy&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Copy"></xref> class.
   syntax:
     content: public Copy ();
     parameters: []
@@ -73,7 +73,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Állítsa le, és a lehető leghamarabb adja vissza (a meghatározatlan állapotú)."
+  summary: Stop and return (in an undefined state) as soon as possible.
   syntax:
     content: public void Cancel ();
     parameters: []
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi a sikeresen másolt elemet."
+  summary: Gets the items that were successfully copied.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] CopiedFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Sikeresen másolt elemet."
+      description: The items that were successfully copied.
   overload: Microsoft.Build.Tasks.Copy.CopiedFiles*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a fájlok másolása a forrásfájlok listáját."
-  remarks: "A cél fájlok listáját egy-az-egyhez hozzárendelést a megadott lista várhatóan a <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>tulajdonság.</xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> Ez azt jelenti, hogy az első ilyen fájlt megadott <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>mappába, és így tovább első helyére kerülnek.</xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A>"
+  summary: Gets or sets a list of files to copy the source files to.
+  remarks: The list of destination files is expected to be a one-to-one mapping with the list specified in the <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> property. That is, the first file specified in <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> will be copied to the first location specified in DestinationFiles, and so forth.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] DestinationFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "A fájlok másolása a forrásfájlok listáját."
+      description: The list of files to copy the source files to.
   overload: Microsoft.Build.Tasks.Copy.DestinationFiles*
   exceptions: []
   platform:
@@ -138,13 +138,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a könyvtár kívánt átmásolni a fájlokat."
-  remarks: "A célmappa könyvtár, a fájl nem lehet. Ha a könyvtár nem létezik, akkor automatikusan létrejön."
+  summary: Gets or sets the directory to which you want to copy the files.
+  remarks: The destination folder must be a directory, not a file. If the directory does not exist, it is created automatically.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem DestinationFolder { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "A könyvtár kívánt átmásolni a fájlokat."
+      description: The directory to which you want to copy the files.
   overload: Microsoft.Build.Tasks.Copy.DestinationFolder*
   exceptions: []
   platform:
@@ -161,13 +161,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Végrehajtja a `Copy` feladat."
+  summary: Executes the `Copy` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a feladat végrehajtása sikeresen befejeződött; Ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Copy.Execute*
   exceptions: []
   platform:
@@ -184,12 +184,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a logikai értéket, amely azt jelzi, hogy a fájlok felülírása, akkor is, ha vannak beállítva, csak fájlok olvasása."
+  summary: Gets or sets a Boolean value that indicates whether to overwrite files even if they are marked as read only files.
   syntax:
     content: public bool OverwriteReadOnlyFiles { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a `Copy` feladat kell fájlok felülírása, akkor is, ha csak fájlok olvasása megjelölve; ellenkező esetben <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Copy` task should overwrite files even if they are marked as read only files; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Copy.OverwriteReadOnlyFiles*
   exceptions: []
   platform:
@@ -206,12 +206,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: 'Hány alkalommal próbál másolni, ha bármilyen előző kísérlet sikertelen volt. Az alapértelmezett érték nulla. Figyelmeztetés: az összeállítási folyamat szinkronizálási probléma maszk újrapróbálkozások használatával is.'
+  summary: 'How many times to attempt to copy, if all previous attempts failed. Defaults to zero. Warning: using retries may mask a synchronization problem in your build process.'
   syntax:
     content: public int Retries { get; set; }
     return:
       type: System.Int32
-      description: "Fel kell venni a párbeszédpanelre."
+      description: To be added.
   overload: Microsoft.Build.Tasks.Copy.Retries*
   exceptions: []
   platform:
@@ -228,12 +228,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Késleltetés a szükséges újrapróbálkozások között. Az alapértelmezett érték<xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault></xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault>"
+  summary: Delay between any necessary retries. Defaults to <xref:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault>
   syntax:
     content: public int RetryDelayMilliseconds { get; set; }
     return:
       type: System.Int32
-      description: "Fel kell venni a párbeszédpanelre."
+      description: To be added.
   overload: Microsoft.Build.Tasks.Copy.RetryDelayMilliseconds*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a logikai értéket, amely jelzi, hogy a `Copy` feladat ki kell hagyni a fájlokat, amelyek között a forrás és cél változatlan másolását."
-  remarks: "A `Copy` feladat úgy véli, hogy változatlan marad, ha azonos méretűnek rendelkeznek, és ugyanazt az utolsó módosítás időpontja fájlokat."
+  summary: Gets or sets a Boolean value that indicates whether the `Copy` task should skip the copying of files that are unchanged between the source and destination.
+  remarks: The `Copy` task considers files to be unchanged if they have the same size and the same last modified time.
   syntax:
     content: public bool SkipUnchangedFiles { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a `Copy` feladat ki kell hagyni a fájlokat, amelyek között a forrás és cél változatlan; ellenkező esetben másolási <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Copy` task should skip the copying of files that are unchanged between the source and destination; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Copy.SkipUnchangedFiles*
   exceptions: []
   platform:
@@ -273,12 +273,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Lekérdezi vagy beállítja a fájlok másolásához."
+  summary: Gets or sets the files to copy.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SourceFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Másolja a fájlokat."
+      description: The files to copy.
   overload: Microsoft.Build.Tasks.Copy.SourceFiles*
   exceptions: []
   platform:
@@ -295,12 +295,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Azt jelzi, ha a rögzített hivatkozások kell használni."
+  summary: Indicates if hard links should be used.
   syntax:
     content: public bool UseHardlinksIfPossible { get; set; }
     return:
       type: System.Boolean
-      description: "Fel kell venni a párbeszédpanelre."
+      description: To be added.
   overload: Microsoft.Build.Tasks.Copy.UseHardlinksIfPossible*
   exceptions: []
   platform:

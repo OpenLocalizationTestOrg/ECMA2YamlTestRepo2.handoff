@@ -13,8 +13,8 @@ items:
   nameWithType: StringListProperty
   fullName: Microsoft.Build.Framework.XamlTypes.StringListProperty
   type: Class
-  summary: "A lista az karakterláncok a tulajdonság sémájának jelöli."
-  remarks: "Vegye figyelembe, a lista jelölő karakterlánc, nem listájának <xref:Microsoft.Build.Framework.XamlTypes.StringProperty>használatát.</xref:Microsoft.Build.Framework.XamlTypes.StringProperty>"
+  summary: Represents the schema of a list-of-strings property.
+  remarks: Note, this represents a list of strings, not a list of <xref:Microsoft.Build.Framework.XamlTypes.StringProperty>s.
   syntax:
     content: 'public sealed class StringListProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty'
   inheritance:
@@ -61,7 +61,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Alapértelmezett konstruktort. XAML-KÓDBAN a deszerializálás tulajdonság szükséges."
+  summary: Default constructor. Needed for property XAML deserialization.
   syntax:
     content: public StringListProperty ();
     parameters: []
@@ -81,13 +81,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Lekérdezi vagy beállítja az elválasztó körvonalazására egyedi értékek a karakterlánc lista tulajdonság használata"
-  remarks: 'A `Val1;Val2;Val3`, ha `CommandLineValueSeparator` van megadva, azaz `,`, a parancssor néz ki: `/p:val1,val2,val3` Ha nincs megadva, a parancssor néz ki: `/p:val1 /p:val2 /p:val3` ezt a mezőt nem kötelező megadni.'
+  summary: Gets or sets the separator to use in delineating individual values of this string list property
+  remarks: 'For `Val1;Val2;Val3`, if `CommandLineValueSeparator` is specified as, say `,`, the command line looks like this: `/p:val1,val2,val3` If not specified, the command line looks like this: `/p:val1 /p:val2 /p:val3` This field is optional.'
   syntax:
     content: public string CommandLineValueSeparator { get; set; }
     return:
       type: System.String
-      description: "Az elválasztó adja vissza."
+      description: Returns the separator.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator*
   exceptions: []
   platform:
@@ -104,12 +104,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Lekérdezi vagy beállítja a felhasználói felület megjelenítési elválasztó. Ez a tulajdonság elavult."
+  summary: Gets or sets the UI rendering separator. This property is deprecated.
   syntax:
     content: public string RendererValueSeparator { get; set; }
     return:
       type: System.String
-      description: "A felhasználói felület megjelenítési elválasztó adja vissza. Ez a tulajdonság elavult."
+      description: Returns the UI rendering separator. This property is deprecated.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator*
   exceptions: []
   platform:
@@ -126,13 +126,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "A karakterlánc típusú tulajdonság egészítse ki a pontosabb besorolást címtársémának megfelelően."
-  remarks: "Hasonló a <xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A>tulajdonság.</xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A>"
+  summary: Qualifies this string property to give it a more specific classification.
+  remarks: Similar to the <xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A> property.
   syntax:
     content: public string Subtype { get; set; }
     return:
       type: System.String
-      description: "A tulajdonság altípus adja vissza."
+      description: Returns the property subtype.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype*
   exceptions: []
   platform:

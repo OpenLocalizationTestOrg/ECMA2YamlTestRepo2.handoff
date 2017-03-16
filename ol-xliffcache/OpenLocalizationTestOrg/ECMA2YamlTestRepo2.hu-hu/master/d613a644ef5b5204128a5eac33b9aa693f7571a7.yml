@@ -59,8 +59,8 @@ items:
   nameWithType: ProjectInstance
   fullName: Microsoft.Build.Execution.ProjectInstance
   type: Class
-  summary: "A projekt példányát képviselik."
-  remarks: "Az osztály példányai vezethet, ha a projekt klónozták. Konstruktorok olyan belső ahhoz, hogy a felhasználóknak kell létrehoznia a projekt példányok a már meglévőket.       Új projekt az elemei nem módosítható, kivéve, hogy a példány elemek is hozzáadja őket, és objektumpéldány tulajdonságai úgy állítsa be őket. Projekt példányok hasznosak, mert módosíthatók és beépített többször az eredeti projekt megzavarása nélkül.       Ez az osztály, sem bármely összetevőjének engedélyezett hivatkoznak <xref:Microsoft.Build.Construction>vagy <xref:Microsoft.Build.Evaluation>objektumok.</xref:Microsoft.Build.Evaluation> </xref:Microsoft.Build.Construction>       Projekt példány célokat, gazdagép-szolgáltatások és a feladat beállításjegyzék nem érhetők el."
+  summary: Represents a project instance.
+  remarks: "Instances of this class result when a project is cloned. Constructors are internal in order to require users to create project instances from existing projects.  \n  \n New project instances are immutable, except that instance items can be added to them and instance properties set on them. Project instances are useful because they can be modified and built several times without disturbing the original project.  \n  \n Neither this class nor any of its constituents is allowed to have references to <xref:Microsoft.Build.Construction> or <xref:Microsoft.Build.Evaluation> objects.  \n  \n Project instance targets, host services, and the task registry are not exposed."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{FullPath} #Targets={TargetsCount} DefaultTargets={(DefaultTargets == null) ? System.String.Empty : System.String.Join(";", DefaultTargets.ToArray())} ToolsVersion={Toolset.ToolsVersion} InitialTargets={(InitialTargets == null) ? System.String.Empty : System.String.Join(";", InitialTargets.ToArray())} #GlobalProperties={globalProperties.Count} #Properties={properties.Count} #ItemTypes={items.ItemTypes.Count} #Items={items.Count}")]
@@ -84,14 +84,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy új projekt példányt, és inicializálja az adott projekt gyökérkönyvtárában, az alapértelmezett projekt gyűjtemény használatával."
-  remarks: "Nincs köztes <xref:Microsoft.Build.Evaluation.Project>objektum létrehozása.</xref:Microsoft.Build.Evaluation.Project> Ez akkor hasznos, ha a projekt lesz létrehozva, de nem jelenik meg vagy módosított."
+  summary: Creates a new project instance and initializes it from the given project root, using the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "A projekt legfelső szintű elemének."
+      description: The project root element.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -108,14 +108,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy új projekt példányt, és inicializálja az adott projekt fájlból, az alapértelmezett projekt gyűjtemény használatával."
-  remarks: "Nincs köztes <xref:Microsoft.Build.Evaluation.Project>objektum létrehozása.</xref:Microsoft.Build.Evaluation.Project> Ez akkor hasznos, ha a projekt lesz létrehozva, de nem jelenik meg vagy módosított."
+  summary: Creates a new project instance and initializes it from the given project file, using the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile);
     parameters:
     - id: projectFile
       type: System.String
-      description: "A projekt fájl nevét."
+      description: The name of the project file.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -132,20 +132,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy új projekt példányt, és inicializálja az adott projekt fájlból, az adott globális tulajdonságok, eszközök verziója és az alapértelmezett projekt gyűjtemény használatával."
-  remarks: "Nincs köztes <xref:Microsoft.Build.Evaluation.Project>objektum létrehozása.</xref:Microsoft.Build.Evaluation.Project> Ez akkor hasznos, ha a projekt lesz létrehozva, de nem jelenik meg vagy módosított."
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, and the default project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion);
     parameters:
     - id: projectFile
       type: System.String
-      description: "A projekt fájl nevét."
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "A globális tulajdonságait."
+      description: The global properties to use.
     - id: toolsVersion
       type: System.String
-      description: "Az eszközök verziója."
+      description: The tools version.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -162,23 +162,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy új projekt példányt, és inicializálja az adott projekt gyökérkönyvtárában, az adott globális tulajdonságait, a eszközök verziója és a gyűjtemény használatával."
-  remarks: "Nincs köztes <xref:Microsoft.Build.Evaluation.Project>objektum létrehozása.</xref:Microsoft.Build.Evaluation.Project> Ez akkor hasznos, ha a projekt lesz létrehozva, de nem jelenik meg vagy módosított."
+  summary: Creates a new project instance and initializes it from the given project root, using the given global properties, tools version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "A projekt legfelső szintű elem"
+      description: The project root element
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "A globális tulajdonságait. NULL értékű lehet."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Az eszközök verziója. NULL értékű lehet."
+      description: The tools version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A projektgyűjtemény"
+      description: Project collection
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -195,23 +195,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy új projekt példányt, és inicializálja az adott projekt fájlból, az adott globális tulajdonságait, a eszközök verziója és a gyűjtemény használatával."
-  remarks: "Nincs köztes <xref:Microsoft.Build.Evaluation.Project>objektum létrehozása.</xref:Microsoft.Build.Evaluation.Project> Ez akkor hasznos, ha a projekt lesz létrehozva, de nem jelenik meg vagy módosított."
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: "A projekt fájl nevét."
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "A globális tulajdonságait. NULL értékű lehet."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Az eszközök verziója. NULL értékű lehet."
+      description: The tools version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "A projektgyűjtemény"
+      description: Project collection
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -228,26 +228,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy új projekt példányt, és inicializálja az adott projekt gyökérkönyvtárában, az adott globális tulajdonságait, a eszközök verziója és a gyűjtemény segítségével"
-  remarks: "Nincs köztes <xref:Microsoft.Build.Evaluation.Project>objektum létrehozása.</xref:Microsoft.Build.Evaluation.Project> Ez akkor hasznos, ha a projekt lesz létrehozva, de nem jelenik meg vagy módosított."
+  summary: Creates a new project instance and initializes it from the given project root, using the given global properties, tools version, and project collection
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: xml
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "A projekt legfelső szintű elemének."
+      description: The project root element.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "A globális tulajdonságait. NULL értékű lehet."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Az eszközök verziója. NULL értékű lehet."
+      description: The tools version. May be null.
     - id: subToolsetVersion
       type: System.String
-      description: "A sub eszközkészlet verziója. NULL értékű lehet."
+      description: The sub toolset version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "Gyűjtemény."
+      description: Project collection.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -264,26 +264,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy új projekt példányt, és inicializálja az adott projekt fájlból történő használatával az adott globális tulajdonságok eszközök verzió, sub eszközkészlet verzió és gyűjtemény."
-  remarks: "Nincs köztes <xref:Microsoft.Build.Evaluation.Project>objektum létrehozása.</xref:Microsoft.Build.Evaluation.Project> Ez akkor hasznos, ha a projekt lesz létrehozva, de nem jelenik meg vagy módosított."
+  summary: Creates a new project instance and initializes it from the given project file, using the given global properties, tools version, sub toolset version, and project collection.
+  remarks: No intermediate <xref:Microsoft.Build.Evaluation.Project> object is created. This is useful if a project is going to be built, but not displayed or edited.
   syntax:
     content: public ProjectInstance (string projectFile, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);
     parameters:
     - id: projectFile
       type: System.String
-      description: "A projekt fájl nevét."
+      description: The name of the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "A globális tulajdonságait. NULL értékű lehet."
+      description: The global properties to use. May be null.
     - id: toolsVersion
       type: System.String
-      description: "Az eszközök verziója. NULL értékű lehet."
+      description: The tools version. May be null.
     - id: subToolsetVersion
       type: System.String
-      description: "A sub eszközkészlet verziója. NULL értékű lehet."
+      description: The sub toolset version. May be null.
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "Gyűjtemény."
+      description: Project collection.
   overload: Microsoft.Build.Execution.ProjectInstance.#ctor*
   exceptions: []
   platform:
@@ -300,20 +300,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Nincsenek metaadatok elemet ad hozzá a projekthez."
-  remarks: "A Microsoft nem lép egy ProjectItemInstance győződjön meg arról, amely már használja egy másik ProjectInstance jelenleg nem áll."
+  summary: Adds an item with no metadata to the project.
+  remarks: We don't take a ProjectItemInstance to make sure we don't have one that's already in use by another ProjectInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectItemInstance AddItem (string itemType, string evaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: "A hozzáadni kívánt elem elem típusa."
+      description: The item type of the item to be added.
     - id: evaluatedInclude
       type: System.String
-      description: "A kiértékelt Include attribútum a cikk."
+      description: The evaluated Include attribute of the item.
     return:
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Új elemet adja vissza."
+      description: Returns the new item.
   overload: Microsoft.Build.Execution.ProjectInstance.AddItem*
   exceptions: []
   platform:
@@ -330,23 +330,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott metaadatok elemet ad hozzá a projekthez."
-  remarks: "A Microsoft nem lép egy ProjectItemInstance győződjön meg arról, amely már használja egy másik ProjectInstance jelenleg nem áll."
+  summary: Adds an item with the given metadata to the project.
+  remarks: We don't take a ProjectItemInstance to make sure we don't have one that's already in use by another ProjectInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectItemInstance AddItem (string itemType, string evaluatedInclude, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,string>> metadata);
     parameters:
     - id: itemType
       type: System.String
-      description: "A hozzáadni kívánt elem elem típusa."
+      description: The item type of the item to be added.
     - id: evaluatedInclude
       type: System.String
-      description: "A kiértékelt Include attribútum a cikk."
+      description: The evaluated Include attribute of the item.
     - id: metadata
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
-      description: "Az elem metaadatait."
+      description: The metadata of the item.
     return:
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Az új elemet adja vissza."
+      description: Return the new item.
   overload: Microsoft.Build.Execution.ProjectInstance.AddItem*
   exceptions: []
   platform:
@@ -363,13 +363,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A projekt alapértelmezett céljai épít, a figyelő a projekt gyűjtemény szoftverek."
+  summary: Builds the default targets of the project with loggers of the project collection.
   syntax:
     content: public bool Build ();
     parameters: []
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -386,17 +386,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A projekt alapértelmezett céljai épít, és az adott figyelő szoftverek."
-  remarks: "InvalidOperationException jelez, ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás."
+  summary: Builds the default targets of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A figyelő a build használandó szoftverek. NULL értékű lehet."
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -413,20 +413,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A projekt alapértelmezett céljai épít, az adott figyelő szoftverek és a távoli figyelő szoftverek."
-  remarks: "InvalidOperationException jelez, ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás."
+  summary: Builds the default targets of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A figyelő a build használandó szoftverek. NULL értékű lehet."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "A build használandó távoli figyelő szoftverek. NULL értékű lehet."
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -443,20 +443,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A projekt adott cél épít, és az adott figyelő szoftverek."
-  remarks: "InvalidOperationException jelez, ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás."
+  summary: Builds the given target of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: target
       type: System.String
-      description: "A cél-és létrehozása. NULL értékű lehet."
+      description: The target to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A figyelő a build használandó szoftverek. NULL értékű lehet."
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -473,20 +473,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott célokat a projekt épít, és az adott figyelő szoftverek."
-  remarks: "InvalidOperationException jelez, ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás."
+  summary: Builds the given targets of the project with the given loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: "A célok hozhat létre. NULL értékű lehet."
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A figyelő a build használandó szoftverek. NULL értékű lehet."
+      description: The loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -503,23 +503,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott cél a projekt épít, az adott figyelő szoftverek és a távoli figyelő szoftverek."
-  remarks: "InvalidOperationException jelez, ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás."
+  summary: Builds the given target of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string target, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: target
       type: System.String
-      description: "A cél-és létrehozása. NULL értékű lehet."
+      description: The target to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A figyelő a build használandó szoftverek. NULL értékű lehet."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "A build használandó távoli figyelő szoftverek. NULL értékű lehet."
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -536,23 +536,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Fejlesztheti tárolók listája az adott figyelő szoftverek. Lehet, hogy a célok null értékű. Lehet, hogy a figyelő szoftverek null értékű."
-  remarks: "Ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás azt lett átadva, okoz a InvalidOperationException."
+  summary: Build a list of targets with specified loggers. Targets may be null. Loggers may be null.
+  remarks: If any of the loggers supplied are already attached to the logging service we were passed, throws InvalidOperationException.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, out System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.TargetResult> targetOutputs);
     parameters:
     - id: targets
       type: System.String[]
-      description: "Összeállításához tárolók listája. NULL értékű lehet."
+      description: List of targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "Figyelő szoftverek célok összeállításakor használandó felsorolt listája."
+      description: Enumerated list of loggers to use for building targets.
     - id: targetOutputs
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.TargetResult}
-      description: "A cél kimenetek hoz létre."
+      description: Outputs of target builds.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad vissza a siker, hamis hiba esetén."
+      description: Returns true on success, false on failure.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -569,23 +569,23 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott célokat a projekt épít, az adott figyelő szoftverek és a távoli figyelő szoftverek."
-  remarks: "InvalidOperationException jelez, ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás."
+  summary: Builds the given targets of the project with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers);
     parameters:
     - id: targets
       type: System.String[]
-      description: "A célok hozhat létre. NULL értékű lehet."
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A figyelő a build használandó szoftverek. NULL értékű lehet."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "A build használandó távoli figyelő szoftverek. NULL értékű lehet."
+      description: The remote loggers to use for the build. May be null.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -602,26 +602,26 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott célokat, a megadott cél kimenetek és az adott figyelő szoftverek és a távoli figyelő szoftverek alkot."
-  remarks: "InvalidOperationException jelez, ha a figyelő a megadott szoftverek bármelyike már csatolva a naplózási szolgáltatás."
+  summary: Builds the given targets with the given target outputs and with the given loggers and remote loggers.
+  remarks: Throws InvalidOperationException if any of the loggers supplied are already attached to the logging service.
   syntax:
     content: public bool Build (string[] targets, System.Collections.Generic.IEnumerable<Microsoft.Build.Framework.ILogger> loggers, System.Collections.Generic.IEnumerable<Microsoft.Build.Logging.ForwardingLoggerRecord> remoteLoggers, out System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.TargetResult> targetOutputs);
     parameters:
     - id: targets
       type: System.String[]
-      description: "A célok hozhat létre. NULL értékű lehet."
+      description: The targets to build. May be null.
     - id: loggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger}
-      description: "A figyelő a build használandó szoftverek. NULL értékű lehet."
+      description: The loggers to use for the build. May be null.
     - id: remoteLoggers
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord}
-      description: "A build használandó távoli figyelő szoftverek. NULL értékű lehet."
+      description: The remote loggers to use for the build. May be null.
     - id: targetOutputs
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.TargetResult}
-      description: "A cél kimenetek."
+      description: The target outputs.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a sikeres fordítás; hamis más módon."
+      description: Returns true if the build succeeds; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.Build*
   exceptions: []
   platform:
@@ -638,13 +638,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy független, mély klón a projekthez, és minden benne. Klónozás az eredeti azonos mutability rendelkezik. Fordítási egyetlen fájl vagy, hogy a buildek közötti build eredmények hasznos."
+  summary: Creates an independent, deep clone of this project and everything in it. Clone has the same mutability as the original. Useful for compiling a single file or for keeping build results between builds.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance DeepCopy ();
     parameters: []
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "Ez a projekt független, mély klónja hoz létre."
+      description: Creates an independent, deep clone of this project.
   overload: Microsoft.Build.Execution.ProjectInstance.DeepCopy*
   exceptions: []
   platform:
@@ -661,16 +661,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Egy független, mély klón a projekthez, és minden, a megadott mutability hoz létre. Fordítási egyetlen fájl vagy, hogy a buildek közötti build eredmények hasznos."
+  summary: Creates an independent, deep clone of this project and everything in it, with specified mutability. Useful for compiling a single file or for keeping build results between builds.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance DeepCopy (bool isImmutable);
     parameters:
     - id: isImmutable
       type: System.Boolean
-      description: "Azt jelzi, mutability klónozását."
+      description: Flag indicating clone mutability.
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "Ez a projekt független, mély klónja megadott mutability adja vissza."
+      description: Returns an independent, deep clone of this project, with specified mutability.
   overload: Microsoft.Build.Execution.ProjectInstance.DeepCopy*
   exceptions: []
   platform:
@@ -687,13 +687,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a projektet az alapértelmezett tárolók listája."
-  remarks: "Ha explicit módon megadott célok megadva a beépített alapértelmezett célok."
+  summary: Gets or sets the list of default targets for this project.
+  remarks: Default targets are built if no targets are explicitly specified.
   syntax:
     content: public System.Collections.Generic.List<string> DefaultTargets { get; }
     return:
       type: System.Collections.Generic.List{System.String}
-      description: "Ebben a projektben alapértelmezett célok listáját adja vissza."
+      description: Returns the list of default targets for this project.
   overload: Microsoft.Build.Execution.ProjectInstance.DefaultTargets*
   exceptions: []
   platform:
@@ -710,12 +710,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: 'Lekérdezi a projekt gyökérkönyvtárában. Relatív elérési útja, és az aktuális könyvtár beállítása az összeállítás közbeni értékeléséhez használt. A rendszer soha nem null értékű: projektek nem a lemezről betöltött használni a jelenlegi könyvtárat a build indításakor az.'
+  summary: 'Gets the project root directory. Used for evaluation of relative paths and setting the current directory during build. Is never null: projects not loaded from disk use the current directory from the time the build started.'
   syntax:
     content: public string Directory { get; }
     return:
       type: System.String
-      description: "A projekt gyökérkönyvtár, amely soha nem null visszaadása. Nincs betöltve a lemezről projektek a build indításánál térjen vissza az aktuális könyvtár."
+      description: Returns the project root directory, which is never null. Projects not loaded from disk return the current directory at the time the build was started.
   overload: Microsoft.Build.Execution.ProjectInstance.Directory*
   exceptions: []
   platform:
@@ -732,17 +732,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Kiértékeli a megadott karakterlánc feltételeként elemek és tulajdonságai, a jelenlegi elem és érhető el, majd ennek során a logikai próbaverzióra-tulajdonságokat használó kibontásával."
-  remarks: "Ez akkor hasznos, a parancsablakban.       Operációs rendszer metaadatok kifejezések nem bővíti ki."
+  summary: Evaluates the provided string as a condition by expanding items and properties, using the current items and properties available, then doing a logical evaluation.
+  remarks: "This is useful for the immediate window.  \n  \n Does not expand bare metadata expressions."
   syntax:
     content: public bool EvaluateCondition (string condition);
     parameters:
     - id: condition
       type: System.String
-      description: "A karakterláncot kell."
+      description: The string to be expanded.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a karakterlánc eredménye IGAZ; hamis más módon."
+      description: Returns true if the string evaluates to true; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.EvaluateCondition*
   exceptions: []
   platform:
@@ -759,17 +759,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Kiértékeli a megadott karakterlánc kibontásával elemek és tulajdonságai, a jelenlegi elem és a rendelkezésre álló tulajdonságok használatával."
-  remarks: "Ez akkor hasznos, egyes gazdagépek, illetve a hibakereső parancsablakban.       Operációs rendszer metaadatok kifejezések nem bővíti ki."
+  summary: Evaluates the provided string by expanding items and properties, using the current items and properties available.
+  remarks: "This is useful for some hosts, or for the debugger immediate window.  \n  \n Does not expand bare metadata expressions."
   syntax:
     content: public string ExpandString (string unexpandedValue);
     parameters:
     - id: unexpandedValue
       type: System.String
-      description: "A karakterláncot kell."
+      description: The string to be expanded.
     return:
       type: System.String
-      description: "A kibővített karakterlánc típusú értéket ad vissza."
+      description: Returns the expanded string value.
   overload: Microsoft.Build.Execution.ProjectInstance.ExpandString*
   exceptions: []
   platform:
@@ -786,12 +786,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a projekt fájl teljes elérési útja. Naplózásra használható."
+  summary: Gets the full path to the project file. Used for logging.
   syntax:
     content: public string FullPath { get; }
     return:
       type: System.String
-      description: "A projektfájl ad vissza a teljes elérési útja. Ha a projekt neve soha nem volt null értéket ad vissza."
+      description: Returns the full path to the project file. Returns null if the project was never named.
   overload: Microsoft.Build.Execution.ProjectInstance.FullPath*
   exceptions: []
   platform:
@@ -808,16 +808,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott elem definíciója Include attribútumának kiértékelt, escape-karakterrel megjelölt értékének beolvasása."
+  summary: Gets the evaluated, escaped value of the Include attribute of the provided item definition.
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Execution.ProjectItemDefinitionInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemDefinitionInstance
-      description: "Az elem definíciója kiértékelése és escape-karakterrel megjelölve."
+      description: The item definition to be evaluated and escaped.
     return:
       type: System.String
-      description: "Vissza a kiértékelt escape-karaktersorozatot a megadott elem definíció Include attribútum értéke."
+      description: Returns the evaluated, escaped value of the Include attribute of the provided item definition.
   overload: Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -834,16 +834,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a megadott elem a belefoglalási attribútum kiértékelni, escape-karakterrel megjelölt értékét."
+  summary: Gets the evaluated, escaped value of the Include attribute of the provided item.
   syntax:
     content: public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Execution.ProjectItemInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "A cikk értékelése és escape-karakterrel megjelölve."
+      description: The item to be evaluated and escaped.
     return:
       type: System.String
-      description: "Vissza a kiértékelt escape-karaktersorozatot a megadott elem Include attribútum értéke."
+      description: Returns the evaluated, escaped value of the Include attribute of the provided item.
   overload: Microsoft.Build.Execution.ProjectInstance.GetEvaluatedItemIncludeEscaped*
   exceptions: []
   platform:
@@ -860,16 +860,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Ebben a projektben a megadott típusú lekérdezi az összes elemet. A rendszer egy csak olvasható."
+  summary: Gets all the items in this project of the specified type. This is a read-only list.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemInstance> GetItems (string itemType);
     parameters:
     - id: itemType
       type: System.String
-      description: "Az elem típusa kérhető elemekre."
+      description: The item type of the items to be retrieved.
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "Ebben a projektben az adott típusú összes azon elemeit adja vissza. Egy üres listát ad vissza, ha ilyen nincs."
+      description: Returns all the items in this project of the specified type. Returns an empty list if there are none.
   overload: Microsoft.Build.Execution.ProjectInstance.GetItems*
   exceptions: []
   platform:
@@ -886,19 +886,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Ebben a projektben a megadott típusú elemeinek lekérdezi és értékelni értéket tartalmazza. A rendszer egy csak olvasható."
+  summary: Gets all the items in this project of the specified type and evaluated include value. This is a read-only list.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Execution.ProjectItemInstance> GetItemsByItemTypeAndEvaluatedInclude (string itemType, string evaluatedInclude);
     parameters:
     - id: itemType
       type: System.String
-      description: "Az elem típusa kérhető elemekre."
+      description: The item type of the items to be retrieved.
     - id: evaluatedInclude
       type: System.String
-      description: "A cikkek beolvasni a kiértékelt include értékét"
+      description: The evaluated include value of the items to be retrieved
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "Ebben a projektben az adott típusú összes azon elemeit adja vissza, és értékelni értéket tartalmazza. A visszatérési egy üres gyűjteményt, ha nincs."
+      description: Returns all the items in this project of the specified type and evaluated include value. Returns an empty collection if there are none.
   overload: Microsoft.Build.Execution.ProjectInstance.GetItemsByItemTypeAndEvaluatedInclude*
   exceptions: []
   platform:
@@ -915,16 +915,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott metadatum escape-karakterrel megjelölt értékének beolvasása."
+  summary: Gets the escaped value of the provided metadatum.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectMetadataInstance metadatum);
     parameters:
     - id: metadatum
       type: Microsoft.Build.Execution.ProjectMetadataInstance
-      description: "A metadatum meg kell jelölni."
+      description: The metadatum to be escaped.
     return:
       type: System.String
-      description: "A megadott metadatum escape-karakterrel megjelölt értékét adja vissza."
+      description: Returns the escaped value of the provided metadatum.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -941,19 +941,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott elem definíciója megadott nevét a metadatum escape-karakterrel megjelölt értékének beolvasása."
+  summary: Gets the escaped value of the metadatum with the provided name of the provided item definition.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectItemDefinitionInstance item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemDefinitionInstance
-      description: "Az elem definíciója adni a metadatum értéket."
+      description: The item definition to provide the metadatum value.
     - id: name
       type: System.String
-      description: "A metadatum neve."
+      description: The name of the metadatum.
     return:
       type: System.String
-      description: "A megadott nevű, a megadott elem definíciója a metadatum escape-karakterrel megjelölt értékét adja vissza."
+      description: Returns the escaped value of the metadatum with the provided name of the provided item definition.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -970,19 +970,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott nevű metadatum escape-karakterrel megjelölt értékének lekérdezi a megadott elem."
+  summary: Gets the escaped value of the metadatum with the provided name on the provided item.
   syntax:
     content: public static string GetMetadataValueEscaped (Microsoft.Build.Execution.ProjectItemInstance item, string name);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Az elemet a metadatum értéket adjon meg."
+      description: The item to provide the metadatum value.
     - id: name
       type: System.String
-      description: "A metadatum neve."
+      description: The name of the metadatum.
     return:
       type: System.String
-      description: "A megadott elem a megadott nevű metadatum escape-karakterrel megjelölt értékét adja vissza."
+      description: Returns the escaped value of the metadatum with the provided name on the provided item.
   overload: Microsoft.Build.Execution.ProjectInstance.GetMetadataValueEscaped*
   exceptions: []
   platform:
@@ -999,16 +999,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott nevű tulajdonság beolvasása."
+  summary: Get the property with the given name.
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance GetProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "A lekérdezni a tulajdonság nevét."
+      description: The name of the property to retrieve.
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Visszaadja a megadott nevű tulajdonság. Ha a tulajdonság nem létezik ilyen nevű null értéket ad vissza."
+      description: Returns the property with the given name. Returns null if no property exists with that name.
   overload: Microsoft.Build.Execution.ProjectInstance.GetProperty*
   exceptions: []
   platform:
@@ -1025,17 +1025,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott nevű tulajdonság értékének beolvasása."
-  remarks: "Ez a módszer nem különbözteti meg a tulajdonság értéke az üres karakterlánc, és nem a megadott nevű tulajdonság."
+  summary: Get the value of the property with the given name.
+  remarks: This method does not distinguish between a property with a value of empty string and no property with the given name.
   syntax:
     content: public string GetPropertyValue (string name);
     parameters:
     - id: name
       type: System.String
-      description: "A tulajdonság, amelynek az értéke kérhető neve."
+      description: The name of the property whose value is to be retrieved.
     return:
       type: System.String
-      description: "A megadott nevű tulajdonság értékét adja vissza. Üres karakterláncot ad vissza, ha a tulajdonság nem létezik ilyen nevű. A visszaadott érték nem escape-karakterrel megjelölt karaktersorozatok rendelkezik."
+      description: Returns the value of the property with the given name. Returns an empty string if no property exists with that name. The value returned has no escaped character sequences.
   overload: Microsoft.Build.Execution.ProjectInstance.GetPropertyValue*
   exceptions: []
   platform:
@@ -1052,16 +1052,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott tulajdonság escape-karakterrel megjelölt értékének beolvasása."
+  summary: Get the escaped value of the provided property.
   syntax:
     content: public static string GetPropertyValueEscaped (Microsoft.Build.Execution.ProjectPropertyInstance property);
     parameters:
     - id: property
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "A tulajdonság, meg kell jelölni."
+      description: The property to be escaped.
     return:
       type: System.String
-      description: "A megadott tulajdonság escape-karakterrel megjelölt értékét adja vissza."
+      description: Returns the escaped value of the provided property.
   overload: Microsoft.Build.Execution.ProjectInstance.GetPropertyValueEscaped*
   exceptions: []
   platform:
@@ -1078,13 +1078,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a szótár ebben a projektben, a kiértékelés globális tulajdonságok, ha van ilyen."
+  summary: Gets the dictionary of global properties this project was evaluated with, if any.
   remarks: "Read only collection.  \n  \n Traverses project references.  \n  \n This is the publicly exposed getter, that translates into a read-only dead IDictionary\\<string, string>."
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Ebben a projektben a kiértékelés globális tulajdonságok szótár adja vissza."
+      description: Returns the dictionary of global properties this project was evaluated with.
   overload: Microsoft.Build.Execution.ProjectInstance.GlobalProperties*
   exceptions: []
   platform:
@@ -1101,12 +1101,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a kezdeti tárolók listája a projekt és annak importjaitól mélysége-első. Ezeken a célokon előtt semmilyen más célra készült."
+  summary: Gets the list of initial targets for the project and all its imports, depth-first. These targets are built before any other targets.
   syntax:
     content: public System.Collections.Generic.List<string> InitialTargets { get; }
     return:
       type: System.Collections.Generic.List{System.String}
-      description: "A projekt és az összes Ez annak importjaitól, mélysége-első kezdeti célok listáját adja vissza."
+      description: Returns the list of initial targets for the project and all its imports, depth-first.
   overload: Microsoft.Build.Execution.ProjectInstance.InitialTargets*
   exceptions: []
   platform:
@@ -1123,12 +1123,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi azt a jelzőt, amely azt jelzi, hogy a projekt példány nem módosítható. Ez a jelző véglegesen van beállítva, a példány létrehozásakor."
+  summary: Gets a flag indicating that the project instance is immutable. This flag is set permanently when the instance is created.
   syntax:
     content: public bool IsImmutable { get; }
     return:
       type: System.Boolean
-      description: "A jelző adja vissza."
+      description: Returns the flag.
   overload: Microsoft.Build.Execution.ProjectInstance.IsImmutable*
   exceptions: []
   platform:
@@ -1145,12 +1145,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A cikk definíciókban csak olvasható dictionary lekérdezi a projektben kulccsal a kapcsolódó elem típusa."
+  summary: Gets a read-only dictionary of the item definitions in the project, keyed by item type.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectItemDefinitionInstance> ItemDefinitions { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectItemDefinitionInstance}
-      description: "A projekt, kulccsal a kapcsolódó elem típusa csak olvasható dictionary a cikk meghatározások adja vissza."
+      description: Returns a read-only dictionary of the item definitions in the project, keyed by item type.
   overload: Microsoft.Build.Execution.ProjectInstance.ItemDefinitions*
   exceptions: []
   platform:
@@ -1167,12 +1167,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Ebben a projektben lekéri az összes elemet."
+  summary: Gets all items in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemInstance> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemInstance}
-      description: "Ez a projekt összes elemet adja vissza."
+      description: Returns all items in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Items*
   exceptions: []
   platform:
@@ -1189,12 +1189,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Ez a projekt összes konfigurációelem-típusok beolvasása"
+  summary: Gets all item types in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<string> ItemTypes { get; }
     return:
       type: System.Collections.Generic.ICollection{System.String}
-      description: "Ebben a projektben adja vissza az összes konfigurációelem-típusok."
+      description: Returns all item types in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.ItemTypes*
   exceptions: []
   platform:
@@ -1211,12 +1211,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi az eredeti fájl helyét. Soha nem null értékű."
+  summary: Gets the location of the originating file itself. Never null.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Az eredeti fájl helyét adja meg. Soha nem null értéket ad vissza."
+      description: Returns the location of the originating file. Never returns null.
   overload: Microsoft.Build.Execution.ProjectInstance.ProjectFileLocation*
   exceptions: []
   platform:
@@ -1233,12 +1233,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Ebben a projektben lévő összes tulajdonság lekérése."
+  summary: Gets all properties in this project.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectPropertyInstance> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectPropertyInstance}
-      description: "Ebben a projektben adja vissza az összes tulajdonság."
+      description: Returns all properties in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Properties*
   exceptions: []
   platform:
@@ -1255,16 +1255,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Egy elem eltávolítása a projektben, ha van ilyen. Igaz értéket ad eredményül, ha jelen van, hamis más módon."
+  summary: Removes an item from the project, if present. Returns true if it was present, false otherwise.
   syntax:
     content: public bool RemoveItem (Microsoft.Build.Execution.ProjectItemInstance item);
     parameters:
     - id: item
       type: Microsoft.Build.Execution.ProjectItemInstance
-      description: "Az elem el kell távolítani."
+      description: The item to be removed.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha az elem található; eltávolítása előtt hamis más módon."
+      description: Returns true if the item was present before removal; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.RemoveItem*
   exceptions: []
   platform:
@@ -1281,16 +1281,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Eltávolítja a megadott nevű tulajdonság. Igaz értéket ad vissza, ha a tulajdonság egy értéket (valószínűleg üres karakterlánc), egyébként hamis rendelkezett."
+  summary: Removes a property with the given name. Returns true if the property had a value (possibly empty string), otherwise false.
   syntax:
     content: public bool RemoveProperty (string name);
     parameters:
     - id: name
       type: System.String
-      description: "Az eltávolítandó tulajdonság neve."
+      description: The name of the property to be removed.
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha a tulajdonság egy értéket (valószínűleg üres) eltávolítása előtt hamis más módon."
+      description: Returns true if the property had a value (possibly an empty string) before removal; false otherwise.
   overload: Microsoft.Build.Execution.ProjectInstance.RemoveProperty*
   exceptions: []
   platform:
@@ -1307,20 +1307,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A megadott nevű és értékű tulajdonság hozzáadása a projekthez. A tulajdonság felülírja a gyűjtemény már található azonos nevű."
-  remarks: "A Microsoft nem lép egy ProjectPropertyInstance győződjön meg arról, ki, amely már használja egy másik ProjectPropertyInstance jelenleg nem áll."
+  summary: Add a property with the specified name and value to the project. Overwrites any property with the same name already in the property collection.
+  remarks: We don't take a ProjectPropertyInstance to make sure we don't have one that's already in use by another ProjectPropertyInstance.
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance SetProperty (string name, string evaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "A tulajdonság neve."
+      description: The name of the property to add.
     - id: evaluatedValue
       type: System.String
-      description: "A tulajdonság hozzáadása kiértékelt értéke."
+      description: The evaluated value of the property to add.
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Az új tulajdonság adja vissza."
+      description: Returns the new property.
   overload: Microsoft.Build.Execution.ProjectInstance.SetProperty*
   exceptions: []
   platform:
@@ -1337,12 +1337,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi számbavevő keresztül az összes cél ebben a projektben. Ez a gyűjtemény csak olvasható."
+  summary: Gets an enumerator over all targets in this project. This collection is read-only.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectTargetInstance> Targets { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectTargetInstance}
-      description: "Ebben a projektben az összes cél keresztül adja vissza számbevevőre."
+      description: Returns an enumerator over all targets in this project.
   overload: Microsoft.Build.Execution.ProjectInstance.Targets*
   exceptions: []
   platform:
@@ -1359,13 +1359,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Az ebben a projektben, a kiértékelés eszközök verzió kap, ha van ilyen."
-  remarks: "Az eredmény nincs feltétlenül ugyanaz, mint az eszközök verziót a projekt címke az lehet, hogy külsőleg megadva, például egy /tv kapcsolóval."
+  summary: Gets the tools version this project was evaluated with, if any.
+  remarks: The result is not necessarily the same as the tools version on the Project tag, if any; it may have been externally specified, for example with a /tv switch.
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: "Az ebben a projektben, a kiértékelés eszközök verziója ad vissza, ha van ilyen."
+      description: Returns the tools version this project was evaluated with, if any.
   overload: Microsoft.Build.Execution.ProjectInstance.ToolsVersion*
   exceptions: []
   platform:
@@ -1382,13 +1382,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Létrehoz egy ProjectRootElement a ProjectInstance tartalmát."
+  summary: Creates a ProjectRootElement from the contents of this ProjectInstance.
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement ToProjectRootElement ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Visszaadja egy ProjectRootElement, amely ezt a példányt jelenti."
+      description: Returns a ProjectRootElement which represents this instance.
   overload: Microsoft.Build.Execution.ProjectInstance.ToProjectRootElement*
   exceptions: []
   platform:
@@ -1405,13 +1405,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A projekt állapotát a felváltja <> </> *>, <> </> *> és <xref:Microsoft.Build.Execution.ProjectInstance.Items*>levőkkel a megadott <xref href=&quot;Microsoft.Build.Execution.ProjectInstance&quot;> </xref>.</xref:Microsoft.Build.Execution.ProjectInstance.Items*>"
+  summary: Replaces the project state <xref:Microsoft.Build.Execution.ProjectInstance.GlobalProperties*>, <xref:Microsoft.Build.Execution.ProjectInstance.Properties*> and <xref:Microsoft.Build.Execution.ProjectInstance.Items*> with those from the specified <xref href="Microsoft.Build.Execution.ProjectInstance"></xref>.
   syntax:
     content: public void UpdateStateFrom (Microsoft.Build.Execution.ProjectInstance projectState);
     parameters:
     - id: projectState
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "A <xref uid=&quot;langword_csharp_ProjectInstance&quot; name=&quot;ProjectInstance&quot; href=&quot;&quot;> </xref> a frissítése."
+      description: The <xref uid="langword_csharp_ProjectInstance" name="ProjectInstance" href=""></xref> to update from.
   overload: Microsoft.Build.Execution.ProjectInstance.UpdateStateFrom*
   exceptions: []
   platform:

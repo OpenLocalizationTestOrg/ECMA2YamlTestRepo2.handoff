@@ -29,8 +29,8 @@ items:
   nameWithType: ProjectTargetInstance
   fullName: Microsoft.Build.Execution.ProjectTargetInstance
   type: Class
-  summary: "Fussa egy [céloz elem (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Ez egy olyan nem módosítható osztály."
+  summary: Wraps a [Target Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: This is an immutable class.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("Name={name} Count={children.Count} Condition={condition} Inputs={inputs} Outputs={outputs} DependsOnTargets={dependsOnTargets}")]
@@ -54,12 +54,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a AfterTargets attribútum helyét."
+  summary: Gets the location of the AfterTargets attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation AfterTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "AfterTargets attribútum helyét adja meg."
+      description: Returns the AfterTargets attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.AfterTargetsLocation*
   exceptions: []
   platform:
@@ -76,12 +76,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a BeforeTargets attribútum helyét."
+  summary: Gets the location of the BeforeTargets attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation BeforeTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "BeforeTargets attribútum helyét adja meg."
+      description: Returns the BeforeTargets attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.BeforeTargetsLocation*
   exceptions: []
   platform:
@@ -98,13 +98,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Ez a cél gyermekei listájának lekérése. A build telepítéseket megjelenítése az egyes tevékenységek végrehajtásához."
-  remarks: "Ez az egy rendezett gyűjteményt. A csak olvasható lista; a ProjectTargetInstance osztály nem módosítható. Ez a gyűjtemény nem tartalmaz a hibára cél hivatkozást."
+  summary: Gets a list of the children of this target. The build iterates through this to get each task to execute.
+  remarks: This is an ordered collection. This is a read-only list; the ProjectTargetInstance class is immutable. This collection does not contain the OnError target references.
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Execution.ProjectTargetInstanceChild> Children { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Execution.ProjectTargetInstanceChild}
-      description: "Ez a cél gyermekei listáját adja vissza."
+      description: Returns a list of the children of this target.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Children*
   exceptions: []
   platform:
@@ -121,12 +121,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a célelem unevaluated feltétel attribútum."
+  summary: Gets the unevaluated Condition attribute of this target element.
   syntax:
     content: public string Condition { get; }
     return:
       type: System.String
-      description: "A feltétel attribútum értékét adja vissza. Üres karakterláncot ad vissza, ha az attribútum nem található."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Condition*
   exceptions: []
   platform:
@@ -143,12 +143,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a feltétel attribútum helyét."
+  summary: Gets the location of the Condition attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Az Állapot attribútum helyét adja meg."
+      description: Returns the Condition attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.ConditionLocation*
   exceptions: []
   platform:
@@ -165,12 +165,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi egy unevaluated pontosvesszővel elválasztott listája, amelyeket ez a cél függ."
+  summary: Gets an unevaluated semicolon-delimited list of targets that this target depends on.
   syntax:
     content: public string DependsOnTargets { get; }
     return:
       type: System.String
-      description: "Ez a cél függ tárolók egy unevaluated pontosvesszővel elválasztott listát ad vissza. Üres karakterláncot ad vissza, ha ez a cél nincs más célja függ."
+      description: Returns an unevaluated semicolon-delimited list of targets that this target depends on. Returns an empty string if this target depends on no other targets.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargets*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a DependsOnTargets attribútum helyét."
+  summary: Gets the location of the DependsOnTargets attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation DependsOnTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "DependsOnTargets attribútum helyét adja meg."
+      description: Returns the DependsOnTargets attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargetsLocation*
   exceptions: []
   platform:
@@ -209,12 +209,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a fájl, amelyből származik a cél elérési útját."
+  summary: Gets the full path to the file from which this target originated.
   syntax:
     content: public string FullPath { get; }
     return:
       type: System.String
-      description: "A fájl, amelyből ez a cél származik a teljes elérési útját adja vissza. Üres karakterláncot ad vissza, ha ez a cél projektben származik, amely nem lett betöltve, és soha nem adtak egy elérési utat."
+      description: Returns the full path to the file from which this target originated. Returns an empty string if this target originated in a project that was not loaded and has never been given a path.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.FullPath*
   exceptions: []
   platform:
@@ -231,12 +231,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A célelem a unevaluated bemenetek beolvasása"
+  summary: Gets the unevaluated inputs on this target element.
   syntax:
     content: public string Inputs { get; }
     return:
       type: System.String
-      description: "A célelem az unevaluated adatokat adja vissza. Üres karakterláncot ad vissza, ha ez a cél nincs bevitel."
+      description: Returns the unevaluated inputs on this target element. Returns an empty string if this target has no inputs.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Inputs*
   exceptions: []
   platform:
@@ -253,12 +253,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a bemeneti adatok attribútum helyét."
+  summary: Gets the location of the Inputs attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation InputsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Bemenetek attribútum helyét adja meg."
+      description: Returns the Inputs attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.InputsLocation*
   exceptions: []
   platform:
@@ -275,12 +275,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi egy unevaluated feltételt, amely ismétlődő kimenetek törli a célként megadott szolgál."
+  summary: Gets an unevaluated condition which is used to delete duplicate outputs from this target.
   syntax:
     content: public string KeepDuplicateOutputs { get; }
     return:
       type: System.String
-      description: "Nem ismétlődő kimenetek törlése a célként szolgáló unevaluated állapotot adja vissza. Üres karakterláncot ad vissza, ha nincs feltétel."
+      description: Returns an unevaluated condition which is used to delete duplicate outputs from this target. Returns an empty string if there is no condition.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputs*
   exceptions: []
   platform:
@@ -297,12 +297,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a KeepDuplicateOutputs attribútum helyét."
+  summary: Gets the location of the KeepDuplicateOutputs attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepDuplicateOutputsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "KeepDuplicateOutputs attribútum helyét adja meg."
+      description: Returns the KeepDuplicateOutputs attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputsLocation*
   exceptions: []
   platform:
@@ -319,12 +319,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a maga az elem helyét."
+  summary: Gets the location of the element itself.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Elem helyét adja meg."
+      description: Returns the element location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Location*
   exceptions: []
   platform:
@@ -341,12 +341,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a célként megadott nevét."
+  summary: Gets the name of the target.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "A tároló nevét adja vissza."
+      description: Returns the name of the target.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Name*
   exceptions: []
   platform:
@@ -363,13 +363,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Ez a cél hibára célok hivatkozó gyermekei listájának lekérése."
-  remarks: "Ez az egy rendezett gyűjteményt. A csak olvasható lista; a ProjectTargetInstance osztály nem módosítható."
+  summary: Gets a list of the children of this target that refer to OnError targets.
+  remarks: This is an ordered collection. This is a read-only list; the ProjectTargetInstance class is immutable.
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Execution.ProjectOnErrorInstance> OnErrorChildren { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Execution.ProjectOnErrorInstance}
-      description: "Ez a cél hibára célok hivatkozó gyermekei listájának lekérése."
+      description: Gets a list of the children of this target that refer to OnError targets.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.OnErrorChildren*
   exceptions: []
   platform:
@@ -386,12 +386,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a unevaluated kimenetek ezen cél elem lehet üres karakterlánc."
+  summary: Gets the unevaluated outputs on this target element May be empty string.
   syntax:
     content: public string Outputs { get; }
     return:
       type: System.String
-      description: "A unevaluated kimenetek ezen cél elem visszaadása üres karakterlánc nem kimenetek esetén."
+      description: Returns the unevaluated outputs on this target element Returns an empty string if there are no outputs.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Outputs*
   exceptions: []
   platform:
@@ -408,12 +408,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a hely a kimeneti attribútum."
+  summary: Gets the location of the Outputs attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation OutputsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Kimenetek attribútum helyét adja meg."
+      description: Returns the Outputs attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.OutputsLocation*
   exceptions: []
   platform:
@@ -430,12 +430,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a unevaluated értékeket visszaadni a célelem karakterláncként."
+  summary: Gets the unevaluated return values on the target element as a string.
   syntax:
     content: public string Returns { get; }
     return:
       type: System.String
-      description: "Visszaadja a unevaluated visszatérési értékek a célelem karakterláncként. Adja vissza egy üres karakterlánc vagy null, ha a visszatérési érték van megadva."
+      description: Returns the unevaluated return values on the target element as a string. Returns an empty string or null, if no return value is specified.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Returns*
   exceptions: []
   platform:
@@ -452,12 +452,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a beolvasása attribútum helyét."
+  summary: Gets the location of the Returns attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ReturnsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Beolvasása attribútum helyét adja meg."
+      description: Returns the Returns attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.ReturnsLocation*
   exceptions: []
   platform:
@@ -474,12 +474,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a feladatokat, amelyek a cél közvetlen gyermekeit."
+  summary: Gets all the tasks that are immediate children of this target.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectTaskInstance> Tasks { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectTaskInstance}
-      description: "A feladatokat, amelyek a cél közvetlen gyermekeit adja vissza."
+      description: Returns all the tasks that are immediate children of this target.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Tasks*
   exceptions: []
   platform:

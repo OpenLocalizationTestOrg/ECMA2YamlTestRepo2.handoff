@@ -15,7 +15,7 @@ items:
   nameWithType: BootstrapperBuilder
   fullName: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder
   type: Class
-  summary: "A legfelső szintű objektum rendszerindító rendszer."
+  summary: The top-level object for the bootstrapper system.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
@@ -44,7 +44,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Egy új példányát inicializálja a <xref uid=&quot;langword_csharp_BootstrapperBuilder&quot; name=&quot;BootstrapperBuilder&quot; href=&quot;&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref uid="langword_csharp_BootstrapperBuilder" name="BootstrapperBuilder" href=""></xref> class.
   syntax:
     content: public BootstrapperBuilder ();
     parameters: []
@@ -64,13 +64,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Egy új példányát inicializálja a <xref uid=&quot;langword_csharp_BootstrapperBuilder&quot; name=&quot;BootstrapperBuilder&quot; href=&quot;&quot;> </xref> osztály, a megadott verziójával [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)]."
+  summary: Initializes a new instance of the <xref uid="langword_csharp_BootstrapperBuilder" name="BootstrapperBuilder" href=""></xref> class, using the specified version of [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)].
   syntax:
     content: public BootstrapperBuilder (string visualStudioVersion);
     parameters:
     - id: visualStudioVersion
       type: System.String
-      description: "A verziójának [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)] használatára."
+      description: The version of [!INCLUDE[vs_current_short](~/add/includes/ajax-current-ext-md.md)] to use.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.#ctor*
   exceptions: []
   platform:
@@ -87,16 +87,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "A megadott beállítások alapján hoz létre egy rendszerindító."
+  summary: Generates a bootstrapper by using the specified settings.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults Build (Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings
-      description: "A rendszerindító létrehozásához használt tulajdonságok."
+      description: The properties used to create the bootstrapper.
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults
-      description: "A rendszerindító generációs eredményeit."
+      description: The results of the bootstrapper generation.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Build*
   exceptions: []
   platform:
@@ -113,25 +113,25 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Adott ad vissza. a könyvtárak, hogy melyik rendszerindító összetevőfájlok kerülnek, amikor létrehozzák őket, a megadott beállításokat."
+  summary: Returns the directories to which bootstrapper component files are copied when they are created, given the specified settings.
   syntax:
     content: public string[] GetOutputFolders (string[] productCodes, string culture, string fallbackCulture, Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation componentsLocation);
     parameters:
     - id: productCodes
       type: System.String[]
-      description: "A <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProduct.ProductCode*>a kijelölt összetevők értékeivel.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProduct.ProductCode*>"
+      description: The <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProduct.ProductCode*> values of the selected components.
     - id: culture
       type: System.String
-      description: "A rendszerindító létrehozásához használt kulturális környezetet."
+      description: The culture used to create the bootstrapper.
     - id: fallbackCulture
       type: System.String
-      description: "A tartalék használt kulturális környezetet a rendszerindító létrehozásához."
+      description: The fallback culture used to create the bootstrapper.
     - id: componentsLocation
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation
-      description: "Határozza meg, hogy a rendszerindító csomagokat a kijelölt összetevők."
+      description: Specifies how the bootstrapper packages the selected components.
     return:
       type: System.String[]
-      description: "A könyvtárak a melyik rendszerindító összetevőfájlok, amikor a létrehozásuk, a megadott beállítások megadott másolja."
+      description: The directories to which bootstrapper component files are copied when they are created, given the specified settings.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.GetOutputFolders*
   exceptions: []
   platform:
@@ -148,12 +148,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Lekérdezi vagy beállítja a szükséges rendszerindító helyét fájlokat."
+  summary: Gets or sets the location of the required bootstrapper files.
   syntax:
     content: public string Path { get; set; }
     return:
       type: System.String
-      description: "A szükséges rendszerindító fájlok elérési útját."
+      description: The path for the required bootstrapper files.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*
   exceptions: []
   platform:
@@ -170,12 +170,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "Az aktuális rendszerindító <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*> elérhető összes termékek beolvasása"
+  summary: Gets all products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection Products { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection
-      description: "Az aktuális rendszerindító <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*> elérhető összes termékek"
+      description: All products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path*>.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Products*
   exceptions: []
   platform:

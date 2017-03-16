@@ -16,8 +16,8 @@ items:
   nameWithType: ProjectTaskOutputItemInstance
   fullName: Microsoft.Build.Execution.ProjectTaskOutputItemInstance
   type: Class
-  summary: "A kimeneti elem eleme becsomagolja egy [feladatelemet (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Nem módosítható."
+  summary: Wraps an output item element of a [Task Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: Immutable.
   syntax:
     content: 'public sealed class ProjectTaskOutputItemInstance : Microsoft.Build.Execution.ProjectTaskInstanceChild'
   inheritance:
@@ -39,12 +39,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "A feltétel attribútum a projekt elem beolvasása."
+  summary: Gets the Condition attribute of this project element.
   syntax:
     content: public override string Condition { get; }
     return:
       type: System.String
-      description: "A feltétel attribútum értékét adja vissza. Üres karakterláncot ad vissza, ha az attribútum nem található."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectTaskOutputItemInstance.Condition*
   exceptions: []
   platform:
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a feltétel attribútum helyét."
+  summary: Gets the location of the Condition attribute.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Az Állapot attribútum helyét adja meg."
+      description: Returns the Condition attribute location.
   overload: Microsoft.Build.Execution.ProjectTaskOutputItemInstance.ConditionLocation*
   exceptions: []
   platform:
@@ -83,12 +83,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a kimenetek kísérhet elemtípus."
+  summary: Gets the item type that the outputs go into.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Amelyek a kimenetek elem típusát adja vissza."
+      description: Returns the item type that the outputs go into.
   overload: Microsoft.Build.Execution.ProjectTaskOutputItemInstance.ItemType*
   exceptions: []
   platform:
@@ -105,12 +105,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi az ItemType attribútumnak helyét."
+  summary: Gets the location of the ItemType attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ItemTypeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "ItemType attribútumnak helyét adja meg."
+      description: Returns the ItemType attribute location.
   overload: Microsoft.Build.Execution.ProjectTaskOutputItemInstance.ItemTypeLocation*
   exceptions: []
   platform:
@@ -127,12 +127,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a maga az elem helyét."
+  summary: Gets the location of the element itself.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Elem helyét adja meg."
+      description: Returns the element location.
   overload: Microsoft.Build.Execution.ProjectTaskOutputItemInstance.Location*
   exceptions: []
   platform:
@@ -149,12 +149,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Az osztály a kimeneteinek lekérdezni a tulajdonság beolvasása."
+  summary: Gets the property of this class to retrieve the outputs from.
   syntax:
     content: public string TaskParameter { get; }
     return:
       type: System.String
-      description: "Az osztály a kimeneteinek lekérdezni a tulajdonság adja vissza."
+      description: Returns the property of this class to retrieve the outputs from.
   overload: Microsoft.Build.Execution.ProjectTaskOutputItemInstance.TaskParameter*
   exceptions: []
   platform:
@@ -171,12 +171,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a TaskParameter attribútum helyét."
+  summary: Gets the location of the TaskParameter attribute.
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation TaskParameterLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "TaskParameter attribútum helyét adja meg."
+      description: Returns the TaskParameter attribute location.
   overload: Microsoft.Build.Execution.ProjectTaskOutputItemInstance.TaskParameterLocation*
   exceptions: []
   platform:

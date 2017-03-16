@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="hu-hu">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">074fe6025d003a976f4cd453ee872f061926d7ae</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ComponentModel.ICancelAddNew.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d6b0a60f78b9abcfe346fb2f4bbe3c92d7514ccd</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3bf1bab6d1305875ab9e3217a6e3662419a62861</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Adds transactional capability when adding a new item to a collection.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ICancelAddNew interface enables a collection to add a new item in an extensible way.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The new item subsequently can be committed or rolled back.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.ComponentModel.IBindingList.AddNew%2A&gt; method of the collection is used to tentatively add the item, which is subsequently transacted through the following operations:      -   The &lt;xref:System.ComponentModel.ICancelAddNew.EndNew%2A&gt; method will explicitly commit the pending addition.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Performing another collection operation, such as an insertion, removal, or move will implicitly commit the pending addition.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The &lt;xref:System.ComponentModel.ICancelAddNew.CancelNew%2A&gt; method will roll back the pending addition if it has not already been committed.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  In some scenarios, such as Windows Forms complex data binding, the collection may receive &lt;xref:System.ComponentModel.ICancelAddNew.CancelNew%2A&gt; or &lt;xref:System.ComponentModel.ICancelAddNew.EndNew%2A&gt; calls for items other than the newly added item.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>(Each item is typically a row in a data view.) Ignore these calls; cancel or commit the new item only when that item's index is specified.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are two models that allow transactional addition of an item to a data-bound collection:      -   The older model relies directly on a collection that implements the &lt;xref:System.ComponentModel.IBindingList&gt; interface and is data-bound directly using the &lt;xref:System.Windows.Forms.CurrencyManager?displayProperty=fullName&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Windows.Forms.CurrencyManager.AddNew%2A&gt;, &lt;xref:System.Windows.Forms.CurrencyManager.EndCurrentEdit%2A&gt;, and &lt;xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A&gt; methods of the &lt;xref:System.Windows.Forms.CurrencyManager?displayProperty=fullName&gt; class are responsible for transactional support for adding new items.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, this functionality depends upon the items supporting transactional behavior through the &lt;xref:System.ComponentModel.IEditableObject&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the items do not support this interface, the item will always be added to the list, regardless of subsequent calls to &lt;xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   The newer model supports a more robust data-binding scenario through the generic &lt;xref:System.ComponentModel.BindingList%601&gt; class, which implements the &lt;xref:System.ComponentModel.IBindingList&gt; and ICancelAddNew interfaces.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this case, the transactional support is managed by the &lt;xref:System.ComponentModel.BindingList%601&gt; collection directly.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Discards a pending new item from the collection.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The CancelNew method rolls back a pending addition (&lt;xref:System.ComponentModel.IBindingList.AddNew%2A&gt;) of an item previously added to the collection at position <ph id="ph1">`itemIndex`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The index parameter is necessary because several new items can be simultaneously pending.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The index of the item that was previously added to the collection.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Commits a pending new item to the collection.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The EndNew commits a pending addition (&lt;xref:System.ComponentModel.IBindingList.AddNew%2A&gt;) of an item previously added to the collection at position <ph id="ph1">`itemIndex`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The index parameter is necessary because several new items can be simultaneously pending.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The index of the item that was previously added to the collection.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

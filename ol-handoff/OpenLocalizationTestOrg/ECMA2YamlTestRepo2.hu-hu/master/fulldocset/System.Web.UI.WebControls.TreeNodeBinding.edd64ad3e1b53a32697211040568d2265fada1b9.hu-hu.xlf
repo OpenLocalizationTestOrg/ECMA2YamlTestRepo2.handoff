@@ -1,0 +1,948 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="hu-hu">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b1ae42817c7435f5251fbca5fdce3cb9cfcb16cf</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.UI.WebControls.TreeNodeBinding.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">077c58660d7cad738277c2f69c23520e3aad6278</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c3f435a400c247cd5814fb574e47dff94e65d6b7</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Defines the relationship between a data item and the node it is binding to in a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeView"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source where each data item contains multiple fields (such as an XML element with several attributes), a node displays the value that is returned by the <ph id="ph1">`ToString`</ph> method of the data item, by default.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the case of an XML element, the node displays the element name, which shows the underlying structure of the tree, but is not very useful otherwise.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can bind the properties of a node to a specific field by specifying tree node bindings.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A TreeNodeBinding object defines the relationship between each data item and the node that it is binding to.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeView&gt; control stores its TreeNodeBinding objects in the &lt;xref:System.Web.UI.WebControls.TreeView.DataBindings%2A&gt; property and applies the bindings to the data source to create a one-to-one relationship between the tree hierarchy and the data source hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For each data item in the data source, the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control attempts to match the data item to a TreeNodeBinding object in order to create the corresponding &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When creating a TreeNodeBinding object, you must specify the criteria for binding.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The criteria indicates when a data item should be bound to a node.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can specify the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There is a slight performance gain by specifying both.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A node depth specifies the node level that gets bound.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the following TreeNodeBinding declaration binds the <ph id="ph1">`Name`</ph> and <ph id="ph2">`ID`</ph> fields of the data source to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; and &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; properties, respectively, of all nodes with a depth of 0:      <ph id="ph3">```   &lt;asp:TreeNodeBinding Depth="0" TextField="Name" ValueField="ID"&gt;   ```</ph>       A data member specifies the type of the data item in the underlying data source, but can represent different information depending on the data source.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Each data item in a hierarchical data source (represented by a &lt;xref:System.Web.UI.IHierarchyData?displayProperty=fullName&gt; interface) exposes a &lt;xref:System.Web.UI.IHierarchyData.Type%2A?displayProperty=fullName&gt; property, which specifies the type of the data item.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the data member for an XML element specifies the name of the element.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a data source contains multiple data item types, the data member specifies which data item type to use.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following TreeNodeBinding declaration binds the <ph id="ph1">`&lt;Book&gt;`</ph> elements of an &lt;xref:System.Web.UI.WebControls.XmlDataSource&gt; control to all the nodes in the tree, regardless of the location in the hierarchy:      <ph id="ph2">```   &lt;asp:TreeNodeBinding DataMember="Book" TextField="Title" ValueField= "ISBN"&gt;   ```</ph>       Once the binding criteria is established, you can then bind a property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object that can be bound to a value.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can bind to a field of a data item or to a static value.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When bound to a static value, all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the TreeNodeBinding object is applied share the same value.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override a bound property in a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object by setting the corresponding property directly in the node.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following table lists the properties of the TreeNodeBinding class that allow you to bind a property of the &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field of a data item.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|Property|Description|   |--------------|-----------------|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A&gt;|The field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A&gt;|The field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A&gt;|The field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A&gt;|The field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A&gt;|The field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A&gt;|The field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|       The following table lists the properties of the TreeNodeBinding class that allow you to bind a property of the &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a static value.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|Property|Description|   |--------------|-----------------|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.PopulateOnDemand%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.PopulateOnDemand%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.SelectAction%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|   |&lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A&gt;|The static value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.|       If conflicting TreeNodeBinding objects are defined, the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control applies the tree node bindings in the following order of precedence:      1.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TreeNodeBinding object that defines and matches both a depth and a data member.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TreeNodeBinding object that defines and matches the data member only.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TreeNodeBinding object that defines and matches the depth only.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TreeNodeBinding object that defines neither the depth nor the data member.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>(This type of tree node binding is applied to all nodes in the tree.)      5.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TreeNodeBinding object that does not have a match in the data source.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this case, the value that is returned by the <ph id="ph1">`ToString`</ph> method of the data item is then bound to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; and &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; properties of the nodes to which the TreeNodeBinding object is applied.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TreeNodeBinding class also allows you to format the text that is displayed in a node by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.FormatString%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the TreeNodeBinding constructor to initialize a new instance of the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is often used when dynamically populating the &lt;xref:System.Web.UI.WebControls.TreeView.DataBindings%2A&gt; collection of a &lt;xref:System.Web.UI.WebControls.TreeView&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Gets or sets the value to match against a <ph id="ph1">&amp;lt;</ph>xref:System.Web.UI.IHierarchyData.Type%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> property for a data item to determine whether to apply the tree node binding.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A data member specifies the type of the data item in the underlying data source, but can represent different information depending on the data source.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Each data item in a hierarchical data source (represented by a &lt;xref:System.Web.UI.IHierarchyData?displayProperty=fullName&gt; object) exposes a &lt;xref:System.Web.UI.IHierarchyData.Type%2A?displayProperty=fullName&gt; property, which specifies the type of the data item.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the data member for an XML element specifies the name of the element.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a data source contains multiple data item types, the data member specifies which data item type to use.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; declaration binds the <ph id="ph1">`&lt;Book&gt;`</ph> elements of an &lt;xref:System.Web.UI.WebControls.XmlDataSource&gt; control to all the nodes in the tree, regardless of the location in the hierarchy:      <ph id="ph2">```   &lt;asp:TreeNodeBinding DataMember="Book" TextField="Title" ValueField= "ISBN"&gt;   ```</ph>       When creating a &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object, you must specify the criteria for binding.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The criteria indicates when a data item should be bound to a node.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can specify the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or DataMember property, or both properties.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There is a slight performance gain by specifying both.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Once the binding criteria is established, you can then bind a property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object that can be bound to a value.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can bind to a field of a data item or to a static value.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When bound to a static value, all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied share the same value.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The value to match against a data item's <ph id="ph1">&amp;lt;</ph>xref:System.Web.UI.IHierarchyData.Type%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> property to determine whether to apply the tree node binding.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the DataMember property is not set.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Gets or sets the node depth at which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A node depth specifies the node level that gets bound.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the following &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; declaration binds the <ph id="ph1">`Name`</ph> and <ph id="ph2">`ID`</ph> fields of the data source to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; and &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; properties, respectively, of all nodes with a depth of 0:      <ph id="ph3">```   &lt;asp:TreeNodeBinding Depth="0" TextField="Name" ValueField="ID"&gt;   ```</ph>       When creating a &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object, you must specify the criteria for binding.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The criteria indicates when a data item should be bound to a node.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can specify the Depth or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There is a slight performance gain by specifying both.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Once the binding criteria is established, you can then bind a property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object that can be bound to a value.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can bind to a field of a data item or to a static value.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When bound to a static value, all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied share the same value.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The node depth at which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The default is -1, indicating that the Depth property is not set.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Gets or sets the string that specifies the display format for the text of a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The FormatString property is used to provide a custom format for a node's text.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The data format string consists of two parts, separated by a colon, in the form { <ph id="ph1">`A`</ph> : <ph id="ph2">`Bxx`</ph> }.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, the formatting string <ph id="ph1">`{0:F2}`</ph> displays a fixed-point number with two decimal places.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  The entire string must be enclosed in braces to indicate that it is a format string and not a literal string.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Any text outside the braces is displayed as literal text.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value before the colon (<ph id="ph1">`A`</ph> in the general example) specifies the parameter index in a zero-based list of parameters.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  This value can be set only to 0 because there is only one value in each node.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The character after the colon (<ph id="ph1">`B`</ph> in the general example) specifies the display format for the value.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following table lists the common formats.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|Format character|Displays numeric values in|   |----------------------|--------------------------------|   |<ph id="ph1">`C`</ph>|Currency format.|   |<ph id="ph2">`D`</ph>|Decimal format.|   |<ph id="ph3">`E`</ph>|Scientific (exponential) format.|   |<ph id="ph4">`F`</ph>|Fixed format.|   |<ph id="ph5">`G`</ph>|General format.|   |<ph id="ph6">`N`</ph>|Number format.|   |<ph id="ph7">`X`</ph>|Hexadecimal format.|      &gt; <ph id="ph8">[!NOTE]</ph> &gt;  Except for <ph id="ph9">`X`</ph>, the format character is not case sensitive.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`X`</ph> format character displays the hexadecimal characters in the case that is specified.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value after the format character (<ph id="ph1">`xx`</ph> in the general example) specifies the number of significant digits or decimal places to display.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on formatting strings, see <bpt id="p1">[</bpt>Formatting Types<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of the FormatString property, when set, can be saved automatically to a resource file by using a designer tool.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.ComponentModel.LocalizableAttribute&gt; and <bpt id="p1">[</bpt>Globalization and Localization<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>A formatting string that specifies the display format for the text of a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the FormatString property is not set.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Gets or sets the ToolTip text for the image that is displayed next to a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ImageToolTip property to specify the value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The text that you specify provides Assistive Technology devices with a description of the image that can be used to make the control more accessible.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an image is displayed next to a node, the ToolTip text is displayed when the mouse pointer is positioned over the image.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the ImageToolTip property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the ImageToolTip property to bind the same ToolTip text to each node image, you can bind the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field of a data source by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property, when set, can be saved automatically to a resource file by using a designer tool.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.ComponentModel.LocalizableAttribute&gt; and <bpt id="p1">[</bpt>Globalization and Localization<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The ToolTip text for the image that is displayed next to a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the P:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip property is not set.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the field from the data source to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ImageToolTipField property to specify the field name to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The text that you specify provides Assistive Technology devices with a description of the image that can be used to make the control more accessible.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an image is displayed next to a node, the ToolTip text is displayed when the mouse pointer is positioned over the image.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the ImageToolTipField property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the ImageToolTipField property to bind the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field, you can set the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A&gt; property to a fixed value by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If the data source contains multiple fields, you must first set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties in order to bind to the appropriate field.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageToolTip*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the ImageToolTipField property is not set.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Gets or sets the URL to an image that is displayed next to a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ImageUrl property to specify a custom image to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The image is displayed next to a node and can be in any file format (.jpg, .gif, .bmp, and so on), as long as the client browser supports that format.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can override the image for an individual node by setting its &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property directly.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using this property to bind the same image to each node, you can bind the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field of a data source by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When displaying an image next to a node with the ImageUrl property, you should also consider setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ToolTip text that you specify provides Assistive Technology devices with a description of the image that can be used to make the control more accessible.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The URL to an image that is displayed next to a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>The       ImageUrl property is not set.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the field from the data source to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ImageUrlField property to specify the name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The image is displayed next to a node and can be in any file format (.jpg, .gif, .bmp, and so on), as long as the client browser supports the format.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can override the image for an individual node by setting its &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property directly.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using this property to bind the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field, you can set the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A&gt; property to a fixed value by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If the data source contains multiple fields, you must first set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties in order to bind to the appropriate field.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When displaying an image next to a node with the ImageUrlField property, you should also consider setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ToolTip text that you specify provides Assistive Technology devices with a description of the image that can be used to make the control more accessible.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>The name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ImageUrl*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the ImageUrlField property is not set.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Gets or sets the URL to link to when a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied is clicked.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the NavigateUrl property to specify the URL to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When this property is set, the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control displays a hyperlink for the text of the node, instead of plain text.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can also optionally set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A&gt; property to specify the window or frame in which to display the linked content.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the NavigateUrl property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the NavigateUrl property to bind the same URL to each node, you can bind the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field of a data source by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>The URL to link to when a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied is clicked.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the NavigateUrl property is not set.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the field from the data source to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the NavigateUrlField property to specify the field name to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the NavigateUrlField property is set, the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control displays a hyperlink for the text of the node, instead of plain text.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can also optionally set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A&gt; property to specify the window or frame in which to display the linked content.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the NavigateUrlField property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the NavigateUrlField property to bind the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field, you can set the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A&gt; property to a fixed value by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If the data source contains multiple fields, you must first set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties in order to bind to the appropriate field.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>The name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.NavigateUrl*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the NavigateUrlField property is not set.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether the node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied is populated dynamically.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Sometimes, it is not practical to statically predefine the tree structure due to data size or custom content that depends on user input.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because of this, the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control supports dynamic node population.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the PopulateOnDemand property is set to <ph id="ph1">`true`</ph>, the child nodes of the node that the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied to gets populated at run time when the node is expanded.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When data bindings are created by setting the &lt;xref:System.Web.UI.WebControls.TreeView.AutoGenerateDataBindings%2A&gt; of the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control to <ph id="ph1">`true`</ph>, the bindings that are created have the PopulateOnDemand property set to <ph id="ph2">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Data bindings that are created declaratively have the PopulateOnDemand property set to <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the declarative syntax allows you to control the behavior of individual data bindings.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Unlike the &lt;xref:System.Web.UI.WebControls.TreeNode.PopulateOnDemand%2A&gt; property of the &lt;xref:System.Web.UI.WebControls.TreeNode&gt; class, the PopulateOnDemand property does not require an event-handling method to be defined for the &lt;xref:System.Web.UI.WebControls.TreeView.TreeNodePopulate&gt; event, if you are using a data source control, such as &lt;xref:System.Web.UI.WebControls.XmlDataSource&gt;.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control dynamically generates an event-handling method using the properties of the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; objects in the &lt;xref:System.Web.UI.WebControls.TreeView.DataBindings%2A&gt; collection.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can still define an event-handling method for the &lt;xref:System.Web.UI.WebControls.TreeView.TreeNodePopulate&gt; event; however, it will be called after the event-handling method for the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Supported browsers can also take advantage of client-side node population.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When enabled, this allows the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control to populate a node dynamically on the client when that node is expanded, preventing the need to post back to the server.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information on client-side node population, see &lt;xref:System.Web.UI.WebControls.TreeView.PopulateNodesFromClient%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to populate the node to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied dynamically; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Gets or sets the event or events to raise when a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied is selected.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the SelectAction property to specify the value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A&gt; property is used to specify which event or events are raised when a node is selected.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the SelectAction property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following table lists the available options.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|<ph id="ph1">`SelectAction`</ph> value|Description|   |--------------------------|-----------------|   |<ph id="ph2">`TreeNodeSelectAction.Expand`</ph>|Toggles the node between expanded and collapsed.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Raises the &lt;xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded&gt; event or the &lt;xref:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed&gt; event, as appropriate.|   |<ph id="ph1">`TreeNodeSelectAction.None`</ph>|Raises no events when a node is selected.|   |<ph id="ph2">`TreeNodeSelectAction.Select`</ph>|Raises the &lt;xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged&gt; event when a node is selected.|   |<ph id="ph3">`TreeNodeSelectAction.SelectExpand`</ph>|Raises both the &lt;xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged&gt; and &lt;xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded&gt; events when a node is selected.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Nodes are only expanded, never collapsed.|      &gt; <ph id="ph1">[!NOTE]</ph> &gt;  The &lt;xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A&gt; is not rendered for a node with its &lt;xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A&gt; property set to <ph id="ph2">`TreeNodeSelectAction.None`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeSelectAction"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_TreeNodeSelectAction.Select" name="TreeNodeSelectAction.Select" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether a check box is displayed next to a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To provide multinode selection support in the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control, you can display check boxes next to an image in the node.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ShowCheckBox property to specify the value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A&gt; property is used to show or hide the check box for a node.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Although the ShowCheckBox property can be used to display check boxes, it is more common to use the &lt;xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A&gt; property of the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, the &lt;xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A&gt; property affects every node type that is specified by the property; therefore, the ShowCheckBox property is often used to override that setting for a node to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can selectively override the ShowCheckBox property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to display a check box next to a node to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Creates a copy of the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ICloneable.Clone method is a helper function that creates a copy of the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object from which the ICloneable.Clone method is called.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  The ICloneable.Clone method is used primarily by control developers.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>An object that represents a copy of the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see <bpt id="p1">&lt;xref href="System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; instance is cast to the &lt;xref:System.Web.UI.IDataSourceViewSchemaAccessor&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>An object that represents the schema that is associated with the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see <bpt id="p1">&lt;xref href="System.Web.UI.IStateManager.IsTrackingViewState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; instance is cast to the &lt;xref:System.Web.UI.IStateManager&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, if the control is marked to save its state; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>Loads the previously saved view state for the node.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Object?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> that contains the saved view state values.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>Saves the view state changes to an object.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>The object that contains the view state changes.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>Instructs the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to track changes to its view state.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After the IStateManager.TrackViewState method has been called on a server control, the &lt;xref:System.Web.UI.Control.IsTrackingViewState%2A&gt; property returns <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Gets or sets the target window or frame in which to display the Web page content that is associated with a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the Target property to specify the value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property is used to specify the window or frame in which to display the Web content that is linked to a node when that node is clicked.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Setting the Target property overrides the &lt;xref:System.Web.UI.WebControls.TreeView.Target%2A&gt; property of the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control for the nodes to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can selectively override the Target property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  The Target property renders as a <ph id="ph2">`target`</ph> attribute.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`target`</ph> attribute on <ph id="ph2">`anchor`</ph> elements is not allowed in the XHTML 1.1 document type definition.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Do not set the Target property, if the rendered output for the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; control must be XHTML 1.1 compliant.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>XHTML Standards in Visual Studio and ASP.NET<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt;    &gt;  When creating accessible Web pages, you should avoid using the Target property to target another window.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>NIB: ASP.NET Accessibility<ept id="p1">](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>The target window or frame in which to display the linked Web page content.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>Values must begin with a letter in the range of A through Z (case insensitive), except for certain special values that begin with an underscore, as shown in the following table.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>Target value</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>Renders the content in a new window without frames.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>Renders the content in the immediate frameset parent.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>Renders the content in the search pane.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>Renders the content in the frame with focus.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>Renders the content in the full window without frames.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>Check your browser documentation to determine if the <bpt id="p1">&lt;xref uid="langword_csharp__search" name="_search" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value is supported.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>For example, Microsoft Internet Explorer version 5.0 and later supports the <bpt id="p1">&lt;xref uid="langword_csharp__search" name="_search" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> target value.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which refreshes the window or frame with focus.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the field from the data source to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Target*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the TargetField property to specify the field name to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property is used to specify the window or frame in which to display the Web content that is linked to a node when that node is clicked.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the TargetField property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the TargetField property to bind the &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field, you can set &lt;xref:System.Web.UI.WebControls.TreeNode.Target%2A&gt; property to a fixed value by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If the data source contains multiple fields, you must first set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties in order to bind to the appropriate field.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>The name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Target*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the TargetField property is not set.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>Gets or sets the text that is displayed for the node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the Text property to specify the value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property is used to specify the text displayed in a node.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the Text property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the Text property to bind the same text to each node, you can bind the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field of a data source by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property, when set, can be saved automatically to a resource file by using a designer tool.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.ComponentModel.LocalizableAttribute&gt; and <bpt id="p1">[</bpt>Globalization and Localization<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>The text displayed for the node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>The default is an empty string ("").</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the field from the data source to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the TextField property to specify the field name to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property is used to specify the text displayed in a node.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the TextField property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the TextField property to bind the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field, you can set the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property to a fixed value by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If the data source contains multiple fields, you must first set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties in order to bind to the appropriate field.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>The name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Text*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the TextField property is not set.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>Gets or sets the ToolTip text for a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ToolTip property to specify the value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ToolTip text is displayed when the mouse pointer is positioned over the node.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the ToolTip property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the ToolTip property to bind the same ToolTip text to each node, you can bind the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field of a data source by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property, when set, can be saved automatically to a resource file by using a designer tool.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.ComponentModel.LocalizableAttribute&gt; and <bpt id="p1">[</bpt>Globalization and Localization<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>The ToolTip text for a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the ToolTip property is not set.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the field from the data source to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ToolTipField property to specify the field name to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ToolTip text is displayed when the mouse pointer is positioned over the node.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the ToolTipField property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the ToolTipField property to bind the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field, you can set the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A&gt; property to a fixed value by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If the data source contains multiple fields, you must first set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties in order to bind to the appropriate field.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>The name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.ToolTip*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the ToolTipField property is not set.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>Returns the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember*&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source>Returns the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember<bpt id="p1">*</bpt>&gt; property. If the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember<ept id="p1">*</ept>&gt; property is <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> or an empty string (""), <bpt id="p3">**</bpt>(Empty)<ept id="p3">**</ept> is returned.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>Gets or sets a displayed value that is not displayed but is used to store any additional data about a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied, such as data used for handling postback events.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the Value property to specify the value to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property is used to supplement the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property by storing any additional data associated with the node to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This value is not displayed in the control and is commonly used to store data for handling postback events.</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the Value property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the Value property to bind the same value to each node, you can bind the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to a field of a data source by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property, when set, can be saved automatically to a resource file by using a designer tool.</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.ComponentModel.LocalizableAttribute&gt; and <bpt id="p1">[</bpt>Globalization and Localization<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve">
+          <source>Supplemental data about a node to which the <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is applied; this data is not displayed.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve">
+          <source>The default is an empty string ("").</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the field from the data source to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Value*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.UI.WebControls.TreeView&gt; control is bound to a data source, use the ValueField property to specify the field name to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This binding relationship affects all &lt;xref:System.Web.UI.WebControls.TreeNode&gt; objects to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property is used to supplement the &lt;xref:System.Web.UI.WebControls.TreeNode.Text%2A&gt; property by storing any additional data associated with the node to which the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding&gt; object is applied.</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This value is not displayed in the control and is commonly used to store data for handling postback events.</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can selectively override the ValueField property by setting the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of each node directly.</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead of using the ValueField property to bind the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property of a &lt;xref:System.Web.UI.WebControls.TreeNode&gt; object to an field, you can set the &lt;xref:System.Web.UI.WebControls.TreeNode.Value%2A&gt; property to a fixed value by setting the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If the data source contains multiple fields, you must first set the &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A&gt; or &lt;xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A&gt; property, or both properties in order to bind to the appropriate field.</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value of this property is stored in view state.</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve">
+          <source>The name of the field to bind to the &lt;xref:System.Web.UI.WebControls.TreeNode.Value*&gt; property of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.TreeNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to which the <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.TreeNodeBinding"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object is applied.</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve">
+          <source>The default is an empty string (""), which indicates that the ValueField property is not set.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

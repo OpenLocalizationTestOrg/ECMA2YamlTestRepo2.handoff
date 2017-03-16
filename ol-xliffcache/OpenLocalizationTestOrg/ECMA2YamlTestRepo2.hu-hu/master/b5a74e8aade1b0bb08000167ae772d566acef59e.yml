@@ -17,7 +17,7 @@ items:
   nameWithType: ProjectOutputElement
   fullName: Microsoft.Build.Construction.ProjectOutputElement
   type: Class
-  summary: "Jelöli egy [Output elem (MSBuild)](~/add/includes/ajax-current-ext-md.md) MSBuild projektben."
+  summary: Represents an [Output Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("Name={Name} TaskParameter={TaskParameter} ItemName={ItemName} PropertyName={PropertyName} Condition={Condition}")]
@@ -52,12 +52,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Meghatározza, hogy az output elem jelöl egy kimeneti elemet egy kimeneti tulajdonsággal szemben."
+  summary: Determines whether this output element represents an output item, as opposed to an output property.
   syntax:
     content: public bool IsOutputItem { get; }
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha az output elem kimeneti elem; hamis más módon."
+      description: Returns true if this output element represents an output item; false otherwise.
   overload: Microsoft.Build.Construction.ProjectOutputElement.IsOutputItem*
   exceptions: []
   platform:
@@ -74,12 +74,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Meghatározza, hogy az output elem jelöl egy kimeneti tulajdonság egy kimeneti elem szemben."
+  summary: Determines whether this output element represents an output property, as opposed to an output item.
   syntax:
     content: public bool IsOutputProperty { get; }
     return:
       type: System.Boolean
-      description: "Igaz értéket ad eredményül, ha az output elem jelöli egy kimeneti tulajdonság; hamis más módon."
+      description: Returns true if this output element represents an output property; false otherwise.
   overload: Microsoft.Build.Construction.ProjectOutputElement.IsOutputProperty*
   exceptions: []
   platform:
@@ -96,13 +96,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Lekérdezi vagy beállítja az ItemType attribútum értéke."
-  remarks: "Eltávolítja az ItemType attribútumnak, beállítása értéke null vagy üres karakterlánc."
+  summary: Gets or sets the ItemType attribute value.
+  remarks: Removes the ItemType attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: "Lekérdezi vagy beállítja az ItemType attribútum értékét adja vissza egy üres karakterlánc, ha az attribútum nem található."
+      description: Gets or sets the ItemType attribute value  Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectOutputElement.ItemType*
   exceptions: []
   platform:
@@ -119,12 +119,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "A cikk típusattribútum, ha bármely helye"
+  summary: Location of the item type attribute, if any
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ItemTypeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectOutputElement.ItemTypeLocation*
   exceptions: []
   platform:
@@ -141,13 +141,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Lekérdezi vagy beállítja a PropertyName attribútum értéke."
-  remarks: "Eltávolítja a PropertyName attribútum beállítása értéke null vagy üres karakterlánc."
+  summary: Gets or sets the PropertyName attribute value.
+  remarks: Removes the PropertyName attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string PropertyName { get; set; }
     return:
       type: System.String
-      description: "Lekérdezi vagy beállítja a PropertyName attribútum értéke. Üres karakterláncot ad vissza, ha az attribútum nem található."
+      description: Gets or sets the PropertyName attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectOutputElement.PropertyName*
   exceptions: []
   platform:
@@ -164,12 +164,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Tulajdonság neve attribútum, ha bármely helye"
+  summary: Location of the property name attribute, if any
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation PropertyNameLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectOutputElement.PropertyNameLocation*
   exceptions: []
   platform:
@@ -186,13 +186,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Lekérdezi vagy beállítja a TaskParameter attribútum attributevalue értékének."
-  remarks: "Eltávolítja a TaskParameter attribútum beállítása értéke null vagy üres karakterlánc."
+  summary: Gets or sets the TaskParameter attributevalue.
+  remarks: Removes the TaskParameter attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string TaskParameter { get; set; }
     return:
       type: System.String
-      description: "Lekérdezi vagy beállítja a TaskParameter attribútum értéke. Üres karakterláncot ad vissza, ha az attribútum nem található."
+      description: Gets or sets the TaskParameter attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectOutputElement.TaskParameter*
   exceptions: []
   platform:
@@ -209,12 +209,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "A feladat paraméter-attribútumhoz helye"
+  summary: Location of the task parameter attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation TaskParameterLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectOutputElement.TaskParameterLocation*
   exceptions: []
   platform:

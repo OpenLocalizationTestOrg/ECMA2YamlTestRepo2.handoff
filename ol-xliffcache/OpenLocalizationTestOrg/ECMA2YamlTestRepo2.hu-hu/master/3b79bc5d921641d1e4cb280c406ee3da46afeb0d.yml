@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectPropertyInstance
   fullName: Microsoft.Build.Execution.ProjectPropertyInstance
   type: Class
-  summary: "Az értékelés tulajdonság build célokra burkolja. Ezek a Tulajdonságok példányai felvétele, illetve eltávolítása módszereket a ProjectInstance objektumon keresztül."
+  summary: Wraps an evaluated property for build purposes. Instances of these properties are added and removed via methods on the ProjectInstance object.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{name}={escapedValue}")]
@@ -39,12 +39,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi vagy beállítja a kiértékelt ennek a tulajdonságnak."
+  summary: Gets or sets the evaluated value of this property.
   syntax:
     content: public string EvaluatedValue { get; set; }
     return:
       type: System.String
-      description: "Ez a tulajdonság kiértékelt értékét adja vissza."
+      description: Returns the evaluated value of this property.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.EvaluatedValue*
   exceptions: []
   platform:
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Igaz értéket ad eredményül, ha ez az objektum nem módosítható; hamis más módon.       Nem módosítható objektum nem változtatható végezhető el."
+  summary: "Returns true if this object is immutable; false otherwise.  \n  \n An immutable object cannot be made mutable."
   syntax:
     content: public virtual bool IsImmutable { get; }
     return:
       type: System.Boolean
-      description: "<xref:System.Boolean>.</xref:System.Boolean> Beolvasása"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.IsImmutable*
   exceptions: []
   platform:
@@ -83,13 +83,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi a tulajdonság nevét."
-  remarks: "Nem állíthatók be, a kulcs a projekt Tulajdonságok táblába használt."
+  summary: Gets the name of this property.
+  remarks: This cannot be set, as it is used as the key into the project's properties table.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "Ez a tulajdonság nevét adja vissza."
+      description: Returns the name of this property.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.Name*
   exceptions: []
   platform:
@@ -112,10 +112,10 @@ items:
     parameters:
     - id: other
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Fel kell venni a párbeszédpanelre."
+      description: To be added.
     return:
       type: System.Boolean
-      description: "Fel kell venni a párbeszédpanelre."
+      description: To be added.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.System#IEquatable<Microsoft#Build#Execution#ProjectPropertyInstance>#Equals*
   exceptions: []
   platform:
@@ -132,13 +132,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lekérdezi egy karakterlánc-ábrázolása, ehhez a tulajdonsághoz."
+  summary: Gets a string representation for this property.
   syntax:
     content: public override string ToString ();
     parameters: []
     return:
       type: System.String
-      description: "Ehhez a tulajdonsághoz karakterlánc alakot adja vissza."
+      description: Returns a string representation for this property.
   overload: Microsoft.Build.Execution.ProjectPropertyInstance.ToString*
   exceptions: []
   platform:

@@ -15,8 +15,8 @@ items:
   nameWithType: RuleBag
   fullName: Microsoft.Build.Framework.XamlTypes.RuleBag
   type: Class
-  summary: "A tárolók <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> példányok."
-  remarks: "Csak vonatkozik <xref:Microsoft.Build.Framework.XamlTypes.Rule>szabályok tulajdonságlapjain viszonyított.</xref:Microsoft.Build.Framework.XamlTypes.Rule> A RuleBag csak használatos tárolóként egynél több <xref:Microsoft.Build.Framework.XamlTypes.Rule>.</xref:Microsoft.Build.Framework.XamlTypes.Rule> A tartalmazó <xref:Microsoft.Build.Framework.XamlTypes.Rule>szabályok vannak azonnal levágja, miután az XAML-fájl be van töltve.</xref:Microsoft.Build.Framework.XamlTypes.Rule>"
+  summary: A container for <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> instances.
+  remarks: Concerns only <xref:Microsoft.Build.Framework.XamlTypes.Rule> rules, relative to property pages. The RuleBag is only used as a container for more than one <xref:Microsoft.Build.Framework.XamlTypes.Rule>. The containing <xref:Microsoft.Build.Framework.XamlTypes.Rule> rules are immediately stripped off after the XAML file is loaded.
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Rules")]
@@ -42,7 +42,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Alapértelmezett konstruktort. Az XAML-KÓDBAN a deszerializálás szükséges."
+  summary: Default constructor. Required for XAML deserialization.
   syntax:
     content: public RuleBag ();
     parameters: []
@@ -62,7 +62,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Lásd: <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.</xref:System.ComponentModel.ISupportInitialize.BeginInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.
   syntax:
     content: public void BeginInit ();
     parameters: []
@@ -82,7 +82,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Lásd: <xref:System.ComponentModel.ISupportInitialize.EndInit*>.</xref:System.ComponentModel.ISupportInitialize.EndInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.EndInit*>.
   syntax:
     content: public void EndInit ();
     parameters: []
@@ -102,16 +102,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Adja vissza a számbavevő keresztül, amely az adott típus rendelkezik statikus adatok összes példányát."
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "A típusú statikus adatok beolvasása."
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "Adja vissza a számbavevő keresztül, amely az adott típus rendelkezik statikus adatok összes példányát. Beolvasása <xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;> </xref> vagy listája üres, ha a megadott típusú objektumok Ez a csomópont által biztosított."
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if no objects of the given type are provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjects*
   exceptions: []
   platform:
@@ -128,13 +128,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Ez a csomópont tartalmazza az adatvezérelt szolgáltatások statikus adatok minden típusú adja vissza számbevevőre."
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "Ez a csomópont tartalmazza az adatvezérelt szolgáltatások statikus adatok minden típusú adja vissza számbevevőre."
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.RuleBag.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -151,12 +151,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "A listája <xref href=&quot;Microsoft.Build.Framework.XamlTypes.Rule&quot;> </xref> példánya, amelyhez a <xref href=&quot;Microsoft.Build.Framework.XamlTypes.RuleBag&quot;> </xref> példányt tartalmaz."
+  summary: The list of <xref href="Microsoft.Build.Framework.XamlTypes.Rule"></xref> instances that this <xref href="Microsoft.Build.Framework.XamlTypes.RuleBag"></xref> instance contains.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.Rule> Rules { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.Rule}
-      description: "A szabályok listáját adja vissza. Mindig adja meg legalább egy szabályt."
+      description: Returns the list of rules. Always returns at least one rule.
   overload: Microsoft.Build.Framework.XamlTypes.RuleBag.Rules*
   exceptions: []
   platform:

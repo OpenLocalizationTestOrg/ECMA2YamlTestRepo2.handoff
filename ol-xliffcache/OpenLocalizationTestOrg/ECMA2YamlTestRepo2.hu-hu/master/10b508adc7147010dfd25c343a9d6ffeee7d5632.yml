@@ -30,8 +30,8 @@ items:
   nameWithType: BuildEventContext
   fullName: Microsoft.Build.Framework.BuildEventContext
   type: Class
-  summary: "Build események környezetfüggő helyére vonatkozó információkat biztosít."
-  remarks: "BuildEventContext különösen fontos olyan többprocesszoros környezetekben."
+  summary: Provides contextual location information for build events.
+  remarks: BuildEventContext is especially useful in multiprocessor environments.
   syntax:
     content: public class BuildEventContext
   inheritance:
@@ -52,22 +52,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Egy új példányát inicializálja a <xref href=&quot;Microsoft.Build.Framework.BuildEventContext&quot;> </xref> osztály."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildEventContext"></xref> class.
   syntax:
     content: public BuildEventContext (int nodeId, int targetId, int projectContextId, int taskId);
     parameters:
     - id: nodeId
       type: System.Int32
-      description: "A build esemény csomópont-azonosító."
+      description: The node ID of the build event.
     - id: targetId
       type: System.Int32
-      description: "A build esemény cél azonosítója."
+      description: The target ID of the build event.
     - id: projectContextId
       type: System.Int32
-      description: "A build esemény projekt azonosítója."
+      description: The project ID of the build event.
     - id: taskId
       type: System.Int32
-      description: "A build esemény Feladatazonosítót."
+      description: The task ID of the build event.
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -84,25 +84,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "A megadott projekt példány azonosítója BuildEventContext hoz létre."
+  summary: Constructs a BuildEventContext with a specified project instance id.
   syntax:
     content: public BuildEventContext (int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);
     parameters:
     - id: nodeId
       type: System.Int32
-      description: "A build esemény csomópont-azonosító."
+      description: The node ID of the build event.
     - id: projectInstanceId
       type: System.Int32
-      description: "A build esemény projekt Példányazonosítója."
+      description: The project instance ID of the build event.
     - id: projectContextId
       type: System.Int32
-      description: "A build esemény projekt azonosítója."
+      description: The project ID of the build event.
     - id: targetId
       type: System.Int32
-      description: "A build esemény cél azonosítója."
+      description: The target ID of the build event.
     - id: taskId
       type: System.Int32
-      description: "A build esemény Feladatazonosítót."
+      description: The task ID of the build event.
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -119,28 +119,28 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Egy adott küldésének azonosítóval BuildEventContext utasításaival"
+  summary: Constructs a BuildEventContext with a specific submission id
   syntax:
     content: public BuildEventContext (int submissionId, int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId);
     parameters:
     - id: submissionId
       type: System.Int32
-      description: "A build esemény küldésének azonosítója."
+      description: The submission ID of the build event.
     - id: nodeId
       type: System.Int32
-      description: "A build esemény csomópont-azonosító."
+      description: The node ID of the build event.
     - id: projectInstanceId
       type: System.Int32
-      description: "A build esemény projekt Példányazonosítója."
+      description: The project instance ID of the build event.
     - id: projectContextId
       type: System.Int32
-      description: "A build esemény projekt azonosítója."
+      description: The project ID of the build event.
     - id: targetId
       type: System.Int32
-      description: "A build esemény cél azonosítója."
+      description: The target ID of the build event.
     - id: taskId
       type: System.Int32
-      description: "A build esemény Feladatazonosítót."
+      description: The task ID of the build event.
   overload: Microsoft.Build.Framework.BuildEventContext.#ctor*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekéri a BuildRequest azonosítója. Vegye figyelembe, hogy ez nem ugyanaz, mint a globális kérelemazonosító BuildRequest vagy BuildResult."
+  summary: Retrieves the BuildRequest id. Note that this is not the same as the global request id on a BuildRequest or BuildResult.
   syntax:
     content: public long BuildRequestId { get; }
     return:
       type: System.Int64
-      description: "Adhatók hozzá."
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEventContext.BuildRequestId*
   exceptions: []
   platform:
@@ -179,16 +179,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi, hogy a hivatkozások azonosak."
+  summary: Gets whether the references are the same.
   syntax:
     content: public override bool Equals (object obj);
     parameters:
     - id: obj
       type: System.Object
-      description: "Hasonlítsa össze a hivatkozás."
+      description: The reference to compare.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha azonos, a hivatkozások <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> más módon."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the references are equal, <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
   overload: Microsoft.Build.Framework.BuildEventContext.Equals*
   exceptions: []
   platform:
@@ -205,13 +205,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi a kód magában foglalja a <> </> *> és a <> </> *>."
+  summary: Gets a code comprised of the <xref:Microsoft.Build.Framework.BuildEventContext.ProjectContextId*> and the <xref:Microsoft.Build.Framework.BuildEventContext.NodeId*>.
   syntax:
     content: public override int GetHashCode ();
     parameters: []
     return:
       type: System.Int32
-      description: "A kivonatoló kódot jelző egész értéket."
+      description: An integer value representing the hash code.
   overload: Microsoft.Build.Framework.BuildEventContext.GetHashCode*
   exceptions: []
   platform:
@@ -228,12 +228,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi, hogy érvényes-e a környezetben, ahol az esemény történt."
+  summary: Gets whether the context where the event occurred is valid.
   syntax:
     content: public static Microsoft.Build.Framework.BuildEventContext Invalid { get; }
     return:
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Ha a környezet érvényes; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> más módon."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the context is valid; <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
   overload: Microsoft.Build.Framework.BuildEventContext.Invalid*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Az esemény kiváltásakor volt a cél az esemény a csomópont-azonosító."
-  remarks: "Egy egész számot jelölő a csomópont-azonosítót."
+  summary: The node ID of the target the event was in when the event was triggered.
+  remarks: An integer value representing the node ID.
   syntax:
     content: public const int InvalidNodeId = -2;
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -272,12 +272,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Az esemény kiváltásakor volt a cél az esemény a projekt azonosítója."
+  summary: The project ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidProjectContextId = -2;
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -293,12 +293,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Az esemény kiváltásakor volt a cél az esemény a projekt Példányazonosítója."
+  summary: The project instance ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidProjectInstanceId = -1;
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -314,12 +314,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Az esemény kiváltásakor volt a cél az esemény küldésének Azonosítóját."
+  summary: The submission ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidSubmissionId = -1;
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -335,12 +335,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "A célként megadott nevét az esemény történt az esemény kiváltásakor."
+  summary: The name of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidTargetId = -1;
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -356,12 +356,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Az esemény kiváltásakor volt a cél az esemény a Feladatazonosítót."
+  summary: The task ID of the target the event was in when the event was triggered.
   syntax:
     content: public const int InvalidTaskId = -1;
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -377,12 +377,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi a csomópont-azonosító, ahol az esemény történt."
+  summary: Gets the node ID where the event occurred.
   syntax:
     content: public int NodeId { get; }
     return:
       type: System.Int32
-      description: "Egy egész számot jelölő a csomópont-azonosítót."
+      description: An integer value representing the node ID.
   overload: Microsoft.Build.Framework.BuildEventContext.NodeId*
   exceptions: []
   platform:
@@ -399,19 +399,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Bírálja felül == így a egyenlőségi összehasonlítás Ez az operátor azonos lesz. Egyenlő"
+  summary: Override == so the equals comparison using this operator will be the same as .Equals
   syntax:
     content: public static bool op_Equality (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);
     parameters:
     - id: left
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "Bal oldali operandusa"
+      description: Left hand side operand
     - id: right
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "Jobb oldali operandusa"
+      description: Right hand side operand
     return:
       type: System.Boolean
-      description: "Értéke TRUE, ha az objektum az értékek megegyeznek, hamis, ha nincs azonos"
+      description: True if the object values are identical, false if they are not identical
   overload: Microsoft.Build.Framework.BuildEventContext.op_Equality*
   exceptions: []
   platform:
@@ -428,19 +428,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Bírálja felül! =, így a egyenlőségi összehasonlítás Ez az operátor azonos! Egyenlő"
+  summary: Override != so the equals comparison using this operator will be the same as ! Equals
   syntax:
     content: public static bool op_Inequality (Microsoft.Build.Framework.BuildEventContext left, Microsoft.Build.Framework.BuildEventContext right);
     parameters:
     - id: left
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "Bal oldali operandusa"
+      description: Left hand side operand
     - id: right
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "Jobb oldali operandusa"
+      description: Right hand side operand
     return:
       type: System.Boolean
-      description: "IGAZ, ha az objektum értékek nem azonos, hamis, ha azok egyezését"
+      description: True if the object values are not identical, false if they are identical
   overload: Microsoft.Build.Framework.BuildEventContext.op_Inequality*
   exceptions: []
   platform:
@@ -457,12 +457,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi a projekt Azonosítóját, ahol az esemény történt."
+  summary: Gets the ID of the project where the event occurred.
   syntax:
     content: public int ProjectContextId { get; }
     return:
       type: System.Int32
-      description: "A projekt azonosítója jelző egész értéket"
+      description: An integer value representing the project ID.
   overload: Microsoft.Build.Framework.BuildEventContext.ProjectContextId*
   exceptions: []
   platform:
@@ -479,12 +479,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekéri a projekt azonosítója."
+  summary: Retrieves the project instance id.
   syntax:
     content: public int ProjectInstanceId { get; }
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEventContext.ProjectInstanceId*
   exceptions: []
   platform:
@@ -501,12 +501,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekéri a küldésének azonosítója."
+  summary: Retrieves the Submission id.
   syntax:
     content: public int SubmissionId { get; }
     return:
       type: System.Int32
-      description: "Adhatók hozzá."
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEventContext.SubmissionId*
   exceptions: []
   platform:
@@ -523,12 +523,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi a Azonosítóját a cél, ahol az esemény történt."
+  summary: Gets the ID of the target where the event occurred.
   syntax:
     content: public int TargetId { get; }
     return:
       type: System.Int32
-      description: "Egy egész számot jelölő azonosítóját a cél."
+      description: An integer value representing the target ID.
   overload: Microsoft.Build.Framework.BuildEventContext.TargetId*
   exceptions: []
   platform:
@@ -545,12 +545,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Lekérdezi a feladat Azonosítóját, ahol az esemény történt."
+  summary: Gets the ID of the task where the event occurred.
   syntax:
     content: public int TaskId { get; }
     return:
       type: System.Int32
-      description: "Egy egész számot jelölő a feladat azonosítóját."
+      description: An integer value representing the task ID.
   overload: Microsoft.Build.Framework.BuildEventContext.TaskId*
   exceptions: []
   platform:
