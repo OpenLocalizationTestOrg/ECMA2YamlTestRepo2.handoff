@@ -18,7 +18,7 @@ items:
   nameWithType: ConfigurableForwardingLogger
   fullName: Microsoft.Build.Logging.ConfigurableForwardingLogger
   type: Class
-  summary: "이벤트 (예: ConsoleLogger) 중앙로 거에 전달 하는 거를 나타내는 부모 노드에 있는 합니다."
+  summary: Represents a logger that forwards events to a central logger (e.g ConsoleLogger) residing on the parent node.
   syntax:
     content: 'public class ConfigurableForwardingLogger : Microsoft.Build.Framework.IForwardingLogger'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "로 거를 생성 합니다."
+  summary: Constructs a logger.
   syntax:
     content: public ConfigurableForwardingLogger ();
     parameters: []
@@ -60,12 +60,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "중앙로 거에 전달 하는 노드 로거에서 메시지 하는 방법을 결정 하는 속성을 가져오거나 설정 합니다."
+  summary: Gets or sets a property that determines how a node logger to forwards messages to the central logger.
   syntax:
     content: public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }
     return:
       type: Microsoft.Build.Framework.IEventRedirector
-      description: "중앙로 거에 전달 하는 노드 로거에서 메시지 하는 방법을 결정 하는 속성을 반환 합니다."
+      description: Returns a property that determines how a node logger to forwards messages to the central logger.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.BuildEventRedirector*
   exceptions: []
   platform:
@@ -82,13 +82,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "이 이벤트를 중앙로 거에 전달 합니다."
+  summary: Forward this event to the central logger.
   syntax:
     content: protected virtual void ForwardToCentralLogger (Microsoft.Build.Framework.BuildEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "전달 된 것으로 이벤트입니다."
+      description: The event to be forwarded.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.ForwardToCentralLogger*
   exceptions: []
   platform:
@@ -105,13 +105,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "지정된 된 빌드 이벤트를 기록 하는 콘솔으로 거를 등록 합니다."
+  summary: Signs up the console logger to log the given build events.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "빌드 이벤트에 대 한 이벤트 소스입니다."
+      description: The event source for build events.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -128,16 +128,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "빌드 이벤트를 모두에 대 한 콘솔으로 거를 등록 합니다."
+  summary: Signs up the console logger for all build events.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "빌드 이벤트에 대 한 이벤트 소스입니다."
+      description: The event source for build events.
     - id: nodeCount
       type: System.Int32
-      description: "노드 수입니다.  사용되지 않습니다."
+      description: The node count.  Not used.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -154,12 +154,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "노드의 ID를 가져오거나 설정 합니다."
+  summary: Gets or sets the ID of the node.
   syntax:
     content: public int NodeId { get; set; }
     return:
       type: System.Int32
-      description: "노드의 ID를 반환합니다."
+      description: Returns the ID of the node.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.NodeId*
   exceptions: []
   platform:
@@ -176,12 +176,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "오류 및 경고 요약 빌드 끝날 때의 출력을 표시 하지 않을 것인지를 결정 하는 스위치를 가져오거나 설정 합니다."
+  summary: Gets or sets a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "오류 및 경고 요약 빌드 끝날 때의 출력을 표시 하지 않을 것인지를 결정 하는 스위치를 반환 합니다."
+      description: Returns a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Parameters*
   exceptions: []
   platform:
@@ -198,7 +198,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "이 거와 빌드 엔진을 마치면 호출 됩니다."
+  summary: Called when the build engine is finished with this logger.
   syntax:
     content: public virtual void Shutdown ();
     parameters: []
@@ -218,12 +218,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "이벤트 로그에 표시할 세부 수준을 가져오거나 설정 합니다."
+  summary: Gets or sets the level of detail to show in the event log.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "이벤트 로그에 표시할 세부 정보의 수준을 반환 합니다."
+      description: Returns the level of detail to show in the event log.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Verbosity*
   exceptions: []
   platform:

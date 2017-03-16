@@ -25,8 +25,8 @@ items:
   nameWithType: MSBuild
   fullName: Microsoft.Build.Tasks.MSBuild
   type: Class
-  summary: "구현 하는 `MSBuild` 작업 합니다. 사용 된 `MSBuild` 프로젝트 파일을 만들고이 작업을 실행 하는 요소입니다. 사용량 및 매개 변수 정보를 참조 하십시오. [MSBuild 작업](~/add/includes/ajax-current-ext-md.md)합니다."
-  remarks: "이 클래스는 자식 프로젝트 파일을 빌드해야 MSBuild 엔진에 전달 되는 &quot;MSBuild&quot; 작업을 구현 합니다.       으로 표시 되었습니다 RunInMTA MSBuild 작업을 생성 하는 RequestBuilder 아닌 스레드에서 실행 해야 하는 이유가 없습니다."
+  summary: Implements the `MSBuild` task. Use the `MSBuild` element in your project file to create and execute this task. For usage and parameter information, see [MSBuild Task](~/add/includes/ajax-current-ext-md.md).
+  remarks: "This class implements the \"MSBuild\" task, which hands off child project files to the MSBuild engine to be built.  \n  \n Marked RunInMTA because there is no reason MSBuild tasks should run on a thread other than that of the RequestBuilder which spawned them."
   syntax:
     content: >-
       [Microsoft.Build.Framework.RunInMTA]
@@ -60,7 +60,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "새 인스턴스를 초기화는 <xref href=&quot;Microsoft.Build.Tasks.MSBuild&quot;> </xref> 클래스입니다."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.MSBuild"></xref> class.
   syntax:
     content: public MSBuild ();
     parameters: []
@@ -80,13 +80,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "프로젝트에 지정 된 수 있는지 여부를 지정 하는 부울 값을 가져오거나 설정 합니다.는 <xref:Microsoft.Build.Tasks.MSBuild.Projects*>속성을 가능 하면 병렬로 빌드됩니다.</xref:Microsoft.Build.Tasks.MSBuild.Projects*>"
-  remarks: "기본값은 `true`입니다."
+  summary: Gets or sets a Boolean value that specifies whether the projects specified in the <xref:Microsoft.Build.Tasks.MSBuild.Projects*> property are built in parallel, if possible.
+  remarks: The default value is `true`.
   syntax:
     content: public bool BuildInParallel { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>프로젝트에 지정 된 경우는 <xref:Microsoft.Build.Tasks.MSBuild.Projects*>가능 하면이 고, 그렇지 않으면 병렬로 속성 빌드됩니다 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>.</xref:Microsoft.Build.Tasks.MSBuild.Projects*>"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the projects specified in the <xref:Microsoft.Build.Tasks.MSBuild.Projects*> property are built in parallel if possible; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.BuildInParallel*
   exceptions: []
   platform:
@@ -103,13 +103,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "MSBuild 엔진이 해당 위치가 지정 된 하나 이상의 프로젝트 파일을 빌드할 수는 <xref:Microsoft.Build.Tasks.MSBuild.Projects*>속성.</xref:Microsoft.Build.Tasks.MSBuild.Projects*>"
+  summary: Instructs the MSBuild engine to build one or more project files whose locations are specified by the <xref:Microsoft.Build.Tasks.MSBuild.Projects*> property.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>모든 프로젝트를 성공적으로 빌드할 경우 그렇지 않으면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if all projects build successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.Execute*
   exceptions: []
   platform:
@@ -126,12 +126,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "빌드할 프로젝트 파일을 가져오거나 설정 합니다."
+  summary: Gets or sets the project files to build.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Projects { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "빌드할 프로젝트 파일입니다."
+      description: The project files to build.
   overload: Microsoft.Build.Tasks.MSBuild.Projects*
   exceptions: []
   platform:
@@ -148,13 +148,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "자식 프로젝트에 대 한 전역 속성으로 적용할 속성 이름/값 쌍의 세미콜론으로 구분 된 목록을 가져오거나 설정 합니다."
-  remarks: "기능적이 있는 속성을 설정 하는이 매개 변수를 지정 하는 경우는 **/property** 를 빌드할 때 전환 합니다."
+  summary: Gets or sets a semicolon-delimited list of property name/value pairs to apply as global properties to the child project.
+  remarks: When you specify this parameter, it is functionally equivalent to setting properties that have the **/property** switch when you build with .
   syntax:
     content: public string[] Properties { get; set; }
     return:
       type: System.String[]
-      description: "자식 프로젝트에 대 한 전역 속성으로 적용할 속성 이름/값 쌍의 세미콜론으로 구분 된 목록입니다."
+      description: A semicolon-delimited list of property name/value pairs to apply as global properties to the child project.
   overload: Microsoft.Build.Tasks.MSBuild.Properties*
   exceptions: []
   platform:
@@ -171,13 +171,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "대상의 상대 경로 빌드된 프로젝트에서 항목을 호출 하는 프로젝트를 기준으로 조정 하 고 경로 출력 여부를 지정 하는 부울 값을 가져오거나 설정 합니다."
-  remarks: "기본값은 `false`입니다."
+  summary: Gets or sets a Boolean value that specifies whether the relative paths of target output items from the built projects have their paths adjusted to be relative to the calling project.
+  remarks: Default is `false`.
   syntax:
     content: public bool RebaseOutputs { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>출력 빌드된 프로젝트에서 항목의 상대 경로가 대상의 경우 호출 하는 프로젝트에 상대적인 것으로 조정 합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the relative paths of target output items from the built projects have their paths adjusted to be relative to the calling project.
   overload: Microsoft.Build.Tasks.MSBuild.RebaseOutputs*
   exceptions: []
   platform:
@@ -194,12 +194,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "제거할 전역 속성의 집합을 가져오거나 설정 합니다."
+  summary: Gets or sets the set of global properties to remove.
   syntax:
     content: public string RemoveProperties { get; set; }
     return:
       type: System.String
-      description: "제거할 전역 속성의 집합을 반환 합니다."
+      description: Returns the set of global properties to remove.
   overload: Microsoft.Build.Tasks.MSBuild.RemoveProperties*
   exceptions: []
   platform:
@@ -216,13 +216,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "지정 하는 부울 값을 가져오거나 설정 합니다. 여부는 [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] 작업 호출에 전달 된 목록에 있는 대상을 [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] 한 번에 하나씩 대신 동시에 있습니다."
-  remarks: "이 속성을 설정 `true` 하면 이후의 대상이 이전에 호출한 대상이 실패 하는 경우에 호출 됩니다. 그렇지 않은 경우 빌드 오류가 이후 모든 대상의 호출을 중단 합니다. 기본값은 `false`입니다."
+  summary: Gets or sets a Boolean value that specifies whether the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task invokes each target in the list passed to [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] one at a time, instead of at the same time.
+  remarks: Setting this property to `true` guarantees that subsequent targets are invoked even if previously invoked targets failed. Otherwise, a build error would stop invocation of all subsequent targets. The default value is `false`.
   syntax:
     content: public bool RunEachTargetSeparately { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>하는 경우는 [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] 작업 호출에 전달 된 목록에 있는 대상을 [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] ; 한 번에 하나씩 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> 경우는 [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] 동시에 모든 대상 목록에서를 호출 하는 작업입니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task invokes each target in the list passed to [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] one at a time; <xref uid="langword_csharp_false" name="false" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task invokes all targets in the list at the same time.
   overload: Microsoft.Build.Tasks.MSBuild.RunEachTargetSeparately*
   exceptions: []
   platform:
@@ -239,13 +239,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "디스크에 존재 하지 않는 프로젝트 파일을 건너뛸지 여부를 지정 하는 부울 값을 가져오거나 설정 합니다."
-  remarks: "프로젝트 파일을 디스크에 존재 하지 않는 건너뛰지 않을 경우 빌드 오류를 야기할 수 있습니다."
+  summary: Gets or sets a Boolean value that specifies whether project files that do not exist on the disk will be skipped.
+  remarks: If project files that do not exist on the disk are not skipped, they will cause a build error.
   syntax:
     content: public string SkipNonexistentProjects { get; set; }
     return:
       type: System.String
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>디스크에 존재 하지 않는 프로젝트 파일을 건너뛰면; 그렇지 않으면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if project files that do not exist on the disk will be skipped; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.SkipNonexistentProjects*
   exceptions: []
   platform:
@@ -262,12 +262,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "작업 중 하나라도 작동 하지 않을 수는 즉시 나머지 프로젝트를 빌드 중지 되어야 하는지 여부를 지정 하는 부울 값을 가져오거나 설정 합니다."
+  summary: Gets or sets a Boolean value that specifies whether the task should stop building the remaining projects as soon as any one of them may not work.
   syntax:
     content: public bool StopOnFirstFailure { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>작업 중 하나라도 작동 하지 않을 수 있습니다; 즉시 나머지 프로젝트 빌드가 중지 되어야 하는 경우 그렇지 않으면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task should stop building the remaining projects as soon as any one of them may not work; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.StopOnFirstFailure*
   exceptions: []
   platform:
@@ -284,13 +284,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "이스케이프 문자 수를 가져오거나 설정 합니다. 지정 된 위치에서 이스케이프 되지 않은 <> </> *> 및 <> </> *>입니다."
-  remarks: "이외의 값으로 설정 하려면이 속성은 `null` 에 대 한는 `MSBuild` 속성과 대상을 이스케이프 해제 하는 작업입니다."
+  summary: Gets or sets the escape characters to be unescaped from the specified <xref:Microsoft.Build.Tasks.MSBuild.Properties*> and <xref:Microsoft.Build.Tasks.MSBuild.Targets*>.
+  remarks: This property has to be set to a value other than `null` for the `MSBuild` task to unescape properties and targets.
   syntax:
     content: public string[] TargetAndPropertyListSeparators { get; set; }
     return:
       type: System.String[]
-      description: "이스케이프 문자 수를 지정 된 위치에서 이스케이프 되지 않은 <> </> *> 및 <> </> *>입니다."
+      description: The escape characters to be unescaped from the specified <xref:Microsoft.Build.Tasks.MSBuild.Properties*> and <xref:Microsoft.Build.Tasks.MSBuild.Targets*>.
   overload: Microsoft.Build.Tasks.MSBuild.TargetAndPropertyListSeparators*
   exceptions: []
   platform:
@@ -307,12 +307,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "모든 프로젝트 파일에서 작성 된 대상의 출력을 반환합니다. 지정 된 대상의 출력을만 반환 됩니다 해당 대상이 의존 하는 대상에 있을 수 있는 출력 적용 되지 않습니다."
+  summary: Returns the outputs of the built targets from all the project files. Only the outputs from the targets that were specified are returned, not any outputs that may exist on targets that those targets depend on.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TargetOutputs { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "모든 프로젝트 파일에서 빌드된 대상의 출력입니다."
+      description: The outputs of the built targets from all the project files.
   overload: Microsoft.Build.Tasks.MSBuild.TargetOutputs*
   exceptions: []
   platform:
@@ -329,13 +329,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "대상 또는 프로젝트 파일에서 빌드할 대상 값을 가져오거나 설정 합니다. 대상 이름 목록을 구분 하려면 세미콜론을 사용 합니다."
-  remarks: "에 없는 대상을 지정 하는 경우는 `MSBuild` 작업에서는 프로젝트 파일에 지정 된 기본 대상이 빌드됩니다."
+  summary: Gets or sets the target or targets to build in the project files. Use a semicolon to separate a list of target names.
+  remarks: If no targets are specified in the `MSBuild` task, the default targets specified in the project files are built.
   syntax:
     content: public string[] Targets { get; set; }
     return:
       type: System.String[]
-      description: "대상 또는 프로젝트 파일에서 빌드할 대상입니다."
+      description: The target or targets to build in the project files.
   overload: Microsoft.Build.Tasks.MSBuild.Targets*
   exceptions: []
   platform:
@@ -352,13 +352,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "대상을 가져오거나 설정 합니다. [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] 수 있는 버전을 사용 하 여 프로젝트를 빌드할 수는 [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] 작업의 다른 버전을 대상으로 하는 프로젝트 빌드에 [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] 프로젝트에 지정 된 것입니다. Valid values are <code>2.0</code>, <code>3.0</code> and <code>3.5</code>."
-  remarks: "기본값은 `3.5.`입니다."
+  summary: Gets or sets a target [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version to build the project with, which enables an [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task to build a project that targets a different version of the [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] than the one specified in the project. Valid values are <code>2.0</code>, <code>3.0</code> and <code>3.5</code>.
+  remarks: The default value is `3.5.`
   syntax:
     content: public string ToolsVersion { get; set; }
     return:
       type: System.String
-      description: "대상 [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] 버전을 사용 하 여 프로젝트를 빌드합니다."
+      description: The target [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version to build the project with.
   overload: Microsoft.Build.Tasks.MSBuild.ToolsVersion*
   exceptions: []
   platform:
@@ -375,12 +375,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "작업이 완료 되 면 프로젝트를 로드 하지 않을 것인지 여부를 지정 하는 부울 값을 가져오거나 설정 합니다."
+  summary: Gets or sets a Boolean value that specifies whether the project will be unloaded once the operation is completed.
   syntax:
     content: public bool UnloadProjectsOnCompletion { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>작업이 완료 되 고 나면 프로젝트를 로드할 수 없는 경우 그렇지 않으면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다. 이 속성은 더 이상 버전 4.0의 사용"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project will be unloaded once the operation is completed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>. This property is no longer used in version 4.0
   overload: Microsoft.Build.Tasks.MSBuild.UnloadProjectsOnCompletion*
   exceptions: []
   platform:
@@ -397,13 +397,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "MSBuild 엔진이 캐시에서 빌드된 대상 돌아옵니다 여부를 나타내는 부울 값을 가져오거나 설정 합니다."
-  remarks: "현금에 빌드된 대상 범위가 (GlobalProperties ProjectFileName) [TargetNames] 빌드 항목의 목록으로 합니다.       이 속성은 더 이상 버전 4.0에서에서 사용 됩니다."
+  summary: Gets or sets a Boolean value that indicates whether the MSBuild engine will return the built targets from the cache.
+  remarks: "The scope of built targets in the cash is (ProjectFileName, GlobalProperties)[TargetNames] as a list of build items.  \n  \n This property is no longer used in version 4.0."
   syntax:
     content: public bool UseResultsCache { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>MSBuild 엔진은 캐시;에서 빌드된 대상을 반환 하는 경우 그렇지 않으면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the MSBuild engine will return the built targets from the cache; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.UseResultsCache*
   exceptions: []
   platform:

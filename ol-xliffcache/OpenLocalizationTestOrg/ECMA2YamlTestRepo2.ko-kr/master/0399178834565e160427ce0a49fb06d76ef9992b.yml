@@ -16,7 +16,7 @@ items:
   nameWithType: CodeTaskFactory
   fullName: Microsoft.Build.Tasks.CodeTaskFactory
   type: Class
-  summary: "작업 팩터리 코드 DOM을 사용 하는 지원 되는 언어 및 여기에서 작업을 만듭니다."
+  summary: A task factory which can take a code DOM supported language and create a task from it.
   syntax:
     content: 'public class CodeTaskFactory : Microsoft.Build.Framework.ITaskFactory'
   inheritance:
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "작업 팩터리를 만듭니다."
+  summary: Creates the task factory.
   syntax:
     content: public CodeTaskFactory ();
     parameters: []
@@ -58,13 +58,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "모든 컨텍스트 또는 작업에 사용 되는 상태를 정리 합니다."
+  summary: Cleans up any context or state used in a task.
   syntax:
     content: public void CleanupTask (Microsoft.Build.Framework.ITask task);
     parameters:
     - id: task
       type: Microsoft.Build.Framework.ITask
-      description: "정리를 수행 하려면 작업입니다."
+      description: The task to clean up.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CleanupTask*
   exceptions: []
   platform:
@@ -81,16 +81,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "만들기를 `taskfactory` 작업 호출 사이의 새로 고쳐져 야 하는 데이터를 포함 하는 인스턴스."
+  summary: Create a `taskfactory` instance which contains the data that needs to be refreshed between task invocations.
   syntax:
     content: public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine loggingHost);
     parameters:
     - id: loggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "작업 팩터리에서 정보를 기록 하는 호스트입니다."
+      description: The host that logs information from the task factory.
     return:
       type: Microsoft.Build.Framework.ITask
-      description: "새 작업을 반환합니다."
+      description: Returns the new task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CreateTask*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "MSBuild 엔진은이 사용 하 여 로깅에 대 한 합니다."
+  summary: The MSBuild engine uses this for logging.
   syntax:
     content: public string FactoryName { get; }
     return:
       type: System.String
-      description: "작업의 이름을 반환합니다."
+      description: Returns the name of the task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.FactoryName*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "모든 작업 매개 변수에 대 한 형식 정보를 가져옵니다."
+  summary: Gets the type information for all task parameters.
   syntax:
     content: public Microsoft.Build.Framework.TaskPropertyInfo[] GetTaskParameters ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.TaskPropertyInfo[]
-      description: "모든 작업 매개 변수에 대 한 유형 정보 배열을 반환합니다."
+      description: Returns an array of the type information for all task parameters.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.GetTaskParameters*
   exceptions: []
   platform:
@@ -152,25 +152,25 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "작업 팩터리입니다."
+  summary: Initialzes the task factory.
   syntax:
     content: public bool Initialize (string taskName, System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.TaskPropertyInfo> taskParameters, string taskElementContents, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);
     parameters:
     - id: taskName
       type: System.String
-      description: "작업의 이름입니다."
+      description: The name of the task.
     - id: taskParameters
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo}
-      description: "작업에 대 한 매개 변수입니다."
+      description: The parameters for the task.
     - id: taskElementContents
       type: System.String
-      description: "작업에 대 한 요소 콘텐츠입니다."
+      description: The element contents for the task.
     - id: taskFactoryLoggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "로깅 호스트 작업에 대 한 정보를 가져옵니다."
+      description: The logging host that gets information about tasks.
     return:
       type: System.Boolean
-      description: "새 작업 팩터리를 반환합니다."
+      description: Returns the new task factory.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.Initialize*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "작업의 유형을 나타냅니다."
+  summary: Represents the type of task.
   syntax:
     content: public Type TaskType { get; }
     return:
       type: System.Type
-      description: "작업 종류를 반환합니다."
+      description: Returns the task type.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.TaskType*
   exceptions: []
   platform:

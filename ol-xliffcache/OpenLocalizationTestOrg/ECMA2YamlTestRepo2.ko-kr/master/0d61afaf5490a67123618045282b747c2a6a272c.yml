@@ -13,8 +13,8 @@ items:
   nameWithType: FileLogger
   fullName: Microsoft.Build.BuildEngine.FileLogger
   type: Class
-  summary: "확장 된 <xref href=&quot;Microsoft.Build.BuildEngine.ConsoleLogger&quot;> </xref> 메시지를 기록 하려면 콘솔 창 보다는 파일입니다."
-  remarks: "동일한 형식으로 파일에 메시지를 작성 하는 FileLogger는 <xref:Microsoft.Build.BuildEngine.ConsoleLogger>콘솔 창에 메시지를 작성 합니다.</xref:Microsoft.Build.BuildEngine.ConsoleLogger>"
+  summary: Extends the <xref href="Microsoft.Build.BuildEngine.ConsoleLogger"></xref> to log messages to a file rather than the console window.
+  remarks: The FileLogger writes messages to a file in exactly the same format as the <xref:Microsoft.Build.BuildEngine.ConsoleLogger> writes messages to the console window.
   syntax:
     content: 'public class FileLogger : Microsoft.Build.BuildEngine.ConsoleLogger'
   inheritance:
@@ -54,7 +54,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "새 인스턴스를 초기화는 <xref href=&quot;Microsoft.Build.BuildEngine.FileLogger&quot;> </xref> 클래스입니다."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.FileLogger"></xref> class.
   remarks: ''
   example:
   - "The following example creates an <xref:Microsoft.Build.BuildEngine.Engine> object and uses the <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> method to build a project file. The <xref:Microsoft.Build.BuildEngine.FileLogger> class is used to log information to a file.  \n  \n [!code-vb[msbuild_BuildAProject#1](~/add/codesnippet/visualbasic/BuildAProjectVB/Module1.vb#1)]\n [!code-cs[msbuild_BuildAProject#1](~/add/codesnippet/csharp/BuildAProjectCS/Program.cs#1)]"
@@ -77,13 +77,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "지정 된 이벤트의로 거를 등록합니다."
+  summary: Registers the logger for the specified events.
   syntax:
     content: public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "<xref href=&quot;Microsoft.Build.Framework.IEventSource&quot;> </xref> 에 거를 등록 합니다."
+      description: The <xref href="Microsoft.Build.Framework.IEventSource"></xref> to register with the logger.
   overload: Microsoft.Build.BuildEngine.FileLogger.Initialize*
   exceptions: []
   platform:
@@ -100,16 +100,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "지정 된 이벤트의로 거를 등록합니다."
+  summary: Registers the logger for the specified events.
   syntax:
     content: public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "<xref href=&quot;Microsoft.Build.Framework.IEventSource&quot;> </xref> 에 거를 등록 합니다."
+      description: The <xref href="Microsoft.Build.Framework.IEventSource"></xref> to register with the logger.
     - id: nodeCount
       type: System.Int32
-      description: "이벤트 소스에 대 한 노드 ID를 나타내는 정수입니다."
+      description: An integer representing the node ID for the event source.
   overload: Microsoft.Build.BuildEngine.FileLogger.Initialize*
   exceptions: []
   platform:
@@ -126,7 +126,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "로 거를 중지 하 고 모든 리소스를 해제 위해로 거를 작성할 때 파일을 닫습니다."
+  summary: Stops the logger, releases all resources, and closes the file to which the logger was writing.
   syntax:
     content: public override void Shutdown ();
     parameters: []

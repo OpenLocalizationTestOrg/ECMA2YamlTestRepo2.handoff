@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f86e9cf2dce7cad440e1c2877b5b7c8c11d81bcc</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Workflow.Runtime.Tracking.UserTrackingLocation.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f3c8236627ca22a254009d2f846db8466d194529</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f582cb6900d3dd17d46260ccd37d553f88082435</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Defines an activity-qualified location that corresponds to a user event in the potential execution path of a root workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">&gt; [!NOTE]</ph><ph id="ph2"> &gt;  </ph><ph id="ph3">[!INCLUDE[DeprecatedContent](~/add/includes/ajax-current-ext-md.md)]</ph>       An activity designer or a workflow designer may use any of the overloaded &lt;xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=fullName&gt; and &lt;xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%2A?displayProperty=fullName&gt; methods to instrument the workflow to emit data to the runtime tracking infrastructure as a user event.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The data emitted is referred to as user data.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Unlike activity status events, and workflow status events, which occur only on activity or workflow status changes, user events can occur at any location that is instrumented in a workflow.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A UserTrackingLocation defines the matching parameters for such a location by specifying the type of the user data, the type of the activity from which it must be emitted, a collection of conditions that can more precisely qualify an instance or instances of this activity, an optional key name with which the user data must be associated, whether derived types of the user data should be matched, and whether user data emitted from activities derived from the type of the specified activity should be matched.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  A single UserTrackingLocation may refer to more than one actual location in the potential execution path of a workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may add a UserTrackingLocation to either &lt;xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A?displayProperty=fullName&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A?displayProperty=fullName&gt; in order to define the match parameters for a &lt;xref:System.Workflow.Runtime.Tracking.UserTrackPoint&gt; in a &lt;xref:System.Workflow.Runtime.Tracking.TrackingProfile&gt;.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are three general conditions which must be met in the following order for the UserTrackingLocation to be matched by the runtime tracking infrastructure: the activity that has emitted a user event must match the set of activities specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt;, &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt;, &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions%2A&gt;, and &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedActivityTypes%2A&gt;; the key, if one exists, associated with the user data must match &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A&gt;; and, the type of the user data emitted by the user event must match the set of user data types specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A&gt;, &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A&gt;, and &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedArgumentTypes%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Only if all three of these conditions are met, does the runtime tracking infrastructure consider the UserTrackingLocation matched.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To configure a UserTrackingLocation, you must set either &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A&gt; to specify the type of the user data to be matched and either &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt; to specify the type of the activity from which the user data must be emitted to be matched.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may add &lt;xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition&gt; objects to &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions%2A&gt; to more completely qualify the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may set &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedArgumentTypes%2A&gt; to specify that user data derived from the user data type specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A&gt; should be matched, and you may set &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedActivityTypes%2A&gt; to specify that user data emitted from activities derived from the activity type specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt; should be matched.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may set &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A&gt; to specify that only user data associated with the specified key name should be matched for this UserTrackingLocation.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A&gt; is a null reference (<ph id="ph1">`Nothing`</ph> in Visual Basic), the runtime tracking structure will not try to match the key associated with the user data.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default constructor initializes an empty &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify both the type of the user data to match and the type of the activity from which it must be emitted in order to be matched.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, to configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; you must explicitly set either &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt; to specify the type of an activity from which user data must be emitted to be matched, and you must also explicitly set either &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A&gt; to specify the type of the user data to be matched.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may further configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; by setting its other properties.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class by using the unqualified name of the common language runtime (CLR) type of the user data.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This constructor initializes a &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; that matches user data of the specified type emitted from the workflow.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify the unqualified name of the &lt;xref:System.Type&gt; of the user data to be matched for <ph id="ph1">`argumentTypeName`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must explicitly set either &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; in your code to properly configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may further qualify the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; by setting its other properties.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The unqualified name of the CLR type of the user data to be matched.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the common language runtime (CLR) type of the user data.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This constructor initializes a &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; that matches user data of the specified type emitted from the workflow.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must explicitly set either &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; in your code to properly configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may further qualify the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; by setting its other properties.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the user data to be matched.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class by using the unqualified name of the common language runtime (CLR) type of the user data and the unqualified name of the CLR type of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This constructor initializes a &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; that matches all user data of the specified type emitted from activities of the specified type.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify the unqualified name of the &lt;xref:System.Type&gt; of the activity and of the user data.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example the unqualified name of the &lt;xref:System.Type&gt; of a &lt;xref:System.Workflow.Activities.CodeActivity&gt; activity is "Code".</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may further qualify the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; by setting its other properties.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The unqualified name of the CLR type of the user data to be matched.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The unqualified name of the CLR type of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class by using the unqualified name of the common language runtime (CLR) type of the user data and the CLR type of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This constructor initializes a &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; that matches all user data of the specified type emitted from activities of the specified type.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify the unqualified name of the &lt;xref:System.Type&gt; of the user data.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may further qualify the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; by setting its other properties.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The unqualified name of the CLR type of the user data to be matched.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class by using the common language runtime (CLR) type of the user data and unqualified name of the CLR type of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This constructor initializes a &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; that matches all user data of the specified type emitted from activities of the specified type.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify the unqualified name of the &lt;xref:System.Type&gt; of the activity.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example the unqualified name of the &lt;xref:System.Type&gt; of a &lt;xref:System.Workflow.Activities.CodeActivity&gt; activity is "Code".</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may further qualify the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; by setting its other properties.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the user data to be matched.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The unqualified name of the CLR type of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class by using the common language runtime (CLR) type of the user data and the CLR type of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This constructor initializes a &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; that matches all user data of the specified type emitted from activities of the specified type.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may further qualify the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; by setting its other properties.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the user data to be matched.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Gets or sets the common language runtime (CLR) type of the activity from which the user data must be emitted to be tracked.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to specify the type of the activity in a version-independent manner, use &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify either ActivityType or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; to properly configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the activity from which the data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Gets or sets the unqualified name of the common language runtime (CLR) type of the activity from which the user data must be emitted to be tracked.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify the unqualified name of the type of the activity.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, to specify the unqualified name of a &lt;xref:System.Workflow.Activities.CodeActivity&gt; activity, set ActivityTypeName to "Code".</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ActivityTypeName provides a much easier way to specify the type of the activity that emits the user data when you author a profile directly in XML.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ActivityTypeName also provides a version-independent way of referring to the type of the activity.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify either ActivityTypeName or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt; to properly configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The unqualified name of the &lt;xref:System.Type&gt; of the activity from which the data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Gets or sets the common language runtime (CLR) type of the user data to be tracked.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to specify the type of the user data in a version-independent manner, use &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify either ArgumentType or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A&gt; to properly configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the user data to be tracked.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Gets or sets the unqualified name of the common language runtime (CLR) type of the user data to be tracked.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ArgumentTypeName provides a much easier way to specify the type of the user data when you author a profile directly in XML.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ArgumentTypeName also provides a version-independent way of referring to the type of the user data.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must specify either ArgumentTypeName or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A&gt; to properly configure the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt;.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The unqualified name of the &lt;xref:System.Type&gt; of the user data.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Gets a collection of conditions that are used to qualify the activity from which the user data must be emitted to be tracked.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can use Conditions to more precisely define the instance of the activity type specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A&gt; from which the user event must be emitted to match the tracking location.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if you want to match only &lt;xref:System.Workflow.Activities.CodeActivity&gt; activities with an &lt;xref:System.Workflow.ComponentModel.Activity.Name%2A&gt; equal to "MyCode", you can set &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A&gt; to "Code" and add an &lt;xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition&gt; to Conditions that specifies that the ID property of the activity instance must be equal to "MyCode".</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Every &lt;xref:System.Workflow.Runtime.Tracking.TrackingCondition&gt; in Conditions must be true for the activity to be matched.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.TrackingConditionCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used to qualify the activity from which the user data must be emitted.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Get or sets the name with which the user data must be associated for the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to be matched.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An activity designer or a workflow designer can use either &lt;xref:System.Workflow.ComponentModel.Activity.TrackData%28System.String%2CSystem.Object%29?displayProperty=fullName&gt; or &lt;xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%28System.String%2CSystem.Object%29?displayProperty=fullName&gt; to associate a string key with the user data that is emitted in a user event.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If KeyName is not a null reference (<ph id="ph1">`Nothing`</ph>), the key associated with the user data must match the value of KeyName for the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; to be matched.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If KeyName is a null reference (<ph id="ph1">`Nothing`</ph>), the runtime tracking infrastructure does not check for a matching key to determine whether the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation&gt; is matched.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> key with which the user data must be associated for the <bpt id="p2">&lt;xref href="System.Workflow.Runtime.Tracking.UserTrackingLocation"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to be matched or a null reference (<bpt id="p3">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the user data should be tracked when it is emitted from activities derived from the activity type specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType<bpt id="p1">*</bpt>&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName<ept id="p1">*</ept>&gt;.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the user data should be tracked when it is emitted from activities derived from the type specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType<bpt id="p2">*</bpt>&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName<ept id="p2">*</ept>&gt;; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The User tracking location is a way to filter user tracked data.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The user can filter by the type of the user tracked data by specifying the &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType<bpt id="p1">*</bpt>&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName<ept id="p1">*</ept>&gt;.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Setting the <bpt id="p1">&lt;xref uid="langword_csharp_MatchDerrivedArgumentTypes" name="MatchDerrivedArgumentTypes" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept><bpt id="p2">&lt;xref uid="langword_csharp_Boolean" name="Boolean" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> value to <bpt id="p3">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> specifies that the user tracked data can be of type ArgumentType/ArgumentTypeName or a type derived from the ArgumentType/ArgumentTypeName.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if user data derived from the type of the user data specified by &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType<bpt id="p2">*</bpt>&gt; or &lt;xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName<ept id="p2">*</ept>&gt; should be tracked; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

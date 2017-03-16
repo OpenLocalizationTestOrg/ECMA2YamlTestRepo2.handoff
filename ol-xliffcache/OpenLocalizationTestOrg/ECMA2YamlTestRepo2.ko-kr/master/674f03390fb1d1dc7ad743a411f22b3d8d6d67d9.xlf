@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">674f03390fb1d1dc7ad743a411f22b3d8d6d67d9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Net.ICredentialPolicy.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f3239c794d13eff4de1fa6f0884f861fbeff7317</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5f93e995329db77489a1e7b9dd18247d29c176fe</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Defines the credential policy to be used for resource requests that are made using &lt;xref:System.Net.WebRequest&gt; and its derived classes.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The credential policy determines whether to send credentials when sending a &lt;xref:System.Net.WebRequest&gt; for a network resource, such as the content of a Web page.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If credentials are sent, servers that require client authentication can attempt to authenticate the client when the request is received instead of sending a response that indicates that the client's credentials are required.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>While this saves a round trip to the server, this performance gain must be balanced against the security risk inherent in sending credentials across the network.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the destination server does not require client authentication, it is best not to send credentials.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  ICredentialPolicy policies are invoked only if the &lt;xref:System.Net.WebRequest&gt; or the &lt;xref:System.Net.WebProxy&gt; that is associated with the request has credentials that are not <ph id="ph2">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Setting this policy has no effect on requests that do not specify credentials.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Use the &lt;xref:System.Net.AuthenticationManager.CredentialPolicy%2A?displayProperty=fullName&gt; property to set an ICredentialPolicy policy.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Net.IAuthenticationModule&gt; that handles authentication for the request will invoke the &lt;xref:System.Net.ICredentialPolicy.ShouldSendCredential%2A&gt; method before performing the authentication.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the method returns <ph id="ph1">`false`</ph>, authentication is not performed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An ICredentialPolicy policy affects all instances of &lt;xref:System.Net.WebRequest&gt; with non-null credentials in the current application domain.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The policy cannot be overridden on individual requests.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Returns a &lt;xref:System.Boolean&gt; that indicates whether the client's credentials are sent with a resource request made using an instance of the &lt;xref:System.Net.WebRequest&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After an &lt;xref:System.Net.ICredentialPolicy&gt; policy has been specified by setting the &lt;xref:System.Net.AuthenticationManager.CredentialPolicy%2A?displayProperty=fullName&gt; property, the &lt;xref:System.Net.IAuthenticationModule&gt; that handles authentication for a &lt;xref:System.Net.WebRequest&gt; invokes the ShouldSendCredential method before performing the authentication.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If this method returns <ph id="ph1">`false`</ph>, authentication is not performed.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the original request has been redirected or proxy authentication is required, the resource identified by <ph id="ph1">`challengeUri`</ph> can be different from the requested resource that is specified in &lt;xref:System.Net.WebRequest.RequestUri%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the case of redirection, <ph id="ph1">`challengeUri`</ph> contains the actual destination &lt;xref:System.Uri&gt;.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If proxy authentication is required, <ph id="ph1">`challengeUri`</ph> contains the address of the proxy server that requires client authentication.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Uri&gt; that will receive the request.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For more information, see the Remarks section.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Net.WebRequest&gt; that represents the resource being requested.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Net.NetworkCredential&gt; that will be sent with the request if this method returns <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Net.IAuthenticationModule"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that will conduct the authentication, if authentication is required.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the credentials are sent with the request; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

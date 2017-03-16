@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f6b1a78587fa8b08fe75ba1ad03b69f6fe3a7371</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Activities.Persistence.PersistenceParticipant.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">12fb9dbdfbfc39dbaab7294dbf3282a64562d364</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">085aad18be7d7c82676907ce709355f628d405b5</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>This class allows both <bpt id="p1">&lt;xref href="System.Activities.WorkflowApplication"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and <bpt id="p2">&lt;xref href="System.ServiceModel.WorkflowServiceHost"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to participate in persistence process.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>A persistence participant derives from the PersistenceParticipant class or the <bpt id="p1">&lt;xref href="System.Activities.Persistence.PersistenceIOParticipant"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class (derived class of the PersistenceParticipant class), implements abstract methods, and then add an instance of the class as a workflow instance extension.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Activities.WorkflowApplication"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and <bpt id="p2">&lt;xref href="System.ServiceModel.WorkflowServiceHost"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> look for such extensions when persisting an instance and invoke appropriate methods at appropriate times.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A host executes the following steps (or stages) when persisting an instance:      1.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Collects values to be persisted.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Maps fields of monolithic structured values to individual values.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Issues the &lt;xref:System.Activities.DurableInstancing.SaveWorkflowCommand&gt; to the persistence provider.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Performs I/O under the persistence transaction.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A host completes a stage before beginning the next stage.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example when persisting, the host collects values from all the persistence participants before moving to the second stage.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the second stage, the host provides all the values collected in the first stage to all persistence participants in the second stage for mapping.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the third stage, the host provides all the collected values in the first and second stages to the persistence provider when invoking the &lt;xref:System.Activities.DurableInstancing.SaveWorkflowCommand&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Then in the fourth stage, the host provides all the collected values to all the persistence IO participants under the persistence transaction.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A host executes the following stages when loading a persistence instance:      1.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Issues the &lt;xref:System.Activities.DurableInstancing.LoadWorkflowCommand&gt; and &lt;xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand&gt; to the persistence provider.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Performs I/O under the persistence transaction.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Publishes the loaded values.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>At the highest level, workflow instance extensions that derive from the PersistenceParticipant class can participate in the first (Collect) and second (Map) stages of persisting process and the third stage (Publish) of loading process.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Workflow instance extensions deriving from the PersistenceIOParticipant class can additionally participate in the fourth stage of the persisting process and the second stage of the loading process (I/O).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Initializes an instance of the <bpt id="p1">&lt;xref href="System.Activities.Persistence.PersistenceParticipant"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>A host invokes this method on a custom persistence participant to collect read-write values and write-only values, to be persisted.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The host packages read-write values in the first dictionary as &lt;xref:System.Runtime.Persistence.InstanceValue&gt; objects of an &lt;xref:System.Activities.Persistence.SaveWorkflowCommand.InstanceData%2A&gt; collection, and packages write-only values in the second dictionary as &lt;xref:System.Runtime.Persistence.InstanceValue&gt; objects with &lt;xref:System.Runtime.Persistence.InstanceValueOptions.Optional&gt; and &lt;xref:System.Runtime.Persistence.InstanceValueOptions.WriteOnly&gt; flags set.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">[!INCLUDE[crdefault](~/add/includes/ajax-current-ext-md.md)]</ph>&lt;xref:System.Runtime.Persistence.InstanceValueOptions&gt;.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  Each value provided by implementations of CollectValues across all persistence participants within one persistence episode must have a unique XName.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The read-write values to be persisted.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The write-only values to be persisted.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A host invokes this method after it is done with collecting the values in the first stage.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The host forwards two read-only dictionaries of values it collected from all persistence participants during the first stage (CollectValues stage) to this method for mapping.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The host adds values in the dictionary returned by this method to the collection of write-only values.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Each value provided by implementations of all the MapValues methods across all persistence participants including all the values collected in the first stage (CollectValues stage) must have a unique XName.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The read-write values to be persisted.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The write-only values to be persisted.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>A dictionary containing additional write-only values to be persisted.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The host invokes this method and passes all the loaded values in the &lt;xref:System.Activities.Persistence.SaveWorkflowCommand.InstanceData*&gt; collection (filled by the &lt;xref:System.Activities.Persistence.LoadWorkflowCommand&gt; or &lt;xref:System.Activities.Persistence.LoadWorkflowByInstanceKeyCommand&gt;) as a dictionary parameter.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The read-write values that were loaded from the persistence store.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This dictionary corresponds to the dictionary of read-write values persisted in the most recent persistence episode.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

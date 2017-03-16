@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">84c3d7d4c280a2b23703d42a924b395aab3769f5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Automation.CacheRequest.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9f15895a5e3b8ed7015d243f2dc2d98d3cb84ca8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">541bba44f3b4c91de53ab59e1d9c4416afdf7506</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Specifies properties and patterns that the <ph id="ph1">[!INCLUDE[TLA2#tla_uiautomation](~/add/includes/tla2sharptla-uiautomation-md.md)]</ph> framework caches when an <bpt id="p1">&lt;xref href="System.Windows.Automation.AutomationElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is obtained.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Retrieving properties and patterns through <ph id="ph1">[!INCLUDE[TLA2#tla_uiautomation](~/add/includes/tla2sharptla-uiautomation-md.md)]</ph> requires cross-process calls that can slow down performance.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By caching values of proprieties and patterns in a batch operation, you can enhance the performance of your application.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Create a new cache request by calling the class constructor.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The request is populated by repeated calls to the &lt;xref:System.Windows.Automation.CacheRequest.Add%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Only a single CacheRequest can be active.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are two ways to activate a request:      -   Call &lt;xref:System.Windows.Automation.CacheRequest.Activate%2A&gt; on the request.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This pushes the request onto the stack, and the request is popped when the object is disposed.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To ensure disposal even if an exception is raised, use the return value from &lt;xref:System.Windows.Automation.CacheRequest.Activate%2A&gt; within a <ph id="ph1">`using`</ph> block (<ph id="ph2">`Using`</ph> in <ph id="ph3">[!INCLUDE[TLA#tla_visualbnet](~/add/includes/tlasharptla-visualbnet-md.md)]</ph>).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Put the request onto the internal stack by calling &lt;xref:System.Windows.Automation.CacheRequest.Push%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Only the topmost request on the stack is active, and it must be the next one removed from the stack by &lt;xref:System.Windows.Automation.CacheRequest.Pop%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Popping the request deactivates it.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">[!INCLUDE[TLA2#tla_uiautomation](~/add/includes/tla2sharptla-uiautomation-md.md)]</ph> elements obtained while the request is active will have cached values for the properties and patterns specified.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a &lt;xref:System.Windows.Automation.CacheRequest&gt; is created, the &lt;xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty&gt; identifier is added as a default property to cache.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Sets this <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> as the active specification for the items that are returned when an <bpt id="p2">&lt;xref href="System.Windows.Automation.AutomationElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is requested on the same thread.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using this method is usually preferable to using &lt;xref:System.Windows.Automation.CacheRequest.Push%2A&gt; and &lt;xref:System.Windows.Automation.CacheRequest.Pop%2A&gt; as a means of activating the &lt;xref:System.Windows.Automation.CacheRequest&gt;.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The object is pushed onto the stack when Activate is called, and then popped off when it is disposed.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To ensure disposal, place the return value within a <ph id="ph1">`using`</ph> block (<ph id="ph2">`Using`</ph> in <ph id="ph3">[!INCLUDE[TLA#tla_visualbnet](~/add/includes/tlasharptla-visualbnet-md.md)]</ph>).</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The object that can be used to dispose the <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Adds the specified <bpt id="p1">&lt;xref href="System.Windows.Automation.AutomationPattern"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> identifier to this <bpt id="p2">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Adding a pattern that is already in the cache request has no effect.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>An identifier specifying a pattern to cache.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is active.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Adds the specified <bpt id="p1">&lt;xref href="System.Windows.Automation.AutomationProperty"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> identifier to this <bpt id="p2">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a &lt;xref:System.Windows.Automation.CacheRequest&gt; is created, the &lt;xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty&gt; identifier is added as a default property to cache.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Adding a property that is already in the cache request has no effect.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>An identifier specifying a property value to cache.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is active.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that specifies whether returned elements should contain full references to the underlying <ph id="ph1">[!INCLUDE[TLA#tla_ui](~/add/includes/tlasharptla-ui-md.md)]</ph>, or only cached information.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Automation.AutomationElementMode&gt; is the default value, and specifies that returned elements contain a full reference to the underlying <ph id="ph1">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Windows.Automation.AutomationElementMode&gt; specifies that the returned elements have no reference to the underlying <ph id="ph1">[!INCLUDE[TLA2#tla_ui](~/add/includes/ajax-current-ext-md.md)]</ph>, and contain only cached information.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Certain operations on elements, including &lt;xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A&gt;, &lt;xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A&gt;, and &lt;xref:System.Windows.Automation.AutomationElement.SetFocus%2A&gt;, require a full reference; attempting to perform these on an element that has none results in an &lt;xref:System.InvalidOperationException&gt;.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using &lt;xref:System.Windows.Automation.AutomationElementMode&gt; can be more efficient when only properties are needed, as it avoids the overhead involved in setting up full references.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref href="System.Windows.Automation.AutomationElementMode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the returned elements have a full reference to the underlying <ph id="ph1">[!INCLUDE[TLA#tla_ui](~/add/includes/tlasharptla-ui-md.md)]</ph>; otherwise <bpt id="p2">&lt;xref href="System.Windows.Automation.AutomationElementMode"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Creates a copy of this <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>A modifiable copy of the current object.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is active on the current thread.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The active <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Removes the active <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> from the internal stack for the current thread.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Only the currently active request can be removed using the Pop method.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Attempting to remove a request that is not the current one results in an exception.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Unless you are nesting cache requests, it is preferable to use &lt;xref:System.Windows.Automation.CacheRequest.Activate%2A&gt; to place the request on the stack.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The reason is that you can use &lt;xref:System.Windows.Automation.CacheRequest.Activate%2A&gt; within a <ph id="ph1">`using`</ph> block (<ph id="ph2">`Using`</ph> in <ph id="ph3">[!INCLUDE[TLA#tla_visualbnet](~/add/includes/tlasharptla-visualbnet-md.md)]</ph>), ensuring that the request is popped off the stack even if an exception is raised.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>An attempt was made to remove a cache request that was not the last one pushed onto the stack.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Places the <bpt id="p1">&lt;xref href="System.Windows.Automation.CacheRequest"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> on the internal state stack, making it the active request on the current thread.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Multiple &lt;xref:System.Windows.Automation.CacheRequest&gt; objects can be placed onto the state stack.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Cache requests must be removed from the stack in the order they were pushed on; otherwise, an &lt;xref:System.InvalidOperationException&gt; exception is raised.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Unless you are nesting cache requests, it is preferable to use &lt;xref:System.Windows.Automation.CacheRequest.Activate%2A&gt; to place the request on the stack.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The reason is that you can use &lt;xref:System.Windows.Automation.CacheRequest.Activate%2A&gt; within a <ph id="ph1">`using`</ph> block (<ph id="ph2">`Using`</ph> in <ph id="ph3">[!INCLUDE[TLA#tla_visualbnet](~/add/includes/tlasharptla-visualbnet-md.md)]</ph>), ensuring that the request is popped off the stack even if an exception is raised.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value specifying the view of the <ph id="ph1">[!INCLUDE[TLA2#tla_uiautomation](~/add/includes/tla2sharptla-uiautomation-md.md)]</ph> element tree to use when caching.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For additional information on views of the <ph id="ph1">[!INCLUDE[TLA2#tla_uiautomation](~/add/includes/tla2sharptla-uiautomation-md.md)]</ph> element tree, see <bpt id="p1">[</bpt>UI Automation Tree Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The view of the <ph id="ph1">[!INCLUDE[TLA2#tla_uiautomation](~/add/includes/tla2sharptla-uiautomation-md.md)]</ph> element tree.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The default view is <bpt id="p1">&lt;xref href="System.Windows.Automation.Automation.ControlViewCondition"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that specifies whether caching is done only for the root of the subtree, or also for its children or descendants.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The scope of caching is in relation to the object or objects being fetched, not in relation to the object on which &lt;xref:System.Windows.Automation.AutomationElement.FindFirst%2A&gt; or &lt;xref:System.Windows.Automation.AutomationElement.FindAll%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>See the example.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>One or more of <bpt id="p1">&lt;xref href="System.Windows.Automation.TreeScope"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, <bpt id="p2">&lt;xref href="System.Windows.Automation.TreeScope"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, <bpt id="p3">&lt;xref href="System.Windows.Automation.TreeScope"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>, or <bpt id="p4">&lt;xref href="System.Windows.Automation.TreeScope"&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The default value is <bpt id="p1">&lt;xref href="System.Windows.Automation.TreeScope"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>An attempt was made to set the property to <bpt id="p1">&lt;xref href="System.Windows.Automation.TreeScope"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> or <bpt id="p2">&lt;xref href="System.Windows.Automation.TreeScope"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

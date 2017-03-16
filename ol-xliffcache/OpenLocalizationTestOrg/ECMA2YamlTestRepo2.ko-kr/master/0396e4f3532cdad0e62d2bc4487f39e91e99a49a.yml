@@ -11,7 +11,7 @@ items:
   nameWithType: ProjectImportGroupElement
   fullName: Microsoft.Build.Construction.ProjectImportGroupElement
   type: Class
-  summary: "MSBuild 프로젝트에서 ImportGroup 요소를 나타냅니다."
+  summary: Represents the ImportGroup element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#Imports={Count} Condition={Condition} Label={Label}")]
@@ -59,17 +59,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "이 가져오기 그룹에서 마지막 가져온 후 새 가져오기 작업을 추가합니다."
-  remarks: "메서드는는 추론에 따라 위치를 선택 합니다."
+  summary: Adds a new import after the last import in this import group.
+  remarks: Convenience method that picks a location based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement AddImport (string project);
     parameters:
     - id: project
       type: System.String
-      description: "프로젝트 가져오기입니다."
+      description: The project to import.
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "새 import를 반환합니다."
+      description: Returns the new import.
   overload: Microsoft.Build.Construction.ProjectImportGroupElement.AddImport*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "이 프로젝트 가져오기의 모든 속성을 가져옵니다."
+  summary: Gets all properties in this project import.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectImportElement> Imports { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectImportElement}
-      description: "이 프로젝트 가져오기의 모든 속성을 반환합니다."
+      description: Returns all properties in this project import.
   overload: Microsoft.Build.Construction.ProjectImportGroupElement.Imports*
   exceptions: []
   platform:

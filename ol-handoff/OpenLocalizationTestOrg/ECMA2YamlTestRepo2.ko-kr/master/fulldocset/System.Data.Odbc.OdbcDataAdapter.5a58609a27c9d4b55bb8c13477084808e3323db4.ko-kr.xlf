@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b47d6e8940f2b48f7b0868df1318882ac3b97dff</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Data.Odbc.OdbcDataAdapter.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3cee45be747e7f638629ff2816c7fb65079ab084</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b92e79878539c8aeaa0db1366c599b32c55f5692</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents a set of data commands and a connection to a data source that are used to fill the <bpt id="p1">&lt;xref href="System.Data.DataSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and update the data source.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OdbcDataAdapter serves as a bridge between a <ph id="ph1">`DataSet`</ph> and data source for retrieving and saving data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OdbcDataAdapter provides this bridge by using &lt;xref:System.Data.Common.DbDataAdapter.Fill%2A&gt; to load data from the data source into the &lt;xref:System.Data.DataSet&gt;, and using &lt;xref:System.Data.Common.DbDataAdapter.Update%2A&gt; to send changes made in the &lt;xref:System.Data.DataSet&gt; back to the data source.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the OdbcDataAdapter fills a &lt;xref:System.Data.DataSet&gt;, it creates the required tables and columns for the returned data if they do not already exist.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, primary key information is not included in the implicitly created schema unless the &lt;xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A&gt; property is set to &lt;xref:System.Data.MissingSchemaAction&gt;.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You may also have the OdbcDataAdapter create the schema of the &lt;xref:System.Data.DataSet&gt;, including primary key information, before filling it with data using &lt;xref:System.Data.Common.DbDataAdapter.FillSchema%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Adding Existing Constraints to a DataSet<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  When you call the <ph id="ph2">`Fill`</ph> method on a data source that does not have a primary key column, the OdbcDataAdapter tries to promote the unique constraint column to the primary key.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In the process, the OdbcDataAdapter marks the unique constraint as not nullable.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This behavior works unless there is a null value in the unique constraint column.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If there is a null value, the <ph id="ph1">`Fill`</ph> method fails with a constraint violation.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To avoid this situation, do not allow null values in the unique constraint column.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  Due to the limitations of native ODBC drivers, only one &lt;xref:System.Data.DataTable&gt; is ever returned when you call &lt;xref:System.Data.Common.DbDataAdapter.FillSchema%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is true even when executing SQL batch statements from which multiple &lt;xref:System.Data.DataTable&gt; objects would be expected.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The OdbcDataAdapter also includes the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A&gt;, &lt;xref:System.Data.Odbc.OdbcDataAdapter.InsertCommand%2A&gt;, &lt;xref:System.Data.Odbc.OdbcDataAdapter.DeleteCommand%2A&gt;, &lt;xref:System.Data.Odbc.OdbcDataAdapter.UpdateCommand%2A&gt;, and <ph id="ph1">`TableMappings`</ph> properties to facilitate loading and updating of data.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcDataAdapter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you create an instance of &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt;, the following write-only and read-only properties are set to their default values, as shown in the table.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|Properties|Default value|   |----------------|-------------------|   |&lt;xref:System.Data.Common.DataAdapter.MissingMappingAction%2A&gt;|<ph id="ph1">`MissingMappingAction.Passthrough`</ph>|   |&lt;xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A&gt;|<ph id="ph2">`MissingSchemaAction.Add`</ph>|       You can change the value of any of these properties through a separate call to the property.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcDataAdapter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified SQL SELECT statement.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This implementation of the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; constructor sets the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A&gt; property to the value specified in the <ph id="ph1">`selectCommand`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you create an instance of &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt;, the following write-only and read-only properties are set to their default values, as shown in the table.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|Properties|Initial value|   |----------------|-------------------|   |&lt;xref:System.Data.Common.DataAdapter.MissingMappingAction%2A&gt;|<ph id="ph1">`MissingMappingAction.Passthrough`</ph>|   |&lt;xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A&gt;|<ph id="ph2">`MissingSchemaAction.Add`</ph>|       You can change the value of any of these properties through a separate call to the property.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is an SQL SELECT statement or stored procedure, and is set as the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand*&gt; property of the <bpt id="p2">&lt;xref href="System.Data.Odbc.OdbcDataAdapter"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcDataAdapter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with an SQL SELECT statement and an <bpt id="p2">&lt;xref href="System.Data.Odbc.OdbcConnection"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This implementation of the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; can be useful in an application that must call the <ph id="ph1">`Fill`</ph> method for two or more &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; objects.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A string that is a SQL SELECT statement or stored procedure to be used by the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand*&gt; property of the <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcDataAdapter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcConnection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the connection.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcDataAdapter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with an SQL SELECT statement and a connection string.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This overload of the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; constructor uses the <ph id="ph1">`selectConnectionString`</ph> parameter to set the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, it does not open the connection.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You still must explicitly open the connection.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A string that is a SQL SELECT statement or stored procedure to be used by the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand*&gt; property of the <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcDataAdapter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The connection string.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Gets or sets an SQL statement or stored procedure used to delete records in the data source.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the DeleteCommand property is assigned to a previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt;, the &lt;xref:System.Data.Odbc.OdbcCommand&gt; is not cloned.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, the DeleteCommand maintains a reference to the previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt;.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>During an update operation, if DeleteCommand is not set and primary key information is present in the &lt;xref:System.Data.DataSet&gt;, you can use the &lt;xref:System.Data.Odbc.OdbcCommandBuilder&gt; class to automatically generate the DeleteCommand, and additional commands needed to reconcile the &lt;xref:System.Data.DataSet&gt; to the data source.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To do this, set the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A&gt; property of the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The generation logic also requires key column information to be present in the &lt;xref:System.Data.DataSet&gt;.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Generating Commands with CommandBuilders<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> used during an update operation to delete records in the data source that correspond to deleted rows in the <bpt id="p2">&lt;xref href="System.Data.DataSet"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Gets or sets an SQL statement or stored procedure used to insert new records into the data source.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the InsertCommand property is assigned to a previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt; object, the &lt;xref:System.Data.Odbc.OdbcCommand&gt; is not cloned.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, InsertCommand maintains a reference to the previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt;.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>During an update operation, if InsertCommand is not set and primary key information is present in the &lt;xref:System.Data.DataSet&gt;, you can use the &lt;xref:System.Data.Odbc.OdbcCommandBuilder&gt; class to automatically generate InsertCommand, and additional commands needed to reconcile the &lt;xref:System.Data.DataSet&gt; to the data source.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To do this, set the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A&gt; property of the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The generation logic also requires key column information to be present in the &lt;xref:System.Data.DataSet&gt;.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Generating Commands with CommandBuilders<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If execution of this command returns rows, these rows may be added to the &lt;xref:System.Data.DataSet&gt; depending upon how you set the &lt;xref:System.Data.Odbc.OdbcCommand.UpdatedRowSource%2A&gt; property of the &lt;xref:System.Data.Odbc.OdbcCommand&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> used during an update operation to insert records in the data source that correspond to new rows in the <bpt id="p2">&lt;xref href="System.Data.DataSet"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Occurs during an update operation after a command is executed against the data source.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you use &lt;xref:System.Data.Common.DbDataAdapter.Update%2A&gt;, there are two events that occur per data row updated.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The order of execution is as follows:      1.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The values in the &lt;xref:System.Data.DataRow&gt; are moved to the parameter values.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The command executes.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve" extradata="MT">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the command is set to <ph id="ph1">`FirstReturnedRecord`</ph>, the first returned result is placed in the &lt;xref:System.Data.DataRow&gt;.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>5.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If there are output parameters, they are placed in the &lt;xref:System.Data.DataRow&gt;.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>6.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>7.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Data.DataRow.AcceptChanges%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Occurs during &lt;xref:System.Data.Common.DbDataAdapter.Update*&gt; before a command is executed against the data source.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you use &lt;xref:System.Data.Common.DbDataAdapter.Update%2A&gt;, there are two events that occur per data row updated.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The order of execution is as follows:      1.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The values in the &lt;xref:System.Data.DataRow&gt; are moved to the parameter values.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The command executes.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the command is set to <ph id="ph1">`FirstReturnedRecord`</ph>, the first returned result is placed in the &lt;xref:System.Data.DataRow&gt;.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>5.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If there are output parameters, they are placed in the &lt;xref:System.Data.DataRow&gt;.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve" extradata="MT">
+          <source>6.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve" extradata="MT">
+          <source>7.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Data.DataRow.AcceptChanges%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Gets or sets an SQL statement or stored procedure used to select records in the data source.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When SelectCommand is assigned to a previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt;, the &lt;xref:System.Data.Odbc.OdbcCommand&gt; is not cloned.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, the SelectCommand maintains a reference to the previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If SelectCommand returns no rows, no tables are added to the &lt;xref:System.Data.DataSet&gt;, and no exception is raised.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used during a fill operation to select records from data source for placement in the <bpt id="p2">&lt;xref href="System.Data.DataSet"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see &lt;xref:System.Data.IDbDataAdapter.DeleteCommand*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; instance is cast to an &lt;xref:System.Data.IDbDataAdapter&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.IDbCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> used during an update to delete records in the data source for deleted rows in the data set.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see &lt;xref:System.Data.IDbDataAdapter.InsertCommand*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; instance is cast to an &lt;xref:System.Data.IDbDataAdapter&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.IDbCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used during an update to insert records from a data source for placement in the data set.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see &lt;xref:System.Data.IDbDataAdapter.SelectCommand*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; instance is cast to an &lt;xref:System.Data.IDbDataAdapter&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.IDbCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used during an update to select records from a data source for placement in the data set.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see &lt;xref:System.Data.IDbDataAdapter.UpdateCommand*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; instance is cast to an &lt;xref:System.Data.IDbDataAdapter&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.IDbCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> used during an update to update records in the data source for modified rows in the data set.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>For a description of this member, see <ph id="ph1">&amp;lt;</ph>xref:System.ICloneable.Clone%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This member is an explicit interface member implementation.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It can be used only when the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt; instance is cast to an &lt;xref:System.ICloneable&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>A new &lt;xref:System.Object&gt; that is a copy of this instance.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Gets or sets an SQL statement or stored procedure used to update records in the data source.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When UpdateCommand is assigned to a previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt;, the &lt;xref:System.Data.Odbc.OdbcCommand&gt; is not cloned.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Instead, the UpdateCommand maintains a reference to the previously created &lt;xref:System.Data.Odbc.OdbcCommand&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve" extradata="MT">
+          <source>During an update operation, if UpdateCommand is not set and primary key information is present in the &lt;xref:System.Data.DataSet&gt;, you can use the &lt;xref:System.Data.Odbc.OdbcCommandBuilder&gt; class to automatically generate UpdateCommand, and additional commands needed to reconcile the &lt;xref:System.Data.DataSet&gt; to the data source.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To do this, set the &lt;xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A&gt; property of the &lt;xref:System.Data.Odbc.OdbcDataAdapter&gt;.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The generation logic also requires key column information to be present in the &lt;xref:System.Data.DataSet&gt;.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see <bpt id="p1">[</bpt>Generating Commands with CommandBuilders<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If execution of this command returns rows, these rows may be merged with the &lt;xref:System.Data.DataSet&gt; depending upon how you set the &lt;xref:System.Data.Odbc.OdbcCommand.UpdatedRowSource%2A&gt; property of the &lt;xref:System.Data.Odbc.OdbcCommand&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Data.Odbc.OdbcCommand"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> used during an update operation to update records in the data source that correspond to modified rows in the <bpt id="p2">&lt;xref href="System.Data.DataSet"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

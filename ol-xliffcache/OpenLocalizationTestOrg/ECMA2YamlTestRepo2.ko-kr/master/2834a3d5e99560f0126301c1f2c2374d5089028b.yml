@@ -35,7 +35,7 @@ items:
   nameWithType: Exec
   fullName: Microsoft.Build.Tasks.Exec
   type: Class
-  summary: "구현 하는 `Exec` 작업 합니다. 사용 된 `Exec` 프로젝트 파일을 만들고이 작업을 실행 하는 요소입니다. 사용량 및 매개 변수 정보를 참조 하십시오. [Exec 작업](~/add/includes/ajax-current-ext-md.md)합니다."
+  summary: Implements the `Exec` task. Use the `Exec` element in your project file to create and execute this task. For usage and parameter information, see [Exec Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class Exec : Microsoft.Build.Tasks.ToolTaskExtension'
   inheritance:
@@ -100,7 +100,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "새 인스턴스를 초기화는 <xref href=&quot;Microsoft.Build.Tasks.Exec&quot;> </xref> 클래스입니다."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Exec"></xref> class.
   syntax:
     content: public Exec ();
     parameters: []
@@ -120,13 +120,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "명령줄에서 직접 및 응답 파일에서가 아니라 명령줄 도구를 실행 해야 하는 명령줄 인수를 생성 합니다."
+  summary: Generates command line arguments that the command line tool must run directly from the command line and not from a response file.
   syntax:
     content: protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "에 대 한 인수를 추가 하려면 명령줄 작성기입니다."
+      description: Command line builder to add arguments to.
   overload: Microsoft.Build.Tasks.Exec.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -143,13 +143,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "실행할 명령을 가져오거나 설정 합니다."
-  remarks: "명령을 실행 하도록 attrib, 또는 program.exe 같은 실행 파일, 같은 시스템 명령 수 있습니다."
+  summary: Gets or sets the command to run.
+  remarks: The command to run can be a system command, such as attrib, or an executable, such as program.exe.
   syntax:
     content: public string Command { get; set; }
     return:
       type: System.String
-      description: "실행 하는 명령입니다."
+      description: The command to run.
   overload: Microsoft.Build.Tasks.Exec.Command*
   exceptions: []
   platform:
@@ -166,12 +166,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "항목으로 출력을 반환합니다. 공백은 잘립니다.       ConsoleOutput은 ConsoleToMSBuild가 true 인 경우에 사용 됩니다. 사용 하지 않는 경우 메모리에 줄을 포함 하는 것이 이렇게 없습니다. ConsoleOutput은 stdout 및 stderr의 조합입니다."
+  summary: "Returns the output as an Item. Whitespace is trimmed.  \n  \n ConsoleOutput is enabled when ConsoleToMSBuild is true. This avoids holding lines in memory if they aren't used. ConsoleOutput is a combination of stdout and stderr."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ConsoleOutput { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
   overload: Microsoft.Build.Tasks.Exec.ConsoleOutput*
   exceptions: []
   platform:
@@ -188,12 +188,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "표준 출력 항목에는 파이프를 사용 하도록 설정 합니다. (StandardOutput)입니다."
+  summary: Enable the standard output to pipe to an item. (StandardOutput).
   syntax:
     content: public bool ConsoleToMSBuild { get; set; }
     return:
       type: System.Boolean
-      description: "<xref:System.Boolean>입니다.</xref:System.Boolean> 반환"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Tasks.Exec.ConsoleToMSBuild*
   exceptions: []
   platform:
@@ -210,13 +210,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "도구 출력에서 오류 줄을 발견할 정규식을 가져오거나 설정 합니다."
-  remarks: "이 속성은 예외적으로 형식이 지정 된 출력을 생성 하는 도구에 유용 합니다."
+  summary: Gets or sets a regular expression to spot error lines in the tool output.
+  remarks: This property is useful for tools that produce unusually formatted output.
   syntax:
     content: public string CustomErrorRegularExpression { get; set; }
     return:
       type: System.String
-      description: "도구 출력에서 오류 줄을 발견할 정규식입니다."
+      description: A regular expression to spot error lines in the tool output.
   overload: Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression*
   exceptions: []
   platform:
@@ -233,13 +233,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "도구 출력에서 경고 줄을 발견 하는 정규식을 가져오거나 설정 합니다."
-  remarks: "이 속성은 예외적으로 형식이 지정 된 출력을 생성 하는 도구에 유용 합니다."
+  summary: Gets or sets a regular expression to spot warning lines in the tool output.
+  remarks: This property is useful for tools that produce unusually formatted output.
   syntax:
     content: public string CustomWarningRegularExpression { get; set; }
     return:
       type: System.String
-      description: "경고 줄을 발견할 도구 출력에서 정규식입니다."
+      description: A regular expression to spot warning lines in the tool output.
   overload: Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression*
   exceptions: []
   platform:
@@ -256,23 +256,23 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Cmd.exe 도구를 실행 하 고 완성을 위해 기다린 다음 실행이 완료 된 후 배치 파일을 정리 합니다."
-  remarks: "오류가 기록 하는 경우이 도구에는 종료 코드&0;이이 메서드는 종료 코드를-1로 설정 합니다."
+  summary: Executes the cmd.exe tool, waits for its completion, and cleans up the batch file after execution completes.
+  remarks: If errors were logged and the tool has an exit code of zero, then this method sets the exit code to -1.
   syntax:
     content: protected override int ExecuteTool (string pathToTool, string responseFileCommands, string commandLineCommands);
     parameters:
     - id: pathToTool
       type: System.String
-      description: "경로 실행 하는 도구입니다."
+      description: The path to the tool to execute.
     - id: responseFileCommands
       type: System.String
-      description: "임시 응답 파일로 이동 해야 하는 명령줄 인수입니다."
+      description: Command line arguments that should go into a temporary response file.
     - id: commandLineCommands
       type: System.String
-      description: "이 도구에 직접 전달 되어야 하는 명령줄 인수입니다."
+      description: Command line arguments that should be passed to the tool directly.
     return:
       type: System.Int32
-      description: "이 도구를 반환 하는 종료 코드입니다."
+      description: The exit code that the tool returns.
   overload: Microsoft.Build.Tasks.Exec.ExecuteTool*
   exceptions: []
   platform:
@@ -289,13 +289,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "시스템 도구 cmd.exe에 전체 경로 반환합니다."
+  summary: Returns the full path to the system tool cmd.exe.
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: "시스템 도구 cmd.exe에 대 한 전체 경로입니다."
+      description: The full path to the system tool cmd.exe.
   overload: Microsoft.Build.Tasks.Exec.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -312,14 +312,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "도구 프로세스에 사용 하 여 작업 디렉터리를 반환 합니다."
-  remarks: "작업 디렉터리가 UNC 시스템 경로 %SystemRoot%\\System32 반환 합니다."
+  summary: Returns the working directory to use for the tool process.
+  remarks: If the working directory is UNC, returns the system path %SystemRoot%\System32.
   syntax:
     content: protected override string GetWorkingDirectory ();
     parameters: []
     return:
       type: System.String
-      description: "도구 프로세스에 사용 하 여 작업 디렉터리입니다."
+      description: The working directory to use for the tool process.
   overload: Microsoft.Build.Tasks.Exec.GetWorkingDirectory*
   exceptions: []
   platform:
@@ -336,14 +336,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "오류 메시지를 기록 및 핸들에는 코드를 종료합니다."
-  remarks: "이 메서드는&0;이 아닌 종료 코드로 호출 됩니다."
+  summary: Logs error message and handles exit code.
+  remarks: This method will only be called with a non-zero exit code.
   syntax:
     content: protected override bool HandleTaskExecutionErrors ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>종료 코드 무시 되었습니다. 그렇지 않으면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if exit code was ignored; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Exec.HandleTaskExecutionErrors*
   exceptions: []
   platform:
@@ -360,12 +360,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "나타내는 부울 값을 가져오거나 설정 합니다. 여부는 `Exec` 명령이 실행된 하 여 제공 하는 종료 코드를 무시할지 (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>)를 반환 해야 하거나 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> 실행 된 명령에는&0;이 아닌 종료 코드를 반환 하는 경우 (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
+  summary: Gets or sets a Boolean value that indicates whether the `Exec` task should ignore the exit code provided by the executed command (<xref uid="langword_csharp_true" name="true" href=""></xref>) or should return <xref uid="langword_csharp_false" name="false" href=""></xref> if the executed command returns a non-zero exit code (<xref uid="langword_csharp_false" name="false" href=""></xref>).
   syntax:
     content: public bool IgnoreExitCode { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>하는 경우는 `Exec` 작업; 실행된 한 명령에서 제공 하는 종료 코드를 무시 해야 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> 경우는 `Exec` 작업 반환 해야 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> 실행 된 명령에는&0;이 아닌 종료 코드를 반환 하는 경우."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Exec` task should ignore the exit code provided by the executed command; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `Exec` task should return <xref uid="langword_csharp_false" name="false" href=""></xref> if the executed command returns a non-zero exit code.
   overload: Microsoft.Build.Tasks.Exec.IgnoreExitCode*
   exceptions: []
   platform:
@@ -382,13 +382,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "표준 오류 및 경고 형식 및 로그 오류 및 일반 메시지로 출력에서 경고를 무시할지 여부를 나타내는 부울 값을 가져오거나 설정 합니다."
-  remarks: "기본값은 `false`입니다."
+  summary: Gets or sets a Boolean value that indicates whether to ignore the standard error and warning format and log errors and warnings from the output as regular messages.
+  remarks: The default value is `false`.
   syntax:
     content: public bool IgnoreStandardErrorWarningFormat { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>하는 경우는 `Exec` 작업의 표준 오류와 경고 형식을 무시 해야 하 고 일반 메시지로; 오류 및 경고를 기록해 야 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> 경우는 `Exec` 작업 오류 및 표준 오류 및 경고 형식과 일치 하는 경고를 기록해 야 합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Exec` task should ignore the standard error and warning format and should log errors and warnings as regular messages; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `Exec` task should log the errors and warnings that match the standard error and warning format.
   overload: Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*
   exceptions: []
   platform:
@@ -405,16 +405,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "일반 메시지 또는 오류 또는 경고를 한 줄에 사용자 지정 또는 표준 오류 및 경고 형식과 일치 하는 경우 지정 된 한 줄의 텍스트를 기록 하는 경우 <xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*>로 설정 된 <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> 되 고 일치 하는 사용자 지정 형식이 없는.</xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*>"
+  summary: Logs the specified single line of text as an error or warning if the single line matched custom or standard error and warning formats or as a regular message if <xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*> is set to <xref uid="langword_csharp_true" name="true" href=""></xref> and no custom format matched.
   syntax:
     content: protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);
     parameters:
     - id: singleLine
       type: System.String
-      description: "한 줄의 출력을 구문 분석 합니다."
+      description: Single line from the output to parse.
     - id: messageImportance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "메시지를 기록할 중요도입니다."
+      description: The importance to log the message with.
   overload: Microsoft.Build.Tasks.Exec.LogEventsFromTextOutput*
   exceptions: []
   platform:
@@ -431,16 +431,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "도구 이름 및 경로 기록합니다."
+  summary: Logs the tool name and path.
   syntax:
     content: protected override void LogPathToTool (string toolName, string pathToTool);
     parameters:
     - id: toolName
       type: System.String
-      description: "도구 이름입니다."
+      description: The tool name.
     - id: pathToTool
       type: System.String
-      description: "도구를 실행 하는 현재 디렉터리입니다."
+      description: The current directory where the tool is run.
   overload: Microsoft.Build.Tasks.Exec.LogPathToTool*
   exceptions: []
   platform:
@@ -457,13 +457,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "일괄 처리 파일 명령이 실행 될를 기록 합니다."
+  summary: Logs the batch file command to be executed.
   syntax:
     content: protected override void LogToolCommand (string message);
     parameters:
     - id: message
       type: System.String
-      description: "빈 문자열을 지정 합니다. 이 매개 변수는 사용 되지 않습니다."
+      description: Specify an empty string. This parameter is not used.
   overload: Microsoft.Build.Tasks.Exec.LogToolCommand*
   exceptions: []
   platform:
@@ -480,13 +480,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "작업에서 출력 항목을 가져오거나 설정 합니다."
-  remarks: "`Exec` 작업 출력 항목을 설정 하지 않습니다. 대신 제공할 수 있습니다 출력 항목 작업을 통해 설정 된 경우 처럼는 프로젝트에서 나중에 사용할 수 있도록 합니다."
+  summary: Gets or sets the output items from the task.
+  remarks: The `Exec` task does not set the output items. Instead, you can provide the output items as if they were set by the task, so that they can be used later in the project.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Outputs { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "작업에서 출력 항목입니다."
+      description: The output items from the task.
   overload: Microsoft.Build.Tasks.Exec.Outputs*
   exceptions: []
   platform:
@@ -503,12 +503,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "캡처한 작업 표준 오류 스트림의 인코딩을 가져옵니다."
+  summary: Gets the encoding of the captured task standard error stream.
   syntax:
     content: protected override System.Text.Encoding StandardErrorEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: "캡처한 작업 표준 오류 스트림의 인코딩입니다."
+      description: The encoding of the captured task standard error stream.
   overload: Microsoft.Build.Tasks.Exec.StandardErrorEncoding*
   exceptions: []
   platform:
@@ -525,12 +525,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "표준 오류 스트림을에서 일반 메시지를 기록할 중요도를를 가져옵니다."
+  summary: Gets the importance to log ordinary messages with in the standard error stream.
   syntax:
     content: protected override Microsoft.Build.Framework.MessageImportance StandardErrorLoggingImportance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: "표준 오류 스트림을에서 일반 메시지를 기록할 중요도입니다."
+      description: The importance to log ordinary messages with in the standard error stream.
   overload: Microsoft.Build.Tasks.Exec.StandardErrorLoggingImportance*
   exceptions: []
   platform:
@@ -547,12 +547,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "캡처한 작업 표준 출력 스트림의 인코딩을 가져옵니다."
+  summary: Gets the encoding of the captured task standard output stream.
   syntax:
     content: protected override System.Text.Encoding StandardOutputEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: "캡처한 작업 표준 출력 스트림에의 인코딩입니다."
+      description: The encoding of the captured task standard output stream.
   overload: Microsoft.Build.Tasks.Exec.StandardOutputEncoding*
   exceptions: []
   platform:
@@ -569,12 +569,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "일반 메시지를 표준 출력 스트림 로그인 중요성을 가져옵니다."
+  summary: Gets the importance to log ordinary messages with in the standard out stream.
   syntax:
     content: protected override Microsoft.Build.Framework.MessageImportance StandardOutputLoggingImportance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: "일반 메시지를 표준 출력 스트림 로그인 중요도입니다."
+      description: The importance to log ordinary messages with in the standard out stream.
   overload: Microsoft.Build.Tasks.Exec.StandardOutputLoggingImportance*
   exceptions: []
   platform:
@@ -591,12 +591,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "프로젝트에 표시 되는 캡처된 작업 표준 오류 스트림의 인코딩을 가져오거나 설정 합니다."
+  summary: Gets or sets the encoding of the captured task standard error stream that is visible to the project.
   syntax:
     content: public string StdErrEncoding { get; set; }
     return:
       type: System.String
-      description: "캡처한 작업 표준 오류 스트림의 인코딩을 표시 되는 프로젝트에 있습니다."
+      description: The encoding of the captured task standard error stream that is visible to the project.
   overload: Microsoft.Build.Tasks.Exec.StdErrEncoding*
   exceptions: []
   platform:
@@ -613,12 +613,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "프로젝트에 표시 되는 캡처된 작업 표준 출력 스트림의 인코딩을 가져오거나 설정 합니다."
+  summary: Gets or sets the encoding of the captured task standard output stream that is visible to the project.
   syntax:
     content: public string StdOutEncoding { get; set; }
     return:
       type: System.String
-      description: "프로젝트에 표시 되는 캡처된 작업 표준 출력 스트림의 인코딩입니다."
+      description: The encoding of the captured task standard output stream that is visible to the project.
   overload: Microsoft.Build.Tasks.Exec.StdOutEncoding*
   exceptions: []
   platform:
@@ -635,12 +635,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "도구 (cmd.exe)의 이름을 가져옵니다."
+  summary: Gets the name of the tool (cmd.exe).
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: "도구 (cmd.exe)의 이름입니다."
+      description: The name of the tool (cmd.exe).
   overload: Microsoft.Build.Tasks.Exec.ToolName*
   exceptions: []
   platform:
@@ -657,13 +657,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "있는 경우 입력된 매개 변수 및 로그 오류 또는 경고의 유효성을 검사 합니다. 작업 실행을 계속할지 여부를 나타내는 부울 값을 반환 합니다."
+  summary: Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>작업 실행을 계속할지; 하는 경우 그렇지 않으면 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>합니다."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should proceed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Exec.ValidateParameters*
   exceptions: []
   platform:
@@ -680,12 +680,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "명령이 실행 됩니다 디렉터리를 가져오거나 설정 합니다."
+  summary: Gets or sets the directory in which the command will run.
   syntax:
     content: public string WorkingDirectory { get; set; }
     return:
       type: System.String
-      description: "디렉터리 명령이 실행 됩니다."
+      description: The directory in which the command will run.
   overload: Microsoft.Build.Tasks.Exec.WorkingDirectory*
   exceptions: []
   platform:

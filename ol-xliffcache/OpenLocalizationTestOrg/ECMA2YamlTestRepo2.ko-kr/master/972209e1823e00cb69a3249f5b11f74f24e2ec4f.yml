@@ -25,7 +25,7 @@ items:
   nameWithType: ProjectItemElement
   fullName: Microsoft.Build.Construction.ProjectItemElement
   type: Class
-  summary: "나타냅니다는 [항목 요소 (MSBuild)](~/add/includes/ajax-current-ext-md.md) MSBuild 프로젝트에서."
+  summary: Represents an [Item Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{ItemType} Include={Include} Exclude={Exclude} #Metadata={Count} Condition={Condition}")]
@@ -73,19 +73,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "이 항목에 메타 데이터를 추가합니다. 기존 메타 데이터를 메타 데이터를 추가합니다."
+  summary: Adds metadata to this item. Appends the metadata to any existing metadata.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement AddMetadata (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "메타 데이터의 이름입니다."
+      description: Name of metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "추가할 메타 데이터입니다."
+      description: Metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "수정된 된 메타 데이터를 반환합니다."
+      description: Returns the modified metadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.AddMetadata*
   exceptions: []
   platform:
@@ -102,13 +102,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Exclude 특성 값을 가져오거나 설정 합니다."
-  remarks: "설정할 값을 null 또는 빈 문자열로 설정 된 경우 Exclude 특성을 제거 합니다."
+  summary: Gets or sets the Exclude attribute value.
+  remarks: Removes the Exclude attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Exclude { get; set; }
     return:
       type: System.String
-      description: "Exclude 특성 값을 반환합니다. 특성이 없는 경우 빈 문자열을 반환 합니다."
+      description: Returns the Exclude attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Exclude*
   exceptions: []
   platform:
@@ -125,12 +125,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Exclude 특성의 위치"
+  summary: Location of the exclude attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ExcludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectItemElement.ExcludeLocation*
   exceptions: []
   platform:
@@ -147,12 +147,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "이 항목에는 자식 메타 데이터 요소를 결정 합니다."
+  summary: Determines if this item has any child metadata elements.
   syntax:
     content: public bool HasMetadata { get; }
     return:
       type: System.Boolean
-      description: "이 항목에 자식 메타 데이터 요소에 있으면 true를 반환 false 그렇지 않은 경우."
+      description: Returns true if this item has child metadata elements; false otherwise.
   overload: Microsoft.Build.Construction.ProjectItemElement.HasMetadata*
   exceptions: []
   platform:
@@ -169,13 +169,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Include 특성 값을 가져오거나 설정 합니다."
-  remarks: "설정할 값을 null 또는 빈 문자열로 설정 된 경우 포함 특성을 제거 합니다."
+  summary: Gets or sets the Include attribute value.
+  remarks: Removes the Include attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Include { get; set; }
     return:
       type: System.String
-      description: "Include 특성 값을 반환합니다. 특성이 없는 경우 빈 문자열을 반환 합니다."
+      description: Returns the Include attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Include*
   exceptions: []
   platform:
@@ -192,12 +192,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Include 특성의 위치"
+  summary: Location of the include attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation IncludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Include 위치를 반환합니다."
+      description: Returns the include location
   overload: Microsoft.Build.Construction.ProjectItemElement.IncludeLocation*
   exceptions: []
   platform:
@@ -214,12 +214,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "항목 요소의 형식을 가져옵니다."
+  summary: Gets the item element’s type.
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: "항목 요소 형식을 반환합니다."
+      description: Returns the item element type.
   overload: Microsoft.Build.Construction.ProjectItemElement.ItemType*
   exceptions: []
   platform:
@@ -236,13 +236,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "KeepDuplicates 값을 가져오거나 설정 합니다."
-  remarks: "설정 값이 비어 있거나 null 인 경우 특성을 제거 합니다."
+  summary: Gets or sets the KeepDuplicates value.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string KeepDuplicates { get; set; }
     return:
       type: System.String
-      description: "KeepDuplicates의 값을 반환 하거나 요소가 없는 경우 빈 문자열을 반환 합니다."
+      description: Returns the value of KeepDuplicates, or returns empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepDuplicates*
   exceptions: []
   platform:
@@ -259,12 +259,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "KeepDuplicates 특성의 위치를 가져오거나 설정 합니다."
+  summary: Gets or sets the Location of the KeepDuplicates attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepDuplicatesLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "KeepDuplicates 특성의 위치를 반환합니다."
+      description: Returns the location of the KeepDuplicates attribute.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepDuplicatesLocation*
   exceptions: []
   platform:
@@ -281,13 +281,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "KeepMetadata 특성 값을 가져오거나 설정 합니다."
-  remarks: "설정 값이 비어 있거나 null 인 경우 특성을 제거 합니다."
+  summary: Gets or sets the KeepMetadata attribute value.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string KeepMetadata { get; set; }
     return:
       type: System.String
-      description: "KeepMetadata 특성의 값을 반환 하거나 요소가 없는 경우 빈 문자열을 반환 합니다."
+      description: Returns the value of the KeepMetadata attribute or returns an empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepMetadata*
   exceptions: []
   platform:
@@ -304,12 +304,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "KeepMetadata 특성의 위치를 가져오거나 설정 합니다."
+  summary: Gets or sets the location of the KeepMetadata attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "KeepMetadata의 위치를 반환합니다."
+      description: Returns the location of KeepMetadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepMetadataLocation*
   exceptions: []
   platform:
@@ -326,12 +326,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "모든 자식 메타 데이터를 가져옵니다."
+  summary: Gets all child metadata.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectMetadataElement> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectMetadataElement}
-      description: "모든 자식 메타 데이터를 반환합니다."
+      description: Returns all child metadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.Metadata*
   exceptions: []
   platform:
@@ -348,13 +348,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "제거 특성 값을 가져오거나 설정 합니다."
-  remarks: "설정할 값을 null 또는 빈 문자열로 설정 된 경우 제거 특성을 제거 합니다."
+  summary: Gets or sets the Remove attribute value.
+  remarks: Removes the Remove attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Remove { get; set; }
     return:
       type: System.String
-      description: "제거 특성 값을 반환합니다. 특성이 없는 경우 빈 문자열을 반환 합니다."
+      description: Returns the Remove attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Remove*
   exceptions: []
   platform:
@@ -371,12 +371,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Remove 특성의 위치"
+  summary: Location of the remove attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "제거 특성의 위치를 반환합니다."
+      description: Returns the remove attribute’s location.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveLocation*
   exceptions: []
   platform:
@@ -393,13 +393,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "RemoveMetadata 특성을 가져오거나 설정 합니다."
-  remarks: "설정 값이 비어 있거나 null 인 경우 특성을 제거 합니다."
+  summary: Gets or sets the RemoveMetadata attribute.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string RemoveMetadata { get; set; }
     return:
       type: System.String
-      description: "RemoveMetadata 값을 반환 하거나 요소가 없는 경우 빈 문자열을 반환 합니다."
+      description: Returns the RemoveMetadata value or returns an empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveMetadata*
   exceptions: []
   platform:
@@ -416,12 +416,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "RemoveMetadata 특성의 위치를 가져오거나 설정 합니다."
+  summary: Gets or sets the location of the RemoveMetadata attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "RemoveMetadata 특성의 위치를 반환합니다."
+      description: Returns the RemoveMetadata attribute’s location.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveMetadataLocation*
   exceptions: []
   platform:

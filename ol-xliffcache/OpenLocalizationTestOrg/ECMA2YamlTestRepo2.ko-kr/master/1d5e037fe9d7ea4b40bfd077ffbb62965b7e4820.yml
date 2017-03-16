@@ -12,7 +12,7 @@ items:
   nameWithType: IBootstrapperBuilder
   fullName: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder
   type: Interface
-  summary: "부트스트래퍼를 만드는 데 필요한 기능을 노출 합니다."
+  summary: Exposes functionality that you must have to create a bootstrapper.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -37,16 +37,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "지정 된 설정에 따라 부트스트래퍼를 생성 합니다."
+  summary: Generates a bootstrapper based on the specified settings.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults Build (Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings
-      description: "부트스트래퍼를 만드는 사용 되는 속성입니다."
+      description: The properties used to create the bootstrapper.
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults&quot;> </xref> 부트스트래퍼 생성의 결과 나타내는 개체입니다."
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults"></xref> object that represents the results of the bootstrapper generation.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Build*
   exceptions: []
   platform:
@@ -63,12 +63,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "필요한 부트스트래퍼 위치의 파일을 가져오거나 설정 합니다."
+  summary: Gets or sets the location of the required bootstrapper files.
   syntax:
     content: public string Path { get; set; }
     return:
       type: System.String
-      description: "필요한 부트스트래퍼 파일의 위치를 나타내는 문자열 값입니다."
+      description: A string value that represents the location of the required bootstrapper files.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*
   exceptions: []
   platform:
@@ -85,12 +85,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "현재 부트스트래퍼 경로에서 사용 가능한 모든 제품을 가져옵니다."
+  summary: Gets all products available at the current bootstrapper path.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection Products { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection&quot;> </xref> <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*> 현재 부트스트래퍼에서 사용 가능한 모든 제품을 나타내는 개체입니다"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection"></xref> object that represents all products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Products*
   exceptions: []
   platform:

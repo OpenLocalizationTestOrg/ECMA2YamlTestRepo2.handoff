@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b8d893056fbb3ae8d56821de245d2ef1440d2db9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.XmlSiteMapProvider.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">90ac718c9ca5d45e2ded638c504951b9378ee869</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5e955d26c39c6827a5b8262d1ff65a56073132be</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>The XmlSiteMapProvider class is derived from the <bpt id="p1">&lt;xref href="System.Web.SiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class and is the default site map provider for ASP.NET.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The XmlSiteMapProvider class generates site map trees from XML files with the file name extension .sitemap.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The XmlSiteMapProvider class loads site map data from an XML file that follows a known schema.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The site map data is bounded by <ph id="ph1">`&lt;siteMap&gt;`</ph> tags and consists of nested <ph id="ph2">`&lt;siteMapNode&gt;`</ph> tags.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Two constraints are imposed by the &lt;xref:System.Web.SiteMapProvider&gt; and XmlSiteMapProvider classes on the structure of the site map data:      -   Only one root node can exist.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   For &lt;xref:System.Web.SiteMapNode&gt; objects that specify URLs, the URLs must be unique within the scope of the provider.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>(For nodes that do not specify URLs, all keys must be unique.)       The following code example shows an example of an XML file that can be used with the XmlSiteMapProvider.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">```   &lt;siteMap&gt;     &lt;siteMapNode title="RootNode" description="This is the root node of the site map. There can be only one root node." url="Page1.aspx" &gt;       &lt;siteMapNode title="ChildofRootNode" description="Descriptions do not have to be unique." url="Page2.aspx"&gt;         &lt;siteMapNode title="ChildOfChildNode" description="SiteMapNode objects can be nested to any level." url="Page3.aspx"/&gt;       &lt;/siteMapNode&gt;       &lt;siteMapNode title="ChildofRootNode" description="Descriptions do not have to be unique." url="Page4.aspx"/&gt;     &lt;/siteMapNode&gt;   &lt;/siteMap&gt;   ```</ph>       The XmlSiteMapProvider is the default provider for ASP.NET and it reads XML data from a file named Web.sitemap that is located within the directory structure of the ASP.NET application.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By default, the Web.sitemap file is located at the application root; however, if you want to change the name or location of the file from which the XmlSiteMapProvider loads data, you can override the default configuration in your Web.config file.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>By overriding the default configuration settings in your Web.config file, you can tailor the behavior of the XmlSiteMapProvider for each ASP.NET application, as necessary.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following code example demonstrates an example Web.config file, where the XmlSiteMapProvider is still used, but a different site map file is used.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because all providers in a &lt;xref:System.Web.SiteMapProviderCollection&gt; object must be named uniquely, the one that is specified in the Web.config file uses a name other than the default but is also set as the default provider so that it will be used instead of the XmlSiteMapProvider that is specified in the default ASP.NET configuration.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You can change the name of the site navigation data file, but you cannot change its extension.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The XmlSiteMapProvider only reads data from files that are named with the file name extension .sitemap.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Creates a new, unnamed, instance of the <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Adds a <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to the collections that are maintained by the current provider.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`node`</ph> parameter is added to an internal collection, and a parent/child relationship is created between it and <ph id="ph2">`parentNode`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; class, derived from the &lt;xref:System.Web.StaticSiteMapProvider&gt; class and the default site map provider for ASP.NET, uses the &lt;xref:System.Web.SiteMapNode.Url%2A&gt; property of a &lt;xref:System.Web.SiteMapNode&gt; object as a lookup key in its internal collections, by default.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the &lt;xref:System.Web.SiteMapNode.Url%2A&gt; property of the &lt;xref:System.Web.SiteMapNode&gt; is set, it must be unique within the scope of the provider.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider.FindSiteMapNode%2A&gt; method attempts to retrieve nodes based on their &lt;xref:System.Web.SiteMapNode.Url%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Otherwise, you can use the &lt;xref:System.Web.SiteMapNode.Key%2A&gt; property, and the corresponding &lt;xref:System.Web.XmlSiteMapProvider.FindSiteMapNodeFromKey%2A&gt; method, to retrieve nodes.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to add to the provider.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> under which to add <ph id="ph1">`node`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;node&lt;/code&gt;</ph> or <ph id="ph2">&lt;code&gt;parentNode&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The current <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is not the provider associated with <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">node</ph><ept id="p2">&lt;/code&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Links a child site map provider to the current provider.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The AddProvider method links <ph id="ph1">`providerName`</ph> to the current provider as a child of the current provider.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The root node of <ph id="ph1">`providerName`</ph> is added to the hierarchy for the current provider as a child node of <ph id="ph2">`parentNode`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because the parent provider calls the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method on <ph id="ph1">`providerName`</ph>, the exceptions that are described in the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method might be thrown.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The name of one of the <bpt id="p1">&lt;xref href="System.Web.SiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects currently registered in the &lt;xref:System.Web.SiteMap.Providers*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>A site map node of the current site map provider under which the root node and all nodes of the child provider is added.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Web.SiteMapNode.Provider*&gt; property of the <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">parentNode</ph><ept id="p1">&lt;/code&gt;</ept> does not reference the current provider.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;parentNode&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;providerName&lt;/code&gt;</ph> cannot be resolved.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The site map file used by <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">providerName</ph><ept id="p1">&lt;/code&gt;</ept> is already in use within the provider hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>-or-       The root node returned by <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">providerName</ph><ept id="p1">&lt;/code&gt;</ept> is <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>-or-       The root node returned by <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">providerName</ph><ept id="p1">&lt;/code&gt;</ept> has a URL or key that is already registered with the parent <bpt id="p2">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Loads the site map information from an XML file and builds it in memory.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The BuildSiteMap method is called to load and build the site map from persistent storage.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For the default behavior when security trimming is enabled, see "Remarks" in &lt;xref:System.Web.SiteMapProvider.IsAccessibleToUser%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After the &lt;xref:System.Web.XmlSiteMapProvider&gt; object parses and loads site map data, all loaded &lt;xref:System.Web.SiteMapNode&gt; objects and &lt;xref:System.Web.SiteMapNodeCollection&gt; collections are made read-only.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the &lt;xref:System.Web.XmlSiteMapProvider&gt; parses the &lt;xref:System.Web.SiteMapNode.Url%2A&gt; property from a site map file, it converts application-relative URLs, as well as relative URLs, to application-absolute virtual paths.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; subscribes to file change notifications for the .sitemap file.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If any change is made to the .sitemap file, the &lt;xref:System.Web.XmlSiteMapProvider&gt; is reloaded, and the site map structure is rebuilt.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Returns the root <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of the site map navigation structure.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref uid="langword_csharp_siteMapFile" name="siteMapFile" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is specified but the path lies outside the current directory structure for the application.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>A named provider cannot be found in the current site map providers collection.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref uid="langword_csharp_&amp;lt;siteMapNode&amp;gt;" name="&amp;lt;siteMapNode&amp;gt;" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> referencing a site map file contains an empty string for the <bpt id="p2">&lt;xref uid="langword_csharp_siteMapFile" name="siteMapFile" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Removes all elements in the collections of child and parent site map nodes and site map providers that the <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object internally tracks as part of its state.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; class overrides the inherited Clear method to provide additional state cleanup beyond the basic &lt;xref:System.Web.StaticSiteMapProvider.Clear%2A?displayProperty=fullName&gt; implementation, including clearing its child provider tracking and the &lt;xref:System.Web.XmlSiteMapProvider.RootNode%2A&gt; property tracking mechanisms.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object that represents the currently requested page.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The site map object that represents the currently requested page.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Notifies the file monitor of the Web.sitemap file that the <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object no longer requires the file to be monitored.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; class implements the &lt;xref:System.IDisposable.Dispose%2A&gt; method of the &lt;xref:System.IDisposable&gt; interface to release its associated file monitor when the site map file is unloaded from memory.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This overload of the &lt;xref:System.Web.XmlSiteMapProvider.Dispose%2A&gt; method calls the overload that takes a &lt;xref:System.Boolean&gt; parameter and sets the value to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Notifies the file monitor of the Web.sitemap file that the <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object no longer requires the file to be monitored.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The Dispose method takes a Boolean parameter indicating whether the method is called by user code.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Dispose method returns <ph id="ph1">`true`</ph> if the Dispose method is called by user code.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Otherwise it returns <ph id="ph1">`false`</ph>, if the Dispose method is called by the finalizer thread during run time.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to release both managed and unmanaged resources; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to release only unmanaged resources.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Retrieves a <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object that represents the page at the specified URL.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; object overrides the &lt;xref:System.Web.StaticSiteMapProvider.FindSiteMapNode%2A&gt; method to ensure that any linked child providers are searched for the node if the implementation of the base class does not return a node for the specified URL.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The <ph id="ph1">`rawUrl`</ph> parameter should be either an absolute virtual path or an application-relative path, depending on how it is specified in the XML site map data file.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; class and classes that are derived from it use the URL of a &lt;xref:System.Web.SiteMapNode&gt; object as a key in the various collections that the class maintains.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, these URLs must be unique within the scope of the site map.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the URL is not found within the immediate site map data that is managed by the &lt;xref:System.Web.XmlSiteMapProvider&gt;, it calls the FindSiteMapNode on each child provider that is linked to it through the <ph id="ph1">`provider`</ph> attribute of its site map nodes.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The FindSiteMapNode method indirectly calls the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method to retrieve the top-level node in the site map.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, any exceptions that occur for the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method can also occur when calling the FindSiteMapNode method.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>A URL that identifies the page for which to retrieve a <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the page identified by <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">rawURL</ph><ept id="p2">&lt;/code&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>A child provider linked to the current site map provider returned a node that is not valid.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Retrieves a <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object based on a specified key.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; class overrides the &lt;xref:System.Web.StaticSiteMapProvider.FindSiteMapNodeFromKey%2A&gt; method to ensure that any linked child providers are searched for the node, if the implementation for the base class does not return a node for <ph id="ph1">`key`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; object, derived from the &lt;xref:System.Web.StaticSiteMapProvider&gt; class and the default site map provider for ASP.NET, uses the &lt;xref:System.Web.SiteMapNode.Url%2A&gt; property of a &lt;xref:System.Web.SiteMapNode&gt; object as a lookup key in its internal collections, by default.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the &lt;xref:System.Web.SiteMapNode.Url%2A&gt; property of the &lt;xref:System.Web.SiteMapNode&gt; is set, it must be unique within the scope of the provider.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If no &lt;xref:System.Web.SiteMapNode.Url%2A&gt; is specified, the &lt;xref:System.Web.XmlSiteMapProvider&gt; automatically generates a &lt;xref:System.Web.SiteMapNode.Key%2A&gt; to track the nodes.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The FindSiteMapNodeFromKey method might call the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method on any child providers that are associated with the current provider.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, the exceptions that are described in the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method might be thrown.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>A lookup key with which to search for a <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the page identified by <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">key</ph><ept id="p2">&lt;/code&gt;</ept>; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>, if security trimming is enabled and the node cannot be shown to the current user or the node is not found by <bpt id="p4">&lt;code&gt;</bpt><ph id="ph2">key</ph><ept id="p4">&lt;/code&gt;</ept> in the node collection.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>A child provider linked to the current site map provider returned a node that is not valid.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Returns the child nodes of the site map.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to get child nodes from.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>A collection of site map nodes.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Returns the parent node of the site map.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to get the parent node from.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The parent node of the site map.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Retrieves the top-level node of the current site map data structure.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetRootNodeCore method calls the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method to retrieve the top-level node in the site map.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, any exceptions that occur for the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method can also occur when calling the GetRootNodeCore method.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the top-level node in the current site map data structure.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Initializes the <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The Initialize method does not actually build a site map, it only prepares the state of the <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to do so.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; class overrides the inherited Initialize method to apply several attributes, such as the <ph id="ph1">`siteMapFile`</ph> and <ph id="ph2">`description`</ph> attributes, to the <ph id="ph3">`attributes`</ph> collection.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to initialize.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Collections.Specialized.NameValueCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that can contain additional attributes to help initialize <ph id="ph1">`name`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>These attributes are read from the <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> configuration in the Web.config file.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.XmlSiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is initialized more than once.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Removes the specified <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object from all node collections that are tracked by the provider.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The node to remove from the node collections.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;node&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Removes a linked child site map provider from the hierarchy for the current provider.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The RemoveProvider method removes <ph id="ph1">`providerName`</ph> from the hierarchy for the current provider, including any parent/child relationships that are established by the &lt;xref:System.Web.XmlSiteMapProvider.AddProvider%2A&gt; method between site map nodes of the current provider and the removed provider.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The name of one of the <bpt id="p1">&lt;xref href="System.Web.SiteMapProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects currently registered in the &lt;xref:System.Web.SiteMap.Providers*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;providerName&lt;/code&gt;</ph> cannot be resolved.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;providerName&lt;/code&gt;</ph> is not a registered child provider of the current site map provider.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;providerName&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Gets the root node of the site map.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The RootNode property calls the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method to retrieve the top-level node in the site map.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, any exceptions that occur for the &lt;xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A&gt; method can also occur when accessing the RootNode property.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.SiteMapProvider&gt; and &lt;xref:System.Web.XmlSiteMapProvider&gt; classes permit only one root &lt;xref:System.Web.SiteMapNode&gt; object in a site map.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.XmlSiteMapProvider&gt; class overrides the abstract &lt;xref:System.Web.SiteMapProvider.RootNode%2A?displayProperty=fullName&gt; property and provides a simple implementation to track the root node.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.SiteMapNode"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the root node of the site map; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, if security trimming is enabled and the root node is not accessible to the current user.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
