@@ -27,7 +27,7 @@ items:
   nameWithType: ProjectTaskElement
   fullName: Microsoft.Build.Construction.ProjectTaskElement
   type: Class
-  summary: "代表[工作項目 (MSBuild)](~/add/includes/ajax-current-ext-md.md) MSBuild 專案中。"
+  summary: Represents a [Task Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{Name} Condition={Condition} ContinueOnError={ContinueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Outputs={Count}")]
@@ -75,19 +75,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "最後一個子系之後，將輸出項目。"
+  summary: Adds an Output item after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputItem (string taskParameter, string itemType);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "它會輸出至的項目工作的名稱。"
+      description: The name of the task which outputs to the item.
     - id: itemType
       type: System.String
-      description: "新的項目，其值設定為工作的輸出項目類型。"
+      description: The item type of the new item whose value is set to the output of the task.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "傳回加入的輸出項目。"
+      description: Returns the added Output item.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputItem*
   exceptions: []
   platform:
@@ -104,22 +104,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "最後一個子系之後加入這項工作的條件式的輸出項目。"
+  summary: Adds a conditioned Output item to this task after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputItem (string taskParameter, string itemType, string condition);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "參數的名稱。"
+      description: The name of the parameter.
     - id: itemType
       type: System.String
-      description: "項目的項目類型。"
+      description: The item type of the item.
     - id: condition
       type: System.String
-      description: "參數的條件。"
+      description: The condition of the parameter.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "傳回所加入的條件以輸出項目。"
+      description: Returns the added conditioned Output item.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputItem*
   exceptions: []
   platform:
@@ -136,19 +136,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "最後一個子系之後加入這項工作的輸出屬性。"
+  summary: Adds an Output property to this task after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty (string taskParameter, string propertyName);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "參數的名稱。"
+      description: The name of the parameter.
     - id: propertyName
       type: System.String
-      description: "屬性的名稱。"
+      description: The name of the property.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "傳回加入之輸出屬性。"
+      description: Returns the added Output property.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputProperty*
   exceptions: []
   platform:
@@ -165,22 +165,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "最後一個子系之後加入這項工作的條件式的輸出屬性。"
+  summary: Adds a conditioned Output property to this task after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty (string taskParameter, string propertyName, string condition);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "參數的名稱。"
+      description: The name of the parameter.
     - id: propertyName
       type: System.String
-      description: "屬性的名稱。"
+      description: The name of the property.
     - id: condition
       type: System.String
-      description: "屬性的條件。"
+      description: The condition of the property.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "傳回所加入的條件以輸出屬性。"
+      description: Returns the added conditioned Output property.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputProperty*
   exceptions: []
   platform:
@@ -197,13 +197,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得或設定`ContinueOnError`屬性值。"
-  remarks: "移除`ContinueOnError`屬性如果要設定的值設為 null 或空字串。"
+  summary: Gets or sets the `ContinueOnError` attribute value.
+  remarks: Removes the `ContinueOnError` attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string ContinueOnError { get; set; }
     return:
       type: System.String
-      description: "傳回`ContinueOnError`屬性值。 如果屬性不存在，則傳回空字串。"
+      description: Returns the `ContinueOnError` attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectTaskElement.ContinueOnError*
   exceptions: []
   platform:
@@ -220,12 +220,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "這個項目，如果有任何的&quot;ContinueOnError&quot;屬性的位置。       如果沒有這類屬性，會傳回 null。"
+  summary: "Location of the \"ContinueOnError\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ContinueOnErrorLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.ContinueOnErrorLocation*
   exceptions: []
   platform:
@@ -242,16 +242,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得具有指定名稱的參數值。"
+  summary: Gets the value of the parameter with the specified name.
   syntax:
     content: public string GetParameter (string name);
     parameters:
     - id: name
       type: System.String
-      description: "參數的名稱。"
+      description: The name of the parameter.
     return:
       type: System.String
-      description: "傳回具有指定名稱的參數值。 如果沒有該名稱的參數在工作中，會傳回空字串。"
+      description: Returns the value of the parameter with the specified name. If no parameter by that name exists in the task, returns an empty string.
   overload: Microsoft.Build.Construction.ProjectTaskElement.GetParameter*
   exceptions: []
   platform:
@@ -268,12 +268,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得或設定工作的架構值。       如果不存在，會傳回空字串。       如果要設定的值是空的請移除屬性。"
+  summary: "Gets or sets the architecture value for the task.  \n  \n Returns empty string if it is not present.  \n  \n Removes the attribute if the value to set is empty."
   syntax:
     content: public string MSBuildArchitecture { get; set; }
     return:
       type: System.String
-      description: "傳回<xref:System.String>。</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildArchitecture*
   exceptions: []
   platform:
@@ -290,12 +290,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "這個項目，如果有任何的&quot;MSBuildArchitecture&quot;屬性的位置。       如果沒有這類屬性，會傳回 null。"
+  summary: "Location of the \"MSBuildArchitecture\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation MSBuildArchitectureLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildArchitectureLocation*
   exceptions: []
   platform:
@@ -312,12 +312,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得或設定工作的執行階段值。       如果不存在，會傳回空字串。       如果要設定的值是空的請移除屬性。"
+  summary: "Gets or sets the runtime value for the task.  \n  \n Returns empty string if it is not present.  \n  \n Removes the attribute if the value to set is empty."
   syntax:
     content: public string MSBuildRuntime { get; set; }
     return:
       type: System.String
-      description: "傳回<xref:System.String>。</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildRuntime*
   exceptions: []
   platform:
@@ -334,12 +334,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "這個項目，如果有任何的&quot;MSBuildRuntime&quot;屬性的位置。       如果沒有這類屬性，會傳回 null。"
+  summary: "Location of the \"MSBuildRuntime\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation MSBuildRuntimeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildRuntimeLocation*
   exceptions: []
   platform:
@@ -356,12 +356,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得這項工作的名稱。"
+  summary: Gets the name of this task.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "傳回這項工作的名稱。"
+      description: Returns the name of this task.
   overload: Microsoft.Build.Construction.ProjectTaskElement.Name*
   exceptions: []
   platform:
@@ -378,12 +378,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得所有[輸出項目 (MSBuild)](~/add/includes/ajax-current-ext-md.md)子系。"
+  summary: Gets all [Output Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) children.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectOutputElement> Outputs { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectOutputElement}
-      description: "傳回所有輸出項目子系。"
+      description: Returns all Output element children.
   overload: Microsoft.Build.Construction.ProjectTaskElement.Outputs*
   exceptions: []
   platform:
@@ -400,12 +400,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "列舉項目位置的工作上的參數。       條件和 ContinueOnError，有其本身的屬性，不會包含在這個集合中。       如果只是大小寫不同的參數將傳回的最後一項。       主機可以使用 RemoveAllParameters()，仍將其他參數。"
+  summary: "Enumerable over the locations of parameters on the task.  \n  \n Condition and ContinueOnError, which have their own properties, are not included in this collection.  \n  \n If parameters differ only by case only the last one will be returned.  \n  \n Hosts can still remove the other parameters by using RemoveAllParameters()."
   syntax:
     content: public System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,Microsoft.Build.Construction.ElementLocation>> ParameterLocations { get; }
     return:
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,Microsoft.Build.Construction.ElementLocation}}
-      description: "傳回&lt;xref:System.Collections.Generic.IEnumerable%601&gt;。"
+      description: Returns &lt;xref:System.Collections.Generic.IEnumerable%601&gt;.
   overload: Microsoft.Build.Construction.ProjectTaskElement.ParameterLocations*
   exceptions: []
   platform:
@@ -422,13 +422,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得這項工作的所有未評估的參數。"
-  remarks: '`Condition`和`ContinueOnError`屬性並未包含此集合中。 如果參數只有大小寫不同，則會傳回的最後一項。 請參閱 RemoveAllParameters()。'
+  summary: Gets all unevaluated parameters of this task.
+  remarks: '`Condition` and `ContinueOnError` attributes are not included in this collection. If parameters differ only by case then only the last one will be returned. See also RemoveAllParameters().'
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> Parameters { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "傳回所有未評估的參數，這項工作。"
+      description: Returns all unevaluated parameters of this task.
   overload: Microsoft.Build.Construction.ProjectTaskElement.Parameters*
   exceptions: []
   platform:
@@ -445,7 +445,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "從工作中移除所有的參數。 不會移除任何`ContinueOnError`及/或`Condition`屬性。"
+  summary: Removes all parameters from the task. Does not remove any `ContinueOnError` and/or `Condition` attributes.
   syntax:
     content: public void RemoveAllParameters ();
     parameters: []
@@ -465,13 +465,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "移除具有指定名稱，此工作上的任何參數。 如果沒有該名稱的參數在工作中，就沒有作用。"
+  summary: Removes any parameter on this task with the specified name. If no parameter by that name exists in the task, does nothing.
   syntax:
     content: public void RemoveParameter (string name);
     parameters:
     - id: name
       type: System.String
-      description: "要移除的參數名稱。"
+      description: The name of the parameter to remove.
   overload: Microsoft.Build.Construction.ProjectTaskElement.RemoveParameter*
   exceptions: []
   platform:
@@ -488,17 +488,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "更新或將參數加入此工作上"
-  remarks: "如果該名稱的參數在工作中，更新參數指定的值。 否則，會建立具有指定的名稱和值的參數，並將它加入至工作。"
+  summary: Updates or adds a parameter on this task
+  remarks: Updates the parameter to the specified value if a parameter by that name exists in the task. Otherwise, creates a parameter with the specified name and value, and adds it to the task.
   syntax:
     content: public void SetParameter (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "若要更新或新增參數名稱。"
+      description: The name of the parameter to update or add.
     - id: unevaluatedValue
       type: System.String
-      description: "參數的值。"
+      description: The value of the parameter.
   overload: Microsoft.Build.Construction.ProjectTaskElement.SetParameter*
   exceptions: []
   platform:

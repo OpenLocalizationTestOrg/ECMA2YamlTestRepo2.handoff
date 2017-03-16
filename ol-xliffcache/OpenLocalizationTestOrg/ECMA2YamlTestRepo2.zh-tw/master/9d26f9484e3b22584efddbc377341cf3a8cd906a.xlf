@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9d26f9484e3b22584efddbc377341cf3a8cd906a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\Microsoft.SqlServer.Server.Format.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4b48fc2aea5a4d3673b099e0e5bb878b5f5d427e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dc8cd2a8f292750f7e5a7b9df1894028e584523f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Used by <bpt id="p1">&lt;xref href="Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> and <bpt id="p2">&lt;xref href="Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> to indicate the serialization format of a user-defined type (UDT) or aggregate.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Used by &lt;xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute&gt; and &lt;xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute&gt; to indicate the serialization format of a user-defined type (UDT) or aggregate.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref uid="langword_csharp_Native" name="Native" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> serialization format uses a very simple algorithm that enables SQL Server to store an efficient representation of the UDT on disk.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Types marked for <bpt id="p1">&lt;xref uid="langword_csharp_Native" name="Native" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> serialization can only have value types (structs in Microsoft Visual C# and structures in Microsoft Visual Basic .NET) as members.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Members of reference types (such as classes in Visual C# and Visual Basic), either user-defined or those existing in the framework (such as &lt;xref:System.String&gt;), are not supported.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The requirements for this format are:      -   The <ph id="ph1">`StructLayout.LayoutKindSequential`</ph> attribute must be applied to the aggregate or UDT if it is defined in a class and not a structure.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This controls the physical layout of the data fields, and is used to force the members to be laid out sequentially in the order they appear.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>SQL Server uses this attribute to determine the field order for UDTs with multiple fields.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>-   The type must contain at least one member (serialized values cannot be zero bytes in size).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>-   All the fields of the aggregate must be <bpt id="p1">*</bpt>blittable<ept id="p1">*</ept>, that is, they must have a common representation in both managed and unmanaged memory and not require special handling by the interop marshaler.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>-   All the fields of the UDT should be of one of the following types that can be serialized: <ph id="ph1">`bool`</ph>, <ph id="ph2">`byte`</ph>,<ph id="ph3">`sbyte`</ph>,<ph id="ph4">`short`</ph>,<ph id="ph5">`ushort`</ph>, <ph id="ph6">`int`</ph>, <ph id="ph7">`uint`</ph>, <ph id="ph8">`long`</ph>, <ph id="ph9">`ulong`</ph>, <ph id="ph10">`float`</ph>, <ph id="ph11">`double`</ph>, &lt;xref:System.Data.SqlTypes.SqlByte&gt;, &lt;xref:System.Data.SqlTypes.SqlInt16&gt;, &lt;xref:System.Data.SqlTypes.SqlInt32&gt;, &lt;xref:System.Data.SqlTypes.SqlInt64&gt;, &lt;xref:System.Data.SqlTypes.SqlDateTime&gt;, &lt;xref:System.Data.SqlTypes.SqlSingle&gt;, &lt;xref:System.Data.SqlTypes.SqlDouble&gt;, &lt;xref:System.Data.SqlTypes.SqlMoney&gt;, or other value types defined by the user that contain fields of one of these types.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>-   The aggregate must not specify a value for <ph id="ph1">`MaxByteSize`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>-   The aggregate must not have any [NonSerialized] fields.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>-   Fields must not be marked as an explicit layout (&lt;xref:System.Runtime.InteropServices.StructLayoutAttribute&gt;).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The serialization format is unknown.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref uid="langword_csharp_UserDefined" name="UserDefined" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> serialization format gives the developer full control over the binary format through the <bpt id="p2">&lt;xref href="Microsoft.SqlServer.Server.IBinarySerialize"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept><bpt id="p3">&lt;xref uid="langword_csharp_.Write" name=".Write" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> and <bpt id="p4">&lt;xref href="Microsoft.SqlServer.Server.IBinarySerialize"&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept><bpt id="p5">&lt;xref uid="langword_csharp_.Read" name=".Read" href=""&gt;</bpt><ept id="p5">&lt;/xref&gt;</ept> methods.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The aggregate must specify a value for <ph id="ph1">`MaxByteSize`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Specify the &lt;xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered%2A&gt; attribute property.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The default value is false.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If you omit any field in the &lt;xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A&gt; or &lt;xref:Microsoft.SqlServer.Server.IBinarySerialize.Write%2A&gt; methods, the state of that field is not serialized.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

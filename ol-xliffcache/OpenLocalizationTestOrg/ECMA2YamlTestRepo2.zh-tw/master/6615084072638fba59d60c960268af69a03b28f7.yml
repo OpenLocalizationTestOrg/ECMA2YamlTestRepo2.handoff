@@ -52,8 +52,8 @@ items:
   nameWithType: ICscHostObject
   fullName: Microsoft.Build.Tasks.Hosting.ICscHostObject
   type: Interface
-  summary: "定義介面，可讓[Csc](~/add/includes/ajax-current-ext-md.md)工作與主機整合式的開發環境 (IDE) 通訊。"
-  remarks: "這個介面允許`Csc`工作來委派專案編譯到 IDE，而不是使用命令列編譯器。"
+  summary: Defines an interface that allows the [Csc](~/add/includes/ajax-current-ext-md.md) task to communicate with the host integrated development environment (IDE).
+  remarks: This interface allows the `Csc` task to delegate project compilation to the IDE rather than using command line compilers.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -79,7 +79,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "開始初始化<xref href=&quot;Microsoft.Build.Tasks.Hosting.ICscHostObject&quot;> </xref>。"
+  summary: Begins the initialization of the <xref href="Microsoft.Build.Tasks.Hosting.ICscHostObject"></xref>.
   syntax:
     content: public void BeginInitialization ();
     parameters: []
@@ -99,13 +99,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "編譯專案。"
+  summary: Compiles the project.
   syntax:
     content: public bool Compile ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.Compile*
   exceptions: []
   platform:
@@ -122,19 +122,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "結束初始化<xref href=&quot;Microsoft.Build.Tasks.Hosting.ICscHostObject&quot;></xref>與指定的錯誤訊息和程式碼。"
+  summary: Ends the initialization of the <xref href="Microsoft.Build.Tasks.Hosting.ICscHostObject"></xref> with the specified error message and code.
   syntax:
     content: public bool EndInitialization (out string errorMessage, out int errorCode);
     parameters:
     - id: errorMessage
       type: System.String
-      description: "錯誤訊息。"
+      description: The error message.
     - id: errorCode
       type: System.Int32
-      description: "錯誤碼。"
+      description: The error code.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.EndInitialization*
   exceptions: []
   platform:
@@ -151,13 +151,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "傳回值，指出在整合式的開發環境 (IDE) 目前在設計階段模式。"
+  summary: Returns a value indicating whether the integrated development environment (IDE) is currently in design time mode.
   syntax:
     content: public bool IsDesignTime ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果在 IDE 目前在設計階段模式。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the IDE is currently in design time mode; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.IsDesignTime*
   exceptions: []
   platform:
@@ -174,13 +174,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "傳回值，指出是否為最新的已編譯的專案。"
+  summary: Returns a value indicating whether the compiled project is up-to-date.
   syntax:
     content: public bool IsUpToDate ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果已編譯的專案是最新狀態。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the compiled project is up-to-date; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.IsUpToDate*
   exceptions: []
   platform:
@@ -197,16 +197,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要搜尋參考的其他目錄。"
+  summary: Specifies additional directories to search for references.
   syntax:
     content: public bool SetAdditionalLibPaths (string[] additionalLibPaths);
     parameters:
     - id: additionalLibPaths
       type: System.String[]
-      description: "要搜尋參考的目錄陣列。"
+      description: An array of directories to search for references.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAdditionalLibPaths*
   exceptions: []
   platform:
@@ -223,16 +223,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定一或多個模組的組件的一部分。"
+  summary: Specifies one or more modules to be part of the assembly.
   syntax:
     content: public bool SetAddModules (string[] addModules);
     parameters:
     - id: addModules
       type: System.String[]
-      description: "要做為組件一部分的模組陣列。"
+      description: An array of modules to be part of the assembly.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAddModules*
   exceptions: []
   platform:
@@ -249,16 +249,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否允許使用的程式碼<xref uid=&quot;langword_csharp_unsafe&quot; name=&quot;unsafe&quot; href=&quot;&quot;></xref>關鍵字來編譯。"
+  summary: Specifies a value indicating whether to allow code that uses the <xref uid="langword_csharp_unsafe" name="unsafe" href=""></xref> keyword to compile.
   syntax:
     content: public bool SetAllowUnsafeBlocks (bool allowUnsafeBlocks);
     parameters:
     - id: allowUnsafeBlocks
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>允許程式碼會使用不安全的關鍵字來編譯;否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to allow code that uses the unsafe keyword to compile; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAllowUnsafeBlocks*
   exceptions: []
   platform:
@@ -275,16 +275,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定載入 DLL 的慣用的基底位址。"
+  summary: Specifies the preferred base address at which to load a DLL.
   syntax:
     content: public bool SetBaseAddress (string baseAddress);
     parameters:
     - id: baseAddress
       type: System.String
-      description: "慣用的基底位址載入的 DLL。"
+      description: The preferred base address at which to load a DLL.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetBaseAddress*
   exceptions: []
   platform:
@@ -301,16 +301,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出整數算術在超出範圍的資料型別是否會在執行階段例外狀況。"
+  summary: Specifies a value indicating whether integer arithmetic that overflows the bounds of the data type causes an exception at run time.
   syntax:
     content: public bool SetCheckForOverflowUnderflow (bool checkForOverflowUnderflow);
     parameters:
     - id: checkForOverflowUnderflow
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>整數算術溢位資料型別; 範圍時，會造成例外狀況否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to cause an exception when integer arithmetic overflows the bounds of the data type; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCheckForOverflowUnderflow*
   exceptions: []
   platform:
@@ -327,16 +327,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要用於在編譯中所有原始程式碼檔的字碼頁。"
+  summary: Specifies the code page to use for all source code files in the compilation.
   syntax:
     content: public bool SetCodePage (int codePage);
     parameters:
     - id: codePage
       type: System.Int32
-      description: "要用於在編譯中所有原始程式碼檔的字碼頁。"
+      description: The code page to use for all source code files in the compilation.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCodePage*
   exceptions: []
   platform:
@@ -353,16 +353,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定偵錯類型。"
+  summary: Specifies the debug type.
   syntax:
     content: public bool SetDebugType (string debugType);
     parameters:
     - id: debugType
       type: System.String
-      description: "偵錯類型，它可以是<xref uid=&quot;langword_csharp_full&quot; name=&quot;full&quot; href=&quot;&quot;></xref>或<xref uid=&quot;langword_csharp_pdbonly&quot; name=&quot;pdbonly&quot; href=&quot;&quot;> </xref>。"
+      description: The debug type, which can be <xref uid="langword_csharp_full" name="full" href=""></xref> or <xref uid="langword_csharp_pdbonly" name="pdbonly" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDebugType*
   exceptions: []
   platform:
@@ -379,16 +379,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要定義的前置處理器符號。"
+  summary: Specifies the preprocessor symbols to define.
   syntax:
     content: public bool SetDefineConstants (string defineConstants);
     parameters:
     - id: defineConstants
       type: System.String
-      description: "若要定義前置處理器符號。"
+      description: The preprocessor symbols to define.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDefineConstants*
   exceptions: []
   platform:
@@ -405,19 +405,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否要建立完整簽署組件。"
+  summary: Specifies a value indicating whether to create a fully signed assembly.
   syntax:
     content: public bool SetDelaySign (bool delaySignExplicitlySet, bool delaySign);
     parameters:
     - id: delaySignExplicitlySet
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果<xref uid=&quot;langword_csharp_DelaySign&quot; name=&quot;DelaySign&quot; href=&quot;&quot;></xref>參數已明確設定，否則<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the <xref uid="langword_csharp_DelaySign" name="DelaySign" href=""></xref> parameter is explicitly set; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     - id: delaySign
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果您想要建立完整簽署的組件。<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>如果只想要放置組件中的公開金鑰。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if you want to create a fully signed assembly; <xref uid="langword_csharp_false" name="false" href=""></xref> if you only want to place the public key in the assembly.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDelaySign*
   exceptions: []
   platform:
@@ -434,16 +434,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要停用警告的清單。"
+  summary: Specifies the list of warnings to disable.
   syntax:
     content: public bool SetDisabledWarnings (string disabledWarnings);
     parameters:
     - id: disabledWarnings
       type: System.String
-      description: "若要停用的警告清單。 以逗號分隔多個警告。"
+      description: The list of warnings to disable. Multiple warnings are separated with a comma.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDisabledWarnings*
   exceptions: []
   platform:
@@ -460,16 +460,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要儲存已處理的文件註解的 XML 檔案。"
+  summary: Specifies the XML file in which to save processed documentation comments.
   syntax:
     content: public bool SetDocumentationFile (string documentationFile);
     parameters:
     - id: documentationFile
       type: System.String
-      description: "字串，其中包含用來儲存已處理的文件註解中的檔案名稱。"
+      description: A string that contains the name of the file in which to save processed documentation comments.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDocumentationFile*
   exceptions: []
   platform:
@@ -486,16 +486,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否要產生偵錯資訊，並將它放在程式資料庫 (.pdb) 檔案。"
+  summary: Specifies a value indicating whether to generate debugging information and place it in a program database (.pdb) file.
   syntax:
     content: public bool SetEmitDebugInformation (bool emitDebugInformation);
     parameters:
     - id: emitDebugInformation
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要產生偵錯資訊，並將它放置於.pdb 檔。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to generate debugging information and place it in a .pdb file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetEmitDebugInformation*
   exceptions: []
   platform:
@@ -512,16 +512,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出如何內部編譯器錯誤報告給 Microsoft。"
+  summary: Specifies a value that indicates how internal compiler errors are reported to Microsoft.
   syntax:
     content: public bool SetErrorReport (string errorReport);
     parameters:
     - id: errorReport
       type: System.String
-      description: "值，指定如何內部編譯器錯誤報告給 Microsoft。 This value can be <xref uid=&quot;langword_csharp_prompt&quot; name=&quot;prompt&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_send&quot; name=&quot;send&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_none&quot; name=&quot;none&quot; href=&quot;&quot;></xref>."
+      description: A value specifying how internal compiler errors are reported to Microsoft. This value can be <xref uid="langword_csharp_prompt" name="prompt" href=""></xref>, <xref uid="langword_csharp_send" name="send" href=""></xref>, or <xref uid="langword_csharp_none" name="none" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetErrorReport*
   exceptions: []
   platform:
@@ -538,16 +538,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "輸出檔中指定區段的大小。"
+  summary: Specifies the size of sections in the output file.
   syntax:
     content: public bool SetFileAlignment (int fileAlignment);
     parameters:
     - id: fileAlignment
       type: System.Int32
-      description: "輸出檔中區段的大小。"
+      description: The size of sections in the output file.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetFileAlignment*
   exceptions: []
   platform:
@@ -564,16 +564,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否要在編譯器輸出中指定檔案的絕對路徑。"
+  summary: Specifies a value indicating whether to specify the absolute path to the file in the compiler output.
   syntax:
     content: public bool SetGenerateFullPaths (bool generateFullPaths);
     parameters:
     - id: generateFullPaths
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>指定檔案的絕對路徑，在編譯器輸出中。<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>在編譯器輸出中指定的檔案名稱。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> specify the absolute path to the file in the compiler output; <xref uid="langword_csharp_false" name="false" href=""></xref> to specify only the name of the file in the compiler output.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetGenerateFullPaths*
   exceptions: []
   platform:
@@ -590,16 +590,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定密碼編譯金鑰容器名稱。"
+  summary: Specifies the name of the cryptographic key container.
   syntax:
     content: public bool SetKeyContainer (string keyContainer);
     parameters:
     - id: keyContainer
       type: System.String
-      description: "密碼編譯金鑰容器的名稱。"
+      description: The name of the cryptographic key container.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyContainer*
   exceptions: []
   platform:
@@ -616,16 +616,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定包含密碼編譯金鑰的檔案名稱。"
+  summary: Specifies the file name containing the cryptographic key.
   syntax:
     content: public bool SetKeyFile (string keyFile);
     parameters:
     - id: keyFile
       type: System.String
-      description: "包含密碼編譯金鑰的檔案名稱。"
+      description: The name of the file containing the cryptographic key.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyFile*
   exceptions: []
   platform:
@@ -642,16 +642,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要使用的語言版本。"
+  summary: Specifies the version of the language to use.
   syntax:
     content: public bool SetLangVersion (string langVersion);
     parameters:
     - id: langVersion
       type: System.String
-      description: "若要使用的語言版本。"
+      description: The version of the language to use.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLangVersion*
   exceptions: []
   platform:
@@ -668,16 +668,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "建立指定的通往[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]輸出檔中的資源; 檔案不會放置在輸出檔的資源。"
+  summary: Creates links to the specified [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resources in the output file; the resource files are not placed in the output file.
   syntax:
     content: public bool SetLinkResources (Microsoft.Build.Framework.ITaskItem[] linkResources);
     parameters:
     - id: linkResources
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]資源連結至輸出檔。"
+      description: The [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resources to link to the output file.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLinkResources*
   exceptions: []
   platform:
@@ -694,19 +694,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定的位置`Main`方法。"
+  summary: Specifies the location of the `Main` method.
   syntax:
     content: public bool SetMainEntryPoint (string targetType, string mainEntryPoint);
     parameters:
     - id: targetType
       type: System.String
-      description: "輸出檔的檔案格式。 This value can be <xref uid=&quot;langword_csharp_library&quot; name=&quot;library&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_exe&quot; name=&quot;exe&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_module&quot; name=&quot;module&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_winexe&quot; name=&quot;winexe&quot; href=&quot;&quot;></xref>."
+      description: The file format of the output file. This value can be <xref uid="langword_csharp_library" name="library" href=""></xref>, <xref uid="langword_csharp_exe" name="exe" href=""></xref>, <xref uid="langword_csharp_module" name="module" href=""></xref>, or <xref uid="langword_csharp_winexe" name="winexe" href=""></xref>.
     - id: mainEntryPoint
       type: System.String
-      description: "位置<xref uid=&quot;langword_csharp_Main&quot; name=&quot;Main&quot; href=&quot;&quot;></xref>方法。"
+      description: The location of the <xref uid="langword_csharp_Main" name="Main" href=""></xref> method.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetMainEntryPoint*
   exceptions: []
   platform:
@@ -723,16 +723,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定組件.netmodule 可以存取非公用型別。"
+  summary: Specifies an assembly whose non-public types a .netmodule can access.
   syntax:
     content: public bool SetModuleAssemblyName (string moduleAssemblyName);
     parameters:
     - id: moduleAssemblyName
       type: System.String
-      description: "可以存取其非公用型別.netmodule 的組件。"
+      description: An assembly whose non-public types a .netmodule can access.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetModuleAssemblyName*
   exceptions: []
   platform:
@@ -749,16 +749,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否要避免編譯器編譯以 csc.rsp 檔案。"
+  summary: Specifies a value indicating whether to prevent the compiler from compiling with the csc.rsp file.
   syntax:
     content: public bool SetNoConfig (bool noConfig);
     parameters:
     - id: noConfig
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要防止編譯器編譯以 csc.rsp 檔案;否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to prevent the compiler from compiling with the csc.rsp file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoConfig*
   exceptions: []
   platform:
@@ -775,16 +775,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否要避免的 mscorlib.dll 匯入。"
+  summary: Specifies a value indicating whether to prevent the import of mscorlib.dll.
   syntax:
     content: public bool SetNoStandardLib (bool noStandardLib);
     parameters:
     - id: noStandardLib
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要防止 mscorlib.dll; 匯入否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to prevent the import of mscorlib.dll; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoStandardLib*
   exceptions: []
   platform:
@@ -801,16 +801,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否啟用最佳化。"
+  summary: Specifies a value indicating whether to enable optimizations.
   syntax:
     content: public bool SetOptimize (bool optimize);
     parameters:
     - id: optimize
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要啟用最佳化。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to enable optimizations; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOptimize*
   exceptions: []
   platform:
@@ -827,16 +827,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定輸出檔案的名稱。"
+  summary: Specifies the name of the output file.
   syntax:
     content: public bool SetOutputAssembly (string outputAssembly);
     parameters:
     - id: outputAssembly
       type: System.String
-      description: "輸出檔的名稱。"
+      description: The name of the output file.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOutputAssembly*
   exceptions: []
   platform:
@@ -853,16 +853,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要放置程式資料庫 (.pdb) 檔產生偵錯資訊。"
+  summary: Specifies the program database (.pdb) file in which to place generated debugging information.
   syntax:
     content: public bool SetPdbFile (string pdbFile);
     parameters:
     - id: pdbFile
       type: System.String
-      description: "中要放置的.pdb 檔產生偵錯資訊。"
+      description: The .pdb file in which to place generated debugging information.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPdbFile*
   exceptions: []
   platform:
@@ -879,16 +879,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定處理器平台為目標的輸出檔。"
+  summary: Specifies the processor platform to be targeted by the output file.
   syntax:
     content: public bool SetPlatform (string platform);
     parameters:
     - id: platform
       type: System.String
-      description: "處理器平台為目標的輸出檔。 This value can be <xref uid=&quot;langword_csharp_x86&quot; name=&quot;x86&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_x64&quot; name=&quot;x64&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_anycpu&quot; name=&quot;anycpu&quot; href=&quot;&quot;></xref>."
+      description: The processor platform to be targeted by the output file. This value can be <xref uid="langword_csharp_x86" name="x86" href=""></xref>, <xref uid="langword_csharp_x64" name="x64" href=""></xref>, or <xref uid="langword_csharp_anycpu" name="anycpu" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPlatform*
   exceptions: []
   platform:
@@ -905,16 +905,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要從中匯入到目前專案的公用型別資訊的項目。"
+  summary: Specifies the items from which to import public type information into the current project.
   syntax:
     content: public bool SetReferences (Microsoft.Build.Framework.ITaskItem[] references);
     parameters:
     - id: references
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "要從中匯入到目前專案的公用型別資訊項目。"
+      description: The items from which to import public type information into the current project.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetReferences*
   exceptions: []
   platform:
@@ -931,16 +931,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]資源將嵌入輸出檔。"
+  summary: Specifies the [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resources to embed into the output file.
   syntax:
     content: public bool SetResources (Microsoft.Build.Framework.ITaskItem[] resources);
     parameters:
     - id: resources
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]資源將嵌入輸出檔。"
+      description: The [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] resources to embed into the output file.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResources*
   exceptions: []
   platform:
@@ -957,16 +957,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定包含編譯器的命令的回應檔案。"
+  summary: Specifies the response files that contain commands for the compiler.
   syntax:
     content: public bool SetResponseFiles (Microsoft.Build.Framework.ITaskItem[] responseFiles);
     parameters:
     - id: responseFiles
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "包含編譯器的命令的回應檔。"
+      description: The response files that contain commands for the compiler.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResponseFiles*
   exceptions: []
   platform:
@@ -983,16 +983,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定一或多個[!INCLUDE[csprcs](~/add/includes/csprcs-md.md)]原始程式檔。"
+  summary: Specifies one or more [!INCLUDE[csprcs](~/add/includes/csprcs-md.md)] source files.
   syntax:
     content: public bool SetSources (Microsoft.Build.Framework.ITaskItem[] sources);
     parameters:
     - id: sources
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "一或多個[!INCLUDE[csprcs](~/add/includes/csprcs-md.md)]原始程式檔。"
+      description: One or more [!INCLUDE[csprcs](~/add/includes/csprcs-md.md)] source files.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetSources*
   exceptions: []
   platform:
@@ -1009,16 +1009,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定輸出檔的檔案格式。"
+  summary: Specifies the file format of the output file.
   syntax:
     content: public bool SetTargetType (string targetType);
     parameters:
     - id: targetType
       type: System.String
-      description: "輸出檔的檔案格式。 This value can be <xref uid=&quot;langword_csharp_library&quot; name=&quot;library&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_exe&quot; name=&quot;exe&quot; href=&quot;&quot;></xref>, <xref uid=&quot;langword_csharp_module&quot; name=&quot;module&quot; href=&quot;&quot;></xref>, or <xref uid=&quot;langword_csharp_winexe&quot; name=&quot;winexe&quot; href=&quot;&quot;></xref>."
+      description: The file format of the output file. This value can be <xref uid="langword_csharp_library" name="library" href=""></xref>, <xref uid="langword_csharp_exe" name="exe" href=""></xref>, <xref uid="langword_csharp_module" name="module" href=""></xref>, or <xref uid="langword_csharp_winexe" name="winexe" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTargetType*
   exceptions: []
   platform:
@@ -1035,16 +1035,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定值，指出是否要將所有警告視為錯誤。"
+  summary: Specifies a value indicating whether to treat all warnings as errors.
   syntax:
     content: public bool SetTreatWarningsAsErrors (bool treatWarningsAsErrors);
     parameters:
     - id: treatWarningsAsErrors
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要將所有警告視為錯誤。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to treat all warnings as errors; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTreatWarningsAsErrors*
   exceptions: []
   platform:
@@ -1061,16 +1061,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定警告層級，從 0-4。"
+  summary: Specifies the warning level, from 0-4.
   syntax:
     content: public bool SetWarningLevel (int warningLevel);
     parameters:
     - id: warningLevel
       type: System.Int32
-      description: "警告層級，從 0-4。"
+      description: The warning level, from 0-4.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningLevel*
   exceptions: []
   platform:
@@ -1087,16 +1087,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要視為錯誤的警告清單。"
+  summary: Specifies a list of warnings to treat as errors.
   syntax:
     content: public bool SetWarningsAsErrors (string warningsAsErrors);
     parameters:
     - id: warningsAsErrors
       type: System.String
-      description: "要視為錯誤的警告清單。"
+      description: A list of warnings to treat as errors.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsAsErrors*
   exceptions: []
   platform:
@@ -1113,16 +1113,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定不要視為錯誤的警告清單。"
+  summary: Specifies a list of warnings that are not treated as errors.
   syntax:
     content: public bool SetWarningsNotAsErrors (string warningsNotAsErrors);
     parameters:
     - id: warningsNotAsErrors
       type: System.String
-      description: "不要視為錯誤的警告清單。"
+      description: A list of warnings that are not treated as errors.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsNotAsErrors*
   exceptions: []
   platform:
@@ -1139,16 +1139,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定.ico 檔案插入組件。"
+  summary: Specifies an .ico file to insert into the assembly.
   syntax:
     content: public bool SetWin32Icon (string win32Icon);
     parameters:
     - id: win32Icon
       type: System.String
-      description: "要插入組件的.ico 檔案。"
+      description: The .ico file to insert into the assembly.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Icon*
   exceptions: []
   platform:
@@ -1165,16 +1165,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "指定要插入至輸出檔的 Win32 資源 (.res) 檔案。"
+  summary: Specifies a Win32 resource (.res) file to insert into the output file.
   syntax:
     content: public bool SetWin32Resource (string win32Resource);
     parameters:
     - id: win32Resource
       type: System.String
-      description: "要插入至輸出檔的 Win32 資源 (.res) 檔案。"
+      description: A Win32 resource (.res) file to insert into the output file.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Resource*
   exceptions: []
   platform:

@@ -21,7 +21,7 @@ items:
   nameWithType: ContentType
   fullName: Microsoft.Build.Framework.XamlTypes.ContentType
   type: Class
-  summary: "用來還原序列化的內容類型資訊"
+  summary: Used to deserialize the content type information
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Metadata")]
@@ -47,7 +47,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "建構函式"
+  summary: Constructor
   syntax:
     content: public ContentType ();
     parameters: []
@@ -67,7 +67,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "開始初始化。 請參閱 ISupportInitialize。"
+  summary: Begins initialization. See ISupportInitialize.
   syntax:
     content: public void BeginInit ();
     parameters: []
@@ -87,12 +87,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得或設定旗標來判斷是否有可用的預設內容類型。"
+  summary: Gets or sets a flag that determines whether default content type is available.
   syntax:
     content: public bool DefaultContentTypeForItemType { get; set; }
     return:
       type: System.Boolean
-      description: "如果使用預設內容類型，則傳回 true。"
+      description: Returns true if default content type is available.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.DefaultContentTypeForItemType*
   exceptions: []
   platform:
@@ -109,12 +109,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "將序列化 IContentType.DisplayName。"
+  summary: Serializes IContentType.DisplayName.
   syntax:
     content: public string DisplayName { get; set; }
     return:
       type: System.String
-      description: "傳回已序列化的顯示名稱。"
+      description: Returns the serialized display name.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.DisplayName*
   exceptions: []
   platform:
@@ -131,7 +131,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "初始化結束。  請參閱 ISupportInitialize。"
+  summary: Ends initialization.  See ISupportInitialize.
   syntax:
     content: public void EndInit ();
     parameters: []
@@ -151,16 +151,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得指定中繼資料名稱的值。"
+  summary: Gets the value of the given metadata name.
   syntax:
     content: public string GetMetadata (string metadataName);
     parameters:
     - id: metadataName
       type: System.String
-      description: "其值就是要擷取的中繼資料名稱。"
+      description: The name of the metadata whose value is to be retrieved.
     return:
       type: System.String
-      description: "傳回給定的中繼資料名稱的值。 如果中繼資料中找不到名稱，傳回 null。"
+      description: Returns the value of the given metadata name. Returns null if the name isn't found in the metadata.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.GetMetadata*
   exceptions: []
   platform:
@@ -177,16 +177,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "傳回具有指定之類型的靜態資料的所有執行個體的列舉值。"
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "要擷取的靜態資料型別。"
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "傳回具有指定之類型的靜態資料的所有執行個體的列舉值。 傳回<xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;></xref>或空的清單，如果沒有指定類型的物件由這個節點中提供。"
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if no objects of the given type are provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjects*
   exceptions: []
   platform:
@@ -203,13 +203,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "傳回所有類型的靜態資料的資料導向的功能，這個節點包含列舉值。"
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "傳回所有類型的靜態資料的資料導向的功能，這個節點包含列舉值。"
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -226,12 +226,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "將序列化 IContentType.DefaultContentTypeForItemType"
+  summary: Serializes IContentType.DefaultContentTypeForItemType
   syntax:
     content: public string ItemGroupName { get; set; }
     return:
       type: System.String
-      description: "傳回的項目類型的序列化的預設內容類型。"
+      description: Returns the serialized default content type for the item type.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName*
   exceptions: []
   platform:
@@ -248,12 +248,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "將序列化 IContentType.ItemType"
+  summary: Serializes IContentType.ItemType
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: "傳回已序列化的項目類型。"
+      description: Returns the serialized item type.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.ItemType*
   exceptions: []
   platform:
@@ -270,13 +270,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "序列化內容類型的中繼資料。"
-  remarks: "可透過 IContentType.GetMetadata()。"
+  summary: Serializes content type's metadata.
+  remarks: Accessable via IContentType.GetMetadata().
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.NameValuePair> Metadata { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.NameValuePair}
-      description: "傳回序列化中繼資料。"
+      description: Returns the serialized metadata.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.Metadata*
   exceptions: []
   platform:
@@ -293,12 +293,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "將序列化 IContentType.Name。"
+  summary: Serializes IContentType.Name.
   syntax:
     content: public string Name { get; set; }
     return:
       type: System.String
-      description: "傳回已序列化的名稱。"
+      description: Returns the serialized name.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.Name*
   exceptions: []
   platform:

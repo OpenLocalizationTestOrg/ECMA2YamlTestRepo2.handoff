@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d0a02d2fdd82954aab62b514a7dec62b07a8e6c3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.UI.DataSourceSelectArguments.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5e09aaf6bccc08a1eaafad3c6a882c2f1cdd4464</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6180d557018e9289b540e41a2d5751a404a16062</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides a mechanism that data-bound controls use to request data-related operations from data source controls when data is retrieved.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Data-bound controls use the DataSourceSelectArguments class to request that a data source control performs additional data-related operations on a result set, such as sorting the data or returning a specific subset of data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>These data-related operations are enumerated by the &lt;xref:System.Web.UI.DataSourceCapabilities&gt; enumeration.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The following table indicates how the DataSourceSelectArguments class supports these data-related operations.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>|Capability|Related DataSourceSelectArguments properties|   |----------------|--------------------------------------------------|   |&lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt;|&lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt;|   |&lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt;|&lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt;, &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt;|   |&lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt;|&lt;xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A&gt;, &lt;xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A&gt;|       Data-bound controls explicitly call the &lt;xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A&gt; method to bind data, which calls the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method of the data source control they are associated with.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In this way, the data-bound control retrieves data from the data source control on demand.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Because the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method accepts a DataSourceSelectArguments parameter, the data-bound control is responsible for creating and managing a DataSourceSelectArguments object and passing it to the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method when it retrieves data from the data source control.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In some cases, data-bound controls might not need any additional data-related capabilities.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In this case, data-bound controls pass an &lt;xref:System.Web.UI.DataSourceSelectArguments.Empty%2A&gt; arguments object to the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For sorted result sets, data-bound controls check a data source view's &lt;xref:System.Web.UI.DataSourceView.CanSort%2A&gt; property at run time, and add a &lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt; capability using the &lt;xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>As a separate operation, the data-bound control can request a sorted result set from a data source control by setting the &lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt; property on the DataSourceSelectArguments object passed to the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For paging scenarios, data-bound controls check a data source view's &lt;xref:System.Web.UI.DataSourceView.CanPage%2A&gt; property at run time, and add a &lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt; capability using the &lt;xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>As a separate operation, the data-bound control can request a subset of data from a data source control for paging by setting the &lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt; and &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt; properties on the DataSourceSelectArguments object passed to the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To retrieve a total row count for paging scenarios, data-bound controls check a data source view's &lt;xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A&gt; property at run time, and add a &lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt; capability using the &lt;xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>As a separate operation, the data-bound control can request a total row count from a data source control for paging by setting the &lt;xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A&gt; property on the DataSourceSelectArguments object passed to the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>When the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method returns, the total row count is contained by the &lt;xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  If any of the DataSourceSelectArguments properties are set, but the currently bound data source control does not support the requested capability, an &lt;xref:System.InvalidOperationException&gt; exception is thrown when the &lt;xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=fullName&gt; method is called.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Initializes a new default instance of the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The default constructor creates an instance of the class with the &lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt; property initialized to &lt;xref:System.String.Empty?displayProperty=fullName&gt; and the &lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt; and &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt; properties initialized to zero.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified sort expression.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The DataSourceSelectArguments constructor creates an instance of the class with the &lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt; initialized with the specified expression and the &lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt; and &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt; properties initialized to zero.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>A sort expression that data source controls use to sort the result of a data retrieval operation before the result is returned to a caller.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified starting position and number of rows to return for paging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The DataSourceSelectArguments constructor creates an instance of the class with the &lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt; initialized to &lt;xref:System.String.Empty?displayProperty=fullName&gt; and the &lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt; and &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt; properties initialized to the values provided for the <ph id="ph1">`startRowIndex`</ph> and <ph id="ph2">`maximumRows`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The index of the data row that marks the beginning of data returned by a data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The maximum number of rows that a data retrieval operation returns.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified sort expression, starting position, and number of rows to return for paging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A sort expression that data source controls use to sort the result of a data retrieval operation before the result is returned to a caller.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The index of the data row that marks the beginning of data returned by a data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The maximum number of rows that a data retrieval operation returns.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Adds one capability to the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance, which is used to compare supported capabilities and requested capabilities.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Data source controls call the AddSupportedCapabilities method for each capability the data source supports.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>After the capabilities are added, any call to the &lt;xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29&gt; method compares the supported capabilities against the requested capabilities (represented by setting the &lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt;, &lt;xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A&gt;, &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt;, and &lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt; properties).</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For example, if a capability such as &lt;xref:System.Web.UI.DataSourceCapabilities&gt; is not added but the &lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt; property is set, the &lt;xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29&gt; method throws a &lt;xref:System.NotSupportedException&gt; exception.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceCapabilities"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Gets a <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object with the sort expression set to &lt;xref:System.String.Empty&gt;.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The property returns a &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; object created with the default &lt;xref:System.Web.UI.DataSourceSelectArguments.%23ctor&gt; constructor.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>You can use the Empty property when you want to call the &lt;xref:System.Web.UI.DataSourceView.ExecuteSelect%28System.Web.UI.DataSourceSelectArguments%29&gt; method of a data source view class without any additional arguments.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Determines whether the specified <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance is equal to the current instance.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; class overrides the &lt;xref:System.Object.Equals%2A?displayProperty=fullName&gt; method to test equality using the various properties of the objects.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>If the &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt;, &lt;xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A&gt;, &lt;xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A&gt;, &lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt;, and &lt;xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A&gt; properties are all equal in value, the Equals method returns <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to compare with the current one.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the specified <bpt id="p2">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is equal to the current instance; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Returns the hash code for the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> type.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The hash code for the <bpt id="p1">&lt;xref href="System.Web.UI.DataSourceSelectArguments"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> type.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that represents the maximum number of data rows that a data source control returns for a data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The MaximumRows property supports paging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Data-bound controls check a data source view's &lt;xref:System.Web.UI.DataSourceView.CanPage%2A&gt; property at run time, and add a &lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt; capability using the &lt;xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29&gt; method if the view supports paging.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>If the data-bound control fails to add the capability, and the paging properties are set on a &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; object passed to the data source view during a data retrieval operation, an &lt;xref:System.InvalidOperationException&gt; exception might be thrown.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The data-bound control can request a subset of data from a data source control for paging by setting the &lt;xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A&gt; and MaximumRows properties on the &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; object passed to the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  If any of the &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; properties are set, but the currently bound data source control does not support the requested capability, an &lt;xref:System.InvalidOperationException&gt; exception is thrown when the &lt;xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=fullName&gt; method is called.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The maximum number of data rows that a data source returns for a data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The default value is 0, which indicates that all possible data rows are returned.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Compares the capabilities requested for an <ph id="ph1">&amp;lt;</ph>xref:System.Web.UI.DataSourceView.ExecuteSelect%28System.Web.UI.DataSourceSelectArguments%29<ph id="ph2">&amp;gt;</ph> operation against those that the specified data source view supports.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The RaiseUnsupportedCapabilitiesError method is used by data-bound controls to compare additional requested capabilities represented by the properties of the &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; class, such as the ability to sort or page through a result set, with the capabilities supported by the data source view.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The view calls its own &lt;xref:System.Web.UI.DataSourceView.RaiseUnsupportedCapabilityError%28System.Web.UI.DataSourceCapabilities%29&gt; method for each possible capability defined in the &lt;xref:System.Web.UI.DataSourceCapabilities&gt; enumeration.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  If any of the &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; properties are set, but the currently bound data source control does not support the requested capability, an &lt;xref:System.InvalidOperationException&gt; exception is thrown when the RaiseUnsupportedCapabilitiesError method is called.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The data source view that performs the data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The data source view does not support the data source capability specified.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value indicating whether a data source control should retrieve a count of all the data rows during a data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The RetrieveTotalRowCount property supports paging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Set this property to <ph id="ph1">`true`</ph> to request a total row count from the data source control during the data-retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Check the &lt;xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A?displayProperty=fullName&gt; property to determine whether a data source view supports retrieving a total row count.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>If the data source supports it, the &lt;xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A&gt; property is set by the data source control during the course of a data retrieval operation and the total data row count is returned in the &lt;xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A&gt; property, much as a value is returned in an output parameter of a method.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  If any of the &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; properties are set, but the currently bound data source control does not support the requested capability, an &lt;xref:System.InvalidOperationException&gt; exception is thrown when the &lt;xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=fullName&gt; method is called.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the data source control should retrieve a total data row count; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Gets or sets an expression that the data source view uses to sort the data retrieved by the <ph id="ph1">&amp;lt;</ph>xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The SortExpression property supports sorting scenarios.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>A string that the data source view uses to sort data retrieved by the <ph id="ph1">&amp;lt;</ph>xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.String.Empty&gt; is returned if sort expression has not been set.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that represents the starting position the data source control should use when retrieving data rows during a data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The StartRowIndex property supports paging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Data-bound controls check a data source view's &lt;xref:System.Web.UI.DataSourceView.CanPage%2A&gt; property at run time, and add a &lt;xref:System.Web.UI.DataSourceCapabilities?displayProperty=fullName&gt; capability using the &lt;xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29&gt; method if the view supports paging.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>If the data-bound control fails to add the capability, and the paging properties are set on a &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; object passed to the data source view during a data retrieval operation, an &lt;xref:System.InvalidOperationException&gt; exception might be thrown.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>As a separate operation, the data-bound control can request a subset of data from a data source control by setting the StartRowIndex and &lt;xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A&gt; properties on the &lt;xref:System.Web.UI.DataSourceSelectArguments&gt; object passed to the &lt;xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29?displayProperty=fullName&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The starting row position from which a data source control retrieves data.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>The default value is 0, which indicates that the starting position is the beginning of the result set.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Gets or sets the number of rows retrieved during a data retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The TotalRowCount property supports paging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Data source and data source view controls differ in their internal implementation for how to retrieve total row counts.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Check the &lt;xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A?displayProperty=fullName&gt; property to determine whether a data source view supports retrieving a total row count during a data-retrieval operation.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>If the data source supports it, the TotalRowCount property is set by the data source control during the course of a data-retrieval operation, and the total data row count is returned in the TotalRowCount property, much as a value is returned in an output parameter of a method.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The total number of data rows retrieved by the data retrieval operation.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -13,7 +13,7 @@ items:
   nameWithType: ProjectSchemaDefinitions
   fullName: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions
   type: Class
-  summary: "代表資料驅動型 XAML 指令碼專案結構描述。"
+  summary: Represents a data-driven XAML script project schema.
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Nodes")]
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "結構描述定義預設建構函式。"
+  summary: The default constructor of a schema definition.
   syntax:
     content: public ProjectSchemaDefinitions ();
     parameters: []
@@ -58,16 +58,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "傳回具有指定之類型的靜態資料的所有執行個體的列舉值。"
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "要擷取的靜態資料型別。"
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "傳回具有指定之類型的靜態資料的所有執行個體的列舉值。 傳回<xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;></xref>或空的清單，如果沒有指定此節點所提供之類型的物件。"
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if there are no objects of the given type provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjects*
   exceptions: []
   platform:
@@ -84,13 +84,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "傳回所有類型的靜態資料的資料導向的功能，這個節點包含列舉值。"
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "傳回所有類型的靜態資料的資料導向的功能，這個節點包含列舉值。"
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得或設定此結構描述定義的節點清單。"
+  summary: Gets or sets the list of nodes for this schema definition.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode> Nodes { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode}
-      description: "傳回此結構描述定義的節點清單。"
+      description: Returns the list of nodes for this schema definition.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes*
   exceptions: []
   platform:

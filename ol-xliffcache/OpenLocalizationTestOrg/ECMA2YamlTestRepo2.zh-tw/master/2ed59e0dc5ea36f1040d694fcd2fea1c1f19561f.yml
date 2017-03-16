@@ -25,8 +25,8 @@ items:
   nameWithType: MSBuild
   fullName: Microsoft.Build.Tasks.MSBuild
   type: Class
-  summary: "實作`MSBuild`工作。 使用`MSBuild`專案檔，才能建立及執行此工作中的項目。 如需使用參數資訊，請參閱[MSBuild 工作](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "這個類別會實作 「 MSBuild 」 工作中，將子專案檔，以建置 MSBuild 引擎。       標示為 RunInMTA，因為沒有的理由 MSBuild 工作應該 RequestBuilder 繁殖它們以外的其他執行緒執行。"
+  summary: Implements the `MSBuild` task. Use the `MSBuild` element in your project file to create and execute this task. For usage and parameter information, see [MSBuild Task](~/add/includes/ajax-current-ext-md.md).
+  remarks: "This class implements the \"MSBuild\" task, which hands off child project files to the MSBuild engine to be built.  \n  \n Marked RunInMTA because there is no reason MSBuild tasks should run on a thread other than that of the RequestBuilder which spawned them."
   syntax:
     content: >-
       [Microsoft.Build.Framework.RunInMTA]
@@ -60,7 +60,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "初始化的新執行個體<xref href=&quot;Microsoft.Build.Tasks.MSBuild&quot;></xref>類別。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.MSBuild"></xref> class.
   syntax:
     content: public MSBuild ();
     parameters: []
@@ -80,13 +80,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定布林值，指定是否在指定的專案<xref:Microsoft.Build.Tasks.MSBuild.Projects*>屬性內建的平行的如果可能的話。</xref:Microsoft.Build.Tasks.MSBuild.Projects*>"
-  remarks: "預設值是 `true`。"
+  summary: Gets or sets a Boolean value that specifies whether the projects specified in the <xref:Microsoft.Build.Tasks.MSBuild.Projects*> property are built in parallel, if possible.
+  remarks: The default value is `true`.
   syntax:
     content: public bool BuildInParallel { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果在指定的專案<xref:Microsoft.Build.Tasks.MSBuild.Projects*>屬性的話，否則會建立以平行方式<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。</xref:Microsoft.Build.Tasks.MSBuild.Projects*>"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the projects specified in the <xref:Microsoft.Build.Tasks.MSBuild.Projects*> property are built in parallel if possible; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.BuildInParallel*
   exceptions: []
   platform:
@@ -103,13 +103,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "會指示 MSBuild 引擎來建置一或多個專案檔的位置由<xref:Microsoft.Build.Tasks.MSBuild.Projects*>屬性。</xref:Microsoft.Build.Tasks.MSBuild.Projects*>"
+  summary: Instructs the MSBuild engine to build one or more project files whose locations are specified by the <xref:Microsoft.Build.Tasks.MSBuild.Projects*> property.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果所有專案都順利建置可順利啟動。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if all projects build successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.Execute*
   exceptions: []
   platform:
@@ -126,12 +126,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定要建置的專案檔。"
+  summary: Gets or sets the project files to build.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Projects { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "要建置的專案檔。"
+      description: The project files to build.
   overload: Microsoft.Build.Tasks.MSBuild.Projects*
   exceptions: []
   platform:
@@ -148,13 +148,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定當做全域屬性套用至子專案的屬性名稱/值組的分號分隔清單。"
-  remarks: "當您指定這個參數時，它是功能上相當於設定的屬性**/property**時以切換。"
+  summary: Gets or sets a semicolon-delimited list of property name/value pairs to apply as global properties to the child project.
+  remarks: When you specify this parameter, it is functionally equivalent to setting properties that have the **/property** switch when you build with .
   syntax:
     content: public string[] Properties { get; set; }
     return:
       type: System.String[]
-      description: "當做全域屬性套用至子專案的屬性名稱/值組的分號分隔清單。"
+      description: A semicolon-delimited list of property name/value pairs to apply as global properties to the child project.
   overload: Microsoft.Build.Tasks.MSBuild.Properties*
   exceptions: []
   platform:
@@ -171,13 +171,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定布林值，指定目標的相對路徑是否輸出已建置的專案中的項目會將其調整為相對於呼叫專案的路徑。"
-  remarks: "預設值為 `false`。"
+  summary: Gets or sets a Boolean value that specifies whether the relative paths of target output items from the built projects have their paths adjusted to be relative to the calling project.
+  remarks: Default is `false`.
   syntax:
     content: public bool RebaseOutputs { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果已建置的專案目標輸出項目相對路徑會將其調整為相對於呼叫專案的路徑。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the relative paths of target output items from the built projects have their paths adjusted to be relative to the calling project.
   overload: Microsoft.Build.Tasks.MSBuild.RebaseOutputs*
   exceptions: []
   platform:
@@ -194,12 +194,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定要移除全域屬性的集合。"
+  summary: Gets or sets the set of global properties to remove.
   syntax:
     content: public string RemoveProperties { get; set; }
     return:
       type: System.String
-      description: "傳回集合的全域屬性中移除。"
+      description: Returns the set of global properties to remove.
   overload: Microsoft.Build.Tasks.MSBuild.RemoveProperties*
   exceptions: []
   platform:
@@ -216,13 +216,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定布林值，指定是否[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]工作會叫用傳遞至清單中的每個目標[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]一次，而不是在相同的時間。"
-  remarks: "此屬性設定為`true`保證，即使先前叫用的目標失敗，會叫用後續的目標。 否則，建置錯誤，便會停止引動過程的所有後續的目標。 預設值是 `false`。"
+  summary: Gets or sets a Boolean value that specifies whether the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task invokes each target in the list passed to [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] one at a time, instead of at the same time.
+  remarks: Setting this property to `true` guarantees that subsequent targets are invoked even if previously invoked targets failed. Otherwise, a build error would stop invocation of all subsequent targets. The default value is `false`.
   syntax:
     content: public bool RunEachTargetSeparately { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]工作會叫用傳遞至清單中的每個目標[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]一次。<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>如果[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]工作會在清單中的所有目標叫都用一次。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task invokes each target in the list passed to [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] one at a time; <xref uid="langword_csharp_false" name="false" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task invokes all targets in the list at the same time.
   overload: Microsoft.Build.Tasks.MSBuild.RunEachTargetSeparately*
   exceptions: []
   platform:
@@ -239,13 +239,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定布林值，指定是否將略過不存在於磁碟的專案檔。"
-  remarks: "如果不會略過不存在於磁碟的專案檔，將會發生建置錯誤。"
+  summary: Gets or sets a Boolean value that specifies whether project files that do not exist on the disk will be skipped.
+  remarks: If project files that do not exist on the disk are not skipped, they will cause a build error.
   syntax:
     content: public string SkipNonexistentProjects { get; set; }
     return:
       type: System.String
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果不存在於磁碟的專案檔案將會略過。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if project files that do not exist on the disk will be skipped; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.SkipNonexistentProjects*
   exceptions: []
   platform:
@@ -262,12 +262,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定布林值，指定工作是否應該停止建置其餘的專案，只要其中任何一項可能無法運作。"
+  summary: Gets or sets a Boolean value that specifies whether the task should stop building the remaining projects as soon as any one of them may not work.
   syntax:
     content: public bool StopOnFirstFailure { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果工作應該停止建置其餘的專案，只要其中任何一項可能無法運作。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task should stop building the remaining projects as soon as any one of them may not work; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.StopOnFirstFailure*
   exceptions: []
   platform:
@@ -284,13 +284,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定逸出字元是從指定的未經逸出<> *> 和<> *>。"
-  remarks: "這個屬性已設為值以外的其他`null`的`MSBuild`不要逸出屬性和目標的工作。"
+  summary: Gets or sets the escape characters to be unescaped from the specified <xref:Microsoft.Build.Tasks.MSBuild.Properties*> and <xref:Microsoft.Build.Tasks.MSBuild.Targets*>.
+  remarks: This property has to be set to a value other than `null` for the `MSBuild` task to unescape properties and targets.
   syntax:
     content: public string[] TargetAndPropertyListSeparators { get; set; }
     return:
       type: System.String[]
-      description: "逸出字元是從指定的未經逸出<> *> 和<> *>。"
+      description: The escape characters to be unescaped from the specified <xref:Microsoft.Build.Tasks.MSBuild.Properties*> and <xref:Microsoft.Build.Tasks.MSBuild.Targets*>.
   overload: Microsoft.Build.Tasks.MSBuild.TargetAndPropertyListSeparators*
   exceptions: []
   platform:
@@ -307,12 +307,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "傳回所有的專案檔建置目標的輸出。 從指定之目標的輸出會傳回，可能存在於這些目標所依賴的任何輸出。"
+  summary: Returns the outputs of the built targets from all the project files. Only the outputs from the targets that were specified are returned, not any outputs that may exist on targets that those targets depend on.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TargetOutputs { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "所有專案檔建置目標的輸出。"
+      description: The outputs of the built targets from all the project files.
   overload: Microsoft.Build.Tasks.MSBuild.TargetOutputs*
   exceptions: []
   platform:
@@ -329,13 +329,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定要在專案檔中建置的目標。 使用分號分隔的目標名稱清單。"
-  remarks: "如果未指定目標中`MSBuild`工作中，會建置的專案檔中指定的預設目標。"
+  summary: Gets or sets the target or targets to build in the project files. Use a semicolon to separate a list of target names.
+  remarks: If no targets are specified in the `MSBuild` task, the default targets specified in the project files are built.
   syntax:
     content: public string[] Targets { get; set; }
     return:
       type: System.String[]
-      description: "目標或目標，以建置專案檔中。"
+      description: The target or targets to build in the project files.
   overload: Microsoft.Build.Tasks.MSBuild.Targets*
   exceptions: []
   platform:
@@ -352,13 +352,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定目標[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]版本來建置專案，可讓[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]建置目標的不同版本的專案工作[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]專案中所指定。 Valid values are <code>2.0</code>, <code>3.0</code> and <code>3.5</code>."
-  remarks: "預設值是 `3.5.`"
+  summary: Gets or sets a target [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version to build the project with, which enables an [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] task to build a project that targets a different version of the [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] than the one specified in the project. Valid values are <code>2.0</code>, <code>3.0</code> and <code>3.5</code>.
+  remarks: The default value is `3.5.`
   syntax:
     content: public string ToolsVersion { get; set; }
     return:
       type: System.String
-      description: "目標[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]版本建置的專案。"
+      description: The target [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version to build the project with.
   overload: Microsoft.Build.Tasks.MSBuild.ToolsVersion*
   exceptions: []
   platform:
@@ -375,12 +375,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定布林值，指定是否將會卸載作業完成。"
+  summary: Gets or sets a Boolean value that specifies whether the project will be unloaded once the operation is completed.
   syntax:
     content: public bool UnloadProjectsOnCompletion { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果專案將會卸載作業已完成;否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。 這個屬性不會再用於 4.0 版"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project will be unloaded once the operation is completed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>. This property is no longer used in version 4.0
   overload: Microsoft.Build.Tasks.MSBuild.UnloadProjectsOnCompletion*
   exceptions: []
   platform:
@@ -397,13 +397,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定布林值，指出是否 MSBuild 引擎會從快取傳回之建置的目標。"
-  remarks: "現金建置目標的範圍是 (ProjectFileName GlobalProperties) [TargetNames] 做為組建項目清單。       4.0 版中不再使用這個屬性。"
+  summary: Gets or sets a Boolean value that indicates whether the MSBuild engine will return the built targets from the cache.
+  remarks: "The scope of built targets in the cash is (ProjectFileName, GlobalProperties)[TargetNames] as a list of build items.  \n  \n This property is no longer used in version 4.0."
   syntax:
     content: public bool UseResultsCache { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果 MSBuild 引擎會從快取; 傳回建置的目標否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the MSBuild engine will return the built targets from the cache; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.MSBuild.UseResultsCache*
   exceptions: []
   platform:

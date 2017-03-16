@@ -48,7 +48,7 @@ items:
   nameWithType: DeployManifest
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest
   type: Class
-  summary: "代表 ClickOnce 部署資訊清單。"
+  summary: Represents a ClickOnce deployment manifest.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -94,7 +94,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "初始化的新執行個體<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest&quot;></xref>類別。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest"></xref> class.
   syntax:
     content: public DeployManifest ();
     parameters: []
@@ -114,13 +114,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "初始化的新執行個體<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest&quot;> </xref>。"
+  summary: Initializes a new instance of <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest"></xref>.
   syntax:
     content: public DeployManifest (string targetFrameworkMoniker);
     parameters:
     - id: targetFrameworkMoniker
       type: System.String
-      description: "語彙基元所代表的.NET Framework 執行階段版本。"
+      description: A token that represents a version of the .NET Framework runtime.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.#ctor*
   exceptions: []
   platform:
@@ -137,12 +137,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得應用程式可執行的.NET framework 版本。"
+  summary: Gets the versions of the .NET Framework that an application can run on.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection CompatibleFrameworks { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection&quot;> </xref>類別，表示應用程式可執行的.NET framework 版本。"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection"></xref> class that represents the versions of the .NET Framework that an application can run on.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CompatibleFrameworks*
   exceptions: []
   platform:
@@ -159,12 +159,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定值，指出是否要建立桌面捷徑。"
+  summary: Gets or sets a value that indicates whether to create a desktop shortcut.
   syntax:
     content: public bool CreateDesktopShortcut { get; set; }
     return:
       type: System.Boolean
-      description: "&quot;true&quot;或者&quot;false&quot;。 字串，包含值，指出是否要建立桌面捷徑。"
+      description: "\"true\" or \"false\". A string that contains a value that indicates whether to create a desktop shortcut."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CreateDesktopShortcut*
   exceptions: []
   platform:
@@ -181,13 +181,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定應用程式的更新位置。"
-  remarks: "如果未指定這個屬性，為應用程式會不定義任何更新的位置。 不過，如果未指定應用程式更新，就必須指定更新的位置。 指定的值應該是完整的 URL 或通用命名慣例 (UNC) 路徑。"
+  summary: Gets or sets the update location for the application.
+  remarks: If this property is not specified, no update location will be defined for the application. However, if application updates are specified, the update location must be specified. The specified value should be a fully qualified URL or Universal Naming Convention (UNC) path.
   syntax:
     content: public string DeploymentUrl { get; set; }
     return:
       type: System.String
-      description: "字串，表示應用程式的更新位置。"
+      description: A string that indicates the update location for the application.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DeploymentUrl*
   exceptions: []
   platform:
@@ -204,13 +204,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定值，指出是否應該封鎖應用程式透過 URL 啟動。"
-  remarks: "如果這個選項是`true`，應用程式只能從使用者的啟動**啟動**功能表。 預設值是 `false`。 會忽略這個選項，如果<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>是`false`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>"
+  summary: Gets or sets a value indicating whether the application should be blocked from being started by means of a URL.
+  remarks: If this option is `true`, the application can only be started from the user's **Start** menu. The default is `false`. This option is ignored if <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> is `false`.
   syntax:
     content: public bool DisallowUrlActivation { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果應用程式遭到封鎖的 URL，否則為透過啟動<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the application is blocked from being started by means of a URL otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DisallowUrlActivation*
   exceptions: []
   platform:
@@ -227,12 +227,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定應用程式的進入點部署參考。"
+  summary: Gets or sets a deployment reference that is the entry point of the application.
   syntax:
     content: public override Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference EntryPoint { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: "<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference&quot;> </xref>物件，表示應用程式的進入點。"
+      description: An <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference"></xref> object that represents the entry point of the application.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.EntryPoint*
   exceptions: []
   platform:
@@ -249,12 +249,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定錯誤報表的 URL。"
+  summary: Gets or sets the URL of the error report.
   syntax:
     content: public string ErrorReportUrl { get; set; }
     return:
       type: System.String
-      description: "字串，包含錯誤報表的 URL。"
+      description: A string that contains the URL of the error report.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.ErrorReportUrl*
   exceptions: []
   platform:
@@ -271,13 +271,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定值，指出應用程式安裝的應用程式或僅限線上應用程式。"
-  remarks: "如果這個屬性設定為`true`，應用程式將會安裝在使用者的**啟動** 功能表上，而且可以移除使用**新增或移除程式**控制台 中。 預設值是 `true`。 如果這個屬性設定為`false`，應用程式僅供線上使用從網頁上，會在線上。      > [!NOTE] > 的 WPF Web 瀏覽器應用程式，您必須設定<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser%2A>屬性`true`，您也必須將安裝為和`false`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser%2A> 如果不符合此條件，您會收到[MSBuild 錯誤 MSB3116](~/add/includes/ajax-current-ext-md.md)。"
+  summary: Gets or sets a value indicating whether the application is an installed application or an online-only application.
+  remarks: "If this property is set to `true`, the application will be installed on the user's **Start** menu, and it can be removed by using **Add or Remove Programs** in Control Panel. The default is `true`. If this property is set to `false`, the application is intended for online use from a Web page and is available online only.  \n  \n> [!NOTE]\n>  For WPF Web Browser Applications, you must set the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser%2A> property to `true`, and you must also set Install to `false`. If this condition is not met, you will receive [MSBuild Error MSB3116](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: public bool Install { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果應用程式已安裝的應用程式。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the application is an installed application; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install*
   exceptions: []
   platform:
@@ -294,13 +294,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定值，指出是否使用.deploy 副檔名對應。"
-  remarks: "如果這個屬性設定為`true`，每個程式檔案發佈.deploy 副檔名。 此設定可用於限制數目的副檔名必須是已解除封鎖，若要啟用 ClickOnce 應用程式部署的網頁伺服器安全性。 預設值是 `false`。"
+  summary: Gets or sets a value indicating whether .deploy file extension mapping is used.
+  remarks: If this property is set to `true`, every program file is published with a .deploy file extension. This setting is useful for Web server security to limit the number of file extensions that have to be unblocked to enable ClickOnce application deployment. The default is `false`.
   syntax:
     content: public bool MapFileExtensions { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果使用.deploy 副檔名對應。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if .deploy file extension mapping is used; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MapFileExtensions*
   exceptions: []
   platform:
@@ -317,13 +317,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定應用程式的最小必要的版本號碼。"
-  remarks: "如果使用者的電腦低於最低需求版本，這個屬性所指定的應用程式的版本，使用者不會略過更新的選項。 預設為沒有最小必要的版本。 此輸入時，才適用<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>設為`true`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>"
+  summary: Gets or sets the minimum required version number for an application.
+  remarks: If the user's computer has a version of the application that is lower than the minimum required version specified by this property, the user will not have the option to skip the update. The default is to have no minimum required version. This input applies only when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> is set to `true`.
   syntax:
     content: public string MinimumRequiredVersion { get; set; }
     return:
       type: System.String
-      description: "字串，表示應用程式的最小必要的版本號碼。"
+      description: A string indicating the minimum required version number for an application.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MinimumRequiredVersion*
   exceptions: []
   platform:
@@ -340,13 +340,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定應用程式的名稱。"
-  remarks: "如果這個屬性會不指定任何值，則會從產生的資訊清單識別推斷名稱。 捷徑名稱使用這個名稱在**啟動**功能表會出現在名稱的一部分且**新增或移除程式**控制台 中。"
+  summary: Gets or sets the name of the application.
+  remarks: If no value is specified for this property, the name is inferred from the identity of the generated manifest. This name is used for the shortcut name on the **Start** menu and is part of the name that appears in **Add or Remove Programs** in Control Panel.
   syntax:
     content: public string Product { get; set; }
     return:
       type: System.String
-      description: "表示應用程式名稱的字串。"
+      description: A string that indicates the name of the application.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Product*
   exceptions: []
   platform:
@@ -363,13 +363,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定應用程式的 「 發行者 」。"
-  remarks: "如果這個屬性會不指定任何值，則會推斷名稱，從已註冊的使用者，或從產生的資訊清單的識別。 資料夾名稱會使用這個名稱在**啟動**功能表會出現在名稱的一部分且**新增或移除程式**控制台 中。"
+  summary: Gets or sets the publisher of the application.
+  remarks: If no value is specified for this property, the name is inferred from the registered user or from the identity of the generated manifest. This name is used for the folder name on the **Start** menu and is part of the name that appears in **Add or Remove Programs** in Control Panel.
   syntax:
     content: public string Publisher { get; set; }
     return:
       type: System.String
-      description: "字串，表示應用程式的 「 發行者 」。"
+      description: A string that indicates the publisher of the application.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Publisher*
   exceptions: []
   platform:
@@ -386,12 +386,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定為清單中所定義的套件名稱。"
+  summary: Gets or sets the suite name that is defined in the manifest.
   syntax:
     content: public string SuiteName { get; set; }
     return:
       type: System.String
-      description: "包含套件名稱的字串。"
+      description: A string that contains the suite name.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SuiteName*
   exceptions: []
   platform:
@@ -408,13 +408,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定會出現在連結**新增或移除程式**應用程式的 [控制台] 中。"
-  remarks: "指定的值應該是完整的 URL 或通用命名慣例 (UNC) 路徑。"
+  summary: Gets or sets the link that appears in **Add or Remove Programs** in Control Panel for the application.
+  remarks: The specified value should be a fully qualified URL or Universal Naming Convention (UNC) path.
   syntax:
     content: public string SupportUrl { get; set; }
     return:
       type: System.String
-      description: "表示支援 URL 的字串。"
+      description: A string that indicates the support URL.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SupportUrl*
   exceptions: []
   platform:
@@ -431,12 +431,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定代表.NET Framework 執行階段版本的語彙基元。"
+  summary: Gets or sets a token that represents a version of the .NET Framework runtime.
   syntax:
     content: public string TargetFrameworkMoniker { get; set; }
     return:
       type: System.String
-      description: "A<xref:System.String>表示.NET Framework 執行階段版本。</xref:System.String>"
+      description: A <xref:System.String> that represents a version of the .NET Framework runtime.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TargetFrameworkMoniker*
   exceptions: []
   platform:
@@ -453,13 +453,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定值，指出是否能在應用程式的 URL 查詢字串參數。"
-  remarks: "如果這個屬性設定為`true`，URL 查詢字串參數可用於應用程式。 預設值是`false`，指定參數將無法使用應用程式。"
+  summary: Gets or sets a value indicating whether URL query-string parameters are available to the application.
+  remarks: If this property is set to `true`, URL query-string parameters are available to the application. The default is `false`, specifying that parameters will not be available to the application.
   syntax:
     content: public bool TrustUrlParameters { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果 URL 查詢字串參數可用於應用程式。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if URL query-string parameters are available to the application; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TrustUrlParameters*
   exceptions: []
   platform:
@@ -476,13 +476,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定值，指出是否可以更新應用程式。"
-  remarks: "如果這個屬性設定為`true`，是可更新的應用程式。 預設值是 `false`。 此輸入時，才適用<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>設為`true`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>"
+  summary: Gets or sets a value indicating whether the application is updatable.
+  remarks: If this property is set to `true`, the application is updatable. The default is `false`. This input applies only when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> is set to `true`.
   syntax:
     content: public bool UpdateEnabled { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果應用程式更新。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the application is updatable; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled*
   exceptions: []
   platform:
@@ -499,13 +499,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定應用程式的更新間隔。"
-  remarks: "預設值為&0;。 此輸入只適用於只有當<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A>都設定為`true`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>"
+  summary: Gets or sets the update interval for the application.
+  remarks: The default is zero. This input only applies only when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A> are both set to `true`.
   syntax:
     content: public int UpdateInterval { get; set; }
     return:
       type: System.Int32
-      description: "整數，表示應用程式的更新間隔。"
+      description: An integer that indicates the update interval for the application.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*
   exceptions: []
   platform:
@@ -522,13 +522,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定物件，指出是否應該檢查更新在前景之前先啟動應用程式，或在背景中執行應用程式時。"
-  remarks: "如果這個屬性設定為`Foreground`，更新已在前景。 預設值是 `Background`。 如需詳細資訊，請參閱<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode>。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode>       此輸入只適用於只有當<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A>都設定為`true`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>"
+  summary: Gets or sets an object indicating whether updates should be checked in the foreground before the application is started, or in the background while the application is running.
+  remarks: "If this property is set to `Foreground`, updates are checked in the foreground. The default is `Background`. For more information, see <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode>.  \n  \n This input only applies only when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A> are both set to `true`."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode UpdateMode { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode
-      description: "<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode&quot;> </xref>物件，指出是否應該檢查更新，才能啟動應用程式時，或在執行應用程式。"
+      description: An <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode"></xref> object that indicates whether updates should be checked before the application is started, or while the application is running.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateMode*
   exceptions: []
   platform:
@@ -545,13 +545,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定所用的單位<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>"
-  remarks: "下列是可用的更新間隔內所用的單位︰ `Days`， `Hours`，和`Weeks`。 如需詳細資訊，請參閱<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit>。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit>       此輸入只適用於只有當<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>和<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A>都設定為`true`。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A>"
+  summary: Gets or sets the units used for the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*> property.
+  remarks: "The following values are available for the units used for the update interval: `Days`, `Hours`, and `Weeks`. For more information, see <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit>.  \n  \n This input only applies only when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install%2A> and <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled%2A> are both set to `true`."
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit UpdateUnit { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit
-      description: "<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit&quot;> </xref>物件，表示所用的單位<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>"
+      description: An <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateUnit"></xref> object that indicates the units used for the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateUnit*
   exceptions: []
   platform:
@@ -568,7 +568,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "執行各種檢查，確認資訊清單的有效性。 中所報告任何產生的錯誤或警告<xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection&quot;></xref>物件。"
+  summary: Performs various checks to verify the validity of the manifest. Any resulting errors or warnings are reported in the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection"></xref> object.
   syntax:
     content: public override void Validate ();
     parameters: []
@@ -588,12 +588,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定 XML 項目，表示應用程式可執行的.NET framework 版本的陣列。"
+  summary: Gets or sets the array of XML elements that represent the versions of the .NET Framework that an application can run on.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework[] XmlCompatibleFrameworks { get; set; }
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework[]
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework&quot;> </xref>類別，表示比應用程式可執行的.NET framework 版本。"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework"></xref> class that represents the versions of the .NET Framework than an application can run on.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlCompatibleFrameworks*
   exceptions: []
   platform:
@@ -610,12 +610,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CreateDesktopShortcut*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CreateDesktopShortcut*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CreateDesktopShortcut*> property to an XML file.
   syntax:
     content: public string XmlCreateDesktopShortcut { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CreateDesktopShortcut*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CreateDesktopShortcut*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.CreateDesktopShortcut*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlCreateDesktopShortcut*
   exceptions: []
   platform:
@@ -632,12 +632,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DeploymentUrl*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DeploymentUrl*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DeploymentUrl*> property to an XML file.
   syntax:
     content: public string XmlDeploymentUrl { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DeploymentUrl*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DeploymentUrl*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DeploymentUrl*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlDeploymentUrl*
   exceptions: []
   platform:
@@ -654,12 +654,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DisallowUrlActivation*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DisallowUrlActivation*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DisallowUrlActivation*> property to an XML file.
   syntax:
     content: public string XmlDisallowUrlActivation { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DisallowUrlActivation*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DisallowUrlActivation*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.DisallowUrlActivation*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlDisallowUrlActivation*
   exceptions: []
   platform:
@@ -676,12 +676,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.ErrorReportUrl*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.ErrorReportUrl*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.ErrorReportUrl*> property to an XML file.
   syntax:
     content: public string XmlErrorReportUrl { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.ErrorReportUrl*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.ErrorReportUrl*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.ErrorReportUrl*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlErrorReportUrl*
   exceptions: []
   platform:
@@ -698,12 +698,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install*> property to an XML file.
   syntax:
     content: public string XmlInstall { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Install*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlInstall*
   exceptions: []
   platform:
@@ -720,12 +720,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MapFileExtensions*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MapFileExtensions*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MapFileExtensions*> property to an XML file.
   syntax:
     content: public string XmlMapFileExtensions { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MapFileExtensions*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MapFileExtensions*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MapFileExtensions*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlMapFileExtensions*
   exceptions: []
   platform:
@@ -742,12 +742,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MinimumRequiredVersion*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MinimumRequiredVersion*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MinimumRequiredVersion*> property to an XML file.
   syntax:
     content: public string XmlMinimumRequiredVersion { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MinimumRequiredVersion*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MinimumRequiredVersion*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.MinimumRequiredVersion*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlMinimumRequiredVersion*
   exceptions: []
   platform:
@@ -764,12 +764,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Product*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Product*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Product*> property to an XML file.
   syntax:
     content: public string XmlProduct { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Product*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Product*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Product*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlProduct*
   exceptions: []
   platform:
@@ -786,12 +786,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Publisher*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Publisher*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Publisher*> property to an XML file.
   syntax:
     content: public string XmlPublisher { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Publisher*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Publisher*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.Publisher*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlPublisher*
   exceptions: []
   platform:
@@ -808,12 +808,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SuiteName*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SuiteName*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SuiteName*> property to an XML file.
   syntax:
     content: public string XmlSuiteName { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SuiteName*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SuiteName*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SuiteName*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlSuiteName*
   exceptions: []
   platform:
@@ -830,12 +830,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SupportUrl*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SupportUrl*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SupportUrl*> property to an XML file.
   syntax:
     content: public string XmlSupportUrl { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SupportUrl*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SupportUrl*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.SupportUrl*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlSupportUrl*
   exceptions: []
   platform:
@@ -852,12 +852,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TrustUrlParameters*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TrustUrlParameters*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TrustUrlParameters*> property to an XML file.
   syntax:
     content: public string XmlTrustUrlParameters { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TrustUrlParameters*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TrustUrlParameters*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.TrustUrlParameters*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlTrustUrlParameters*
   exceptions: []
   platform:
@@ -874,12 +874,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled*> property to an XML file.
   syntax:
     content: public string XmlUpdateEnabled { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateEnabled*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlUpdateEnabled*
   exceptions: []
   platform:
@@ -896,12 +896,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*> property to an XML file.
   syntax:
     content: public string XmlUpdateInterval { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateInterval*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlUpdateInterval*
   exceptions: []
   platform:
@@ -918,12 +918,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateMode*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateMode*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateMode*> property to an XML file.
   syntax:
     content: public string XmlUpdateMode { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateMode*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateMode*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateMode*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlUpdateMode*
   exceptions: []
   platform:
@@ -940,12 +940,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "取得或設定此屬性，用來序列化<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateUnit*>至 XML 檔案的屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateUnit*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateUnit*> property to an XML file.
   syntax:
     content: public string XmlUpdateUnit { get; set; }
     return:
       type: System.String
-      description: "值<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateUnit*>屬性。</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateUnit*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.UpdateUnit*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest.XmlUpdateUnit*
   exceptions: []
   platform:

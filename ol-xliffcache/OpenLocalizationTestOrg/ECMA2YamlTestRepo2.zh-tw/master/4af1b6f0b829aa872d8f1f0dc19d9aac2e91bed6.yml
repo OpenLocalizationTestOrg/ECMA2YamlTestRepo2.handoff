@@ -32,7 +32,7 @@ items:
   nameWithType: GenerateManifestBase
   fullName: Microsoft.Build.Tasks.GenerateManifestBase
   type: Class
-  summary: "代表資訊清單產生的所有工作的基底類別。"
+  summary: Represents the base class for all manifest generation tasks.
   syntax:
     content: 'public abstract class GenerateManifestBase : Microsoft.Build.Utilities.Task'
   inheritance:
@@ -62,7 +62,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "初始化的新執行個體<xref href=&quot;Microsoft.Build.Tasks.GenerateManifestBase&quot;></xref>類別。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.GenerateManifestBase"></xref> class.
   syntax:
     content: protected GenerateManifestBase ();
     parameters: []
@@ -82,16 +82,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "將組件參考加入資訊清單中，根據指定的項目。"
+  summary: Adds an assembly reference to the manifest, based on the specified item.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyFromItem (Microsoft.Build.Framework.ITaskItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "要建立的組件參考新增至資訊清單項目。"
+      description: The item from which to create an assembly reference to add to the manifest.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: "組件參考新增至資訊清單。"
+      description: The assembly reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyFromItem*
   exceptions: []
   platform:
@@ -108,19 +108,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "將組件參考加入資訊清單中，根據指定的項目和組件參考型別。"
+  summary: Adds an assembly reference to the manifest, based on the specified item and the assembly reference type.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyNameFromItem (Microsoft.Build.Framework.ITaskItem item, Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "要建立的組件參考新增至資訊清單項目。"
+      description: The item from which to create an assembly reference to add to the manifest.
     - id: referenceType
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType
-      description: "組件的參考型別。"
+      description: The assembly reference type.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: "組件參考新增至資訊清單。"
+      description: The assembly reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyNameFromItem*
   exceptions: []
   platform:
@@ -137,19 +137,19 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "進入點將參考加入至清單中，根據指定的項目和組件參考型別。"
+  summary: Adds an entry point reference to the manifest, based on the specified item and the assembly reference type.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddEntryPointFromItem (Microsoft.Build.Framework.ITaskItem item, Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "要建立之項目的項目點新增至資訊清單的參考。"
+      description: The item from which to create the entry point reference to add to the manifest.
     - id: referenceType
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType
-      description: "進入點的組件參考型別。"
+      description: The entry point assembly reference type.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference
-      description: "已新增至資訊清單的進入點參考。"
+      description: The entry point reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddEntryPointFromItem*
   exceptions: []
   platform:
@@ -166,16 +166,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "將檔案參考加入資訊清單中，根據指定的項目。"
+  summary: Adds a file reference to the manifest, based on the specified item.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference AddFileFromItem (Microsoft.Build.Framework.ITaskItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "用來建立檔案參考加入至資訊清單項目。"
+      description: The item from which to create the file reference to add to the manifest.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference
-      description: "已加入至資訊清單檔案參考。"
+      description: The file reference that was added to the manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AddFileFromItem*
   exceptions: []
   platform:
@@ -192,12 +192,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定組件名稱。"
+  summary: Gets or sets the name of the assembly.
   syntax:
     content: public string AssemblyName { get; set; }
     return:
       type: System.String
-      description: "組件的名稱。"
+      description: The name of the assembly.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AssemblyName*
   exceptions: []
   platform:
@@ -214,12 +214,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定組件版本。"
+  summary: Gets or sets the assembly version.
   syntax:
     content: public string AssemblyVersion { get; set; }
     return:
       type: System.String
-      description: "組件版本。"
+      description: The assembly version.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.AssemblyVersion*
   exceptions: []
   platform:
@@ -236,12 +236,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定資訊清單描述文字。"
+  summary: Gets or sets the manifest description text.
   syntax:
     content: public string Description { get; set; }
     return:
       type: System.String
-      description: "資訊清單描述文字。"
+      description: The manifest description text.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.Description*
   exceptions: []
   platform:
@@ -258,12 +258,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定 managed 組件或 ClickOnce 資訊清單參考，此為資訊清單的進入點。"
+  summary: Gets or sets the managed assembly or ClickOnce manifest reference that is the entry point to the manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem EntryPoint { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Managed 組件或 ClickOnce 資訊清單參考的應用程式的進入點。"
+      description: The managed assembly or ClickOnce manifest reference that is the entry point to the application.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.EntryPoint*
   exceptions: []
   platform:
@@ -280,13 +280,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "執行`GenerateManifestBase`工作。"
+  summary: Executes the `GenerateManifestBase` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果工作執行成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.Execute*
   exceptions: []
   platform:
@@ -303,17 +303,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "傳回符合指定的項目資訊清單檔案參考。"
-  remarks: "如果指定的項目清單中的檔案參考不存在，這個方法會將此項目的檔案參考。"
+  summary: Returns the manifest file reference that matches the specified item.
+  remarks: If the file reference does not exist in the manifest for the specified item, then this method adds a file reference for this item.
   syntax:
     content: protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference FindFileFromItem (Microsoft.Build.Framework.ITaskItem item);
     parameters:
     - id: item
       type: Microsoft.Build.Framework.ITaskItem
-      description: "若要取得的檔案參考項目。"
+      description: The item to get a file reference for.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference
-      description: "符合指定的項目資訊清單檔案參考。"
+      description: The manifest file reference that matches the specified item.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.FindFileFromItem*
   exceptions: []
   platform:
@@ -330,13 +330,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "在衍生類別中實作時，傳回資訊清單型的別。"
+  summary: When implemented in a derived class, returns the type of the manifest.
   syntax:
     content: protected abstract Type GetObjectType ();
     parameters: []
     return:
       type: System.Type
-      description: "資訊清單的類型。"
+      description: The manifest type.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.GetObjectType*
   exceptions: []
   platform:
@@ -353,12 +353,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定輸入的資訊清單。"
+  summary: Gets or sets the input manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem InputManifest { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "輸入的資訊清單。"
+      description: The input manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.InputManifest*
   exceptions: []
   platform:
@@ -375,12 +375,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定最大的資訊清單檔案名稱的長度。"
+  summary: Gets or sets the maximum manifest file name length.
   syntax:
     content: public int MaxTargetPath { get; set; }
     return:
       type: System.Int32
-      description: "資訊清單檔案名稱長度上限。"
+      description: The maximum manifest file name length.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.MaxTargetPath*
   exceptions: []
   platform:
@@ -397,16 +397,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "在衍生類別中實作時，設定資訊清單屬性及任何相依性。"
+  summary: When implemented in a derived class, sets manifest properties and any dependencies.
   syntax:
     content: protected abstract bool OnManifestLoaded (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);
     parameters:
     - id: manifest
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "若要設定屬性資訊清單。"
+      description: The manifest to set properties for.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果沒有發生錯誤時設定的資訊清單的屬性。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if no errors occurred when the manifest properties are set; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.OnManifestLoaded*
   exceptions: []
   platform:
@@ -423,17 +423,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "在衍生類別中實作時，設定已解析的資訊清單的屬性。"
-  remarks: "例如，解決資訊清單的屬性為發行者與產品。"
+  summary: When implemented in a derived class, sets resolved manifest properties.
+  remarks: For example, resolved manifest properties are the publisher and product.
   syntax:
     content: protected abstract bool OnManifestResolved (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);
     parameters:
     - id: manifest
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest
-      description: "若要設定屬性資訊清單。"
+      description: The manifest to set properties for.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果沒有發生錯誤時設定的資訊清單的屬性。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if no errors occurred when the manifest properties are set; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.OnManifestResolved*
   exceptions: []
   platform:
@@ -450,12 +450,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定產生的資訊清單。"
+  summary: Gets or sets the generated manifest.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem OutputManifest { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "產生的資訊清單。"
+      description: The generated manifest.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.OutputManifest*
   exceptions: []
   platform:
@@ -472,13 +472,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定資訊清單的平台。"
-  remarks: '資訊清單的平台可以有下列值之一︰ `x86`， `x64`， `Itanium`，或`AnyCPU`。'
+  summary: Gets or sets the manifest platform.
+  remarks: 'The manifest platform can have one of the following values: `x86`, `x64`, `Itanium`, or `AnyCPU`.'
   syntax:
     content: public string Platform { get; set; }
     return:
       type: System.String
-      description: "資訊清單的平台。"
+      description: The manifest platform.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.Platform*
   exceptions: []
   platform:
@@ -495,13 +495,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定資訊清單的目標文化特性代碼。"
-  remarks: "目標文化特性的有效值為任何有效的值<xref:System.Globalization.CultureInfo>，並也 「 中性的 」 或 「 * 」 中性文化特性。</xref:System.Globalization.CultureInfo>"
+  summary: Gets or sets the manifest target culture code.
+  remarks: Valid values for the target culture are any valid values for <xref:System.Globalization.CultureInfo>, and also "neutral" or "*" for neutral cultures.
   syntax:
     content: public string TargetCulture { get; set; }
     return:
       type: System.String
-      description: "資訊清單的目標文化特性代碼。"
+      description: The manifest target culture code.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.TargetCulture*
   exceptions: []
   platform:
@@ -518,12 +518,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得或設定目標 framework moniker。"
+  summary: Gets or sets the target framework moniker.
   syntax:
     content: public string TargetFrameworkMoniker { get; set; }
     return:
       type: System.String
-      description: "傳回目標 framework moniker。"
+      description: Returns the target framework moniker.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkMoniker*
   exceptions: []
   platform:
@@ -540,13 +540,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "目標[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]版本，該專案。"
-  remarks: "預設值是空的這表示沒有篩選目標 framework 為基礎的參考。"
+  summary: The target [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version for the project.
+  remarks: The default value is empty, which means there is no filtering for the references based on the target framework.
   syntax:
     content: public string TargetFrameworkVersion { get; set; }
     return:
       type: System.String
-      description: "字串，代表[!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)]版本。"
+      description: A string that represents the [!INCLUDE[dnprdnshort](~/add/includes/dnprdnshort-md.md)] version.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkVersion*
   exceptions: []
   platform:
@@ -563,13 +563,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "驗證的輸入`GenerateManifestBase`工作。"
+  summary: Validates the inputs of the `GenerateManifestBase` task.
   syntax:
     content: protected virtual bool ValidateInputs ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果輸入的驗證成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if input validation succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.ValidateInputs*
   exceptions: []
   platform:
@@ -586,13 +586,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "驗證產生的資訊清單。"
+  summary: Validates the generated manifest.
   syntax:
     content: protected virtual bool ValidateOutput ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果資訊清單的驗證成功。否則， <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if manifest validation succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateManifestBase.ValidateOutput*
   exceptions: []
   platform:

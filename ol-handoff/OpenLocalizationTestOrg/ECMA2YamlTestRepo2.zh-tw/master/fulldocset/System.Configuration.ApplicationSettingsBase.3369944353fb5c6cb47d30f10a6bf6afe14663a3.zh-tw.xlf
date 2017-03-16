@@ -1,0 +1,558 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1cca0d4d6132f8fe00c7cce0d6d5c774da5fd893</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Configuration.ApplicationSettingsBase.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f68e5973c7bbb85180ff2d63e9824825f819acec</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">158a3b3bc1271ed48a42c7dfd92095a6995a3a84</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Acts as a base class for deriving concrete wrapper classes to implement the application settings feature in Window Forms applications.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>ApplicationSettingsBase adds the following functionality to the &lt;xref:System.Configuration.SettingsBase&gt; class, which is used by Web-based applications:      -   The ability to detect attributes on a derived, settings wrapper class.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>ApplicationSettingsBase supports the declarative model used for wrapper class properties, as described later.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>-   Higher-level &lt;xref:System.Configuration.ApplicationSettingsBase.Save%2A&gt; and &lt;xref:System.Configuration.ApplicationSettingsBase.Reload%2A&gt; methods.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>-   Additional validation events that you can handle to ensure the correctness of individual settings.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In the application settings architecture, to access a group of settings properties you need to derive a concrete wrapper class from ApplicationSettingsBase.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The wrapper class customizes ApplicationSettingsBase in the following ways:      -   For every settings property to be accessed, a corresponding strongly typed public property is added to the wrapper class.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This property has <ph id="ph1">`get`</ph> and <ph id="ph2">`set`</ph> accessors for read/write application settings, but only a <ph id="ph3">`get`</ph> accessor for read-only settings.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>-   Appropriated attributes must be applied to the wrapper class's public properties to indicate characteristics of the settings property, such as the setting's scope (application or user), whether the setting should support roaming, the default value for the setting, the settings provider to be used, and so on.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Each property is required to specify its scope, using either &lt;xref:System.Configuration.ApplicationScopedSettingAttribute&gt; or &lt;xref:System.Configuration.UserScopedSettingAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Application-scoped settings are read-only if the default &lt;xref:System.Configuration.LocalFileSettingsProvider&gt; is used.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The ApplicationSettingsBase class uses reflection to detect these attributes at run time.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Most of this information gets passed to the settings provider layer, which is responsible for storage, persistence format, and so on.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When an application has multiple settings wrapper classes, each class defines a <bpt id="p1">*</bpt>settings group<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Each group has the following characteristics:      -   A group can contain any number or type of property settings.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>-   If the group name is not explicitly set by the decorating the wrapper class with a &lt;xref:System.Configuration.SettingsGroupNameAttribute&gt;, then a name is automatically generated.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>By default, all client-based applications use the &lt;xref:System.Configuration.LocalFileSettingsProvider&gt; to provide storage.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If an alternate settings provider is desired, then the wrapper class or property must be decorated with a corresponding &lt;xref:System.Configuration.SettingsProviderAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information about using application settings, see <bpt id="p1">[</bpt>Application Settings for Windows Forms<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Initializes an instance of the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class to its default state.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The default constructor was designed to work under the assumption that there is no component associated with the current settings wrapper class, which derives from &lt;xref:System.Configuration.ApplicationSettingsBase&gt;.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>When an instance of a wrapper class is created, inherited code will automatically perform the following actions:      1.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Reflect over the class.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For each property on the wrapper marked with either <ph id="ph1">`[UserScopedSettingAttribute]`</ph> or <ph id="ph2">`[ApplicationScopedSettingAttribute]`</ph>, a corresponding &lt;xref:System.Configuration.SettingsProperty&gt; is created.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Each &lt;xref:System.Configuration.SettingsProperty&gt; has some of its properties set based on other attributes that are optionally present on the wrapper's properties, such as the default value or the settings provider.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>All other attributes are simply put into an attribute bag, the &lt;xref:System.Configuration.SettingsProperty.Attributes%2A&gt; property of the &lt;xref:System.Configuration.SettingsProperty&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>5.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>All &lt;xref:System.Configuration.SettingsProperty&gt; objects are added to a &lt;xref:System.Configuration.SettingsPropertyCollection&gt; represented by the &lt;xref:System.Configuration.ApplicationSettingsBase.Properties%2A&gt; property of the &lt;xref:System.Configuration.ApplicationSettingsBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This collection is then passed to the &lt;xref:System.Configuration.SettingsBase.Initialize%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>As implied by step 3 mentioned previously, &lt;xref:System.Configuration.ApplicationSettingsBase&gt; natively works with several property attributes, specifically the following: &lt;xref:System.Configuration.SettingsProviderAttribute&gt;, &lt;xref:System.Configuration.DefaultSettingValueAttribute&gt;, and &lt;xref:System.Configuration.SettingsSerializeAsAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>All other settings attributes are simply passed through to the appropriate underlying provider.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Initializes an instance of the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the supplied owner component.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This constructor is exactly equivalent to the &lt;xref:System.Configuration.ApplicationSettingsBase.%23ctor%28System.ComponentModel.IComponent%2CSystem.String%29&gt; constructor using the invocation:       <ph id="ph1">`ApplicationSettingsBase(owner, String.Empty)`</ph>       For information about how reflection is used during the instantiation of a wrapper class, see the default &lt;xref:System.Configuration.ApplicationSettingsBase.%23ctor&gt; constructor.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The component that will act as the owner of the application settings object.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;owner&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Initializes an instance of the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the supplied settings key.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This constructor initializes the &lt;xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A&gt; property to the value of the <ph id="ph1">`settingsKey`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This property is useful in disambiguating different instances of the settings wrapper class in the same application domain.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For information about how reflection is used during the instantiation of a wrapper class, see the default &lt;xref:System.Configuration.ApplicationSettingsBase.%23ctor&gt; constructor.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; that uniquely identifies separate instances of the wrapper class.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Initializes an instance of the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class using the supplied owner component and settings key.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.ComponentModel.IComponent&gt; object specified by the <ph id="ph1">`owner`</ph> parameter acts as the owner of the current instance of this applications settings class.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>During the initialization of the settings wrapper class derived from &lt;xref:System.Configuration.ApplicationSettingsBase&gt;, the owner's site is queried for a &lt;xref:System.Configuration.ISettingsProviderService&gt;.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If one exists, it is used in preference to native settings provider for all the properties of the wrapper class, as specified by the &lt;xref:System.Configuration.SettingsProviderAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This constructor initializes the &lt;xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A&gt; property to the value of the <ph id="ph1">`settingsKey`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>This property is useful in disambiguating different instances of the wrapper class in the same application domain.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For information about how reflection is used during the instantiation of a wrapper class, see the default &lt;xref:System.Configuration.ApplicationSettingsBase.%23ctor&gt; constructor.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The component that will act as the owner of the application settings object.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; that uniquely identifies separate instances of the wrapper class.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;owner&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Gets the application settings context associated with the settings group.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Each settings wrapper class derived from &lt;xref:System.Configuration.ApplicationSettingsBase&gt; has a context associated with it.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The context is passed to the settings provider for each property to identify how the property is used.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Context therefore acts as a hint to help the settings provider determine how best to persist the associated application settings values.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>In contrast, the &lt;xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A&gt; property enables the settings provider to disambiguate multiple instances of the same wrapper class.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> associated with the settings group.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Returns the value of the named settings property for the previous version of the same application.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The GetPreviousVersion method is often used in conjunction with the &lt;xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A&gt; method when migrating application settings during the installation of a new version of an application.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; containing the name of the settings property whose value is to be returned.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Object&gt; containing the value of the specified <bpt id="p1">&lt;xref href="System.Configuration.SettingsProperty"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if found; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The property does not exist.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The property count is zero or the property cannot be found in the data store.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Gets or sets the value of the specified application settings property.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The Item property, also known as the indexer, is routinely used in the settings wrapper class derived from &lt;xref:System.Configuration.ApplicationSettingsBase&gt;.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Item binds the public property of the wrapper class to the corresponding settings property.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Item raises several events depending on the operation being performed:      -   The first time a property is retrieved, the &lt;xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>-   When a property is set, the &lt;xref:System.Configuration.ApplicationSettingsBase.OnSettingChanging%2A&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>If the handler does not cancel the event, then the property value is set and the &lt;xref:System.Configuration.ApplicationSettingsBase.PropertyChanged&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; containing the name of the property to access.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>If found, the value of the named settings property; otherwise, <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>There are no properties associated with the current wrapper or the specified property could not be found.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>An attempt was made to set a read-only property.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The value supplied is of a type incompatible with the settings property, during a set operation.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The configuration file could not be parsed.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase.PropertyChanged"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>NIB: Raising an Event<ept id="p1">](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The OnPropertyChanged method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The source of the event.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.ComponentModel.PropertyChangedEventArgs&gt; that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase.SettingChanging"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>NIB: Raising an Event<ept id="p1">](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The OnSettingChanging method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The source of the event.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingChangingEventArgs"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase.SettingsLoaded"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>NIB: Raising an Event<ept id="p1">](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The OnSettingsLoaded method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The source of the event.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsLoadedEventArgs"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Configuration.ApplicationSettingsBase.SettingsSaving"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Raising an event invokes the event handler through a delegate.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>NIB: Raising an Event<ept id="p1">](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The OnSettingsSaving method also allows derived classes to handle the event without attaching a delegate.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>This is the preferred technique for handling the event in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The source of the event.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.ComponentModel.CancelEventArgs&gt; that contains the event data.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Gets the collection of settings properties in the wrapper.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`get`</ph> accessor of the Properties property reflects over the metadata of the settings wrapper class, which is derived from &lt;xref:System.Configuration.ApplicationSettingsBase&gt;, to dynamically determine the set of available application settings properties.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Configuration.ApplicationSettingsBase&gt; class natively recognizes certain characteristics of an application setting, such as its name, property type, settings provider, default value, read only status, and a serialization preference.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>These characteristics are mirrored as properties in the &lt;xref:System.Configuration.SettingsProperty&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>All other attributes of the settings property are just passed through to its associated settings provider.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsPropertyCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing all the <bpt id="p2">&lt;xref href="System.Configuration.SettingsProperty"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> objects used in the current wrapper.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The associated settings provider could not be found or its instantiation failed.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Occurs after the value of an application settings property is changed.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The PropertyChanged event is raised when a settings property is changed through the <ph id="ph1">`set`</ph> accessor of the &lt;xref:System.Configuration.ApplicationSettingsBase.Item%2A&gt; method, or for every property that is restored when a call is made to the &lt;xref:System.Configuration.ApplicationSettingsBase.Reload%2A&gt; or &lt;xref:System.Configuration.ApplicationSettingsBase.Reset%2A&gt; methods.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>There is no corresponding <ph id="ph1">`PropertyChanging`</ph> event for this class; instead, see the &lt;xref:System.Configuration.ApplicationSettingsBase.SettingChanging&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Gets a collection of property values.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsPropertyValueCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of property values.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Gets the collection of application settings providers used by the wrapper.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Configuration.SettingsProviderAttribute&gt; determines what setting provider is used by a settings wrapper class or an individual setting property.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>If this attribute is not specified, a client application will use the &lt;xref:System.Configuration.LocalFileSettingsProvider&gt;.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Configuration.SettingsProviderCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing all the <bpt id="p2">&lt;xref href="System.Configuration.SettingsProvider"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> objects used by the settings properties of the current settings wrapper.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Refreshes the application settings property values from persistent storage.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The Reload method clears the currently cached property values, causing a reload of these values from persistent storage when they are subsequently accessed.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>This method performs the following actions:      -   It clears the currently cached properties by clearing the collection represented by the &lt;xref:System.Configuration.SettingsBase.PropertyValues%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>-   It raises the &lt;xref:System.Configuration.ApplicationSettingsBase.PropertyChanged&gt; event for every member of the &lt;xref:System.Configuration.ApplicationSettingsBase.Properties%2A&gt; collection.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Reload contrasts with &lt;xref:System.Configuration.ApplicationSettingsBase.Reset%2A&gt; in that the former will load the last set of saved application settings values, whereas the latter will load the saved default values.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Restores the persisted application settings values to their corresponding default properties.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>The Reset method overwrites the user-scoped settings properties by restoring the currently persisted value of each application settings.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>This method performs the following actions:      -   It calls the &lt;xref:System.Configuration.IApplicationSettingsProvider.Reset%2A?displayProperty=fullName&gt; method on every settings provider that supports this optional method.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>-   It calls the &lt;xref:System.Configuration.ApplicationSettingsBase.Reload%2A&gt; method to force a refresh of the settings property values.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Configuration.ApplicationSettingsBase.Reload%2A&gt; contrasts with Reset in that the former will load the last set of saved application settings values, whereas the latter will load the saved default values.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>The configuration file could not be parsed.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Stores the current values of the application settings properties.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>The Save method writes the current value of each settings property to its associated data store.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>For each property, this method calls the &lt;xref:System.Configuration.SettingsProvider.SetPropertyValues%2A&gt; method on the associated settings provider.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>This method differs from the base class implementation in that it raises the &lt;xref:System.Configuration.ApplicationSettingsBase.SettingsSaving&gt; event before the values are written.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>If the only settings defined are application-scoped settings, Save will have no effect and return no error if called with the default &lt;xref:System.Configuration.LocalFileSettingsProvider&gt;.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Configuration.LocalFileSettingsProvider&gt; only saves user-scoped settings.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  There is no corresponding Load method because the values of application settings are automatically loaded during wrapper class initialization.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>In contrast, these values are not automatically saved when an application ends.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Therefore, you must explicitly call the Save method to persist the current values of the application settings.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>This is typically performed in the &lt;xref:System.Windows.Forms.Form.Closing&gt; event handler of the primary or containing &lt;xref:System.Windows.Forms.Form&gt;.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Occurs before the value of an application settings property is changed.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>The SettingChanging event occurs before an application setting value property is changed through the &lt;xref:System.Configuration.ApplicationSettingsBase.Item%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>This event is not raised when the &lt;xref:System.Configuration.ApplicationSettingsBase.Reload%2A&gt; or &lt;xref:System.Configuration.ApplicationSettingsBase.Reset%2A&gt; methods are called.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>SettingChanging can be canceled through the &lt;xref:System.Configuration.SettingChangingEventArgs&gt; event data class.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>You typically use the SettingChanging event to handle immediate validation of an individual settings property.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>For more information about validation, see <bpt id="p1">[</bpt>How to: Validate Application Settings<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>There is no corresponding <ph id="ph1">`SettingChanged`</ph> event for this class; instead, see the &lt;xref:System.Configuration.ApplicationSettingsBase.PropertyChanged&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Gets or sets the settings key for the application settings group.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>The SettingsKey property is provided to enable client code, and in particular the settings provider, to disambiguate between multiple instances of the same application settings class.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Unless the settings wrapper class is designed using the singleton pattern, there can be multiple instances of the same application settings class in a single application.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>The value of SettingsKey should be set according to how the property values are intended to be shared.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>-   If the settings properties of the wrapper are intended to be shared across all instances of the wrapper in the same application, then SettingsKey should have the same value in all of the instances.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>This is the default behavior of the &lt;xref:System.Configuration.ApplicationSettingsBase&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>-   If the settings properties of the wrapper are intended to be per instance, then SettingsKey should have a unique value for every instance.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Configuration.ApplicationSettingsBase.%23ctor%28System.String%29&gt; version of the constructor enables you to initialize SettingsKey to a unique string.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>In contrast, the &lt;xref:System.Configuration.ApplicationSettingsBase.Context%2A&gt; property provides hints to the settings provider to enable it to persist values in an efficient and orderly manner.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Configuration.SettingChangingEventArgs&gt; class contains a similar &lt;xref:System.Configuration.SettingChangingEventArgs.SettingKey%2A&gt; property that helps identify the source of the &lt;xref:System.Configuration.ApplicationSettingsBase.SettingChanging&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.String&gt; containing the settings key for the current settings group.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Occurs after the application settings are retrieved from storage.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>The SettingsLoaded event occurs only after the initial <ph id="ph1">`get`</ph> access of the first configuration property used, typically through the &lt;xref:System.Configuration.ApplicationSettingsBase.Item%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Subsequent accesses use values for the settings property that are cached locally.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Configuration.ApplicationSettingsBase.Reset%2A&gt; and &lt;xref:System.Configuration.ApplicationSettingsBase.Reload%2A&gt; methods will clear all cached values so this event will be raised again upon subsequent property access.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>Occurs before values are saved to the data store.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>The SettingsSaving event is raised by the &lt;xref:System.Configuration.ApplicationSettingsBase.Save%2A&gt; method before it stores the application settings properties to their associated data store.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>The associated event handler can cancel this event.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Updates application settings to reflect a more recent installation of the application.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>The Upgrade method performs two actions to assure smooth transition to a new version of an application:      -   It notifies all of the corresponding settings providers of the existence of the upgraded application through a call to their &lt;xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A?displayProperty=fullName&gt; method, assuming they have implemented the &lt;xref:System.Configuration.IApplicationSettingsProvider&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>This action is not performed if the settings wrapper class is marked with &lt;xref:System.Configuration.NoSettingsVersionUpgradeAttribute&gt;.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>-   It reloads the values for all of the application settings.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>You can override the default behavior of Upgrade to implement custom upgrading or merging behavior.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>Use the &lt;xref:System.Configuration.ApplicationSettingsBase.GetPreviousVersion%2A&gt; method to retrieve individual values for a setting for the previous version of the application.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Examples of custom upgrade behavior include:      -   Using new policy defaults that override one or more of the previous user-specified values or previous defaults.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>-   Special translation of old values to be compatible with newer ranges, a different settings property group, and so on.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>The configuration file could not be parsed.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

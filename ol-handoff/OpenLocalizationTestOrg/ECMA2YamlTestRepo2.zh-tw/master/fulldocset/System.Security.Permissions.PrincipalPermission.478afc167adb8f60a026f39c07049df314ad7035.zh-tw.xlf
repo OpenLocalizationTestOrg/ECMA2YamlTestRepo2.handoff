@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3163cc9857bfcfbebeb7d74e3a9c4a0f0842a194</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Security.Permissions.PrincipalPermission.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d3f4e8311b4eac7a51fcd3b6de0e8ee279fabafb</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e6fcce327760891ee7fed9d444a86e4798bf3993</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Allows checks against the active principal (see &lt;xref:System.Security.Principal.IPrincipal&gt;) using the language constructs defined for both declarative and imperative security actions.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>By passing identity information (user name and role) to the constructor, PrincipalPermission can be used to demand that the identity of the active principal matches this information.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To match the active &lt;xref:System.Security.Principal.IPrincipal&gt; and associated &lt;xref:System.Security.Principal.IIdentity&gt;, both the specified identity and role must match.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`null`</ph> identity string is used, it is interpreted as a request to match any identity.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Use of <ph id="ph1">`null`</ph> role string will match any role.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>By implication, passing <ph id="ph1">`null`</ph> parameter for <ph id="ph2">`name`</ph> or <ph id="ph3">`role`</ph> to PrincipalPermission will match the identity and roles in any &lt;xref:System.Security.Principal.IPrincipal&gt;.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>It is also possible to construct a PrincipalPermission that only determines whether the &lt;xref:System.Security.Principal.IIdentity&gt; represents an authenticated or unauthenticated entity.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In this case, <ph id="ph1">`name`</ph> and <ph id="ph2">`role`</ph> are ignored.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Unlike most other permissions, PrincipalPermission does not extend &lt;xref:System.Security.CodeAccessPermission&gt;.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>It does, however, implement the &lt;xref:System.Security.IPermission&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>This is because PrincipalPermission is not a code access permission; that is, it is not granted based on the identity of the executing assembly.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Instead, it allows code to perform actions (&lt;xref:System.Security.Permissions.PrincipalPermission.Demand%2A&gt;, &lt;xref:System.Security.Permissions.PrincipalPermission.Union%2A&gt;, &lt;xref:System.Security.Permissions.PrincipalPermission.Intersect%2A&gt;, and so on) against the current user identity in a manner consistent with the way those actions are performed for code access and code identity permissions.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  Prior to a demand for principal permission it is necessary to set the current application domain's principal policy to the enumeration value &lt;xref:System.Security.Principal.PrincipalPolicy&gt;.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>By default, the principal policy is set to &lt;xref:System.Security.Principal.PrincipalPolicy&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you do not set the principal policy to &lt;xref:System.Security.Principal.PrincipalPolicy&gt;, a demand for principal permission will fail.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The following code should be executed before the principal permission is demanded:   &gt;    &gt;  <ph id="ph1">`AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal).`</ph></source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified <bpt id="p2">&lt;xref href="System.Security.Permissions.PermissionState"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">`None`</ph> matches only the unauthenticated principal (&lt;xref:System.Security.Permissions.PrincipalPermissionAttribute.Name%2A&gt; is the empty string (""), no &lt;xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A&gt;, &lt;xref:System.Security.Permissions.PrincipalPermissionAttribute.Authenticated%2A&gt; is <ph id="ph2">`false`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">`Unrestricted`</ph> matches all principals (&lt;xref:System.Security.Permissions.PrincipalPermissionAttribute.Name%2A&gt; is <ph id="ph2">`null`</ph>, &lt;xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A&gt; is <ph id="ph3">`null`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  This constructor is included for consistency with the design of other permissions, but is not useful in practice.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Security.Permissions.PermissionState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">state</ph><ept id="p1">&lt;/code&gt;</ept> parameter is not a valid <bpt id="p2">&lt;xref href="System.Security.Permissions.PermissionState"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class for the specified <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">name</ph><ept id="p2">&lt;/code&gt;</ept> and <bpt id="p3">&lt;code&gt;</bpt><ph id="ph2">role</ph><ept id="p3">&lt;/code&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Both the <ph id="ph1">`name`</ph> parameter and the <ph id="ph2">`role`</ph> parameter must match for this permission to match the active &lt;xref:System.Security.Principal.IPrincipal&gt; and associated &lt;xref:System.Security.Principal.IIdentity&gt;.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Set <ph id="ph1">`name`</ph> to <ph id="ph2">`null`</ph> to check for any user in a role.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The name of the &lt;xref:System.Security.Principal.IPrincipal&gt; object's user.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The role of the &lt;xref:System.Security.Principal.IPrincipal&gt; object's user (for example, Administrator).</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class for the specified <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">name</ph><ept id="p2">&lt;/code&gt;</ept>, <bpt id="p3">&lt;code&gt;</bpt><ph id="ph2">role</ph><ept id="p3">&lt;/code&gt;</ept>, and authentication status.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Both the <ph id="ph1">`name`</ph> parameter and the <ph id="ph2">`role`</ph> parameter must match for this permission to match the active &lt;xref:System.Security.Principal.IPrincipal&gt; and associated &lt;xref:System.Security.Principal.IIdentity&gt;.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The name of the &lt;xref:System.Security.Principal.IPrincipal&gt; object's user.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The role of the &lt;xref:System.Security.Principal.IPrincipal&gt; object's user (for example, Administrator).</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to signify that the user is authenticated; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Creates and returns an identical copy of the current permission.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>A copy of the permission represents the same principal and identity as the original permission.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>A copy of the current permission.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Determines at run time whether the current principal matches the principal specified by the current permission.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If no &lt;xref:System.Security.SecurityException&gt; is raised, Demand succeeds.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>This method acts against the principal attached to the calling thread.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  Prior to calling the Demand method, it is necessary to set the current application domain's principal policy to the enumeration value &lt;xref:System.Security.Principal.PrincipalPolicy&gt;.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>By default the principal policy is set to &lt;xref:System.Security.Principal.PrincipalPolicy&gt;.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If you do not set the principal policy to &lt;xref:System.Security.Principal.PrincipalPolicy&gt;, a demand for principal permission will fail.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The following code should be executed before the demand for principal permission occurs:   &gt;    &gt;  <ph id="ph1">`AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal).`</ph></source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The current principal does not pass the security check for the principal specified by the current permission.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>-or-       The current &lt;xref:System.Security.Principal.IPrincipal&gt; is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Determines whether the specified <bpt id="p1">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object is equal to the current <bpt id="p2">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>For more information, see &lt;xref:System.Object.Equals%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to compare with the current <bpt id="p2">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the specified <bpt id="p2">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> is equal to the current <bpt id="p3">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> object; otherwise, <bpt id="p4">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Reconstructs a permission with a specified state from an XML encoding.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The XML encoding to use to reconstruct the permission.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">elem</ph><ept id="p1">&lt;/code&gt;</ept> parameter is <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">elem</ph><ept id="p1">&lt;/code&gt;</ept> parameter is not a valid permission element.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>-or-       The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">elem</ph><ept id="p1">&lt;/code&gt;</ept> parameter's version number is not valid.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Gets a hash code for the <bpt id="p1">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object that is suitable for use in hashing algorithms and data structures such as a hash table.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The hash code for two instances of the same permission might be different, hence a hash code should not be used to compare two &lt;xref:System.Security.Permissions.PrincipalPermission&gt; objects.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>A hash code for the current <bpt id="p1">&lt;xref href="System.Security.Permissions.PrincipalPermission"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Creates and returns a permission that is the intersection of the current permission and the specified permission.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Because two users never intersect, this method is not useful for &lt;xref:System.Security.Permissions.PrincipalPermission&gt;.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>For example,       <bpt id="p1">[!code-cpp</bpt><bpt id="p2">[</bpt>System.Security.Permissions.PrincipalPermission#1<ept id="p2">](~/add/codesnippet/cpp/7be5e612-f4dc-44d9-9530-_1.cpp)</ept><ept id="p1">]</ept>  <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>System.Security.Permissions.PrincipalPermission#1<ept id="p4">](~/add/codesnippet/csharp/7be5e612-f4dc-44d9-9530-_1.cs)</ept><ept id="p3">]</ept>  <bpt id="p5">[!code-vb</bpt><bpt id="p6">[</bpt>System.Security.Permissions.PrincipalPermission#1<ept id="p6">](~/add/codesnippet/visualbasic/7be5e612-f4dc-44d9-9530-_1.vb)</ept><ept id="p5">]</ept>       is equivalent to       <bpt id="p7">[!code-cpp</bpt><bpt id="p8">[</bpt>System.Security.Permissions.PrincipalPermission#2<ept id="p8">](~/add/codesnippet/cpp/7be5e612-f4dc-44d9-9530-_2.cpp)</ept><ept id="p7">]</ept>  <bpt id="p9">[!code-cs</bpt><bpt id="p10">[</bpt>System.Security.Permissions.PrincipalPermission#2<ept id="p10">](~/add/codesnippet/csharp/7be5e612-f4dc-44d9-9530-_2.cs)</ept><ept id="p9">]</ept>  <bpt id="p11">[!code-vb</bpt><bpt id="p12">[</bpt>System.Security.Permissions.PrincipalPermission#2<ept id="p12">](~/add/codesnippet/visualbasic/7be5e612-f4dc-44d9-9530-_2.vb)</ept><ept id="p11">]</ept>       because no identity can simultaneously represent both Bob and Louise.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>In effect, <ph id="ph1">`pp1.Demand()`</ph> only succeeds if an unauthenticated principal (with name equal to the empty string ("")) is allowed to act in the Administrator role.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>A permission to intersect with the current permission.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>It must be of the same type as the current permission.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>A new permission that represents the intersection of the current permission and the specified permission.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>This new permission will be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the intersection is empty.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">target</ph><ept id="p1">&lt;/code&gt;</ept> parameter is not <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> and is not an instance of the same class as the current permission.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Determines whether the current permission is a subset of the specified permission.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The current permission is a subset of the specified permission if all demands that succeed for the current permission also succeed for the specified permission.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>A permission that is to be tested for the subset relationship.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>This permission must be of the same type as the current permission.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the current permission is a subset of the specified permission; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">target</ph><ept id="p1">&lt;/code&gt;</ept> parameter is an object that is not of the same type as the current permission.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Returns a value indicating whether the current permission is unrestricted.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>An unrestricted &lt;xref:System.Security.Permissions.PrincipalPermission&gt; matches any principal.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the current permission is unrestricted; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Creates and returns a string representing the current permission.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>A representation of the current permission.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Creates an XML encoding of the permission and its current state.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>An XML encoding of the permission, including any state information.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Creates a permission that is the union of the current permission and the specified permission.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Union creates a permission representing the criteria of a given set of individual &lt;xref:System.Security.Permissions.PrincipalPermission&gt; objects.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>It is useful for compactly representing a set of conditions to test.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>For example, with the declarations       <bpt id="p1">[!code-cpp</bpt><bpt id="p2">[</bpt>System.Security.Permissions.PrincipalPermission#3<ept id="p2">](~/add/codesnippet/cpp/dd443af0-98ea-4e3c-9761-_1.cpp)</ept><ept id="p1">]</ept>  <bpt id="p3">[!code-cs</bpt><bpt id="p4">[</bpt>System.Security.Permissions.PrincipalPermission#3<ept id="p4">](~/add/codesnippet/csharp/dd443af0-98ea-4e3c-9761-_1.cs)</ept><ept id="p3">]</ept>  <bpt id="p5">[!code-vb</bpt><bpt id="p6">[</bpt>System.Security.Permissions.PrincipalPermission#3<ept id="p6">](~/add/codesnippet/visualbasic/dd443af0-98ea-4e3c-9761-_1.vb)</ept><ept id="p5">]</ept>       <ph id="ph1">`(ppBob.Union(ppLouise)).Demand()`</ph> will succeed if the current principal represents Bob in the role of Administrator or Louise in the role of Administrator.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>A permission to combine with the current permission.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>It must be of the same type as the current permission.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>A new permission that represents the union of the current permission and the specified permission.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">other</ph><ept id="p1">&lt;/code&gt;</ept> parameter is an object that is not of the same type as the current permission.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

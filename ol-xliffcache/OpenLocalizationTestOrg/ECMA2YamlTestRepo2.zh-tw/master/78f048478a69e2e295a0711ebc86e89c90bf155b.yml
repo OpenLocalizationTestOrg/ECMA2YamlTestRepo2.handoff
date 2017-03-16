@@ -11,7 +11,7 @@ items:
   nameWithType: ITaskFactory2
   fullName: Microsoft.Build.Framework.ITaskFactory2
   type: Interface
-  summary: "描述並擴充<xref href=&quot;Microsoft.Build.Framework.ITaskFactory&quot;></xref>工作 factory 執行個體都必須實作的介面。"
+  summary: Describes and extended <xref href="Microsoft.Build.Framework.ITaskFactory"></xref> interface that a task factory instance should implement.
   syntax:
     content: 'public interface ITaskFactory2 : Microsoft.Build.Framework.ITaskFactory'
   implements:
@@ -30,20 +30,20 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "建立工作，以用於一組選擇性的 「 特殊 」 參數集上使用 MSBuildRuntime 和 MSBuildArchitecture 預設工作參數的個別工作引動過程的執行的個體。 MSBuild 會提供實作此介面，TaskHostFactory，會使用值&quot;CLR2&quot;，&quot;CLR4&quot;，&quot;CurrentRuntime&quot;，&quot;MSBuildRuntime&quot;，以及&quot;*&quot;（任何）;和&quot;MSBuildArchitecture&quot;，值&quot;x86&quot;、&quot;x64&quot;，&quot;CurrentArchitecture 」，和 「\\*」 （的話）。 ITaskFactory2 的實作器可以選擇使用這些預先定義的 MSBuildRuntime 和 MSBuildArchitecture 值，或可以指定這些參數的新值。"
-  remarks: "如果工作 factory 實作 ITaskFactory2，MSBuild 會呼叫這個方法，而不是 ITaskFactory.CreateTask。"
+  summary: Create an instance of the task to be used, with an optional set of "special" parameters set on the individual task invocation using the MSBuildRuntime and MSBuildArchitecture default task parameters. MSBuild provides an implementation of this interface, TaskHostFactory, that uses "MSBuildRuntime", with values "CLR2", "CLR4", "CurrentRuntime", and "*" (Any); and "MSBuildArchitecture", with values "x86", "x64", "CurrentArchitecture", and "\*" (Any). An implementer of ITaskFactory2 can choose to use these pre-defined MSBuildRuntime and MSBuildArchitecture values, or can specify new values for these parameters.
+  remarks: If a task factory implements ITaskFactory2, MSBuild will call this method instead of ITaskFactory.CreateTask.
   syntax:
     content: public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost, System.Collections.Generic.IDictionary<string,string> taskIdentityParameters);
     parameters:
     - id: taskFactoryLoggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "工作 factory 記錄主機會記錄訊息中的工作環境。"
+      description: The task factory logging host will log messages in the context of the task.
     - id: taskIdentityParameters
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "特殊工作 factory 可用來修改如何執行工作，例如執行階段和架構的參數。"
+      description: Special parameters that the task factory can use to modify how it executes tasks, such as Runtime and Architecture.
     return:
       type: Microsoft.Build.Framework.ITask
-      description: "產生的工作，或`null`如果無法建立的工作。"
+      description: The generated task, or `null` if the task failed to be created.
   overload: Microsoft.Build.Framework.ITaskFactory2.CreateTask*
   exceptions: []
   platform:
@@ -60,29 +60,29 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "初始化具有特定的內嵌工作區塊和一組 UsingTask 參數具現化工作的這個處理站。 MSBuild 會提供實作這個介面，TaskHostFactory，會使用值&quot;CLR2&quot;，&quot;CLR4&quot;，&quot;CurrentRuntime 」，「 執行階段 」 和 「 * 」 （任何）;和 「 架構 」，使用值&quot;x86&quot;、&quot;x64&quot;，&quot;CurrentArchitecture 」，和 「\\*」 （的話）。 ITaskFactory2 的實作器可以選擇使用這些預先定義執行階段和架構的值，或可以指定這些參數的新值。"
-  remarks: "MSBuild 引擎會呼叫這個初始化處理站。 這應該初始化處理站，以便處理站可要求可以處理站建立的工作名稱。 如果工作 factory 實作 ITaskFactory2，這個初始化方法會呼叫 ITaskFactory.Initialize 取代。       TaskFactoryLoggingHost 會先用的工作目標的內容中的記錄訊息。"
+  summary: Initializes this factory for instantiating tasks with a particular inline task block and a set of UsingTask parameters. MSBuild provides an implementation of this interface, TaskHostFactory, that uses "Runtime", with values "CLR2", "CLR4", "CurrentRuntime", and "*" (Any); and "Architecture", with values "x86", "x64", "CurrentArchitecture", and "\*" (Any). An implementer of ITaskFactory2 can choose to use these pre-defined Runtime and Architecture values, or can specify new values for these parameters.
+  remarks: "MSBuild engine will call this to initialize the factory. This should initialize the factory enough so that the factory can be asked whether or not task names can be created by the factory. If a task factory implements ITaskFactory2, this Initialize method will be called in place of ITaskFactory.Initialize.  \n  \n The taskFactoryLoggingHost will log messages in the context of the target where the task is first used."
   syntax:
     content: public bool Initialize (string taskName, System.Collections.Generic.IDictionary<string,string> factoryIdentityParameters, System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.TaskPropertyInfo> parameterGroup, string taskBody, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);
     parameters:
     - id: taskName
       type: System.String
-      description: "工作的名稱。"
+      description: Name of the task.
     - id: factoryIdentityParameters
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "特殊工作 factory 可用來修改如何執行工作，例如執行階段和架構的參數。 金鑰是參數的名稱，此值為參數的值。 這是設定 UsingTask 使用例如 UsingTask 執行階段和架構參數的參數集。"
+      description: Special parameters that the task factory can use to modify how it executes tasks, such as Runtime and Architecture. The key is the name of the parameter and the value is the parameter's value. This is the set of parameters that was set on the UsingTask using e.g. the UsingTask Runtime and Architecture parameters.
     - id: parameterGroup
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo}
-      description: "[參數] 群組中。"
+      description: The parameter group.
     - id: taskBody
       type: System.String
-      description: "工作主體。"
+      description: The task body.
     - id: taskFactoryLoggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "工作 factory 記錄主應用程式。"
+      description: The task factory logging host.
     return:
       type: System.Boolean
-      description: "值，指出是否已成功初始化。"
+      description: A value indicating whether initialization was successful.
   overload: Microsoft.Build.Framework.ITaskFactory2.Initialize*
   exceptions: []
   platform:

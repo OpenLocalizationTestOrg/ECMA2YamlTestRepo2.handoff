@@ -12,8 +12,8 @@ items:
   nameWithType: ICscHostObject4
   fullName: Microsoft.Build.Tasks.Hosting.ICscHostObject4
   type: Interface
-  summary: "代表 Csc 主機編譯器。"
-  remarks: "定義 Csc 工作與 Visual Studio IDE 進行通訊的介面。 特別是，Csc 工作委派實際 IDE，而不是 shelling 命令列編譯器來編譯。"
+  summary: Represents the Csc host compiler.
+  remarks: Defines an interface for the Csc task to communicate with the Visual Studio IDE. In particular, the Csc task delegates the actual compilation to the IDE rather than shelling out to the command-line compilers.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -40,16 +40,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "設定`/highentropyva`所指定的值。"
+  summary: Sets the `/highentropyva` value as specified.
   syntax:
     content: public bool SetHighEntropyVA (bool highEntropyVA);
     parameters:
     - id: highEntropyVA
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>若要設定`/ highentropyva`來指出支援的高熵位址空間配置隨機載入 (ASLR); 否則<xref uid=&quot;langword_csharp_False&quot; name=&quot;False&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_True" name="True" href=""></xref> to set the `/ highentropyva` to indicate support of high entropy Address Space Layout Randomization (ASLR); otherwise, <xref uid="langword_csharp_False" name="False" href=""></xref>.
     return:
       type: System.Boolean
-      description: "傳回<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>如果方法成功。"
+      description: Returns <xref uid="langword_csharp_True" name="True" href=""></xref> if the method was successful.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject4.SetHighEntropyVA*
   exceptions: []
   platform:
@@ -66,17 +66,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "設定`/platform`值<xref uid=&quot;langword_csharp_AnyCPU32BitPreferred&quot; name=&quot;AnyCPU32BitPreferred&quot; href=&quot;&quot;> </xref>。"
-  remarks: "如果<xref:Microsoft.Build.Tasks.ManagedCompiler.Prefer32Bit%2A>專案上設定屬性，變更 SetPlatformWith32BitPreference`/platform`值`AnyCPU`或預設值 (`null`或&quot;&quot;) 來`AnyCPU32BitPreferred`。</xref:Microsoft.Build.Tasks.ManagedCompiler.Prefer32Bit%2A> 如需詳細資訊，請參閱[/platform （C# 編譯器選項）](~/add/includes/ajax-current-ext-md.md)。       如果`/platform`值設為`AnyCPU`(`/platform:AnyCPU`)，您的應用程式盡可能以 64 位元處理序執行，並會回復至 32 位元的 32 位元系統。 不過，您可能會想執行 32 位元處理序，因為 64 位元應用程式可能會耗用更多記憶體的應用程式。 `AnyCPU32BitPreferred`設定是類似於`AnyCPU`，只不過它的預設動作是在 32 位元模式執行應用程式，在支援每種模式的系統上。  這項設定會配合未來可能沒有改為 32 位元模式的處理器。"
+  summary: Sets the `/platform` value to <xref uid="langword_csharp_AnyCPU32BitPreferred" name="AnyCPU32BitPreferred" href=""></xref>.
+  remarks: "If the <xref:Microsoft.Build.Tasks.ManagedCompiler.Prefer32Bit%2A> property is set on the project, SetPlatformWith32BitPreference changes the `/platform` value from `AnyCPU` or the default value (`null` or \"\") to `AnyCPU32BitPreferred`. For more information, see [/platform (C# Compiler Options)](~/add/includes/ajax-current-ext-md.md).  \n  \n If the `/platform` value is set to `AnyCPU` (`/platform:AnyCPU`), your application runs as a 64-bit process whenever possible and falls back to 32-bit for 32-bit-only systems. However, you might prefer an application to run as a 32-bit process because 64-bit applications may consume more memory. The `AnyCPU32BitPreferred` setting is similar to `AnyCPU`, except that its default action is to run applications in 32-bit mode on systems that support either mode.  This setting accommodates future processors that may not fall back to 32-bit mode."
   syntax:
     content: public bool SetPlatformWith32BitPreference (string platformWith32BitPreference);
     parameters:
     - id: platformWith32BitPreference
       type: System.String
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>若要設定`/platform`值<xref uid=&quot;langword_csharp_AnyCPU32BitPreferred&quot; name=&quot;AnyCPU32BitPreferred&quot; href=&quot;&quot;> </xref>，否則<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to set the `/platform` value to <xref uid="langword_csharp_AnyCPU32BitPreferred" name="AnyCPU32BitPreferred" href=""></xref>; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果此方法成功。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the method was successful.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject4.SetPlatformWith32BitPreference*
   exceptions: []
   platform:
@@ -93,16 +93,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Hosting
-  summary: "設定所指定的子系統版本旗標。"
+  summary: Sets the subsystem version flag as specified.
   syntax:
     content: public bool SetSubsystemVersion (string subsystemVersion);
     parameters:
     - id: subsystemVersion
       type: System.String
-      description: "子系統版本。"
+      description: The subsystem version.
     return:
       type: System.Boolean
-      description: "傳回<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>如果方法成功。"
+      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if the method succeeds.
   overload: Microsoft.Build.Tasks.Hosting.ICscHostObject4.SetSubsystemVersion*
   exceptions: []
   platform:

@@ -18,8 +18,8 @@ items:
   nameWithType: ConfigurableForwardingLogger
   fullName: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger
   type: Class
-  summary: "代表 ConfigurableForwardingLogger，建置專案在多處理器或多核心系統上時要使用預先製作的轉送記錄器。 如需詳細資訊，請參閱[撰寫多處理器的記錄器](~/add/includes/ajax-current-ext-md.md)。"
-  remarks: "您可以使用提供的 ConfigurableForwardingLogger，或您可以建立您自己的自訂轉送記錄器。"
+  summary: Represents the ConfigurableForwardingLogger, a pre-fabricated forwarding logger to be used when building projects on a multi-proc or multi-core system. For more information, see [Writing Multi-Processor-Aware Loggers](~/add/includes/ajax-current-ext-md.md).
+  remarks: You can use the provided ConfigurableForwardingLogger, or you can create your own custom forwarding loggers.
   syntax:
     content: 'public class ConfigurableForwardingLogger : Microsoft.Build.Framework.IForwardingLogger'
   inheritance:
@@ -41,7 +41,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "初始化的新執行個體<xref href=&quot;Microsoft.Build.BuildEngine.ConfigurableForwardingLogger&quot;></xref>類別。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.ConfigurableForwardingLogger"></xref> class.
   syntax:
     content: public ConfigurableForwardingLogger ();
     parameters: []
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "取得或設定是否建置引擎，可讓節點記錄器將訊息轉送到中央記錄器。"
+  summary: Gets or sets whether the build engine allows node loggers to forward messages to the central logger.
   syntax:
     content: public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }
     return:
       type: Microsoft.Build.Framework.IEventRedirector
-      description: "<xref href=&quot;Microsoft.Build.Framework.IEventRedirector&quot;> </xref>來轉送事件的物件。"
+      description: An <xref href="Microsoft.Build.Framework.IEventRedirector"></xref> object to forward the events.
   overload: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.BuildEventRedirector*
   exceptions: []
   platform:
@@ -83,13 +83,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "將指定的事件轉送到中央記錄器。"
+  summary: Forwards the specified event to the central logger.
   syntax:
     content: protected virtual void ForwardToCentralLogger (Microsoft.Build.Framework.BuildEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.ForwardToCentralLogger*
   exceptions: []
   platform:
@@ -106,13 +106,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "登記主控台記錄器，針對所有建置事件。"
+  summary: Enlists the console logger for all build events.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "<xref href=&quot;Microsoft.Build.Framework.IEventSource&quot;> </xref>提供建置事件的物件。"
+      description: The <xref href="Microsoft.Build.Framework.IEventSource"></xref> object to provide the build events.
   overload: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -129,16 +129,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "登記主控台記錄器，針對所有建置事件。"
+  summary: Enlists the console logger for all build events.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "<xref href=&quot;Microsoft.Build.Framework.IEventSource&quot;> </xref>提供建置事件的物件。"
+      description: The <xref href="Microsoft.Build.Framework.IEventSource"></xref> object to provide the build events.
     - id: nodeCount
       type: System.Int32
-      description: "事件來源的節點識別碼。"
+      description: The node ID of the event source.
   overload: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -155,12 +155,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "取得或設定記錄器附加的唯一識別碼 (節點 ID)。"
+  summary: Gets or sets the unique identifier (Node ID) to which the logger is attached.
   syntax:
     content: public int NodeId { get; set; }
     return:
       type: System.Int32
-      description: "唯一識別項的節點。"
+      description: The unique identifier to the node.
   overload: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.NodeId*
   exceptions: []
   platform:
@@ -177,13 +177,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "取得或設定 ConfigurableForwardingLogger 的參數。"
-  remarks: "主控台記錄器會採用一個參數，以隱藏的錯誤和警告摘要結尾的組建輸出。"
+  summary: Gets or sets the parameters for the ConfigurableForwardingLogger.
+  remarks: The console logger takes a single parameter to suppress the output of the errors and warnings summary at the end of a build.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "字串，表示記錄器參數。"
+      description: A string representing the logger parameters.
   overload: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Parameters*
   exceptions: []
   platform:
@@ -200,7 +200,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "關閉可設定的轉送記錄器。"
+  summary: Closes the configurable forwarding logger.
   syntax:
     content: public virtual void Shutdown ();
     parameters: []
@@ -220,13 +220,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "取得或設定事件記錄檔中顯示的詳細資料層級。"
-  remarks: "主控台記錄器會採用一個參數，以隱藏的錯誤和警告摘要結尾的組建輸出。"
+  summary: Gets or sets the level of detail to show in the event log.
+  remarks: The console logger takes a single parameter to suppress the output of the errors and warnings summary at the end of a build.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "<xref href=&quot;Microsoft.Build.Framework.LoggerVerbosity&quot;> </xref>列舉值。"
+      description: a <xref href="Microsoft.Build.Framework.LoggerVerbosity"></xref> enumeration value.
   overload: Microsoft.Build.BuildEngine.ConfigurableForwardingLogger.Verbosity*
   exceptions: []
   platform:

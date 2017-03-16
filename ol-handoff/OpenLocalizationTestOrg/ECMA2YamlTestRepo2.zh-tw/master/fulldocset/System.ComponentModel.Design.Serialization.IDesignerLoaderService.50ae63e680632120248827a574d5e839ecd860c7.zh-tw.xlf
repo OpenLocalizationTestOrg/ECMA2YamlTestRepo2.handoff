@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d491a4cb6036a4c7716df25279936d32ae71dc42</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ComponentModel.Design.Serialization.IDesignerLoaderService.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0d693bc6abb190988b9af7be5f237e014f810cf9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8a007a8e18afcaaefa9697dba57d731f153c4398</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides an interface that can extend a designer loader to support asynchronous loading of external components.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.ComponentModel.Design.Serialization.DesignerLoader&gt; can implement this interface to manage designer loading that involves external components.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This interface also allows external components to initiate a reload of the design surface by calling &lt;xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A designer loader does not have to implement this interface if it does not require support for asynchronous loading.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Designer loading using a custom implementation of the IDesignerLoaderService can occur in a variety of ways.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Sometimes external components are involved in the loading process.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To facilitate loading with external dependencies, the designer loader service interface provides a mechanism that determines when loading is complete and allows each portion of loading to signal that it has completed.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The IDesignerLoaderService typically determines when loading is complete by testing a counter that tracks the number of load dependencies remaining.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>When each portion of the load completes, &lt;xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A&gt; is called, and the service decrements the counter.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To set the number of dependent load processes, call &lt;xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A&gt; once for each load process that calls &lt;xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A&gt; when its loading is complete.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When the final loading is complete, the service calls &lt;xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.EndLoad%2A&gt; on the loader host.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Registers an external component as part of the load process managed by this interface.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Call AddLoadDependency once for each external object participating in the load process.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A&gt; is called when the work of the load process is done.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Signals that a dependent load has finished.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>This method is called to signal that a dependent loading operation has completed.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Call DependentLoadComplete once for every process that was registered by calling &lt;xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A&gt;, which has already completed.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If the dependent load succeeds, the caller sets the <ph id="ph1">`successful`</ph> parameter to <ph id="ph2">`true`</ph> and passes either an empty collection or <ph id="ph3">`null`</ph> to the <ph id="ph4">`errorCollection`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If the dependent load encounters errors, the caller sets the <ph id="ph1">`successful`</ph> parameter to <ph id="ph2">`false`</ph> and passes a collection of exceptions that indicate the reason or reasons for failure to the <ph id="ph3">`errorCollection`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the load of the designer is successful; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if errors prevented the load from finishing.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A collection of errors that occurred during the load, if any.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If no errors occurred, pass either an empty collection or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Reloads the design document.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Any object can call this method to request that the loader reload the design document.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If the loader supports reloading and complies with the reload, the designer loader can return <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <ph id="ph1">`false`</ph>, indicating that the reload will not occur.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Callers cannot rely on the reload happening immediately; the designer loader can schedule this for some other time, or it can try to reload at once.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The caller can display a message to the user if the designer cannot be reloaded.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the reload request is accepted, or <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if the loader does not allow the reload.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

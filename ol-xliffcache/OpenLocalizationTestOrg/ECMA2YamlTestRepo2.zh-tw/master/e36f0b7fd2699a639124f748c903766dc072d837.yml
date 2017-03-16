@@ -33,8 +33,8 @@ items:
   nameWithType: ConsoleLogger
   fullName: Microsoft.Build.Logging.ConsoleLogger
   type: Class
-  summary: "代表預設記錄器輸出至主控台 (stdout) 的事件資料。"
-  remarks: "這個類別會建立、 換行，並委派至`BaseConsoleLogger`，`SerialConsoleLogger`或`ParallelConsoleLogger`。       這個類別不具備執行緒安全。"
+  summary: Represents the default logger that outputs event data to the console (stdout).
+  remarks: "This class creates, wraps, and delegates to a `BaseConsoleLogger`, either `SerialConsoleLogger` or `ParallelConsoleLogger`.  \n  \n This class is not thread safe."
   syntax:
     content: 'public class ConsoleLogger : Microsoft.Build.Framework.INodeLogger'
   inheritance:
@@ -56,7 +56,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "建立預設記錄器。"
+  summary: Creates a default logger.
   syntax:
     content: public ConsoleLogger ();
     parameters: []
@@ -76,13 +76,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "使用指定預設的主控台記錄檔的詳細資訊，請建立記錄器執行個體。"
+  summary: Creates a logger instance with the given verbosity that logs to the default console.
   syntax:
     content: public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity);
     parameters:
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "詳細等級。"
+      description: The verbosity level.
   overload: Microsoft.Build.Logging.ConsoleLogger.#ctor*
   exceptions: []
   platform:
@@ -99,22 +99,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "初始化記錄器和替代輸出處理常式。"
+  summary: Initializes the logger with alternate output handlers.
   syntax:
     content: public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity, Microsoft.Build.Logging.WriteHandler write, Microsoft.Build.Logging.ColorSetter colorSet, Microsoft.Build.Logging.ColorResetter colorReset);
     parameters:
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "詳細等級。"
+      description: The verbosity level.
     - id: write
       type: Microsoft.Build.Logging.WriteHandler
-      description: "寫入處理常式。"
+      description: The write handler.
     - id: colorSet
       type: Microsoft.Build.Logging.ColorSetter
-      description: "設定文字色彩。"
+      description: Sets the text color.
     - id: colorReset
       type: Microsoft.Build.Logging.ColorResetter
-      description: "重設的文字色彩。"
+      description: Resets the text color.
   overload: Microsoft.Build.Logging.ConsoleLogger.#ctor*
   exceptions: []
   platform:
@@ -131,17 +131,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "套用至記錄器的參數。"
-  remarks: "已取代。"
+  summary: Applies a parameter to the logger.
+  remarks: Deprecated.
   syntax:
     content: public void ApplyParameter (string parameterName, string parameterValue);
     parameters:
     - id: parameterName
       type: System.String
-      description: "參數的名稱。"
+      description: The name of the parameter.
     - id: parameterValue
       type: System.String
-      description: "參數的值。"
+      description: The value of the parameter.
   overload: Microsoft.Build.Logging.ConsoleLogger.ApplyParameter*
   exceptions: []
   platform:
@@ -158,16 +158,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "在組建完成時呼叫。"
+  summary: Called when the build is finished.
   syntax:
     content: public void BuildFinishedHandler (object sender, Microsoft.Build.Framework.BuildFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.BuildFinishedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.BuildFinishedHandler*
   exceptions: []
   platform:
@@ -184,16 +184,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "建置開始時呼叫。"
+  summary: Called when the build is started.
   syntax:
     content: public void BuildStartedHandler (object sender, Microsoft.Build.Framework.BuildStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.BuildStartedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.BuildStartedHandler*
   exceptions: []
   platform:
@@ -210,16 +210,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫以記錄自訂事件。"
+  summary: Called to log a custom event.
   syntax:
     content: public void CustomEventHandler (object sender, Microsoft.Build.Framework.CustomBuildEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "事件的寄件者。"
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.CustomBuildEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.CustomEventHandler*
   exceptions: []
   platform:
@@ -236,16 +236,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫以記錄錯誤事件。"
+  summary: Called to log an error event.
   syntax:
     content: public void ErrorHandler (object sender, Microsoft.Build.Framework.BuildErrorEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "事件的寄件者。"
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.BuildErrorEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.ErrorHandler*
   exceptions: []
   platform:
@@ -262,13 +262,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "指定的建置事件的主控台記錄器註冊。"
+  summary: Signs up the console logger for the given build event.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "可用的事件。"
+      description: The available events.
   overload: Microsoft.Build.Logging.ConsoleLogger.Initialize*
   exceptions: []
   platform:
@@ -285,16 +285,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "初始化具有指定的事件來源和節點計數記錄器。"
+  summary: Initializes the logger with the given event source and node count.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "事件的來源。"
+      description: The event source.
     - id: nodeCount
       type: System.Int32
-      description: "節點的計數。"
+      description: The node count.
   overload: Microsoft.Build.Logging.ConsoleLogger.Initialize*
   exceptions: []
   platform:
@@ -311,16 +311,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫來記錄訊息事件。"
+  summary: Called to log a message event.
   syntax:
     content: public void MessageHandler (object sender, Microsoft.Build.Framework.BuildMessageEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "事件的寄件者。"
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.BuildMessageEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.MessageHandler*
   exceptions: []
   platform:
@@ -337,12 +337,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得或設定以分號分隔的參數清單的索引鍵 / 值組。"
+  summary: Gets or sets a semicolon-delimited list of parameter key-value pairs.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "傳回以分號分隔的參數清單索引鍵-值配對。"
+      description: Returns a semicolon-delimited list of parameter key-value pairs.
   overload: Microsoft.Build.Logging.ConsoleLogger.Parameters*
   exceptions: []
   platform:
@@ -359,16 +359,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫記錄專案完成事件。"
+  summary: Called to log a project finished event.
   syntax:
     content: public void ProjectFinishedHandler (object sender, Microsoft.Build.Framework.ProjectFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.ProjectFinishedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.ProjectFinishedHandler*
   exceptions: []
   platform:
@@ -385,16 +385,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫記錄專案啟動事件。"
+  summary: Called to log a project started event.
   syntax:
     content: public void ProjectStartedHandler (object sender, Microsoft.Build.Framework.ProjectStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.ProjectStartedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.ProjectStartedHandler*
   exceptions: []
   platform:
@@ -411,12 +411,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得或設定參數，決定是否要隱藏的錯誤和警告摘要。"
+  summary: Gets or sets a switch that determines whether to suppress the display of errors and the warnings summary.
   syntax:
     content: public bool ShowSummary { get; set; }
     return:
       type: System.Boolean
-      description: "傳回參數，決定是否要隱藏的錯誤和警告摘要。"
+      description: Returns a switch that determines whether to suppress the display of errors and the warnings summary.
   overload: Microsoft.Build.Logging.ConsoleLogger.ShowSummary*
   exceptions: []
   platform:
@@ -433,8 +433,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "在組建完成時呼叫。"
-  remarks: "主控台記錄器不需要釋放任何資源。 這個方法沒有作用。"
+  summary: Called when the build is finished.
+  remarks: The console logger does not need to release any resources. This method does nothing.
   syntax:
     content: public virtual void Shutdown ();
     parameters: []
@@ -454,13 +454,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得或設定參數，決定是否要隱藏專案標頭。"
-  remarks: "依預設會顯示專案的標頭，除非這個屬性設定。"
+  summary: Gets or sets a switch that determines whether to suppress the display of project headers.
+  remarks: Project headers are displayed by default unless this property is set.
   syntax:
     content: public bool SkipProjectStartedText { get; set; }
     return:
       type: System.Boolean
-      description: "傳回參數，決定是否要隱藏專案標頭。"
+      description: Returns a switch that determines whether to suppress the display of project headers.
   overload: Microsoft.Build.Logging.ConsoleLogger.SkipProjectStartedText*
   exceptions: []
   platform:
@@ -477,16 +477,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫記錄目標完成事件。"
+  summary: Called to log a target finished event.
   syntax:
     content: public void TargetFinishedHandler (object sender, Microsoft.Build.Framework.TargetFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TargetFinishedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TargetFinishedHandler*
   exceptions: []
   platform:
@@ -503,16 +503,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫記錄目標啟動事件。"
+  summary: Called to log a target started event.
   syntax:
     content: public void TargetStartedHandler (object sender, Microsoft.Build.Framework.TargetStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TargetStartedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TargetStartedHandler*
   exceptions: []
   platform:
@@ -529,16 +529,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫來記錄工作完成事件。"
+  summary: Called to log a task finished event.
   syntax:
     content: public void TaskFinishedHandler (object sender, Microsoft.Build.Framework.TaskFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TaskFinishedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TaskFinishedHandler*
   exceptions: []
   platform:
@@ -555,16 +555,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫來記錄工作啟動事件。"
+  summary: Called to log a task started event.
   syntax:
     content: public void TaskStartedHandler (object sender, Microsoft.Build.Framework.TaskStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "（應該是 null） 寄件者。"
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TaskStartedEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TaskStartedHandler*
   exceptions: []
   platform:
@@ -581,12 +581,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得或設定事件記錄檔中顯示的詳細資料層級。"
+  summary: Gets or sets the level of detail to show in the event log.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "傳回事件記錄檔中顯示詳細資料層的級。"
+      description: Returns the level of detail to show in the event log.
   overload: Microsoft.Build.Logging.ConsoleLogger.Verbosity*
   exceptions: []
   platform:
@@ -603,16 +603,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "呼叫來記錄警告事件。"
+  summary: Called to log a warning event.
   syntax:
     content: public void WarningHandler (object sender, Microsoft.Build.Framework.BuildWarningEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "事件的寄件者。"
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.BuildWarningEventArgs
-      description: "事件引數。"
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.WarningHandler*
   exceptions: []
   platform:
@@ -629,12 +629,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "提供寫入處理常式委派存取，好讓它可以重新導向如有必要 （例如檔案）。"
+  summary: Provides access to the write handler delegate so that it can be redirected if necessary (e.g. to a file).
   syntax:
     content: protected Microsoft.Build.Logging.WriteHandler WriteHandler { get; set; }
     return:
       type: Microsoft.Build.Logging.WriteHandler
-      description: "傳回的寫入處理常式委派。"
+      description: Returns the write handler delegate.
   overload: Microsoft.Build.Logging.ConsoleLogger.WriteHandler*
   exceptions: []
   platform:
