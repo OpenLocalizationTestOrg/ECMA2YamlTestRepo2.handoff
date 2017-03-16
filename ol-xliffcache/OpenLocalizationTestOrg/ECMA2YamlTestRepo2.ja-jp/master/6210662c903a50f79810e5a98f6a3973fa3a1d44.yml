@@ -13,7 +13,7 @@ items:
   nameWithType: ProjectSchemaDefinitions
   fullName: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions
   type: Class
-  summary: "データ ドリブン XAML スクリプト プロジェクト スキーマを表します。"
+  summary: Represents a data-driven XAML script project schema.
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Nodes")]
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "スキーマ定義の既定のコンス トラクターです。"
+  summary: The default constructor of a schema definition.
   syntax:
     content: public ProjectSchemaDefinitions ();
     parameters: []
@@ -58,16 +58,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "指定された型を持つ静的データのすべてのインスタンスに対する列挙子を返します。"
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "取得する静的なデータの型。"
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "指定された型を持つ静的データのすべてのインスタンスに対する列挙子を返します。 返します。 <xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;> </xref>またはこのノードによって提供される特定の型のオブジェクトが存在しない場合、空のリスト。"
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if there are no objects of the given type provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjects*
   exceptions: []
   platform:
@@ -84,13 +84,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "このノードに含まれるデータ ドリブンの機能の静的データのすべての種類に対する列挙子を返します。"
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "このノードに含まれるデータ ドリブンの機能の静的データのすべての種類に対する列挙子を返します。"
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得またはこのスキーマ定義のノードのリストを設定します。"
+  summary: Gets or sets the list of nodes for this schema definition.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode> Nodes { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode}
-      description: "このスキーマ定義のノードのリストを返します。"
+      description: Returns the list of nodes for this schema definition.
   overload: Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes*
   exceptions: []
   platform:

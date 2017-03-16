@@ -19,7 +19,7 @@ items:
   nameWithType: EnumValue
   fullName: Microsoft.Build.Framework.XamlTypes.EnumValue
   type: Class
-  summary: "メソッドの値を表す、 <xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumProperty&quot;></xref>します。"
+  summary: Represents an admissible value of an <xref href="Microsoft.Build.Framework.XamlTypes.EnumProperty"></xref>.
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Arguments")]
@@ -43,7 +43,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "既定のコンス トラクターです。 XAML の逆シリアル化が必要です。"
+  summary: Default constructor. Required for XAML deserialization.
   syntax:
     content: public EnumValue ();
     parameters: []
@@ -63,13 +63,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "この引数のリストを取得または<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumValue&quot;></xref>します。"
-  remarks: "このフィールドは省略可能です。"
+  summary: Gets or sets the list of arguments for this <xref href="Microsoft.Build.Framework.XamlTypes.EnumValue"></xref>.
+  remarks: This field is optional.
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.Argument> Arguments { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.Argument}
-      description: "引数のリストを返します。"
+      description: Returns the list of arguments.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.Arguments*
   exceptions: []
   platform:
@@ -86,13 +86,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得または設定の説明<xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;></xref>見込み客に対して UI で使用するためです。"
-  remarks: "このフィールドはオプションとカルチャに依存します。"
+  summary: Gets or sets the description of this <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref> for use by a prospective UI client.
+  remarks: This field is optional and is culture-sensitive.
   syntax:
     content: public string Description { get; set; }
     return:
       type: System.String
-      description: "説明を返します。"
+      description: Returns the description.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.Description*
   exceptions: []
   platform:
@@ -109,13 +109,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "表示するために、見込み客に対して UI で使用できる名前を取得または<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumValue&quot;></xref>します。"
-  remarks: "このフィールドはオプションとカルチャに依存します。       このプロパティが設定されていない場合と同じ値が割り当てられます、<xref:Microsoft.Build.Framework.XamlTypes.EnumValue.Name%2A>プロパティ (および、そのため、は日本語化されません)。</xref:Microsoft.Build.Framework.XamlTypes.EnumValue.Name%2A> 。"
+  summary: Gets or sets the name that can be used by a prospective UI client to display this <xref href="Microsoft.Build.Framework.XamlTypes.EnumValue"></xref>.
+  remarks: "This field is optional and is culture-sensitive.  \n  \n When this property is not set, it is assigned the same value as the <xref:Microsoft.Build.Framework.XamlTypes.EnumValue.Name%2A> property (and, therefore, would not be localized)."
   syntax:
     content: public string DisplayName { get; set; }
     return:
       type: System.String
-      description: "名前を返します。"
+      description: Returns the name.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.DisplayName*
   exceptions: []
   platform:
@@ -132,13 +132,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "このヘルプ情報を取得または<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumValue&quot;></xref>します。"
-  remarks: "ヘルプの URL を指定するために使用します。       このフィールドはオプションとカルチャに依存します。"
+  summary: Gets or sets Help information for this <xref href="Microsoft.Build.Framework.XamlTypes.EnumValue"></xref>.
+  remarks: "Can be used to specify a Help URL.  \n  \n This field is optional and is culture-sensitive."
   syntax:
     content: public string HelpString { get; set; }
     return:
       type: System.String
-      description: "ヘルプ情報を返します。"
+      description: Returns the Help information.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.HelpString*
   exceptions: []
   platform:
@@ -155,13 +155,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得またはを指定するフラグを設定するかどうかこの<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumValue&quot;></xref>関連付けられた既定値は、 <xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumProperty&quot;></xref>します。"
-  remarks: "このフィールドは省略可能、既定値は`false`です。"
+  summary: Gets or sets a flag that determines whether this <xref href="Microsoft.Build.Framework.XamlTypes.EnumValue"></xref> is the default value for the associated <xref href="Microsoft.Build.Framework.XamlTypes.EnumProperty"></xref>.
+  remarks: This field is optional and its default value  is `false`.
   syntax:
     content: public bool IsDefault { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_True&quot; name=&quot;True&quot; href=&quot;&quot;></xref>列挙値が既定値である場合それ以外の場合、 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>します。"
+      description: <xref uid="langword_csharp_True" name="True" href=""></xref> if the enum value is the default value; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.IsDefault*
   exceptions: []
   platform:
@@ -178,13 +178,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "この追加の属性を取得または<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumValue&quot;></xref>します。"
-  remarks: "このプロパティは、プライマリのフィールドではキャプチャされませんこの値の追加のメタデータのグラブ バッグとして使用できます。 含まれる UI 形式がそれらに対応していないために、追加のメタデータを解釈するには、カスタム UI が必要です。       このフィールドは省略可能です。"
+  summary: Gets or sets additional attributes of this <xref href="Microsoft.Build.Framework.XamlTypes.EnumValue"></xref>.
+  remarks: "This property can be used as a grab bag for additional metadata of this value that are not captured by the primary fields. A custom UI is required to interpret the additional metadata because the included UI formats are not aware of them.  \n  \n This field is optional."
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.NameValuePair> Metadata { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.NameValuePair}
-      description: "その他の属性を返します。"
+      description: Returns the additional attributes.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.Metadata*
   exceptions: []
   platform:
@@ -201,13 +201,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "この名前を取得または<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumValue&quot;></xref>します。"
-  remarks: "このフィールドは、必須で、カルチャに依存しません。"
+  summary: Gets or sets the name of this <xref href="Microsoft.Build.Framework.XamlTypes.EnumValue"></xref>.
+  remarks: This field is mandatory and culture-invariant.
   syntax:
     content: public string Name { get; set; }
     return:
       type: System.String
-      description: "名前を返します。"
+      description: Returns the name.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.Name*
   exceptions: []
   platform:
@@ -224,13 +224,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得または設定の場合に、このプロパティのスイッチ表現ときに、親<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumProperty&quot;></xref>ツールのパラメーターを表します。"
-  remarks: "このフィールドは、オプションであり、カルチャに依存しません。"
+  summary: Gets or sets a switch representation of this property for the case when the parent <xref href="Microsoft.Build.Framework.XamlTypes.EnumProperty"></xref> represents a tool parameter.
+  remarks: This field is optional and culture-invariant.
   syntax:
     content: public string Switch { get; set; }
     return:
       type: System.String
-      description: "スイッチの表現を返します。"
+      description: Returns the switch representation.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.Switch*
   exceptions: []
   platform:
@@ -247,13 +247,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得または設定の場合は、この値のスイッチ表現のプレフィックスと親<xref href=&quot;Microsoft.Build.Framework.XamlTypes.EnumProperty&quot;></xref>ツールのパラメーターを表します。"
-  remarks: "このフィールドは、オプションであり、カルチャに依存しません。"
+  summary: Gets or sets the prefix for the switch representation of this value for the case when the parent <xref href="Microsoft.Build.Framework.XamlTypes.EnumProperty"></xref> represents a tool parameter.
+  remarks: This field is optional and culture-invariant.
   syntax:
     content: public string SwitchPrefix { get; set; }
     return:
       type: System.String
-      description: "スイッチ プリフィックスを返します。"
+      description: Returns the switch prefix.
   overload: Microsoft.Build.Framework.XamlTypes.EnumValue.SwitchPrefix*
   exceptions: []
   platform:

@@ -27,7 +27,7 @@ items:
   nameWithType: ProjectTaskElement
   fullName: Microsoft.Build.Construction.ProjectTaskElement
   type: Class
-  summary: "表す、 [Task 要素 (MSBuild)](~/add/includes/ajax-current-ext-md.md) MSBuild プロジェクトにします。"
+  summary: Represents a [Task Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{Name} Condition={Condition} ContinueOnError={ContinueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Outputs={Count}")]
@@ -75,19 +75,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "最後の子の後の出力項目を追加します。"
+  summary: Adds an Output item after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputItem (string taskParameter, string itemType);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "作業項目への出力の名前。"
+      description: The name of the task which outputs to the item.
     - id: itemType
       type: System.String
-      description: "値が設定されるタスクの出力に新しい項目の項目の種類。"
+      description: The item type of the new item whose value is set to the output of the task.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "出力の追加された項目を返します。"
+      description: Returns the added Output item.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputItem*
   exceptions: []
   platform:
@@ -104,22 +104,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "最後の子の後に、条件付きの出力項目をこのタスクに追加します。"
+  summary: Adds a conditioned Output item to this task after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputItem (string taskParameter, string itemType, string condition);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "パラメーターの名前。"
+      description: The name of the parameter.
     - id: itemType
       type: System.String
-      description: "項目の項目の種類。"
+      description: The item type of the item.
     - id: condition
       type: System.String
-      description: "パラメーターの条件です。"
+      description: The condition of the parameter.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "返しますが、追加では、出力項目条件設定します。"
+      description: Returns the added conditioned Output item.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputItem*
   exceptions: []
   platform:
@@ -136,19 +136,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "このタスクに最後の子の後の出力プロパティを追加します。"
+  summary: Adds an Output property to this task after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty (string taskParameter, string propertyName);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "パラメーターの名前。"
+      description: The name of the parameter.
     - id: propertyName
       type: System.String
-      description: "プロパティの名前。"
+      description: The name of the property.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "追加の出力プロパティを返します。"
+      description: Returns the added Output property.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputProperty*
   exceptions: []
   platform:
@@ -165,22 +165,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "最後の子の後に、条件付きの出力プロパティをこのタスクに追加します。"
+  summary: Adds a conditioned Output property to this task after the last child.
   syntax:
     content: public Microsoft.Build.Construction.ProjectOutputElement AddOutputProperty (string taskParameter, string propertyName, string condition);
     parameters:
     - id: taskParameter
       type: System.String
-      description: "パラメーターの名前。"
+      description: The name of the parameter.
     - id: propertyName
       type: System.String
-      description: "プロパティの名前。"
+      description: The name of the property.
     - id: condition
       type: System.String
-      description: "プロパティの条件です。"
+      description: The condition of the property.
     return:
       type: Microsoft.Build.Construction.ProjectOutputElement
-      description: "返しますが、追加では、出力プロパティ条件設定します。"
+      description: Returns the added conditioned Output property.
   overload: Microsoft.Build.Construction.ProjectTaskElement.AddOutputProperty*
   exceptions: []
   platform:
@@ -197,13 +197,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または設定、`ContinueOnError`属性の値。"
-  remarks: "削除、`ContinueOnError`属性を設定する値が null または空の文字列に設定されている場合。"
+  summary: Gets or sets the `ContinueOnError` attribute value.
+  remarks: Removes the `ContinueOnError` attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string ContinueOnError { get; set; }
     return:
       type: System.String
-      description: "返します。、`ContinueOnError`属性の値。 属性が存在しない場合は、空の文字列を返します。"
+      description: Returns the `ContinueOnError` attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectTaskElement.ContinueOnError*
   exceptions: []
   platform:
@@ -220,12 +220,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "存在する場合、この要素に&quot;ContinueOnError&quot;属性の場所です。       このような属性がない場合は、null を返します。"
+  summary: "Location of the \"ContinueOnError\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ContinueOnErrorLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.ContinueOnErrorLocation*
   exceptions: []
   platform:
@@ -242,16 +242,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "指定した名前のパラメーターの値を取得します。"
+  summary: Gets the value of the parameter with the specified name.
   syntax:
     content: public string GetParameter (string name);
     parameters:
     - id: name
       type: System.String
-      description: "パラメーターの名前。"
+      description: The name of the parameter.
     return:
       type: System.String
-      description: "指定した名前を持つパラメーターの値を返します。 タスクでその名前のパラメーターが存在しない場合は、空の文字列を返します。"
+      description: Returns the value of the parameter with the specified name. If no parameter by that name exists in the task, returns an empty string.
   overload: Microsoft.Build.Construction.ProjectTaskElement.GetParameter*
   exceptions: []
   platform:
@@ -268,12 +268,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得またはタスクのアーキテクチャの値を設定します。       存在しない場合、空の文字列を返します。       設定する値が空の場合は、属性を削除します。"
+  summary: "Gets or sets the architecture value for the task.  \n  \n Returns empty string if it is not present.  \n  \n Removes the attribute if the value to set is empty."
   syntax:
     content: public string MSBuildArchitecture { get; set; }
     return:
       type: System.String
-      description: "<xref:System.String>。</xref:System.String>を返します。"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildArchitecture*
   exceptions: []
   platform:
@@ -290,12 +290,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "この要素は、存在する場合の&quot;MSBuildArchitecture&quot;属性の場所です。       このような属性がない場合は、null を返します。"
+  summary: "Location of the \"MSBuildArchitecture\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation MSBuildArchitectureLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildArchitectureLocation*
   exceptions: []
   platform:
@@ -312,12 +312,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得またはタスクの実行時の値を設定します。       存在しない場合、空の文字列を返します。       設定する値が空の場合は、属性を削除します。"
+  summary: "Gets or sets the runtime value for the task.  \n  \n Returns empty string if it is not present.  \n  \n Removes the attribute if the value to set is empty."
   syntax:
     content: public string MSBuildRuntime { get; set; }
     return:
       type: System.String
-      description: "<xref:System.String>。</xref:System.String>を返します。"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildRuntime*
   exceptions: []
   platform:
@@ -334,12 +334,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "この要素は、存在する場合の&quot;MSBuildRuntime&quot;属性の場所です。       このような属性がない場合は、null を返します。"
+  summary: "Location of the \"MSBuildRuntime\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation MSBuildRuntimeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectTaskElement.MSBuildRuntimeLocation*
   exceptions: []
   platform:
@@ -356,12 +356,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "このタスクの名前を取得します。"
+  summary: Gets the name of this task.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "このタスクの名前を返します。"
+      description: Returns the name of this task.
   overload: Microsoft.Build.Construction.ProjectTaskElement.Name*
   exceptions: []
   platform:
@@ -378,12 +378,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "すべてを取得します[Output 要素 (MSBuild)](~/add/includes/ajax-current-ext-md.md)子。"
+  summary: Gets all [Output Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) children.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectOutputElement> Outputs { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectOutputElement}
-      description: "すべての子の出力の要素を返します。"
+      description: Returns all Output element children.
   overload: Microsoft.Build.Construction.ProjectTaskElement.Outputs*
   exceptions: []
   platform:
@@ -400,12 +400,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "タスクのパラメーターの場所に列挙型。       独自のプロパティがある、条件と ContinueOnError は、このコレクションに含まれません。       パラメーターの大文字小文字が異なるだけの場合は、最後の&1; つだけが返されます。       ホストは、RemoveAllParameters() を使用して、その他のパラメーターをまだ削除できます。"
+  summary: "Enumerable over the locations of parameters on the task.  \n  \n Condition and ContinueOnError, which have their own properties, are not included in this collection.  \n  \n If parameters differ only by case only the last one will be returned.  \n  \n Hosts can still remove the other parameters by using RemoveAllParameters()."
   syntax:
     content: public System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string,Microsoft.Build.Construction.ElementLocation>> ParameterLocations { get; }
     return:
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,Microsoft.Build.Construction.ElementLocation}}
-      description: "返します。 &lt;xref:System.Collections.Generic.IEnumerable%601&gt;します。"
+      description: Returns &lt;xref:System.Collections.Generic.IEnumerable%601&gt;.
   overload: Microsoft.Build.Construction.ProjectTaskElement.ParameterLocations*
   exceptions: []
   platform:
@@ -422,13 +422,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "このタスクのすべての評価されていないパラメーターを取得します。"
-  remarks: '`Condition``ContinueOnError`属性は、このコレクションには含まれません。 パラメーターの大文字小文字が異なるだけの場合は最後の&1; つだけが返されます。 RemoveAllParameters() を参照してください。'
+  summary: Gets all unevaluated parameters of this task.
+  remarks: '`Condition` and `ContinueOnError` attributes are not included in this collection. If parameters differ only by case then only the last one will be returned. See also RemoveAllParameters().'
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> Parameters { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "このタスクのすべての評価されていないパラメーターを返します。"
+      description: Returns all unevaluated parameters of this task.
   overload: Microsoft.Build.Construction.ProjectTaskElement.Parameters*
   exceptions: []
   platform:
@@ -445,7 +445,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "タスクからのすべてのパラメーターを削除します。 削除されません`ContinueOnError`や`Condition`属性です。"
+  summary: Removes all parameters from the task. Does not remove any `ContinueOnError` and/or `Condition` attributes.
   syntax:
     content: public void RemoveAllParameters ();
     parameters: []
@@ -465,13 +465,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "任意のパラメーターを指定した名前には、このタスクを削除します。 タスクでその名前のパラメーターが存在しない場合は、何も行われません。"
+  summary: Removes any parameter on this task with the specified name. If no parameter by that name exists in the task, does nothing.
   syntax:
     content: public void RemoveParameter (string name);
     parameters:
     - id: name
       type: System.String
-      description: "削除するパラメーターの名前。"
+      description: The name of the parameter to remove.
   overload: Microsoft.Build.Construction.ProjectTaskElement.RemoveParameter*
   exceptions: []
   platform:
@@ -488,17 +488,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "更新またはこのタスクのパラメーターを追加"
-  remarks: "タスクでその名前のパラメーターが存在する場合は、指定した値にパラメーターを更新します。 それ以外の場合、指定した名前と値のパラメーターを作成し、タスクに追加します。"
+  summary: Updates or adds a parameter on this task
+  remarks: Updates the parameter to the specified value if a parameter by that name exists in the task. Otherwise, creates a parameter with the specified name and value, and adds it to the task.
   syntax:
     content: public void SetParameter (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "更新または追加するパラメーターの名前。"
+      description: The name of the parameter to update or add.
     - id: unevaluatedValue
       type: System.String
-      description: "パラメーターの値。"
+      description: The value of the parameter.
   overload: Microsoft.Build.Construction.ProjectTaskElement.SetParameter*
   exceptions: []
   platform:

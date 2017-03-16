@@ -21,7 +21,7 @@ items:
   nameWithType: ContentType
   fullName: Microsoft.Build.Framework.XamlTypes.ContentType
   type: Class
-  summary: "コンテンツ タイプの情報を逆シリアル化するために使用"
+  summary: Used to deserialize the content type information
   syntax:
     content: >-
       [System.Windows.Markup.ContentProperty("Metadata")]
@@ -47,7 +47,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "コンストラクター"
+  summary: Constructor
   syntax:
     content: public ContentType ();
     parameters: []
@@ -67,7 +67,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "初期化を開始します。 ISupportInitialize を参照してください。"
+  summary: Begins initialization. See ISupportInitialize.
   syntax:
     content: public void BeginInit ();
     parameters: []
@@ -87,12 +87,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得または既定のコンテンツ タイプが使用できるかどうかを決定するフラグを設定します。"
+  summary: Gets or sets a flag that determines whether default content type is available.
   syntax:
     content: public bool DefaultContentTypeForItemType { get; set; }
     return:
       type: System.Boolean
-      description: "既定のコンテンツ タイプが使用可能な場合に true を返します。"
+      description: Returns true if default content type is available.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.DefaultContentTypeForItemType*
   exceptions: []
   platform:
@@ -109,12 +109,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "IContentType.DisplayName をシリアル化します。"
+  summary: Serializes IContentType.DisplayName.
   syntax:
     content: public string DisplayName { get; set; }
     return:
       type: System.String
-      description: "シリアル化された表示名を返します。"
+      description: Returns the serialized display name.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.DisplayName*
   exceptions: []
   platform:
@@ -131,7 +131,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "初期化を終了します。  ISupportInitialize を参照してください。"
+  summary: Ends initialization.  See ISupportInitialize.
   syntax:
     content: public void EndInit ();
     parameters: []
@@ -151,16 +151,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "指定したメタデータ名の値を取得します。"
+  summary: Gets the value of the given metadata name.
   syntax:
     content: public string GetMetadata (string metadataName);
     parameters:
     - id: metadataName
       type: System.String
-      description: "値を取得するメタデータの名前。"
+      description: The name of the metadata whose value is to be retrieved.
     return:
       type: System.String
-      description: "指定したメタデータ名の値を返します。 メタデータの名前が見つからない場合は null を返します。"
+      description: Returns the value of the given metadata name. Returns null if the name isn't found in the metadata.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.GetMetadata*
   exceptions: []
   platform:
@@ -177,16 +177,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "指定された型を持つ静的データのすべてのインスタンスに対する列挙子を返します。"
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "取得する静的なデータの型。"
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "指定された型を持つ静的データのすべてのインスタンスに対する列挙子を返します。 返します。 <xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;> </xref>またはこのノードが指定された型のオブジェクトが指定されていない場合、空のリスト。"
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if no objects of the given type are provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjects*
   exceptions: []
   platform:
@@ -203,13 +203,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "このノードに含まれるデータ ドリブンの機能の静的データのすべての種類に対する列挙子を返します。"
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "このノードに含まれるデータ ドリブンの機能の静的データのすべての種類に対する列挙子を返します。"
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjectTypes*
   exceptions: []
   platform:
@@ -226,12 +226,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "IContentType.DefaultContentTypeForItemType をシリアル化します。"
+  summary: Serializes IContentType.DefaultContentTypeForItemType
   syntax:
     content: public string ItemGroupName { get; set; }
     return:
       type: System.String
-      description: "項目の種類のシリアル化された既定のコンテンツ タイプを返します。"
+      description: Returns the serialized default content type for the item type.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName*
   exceptions: []
   platform:
@@ -248,12 +248,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "IContentType.ItemType をシリアル化します。"
+  summary: Serializes IContentType.ItemType
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: "シリアル化された項目の種類を返します。"
+      description: Returns the serialized item type.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.ItemType*
   exceptions: []
   platform:
@@ -270,13 +270,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "コンテンツ タイプのメタデータをシリアル化します。"
-  remarks: "IContentType.GetMetadata() 経由でアクセスします。"
+  summary: Serializes content type's metadata.
+  remarks: Accessable via IContentType.GetMetadata().
   syntax:
     content: public System.Collections.Generic.List<Microsoft.Build.Framework.XamlTypes.NameValuePair> Metadata { get; set; }
     return:
       type: System.Collections.Generic.List{Microsoft.Build.Framework.XamlTypes.NameValuePair}
-      description: "シリアル化されたメタデータを返します。"
+      description: Returns the serialized metadata.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.Metadata*
   exceptions: []
   platform:
@@ -293,12 +293,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "IContentType.Name をシリアル化します。"
+  summary: Serializes IContentType.Name.
   syntax:
     content: public string Name { get; set; }
     return:
       type: System.String
-      description: "シリアル化された名前を返します。"
+      description: Returns the serialized name.
   overload: Microsoft.Build.Framework.XamlTypes.ContentType.Name*
   exceptions: []
   platform:

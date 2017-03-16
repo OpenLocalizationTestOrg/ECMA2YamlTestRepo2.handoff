@@ -25,7 +25,7 @@ items:
   nameWithType: ProjectItemElement
   fullName: Microsoft.Build.Construction.ProjectItemElement
   type: Class
-  summary: "表す、 [Item 要素 (MSBuild)](~/add/includes/ajax-current-ext-md.md) MSBuild プロジェクトにします。"
+  summary: Represents an [Item Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{ItemType} Include={Include} Exclude={Exclude} #Metadata={Count} Condition={Condition}")]
@@ -73,19 +73,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "この項目にメタデータを追加します。 既存のメタデータをメタデータを追加します。"
+  summary: Adds metadata to this item. Appends the metadata to any existing metadata.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement AddMetadata (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "メタデータの名前です。"
+      description: Name of metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "メタデータを追加します。"
+      description: Metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "変更されたメタデータを返します。"
+      description: Returns the modified metadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.AddMetadata*
   exceptions: []
   platform:
@@ -102,13 +102,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または除外する属性の値を設定します。"
-  remarks: "Null または空の文字列に設定する値が設定されている場合は、Exclude 属性を削除します。"
+  summary: Gets or sets the Exclude attribute value.
+  remarks: Removes the Exclude attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Exclude { get; set; }
     return:
       type: System.String
-      description: "除外する属性の値を返します。 属性が存在しない場合は、空の文字列を返します。"
+      description: Returns the Exclude attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Exclude*
   exceptions: []
   platform:
@@ -125,12 +125,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Exclude 属性の場所"
+  summary: Location of the exclude attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ExcludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectItemElement.ExcludeLocation*
   exceptions: []
   platform:
@@ -147,12 +147,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "この項目がすべての子メタデータ要素を持つかどうかを判断します。"
+  summary: Determines if this item has any child metadata elements.
   syntax:
     content: public bool HasMetadata { get; }
     return:
       type: System.Boolean
-      description: "この項目に子メタデータ要素がある場合は true を返しますfalse それ以外の場合。"
+      description: Returns true if this item has child metadata elements; false otherwise.
   overload: Microsoft.Build.Construction.ProjectItemElement.HasMetadata*
   exceptions: []
   platform:
@@ -169,13 +169,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または Include 属性の値を設定します。"
-  remarks: "Null または空の文字列に設定する値が設定されている場合は、Include 属性を削除します。"
+  summary: Gets or sets the Include attribute value.
+  remarks: Removes the Include attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Include { get; set; }
     return:
       type: System.String
-      description: "Include 属性の値を返します。 属性が存在しない場合は、空の文字列を返します。"
+      description: Returns the Include attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Include*
   exceptions: []
   platform:
@@ -192,12 +192,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Include 属性の場所"
+  summary: Location of the include attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation IncludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "含める場所を返します"
+      description: Returns the include location
   overload: Microsoft.Build.Construction.ProjectItemElement.IncludeLocation*
   exceptions: []
   platform:
@@ -214,12 +214,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "項目要素の型を取得します。"
+  summary: Gets the item element’s type.
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: "項目要素の型を返します。"
+      description: Returns the item element type.
   overload: Microsoft.Build.Construction.ProjectItemElement.ItemType*
   exceptions: []
   platform:
@@ -236,13 +236,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または KeepDuplicates 値を設定します。"
-  remarks: "設定する値が空または null の場合は、属性を削除します。"
+  summary: Gets or sets the KeepDuplicates value.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string KeepDuplicates { get; set; }
     return:
       type: System.String
-      description: "KeepDuplicates の値を取得またはが存在しない場合は、空の文字列を返します。"
+      description: Returns the value of KeepDuplicates, or returns empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepDuplicates*
   exceptions: []
   platform:
@@ -259,12 +259,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または KeepDuplicates 属性の位置を設定します。"
+  summary: Gets or sets the Location of the KeepDuplicates attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepDuplicatesLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "KeepDuplicates 属性の位置を返します。"
+      description: Returns the location of the KeepDuplicates attribute.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepDuplicatesLocation*
   exceptions: []
   platform:
@@ -281,13 +281,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または KeepMetadata 属性の値を設定します。"
-  remarks: "設定する値が空または null の場合は、属性を削除します。"
+  summary: Gets or sets the KeepMetadata attribute value.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string KeepMetadata { get; set; }
     return:
       type: System.String
-      description: "KeepMetadata 属性の値を返すかが存在しない場合は、空の文字列を取得します。"
+      description: Returns the value of the KeepMetadata attribute or returns an empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepMetadata*
   exceptions: []
   platform:
@@ -304,12 +304,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または KeepMetadata 属性の位置を設定します。"
+  summary: Gets or sets the location of the KeepMetadata attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "KeepMetadata の場所を返します。"
+      description: Returns the location of KeepMetadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepMetadataLocation*
   exceptions: []
   platform:
@@ -326,12 +326,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "すべての子メタデータを取得します。"
+  summary: Gets all child metadata.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectMetadataElement> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectMetadataElement}
-      description: "すべての子のメタデータを返します。"
+      description: Returns all child metadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.Metadata*
   exceptions: []
   platform:
@@ -348,13 +348,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または削除する属性の値を設定します。"
-  remarks: "Null または空の文字列に設定する値が設定されている場合は、削除する属性を削除します。"
+  summary: Gets or sets the Remove attribute value.
+  remarks: Removes the Remove attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Remove { get; set; }
     return:
       type: System.String
-      description: "削除する属性の値を返します。 属性が存在しない場合は、空の文字列を返します。"
+      description: Returns the Remove attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Remove*
   exceptions: []
   platform:
@@ -371,12 +371,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "削除の属性の位置"
+  summary: Location of the remove attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "削除する属性の位置を返します。"
+      description: Returns the remove attribute’s location.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveLocation*
   exceptions: []
   platform:
@@ -393,13 +393,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または RemoveMetadata 属性を設定します。"
-  remarks: "設定する値が空または null の場合は、属性を削除します。"
+  summary: Gets or sets the RemoveMetadata attribute.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string RemoveMetadata { get; set; }
     return:
       type: System.String
-      description: "存在しない場合は、空の文字列を取得または RemoveMetadata 値を返します。"
+      description: Returns the RemoveMetadata value or returns an empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveMetadata*
   exceptions: []
   platform:
@@ -416,12 +416,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "取得または RemoveMetadata 属性の位置を設定します。"
+  summary: Gets or sets the location of the RemoveMetadata attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "RemoveMetadata 属性の位置を返します。"
+      description: Returns the RemoveMetadata attribute’s location.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveMetadataLocation*
   exceptions: []
   platform:

@@ -13,8 +13,8 @@ items:
   nameWithType: StringListProperty
   fullName: Microsoft.Build.Framework.XamlTypes.StringListProperty
   type: Class
-  summary: "文字列の一覧のプロパティのスキーマを表します。"
-  remarks: "注意してください、 <xref:Microsoft.Build.Framework.XamlTypes.StringProperty>%s</xref:Microsoft.Build.Framework.XamlTypes.StringProperty>のリストではなくこの文字列のリストを表します"
+  summary: Represents the schema of a list-of-strings property.
+  remarks: Note, this represents a list of strings, not a list of <xref:Microsoft.Build.Framework.XamlTypes.StringProperty>s.
   syntax:
     content: 'public sealed class StringListProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty'
   inheritance:
@@ -61,7 +61,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "既定のコンス トラクターです。 プロパティの XAML の逆シリアル化に必要です。"
+  summary: Default constructor. Needed for property XAML deserialization.
   syntax:
     content: public StringListProperty ();
     parameters: []
@@ -81,13 +81,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "この文字列の一覧のプロパティの個々 の値を区切るために使用する区切り記号の設定を取得または"
-  remarks: '`Val1;Val2;Val3`場合は、`CommandLineValueSeparator`と答えて、として指定された`,`、次のようなコマンド ライン:`/p:val1,val2,val3`コマンド ライン次のように指定されていない場合:`/p:val1 /p:val2 /p:val3`このフィールドは省略可能です。'
+  summary: Gets or sets the separator to use in delineating individual values of this string list property
+  remarks: 'For `Val1;Val2;Val3`, if `CommandLineValueSeparator` is specified as, say `,`, the command line looks like this: `/p:val1,val2,val3` If not specified, the command line looks like this: `/p:val1 /p:val2 /p:val3` This field is optional.'
   syntax:
     content: public string CommandLineValueSeparator { get; set; }
     return:
       type: System.String
-      description: "区切り記号を返します。"
+      description: Returns the separator.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator*
   exceptions: []
   platform:
@@ -104,12 +104,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "取得または UI レンダリングの区切り記号を設定します。 このプロパティは推奨されません。"
+  summary: Gets or sets the UI rendering separator. This property is deprecated.
   syntax:
     content: public string RendererValueSeparator { get; set; }
     return:
       type: System.String
-      description: "UI のレンダリングの区切り記号を返します。 このプロパティは推奨されません。"
+      description: Returns the UI rendering separator. This property is deprecated.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator*
   exceptions: []
   platform:
@@ -126,13 +126,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "詳細な分類を指定するには、この文字列プロパティを修飾します。"
-  remarks: "ような<xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A>プロパティ</xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A>。"
+  summary: Qualifies this string property to give it a more specific classification.
+  remarks: Similar to the <xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A> property.
   syntax:
     content: public string Subtype { get; set; }
     return:
       type: System.String
-      description: "プロパティのサブタイプを返します。"
+      description: Returns the property subtype.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype*
   exceptions: []
   platform:

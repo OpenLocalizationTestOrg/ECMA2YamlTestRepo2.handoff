@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fed7190dd0210b8a650b81b56869f7ed74d3c2e4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Workflow.Runtime.WorkflowRuntime.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ebf90f6da55a7a3c4cb6135f5acde0095df4fb2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f8dbf3a7cd390851dc70a1ee78bd63f0a7163185</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents the configurable execution environment provided by the workflow run-time engine for workflows.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&gt; [!NOTE]</ph><ph id="ph2"> &gt;  </ph><ph id="ph3">[!INCLUDE[DeprecatedContent](~/add/includes/ajax-current-ext-md.md)]</ph>       WorkflowRuntime exposes functionality required by a host application and services to configure and control the workflow run-time engine and to be notified of changes to both the workflow run-time engine and any of its workflow instances.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; is initialized with the default property values and contains the default core services.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>To additionally configure the workflow run-time engine, you can add and remove services by using &lt;xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A&gt; and &lt;xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A&gt;, and you can set &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>After the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; is configured, call &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A&gt; to start the workflow run-time engine and its services.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The following table shows initial property values for an instance of &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>|Property|Initial Value|   |--------------|-------------------|   |&lt;xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A&gt;|"WorkflowRuntime"|   |&lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt;|<ph id="ph1">`false`</ph>|       The default core services are &lt;xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService&gt; and &lt;xref:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService&gt;.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class by using the specified section of the application configuration file.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; is initialized according to the settings in the section specified by <ph id="ph1">`configSectionName`</ph> in the application configuration file.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">`configSectionName`</ph> must correspond to a valid <ph id="ph2">`workflowSettings`</ph> section of a configuration file.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When the workflow run-time engine is configured by using an application configuration file, it loads and instantiates classes of the types listed in the <ph id="ph1">`Services`</ph> section of the configuration file.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When the workflow run-time engine constructs these classes it looks for class constructors with the following signatures in the following order:      1.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Service(WorkflowRuntime runtime, NameValueCollection parameters)      2.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Service(WorkflowRuntime runtime)      3.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Service(NameValueCollection parameters)      4.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Service()       All service classes that are loaded from a configuration file must implement at least one of these constructor signatures.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crdefault](~/add/includes/ajax-current-ext-md.md)]</ph> &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The name of a valid <bpt id="p1">&lt;xref uid="langword_csharp_workflowSettings" name="workflowSettings" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> section in the application configuration file.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;configSectionName&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A valid <bpt id="p1">&lt;xref uid="langword_csharp_workflowSettings" name="workflowSettings" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> section could not be found in the application configuration file.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> already exists for this application domain.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class by using the settings in the specified <bpt id="p2">&lt;xref href="System.Workflow.Runtime.Configuration.WorkflowRuntimeSection"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This constructor provides a mechanism to configure the workflow run-time engine using a single method call for hosts that do not use an application configuration file.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>There are many reasons for not using the application configuration file.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>A host can run in an environment that does not allow using configuration files; for example, in trusted environments that do not allow reading from the application configuration file for security reasons.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Also, a host can use a proprietary configuration mechanism; for example, the host can store the workflow run-time engine configuration settings in a SQL database.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The workflow run-time engine loads and instantiates classes of the types contained in &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.Services%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>When the workflow run-time engine constructs these classes it looks for class constructors with the following signatures in the following order:      1.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Service(WorkflowRuntime runtime, NameValueCollection parameters)      2.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Service(WorkflowRuntime runtime)      3.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Service(NameValueCollection parameters)      4.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Service()       All service classes that are specified in <ph id="ph1">`settings`</ph> must implement at least one of these constructor signatures.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Configuration.WorkflowRuntimeSection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;settings&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> already exists for this application domain.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Adds the specified service to the workflow run-time engine.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You can configure the workflow run-time engine by adding core services.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Core services are those that derive from any of the following service base classes: the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService&gt; class, and the &lt;xref:System.Workflow.Runtime.Tracking.TrackingService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Core services can only be added when the workflow run-time engine is not running; that is, when &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; is <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; can also be used as a storage container for other services that can be used by other workflows or by applications running on a host.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If you add a non-core service that derives from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class after the workflow run-time engine has been started, AddService calls the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; method implemented by that service.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  AddService enforces the restriction that no two services of the same &lt;xref:System.Type&gt; can be added to the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt;.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>However, you can add multiple services that derive from the same base class.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>There can be only one service derived from each of the following service base classes in the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt;: the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService&gt; class, and the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If you add multiple services derived from one of these classes, for example two persistence services, &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A&gt; throws an &lt;xref:System.InvalidOperationException&gt;.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>An object that represents the service to add.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;service&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is disposed.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;service&lt;/code&gt;</ph> is already registered with the workflow run-time engine.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>-or-       <ph id="ph1">&lt;code&gt;service&lt;/code&gt;</ph> is a core service and the workflow run-time engine is already running (<ph id="ph2">&lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted*&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>).</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Creates a new workflow instance by using the specified workflow &lt;xref:System.Type&gt;.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Before the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; is created, validation is executed on it.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>If any validation errors occur, the &lt;xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>This works well for simple scenarios, but in a server environment, revalidating a workflow for every activation might be unnecessary overhead.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> disabling validation, see &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the workflow to create.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The created workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;workflowType&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Creates a workflow instance by using the specified &lt;xref:System.Xml.XmlReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The workflow instance is created from a XAML workflow definition file referenced by the &lt;xref:System.Xml.XmlReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Before the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; is created, validation is executed on it.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>If any validation errors occur, the &lt;xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>This works well for simple scenarios, but in a server environment, revalidating a workflow for every activation might be unnecessary overhead.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> disabling validation, see &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.XmlReader&gt; that contains the workflow definition.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The created workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;workflowDefinitionReader&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is disposed.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Creates a workflow instance by using the specified workflow &lt;xref:System.Type&gt; and the arguments to the workflow contained in the specified <ph id="ph1">&amp;lt;</ph>xref:System.Collections.Generic.Dictionary%602<ph id="ph2">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Before the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; is created, validation is executed on it.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>If any validation errors occur, the &lt;xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This works well for simple scenarios, but in a server environment, revalidating a workflow for every activation might be unnecessary overhead.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> disabling validation, see &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>For an example of passing in parameters to <ph id="ph1">`CreateWorkflow`</ph>, see <bpt id="p1">[</bpt>Workflow with Parameters Sample<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=157403)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the workflow to create.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Collections.Generic.Dictionary%602<ph id="ph2">&amp;gt;</ph> of objects keyed by string that represents the arguments to the workflow.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The created workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;workflowType&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Creates a workflow instance by using the specified parameters.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Before the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; is created, validation is executed on it.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>If any validation errors occur, the &lt;xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>This works well for simple scenarios, but in a server environment, revalidating a workflow for every activation might be unnecessary overhead.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> disabling validation, see &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The workflow <ph id="ph1">`instanceId`</ph> for any running workflows loaded by the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; must be unique.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>If you pass an <ph id="ph1">`instanceId`</ph> to create a workflow and a running workflow is already using that <ph id="ph2">`instanceId`</ph>, an &lt;xref:System.InvalidOperationException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>For an example of passing in parameters to <ph id="ph1">`CreateWorkflow`</ph>, see <bpt id="p1">[</bpt>Workflow with Parameters Sample<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157403)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the workflow to create.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Collections.Generic.Dictionary%602<ph id="ph2">&amp;gt;</ph> of objects keyed by a string that represents the arguments to the workflow.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Guid&gt; of the specific <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowInstance"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to create.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The created workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;workflowType&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Creates a workflow instance by using the specified &lt;xref:System.Xml.XmlReader&gt; objects and the arguments contained in the specified <ph id="ph1">&amp;lt;</ph>xref:System.Collections.Generic.Dictionary%602<ph id="ph2">&amp;gt;</ph>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The workflow instance is created from the workflow definition referenced by the &lt;xref:System.Xml.XmlReader&gt; and the arguments supplied by <ph id="ph1">`namedArgumentValues`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Before the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; is created, validation is executed on it.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>If any validation errors occur, the &lt;xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>This works well for simple scenarios, but in a server environment, revalidating a workflow for every activation might be unnecessary overhead.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> disabling validation, see &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>For an example of passing in parameters to <ph id="ph1">`CreateWorkflow`</ph>, see <bpt id="p1">[</bpt>Workflow with Parameters Sample<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157403)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>For an example of using rules defined in XML, see <bpt id="p1">[</bpt>IfElse with Rules Sample<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=157404)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.XmlReader&gt; that contains the workflow definition.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.XmlReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Collections.Generic.Dictionary%602<ph id="ph2">&amp;gt;</ph> of objects keyed by a string that represents the arguments to the workflow.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The created workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;workflowDefinitionReader&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is disposed.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Creates a workflow instance by using the specified parameters.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Before the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; is created, validation is executed on it.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>If any validation errors occur, the &lt;xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>This works well for simple scenarios, but in a server environment, revalidating a workflow for every activation might be unnecessary overhead.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> disabling validation, see &lt;xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The workflow <ph id="ph1">`instanceId`</ph> for any running workflows loaded by the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; must be unique.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>If you pass an <ph id="ph1">`instanceId`</ph> to create a workflow and a running workflow is already using that <ph id="ph2">`instanceId`</ph>, an &lt;xref:System.InvalidOperationException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>For an example of passing in parameters to <ph id="ph1">`CreateWorkflow`</ph>, see <bpt id="p1">[</bpt>Workflow with Parameters Sample<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157403)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>For an example of using rules defined in XML, see <bpt id="p1">[</bpt>IfElse with Rules Sample<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157404)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.XmlReader&gt; that contains the workflow definition.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.XmlReader&gt;.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">&amp;lt;</ph>xref:System.Collections.Generic.Dictionary%602<ph id="ph2">&amp;gt;</ph> of objects keyed by a string that represents the arguments to the workflow.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Guid&gt; of the specific <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowInstance"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to create.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The created workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;workflowType&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Releases the resources used by the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>To shut down the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; gracefully, you should only call Dispose after you have called &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>This is because calling the Dispose method alone leaves the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; in an unusable state.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Dispose frees the resources used by the runtime by closing open file handles, database connections, and so on, but it does not unload workflow instances, stop services, or do any of the other actions that &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A&gt; does.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Dispose should be called only when the host application must free the resources used by the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; before they are automatically freed by the garbage collector.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>For general information about Dispose, see <bpt id="p1">[</bpt>Cleaning Up Unmanaged Resources<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept> and <bpt id="p2">[</bpt>Implementing a Dispose Method<ept id="p2">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Retrieves all the services that are added to the workflow run-time engine that implement or derive from the specified &lt;xref:System.Type&gt;.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>An empty &lt;xref:System.Collections.ObjectModel.ReadOnlyCollection%601&gt; indicates that no services that implement or derive from the specified &lt;xref:System.Type&gt; have been added to the workflow run-time engine.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; that services must implement to be returned.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Services that implement or derive from the specified &lt;xref:System.Type&gt;.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;serviceType&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is disposed.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Gets a collection that contains all the workflow instances currently loaded in memory.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Note that, unlike &lt;xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A&gt;, this method does not throw a &lt;xref:System.InvalidOperationException&gt; if the runtime is not started.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowInstance"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object for each workflow instance currently loaded in memory.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is disposed.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Retrieves a service of the specified &lt;xref:System.Type&gt; from the workflow run-time engine.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>GetService throws an &lt;xref:System.InvalidOperationException&gt; if more than one service exists for the specified &lt;xref:System.Type&gt;.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>Therefore, you should use one of the overloaded methods of &lt;xref:System.Workflow.Runtime.WorkflowRuntime.GetAllServices%2A&gt; if it is possible that multiple services of the specified type are present in the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt;.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>For example, the workflow run-time engine may have multiple tracking services.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>If you request a tracking service by specifying the &lt;xref:System.Workflow.Runtime.Tracking.TrackingService&gt; base class, it is possible that an exception will be thrown.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Type&gt; of the service to retrieve.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>The service of the specified &lt;xref:System.Type&gt;.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;serviceType&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is already disposed of.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>More than one service of type <bpt id="p1">&lt;code&gt;</bpt><ph id="ph1">serviceType</ph><ept id="p1">&lt;/code&gt;</ept> was found.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Retrieves the workflow instance that has the specified &lt;xref:System.Guid&gt;.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`instanceId`</ph> specifies a workflow instance that is not currently in memory, the workflow instance is loaded into memory and scheduled for execution.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>For example, after a workflow instance is aborted, you can call GetWorkflow to load the workflow instance back into memory.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>In this case, the last persisted state of the workflow instance is loaded into memory by the persistence service.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Guid&gt; of a workflow instance.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowInstance"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that has the specified &lt;xref:System.Guid&gt;.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>The workflow runtime is not started.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether the workflow run-time engine has been started.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>IsStarted indicates that the workflow run-time engine services are running.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>IsStarted is <ph id="ph1">`false`</ph> until the host calls &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>It remains <ph id="ph1">`true`</ph> until the host calls &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  You cannot add core services to the workflow run-time engine while it is running.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Core services are services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService&gt; class, and the &lt;xref:System.Workflow.Runtime.Tracking.TrackingService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the workflow run-time engine has been started; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name associated with the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>You cannot set Name while the workflow run-time engine is running (&lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; is <ph id="ph1">`true`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>The name associated with this <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>An attempt to set Name on a <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is disposed occurs.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>An attempt to set Name while the workflow run-time engine is running occurs.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>Removes the specified service from the workflow run-time engine.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>You cannot remove a core service while the workflow run-time engine is running (&lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; is <ph id="ph1">`true`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Core services are services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService&gt; class, or the &lt;xref:System.Workflow.Runtime.Tracking.TrackingService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`service`</ph> derives from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class, RemoveService calls the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; method implemented by <ph id="ph2">`service`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>An object that represents the service to remove.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;service&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is already disposed of.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>Occurs when a service that is derived from the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Hosting.WorkflowRuntimeService"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class calls &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>A service that is derived from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class can call the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent%2A&gt; method to inform subscribers to the ServicesExceptionNotHandled event that an exception that it was unable to handle occurred during its execution.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>You can subscribe to this event to implement a recovery mechanism.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>This event is raised when a workflow instance has not been created yet by the workflow run-time engine and an exception occurs.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>In this scenario, the only way to inform a host application that an exception occurred is to raise this event.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>However, the workflow run-time engine does not call this directly.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>Instead, the workflow run-time engine either delivers an exception to the workflow instance or, if there is no instance, throws back to the caller, which in this case is actually the service that fires this event.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>If you create your own persistence or scheduler service, you must implement this event yourself through the base &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>For the ServicesExceptionNotHandled event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Guid&gt; of the workflow instance that was using the service and the &lt;xref:System.Exception&gt; that could not be handled.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>Occurs when the workflow run-time engine is started.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A&gt; method raises the Started event after it has validated the core service configuration of the workflow run-time engine, has invoked the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; method implemented by each of its services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class, and has set &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>There is no guarantee about the order in which the services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class are started by the workflow run-time engine, and some of these workflow run-time engine services may depend on functionality supplied by other of these services to complete their startup tasks.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>Workflow run-time engine services can override the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A?displayProperty=fullName&gt; method to perform any final startup tasks that require the support of other workflow run-time engine services when the Started event is raised.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Starts the workflow run-time engine and the workflow run-time engine services.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>This method verifies that a valid set of core services exists and then starts any services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>There must be one and only one of each of the following core services: a workflow <ph id="ph1">`CommitWorkBatch`</ph> service derived from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService&gt; base class and a scheduler service derived from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService&gt; base class.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>If either or both of these core services are missing, the workflow run-time engine supplies the appropriate default service: &lt;xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService&gt; for the workflow <ph id="ph1">`CommitWorkBatch`</ph> service and &lt;xref:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService&gt; for the scheduler service.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>A persistence service is optional, but there can be at most only one persistence service present.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>After it has validated the service configuration, StartRuntime calls &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; on all of the services that are derived from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Finally, the workflow run-time engine sets &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; and raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>You cannot add or remove core services after the workflow run-time engine is started.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>Core services are services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService&gt; class, or the &lt;xref:System.Workflow.Runtime.Tracking.TrackingService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>If you call StartRuntime while the workflow run-time engine is running, no action is performed.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is disposed.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>There is more than one service workflow <bpt id="p1">&lt;xref uid="langword_csharp_CommitWorkBatch" name="CommitWorkBatch" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> service registered with this <bpt id="p2">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>-or-       There is more than one scheduler service registered with this <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>-or-       There is more than one persistence service registered with this <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>Occurs when the workflow run-time engine is stopped.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A&gt; method raises the Stopped event after it has invoked the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; method implemented by each of its services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>There is no guarantee about the order in which these workflow run-time engine services are stopped, and some of these services may need to preserve some functionality that is relied on by other services until they too are stopped.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>Such services can override the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A?displayProperty=fullName&gt; method to perform any residual shutdown logic when the Stopped event is raised.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>Stops the workflow run-time engine and the run-time services.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>This method causes the workflow run-time engine to unload each of its workflow instances, stop all of its services that are derived from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class, set &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; to <ph id="ph1">`false`</ph>, and raise the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>To shut down the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; gracefully, call StopRuntime before you call &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crdefault](~/add/includes/ajax-current-ext-md.md)]</ph> the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> is already disposed of.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Occurs when a workflow instance is aborted.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>WorkflowAborted occurs after all pending work for the workflow instance is cleared, but before the workflow instance is invalidated in memory.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>You can abort a workflow instance by calling &lt;xref:System.Workflow.Runtime.WorkflowInstance.Abort%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>For this event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Occurs when a workflow instance has completed.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>WorkflowCompleted is raised after the workflow instance has completed but before the instance is invalidated in memory.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>For the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted&gt; event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowCompletedEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; and its output parameters.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>Occurs when a workflow instance is created.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>The workflow run-time engine raises the WorkflowCreated event after the workflow instance is completely constructed but before activities are processed.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>For this event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>Occurs when a workflow instance enters the idle state.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>The workflow run-time engine raises the WorkflowIdled event when the workflow instance enters an idle state; for example, when the workflow is waiting for a &lt;xref:System.Workflow.Activities.DelayActivity&gt; activity to complete.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>For this event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>NIB: Consuming Events<ept id="p1">](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>Occurs when the workflow instance is loaded into memory.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>WorkflowLoaded occurs after the persistence service has restored the workflow instance, but before the workflow run-time engine begins to execute any activities.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>For the WorkflowLoaded event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>Occurs when the state of a workflow instance is persisted.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>The workflow instance can be persisted for many reasons.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>For example, the host can call &lt;xref:System.Workflow.Runtime.WorkflowInstance.UnLoad%2A?displayProperty=fullName&gt; on a workflow instance, or the workflow run-time engine can persist a workflow instance because the instance is idle or because an atomic scope has completed.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>If a persistence service is present in the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt;, WorkflowPersisted is raised by the runtime after the state of the workflow instance is saved to memory.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>If a persistence service is not present, the event is still raised but the instance state is not saved.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>If the WorkflowPersisted event occurs because the workflow instance is being unloaded, it is followed by a &lt;xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source>For the WorkflowPersisted event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>Occurs when execution of a workflow instance is resumed following a suspension.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>The workflow run-time engine raises the WorkflowResumed event just before the workflow instance is scheduled.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>The WorkflowResumed event is usually raised because of an explicit call to &lt;xref:System.Workflow.Runtime.WorkflowInstance.Resume%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>However, the workflow run-time engine can temporarily suspend an instance to perform an operation, for example, to apply a workflow change.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>In this case, the WorkflowResumed event is raised when the runtime resumes execution of the workflow instance following the operation.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source>For the WorkflowResumed event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>Occurs when a workflow instance has been started.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>The workflow run-time engine raises the WorkflowStarted event after the workflow instance is started by scheduling the root activity for execution.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>For this event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>Occurs when a workflow instance is suspended.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>The workflow instance can be suspended by the host through a call to the &lt;xref:System.Workflow.Runtime.WorkflowInstance.Suspend%2A&gt; method, by a &lt;xref:System.Workflow.ComponentModel.SuspendActivity&gt; activity, or implicitly by the workflow run-time engine.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>For example, the workflow run-time engine temporarily suspends the instance when it applies dynamic changes to the instance.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>For the WorkflowSuspended event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowSuspendedEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; and a string that describes the reason the instance was suspended.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>Occurs when a workflow instance is terminated.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>The workflow can be terminated by the host through a call to the &lt;xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A&gt; method, by a &lt;xref:System.Workflow.ComponentModel.TerminateActivity&gt; activity, or by the workflow run-time engine when an unhandled exception occurs.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>The workflow run-time engine raises the WorkflowTerminated event after the workflow instance is terminated, but before it is invalidated in memory.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>For the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted&gt; event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; and information about the reason the instance was terminated in the &lt;xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A?displayProperty=fullName&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>Occurs when the workflow instance is unloaded from memory.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve">
+          <source>A workflow instance can be unloaded from memory by an explicit call to &lt;xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A&gt;, or implicitly by the workflow run-time engine according to its own semantics.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>For example, the workflow run-time engine unloads a workflow instance if the instance becomes idle and the runtime has a &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService&gt; added for which &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService.UnloadOnIdle%2A&gt; is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>The workflow run-time engine raises the       WorkflowUnloaded event after the state of the workflow instance has been successfully persisted but before the instance is invalidated in memory.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>Therefore, a &lt;xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted&gt; event precedes the WorkflowUnloaded event.</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>For the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnLoaded&gt; event, the sender contains the &lt;xref:System.Workflow.Runtime.WorkflowRuntime&gt; and &lt;xref:System.Workflow.Runtime.WorkflowEventArgs&gt; contains the &lt;xref:System.Workflow.Runtime.WorkflowInstance&gt; associated with the event.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">[!INCLUDE[crabout](~/add/includes/ajax-current-ext-md.md)]</ph> handling events, see <bpt id="p1">[</bpt>Consuming Events<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=157352)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

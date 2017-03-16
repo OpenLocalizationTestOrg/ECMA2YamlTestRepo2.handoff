@@ -14,8 +14,8 @@ items:
   nameWithType: CompatibleFrameworkCollection
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection
   type: Class
-  summary: "アプリケーションが実行される .NET Framework のバージョンのコレクションを表します。"
-  remarks: "アプリケーションで .NET Framework の複数のバージョンを実行している場合、バージョンが表示されますから優先度で最も優先される低い優先します。 CompatibleFrameworkCollection クラスに示されている .NET Framework のバージョンがエンドユーザーのコンピューターにインストールされている場合、アプリケーションをインストールして実行します。"
+  summary: Represents a collection of versions of the .NET Framework that an application prefers to run on.
+  remarks: If an application can run on multiple versions of the .NET Framework, the versions should be listed in priority order from most preferred to least preferred. If a version of the .NET Framework listed in the CompatibleFrameworkCollection class is installed on the end-user computer, the application can install and run.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -40,13 +40,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "追加するためのフレームワーク、 <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework&quot;> </xref>クラスです。"
+  summary: Adds a framework to the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework"></xref> class.
   syntax:
     content: public void Add (Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework compatibleFramework);
     parameters:
     - id: compatibleFramework
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework
-      description: "追加するフレームワーク。"
+      description: The framework to add.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Add*
   exceptions: []
   platform:
@@ -63,7 +63,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "コレクションをクリアします。"
+  summary: Clears the collection.
   syntax:
     content: public void Clear ();
     parameters: []
@@ -83,12 +83,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "示されている .NET Framework のバージョンの数を取得、 <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection&quot;> </xref>コレクションです。"
+  summary: Gets the number of .NET Framework versions listed in the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection"></xref> collection.
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: "A<xref:System.Int32>で .NET Framework のバージョンの数を表すオブジェクトが一覧表示、 <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection&quot;> </xref>コレクション</xref:System.Int32>。"
+      description: A <xref:System.Int32> object that represents the number of .NET Framework versions listed in the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection"></xref> collection.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Count*
   exceptions: []
   platform:
@@ -105,13 +105,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "コレクションの列挙子を取得します。"
+  summary: Gets the enumerator for the collection.
   syntax:
     content: public System.Collections.IEnumerator GetEnumerator ();
     parameters: []
     return:
       type: System.Collections.IEnumerator
-      description: "A<xref:System.Collections.IEnumerator>コレクションを反復処理できるインターフェイス</xref:System.Collections.IEnumerator>。"
+      description: A <xref:System.Collections.IEnumerator> interface that can iterate over the collection.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.GetEnumerator*
   exceptions: []
   platform:
@@ -128,16 +128,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "アプリケーションが実行される .NET Framework のバージョンを取得します。"
+  summary: Gets a version of the .NET Framework that an application prefers to run on.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework this[int index] { get; }
     parameters:
     - id: index
       type: System.Int32
-      description: "エンドユーザーのコンピューター上の確認に .NET Framework のバージョン。"
+      description: The version of .NET Framework to check for on the end-user computer.
     return:
       type: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework&quot;> </xref>アプリケーションが実行される .NET Framework のバージョンを表すオブジェクト。"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework"></xref> object that represents the versions of the .NET Framework that an application prefers to run on.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Item*
   exceptions: []
   platform:

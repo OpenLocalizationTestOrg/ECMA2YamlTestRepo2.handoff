@@ -18,7 +18,7 @@ items:
   nameWithType: ConfigurableForwardingLogger
   fullName: Microsoft.Build.Logging.ConfigurableForwardingLogger
   type: Class
-  summary: "中央 logger (例: ConsoleLogger) にイベントを転送するロガーを表す親ノード上に存在します。"
+  summary: Represents a logger that forwards events to a central logger (e.g ConsoleLogger) residing on the parent node.
   syntax:
     content: 'public class ConfigurableForwardingLogger : Microsoft.Build.Framework.IForwardingLogger'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "ロガーを構築します。"
+  summary: Constructs a logger.
   syntax:
     content: public ConfigurableForwardingLogger ();
     parameters: []
@@ -60,12 +60,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得または中央 logger に転送するノード ロガーのメッセージを決定するプロパティを設定します。"
+  summary: Gets or sets a property that determines how a node logger to forwards messages to the central logger.
   syntax:
     content: public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }
     return:
       type: Microsoft.Build.Framework.IEventRedirector
-      description: "中央 logger に転送するノード ロガーのメッセージを決定するプロパティを返します。"
+      description: Returns a property that determines how a node logger to forwards messages to the central logger.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.BuildEventRedirector*
   exceptions: []
   platform:
@@ -82,13 +82,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "このイベントを中央 logger に転送します。"
+  summary: Forward this event to the central logger.
   syntax:
     content: protected virtual void ForwardToCentralLogger (Microsoft.Build.Framework.BuildEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "転送されるイベントです。"
+      description: The event to be forwarded.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.ForwardToCentralLogger*
   exceptions: []
   platform:
@@ -105,13 +105,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "指定されたビルド イベントのログをコンソール logger を登録します。"
+  summary: Signs up the console logger to log the given build events.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "ビルド イベントのイベント ソース。"
+      description: The event source for build events.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -128,16 +128,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "すべてのコンソール logger をアット マークは、イベントを作成します。"
+  summary: Signs up the console logger for all build events.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "ビルド イベントのイベント ソース。"
+      description: The event source for build events.
     - id: nodeCount
       type: System.Int32
-      description: "ノードの数。  使用されません。"
+      description: The node count.  Not used.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -154,12 +154,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得またはノードの ID を設定します。"
+  summary: Gets or sets the ID of the node.
   syntax:
     content: public int NodeId { get; set; }
     return:
       type: System.Int32
-      description: "ノードの ID を返します。"
+      description: Returns the ID of the node.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.NodeId*
   exceptions: []
   platform:
@@ -176,12 +176,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得またはエラーと警告の概要、ビルドの最後の出力を抑制するかどうかを決定するスイッチを設定します。"
+  summary: Gets or sets a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "エラーおよび警告の概要、ビルドの最後の出力を抑制するかどうかを決定するスイッチを返します。"
+      description: Returns a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Parameters*
   exceptions: []
   platform:
@@ -198,7 +198,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "ビルド エンジンがこの logger を使い終わったときに呼び出されます。"
+  summary: Called when the build engine is finished with this logger.
   syntax:
     content: public virtual void Shutdown ();
     parameters: []
@@ -218,12 +218,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得またはイベント ログに表示される詳細のレベルを設定します。"
+  summary: Gets or sets the level of detail to show in the event log.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "イベント ログに表示される詳細のレベルを返します。"
+      description: Returns the level of detail to show in the event log.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Verbosity*
   exceptions: []
   platform:

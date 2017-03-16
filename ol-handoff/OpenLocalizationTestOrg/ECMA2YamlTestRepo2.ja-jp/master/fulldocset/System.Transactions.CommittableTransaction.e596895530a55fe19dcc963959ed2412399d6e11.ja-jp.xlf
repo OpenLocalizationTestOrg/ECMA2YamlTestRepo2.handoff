@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ccad41ad00ba86be0f4041b848c7b9b43afa6fe1</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Transactions.CommittableTransaction.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">054586e338584f4c459150aa6b8d59431d48945b</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c5dfad97f107ec792589460840ed49fc52c7bd8c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Describes a committable transaction.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The CommittableTransaction class provides an explicit way for applications to use a transaction, as opposed to using the &lt;xref:System.Transactions.TransactionScope&gt; class implicitly.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Unlike the &lt;xref:System.Transactions.TransactionScope&gt; class, the application writer needs to specifically call the &lt;xref:System.Transactions.CommittableTransaction.Commit%2A&gt; and &lt;xref:System.Transactions.Transaction.Rollback%2A&gt; methods in order to commit or abort the transaction.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>However, only the creator of a transaction can commit the transaction.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Therefore, copies of a committable transaction, obtained through the &lt;xref:System.Transactions.Transaction.Clone%2A&gt; method are not committable.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  It is recommended that you create implicit transactions using the &lt;xref:System.Transactions.TransactionScope&gt; class, so that the ambient transaction context is automatically managed for you.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You should also use the &lt;xref:System.Transactions.TransactionScope&gt; and &lt;xref:System.Transactions.DependentTransaction&gt; class for applications that require the use of the same transaction across multiple function calls or multiple thread calls.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information on this model, see the <bpt id="p1">[</bpt>Implementing An Implicit Transaction Using Transaction Scope<ept id="p1">](http://msdn.microsoft.com/en-us/1ddba95e-7587-48b2-8838-708c275e7199)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Creating a CommittableTransaction does not automatically set the ambient transaction, which is the transaction your code executes in.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You can get or set the ambient transaction by calling the static &lt;xref:System.Transactions.Transaction.Current%2A&gt; property of the global &lt;xref:System.Transactions.Transaction&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information on ambient transactions, see the " Managing Transaction Flow using TransactionScopeOption" section of the <bpt id="p1">[</bpt>Implementing An Implicit Transaction Using Transaction Scope<ept id="p1">](http://msdn.microsoft.com/en-us/1ddba95e-7587-48b2-8838-708c275e7199)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the ambient transaction is not set, any operation on a resource manager is not part of that transaction.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You need to explicitly set and reset the ambient transaction, to ensure that resource managers operate under the right transaction context.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Until a CommittableTransaction has been committed, all the resources involved with the transaction are still locked.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A CommittableTransaction object cannot be reused.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Once it has been committed or rolled back, it cannot be used again in a transaction or set as the current ambient transaction context.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Transactions.CommittableTransaction"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>An attempt to create a transaction under Windows 98, Windows 98 Second Edition or Windows Millennium Edition.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Transactions.CommittableTransaction"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">timeout</ph><ept id="p2">&lt;/code&gt;</ept> value.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The maximum amount of time the transaction can exist, before it is aborted.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>An attempt to create a transaction under Windows 98, Windows 98 Second Edition or Windows Millennium Edition.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Transactions.CommittableTransaction"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class with the specified transaction options.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Transactions.TransactionOptions"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> structure that describes the transaction options to use for the new transaction.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>An attempt to create a transaction under Windows 98, Windows 98 Second Edition or Windows Millennium Edition.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;options&lt;/code&gt;</ph> is invalid.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Begins an attempt to commit the transaction asynchronously.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This method returns immediately, before the transaction has been completed.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The transaction then commits on a different thread, and the <ph id="ph1">`asyncCallback`</ph> delegate is invoked when it has completed.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>After this method is called, you do not receive the outcome of the transaction until you call &lt;xref:System.Transactions.CommittableTransaction.EndCommit%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  The commit process may complete synchronously inside this method call.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.AsyncCallback&gt; delegate that is invoked when the transaction completes.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, in which case the application is not notified of the transaction's completion.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Instead, the application must use the &lt;xref:System.IAsyncResult&gt; interface to check for completion and wait accordingly, or call &lt;xref:System.Transactions.CommittableTransaction.EndCommit*&gt; to wait for completion.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>An object, which might contain arbitrary state information, associated with the asynchronous commitment.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>This object is passed to the callback, and is not interpreted by <bpt id="p1">&lt;xref href="System.Transactions"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>A null reference is permitted.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.IAsyncResult&gt; interface that can be used by the caller to check the status of the asynchronous operation, or to wait for the operation to complete.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Attempts to commit the transaction.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>When this method is called, all objects that have registered to participate in the transaction are polled and can independently indicate their vote to either commit or roll back the transaction.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If any participant votes to roll back the transaction, it is rolled back and this method throws a &lt;xref:System.Transactions.TransactionException&gt; exception.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This is a normal occurrence for a transaction and your code should catch and process such exceptions.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Commit and &lt;xref:System.Transactions.CommittableTransaction.EndCommit%2A&gt; block until the first phase of transaction processing is complete.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The first phase ends after all resource managers and enlistments in the transaction have voted on the transaction outcome and the &lt;xref:System.Transactions.TransactionManager&gt; has durably decided to commit or abort the transaction.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The second phase of processing is always asynchronous.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Therefore, there is no guarantee that data just committed from within a given transaction will be immediately available afterwards when not using another transaction to view this data.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Because this method blocks until the first phase of transaction processing is complete, you should be extremely careful when using this method in a Windows Form (WinForm) application, or a deadlock can occur.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If you call this method inside one WinForm Control event (for example, clicking a button), and use the synchronous &lt;xref:System.Windows.Forms.Control.Invoke%2A&gt; method to direct the control to perform some UI tasks (for example, changing colors) in the middle of processing the transaction, a deadlock will happen.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This is because the &lt;xref:System.Windows.Forms.Control.Invoke%2A&gt; method is synchronous and blocks the worker thread until the UI thread finishes its job.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>However, in our scenario, the UI thread is also waiting for the worker thread to commit the transaction.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The result is that none is able to proceed and the scope waits indefinitely for the Commit to finish.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>You should use &lt;xref:System.Windows.Forms.Control.BeginInvoke%2A&gt; rather than &lt;xref:System.Windows.Forms.Control.Invoke%2A&gt; wherever possible, because it is asynchronous and thus less prone to deadlock.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Commit is called on a transaction and the transaction becomes <bpt id="p1">&lt;xref href="System.Transactions.TransactionStatus"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Commit is called and the transaction rolls back for the first time.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Ends an attempt to commit the transaction asynchronously.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>You should call this method in the callback delegate specified as a parameter to the &lt;xref:System.Transactions.CommittableTransaction.BeginCommit%2A&gt; method, when you have finished any cleanup work associated with the asynchronous commitment.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>You can also call this method early without waiting for the delegate.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>If, by the time you call this method, the transaction has not completed, this method waits for its completion.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!CAUTION]</ph> &gt;  The &lt;xref:System.IAsyncResult.CompletedSynchronously%2A&gt; property returned by <ph id="ph2">`asyncResult`</ph> is always <ph id="ph3">`false`</ph>, even if the operation completed synchronously.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Transactions.CommittableTransaction.Commit%2A&gt; and EndCommit block until the first phase of transaction processing is complete.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The first phase ends after all resource managers and enlistments in the transaction have voted on the transaction outcome and the &lt;xref:System.Transactions.TransactionManager&gt; has durably decided to commit or abort the transaction.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The second phase of processing is always asynchronous.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Therefore, there is no guarantee that data just committed from within a given transaction will be immediately available afterwards when not using another transaction to view this data.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.IAsyncResult&gt; object associated with the asynchronous commitment.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Transactions.CommittableTransaction.BeginCommit*&gt; is called and the transaction rolls back for the first time.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Gets the object provided as the last parameter of the &lt;xref:System.Transactions.CommittableTransaction.BeginCommit*&gt; method call.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The object provided as the last parameter of the &lt;xref:System.Transactions.CommittableTransaction.BeginCommit*&gt; method call.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Gets a &lt;xref:System.Threading.WaitHandle&gt; that is used to wait for an asynchronous operation to complete.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Threading.WaitHandle&gt; that is used to wait for an asynchronous operation to complete.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Gets an indication of whether the asynchronous commit operation completed synchronously.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the asynchronous commit operation completed synchronously; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>This property always returns <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> even if the operation completed synchronously.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Gets an indication whether the asynchronous commit operation has completed.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the operation is complete; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

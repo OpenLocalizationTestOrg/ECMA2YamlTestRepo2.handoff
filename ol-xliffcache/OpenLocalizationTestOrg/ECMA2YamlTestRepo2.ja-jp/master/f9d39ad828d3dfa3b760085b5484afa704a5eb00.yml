@@ -17,7 +17,7 @@ items:
   nameWithType: DistributedFileLogger
   fullName: Microsoft.Build.Logging.DistributedFileLogger
   type: Class
-  summary: "このクラスは、ノードのビルド ログを格納するテキスト ファイルを作成します。"
+  summary: This class creates a text file which will contain the build log for a node.
   syntax:
     content: 'public class DistributedFileLogger : Microsoft.Build.Framework.IForwardingLogger'
   inheritance:
@@ -39,7 +39,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "ファイル logger を作成します。"
+  summary: Creates a file logger.
   syntax:
     content: public DistributedFileLogger ();
     parameters: []
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得または中央 logger に転送するノード ロガーのメッセージを決定するプロパティを設定します。"
+  summary: Gets or sets a property that determines how a node logger to forwards messages to the central logger.
   syntax:
     content: public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }
     return:
       type: Microsoft.Build.Framework.IEventRedirector
-      description: "中央 logger に転送するノード ロガーのメッセージを決定するプロパティを返します。"
+      description: Returns a property that determines how a node logger to forwards messages to the central logger.
   overload: Microsoft.Build.Logging.DistributedFileLogger.BuildEventRedirector*
   exceptions: []
   platform:
@@ -81,13 +81,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "指定したイベント ソースの logger を初期化します。"
+  summary: Initializes the logger with the given event source.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "イベント ソース。"
+      description: The event source.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Initialize*
   exceptions: []
   platform:
@@ -104,16 +104,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "特定のイベント ソースとノードの数と logger を初期化します。"
+  summary: Initializes the logger with the given event source and node count.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "イベント ソース。"
+      description: The event source.
     - id: nodeCount
       type: System.Int32
-      description: "ノードの数。"
+      description: The node count.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Initialize*
   exceptions: []
   platform:
@@ -130,12 +130,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得またはノードの ID を設定します。"
+  summary: Gets or sets the ID of the node.
   syntax:
     content: public int NodeId { get; set; }
     return:
       type: System.Int32
-      description: "ノードの ID を返します。"
+      description: Returns the ID of the node.
   overload: Microsoft.Build.Logging.DistributedFileLogger.NodeId*
   exceptions: []
   platform:
@@ -152,12 +152,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得またはエラーと警告の概要、ビルドの最後の出力を抑制するかどうかを決定するスイッチを設定します。"
+  summary: Gets or sets a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "エラーおよび警告の概要、ビルドの最後の出力を抑制するかどうかを決定するスイッチを返します。"
+      description: Returns a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Parameters*
   exceptions: []
   platform:
@@ -174,7 +174,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "ビルド エンジンがこの logger を使い終わったときに呼び出されます。"
+  summary: Called when the build engine is finished with this logger.
   syntax:
     content: public void Shutdown ();
     parameters: []
@@ -194,12 +194,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "取得またはイベント ログに表示される詳細のレベルを設定します。"
+  summary: Gets or sets the level of detail to show in the event log.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "イベント ログに表示される詳細のレベルを返します。"
+      description: Returns the level of detail to show in the event log.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Verbosity*
   exceptions: []
   platform:

@@ -13,7 +13,7 @@ items:
   nameWithType: LazyFormattedBuildEventArgs
   fullName: Microsoft.Build.Framework.LazyFormattedBuildEventArgs
   type: Class
-  summary: "表示が必要になるまでに書式設定を遅延しているメッセージの各部分の文字列を格納します。"
+  summary: Stores strings for parts of a message delaying the formatting until it needs to be shown.
   syntax:
     content: 'public class LazyFormattedBuildEventArgs : Microsoft.Build.Framework.BuildEventArgs'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "既定のコンス トラクターです。"
+  summary: Default constructor.
   syntax:
     content: protected LazyFormattedBuildEventArgs ();
     parameters: []
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "このコンス トラクターでは、初期化されるすべてのイベント データです。"
+  summary: This constuctor allows all event data to be initialized.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName);
     parameters:
     - id: message
       type: System.String
-      description: "テキスト メッセージ。"
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "ヘルプ キーワードです。"
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "イベントの送信元の名前です。"
+      description: name of event sender.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -89,25 +89,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "このコンス トラクターで限定的にフォーマットされているメッセージの引数を許可します。"
+  summary: This constuctor that allows message arguments that are lazily formatted.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "テキスト メッセージ。"
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "ヘルプ キーワードです。"
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "イベントの送信元の名前です。"
+      description: name of event sender.
     - id: eventTimestamp
       type: System.DateTime
-      description: "イベントが作成されたときのタイムスタンプ。"
+      description: Timestamp when event was created.
     - id: messageArgs
       type: System.Object[]
-      description: "メッセージの引数。"
+      description: Message arguments.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -124,12 +124,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "形式のメッセージを取得します。"
+  summary: Gets the formatted message.
   syntax:
     content: public override string Message { get; }
     return:
       type: System.String
-      description: "追加します。"
+      description: To be added.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.Message*
   exceptions: []
   platform:

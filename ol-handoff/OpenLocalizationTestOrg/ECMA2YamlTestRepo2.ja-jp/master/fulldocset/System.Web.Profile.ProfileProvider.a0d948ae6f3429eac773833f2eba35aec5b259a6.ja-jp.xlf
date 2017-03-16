@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7b5995c0a34fcab9e5d1fde7c939d13b6baf7830</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.Profile.ProfileProvider.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7bfb91beb33797128f60ad438ed228daceb17363</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">22d76b34aaed76e5ad218a4e01a5f07fcda4fe3f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Defines the contract that ASP.NET implements to provide profile services using custom profile providers.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>ASP.NET profiles offer persistent storage and retrieval of user-specific properties.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Profile property values and information are stored in a data source in a manner determined by the ProfileProvider implementation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>You can use the profile providers that are included with the .NET Framework (represented by the classes that derive from the ProfileProvider abstract class), or you can implement your own provider by creating a new class that derives from ProfileProvider.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>There are two primary reasons for creating a custom profile provider.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>-   You need to store profile information in a data source that is not supported by the profile providers included with the .NET Framework, such as a FoxPro database, an Oracle database, or other data stores.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>-   You need to manage profile information using a database schema that is different from the database schema used by the providers that ship with the .NET Framework.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A common example of this would be user data that already exists in a SQL Server database for a company network or a Web site.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The ProfileProvider abstract class inherits from the &lt;xref:System.Configuration.SettingsProvider&gt; abstract class, which inherits from the &lt;xref:System.Configuration.Provider.ProviderBase&gt; abstract class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Classes that implement ProfileProvider must also implement the required members of the &lt;xref:System.Configuration.SettingsProvider&gt; and &lt;xref:System.Configuration.Provider.ProviderBase&gt; abstract classes.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information about implementing a profile provider, see <bpt id="p1">[</bpt>Implementing a Profile Provider<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileProvider"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You are not required to implement a constructor for a class that inherits the &lt;xref:System.Web.Profile.ProfileProvider&gt; abstract class.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Initialization values for a &lt;xref:System.Web.Profile.ProfileProvider&gt; implementation are passed to the &lt;xref:System.Configuration.Provider.ProviderBase.Initialize%2A&gt; method implementation.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, deletes all user-profile data for profiles in which the last activity date occurred before the specified date.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The DeleteInactiveProfiles method is used to remove unused profile data from the data source.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is removed.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`authenticationOption`</ph> parameter specifies whether only anonymous profiles, only authenticated profiles, or all profiles are searched.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Profiles in which the &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A&gt; occurs on or before the specified <ph id="ph1">`userInactiveSinceDate`</ph> parameter value are deleted.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileAuthenticationOption"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values, specifying whether anonymous, authenticated, or both types of profiles are deleted.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.DateTime&gt; that identifies which user profiles are considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If the &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate*&gt; value of a user profile occurs on or before this date and time, the profile is considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The number of profiles deleted from the data source.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, deletes profile properties and information for profiles that match the supplied list of user names.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The DeleteProfiles method deletes the profiles specified in the <ph id="ph1">`usernames`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is removed.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A string array of user names for profiles to be deleted.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The number of profiles deleted from the data source.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, deletes profile properties and information for the supplied list of profiles.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The DeleteProfiles method deletes the profiles specified in the <ph id="ph1">`profiles`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is removed.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>When implementing this method in a derived class, you can use the <ph id="ph1">`applicationName`</ph> value and the &lt;xref:System.Web.Profile.ProfileInfo.UserName%2A&gt; property of each &lt;xref:System.Web.Profile.ProfileInfo&gt; object in the supplied &lt;xref:System.Web.Profile.ProfileInfoCollection&gt; to determine which profiles to delete from your data source.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileInfoCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> of information about profiles that are to be deleted.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The number of profiles deleted from the data source.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, retrieves profile information for profiles in which the last activity date occurred on or before the specified date and the user name matches the specified user name.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The FindInactiveProfilesByUserName method is used to retrieve profile information for unused user profiles for profiles in which the user name matches the supplied <ph id="ph1">`usernameToMatch`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is returned.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`authenticationOption`</ph> parameter specifies whether only anonymous profiles, only authenticated profiles, or all profiles are searched.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Of the searched profiles, any profile with a &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A&gt; that occurs on or before the specified <ph id="ph1">`userInactiveSinceDate`</ph> parameter value is returned.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If your data source supports additional search capabilities, such as wildcard characters, you can provide more extensive search capabilities for user names.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The results returned by FindInactiveProfilesByUserName are constrained by the <ph id="ph1">`pageIndex`</ph> and <ph id="ph2">`pageSize`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageSize`</ph> parameter identifies the maximum number of &lt;xref:System.Web.Profile.ProfileInfo&gt; objects to return in the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt;.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageIndex`</ph> parameter identifies which page of results to return, where zero identifies the first page.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter is an <ph id="ph2">`out`</ph> parameter that is set to the total number of inactive user profiles for the configured <ph id="ph3">`applicationName`</ph>, based on the <ph id="ph4">`authenticationOption`</ph> and <ph id="ph5">`userInactiveSinceDate`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For example, if there are 13 users for the configured <ph id="ph1">`applicationName`</ph>, and the <ph id="ph2">`pageIndex`</ph> value is 1 with a <ph id="ph3">`pageSize`</ph> of 5, the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt; returned would contain the sixth through the tenth inactive profiles returned.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter would be set to 13.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileAuthenticationOption"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values, specifying whether anonymous, authenticated, or both types of profiles are returned.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The user name to search for.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.DateTime&gt; that identifies which user profiles are considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>If the &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate*&gt; value of a user profile occurs on or before this date and time, the profile is considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The index of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The size of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>When this method returns, contains the total number of profiles.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileInfoCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing user profile information for inactive profiles where the user name matches the supplied <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">usernameToMatch</ph><ept id="p2">&lt;/code&gt;</ept> parameter.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, retrieves profile information for profiles in which the user name matches the specified user names.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The FindProfilesByUserName method returns a list of profile information for profiles in which the user name matches the supplied <ph id="ph1">`usernameToMatch`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is returned.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`authenticationOption`</ph> parameter specifies whether only anonymous profiles, only authenticated profiles, or all profiles are searched.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>If your data source supports additional search capabilities, such as wildcard characters, you can provide more extensive search capabilities for user names.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The results returned by FindProfilesByUserName are constrained by the <ph id="ph1">`pageIndex`</ph> and <ph id="ph2">`pageSize`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageSize`</ph> parameter identifies the maximum number of &lt;xref:System.Web.Profile.ProfileInfo&gt; objects to return in the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt;.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageIndex`</ph> parameter identifies which page of results to return, where zero identifies the first page.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter is an <ph id="ph2">`out`</ph> parameter that is set to the total number of inactive user profiles for the configured <ph id="ph3">`applicationName`</ph>, based on the <ph id="ph4">`authenticationOption`</ph> and <ph id="ph5">`userInactiveSinceDate`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>For example, if there are 13 users for the configured <ph id="ph1">`applicationName`</ph>, and the <ph id="ph2">`pageIndex`</ph> value is 1 with a <ph id="ph3">`pageSize`</ph> of 5, the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt; returned would contain the sixth through the tenth inactive profiles returned.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter would be set to 13.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileAuthenticationOption"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values, specifying whether anonymous, authenticated, or both types of profiles are returned.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The user name to search for.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The index of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The size of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>When this method returns, contains the total number of profiles.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileInfoCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing user-profile information for profiles where the user name matches the supplied <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">usernameToMatch</ph><ept id="p2">&lt;/code&gt;</ept> parameter.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, retrieves user-profile data from the data source for profiles in which the last activity date occurred on or before the specified date.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The GetAllInactiveProfiles method is used to retrieve profile information for unused user profiles.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is returned.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`authenticationOption`</ph> parameter specifies whether only anonymous profiles, only authenticated profiles, or all profiles are searched.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Of the searched profiles, any profile with a &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A&gt; that occurs on or before the specified <ph id="ph1">`userInactiveSinceDate`</ph> parameter value is returned.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The results returned by GetAllInactiveProfiles are constrained by the <ph id="ph1">`pageIndex`</ph> and <ph id="ph2">`pageSize`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageSize`</ph> parameter identifies the maximum number of &lt;xref:System.Web.Profile.ProfileInfo&gt; objects to return in the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt;.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageIndex`</ph> parameter identifies which page of results to return, where zero identifies the first page.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter is an <ph id="ph2">`out`</ph> parameter that is set to the total number of inactive user profiles for the configured <ph id="ph3">`applicationName`</ph>, based on the <ph id="ph4">`authenticationOption`</ph> and <ph id="ph5">`userInactiveSinceDate`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>For example, if there are 13 users for the configured <ph id="ph1">`applicationName`</ph>, and the <ph id="ph2">`pageIndex`</ph> value is 1 with a <ph id="ph3">`pageSize`</ph> of 5, the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt; returned would contain the sixth through the tenth inactive profiles returned.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter would be set to 13.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileAuthenticationOption"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values, specifying whether anonymous, authenticated, or both types of profiles are returned.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.DateTime&gt; that identifies which user profiles are considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>If the &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate*&gt; of a user profile occurs on or before this date and time, the profile is considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The index of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The size of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>When this method returns, contains the total number of profiles.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileInfoCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing user-profile information about the inactive profiles.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, retrieves user profile data for all profiles in the data source.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The GetAllProfiles method is used to retrieve profile information for all profiles.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is returned.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`authenticationOption`</ph> parameter specifies whether only anonymous profiles, only authenticated profiles, or all profiles are searched.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The results returned by &lt;xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A&gt; are constrained by the <ph id="ph1">`pageIndex`</ph> and <ph id="ph2">`pageSize`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageSize`</ph> parameter identifies the maximum number of &lt;xref:System.Web.Profile.ProfileInfo&gt; objects to return in the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt;.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pageIndex`</ph> parameter identifies which page of results to return, where zero identifies the first page.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter is an <ph id="ph2">`out`</ph> parameter that is set to the total number of inactive user profiles for the configured <ph id="ph3">`applicationName`</ph>, based on the <ph id="ph4">`authenticationOption`</ph> and <ph id="ph5">`userInactiveSinceDate`</ph> parameters.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>For example, if there are 13 users for the configured <ph id="ph1">`applicationName`</ph>, and the <ph id="ph2">`pageIndex`</ph> value is 1 with a <ph id="ph3">`pageSize`</ph> of 5, the &lt;xref:System.Web.Profile.ProfileInfoCollection&gt; returned would contain the sixth through the tenth inactive profiles returned.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`totalRecords`</ph> parameter would be set to 13.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileAuthenticationOption"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values, specifying whether anonymous, authenticated, or both types of profiles are returned.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The index of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The size of the page of results to return.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>When this method returns, contains the total number of profiles.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileInfoCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> containing user-profile information for all profiles in the data source.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, returns the number of profiles in which the last activity date occurred on or before the specified date.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The GetNumberOfInactiveProfiles method is used to retrieve a count of all unused user profiles.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Only data for the <ph id="ph1">`applicationName`</ph> specified in the configuration file is returned.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`authenticationOption`</ph> parameter specifies whether only anonymous profiles, only authenticated profiles, or all profiles are searched.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Of the searched profiles, any profile with a &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A&gt; that occurs on or before the specified <ph id="ph1">`userInactiveSinceDate`</ph> parameter value is counted.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Web.Profile.ProfileAuthenticationOption"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values, specifying whether anonymous, authenticated, or both types of profiles are returned.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.DateTime&gt; that identifies which user profiles are considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>If the &lt;xref:System.Web.Profile.ProfileInfo.LastActivityDate*&gt; of a user profile occurs on or before this date and time, the profile is considered inactive.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>The number of profiles in which the last activity date occurred on or before the specified date.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

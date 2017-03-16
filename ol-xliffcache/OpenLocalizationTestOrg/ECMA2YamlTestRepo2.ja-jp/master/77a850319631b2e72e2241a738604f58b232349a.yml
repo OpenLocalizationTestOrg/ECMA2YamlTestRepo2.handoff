@@ -23,7 +23,7 @@ items:
   nameWithType: ProjectFileConverter
   fullName: Microsoft.Build.Conversion.ProjectFileConverter
   type: Class
-  summary: "変換、[!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)]プロジェクト ファイルを[!INCLUDE[vs_dev10_long](~/add/includes/vs-dev10-long-md.md)]プロジェクト ファイル形式です。"
+  summary: Converts a [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)] project file to the [!INCLUDE[vs_dev10_long](~/add/includes/vs-dev10-long-md.md)] project file format.
   syntax:
     content: public sealed class ProjectFileConverter
   inheritance:
@@ -44,7 +44,7 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "新しいインスタンスを初期化、 <xref href=&quot;Microsoft.Build.Conversion.ProjectFileConverter&quot;> </xref>クラスです。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Conversion.ProjectFileConverter"></xref> class.
   syntax:
     content: public ProjectFileConverter ();
     parameters: []
@@ -64,12 +64,12 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "プロジェクト ファイルが既に最新の形式であるために、前回の変換がスキップされたかどうかを示す値を取得します。"
+  summary: Gets a value indicating whether the last attempted conversion was skipped because the project file is already in the latest format.
   syntax:
     content: public bool ConversionSkippedBecauseProjectAlreadyConverted { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>プロジェクト ファイルが既に最新の形式であるために、最後には、変換が試行された場合はスキップされましたそれ以外の場合、 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>します。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the last attempted conversion was skipped because the project file is already in the latest format; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.ConversionSkippedBecauseProjectAlreadyConverted*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "変換中に生成された警告の一覧を取得します。"
+  summary: Gets a list of warnings generated during the conversion.
   syntax:
     content: public string[] ConversionWarnings { get; }
     return:
       type: System.String[]
-      description: "変換中に生成された警告を含む文字列配列。"
+      description: A string array containing any warnings generated during the conversion.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.ConversionWarnings*
   exceptions: []
   platform:
@@ -108,7 +108,7 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "指定されたプロジェクトに変換、 <> </> *> プロパティとファイルのオプションで指定されて保存、 <> </> *> プロパティです。"
+  summary: Converts the project specified by the <xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*> property and saves it in the file specified by the <xref:Microsoft.Build.Conversion.ProjectFileConverter.NewProjectFile*> property.
   syntax:
     content: public void Convert ();
     parameters: []
@@ -128,13 +128,13 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "指定されたプロジェクトに変換、 <> </> *> プロパティとファイルのオプションで指定されて保存、 <> </> *> プロパティです。"
+  summary: Converts the project specified by the <xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*> property and saves it in the file specified by the <xref:Microsoft.Build.Conversion.ProjectFileConverter.NewProjectFile*> property.
   syntax:
     content: public void Convert (Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);
     parameters:
     - id: projectLoadSettings
       type: Microsoft.Build.BuildEngine.ProjectLoadSettings
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.ProjectLoadSettings&quot;> </xref>を読み込むときに、プロジェクトが存在しない .target ファイルを無視するかどうかを決定するフラグ。"
+      description: A <xref href="Microsoft.Build.BuildEngine.ProjectLoadSettings"></xref> flag that determine whether the project ignores non-existent .target files when loading.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.Convert*
   exceptions: []
   platform:
@@ -151,13 +151,13 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "これは、プロジェクト ファイル形式の変換を実行するエントリ ポイント メソッドです。 既に存在する場合ため、このメソッドの呼び出し元を確認してください、ユーザーが本当に品物を行うには、このメソッドに、&quot;newProjectFile&quot;であると上書きされます。"
+  summary: This is the entry point method, which performs the project file format conversion. This method will overwrite "newProjectFile" if it already exists, so the caller of this method should confirm with the user that that's what he really wants to do.
   syntax:
     content: public void Convert (string msbuildBinPath);
     parameters:
     - id: msbuildBinPath
       type: System.String
-      description: "MSBuild.exe を完全修飾パス。"
+      description: The fully qualified path to MSBuild.exe.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.Convert*
   exceptions: []
   platform:
@@ -174,14 +174,14 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "<xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*>。</xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*>からメモリに新しいプロジェクトを作成します。"
-  remarks: "変換後の<xref:Microsoft.Build.BuildEngine.Project>。</xref:Microsoft.Build.BuildEngine.Project>を返します"
+  summary: Creates a new project in memory from the <xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*>.
+  remarks: Returns the converted <xref:Microsoft.Build.BuildEngine.Project>.
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement ConvertInMemory ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "変換された返します<xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;></xref>します。"
+      description: Returns the converted <xref href="Microsoft.Build.BuildEngine.Project"></xref>.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory*
   exceptions: []
   platform:
@@ -198,16 +198,16 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "<xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*>。</xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*>からメモリに新しいプロジェクトを作成します。"
+  summary: Creates a new project in memory from the <xref:Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*>.
   syntax:
     content: public Microsoft.Build.BuildEngine.Project ConvertInMemory (Microsoft.Build.BuildEngine.Engine engine);
     parameters:
     - id: engine
       type: Microsoft.Build.BuildEngine.Engine
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>を新しいプロジェクトを作成します。"
+      description: The <xref href="Microsoft.Build.BuildEngine.Engine"></xref> in which to create the new project.
     return:
       type: Microsoft.Build.BuildEngine.Project
-      description: "変換された返します<xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;></xref>します。"
+      description: Returns the converted <xref href="Microsoft.Build.BuildEngine.Project"></xref>.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory*
   exceptions: []
   platform:
@@ -224,19 +224,19 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "これは、プロジェクト ファイル形式の変換を実行するエントリ ポイント メソッドです。 このメソッドは、ディスクに書き込もうとしているのではなく、メモリ内新しい MSBuild プロジェクト オブジェクトを作成して単純にします。"
+  summary: This is the entry point method, which performs the project file format conversion. This method will simply create a new MSBuild Project object in memory, instead of trying to write it to disk.
   syntax:
     content: public Microsoft.Build.BuildEngine.Project ConvertInMemory (Microsoft.Build.BuildEngine.Engine engine, Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);
     parameters:
     - id: engine
       type: Microsoft.Build.BuildEngine.Engine
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>を新しいプロジェクトを作成します。"
+      description: The <xref href="Microsoft.Build.BuildEngine.Engine"></xref> in which to create the new project.
     - id: projectLoadSettings
       type: Microsoft.Build.BuildEngine.ProjectLoadSettings
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.ProjectLoadSettings&quot;> </xref>を読み込むときに、プロジェクトが存在しない .target ファイルを無視するかどうかを決定するフラグ。"
+      description: A <xref href="Microsoft.Build.BuildEngine.ProjectLoadSettings"></xref> flag that determines whether the project ignores non-existent .target files when loading.
     return:
       type: Microsoft.Build.BuildEngine.Project
-      description: "変換された返します<xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;></xref>します。"
+      description: Returns the converted <xref href="Microsoft.Build.BuildEngine.Project"></xref>.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory*
   exceptions: []
   platform:
@@ -253,16 +253,16 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "F# のプロジェクトに特定の変換を実行します (vs&2008; CTP の&gt;VS2012) と (VS2010 -&gt; VS2012)。       これに含まれます: 明示的な mscorlib と FSharp.Core の参照を追加する場所 2008CTP、およびの FSharp ターゲットを変更します。"
+  summary: "Performs conversions specific to F# projects (VS2008 CTP -&gt; VS2012) and (VS2010 -&gt; VS2012).  \n  \n This involves: changing the location of FSharp targets, and for 2008CTP, adding explicit mscorlib and FSharp.Core references."
   syntax:
     content: public bool FSharpSpecificConversions (bool actuallyMakeChanges);
     parameters:
     - id: actuallyMakeChanges
       type: System.Boolean
-      description: "true の場合、変更、それ以外の場合、実際に何も変更しませんが、変更を行ったとするかどうかを返す"
+      description: if true, make the changes, otherwise, don't actually make any changes, but return whether you would make the changes
     return:
       type: System.Boolean
-      description: "何があった場合は true を返します (なります) 変更すると、false の場合それ以外の場合。"
+      description: Returns true if anything was (would be) changed, false otherwise.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.FSharpSpecificConversions*
   exceptions: []
   platform:
@@ -279,12 +279,12 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "取得または変換されるプロジェクト ファイルが .user ファイルであるかどうかを示す値を設定します。"
+  summary: Gets or sets a value indicating whether the project file being converted is a .user file.
   syntax:
     content: public bool IsUserFile { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>プロジェクト ファイルが変換される場合は、.user ファイルです。それ以外の場合、 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>します。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project file being converted is a .user file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.IsUserFile*
   exceptions: []
   platform:
@@ -301,13 +301,13 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "取得または新規のプロジェクト ファイル名を設定します。"
-  remarks: "この値は、実行する前に設定する必要があります、<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A>メソッド</xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A>。"
+  summary: Gets or sets the new project file name.
+  remarks: This value must be set before running the <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A> method.
   syntax:
     content: public string NewProjectFile { get; set; }
     return:
       type: System.String
-      description: "新しいプロジェクト ファイルの名前を表す文字列。"
+      description: A string representing the new project file name.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.NewProjectFile*
   exceptions: []
   platform:
@@ -324,13 +324,13 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "取得または既存のプロジェクト ファイルの名前を設定します。"
-  remarks: "この値は、実行する前に設定する必要があります、<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A>メソッド</xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A>。"
+  summary: Gets or sets the old project file name.
+  remarks: This value must be set before running the <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%2A> method.
   syntax:
     content: public string OldProjectFile { get; set; }
     return:
       type: System.String
-      description: "既存のプロジェクト ファイルの名前。"
+      description: The old project file name.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.OldProjectFile*
   exceptions: []
   platform:
@@ -347,12 +347,12 @@ items:
   assemblies:
   - Microsoft.Build.Conversion.v4.0
   namespace: Microsoft.Build.Conversion
-  summary: "取得または変換対象のプロジェクトを含むソリューション ファイルの名前を設定します。"
+  summary: Gets or sets the name of the solution file that contains the project being converted.
   syntax:
     content: public string SolutionFile { get; set; }
     return:
       type: System.String
-      description: "変換対象のプロジェクトを含むソリューション ファイルの名前。"
+      description: The name of the solution file that contains the project being converted.
   overload: Microsoft.Build.Conversion.ProjectFileConverter.SolutionFile*
   exceptions: []
   platform:

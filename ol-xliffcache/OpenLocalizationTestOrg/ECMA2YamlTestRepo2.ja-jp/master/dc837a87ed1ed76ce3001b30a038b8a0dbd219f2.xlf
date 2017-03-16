@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dc837a87ed1ed76ce3001b30a038b8a0dbd219f2</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Data.OracleClient.OracleConnectionStringBuilder.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1fab702ed892853ec6c8277b6c5ed709960af121</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3dc7e523c22406b616e4016045d0cebe4851f728</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides a simple way to create and manage the contents of connection strings used by the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This type is deprecated and will be removed in a future version of the .NET Framework.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Oracle and ADO.NET<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The connection string builders allow developers to programmatically create syntactically correct connection strings, and to parse and rebuild existing connection strings, using properties and methods of the class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The connection string builder provides strongly typed properties corresponding to the known key/value pairs allowed by Oracle.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The OracleConnectionStringBuilder class implements the &lt;xref:System.ComponentModel.ICustomTypeDescriptor&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This means that the class works with Visual Studio .NET designers at design time.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>When developers use the designer to build strongly typed <bpt id="p1">**</bpt>DataSets<ept id="p1">**</ept> and strongly typed connections within Visual Studio .NET, the strongly typed connection string builder class will display the properties associated with its type and will also have converters that can map common values for known keys.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Developers needing to create connection strings as part of applications can use the OracleConnectionStringBuilder class to build and modify connection strings.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The OracleConnectionStringBuilder class also makes it easy to manage connection strings stored in an application configuration file.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The OracleConnectionStringBuilder performs checks for valid key/value pairs.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Therefore, this class cannot be used to create invalid connection strings.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Trying to add invalid pairs will throw an exception.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The OracleConnectionStringBuilder class maintains a fixed collection of synonyms, and when required, can perform the required translation to convert from a synonym to the corresponding well-known key name.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For example, when you use the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Item%2A&gt; property to retrieve a value, you can specify a string that contains any synonym for the key you need.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>See the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Item%2A&gt; property for a full list of acceptable synonyms.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The OracleConnectionStringBuilder handles attempts to insert malicious entries.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For example, the following code, using the default &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Item%2A&gt; property (the indexer, in C#) correctly escapes the nested key/value pair.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>[Visual Basic]      <ph id="ph1">```   Dim builder As New System.Data. _       OracleClient.OracleConnectionStringBuilder   builder("Data Source") = "OracleDemo"   builder("Integrated Security") = True   builder("User ID") = "Mary;NewValue=Bad"   System.Diagnostics.Debug.WriteLine(builder.ConnectionString)   ```</ph>       [C#]      <ph id="ph2">```   System.Data.OracleClient.OracleConnectionStringBuilder builder =      new System.Data.OracleClient.OracleConnectionStringBuilder();   builder["Data Source"] = "OracleDemo";   builder["integrated Security"] = true;   builder["User ID"] = "Mary;NewValue=Bad";   System.Diagnostics.Debug.WriteLine(builder.ConnectionString);   ```</ph>       The result is the following connection string that handles the invalid value in a safe manner by enclosing the User ID value in quotes:      <ph id="ph3">```   Data Source=OracleDemo;Integrated Security=True;User ID="Mary;NewValue=Bad"   ```</ph></source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The provided connection string provides the data for the instance's internal connection information.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; class provides a fixed internal collection of key/value pairs.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Even if you supply only a small subset of the possible connection string values in the constructor, the object always provides default values for each key/value pair.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>When the &lt;xref:System.Data.Common.DbConnection.ConnectionString%2A&gt; property of the object is retrieved, the string contains only key/value pairs in which the value is different from the default value for the item.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The basis for the object's internal connection information.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Parsed into name/value pairs.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Invalid key names raise a &lt;xref:System.Collections.Generic.KeyNotFoundException&gt;.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Invalid key name within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Invalid value within the connection string (specifically, when a Boolean or numeric value was expected but not supplied).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Clears the contents of the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The Clear method removes all key/value pairs from the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt;, and resets all corresponding properties.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This includes resetting the connection string to an empty string.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Determines whether the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> contains a specific key.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Because the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; contains a fixed-size collection of key/value pairs, the ContainsKey method determines only if a particular key name is valid.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The key to locate in the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the <bpt id="p2">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> contains an element that has the specified key; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;keyword&lt;/code&gt;</ph> is null (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic)</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Gets or sets the name of the Oracle data source to connect to.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Data Source" and "Server" keys within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Regardless of which of these values has been supplied within the supplied connection string, the connection string created by the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; will use the well-known "Data Source" key.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If the value passed in is null when you try to set the property, the DataSource property is reset.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>If the value has not been set and the developer tries to retrieve the property, the return value is &lt;xref:System.String.Empty&gt;.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The value of the DataSource property, or &lt;xref:System.String&gt; if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the pooler automatically enlists the connection in the creation thread's current transaction context.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Enlist" key within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The value of the Enlist property, or <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the property has not been previously set.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether "User ID" and "Password" are specified in the connection (when <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>) or whether the current Windows account credentials are used for authentication (when <bpt id="p2">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>).</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Integrated Security" key within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The value of the IntegratedSecurity property, or a <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Gets a value that indicates whether the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> has a fixed size.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in every case, because the <bpt id="p2">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> supplies a fixed-size collection of key/value pairs.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Gets or sets the value associated with the specified key.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>In C#, this property is the indexer.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Because the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; contains a fixed-size dictionary, trying to add a key that does not exist within the dictionary throws a &lt;xref:System.Collections.Generic.KeyNotFoundException&gt;.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The following table lists all the possible keys within the connection string, and the default value for each.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>|Key|Property|Default value|   |---------|--------------|-------------------|   |Data Source (or server)|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.DataSource%2A&gt;|Empty string|   |Persist Security Info (or persistsecurityinfo)|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.PersistSecurityInfo%2A&gt;|False|   |Integrated Security|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.IntegratedSecurity%2A&gt;|False|   |User ID (or user or uid)|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.UserID%2A&gt;|Empty string|   |Password|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Password%2A&gt;|Empty string|   |Enlist|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Enlist%2A&gt;|True|   |Pooling|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Pooling%2A&gt;|True|   |Min Pool Size|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.MinPoolSize%2A&gt;|0|   |Max Pool Size|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.MaxPoolSize%2A&gt;|100|   |Omit Oracle Connection Name|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.OmitOracleConnectionName%2A&gt;|False|   |Unicode|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Unicode%2A&gt;|False|   |Load Balance Timeout (or connection lifetime)|&lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.LoadBalanceTimeout%2A&gt;|0|</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The key of the item to get or set.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The value associated with the specified key.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;keyword&lt;/code&gt;</ph> is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Tried to add a key which does not exist within the available keys.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Invalid value within the connection string (specifically, when a Boolean or numeric value was expected but not supplied).</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Gets an &lt;xref:System.Collections.ICollection&gt; that contains the keys in the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The order of the values in the &lt;xref:System.Collections.ICollection&gt; is unspecified, but it is the same order as the associated values in the &lt;xref:System.Collections.ICollection&gt; returned by the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Values%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Collections.ICollection&gt; that contains the keys in the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Gets or sets the minimum time, in seconds, for the connection to live in the connection pool before it is removed.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Load Balance Timeout" and "Connection Lifetime" keys within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The value of the LoadBalanceTimeout property, or 0 if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Gets or sets the maximum number of connections allowed in the connection pool for this specific connection string.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Max Pool Size" key within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The value of the MaxPoolSize property, or 100 if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Gets or sets the minimum number of connections allowed in the connection pool for this specific connection string.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Min Pool Size" key within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The value of the MinPoolSize property, or 0 if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Gets or sets the flag that enables transaction rollbacks on earlier versions of Oracle (prior to 8.1.7.4.1).</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>When set to <ph id="ph1">`true`</ph>, this property prevents certain errors from occurring when attempting to roll back transactions in earlier versions of Oracle (prior to 8.1.7.4.1).</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if transaction rollbacks are enabled; otherwise <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Gets or sets the password for the Oracle account.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Password" and "pwd" keys within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The value of the Password property, or &lt;xref:System.String&gt; if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Gets or sets a Boolean value that indicates if security-sensitive information, such as the password, is not returned as part of the connection if the connection is open or has ever been in an open state.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Persist Security Info" and "persistsecurityinfo" keys within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The value of the PersistSecurityInfo property, or <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Gets or sets a Boolean value that indicates whether the connection will be pooled, or whether each connection will be explicitly opened every time that the connection is requested.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Pooling" key within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The value of the Pooling property, or <bpt id="p1">&lt;xref uid="langword_csharp_true " name="true " href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Removes the entry with the specified key from the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Because the Remove method returns a value that indicates its success, it is not necessary to look for the existence of a key before trying to remove the key/value pair from the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; instance.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Because the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; maintains a fixed-size collection of key/value pairs, calling the Remove method just resets the value of the key/value pair back to its default value.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Because the collection of keys supported by the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; is fixed, every item within the collection has a known default value.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The following table lists the keys, and the value for each when the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; is first initialized, or after the Remove method has been called:      |Key|Default value|   |---------|-------------------|   |Data Source|Empty string|   |Persist Security Info|False|   |Integrated Security|False|   |User ID|Empty string|   |Password|Empty string|   |Enlist|True|   |Pooling|True|   |Min Pool Size|0|   |Max Pool Size|100|   |Unicode|False|   |Load Balance Timeout|0|   |Omit Oracle Connection Name|False|</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The key of the key/value pair to be removed from the connection string in this <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the key existed within the connection string and was removed, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if the key did not exist.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;keyword&lt;/code&gt;</ph> is null (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Indicates whether the specified key exists in this <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>This method behaves identically to the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.ContainsKey%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The key to locate in the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the <bpt id="p2">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> contains an entry with the specified key; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Retrieves a value corresponding to the supplied key from this <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The TryGetValue method lets developers safely retrieve a value from an &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; without needing to verify that the supplied key name is a valid key name.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Because TryGetValue gracefully handles searching for a non-existent key, there is no need to look for the existence of a key before retrieving its value.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Calling TryGetValue with a nonexistent key will place the value null (<ph id="ph1">`Nothing`</ph> in Visual Basic) in the <ph id="ph2">`value`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The key of the item to retrieve.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The value corresponding to <ph id="ph1">`keyword.`</ph></source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">keyword</ph><ept id="p2">&lt;/code&gt;</ept> was found within the connection string; otherwise, <bpt id="p3">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Gets or sets a Boolean value that indicates if the client supports the Unicode functionality available in later Oracle clients, or if it is non-Unicode aware.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "Unicode" key within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>The value of the Unicode property, or <bpt id="p1">&lt;xref uid="langword_csharp_false " name="false " href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Gets or sets the user ID to be used when connecting to Oracle.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>This property corresponds to the "User ID", "user", and "uid" keys within the connection string.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>If the value passed in is null when you try to set the property, the UserID property is reset.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>If the value has not been set and the developer tries to retrieve the property, the return value is &lt;xref:System.String&gt;.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The value of the UserID property, or &lt;xref:System.String&gt; if none has been supplied.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Gets an &lt;xref:System.Collections.ICollection&gt; that contains the values in the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The order of the values in the &lt;xref:System.Collections.ICollection&gt; is unspecified, but it is the same order as the associated keys in the &lt;xref:System.Collections.ICollection&gt; returned by the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder.Keys%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Because each instance of the &lt;xref:System.Data.OracleClient.OracleConnectionStringBuilder&gt; always contains the same fixed set of keys, the Values property always returns the values corresponding to the fixed set of keys, in the same order as the keys.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Collections.ICollection&gt; that contains the values in the <bpt id="p1">&lt;xref href="System.Data.OracleClient.OracleConnectionStringBuilder"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

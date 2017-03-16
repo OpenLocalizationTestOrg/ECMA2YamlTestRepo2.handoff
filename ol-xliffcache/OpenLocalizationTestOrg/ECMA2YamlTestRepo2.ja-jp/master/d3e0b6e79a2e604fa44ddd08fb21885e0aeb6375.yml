@@ -17,7 +17,7 @@ items:
   nameWithType: FindInList
   fullName: Microsoft.Build.Tasks.FindInList
   type: Class
-  summary: "指定した一覧には、一致する itemspec のある項目を検索します。"
+  summary: In a specified list, finds an item that has the matching itemspec.
   syntax:
     content: 'public class FindInList : Microsoft.Build.Tasks.TaskExtension'
   inheritance:
@@ -48,7 +48,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "新しいインスタンスを初期化、 <xref href=&quot;Microsoft.Build.Tasks.FindInList&quot;> </xref>クラスです。"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.FindInList"></xref> class.
   syntax:
     content: public FindInList ();
     parameters: []
@@ -68,13 +68,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得または大文字と小文字を区別して一致するかどうかを示すブール値を設定します。"
-  remarks: "既定値は大文字小文字を区別します。"
+  summary: Gets or sets a Boolean value that indicates whether to match case sensitively.
+  remarks: Default is case insensitive.
   syntax:
     content: public bool CaseSensitive { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>`FindInList`と小文字以外の場合、タスクが大文字と小文字を一致する必要があります<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>します。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> `FindInList` task should match case sensitively; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.FindInList.CaseSensitive*
   exceptions: []
   platform:
@@ -91,13 +91,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "実行、`FindInList`タスクです。"
+  summary: Executes the `FindInList` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>タスクの実行が成功した場合それ以外の場合、 <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>します。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.FindInList.Execute*
   exceptions: []
   platform:
@@ -114,13 +114,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得または設定を最後に一致を返すかどうかを示すブール値 (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) または最初の一致を返す (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)。"
-  remarks: "既定値は `false` です。"
+  summary: Gets or sets a Boolean value that indicates whether to return the last match (<xref uid="langword_csharp_true" name="true" href=""></xref>) or to return the first match (<xref uid="langword_csharp_false" name="false" href=""></xref>).
+  remarks: Default value is `false`.
   syntax:
     content: public bool FindLastMatch { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>場合、`FindInList`タスクは、最後の一致を返す必要があります<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>場合、`FindInList`タスクは、最初の一致を返す必要があります。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `FindInList` task should return the last match; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `FindInList` task should return the first match.
   overload: Microsoft.Build.Tasks.FindInList.FindLastMatch*
   exceptions: []
   platform:
@@ -137,12 +137,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得または、存在する場合は、最初に、ボックスの一覧で見つかった一致する項目を設定します。"
+  summary: Gets or sets the first matching item found in the list, if any.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem ItemFound { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "一覧にある最初の一致する項目。"
+      description: The first matching item found in the list.
   overload: Microsoft.Build.Tasks.FindInList.ItemFound*
   exceptions: []
   platform:
@@ -159,12 +159,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得または検索する itemspec を設定します。"
+  summary: Gets or sets the itemspec to search for.
   syntax:
     content: public string ItemSpecToFind { get; set; }
     return:
       type: System.String
-      description: "検索する itemspec します。"
+      description: The itemspec to search for.
   overload: Microsoft.Build.Tasks.FindInList.ItemSpecToFind*
   exceptions: []
   platform:
@@ -181,12 +181,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得または itemspec を検索するための一覧を設定します。"
+  summary: Gets or sets the list in which to search for the itemspec.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] List { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Itemspec を検索するための一覧です。"
+      description: The list in which to search for the itemspec.
   overload: Microsoft.Build.Tasks.FindInList.List*
   exceptions: []
   platform:
@@ -203,13 +203,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "取得または itemspec のファイル名の部分だけを照合するか、全体の itemspec と照合するかどうかを示すブール値を設定します。"
-  remarks: "既定値は `true` です。"
+  summary: Gets or sets a Boolean value that indicates whether to match against just the file name part of the itemspec or to match against the whole itemspec.
+  remarks: Default value is `true`.
   syntax:
     content: public bool MatchFileNameOnly { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>場合、`FindInList`タスクは、itemspec; のファイル名の部分だけを照合する必要があります<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>場合、`FindInList`タスクは、全体の itemspec を照合する必要があります。"
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `FindInList` task should match against just the file name part of the itemspec; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `FindInList` task should match against the whole itemspec.
   overload: Microsoft.Build.Tasks.FindInList.MatchFileNameOnly*
   exceptions: []
   platform:

@@ -16,7 +16,7 @@ items:
   nameWithType: CodeTaskFactory
   fullName: Microsoft.Build.Tasks.CodeTaskFactory
   type: Class
-  summary: "コード DOM がかかるタスク ファクトリでは、サポートされている言語し、そこからタスクを作成します。"
+  summary: A task factory which can take a code DOM supported language and create a task from it.
   syntax:
     content: 'public class CodeTaskFactory : Microsoft.Build.Framework.ITaskFactory'
   inheritance:
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "タスク ファクトリを作成します。"
+  summary: Creates the task factory.
   syntax:
     content: public CodeTaskFactory ();
     parameters: []
@@ -58,13 +58,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "任意のコンテキストまたはタスクで使用される状態をクリーンアップします。"
+  summary: Cleans up any context or state used in a task.
   syntax:
     content: public void CleanupTask (Microsoft.Build.Framework.ITask task);
     parameters:
     - id: task
       type: Microsoft.Build.Framework.ITask
-      description: "クリーンアップ タスク。"
+      description: The task to clean up.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CleanupTask*
   exceptions: []
   platform:
@@ -81,16 +81,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "作成、`taskfactory`タスク呼び出しの間で更新する必要があるデータを格納するインスタンス。"
+  summary: Create a `taskfactory` instance which contains the data that needs to be refreshed between task invocations.
   syntax:
     content: public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine loggingHost);
     parameters:
     - id: loggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "このホストは、タスク ファクトリから情報を記録します。"
+      description: The host that logs information from the task factory.
     return:
       type: Microsoft.Build.Framework.ITask
-      description: "新しいタスクを返します。"
+      description: Returns the new task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.CreateTask*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "MSBuild エンジンは、ログ記録にこれを使用します。"
+  summary: The MSBuild engine uses this for logging.
   syntax:
     content: public string FactoryName { get; }
     return:
       type: System.String
-      description: "タスクの名前を返します。"
+      description: Returns the name of the task.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.FactoryName*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "すべてのタスク パラメーターの型情報を取得します。"
+  summary: Gets the type information for all task parameters.
   syntax:
     content: public Microsoft.Build.Framework.TaskPropertyInfo[] GetTaskParameters ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.TaskPropertyInfo[]
-      description: "すべてのタスク パラメーターの型情報の配列を返します。"
+      description: Returns an array of the type information for all task parameters.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.GetTaskParameters*
   exceptions: []
   platform:
@@ -152,25 +152,25 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "タスク ファクトリを初期化します。"
+  summary: Initialzes the task factory.
   syntax:
     content: public bool Initialize (string taskName, System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.TaskPropertyInfo> taskParameters, string taskElementContents, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);
     parameters:
     - id: taskName
       type: System.String
-      description: "タスクの名前。"
+      description: The name of the task.
     - id: taskParameters
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo}
-      description: "タスクのパラメーターです。"
+      description: The parameters for the task.
     - id: taskElementContents
       type: System.String
-      description: "タスクの要素の内容。"
+      description: The element contents for the task.
     - id: taskFactoryLoggingHost
       type: Microsoft.Build.Framework.IBuildEngine
-      description: "タスクに関する情報を取得するログ記録ホスト。"
+      description: The logging host that gets information about tasks.
     return:
       type: System.Boolean
-      description: "新しいタスク ファクトリを返します。"
+      description: Returns the new task factory.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.Initialize*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "タスクの種類を表します。"
+  summary: Represents the type of task.
   syntax:
     content: public Type TaskType { get; }
     return:
       type: System.Type
-      description: "タスクの種類を返します。"
+      description: Returns the task type.
   overload: Microsoft.Build.Tasks.CodeTaskFactory.TaskType*
   exceptions: []
   platform:

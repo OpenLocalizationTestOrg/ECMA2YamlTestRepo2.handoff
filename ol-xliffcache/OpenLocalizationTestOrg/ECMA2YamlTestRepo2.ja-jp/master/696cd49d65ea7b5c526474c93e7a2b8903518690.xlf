@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">696cd49d65ea7b5c526474c93e7a2b8903518690</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ServiceModel.Channels.ReliableSessionBindingElement.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ccf35d110670d83575cf5b177375f798b5a6f452</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c43c1f08b38e6deb09dbfcaf957d2f3ff60f5a71</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents the binding element that can produce the sending and receiving channels required for a reliable session between endpoints.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Provides sessions and optionally provides ordered message delivery.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This implemented session can cross SOAP and transport intermediaries.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Each binding element represents a processing step when sending or receiving messages.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>At runtime, binding elements create the channel factories and listeners that are necessary to build outgoing and incoming channel stacks required to send and receive messages.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The ReliableSessionBindingElement provides an optional layer in the stack that can establish a reliable session between endpoints and configure the behavior of this session.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The ReliableSessionBindingElement is provided on the standard bindings in the following table.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>|Binding|Default|   |-------------|-------------|   |&lt;xref:System.ServiceModel.NetTcpBinding&gt;|Off|   |&lt;xref:System.ServiceModel.WSHttpBinding&gt;|Off|   |&lt;xref:System.ServiceModel.WSDualHttpBinding&gt;|On (required)|</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.ServiceModel.Channels.ReliableSessionBindingElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.ServiceModel.Channels.ReliableSessionBindingElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that specifies whether message delivery must preserve the order in which messages are sent.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if messages must be delivered in the order in which they are sent; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The default value is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Gets or sets the interval of time that a destination waits before sending an acknowledgment to the message source on reliable channels that are created by the factory.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The destination that receives messages on a reliable channel groups the acknowledgments for these messages together into a single message to reduce network traffic and to increase information density on messages.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Grouping scales better as traffic increases.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>It does not attempt to send an acknowledgment for every message it receives as soon as possible, but rather waits for an interval of time, groups together the acknowledgments that have arrived during that interval, and then sends them all together.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The first message that is received is the exception; it is acknowledged as soon as it is delivered.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Also, if reliable sessions are used with single HTTP connections, as is the case for example with the &lt;xref:System.ServiceModel.WSHttpBinding&gt; but not &lt;xref:System.ServiceModel.WSDualHttpBinding&gt;, then this setting is not used.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The value that is set with the AcknowledgementInterval property is a recommendation to the infrastructure and not a hard limit.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.TimeSpan&gt; that specifies the interval of time that a service waits until sending an acknowledgment to the message source.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The default value is 2 seconds.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The value set is less than or equal to zero.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Creates a copy of the current reliable session binding element.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.ServiceModel.Channels.BindingElement&gt; that is a clone of the current binding element.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the reliable session has flow control enabled.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Flow control is a mechanism that reliable sessions implement to ensure that senders do not send more messages than a receiver can handle.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Receivers have a buffer of messages that is used to accommodate message bursts and out-of-order messages.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Receivers advertise to senders the amount of space that remains in this buffer in each of their acknowledgements.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Senders can use this information to stop sending new messages whenever the receiver has no buffer space left.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the reliable session has flow control enabled; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Gets or sets an interval of time that a service remains inactive before closing.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Activity on a channel is defined as receiving an application or infrastructure message.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The inactivity timeout parameter controls the maximum amount of time to keep an inactive session alive.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If more than InactivityTimeout time interval passes with no activity, the session is aborted by the infrastructure and the channel faults.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The reliable session is torn down unilaterally.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If the sending application has no messages to send then the reliable session is normally not faulted because of inactivity; instead a keep-alive mechanism keeps the session active indefinitely.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Note that the dispatcher can independently abort the reliable session if no application messages are sent or received.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Thus, the inactivity timeout typically expires if network conditions are such that no messages are received or if there is a failure on the sender.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.TimeSpan&gt; that specifies the interval of time that a service remains inactive before closing.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The default value is 10 minutes.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The value set is less than or equal to zero or greater than either &lt;xref:System.Int32.MaxValue&gt; or &lt;xref:System.TimeSpan.MaxValue&gt;.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Gets or sets the largest number of channels that can be pending during the reliable session.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Channels are pending when they are waiting to be accepted.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Once that limit is reached, no channels are created and put in pending mode until this number goes down (by accepting pending channels).</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>This is a limit for each listener.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>When the threshold is reached and a remote application tries to establish a new reliable session, the request is denied and the open operation that prompted this faults.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The largest number of channels that can be pending.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The default value is 4.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The value set is less than or equal to zero or greater than 16384.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Gets or sets the maximum number of times that a message attempts to be transferred during the reliable session.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>A message is considered to be transferred if its delivery at the recipient has been acknowledged by the recipient.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>If an acknowledgment has not been received within a certain amount of time for a message that has been transmitted, the infrastructure automatically retransmits the message.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The infrastructure tries to send the message for, at most, a MaxRetryCount number of times.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Not receiving an acknowledgment before this limit is reached is considered a fatal communication failure and causes the channel faulted event to be raised.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The infrastructure uses an exponential back-off algorithm to determine when to retransmit, based on a computed average round-trip time.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The initial retry time is computed based on the measured roundtrip time of establishing the session.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The retransmission algorithm doubles the delay with every attempt, which results in approximately 8.5 minutes passing between the first transmission attempt and the last retransmission attempt.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The time for the first retransmission attempt is adjusted according to the calculated round-trip time and the resulting stretch of time that those attempts take varies accordingly.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>This allows the retransmission time to dynamically adapt to varying network conditions.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The maximum number of times that a message attempts to be re-sent.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The minimum value is 1; the maximum is &lt;xref:System.Int32&gt;; and the default value is 8.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The value set is less than or equal to zero.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Gets or sets the largest number of messages that can exist in either the send buffer or the receive buffer.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The value of the MaxTransferWindowSize property can be set on both the sender and the receiver.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>This value is included in the binding policy of the WSDL, so if you use the <bpt id="p1">[</bpt>ServiceModel Metadata Utility Tool (Svcutil.exe)<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept> to construct your client, it has the same value.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Otherwise this value is whatever you set it to be on the client.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>When this limit is reached on the sender, additional calls to send are blocked.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>When this limit is reached on the receiver, new messages that arrive on the underlying channel are not accepted.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>A reliable session uses a windowing protocol to help improve network utilization.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The amount of buffering required is directly derived from the size of the transmission window.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>When tuning this value, note that the optimal transmission window is related to the bandwidth and the latency in a straight-forward way.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The ideal maximum window size is the bandwidth times the latency.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Anything smaller yields less than 100% network utilization; anything larger is just wasted space.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The largest number of messages that can be buffered.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The minimum value is 1; the maximum value is 4096; and the default value is 32.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The value set is less than or equal to one or greater than 4096.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether message delivery must preserve the order in which messages are sent.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>To get messages dispatched in order, you also must set the &lt;xref:System.ServiceModel.ConcurrencyMode&gt; to &lt;xref:System.ServiceModel.ConcurrencyMode&gt;.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if messages must be delivered in the order in which they are sent; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Gets or sets the version of WS-ReliableMessaging specified by the binding element.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>There are currently two versions of the WS-ReliableMessaging protocol supported by <ph id="ph1">[!INCLUDE[indigo1](~/add/includes/ajax-current-ext-md.md)]</ph>: WS-ReliableMessaging1.1 and WS-ReliableMessagingFebruary2005.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The default version is WS-ReliableMessagingFebruary2005.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>An instance derived from <bpt id="p1">&lt;xref href="System.ServiceModel.ReliableMessagingVersion"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that represents the version of the WS-ReliableMessaging protocol used by the configuration element.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Maps the information contained in the reliable session binding element into the WSDL elements that enable a remote endpoint to access the service with a reliable session.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.ServiceModel.Description.MetadataExporter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that exports the binding information in the reliable session binding element to the WSDL elements.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.ServiceModel.Description.PolicyConversionContext"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that provides the mapping from exported WSDL elements to the endpoint description.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">57831b6f92abfbdfc291b68b935770a758b44a48</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Messaging.DefaultPropertiesToSend.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">60ef5eef9ea58161c15aa4ae84d71589e4c01d2f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7349623abc7c1d3637f87ed8908747543262aec7</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Specifies the default property values that will be used when sending objects other than <bpt id="p1">&lt;xref href="System.Messaging.Message"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instances to a message queue.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>You can set default values on selected properties for messages sent to a &lt;xref:System.Messaging.MessageQueue&gt;.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>DefaultPropertiesToSend is used to specify default property values of the message being sent when objects other than &lt;xref:System.Messaging.Message&gt; instances are sent to a queue, for example, the string argument passed into the &lt;xref:System.Messaging.MessageQueue.Send%2A&gt; method in the code fragment, <ph id="ph1">`myMessageQueue.Send("hello")`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Messaging.Message&gt; class has corresponding, identically named properties to those in DefaultPropertiesToSend that provide the values when sending a &lt;xref:System.Messaging.Message&gt; instance specifically.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Even if you have specified &lt;xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=fullName&gt; for a queue, sending a &lt;xref:System.Messaging.Message&gt; object to that queue will cause the values for the identically named &lt;xref:System.Messaging.Message&gt; properties to override the queue's &lt;xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A&gt; values.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Properties that you do not set explicitly default to the values specified by the constructor, &lt;xref:System.Messaging.DefaultPropertiesToSend.%23ctor%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For a list of initial property values for an instance of DefaultPropertiesToSend, see the DefaultPropertiesToSend constructor.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Messaging.DefaultPropertiesToSend"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can create a new instance of &lt;xref:System.Messaging.DefaultPropertiesToSend&gt; to define default property values to associate with objects sent to a queue that are not of type &lt;xref:System.Messaging.Message&gt;.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>When working with &lt;xref:System.Messaging.MessageQueue&gt; objects, a &lt;xref:System.Messaging.DefaultPropertiesToSend&gt; instance is created for you and associated with the &lt;xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=fullName&gt; member of the &lt;xref:System.Messaging.MessageQueue&gt;.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>There are two ways to define a queue's default properties to send, as shown in the following C# code.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You can set values for this instance of &lt;xref:System.Messaging.DefaultPropertiesToSend&gt; and associate it with the queue's &lt;xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=fullName&gt; property:      <ph id="ph1">```   DefaultPropertiesToSend myDefaultProperties = new DefaultPropertiesToSend();     // Set default values for the properties.     myDefaultProperties.Label = "myLabel";     myDefaultProperties.Recoverable = false;    ...     myMessageQueue.DefaultPropertiesToSend = myDefaultProperties;     myMessageQueue.Send("hello");   ```</ph>       Or, you can individually assign values to the &lt;xref:System.Messaging.MessageQueue&gt; instance's &lt;xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A&gt; property directly:      <ph id="ph2">```   myMessageQueue.DefaultPropertiesToSend.Label = "myLabel";     myMessageQueue.DefaultPropertiesToSend.Recoverable = false;   ...     myMessageQueue.Send("hello");   ```</ph>       If you choose the second of these options, you do not need to call the DefaultPropertiesToSend constructor explicitly.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You might want to create instances of &lt;xref:System.Messaging.DefaultPropertiesToSend&gt;, for example, if the properties' default values depend on some criterion of the message being sent.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You can create multiple &lt;xref:System.Messaging.DefaultPropertiesToSend&gt; instances and assign one to the queue's &lt;xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=fullName&gt; property before sending the message to the queue.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following table shows initial property values for an instance of &lt;xref:System.Messaging.DefaultPropertiesToSend&gt;.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>|Property|Initial value|   |--------------|-------------------|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A&gt;|<ph id="ph1">`AcknowledgeTypes.None`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.AdministrationQueue%2A&gt;|<ph id="ph2">`null`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.AppSpecific%2A&gt;|0|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.AttachSenderId%2A&gt;|<ph id="ph3">`true`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.EncryptionAlgorithm%2A&gt;|<ph id="ph4">`EncryptionAlgorithm.RC2`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.Extension%2A&gt;|A zero-length array of bytes|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.HashAlgorithm%2A&gt;|<ph id="ph5">`HashAlgorithm.MD5`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.Label%2A&gt;|An empty string ("")|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.Priority%2A&gt;|<ph id="ph6">`MessagePriority.Normal`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.Recoverable%2A&gt;|<ph id="ph7">`false`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.ResponseQueue%2A&gt;|<ph id="ph8">`null`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A&gt;|<ph id="ph9">`Message.InfiniteTimeout`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A&gt;|<ph id="ph10">`Message.InfiniteTimeout`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.TransactionStatusQueue%2A&gt;|<ph id="ph11">`null`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A&gt;|<ph id="ph12">`false`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A&gt;|<ph id="ph13">`false`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.UseEncryption%2A&gt;|<ph id="ph14">`false`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.UseJournalQueue%2A&gt;|<ph id="ph15">`false`</ph>|   |&lt;xref:System.Messaging.DefaultPropertiesToSend.UseTracing%2A&gt;|<ph id="ph16">`false`</ph><ph id="ph17">|</ph></source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Gets or sets the type of acknowledgement message to be returned to the sending application.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The AcknowledgeType property specifies the type of acknowledgment messages to return to the sending application.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For example, set the AcknowledgeType property to request notification when a message reaches its destination, when it is retrieved, or whether a time-out has prevented the message from reaching or being retrieved from the destination queue.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Messaging.AcknowledgeTypes"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> enumeration values.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>This value is used to determine the type of acknowledgment messages the system posts in the administration queue and when acknowledgments are returned to the sending application.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_AcknowledgeTypes.None" name="AcknowledgeTypes.None" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Gets or sets the queue that receives acknowledgement messages generated by Message Queuing.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The queue specified in the AdministrationQueue property can be any non-transactional queue.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The acknowledgment messages sent to the administration queue can indicate whether or not the original message reached its destination queue, and whether or not it was removed from the queue.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>When the &lt;xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A&gt; property has any value other than <ph id="ph1">`None`</ph>, the sending application must specify the queue to be used as the administration queue.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Messaging.MessageQueue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that specifies the administration queue used for system-generated acknowledgment messages.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Gets or sets additional, application-specific information.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The AppSpecific property contains additional, application-specific information that can be used to organize different types of messages, for example, using application-specific indexes.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>It is the responsibility of the application to interpret AppSpecific information.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Where possible, message data should be included in the body of the message rather than in the AppSpecific property.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>When working with foreign queues, use the &lt;xref:System.Messaging.DefaultPropertiesToSend.Extension%2A&gt; property to specify non-Message Queuing message properties.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>As with AppSpecific, it is the responsibility of the application to understand the content of the &lt;xref:System.Messaging.DefaultPropertiesToSend.Extension%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Information specific to the application.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The default is 0.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the sender ID should be attached to the message.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The sender ID is an array of bytes that represents the identifier of the sending user.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The sender ID is set by Message Queuing and is used by the receiving Queue Manager to verify whether the sender has access rights to a queue.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The sender ID is only trustworthy if the message was authenticated when it reached the destination queue.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>When the sender ID is not attached to the message, the sending application is indicating that Message Queuing should not validate the message's sender when the message is sent to the destination queue.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If the destination queue only accepts authenticated messages, and either &lt;xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A&gt; or AttachSenderId is <ph id="ph1">`false`</ph>, the message will be rejected when it reaches the queue.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if sender ID should be attached to the message; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Gets or sets the encryption algorithm used to encrypt the body of a private message.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If a message is private, it is encrypted before it is sent and is decrypted when it is received.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The EncryptionAlgorithm property specifies the algorithm used to encrypt the message body of a private message.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>A queue can require that incoming messages be encrypted.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>If a non-encrypted (non-private) message is sent to a queue that only accepts private messages, or if a private message is sent to a queue that only accepts non-private messages, the message is rejected by the queue.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The sending application can request a negative acknowledgment message be returned to the sending application if a message was rejected.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Messaging.EncryptionAlgorithm"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> enumeration values.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_RC2" name="RC2" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Gets or sets additional information associated with the message.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The Extension property provides for additional application-defined information that is associated with the message, such as a large binary object.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>It is the responsibility of the receiving application to interpret the contents of the Extension.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Where possible, message data should be included in the body of the message rather than in the extension.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>When working with foreign queues, use the Extension property to specify non-Message Queuing message properties.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>A foreign queue exists in a queuing system other than Microsoft Message Queuing.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Microsoft Message Queuing communicates with such queues through a connector application.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>An array of bytes that provides additional, application-defined information associated with the message.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The default is a zero-length array.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Gets or sets the hashing algorithm used when authenticating messages or creating a digital signature for a message.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The HashAlgorithm property identifies the hashing algorithm Message Queuing uses when authenticating messages or when creating a digital signature for a message.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Message Queuing on the source computer uses the hashing algorithm when creating a digital signature for a message.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The target Queue Manager then uses the same hashing algorithm to authenticate the message when it is received.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Messaging.HashAlgorithm"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> enumeration values.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_MD5" name="MD5" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Gets or sets an application-defined string that describes the message.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>A message label can be used for display purposes, for example, or to selectively process messages based on the label value.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The maximum length for a message label is 249 Unicode characters.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The label does not need to be unique across messages.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Message queue and message labels represent an application-defined value that can help to identify the queue or message in human-readable terms.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>It is the responsibility of the application to interpret label contents; they have no intrinsic meaning to the Message Queuing application.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The label of the message.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The default is an empty string ("").</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Gets or sets the message priority, which is used to determine where the message is placed in the queue.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The Priority property affects how Message Queuing handles the message while it is en route, as well as where the message is placed in the queue when it reaches its destination.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Higher priority messages are given preference during routing and inserted toward the front of the queue.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Messages with the same priority are placed in the queue according to their arrival time.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Message priority can only be set meaningfully for non-transactional messages.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The priority for transactional messages is automatically set to <ph id="ph1">`Lowest`</ph>, which causes transactional message priority to be ignored.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Messaging.MessagePriority"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> enumeration values that represents the priority level of a non-transactional message.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_Normal" name="Normal" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the message is guaranteed to be delivered in the event of a computer failure or network problem.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The Recoverable property indicates whether delivery of a message is guaranteed, even if a computer crashes while the message is en route to the destination queue.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>If delivery of a message is guaranteed, the message is stored locally at every step along the route until the message is successfully forwarded to the next computer.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Setting Recoverable to <ph id="ph1">`true`</ph> on &lt;xref:System.Messaging.DefaultPropertiesToSend&gt; could affect the throughput.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>If the message is transactional, Message Queuing automatically treats the message as recoverable, regardless of whether Recoverable is set to <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the message is guaranteed delivery by saving it to disk while en route; <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> if delivery is not assured.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Gets or sets the queue that receives application-generated response messages.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The ResponseQueue property identifies the queue that receives application-generated response messages that are returned to the sending application by the receiving application.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Response queues are specified by the sending application when the application sends its messages.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Any available queue can be specified as a response queue.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Messages returned to the response queue are application-specific.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The application must define what is in the messages as well as what is to be done when a message is received.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Messaging.MessageQueue"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to which application-generated response messages are returned.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Gets or sets the time limit for the message to be retrieved from the destination queue.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The TimeToBeReceived property specifies the total time in seconds for a sent message to be received from the destination queue.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>This time limit includes the time spent getting to the destination queue, plus the time spent waiting in the queue before the message is retrieved by an application.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!CAUTION]</ph> &gt;  When using dependent client computers, synchronize the clock on the client computer with the clock on the server running Message Queuing.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>If the two clocks are not synchronized, you might see unpredictable behavior when sending messages when TimeToBeReceived is not &lt;xref:System.Messaging.Message.InfiniteTimeout&gt;.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>If the TimeToBeReceived interval expires before the message is removed from the queue, the Message Queuing application discards the message.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The message is either sent to the dead-letter queue, if the message's &lt;xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A&gt; property is set to <ph id="ph1">`true`</ph>, or ignored, if &lt;xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A&gt; is <ph id="ph2">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>If TimeToBeReceived is less than &lt;xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A&gt;, TimeToBeReceived takes precedence.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The message's &lt;xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A&gt; property can be set to request that Message Queuing send a negative acknowledgment message back to the sending application if the message is not retrieved before the timer expires.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!CAUTION]</ph> &gt;  If you have specified to receive &lt;xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A&gt; negative acknowledgments, you will not receive them when the value of TimeToBeReceived is less than the value of &lt;xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>When several messages are sent in a transaction, Message Queuing uses the value of the first message's TimeToBeReceived property.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>The total time, in seconds, for a sent message to be received from the destination queue.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Messaging.Message.InfiniteTimeout"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Gets or sets the time limit for the message to reach the queue.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>If the TimeToReachQueue interval expires before the message reaches its destination, the Message Queuing application discards the message.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The message is either sent to the dead-letter queue, if the message's &lt;xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A&gt; property is set to <ph id="ph1">`true`</ph>, or ignored, if &lt;xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A&gt; is <ph id="ph2">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>If TimeToReachQueue is greater than &lt;xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A&gt;, &lt;xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A&gt; takes precedence.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The message's &lt;xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A&gt; property can be set to request that Message Queuing send a negative acknowledgment message back to the sending application if the message does not arrive before the timer expires.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>If TimeToReachQueue is 0 seconds, Message Queuing tries once to send the message to its destination if the queue is waiting for the message.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>If the queue is local, the message always reaches the queue.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>When several messages are sent in a transaction, Message Queuing uses the value of the first message's TimeToReachQueue property.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The time limit in seconds for a message to reach the destination queue, from the time the message is sent.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref href="System.Messaging.Message.InfiniteTimeout"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Gets the transaction status queue on the source computer.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>The TransactionStatusQueue property identifies the transaction status queue on the source computer.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The property is set by Message Queuing, and is used by connector applications when retrieving transactional messages sent to a foreign queue.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>A foreign queue exists in a queuing system other than Microsoft Message Queuing.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Microsoft Message Queuing communicates with such queues through a connector application.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>The connector application can use the transaction status queue to send acknowledgment messages back to the sending application.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>The transaction status queue should receive these acknowledgments even if the sending application does not request other acknowledgments.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>The transaction status queue on the source computer, which is used for sending acknowledgement messages back to the sending application.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether the message must be authenticated before being sent.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>The UseAuthentication property specifies whether the message needs to be authenticated.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>If the sending application requests authentication, Message Queuing creates a digital signature and uses it to sign the message when it is sent and to authenticate the message when it is received.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>If a message is sent to a queue that only accepts authenticated messages, the message will be rejected when it reaches the queue if UseAuthentication is set to <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>It is not possible to look at the properties of a message and determine whether a message failed authentication.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Messages that fail authentication are discarded and are not delivered to the queue.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the sending application requested authentication for the message; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether a copy of the message that could not be delivered should be sent to a dead-letter queue.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Messaging.DefaultPropertiesToSend.UseJournalQueue%2A&gt; and UseDeadLetterQueue specify how Message Queuing will track a message.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>If UseDeadLetterQueue is <ph id="ph1">`true`</ph>, then in case of delivery failure (for non-transactional messages), the message is sent to the non-transactional dead-letter queue on the computer that could not deliver the message (for example, if a message timer expires).</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>In the case of delivery failure for transactional messages, the message is sent to the transactional dead-letter queue on the source computer in all negative and in-doubt cases.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>When you store messages in a dead-letter queue, empty the queue periodically to remove messages that are no longer needed.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Messages stored in dead-letter queues count against the size quota for the computer where the queue resides.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>The computer quota is set by the administrator and refers to the total size allocated for storing messages on a computer, not just in a single queue.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>You do not create a journal or dead-letter queue.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>These are both system queues that are generated by Message Queuing.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if message delivery failure should result in a copy of the message being sent to a dead-letter queue; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether to make the message private.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>If a message is private, its body is encrypted before it is sent and is decrypted when it is received.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>To send a private message, the sending application must specify that encryption be used and, optionally, which encryption algorithm to apply.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>When sending private messages, it is not necessary that your application perform the message encryption.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Message Queuing can encrypt the message body for you when your application sends messages within a Microsoft Windows 2000 enterprise where there is access to the directory service.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>When receiving private messages, it is always the receiving Queue Manager that decrypts the message body.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to require Message Queuing to encrypt the message; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether a copy of the message should be kept in a machine journal on the originating computer.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>UseJournalQueue and &lt;xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A&gt; specify how Message Queuing will track a message.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>If UseJournalQueue is <ph id="ph1">`true`</ph>, then at each step that a message is transmitted, a copy is kept in the computer journal on the originating computer.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>The sent message will only be copied to the journal queue if the destination queue is on a remote computer.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>If the destination is on the local computer, the message is sent directly to the queue; there are no intermediate steps to require journaling.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>When you store messages in a journal queue, empty the queue periodically to remove messages that are no longer needed.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Messages stored in journal queues count against the quota for the computer where the queue resides (the computer quota is set by the administrator).</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>You do not create a journal or dead-letter queue.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>These are both system queues that are generated by Message Queuing.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Journaling can be specified by both the message and the queue.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>When UseJournalQueue is <ph id="ph1">`true`</ph>, the message is journaled when it is sent.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>When &lt;xref:System.Messaging.MessageQueue.UseJournalQueue%2A?displayProperty=fullName&gt; is <ph id="ph1">`true`</ph>, the message is journaled when it is received.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to require that a copy of a message be kept in the originating computer's machine journal after it has been successfully transmitted from the originating computer to the next step; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Gets or sets a value that indicates whether to trace a message as it moves toward its destination queue.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>The UseTracing property specifies whether to track the route of a message as it moves toward its destination queue.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`true`</ph>, a Message Queuing-generated report message is sent to a report queue each time the message passes through a Message Queuing routing server.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>The report queue is specified by the source Queue Manager.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>Report queues are not limited to Message Queuing-generated report messages.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>Your application-generated messages can be sent to report queues as well.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Using tracing involves setting up Active Directory and specifying a report queue for the Message Queuing enterprise.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>These settings are configured by the administrator.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if each intermediate step made by the original message en route to the destination queue will generate a report to be sent to the system's report queue; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

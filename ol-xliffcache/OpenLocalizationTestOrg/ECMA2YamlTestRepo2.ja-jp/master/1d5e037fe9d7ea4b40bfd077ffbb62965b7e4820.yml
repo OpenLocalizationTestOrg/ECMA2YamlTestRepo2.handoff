@@ -12,7 +12,7 @@ items:
   nameWithType: IBootstrapperBuilder
   fullName: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder
   type: Interface
-  summary: "ブートス トラップを作成するために必要な機能を公開します。"
+  summary: Exposes functionality that you must have to create a bootstrapper.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(true)]
@@ -37,16 +37,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "指定した設定に基づいてブートス トラップを生成します。"
+  summary: Generates a bootstrapper based on the specified settings.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults Build (Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings settings);
     parameters:
     - id: settings
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings
-      description: "ブートス トラップの作成に使用されるプロパティです。"
+      description: The properties used to create the bootstrapper.
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults&quot;> </xref>をブートス トラップ生成の結果を表すオブジェクト。"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults"></xref> object that represents the results of the bootstrapper generation.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Build*
   exceptions: []
   platform:
@@ -63,12 +63,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "取得または、必要なブートス トラップの場所にファイルを設定します。"
+  summary: Gets or sets the location of the required bootstrapper files.
   syntax:
     content: public string Path { get; set; }
     return:
       type: System.String
-      description: "必要なブートス トラップ ファイルの場所を表す文字列値。"
+      description: A string value that represents the location of the required bootstrapper files.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*
   exceptions: []
   platform:
@@ -85,12 +85,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.Bootstrapper
-  summary: "現在のブートス トラップのパスにある利用可能なすべての製品を取得します。"
+  summary: Gets all products available at the current bootstrapper path.
   syntax:
     content: public Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection Products { get; }
     return:
       type: Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection
-      description: "A <xref href=&quot;Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection&quot;> </xref>現在ブートス トラップ<xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.</xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>で利用可能なすべての製品を表すオブジェクト"
+      description: A <xref href="Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection"></xref> object that represents all products available at the current bootstrapper <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path*>.
   overload: Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Products*
   exceptions: []
   platform:

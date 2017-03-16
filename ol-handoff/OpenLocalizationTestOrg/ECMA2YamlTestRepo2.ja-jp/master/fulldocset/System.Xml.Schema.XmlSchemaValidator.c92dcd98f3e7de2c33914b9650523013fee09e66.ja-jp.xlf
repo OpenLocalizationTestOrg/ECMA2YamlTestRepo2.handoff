@@ -1,0 +1,690 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a4ac62558c0577e175a60eeabe38e09f46fe8d3b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Xml.Schema.XmlSchemaValidator.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2c51a81b344f108aaed03fb0d941e1dcf17c85e2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ad40590bbde8a13fd8908f8bb1630a604da696f1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents an XML Schema Definition Language (XSD) Schema validation engine.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>The XmlSchemaValidator class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&gt; [!IMPORTANT]</ph> &gt;  -   Do not use schemas from unknown or untrusted sources or locations.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Doing so will compromise the security of your code.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>&gt; -   XML schemas (including inline schemas) are inherently vulnerable to denial of service attacks; do not accept them in untrusted scenarios.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>&gt; -   Schema validation error messages and exceptions may expose sensitive information about the content model or URI paths to the schema file.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Be careful not to expose this information to untrusted callers.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The XmlSchemaValidator class provides an efficient, high-performance mechanism to validate XML data against XML schemas in a push-based manner.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For example, the XmlSchemaValidator class allows you to validate an XML infoset in-place without having to serialize it as an XML document and then reparse the document using a validating XML reader.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The XmlSchemaValidator class can also be used to build validation engines over custom XML data sources or as a way to build a validating XML writer.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information about the XmlSchemaValidator class, see the <bpt id="p1">[</bpt>XmlSchemaValidator Push-Based Validation<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  The &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; and &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; validation flags of an XmlSchemaValidator object are not set be default.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Additionally, the &lt;xref:System.Xml.Schema.XmlSchemaValidator.XmlResolver%2A&gt; property of an XmlSchemaValidator object is <ph id="ph1">`null`</ph> by default.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>As a result, external schemas referenced in include, imports, or redefine elements are not resolved by default.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the XmlSchemaValidator constructor.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>-   The contents of the &lt;xref:System.Xml.Schema.XmlSchemaSet&gt; parameter are copied into an internal &lt;xref:System.Xml.Schema.XmlSchemaSet&gt; object when the &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; or the &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; validation options are set.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>As a result, changes to the input &lt;xref:System.Xml.Schema.XmlSchemaSet&gt; object during validation do not affect the outcome of validation.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>-   If the &lt;xref:System.Xml.Schema.XmlSchemaSet&gt; parameter specified is not compiled, its &lt;xref:System.Xml.Schema.XmlSchemaSet.Compile%2A&gt; method is called.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>-   The &lt;xref:System.Xml.IXmlNamespaceResolver&gt; parameter is especially important for validating <ph id="ph1">`xs:QName`</ph> types.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; class does not copy the in-scope namespaces from the &lt;xref:System.Xml.IXmlNamespaceResolver&gt; object but instead holds a reference to it.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This allows new namespaces to be added to the &lt;xref:System.Xml.IXmlNamespaceResolver&gt; object during the validation process.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  The &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; and &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; validation flags of an &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object are not set be default.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Additionally, the &lt;xref:System.Xml.Schema.XmlSchemaValidator.XmlResolver%2A&gt; property of an &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object is <ph id="ph1">`null`</ph> by default.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>As a result, external schemas referenced in include, imports, or redefine elements are not resolved by default.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.XmlNameTable&gt; object containing element and attribute names as atomized strings.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object containing the XML Schema Definition Language (XSD) schemas used for validation.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.IXmlNamespaceResolver&gt; object used for resolving namespaces encountered during validation.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidationFlags"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value specifying schema validation options.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>One or more of the parameters specified are <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>An error occurred while compiling schemas in the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaSet"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Adds an XML Schema Definition Language (XSD) schema to the set of schemas used for validation.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the AddSchema method.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>-   The AddSchema method can be used to simulate the effect of encountering an inline XML schema in the XML document being validated.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>-   The target namespace of the &lt;xref:System.Xml.Schema.XmlSchema&gt; parameter cannot match that of any element or attribute already encountered by the &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>-   If the &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; validation option is not set, the AddSchema method does nothing.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.Schema.XmlSchema&gt; object to add to the set of schemas used for validation.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchema&gt; parameter specified is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The target namespace of the &lt;xref:System.Xml.Schema.XmlSchema&gt; parameter matches that of any element or attribute already encountered by the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchema&gt; parameter is invalid.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Ends validation and checks identity constraints for the entire XML document.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The EndValidation method ends validation and checks identity constraints for the entire XML document if the &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; validation option is set.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>An identity constraint error was found in the XML document.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Returns the expected attributes for the current element context.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the GetExpectedAttributes method.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>-   If the GetExpectedAttributes method is called immediately after the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A&gt; method, all the attributes that could appear in the XML document are returned.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>-   If the GetExpectedAttributes method is called after one or more calls to the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A&gt; method, the attributes that haven't yet been validated for the current element are returned.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>An array of <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaAttribute"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects or an empty array if there are no expected attributes.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Returns the expected particles in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The valid particles that can be returned by the GetExpectedParticles method are instances of the &lt;xref:System.Xml.Schema.XmlSchemaElement&gt; and &lt;xref:System.Xml.Schema.XmlSchemaAny&gt; classes.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>When the compositor for the content model is an <ph id="ph1">`xs:sequence`</ph>, only the next particle in the sequence is returned.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>If the compositor for the content model is an <ph id="ph1">`xs:all`</ph> or an <ph id="ph2">`xs:choice`</ph>, then all valid particles that could follow in the current element context are returned.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For example, in the XML Schema Definition Language (XSD) schema and XML document that follow, after validating the <ph id="ph1">`book`</ph> element, the <ph id="ph2">`book`</ph> element is the current element context.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The GetExpectedParticles method returns an array containing a single &lt;xref:System.Xml.Schema.XmlSchemaElement&gt; object representing the <ph id="ph1">`title`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>When the validation context is the <ph id="ph1">`title`</ph> element, the GetExpectedParticles method returns an empty array.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>If the GetExpectedParticles method is called after the <ph id="ph1">`title`</ph> element has been validated but before the <ph id="ph2">`description`</ph> element has been validated, it returns an array containing a single &lt;xref:System.Xml.Schema.XmlSchemaElement&gt; object representing the <ph id="ph3">`description`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>If the GetExpectedParticles method is called after the <ph id="ph1">`description`</ph> element has been validated then it returns an array containing a single &lt;xref:System.Xml.Schema.XmlSchemaAny&gt; object representing the wildcard.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">```vb#   Dim reader As XmlReader =  XmlReader.Create("input.xml")       Dim schemaSet As XmlSchemaSet =  New XmlSchemaSet()    schemaSet.Add(Nothing, "schema.xsd")   Dim manager As XmlNamespaceManager =  New XmlNamespaceManager(reader.NameTable)       Dim validator As XmlSchemaValidator =  New XmlSchemaValidator(reader.NameTable,schemaSet,manager,XmlSchemaValidationFlags.None)   validator.Initialize()      validator.ValidateElement("book", "", Nothing)   validator.GetUnspecifiedDefaultAttributes(New ArrayList())   validator.ValidateEndOfAttributes(Nothing)   For Each element As XmlSchemaElement In validator.GetExpectedParticles()       Console.WriteLine(element.Name)   Next      validator.ValidateElement("title", "", Nothing)   validator.GetUnspecifiedDefaultAttributes(New ArrayList())   validator.ValidateEndOfAttributes(Nothing)   For Each element As XmlSchemaElement In validator.GetExpectedParticles()       Console.WriteLine(element.Name)   Next   validator.ValidateEndElement(Nothing)      For Each element As XmlSchemaElement In validator.GetExpectedParticles()       Console.WriteLine(element.Name)   Next      validator.ValidateElement("description", "", Nothing)   validator.GetUnspecifiedDefaultAttributes(New ArrayList())   validator.ValidateEndOfAttributes(Nothing)   validator.ValidateEndElement(Nothing)      For Each particle As XmlSchemaParticle In validator.GetExpectedParticles()       Console.WriteLine(particle.GetType())   Next      validator.ValidateElement("namespace", "", Nothing)   validator.GetUnspecifiedDefaultAttributes(New ArrayList())   validator.ValidateEndOfAttributes(Nothing)   validator.ValidateEndElement(Nothing)      validator.ValidateEndElement(Nothing)   ```</ph>      <ph id="ph2">```c#   XmlReader reader = XmlReader.Create("input.xml");      XmlSchemaSet schemaSet = new XmlSchemaSet();   schemaSet.Add(null, "schema.xsd");   XmlNamespaceManager manager = new XmlNamespaceManager(reader.NameTable);      XmlSchemaValidator validator = new XmlSchemaValidator(reader.NameTable, schemaSet, manager, XmlSchemaValidationFlags.None);   validator.Initialize();      validator.ValidateElement("book", "", null);      validator.GetUnspecifiedDefaultAttributes(new ArrayList());   validator.ValidateEndOfAttributes(null);   foreach (XmlSchemaElement element in validator.GetExpectedParticles())   {       Console.WriteLine(element.Name);   }      validator.ValidateElement("title", "", null);   validator.GetUnspecifiedDefaultAttributes(new ArrayList());   validator.ValidateEndOfAttributes(null);   foreach (XmlSchemaElement element in validator.GetExpectedParticles())   {       Console.WriteLine(element.Name);   }   validator.ValidateEndElement(null);      foreach (XmlSchemaElement element in validator.GetExpectedParticles())   {       Console.WriteLine(element.Name);   }      validator.ValidateElement("description", "", null);   validator.GetUnspecifiedDefaultAttributes(new ArrayList());   validator.ValidateEndOfAttributes(null);   validator.ValidateEndElement(null);      foreach (XmlSchemaParticle particle in validator.GetExpectedParticles())   {       Console.WriteLine(particle.GetType());   }      validator.ValidateElement("namespace", "", null);   validator.GetUnspecifiedDefaultAttributes(new ArrayList());   validator.ValidateEndOfAttributes(null);   validator.ValidateEndElement(null);      validator.ValidateEndElement(null);   ```</ph>       The example takes the following XML as input.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">`&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;`</ph>       <ph id="ph2">`&lt;xs:element name="book"&gt;`</ph>       <ph id="ph3">`&lt;xs:complexType&gt;`</ph>       <ph id="ph4">`&lt;xs:sequence&gt;`</ph>       <ph id="ph5">`&lt;xs:element name="title" type="xs:string" /&gt;`</ph>       <ph id="ph6">`&lt;xs:element name="description" type="xs:string" /&gt;`</ph>       <ph id="ph7">`&lt;xs:any processContents ="lax"/&gt;`</ph>       <ph id="ph8">`&lt;/xs:sequence&gt;`</ph>       <ph id="ph9">`&lt;/xs:complexType&gt;`</ph>       <ph id="ph10">`&lt;/xs:element&gt;`</ph>       <ph id="ph11">`&lt;/xs:schema&gt;`</ph>       The example takes the following XSD schema as input.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">`&lt;book&gt;`</ph>       <ph id="ph2">`&lt;title&gt;My Book&lt;/title&gt;`</ph>       <ph id="ph3">`&lt;description&gt;My Book's Description&lt;/description&gt;`</ph>       <ph id="ph4">`&lt;namespace&gt;System.Xml.Schema&lt;/namespace&gt;`</ph>       <ph id="ph5">`&lt;/book&gt;`</ph></source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>An array of <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaParticle"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects or an empty array if there are no expected particles.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Validates identity constraints on the default attributes and populates the <bpt id="p1">&lt;xref href="System.Collections.ArrayList"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> specified with <bpt id="p2">&lt;xref href="System.Xml.Schema.XmlSchemaAttribute"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> objects for any attributes with default values that have not been previously validated using the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute*&gt; method in the element context.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The GetUnspecifiedDefaultAttributes method must be called after validating all the attributes for the current element with the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The GetUnspecifiedDefaultAttributes method should be used to determine what default attributes are to be inserted into the XML document being validated.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Collections.ArrayList"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to populate with <bpt id="p2">&lt;xref href="System.Xml.Schema.XmlSchemaAttribute"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> objects for any attributes not yet encountered during validation in the element context.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Initializes the state of the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The Initialize method is only valid if called immediately after the construction of an &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object or after a call to &lt;xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Calling the &lt;xref:System.Xml.Schema.XmlSchemaValidator.Initialize<bpt id="p1">*</bpt>&gt; method is valid immediately after the construction of an <bpt id="p2">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object or after a call to &lt;xref:System.Xml.Schema.XmlSchemaValidator.EndValidation<ept id="p1">*</ept>&gt; only.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Initializes the state of the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object using the <bpt id="p2">&lt;xref href="System.Xml.Schema.XmlSchemaObject"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> specified for partial validation.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The Initialize method that takes an &lt;xref:System.Xml.Schema.XmlSchemaObject&gt; as a parameter initializes an &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object to its starting state for partial validation.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaElement"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, <bpt id="p2">&lt;xref href="System.Xml.Schema.XmlSchemaAttribute"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, or <bpt id="p3">&lt;xref href="System.Xml.Schema.XmlSchemaType"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> object used to initialize the validation context of the <bpt id="p4">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept> object for partial validation.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Calling the &lt;xref:System.Xml.Schema.XmlSchemaValidator.Initialize<bpt id="p1">*</bpt>&gt; method is valid immediately after the construction of an <bpt id="p2">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object or after a call to &lt;xref:System.Xml.Schema.XmlSchemaValidator.EndValidation<ept id="p1">*</ept>&gt; only.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaObject"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter is not an <bpt id="p2">&lt;xref href="System.Xml.Schema.XmlSchemaElement"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>, <bpt id="p3">&lt;xref href="System.Xml.Schema.XmlSchemaAttribute"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept>, or <bpt id="p4">&lt;xref href="System.Xml.Schema.XmlSchemaType"&gt;</bpt><ept id="p4">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaObject"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter cannot be <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Gets or sets the line number information for the XML node being validated.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Line information is reported by any &lt;xref:System.Xml.Schema.XmlSchemaValidationException&gt; thrown during the validation process.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>-   The default &lt;xref:System.Xml.IXmlLineInfo&gt; object returned by the LineInfoProvider property returns 0 for the &lt;xref:System.Xml.IXmlLineInfo.LineNumber%2A&gt; and &lt;xref:System.Xml.IXmlLineInfo.LinePosition%2A&gt; properties.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.IXmlLineInfo&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Skips validation of the current element content and prepares the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to validate content in the parent element's context.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the SkipToEndElement method.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>-   The SkipToEndElement method skips validation of the current element content and prepares the &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object to validate content in the parent element's context; it is equivalent to skipping validation for all the children of the current element and then calling the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>-   If the current element content is successfully skipped, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; property is set to &lt;xref:System.Xml.Schema.XmlSchemaValidity&gt;.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  No validation errors are reported on skipped content.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set if the current element content is successfully skipped.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The SkipToEndElement method was not called in the correct sequence.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>For example, calling SkipToEndElement after calling SkipToEndElement.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Gets or sets the source URI for the XML node being validated.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The source URI is reported by any &lt;xref:System.Xml.Schema.XmlSchemaValidationException&gt; thrown during the validation process.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>-   If the SourceUri property is not set, the file name for the XML document is &lt;xref:System.String.Empty&gt; in validation error messages.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>A &lt;xref:System.Uri&gt; object representing the source URI for the XML node being validated; the default is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Validates the attribute name, namespace URI, and value in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateAttribute method.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>-   The &lt;xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A&gt; method must be called after validating all the attributes for the current element with the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>-   If an &lt;xref:System.Xml.Schema.XmlSchemaAttribute&gt; object was passed to the &lt;xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A&gt; method, the ValidateAttribute method validates the attribute against the &lt;xref:System.Xml.Schema.XmlSchemaAttribute&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>-   If the attribute is successfully validated in the current element context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaAttribute%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaType%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A&gt;, and &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; properties are set with the results of the validation.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The local name of the attribute to validate.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The namespace URI of the attribute to validate.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The value of the attribute to validate.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set on successful validation of the attribute.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The validated attribute's value.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>The attribute is not valid in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute<ept id="p1">*</ept>&gt; after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>One or more of the parameters specified are <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Validates the attribute name, namespace URI, and value in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateAttribute method.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>-   The &lt;xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A&gt; method must be called after validating all the attributes for the current element with the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>-   If an &lt;xref:System.Xml.Schema.XmlSchemaAttribute&gt; object was passed to the &lt;xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A&gt; method, the ValidateAttribute method validates the attribute against the &lt;xref:System.Xml.Schema.XmlSchemaAttribute&gt; object.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>-   If the attribute is successfully validated in the current element context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaAttribute%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaType%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A&gt;, and &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; properties are set with the results of the validation.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The local name of the attribute to validate.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The namespace URI of the attribute to validate.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlValueGetter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept><bpt id="p2">&lt;xref uid="langword_csharp_delegate" name="delegate" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> used to pass the attribute's value as a Common Language Runtime (CLR) type compatible with the XML Schema Definition Language (XSD) type of the attribute.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set on successful validation of the attribute.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>This parameter and can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The validated attribute's value.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>The attribute is not valid in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute<ept id="p1">*</ept>&gt; after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>One or more of the parameters specified are <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Validates the element in the current context.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateElement method.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>-   If the element name is successfully validated in the current context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.IsNil%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaType%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaElement%2A&gt;, and &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; properties are set with the results of the validation.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>-   If the element name or any of its attributes are invalid the current context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; property is set to &lt;xref:System.Xml.Schema.XmlSchemaValidity&gt;; otherwise the &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; property is set to &lt;xref:System.Xml.Schema.XmlSchemaValidity&gt;.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The local name of the element to validate.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>The namespace URI of the element to validate.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set on successful validation of the element's name.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>The element's name is not valid in the current context.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Validates the element in the current context with the <ph id="ph1">`xsi:Type`</ph>, <ph id="ph2">`xsi:Nil`</ph>, <ph id="ph3">`xsi:SchemaLocation`</ph>, and <ph id="ph4">`xsi:NoNamespaceSchemaLocation`</ph> attribute values specified.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateElement method.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>-   If the element name is successfully validated in the current context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.IsNil%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaType%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.SchemaElement%2A&gt;, and &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; properties are set with the results of the validation.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>-   If the element name or any of its attributes are invalid in the current context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; property is set to &lt;xref:System.Xml.Schema.XmlSchemaValidity&gt;; otherwise the &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; property is set to &lt;xref:System.Xml.Schema.XmlSchemaValidity&gt;.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>-   If the &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; value was not passed as a parameter to the &lt;xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A&gt; constructor, <ph id="ph1">`xsi:SchemaLocation`</ph> and <ph id="ph2">`xsi:NoNamespaceSchemaLocation`</ph> attribute values are ignored.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>The local name of the element to validate.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The namespace URI of the element to validate.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set on successful validation of the element's name.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`xsi:Type`</ph> attribute value of the element.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`xsi:Nil`</ph> attribute value of the element.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`xsi:SchemaLocation`</ph> attribute value of the element.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`xsi:NoNamespaceSchemaLocation`</ph> attribute value of the element.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>The element's name is not valid in the current context.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Verifies if the text content of the element is valid according to its data type for elements with simple content, and verifies if the content of the current element is complete for elements with complex content.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateEndElement method.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>-   For elements with simple content, the ValidateEndElement method verifies that the text content of the element is valid according to its data type and returns the parsed typed value.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>The text content of the element is obtained from the results of previous calls to &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>-   For elements with complex content, the ValidateEndElement method verifies if the content of the current element is complete.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>-   If the element has a default value, the value returned from the ValidateEndElement method is the default value for the element.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>-   If the &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object was constructed with the &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; value as a parameter, the ValidateEndElement method checks the identity constraint rules (if any) that apply to the element.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>-   If the element is successfully validated in the current context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.IsDefault%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A&gt;, and &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; properties are set with the results of the validation.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set on successful validation of the element.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>The parsed, typed text value of the element if the element has simple content.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>The element's content is not valid.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, if the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Verifies if the text content of the element specified is valid according to its data type.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&gt; [!IMPORTANT]</ph> &gt;  If you are validating against the <ph id="ph2">`xs:key`</ph>, <ph id="ph3">`xs:keyref`</ph>, or <ph id="ph4">`xs:unique`</ph> identity constraints, do not use the ValidateEndElement method overload.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Instead, call the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A&gt; method and pass it the value of the element.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Then call the  &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A&gt; method overload, which takes &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; as an argument, to verify that the text content of the element is valid according to its data type.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateEndElement method.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>-   For elements with simple content, the ValidateEndElement method verifies that the text content of the element is valid according to its data type and returns the parsed typed value.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>The text content of the element is obtained from the typed content passed as a parameter.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>-   If calls to the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A&gt; method have been previously made, an &lt;xref:System.InvalidOperationException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>-   If the element has complex content an &lt;xref:System.InvalidOperationException&gt; is thrown.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>-   If the &lt;xref:System.Xml.Schema.XmlSchemaValidator&gt; object was constructed with the &lt;xref:System.Xml.Schema.XmlSchemaValidationFlags&gt; value as a parameter, the ValidateEndElement method checks the identity constraint rules (if any) that apply to the element.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>-   If the element is successfully validated in the current context, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.IsDefault%2A&gt;, &lt;xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A&gt;, and &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; properties are set with the results of the validation.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set on successful validation of the text content of the element.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>The typed text content of the element.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>The parsed, typed simple content of the element.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>The element's text content is not valid.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence (for example, if the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement<bpt id="p2">*</bpt>&gt;), calls to the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText<ept id="p2">*</ept>&gt; method have been previously made, or the element has complex content.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>The typed text content parameter cannot be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>Verifies whether all the required attributes in the element context are present and prepares the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object to validate the child content of the element.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateEndOfAttributes method.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>-   The &lt;xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A&gt; method should always be called before ValidateEndOfAttributes.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>-   The ValidateEndOfAttributes method must be called before proceeding with validation of an element's content.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>-   If all the required attributes in the element context are present, the &lt;xref:System.Xml.Schema.XmlSchemaInfo&gt; object's (if specified) &lt;xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A&gt; property is set to &lt;xref:System.Xml.Schema.XmlSchemaValidity&gt;.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object whose properties are set on successful verification that all the required attributes in the element context are present.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>This parameter can be <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>One or more of the required attributes in the current element context were not found.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>The ValidateEndOfAttributes method was not called in the correct sequence.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>For example, calling ValidateEndOfAttributes after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>One or more of the parameters specified are <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>Validates whether the text <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> specified is allowed in the current element context, and accumulates the text for validation if the current element has simple content.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateText method.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>-   If the element has simple content, the text <ph id="ph1">`string`</ph> specified is concatenated on each call to the ValidateText method until the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A&gt; method is called.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>When the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A&gt; method is called, all the text is validated.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>-   If the element has complex content, no text concatenation occurs.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>A text <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to validate in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>The text <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> specified is not allowed in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>The text <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter cannot be <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Validates whether the text returned by the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlValueGetter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object specified is allowed in the current element context, and accumulates the text for validation if the current element has simple content.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>The following are important notes to consider when using the ValidateText method.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>-   If the element has simple content, the text <ph id="ph1">`string`</ph> specified is concatenated on each call to the ValidateText method until the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A&gt; method is called.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>When the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A&gt; method is called, all the text is validated.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>-   If the element has complex content, no text concatenation occurs.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlValueGetter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept><bpt id="p2">&lt;xref uid="langword_csharp_delegate" name="delegate" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> used to pass the text value as a Common Language Runtime (CLR) type compatible with the XML Schema Definition Language (XSD) type of the attribute.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>The text <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> specified is not allowed in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateText<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>The text <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter cannot be <bpt id="p2">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Validates whether the white space in the <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> specified is allowed in the current element context, and accumulates the white space for validation if the current element has simple content.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>A white space <bpt id="p1">&lt;xref uid="langword_csharp_string" name="string" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to validate in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>White space is not allowed in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, if the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>Validates whether the white space returned by the <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlValueGetter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object specified is allowed in the current element context, and accumulates the white space for validation if the current element has simple content.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlValueGetter"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept><bpt id="p2">&lt;xref uid="langword_csharp_delegate" name="delegate" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> used to pass the white space value as a Common Language Runtime (CLR) type compatible with the XML Schema Definition Language (XSD) type of the attribute.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>White space is not allowed in the current element context.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace<bpt id="p1">*</bpt>&gt; method was not called in the correct sequence. For example, if the &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace<ept id="p1">*</ept>&gt; method is called after calling &lt;xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute*&gt;.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Xml.Schema.ValidationEventHandler"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that receives schema validation warnings and errors encountered during schema validation.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>If no &lt;xref:System.Xml.Schema.ValidationEventHandler&gt; is specified, an &lt;xref:System.Xml.Schema.XmlSchemaValidationException&gt; is thrown for all schema validation errors with an &lt;xref:System.Xml.Schema.XmlSeverityType&gt; value of &lt;xref:System.Xml.Schema.XmlSeverityType&gt;.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Xml.Schema.XmlSchemaValidationException&gt; is not thrown for validation warnings with an &lt;xref:System.Xml.Schema.XmlSeverityType&gt; value of &lt;xref:System.Xml.Schema.XmlSeverityType&gt;.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Gets or sets the object sent as the sender object of a validation event.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>An &lt;xref:System.Object&gt;; the default is this <bpt id="p1">&lt;xref href="System.Xml.Schema.XmlSchemaValidator"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>Sets the <bpt id="p1">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object used to resolve <ph id="ph1">`xs:import`</ph> and <ph id="ph2">`xs:include`</ph> elements as well as <ph id="ph3">`xsi:schemaLocation`</ph> and <ph id="ph4">`xsi:noNamespaceSchemaLocation`</ph> attributes.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">&lt;xref href="System.Xml.XmlResolver"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object; the default is an <bpt id="p2">&lt;xref href="System.Xml.XmlUrlResolver"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
