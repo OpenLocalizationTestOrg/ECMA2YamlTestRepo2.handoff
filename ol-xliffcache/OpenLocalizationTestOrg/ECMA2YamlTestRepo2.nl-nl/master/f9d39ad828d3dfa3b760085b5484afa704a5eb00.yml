@@ -17,7 +17,7 @@ items:
   nameWithType: DistributedFileLogger
   fullName: Microsoft.Build.Logging.DistributedFileLogger
   type: Class
-  summary: "Deze klasse wordt een tekstbestand waarin het build-logboek voor een knooppunt wordt gemaakt."
+  summary: This class creates a text file which will contain the build log for a node.
   syntax:
     content: 'public class DistributedFileLogger : Microsoft.Build.Framework.IForwardingLogger'
   inheritance:
@@ -39,7 +39,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Hiermee maakt u een bestand berichtenlogboek."
+  summary: Creates a file logger.
   syntax:
     content: public DistributedFileLogger ();
     parameters: []
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van een eigenschap die bepaalt hoe een knooppunt berichtenlogboek naar forwards van berichten naar de centrale berichtenlogboek."
+  summary: Gets or sets a property that determines how a node logger to forwards messages to the central logger.
   syntax:
     content: public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }
     return:
       type: Microsoft.Build.Framework.IEventRedirector
-      description: "Retourneert een eigenschap die bepaalt hoe een berichtenlogboek knooppunt naar de doorgestuurde berichten naar de centrale berichtenlogboek."
+      description: Returns a property that determines how a node logger to forwards messages to the central logger.
   overload: Microsoft.Build.Logging.DistributedFileLogger.BuildEventRedirector*
   exceptions: []
   platform:
@@ -81,13 +81,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Initialiseert het logboek met bron van de opgegeven gebeurtenis."
+  summary: Initializes the logger with the given event source.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "De bron van de gebeurtenis."
+      description: The event source.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Initialize*
   exceptions: []
   platform:
@@ -104,16 +104,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Initialiseert het logboek met de opgegeven bron- en knooppunt van het aantal."
+  summary: Initializes the logger with the given event source and node count.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "De bron van de gebeurtenis."
+      description: The event source.
     - id: nodeCount
       type: System.Int32
-      description: "Het aantal knooppunten."
+      description: The node count.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Initialize*
   exceptions: []
   platform:
@@ -130,12 +130,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van de ID van het knooppunt."
+  summary: Gets or sets the ID of the node.
   syntax:
     content: public int NodeId { get; set; }
     return:
       type: System.Int32
-      description: "Retourneert de ID van het knooppunt."
+      description: Returns the ID of the node.
   overload: Microsoft.Build.Logging.DistributedFileLogger.NodeId*
   exceptions: []
   platform:
@@ -152,12 +152,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van een switch waarmee wordt bepaald of de uitvoer van de fouten en waarschuwingen overzicht aan het einde van een build onderdrukken."
+  summary: Gets or sets a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "Retourneert een switch waarmee wordt bepaald of de uitvoer van de fouten en waarschuwingen overzicht aan het einde van een build onderdrukken."
+      description: Returns a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Parameters*
   exceptions: []
   platform:
@@ -174,7 +174,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wordt aangeroepen wanneer de engine voor het samenstellen met dit logboek is voltooid."
+  summary: Called when the build engine is finished with this logger.
   syntax:
     content: public void Shutdown ();
     parameters: []
@@ -194,12 +194,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van het detailniveau in het gebeurtenislogboek kunnen worden weergegeven."
+  summary: Gets or sets the level of detail to show in the event log.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Retourneert het detailniveau in het gebeurtenislogboek kunnen worden weergegeven."
+      description: Returns the level of detail to show in the event log.
   overload: Microsoft.Build.Logging.DistributedFileLogger.Verbosity*
   exceptions: []
   platform:

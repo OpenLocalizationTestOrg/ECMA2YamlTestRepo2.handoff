@@ -18,7 +18,7 @@ items:
   nameWithType: ConfigurableForwardingLogger
   fullName: Microsoft.Build.Logging.ConfigurableForwardingLogger
   type: Class
-  summary: "Hiermee geeft u een logboek waarmee gebeurtenissen worden doorgestuurd naar een centrale berichtenlogboek (bijvoorbeeld ConsoleLogger) die zich op het bovenliggende knooppunt."
+  summary: Represents a logger that forwards events to a central logger (e.g ConsoleLogger) residing on the parent node.
   syntax:
     content: 'public class ConfigurableForwardingLogger : Microsoft.Build.Framework.IForwardingLogger'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Vormt een berichtenlogboek."
+  summary: Constructs a logger.
   syntax:
     content: public ConfigurableForwardingLogger ();
     parameters: []
@@ -60,12 +60,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van een eigenschap die bepaalt hoe een berichtenlogboek knooppunt naar de doorgestuurde berichten naar de centrale berichtenlogboek."
+  summary: Gets or sets a property that determines how a node logger to forwards messages to the central logger.
   syntax:
     content: public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }
     return:
       type: Microsoft.Build.Framework.IEventRedirector
-      description: "Retourneert een eigenschap die bepaalt hoe een berichtenlogboek knooppunt naar de doorgestuurde berichten naar de centrale berichtenlogboek."
+      description: Returns a property that determines how a node logger to forwards messages to the central logger.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.BuildEventRedirector*
   exceptions: []
   platform:
@@ -82,13 +82,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Deze gebeurtenis doorsturen naar de centrale berichtenlogboek."
+  summary: Forward this event to the central logger.
   syntax:
     content: protected virtual void ForwardToCentralLogger (Microsoft.Build.Framework.BuildEventArgs e);
     parameters:
     - id: e
       type: Microsoft.Build.Framework.BuildEventArgs
-      description: "De gebeurtenis moeten worden doorgestuurd."
+      description: The event to be forwarded.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.ForwardToCentralLogger*
   exceptions: []
   platform:
@@ -105,13 +105,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Tekenen van het logboek console om de opgegeven build-gebeurtenissen."
+  summary: Signs up the console logger to log the given build events.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "De bron van de gebeurtenis voor build-gebeurtenissen."
+      description: The event source for build events.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -128,16 +128,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Tekenen van het logboek van de console voor alle bouwen gebeurtenissen."
+  summary: Signs up the console logger for all build events.
   syntax:
     content: public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "De bron van de gebeurtenis voor build-gebeurtenissen."
+      description: The event source for build events.
     - id: nodeCount
       type: System.Int32
-      description: "Het aantal knooppunten.  Niet gebruikt."
+      description: The node count.  Not used.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Initialize*
   exceptions: []
   platform:
@@ -154,12 +154,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van de ID van het knooppunt."
+  summary: Gets or sets the ID of the node.
   syntax:
     content: public int NodeId { get; set; }
     return:
       type: System.Int32
-      description: "Retourneert de ID van het knooppunt."
+      description: Returns the ID of the node.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.NodeId*
   exceptions: []
   platform:
@@ -176,12 +176,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van een switch waarmee wordt bepaald of de uitvoer van de fouten en waarschuwingen overzicht aan het einde van een build onderdrukken."
+  summary: Gets or sets a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "Retourneert een switch waarmee wordt bepaald of de uitvoer van de fouten en waarschuwingen overzicht aan het einde van een build onderdrukken."
+      description: Returns a switch that determines whether to suppress the output of the errors and warnings summary at the end of a build.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Parameters*
   exceptions: []
   platform:
@@ -198,7 +198,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wordt aangeroepen wanneer de engine voor het samenstellen met dit logboek is voltooid."
+  summary: Called when the build engine is finished with this logger.
   syntax:
     content: public virtual void Shutdown ();
     parameters: []
@@ -218,12 +218,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Opgehaald of ingesteld van het detailniveau in het gebeurtenislogboek kunnen worden weergegeven."
+  summary: Gets or sets the level of detail to show in the event log.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Retourneert het detailniveau in het gebeurtenislogboek kunnen worden weergegeven."
+      description: Returns the level of detail to show in the event log.
   overload: Microsoft.Build.Logging.ConfigurableForwardingLogger.Verbosity*
   exceptions: []
   platform:

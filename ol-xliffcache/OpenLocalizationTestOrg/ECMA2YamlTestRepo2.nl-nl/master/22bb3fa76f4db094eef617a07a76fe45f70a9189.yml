@@ -18,8 +18,8 @@ items:
   nameWithType: BuildEventArgs
   fullName: Microsoft.Build.Framework.BuildEventArgs
   type: Class
-  summary: "Biedt gegevens voor de <xref href=&quot;Microsoft.Build.Framework.IEventSource.AnyEventRaised&quot;> </xref> gebeurtenis."
-  remarks: "De klasse BuildEventArgs is een abstracte basisklasse voor alle <xref:Microsoft.Build.Framework>gebeurtenis argument klassen.</xref:Microsoft.Build.Framework>"
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.AnyEventRaised"></xref> event.
+  remarks: The BuildEventArgs class is an abstract base class for all <xref:Microsoft.Build.Framework> event argument classes.
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
   syntax:
@@ -42,8 +42,8 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Framework.BuildEventArgs&quot;> </xref> klasse."
-  remarks: "Deze implementatie van de <xref:Microsoft.Build.Framework.BuildEventArgs>constructor niet parameters nodig heeft, en stelt de <xref:Microsoft.Build.Framework.BuildEventArgs.TimeStamp%2A>eigenschap <xref:System.DateTime.Now%2A>en de <xref:Microsoft.Build.Framework.BuildEventArgs.ThreadId%2A>eigenschap in op de huidige thread.</xref:Microsoft.Build.Framework.BuildEventArgs.ThreadId%2A> </xref:System.DateTime.Now%2A> </xref:Microsoft.Build.Framework.BuildEventArgs.TimeStamp%2A> </xref:Microsoft.Build.Framework.BuildEventArgs>"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildEventArgs"></xref> class.
+  remarks: This implementation of the <xref:Microsoft.Build.Framework.BuildEventArgs> constructor takes no parameters, and sets the <xref:Microsoft.Build.Framework.BuildEventArgs.TimeStamp%2A> property to <xref:System.DateTime.Now%2A> and the <xref:Microsoft.Build.Framework.BuildEventArgs.ThreadId%2A> property to the current thread.
   syntax:
     content: protected BuildEventArgs ();
     parameters: []
@@ -63,19 +63,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Framework.BuildEventArgs&quot;> </xref> klasse met de opgegeven <> </> *>, <> </> *>, en <xref:Microsoft.Build.Framework.BuildEventArgs.SenderName*>waarden.</xref:Microsoft.Build.Framework.BuildEventArgs.SenderName*>"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildEventArgs"></xref> class with the specified <xref:Microsoft.Build.Framework.BuildEventArgs.Message*>, <xref:Microsoft.Build.Framework.BuildEventArgs.HelpKeyword*>, and <xref:Microsoft.Build.Framework.BuildEventArgs.SenderName*> values.
   syntax:
     content: protected BuildEventArgs (string message, string helpKeyword, string senderName);
     parameters:
     - id: message
       type: System.String
-      description: "De tekst van de gebeurtenis."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Het Help-sleutelwoord dat is gekoppeld aan de gebeurtenis."
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "De bron van de gebeurtenis."
+      description: The source of the event.
   overload: Microsoft.Build.Framework.BuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -92,22 +92,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Framework.BuildEventArgs&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildEventArgs"></xref> class.
   syntax:
     content: protected BuildEventArgs (string message, string helpKeyword, string senderName, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: "De tekst van de gebeurtenis."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Het Help-sleutelwoord dat is gekoppeld aan de gebeurtenis."
+      description: The Help keyword associated with the event.
     - id: senderName
       type: System.String
-      description: "De bron van de gebeurtenis."
+      description: The source of the event.
     - id: eventTimestamp
       type: System.DateTime
-      description: "De datum en de tijd om te koppelen aan de gebeurtenis."
+      description: The date and time to associate with the event.
   overload: Microsoft.Build.Framework.BuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -124,12 +124,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Opgehaald of ingesteld van locatie-informatie die contextuele. Dit is gekoppeld aan het vastleggen van gebeurtenissen voor het definiëren van waar ze zich bevinden in relatie tot het proces, engine, project, doel of taak die wordt uitgevoerd."
+  summary: Gets or sets location contextual information. This is attached to logging events to define where they are located in relation to the process, engine, project, target, or task that is executing.
   syntax:
     content: public Microsoft.Build.Framework.BuildEventContext BuildEventContext { get; set; }
     return:
       type: Microsoft.Build.Framework.BuildEventContext
-      description: "Een <xref href=&quot;Microsoft.Build.Framework.BuildEventContext&quot;> </xref> -object dat de locatie-informatie die contextuele vertegenwoordigt."
+      description: A <xref href="Microsoft.Build.Framework.BuildEventContext"></xref> object representing the location contextual information.
   overload: Microsoft.Build.Framework.BuildEventArgs.BuildEventContext*
   exceptions: []
   platform:
@@ -146,12 +146,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hiermee haalt het sleutelwoord Help voor de gebeurtenis."
+  summary: Gets the Help keyword for the event.
   syntax:
     content: public string HelpKeyword { get; }
     return:
       type: System.String
-      description: "Het sleutelwoord Help voor de gebeurtenis."
+      description: The Help keyword for the event.
   overload: Microsoft.Build.Framework.BuildEventArgs.HelpKeyword*
   exceptions: []
   platform:
@@ -168,7 +168,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Haalt het bericht voor de gebeurtenis."
+  summary: Gets the message for the event.
   remarks: ''
   example:
   - "The following example shows how to write a basic logger that responds to build events.  \n  \n [!code-cs[msbuild_BasicLogger#1](~/add/codesnippet/csharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]"
@@ -176,7 +176,7 @@ items:
     content: public virtual string Message { get; protected set; }
     return:
       type: System.String
-      description: "Het bericht voor de gebeurtenis."
+      description: The message for the event.
   overload: Microsoft.Build.Framework.BuildEventArgs.Message*
   exceptions: []
   platform:
@@ -193,12 +193,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hiermee wordt de naam van de <xref:System.Object>verhogen van de gebeurtenis.</xref:System.Object>"
+  summary: Gets the name of the <xref:System.Object> raising the event.
   syntax:
     content: public string SenderName { get; }
     return:
       type: System.String
-      description: "De naam van de <xref:System.Object>verhogen van de gebeurtenis.</xref:System.Object>"
+      description: The name of the <xref:System.Object> raising the event.
   overload: Microsoft.Build.Framework.BuildEventArgs.SenderName*
   exceptions: []
   platform:
@@ -215,12 +215,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hiermee haalt een geheel getal-id voor de thread die is gegenereerd door de gebeurtenis."
+  summary: Gets an integer identifier for the thread that raised the event.
   syntax:
     content: public int ThreadId { get; }
     return:
       type: System.Int32
-      description: "Een geheel getal-id voor de thread die is gegenereerd door de gebeurtenis."
+      description: An integer identifier for the thread that raised the event.
   overload: Microsoft.Build.Framework.BuildEventArgs.ThreadId*
   exceptions: []
   platform:
@@ -237,12 +237,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "De tijd dat de gebeurtenis is voorgevallen als een <xref:System.DateTime>.</xref:System.DateTime> opgehaald"
+  summary: Gets the time the event was raised as a <xref:System.DateTime>.
   syntax:
     content: public DateTime Timestamp { get; }
     return:
       type: System.DateTime
-      description: "De tijd dat de gebeurtenis is voorgevallen als een <xref:System.DateTime>.</xref:System.DateTime>"
+      description: The time the event was raised as a <xref:System.DateTime>.
   overload: Microsoft.Build.Framework.BuildEventArgs.Timestamp*
   exceptions: []
   platform:

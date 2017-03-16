@@ -14,8 +14,8 @@ items:
   nameWithType: TaskCommandLineEventArgs
   fullName: Microsoft.Build.Framework.TaskCommandLineEventArgs
   type: Class
-  summary: "Biedt gegevens voor de <xref href=&quot;Microsoft.Build.Framework.IEventSource.MessageRaised&quot;> </xref> gebeurtenis."
-  remarks: "Breidt het TaskCommandLineEventArgs <xref:Microsoft.Build.Framework.BuildMessageEventArgs>zodat de opdrachtregeltekenreeks gebruikt door een taak voor het uitvoeren van een onderliggende programma kan worden geregistreerd als een bericht.</xref:Microsoft.Build.Framework.BuildMessageEventArgs> Een tekenreeks opdrachtregel logboekregistratie is alleen van toepassing voor taken die een onderliggende programma teruglopen of een shellopdracht emuleren. Taken die u geen gelijkwaardige opdrachtregel hebt moeten deze gebeurtenis uitgebreid bericht niet verhogen."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.MessageRaised"></xref> event.
+  remarks: TaskCommandLineEventArgs extends <xref:Microsoft.Build.Framework.BuildMessageEventArgs> so that the command line string used by a task to execute an underlying program can be logged as a message. Logging a command line string is only relevant for tasks that wrap an underlying program or emulate a shell command. Tasks that have no command line equivalent should not raise this extended message event.
   syntax:
     content: 'public class TaskCommandLineEventArgs : Microsoft.Build.Framework.BuildMessageEventArgs'
   inheritance:
@@ -54,7 +54,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Framework.TaskCommandLineEventArgs&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.TaskCommandLineEventArgs"></xref> class.
   syntax:
     content: protected TaskCommandLineEventArgs ();
     parameters: []
@@ -74,19 +74,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Framework.TaskCommandLineEventArgs&quot;> </xref> klasse met de opgegeven opdrachtregel uitvoeren en <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref>."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.TaskCommandLineEventArgs"></xref> class with the specified command line and <xref href="Microsoft.Build.Framework.MessageImportance"></xref>.
   syntax:
     content: public TaskCommandLineEventArgs (string commandLine, string taskName, Microsoft.Build.Framework.MessageImportance importance);
     parameters:
     - id: commandLine
       type: System.String
-      description: "De opdrachtregel gebruikt door de taak voor de onderliggende programma uit te voeren."
+      description: The command line used by the task to run the underlying program.
     - id: taskName
       type: System.String
-      description: "De naam van de taak verhogen van de gebeurtenis."
+      description: The name of the task raising the event.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "De <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref> van het bericht."
+      description: The <xref href="Microsoft.Build.Framework.MessageImportance"></xref> of the message.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor*
   exceptions: []
   platform:
@@ -103,22 +103,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Framework.TaskCommandLineEventArgs&quot;> </xref> klasse met de opgegeven opdrachtregel taaknaam en <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref>."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.TaskCommandLineEventArgs"></xref> class with the specified command line, task name and <xref href="Microsoft.Build.Framework.MessageImportance"></xref>.
   syntax:
     content: public TaskCommandLineEventArgs (string commandLine, string taskName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);
     parameters:
     - id: commandLine
       type: System.String
-      description: "De opdrachtregel gebruikt door de taak voor de onderliggende programma uit te voeren."
+      description: The command line used by the task to run the underlying program.
     - id: taskName
       type: System.String
-      description: "De naam van de taak verhogen van de gebeurtenis."
+      description: The name of the task raising the event.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "De <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref> van het bericht."
+      description: The <xref href="Microsoft.Build.Framework.MessageImportance"></xref> of the message.
     - id: eventTimestamp
       type: System.DateTime
-      description: "Het tijdstip waarop dat de gebeurtenis is opgetreden."
+      description: The time the event occurred.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor*
   exceptions: []
   platform:
@@ -135,12 +135,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hiermee haalt u de opdrachtregel gebruikt door de taak voor de onderliggende programma uit te voeren."
+  summary: Gets the command line used by the task to run the underlying program.
   syntax:
     content: public string CommandLine { get; }
     return:
       type: System.String
-      description: "De opdrachtregel gebruikt door de taak voor de onderliggende programma uit te voeren."
+      description: The command line used by the task to run the underlying program.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.CommandLine*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Hiermee haalt u de naam van de taak die is gegenereerd door de gebeurtenis."
+  summary: Gets the name of the task that raised the event.
   syntax:
     content: public string TaskName { get; }
     return:
       type: System.String
-      description: "De naam van de taak die is gegenereerd door de gebeurtenis."
+      description: The name of the task that raised the event.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.TaskName*
   exceptions: []
   platform:

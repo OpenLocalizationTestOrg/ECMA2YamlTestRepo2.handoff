@@ -14,7 +14,7 @@ items:
   nameWithType: ProjectTaskInstanceChild
   fullName: Microsoft.Build.Execution.ProjectTaskInstanceChild
   type: Class
-  summary: "Isoleert de basisklasse van de klassen TaskOutputItem en TaskOutputProperty. Hierdoor kunnen ze worden gebruikt in één verzameling."
+  summary: Abstracts the base class for the TaskOutputItem and TaskOutputProperty classes. This allows them to be used in a single collection.
   syntax:
     content: public abstract class ProjectTaskInstanceChild
   inheritance:
@@ -35,7 +35,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Abstracte klassen, kunnen niet worden gemaakt."
+  summary: Abstract classes cannot be instantiated.
   syntax:
     content: protected ProjectTaskInstanceChild ();
     parameters: []
@@ -55,12 +55,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Hiermee haalt u de voorwaarde-kenmerk van deze taak."
+  summary: Gets the Condition attribute of this task.
   syntax:
     content: public abstract string Condition { get; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het probleem. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.Condition*
   exceptions: []
   platform:
@@ -77,12 +77,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "De locatie van het oorspronkelijke probleem kenmerk, indien van toepassing."
+  summary: The location of the original Condition attribute, if any.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van de voorwaarde of null."
+      description: Returns location of the condition, or null.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.ConditionLocation*
   exceptions: []
   platform:
@@ -99,12 +99,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Hiermee haalt u de locatie van het oorspronkelijke element."
+  summary: Gets the location of the original element.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van het oorspronkelijke element."
+      description: Returns the location of the original element.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.Location*
   exceptions: []
   platform:
@@ -121,12 +121,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Hiermee haalt u de locatie van het kenmerk TaskParameter."
+  summary: Gets the location of the TaskParameter attribute.
   syntax:
     content: public abstract Microsoft.Build.Construction.ElementLocation TaskParameterLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie TaskParameter."
+      description: Returns the TaskParameter location.
   overload: Microsoft.Build.Execution.ProjectTaskInstanceChild.TaskParameterLocation*
   exceptions: []
   platform:

@@ -15,8 +15,8 @@ items:
   nameWithType: BuildAbortedException
   fullName: Microsoft.Build.Exceptions.BuildAbortedException
   type: Class
-  summary: "Een uitzondering voor het geval waarbij de build is afgebroken door aanvraag, in tegenstelling tot wordt unceremoniously afgesloten vanwege een ander soort fout uitzondering."
-  remarks: "Als u velden aan deze klasse toevoegen, Voeg een aangepaste serialisatie-constructor en GetObjectData() overschrijven."
+  summary: An exception representing the case where the build was aborted by request, as opposed to being unceremoniously shut down due to another kind of error exception.
+  remarks: If you add fields to this class, add a custom serialization constructor and override GetObjectData().
   syntax:
     content: 'public class BuildAbortedException : Exception'
   inheritance:
@@ -37,7 +37,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Maakt een BuildAborted-uitzondering."
+  summary: Creates a BuildAborted exception.
   syntax:
     content: public BuildAbortedException ();
     parameters: []
@@ -57,13 +57,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Maakt een BuildAborted-uitzondering."
+  summary: Creates a BuildAborted exception.
   syntax:
     content: public BuildAbortedException (string message);
     parameters:
     - id: message
       type: System.String
-      description: "Het foutbericht."
+      description: The error message.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.#ctor*
   exceptions: []
   platform:
@@ -80,16 +80,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Beveiligde constructor gebruikt voor het (de) serialisatie."
+  summary: Protected constructor used for (de)serialization.
   syntax:
     content: protected BuildAbortedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "De foutgegevens."
+      description: The error information.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "De foutcontext."
+      description: The error context.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.#ctor*
   exceptions: []
   platform:
@@ -106,16 +106,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "Vormt een BuildAbortedException met een extra bericht gekoppeld en een interne uitzondering."
+  summary: Constructs a BuildAbortedException with an additional message attached and an inner exception.
   syntax:
     content: public BuildAbortedException (string message, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "Het foutbericht."
+      description: The error message.
     - id: innerException
       type: System.Exception
-      description: "De interne uitzondering."
+      description: The inner exception.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.#ctor*
   exceptions: []
   platform:
@@ -132,12 +132,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "De foutcode (indien aanwezig) dat is gekoppeld aan het uitzonderingsbericht opgehaald."
+  summary: Gets the error code (if any) associated with the exception message.
   syntax:
     content: public string ErrorCode { get; }
     return:
       type: System.String
-      description: "Retourneert de foutcode die een tekenreeks; retourneert een lege tekenreeks als er geen foutcode bestaat."
+      description: Returns the error code as a string; returns a null string if no error code exists.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.ErrorCode*
   exceptions: []
   platform:
@@ -154,16 +154,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Exceptions
-  summary: "ISerializable methode die moet worden vervangen omdat uitzondering deze interface implementeert."
+  summary: ISerializable method which must be overridden because Exception implements this interface.
   syntax:
     content: public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "De foutgegevens."
+      description: The error information.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "De foutcontext."
+      description: The error context.
   overload: Microsoft.Build.Exceptions.BuildAbortedException.GetObjectData*
   exceptions: []
   platform:

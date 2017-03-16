@@ -20,8 +20,8 @@ items:
   nameWithType: Toolset
   fullName: Microsoft.Build.Evaluation.Toolset
   type: Class
-  summary: "Zijn een aggregatie van een versie van hulpprogramma&quot;s (bv. &quot;2.0&quot;), hulpprogramma&quot;s pad en de optionele set van de bijbehorende eigenschappen."
-  remarks: 'Ongedaan maken: (danmose) revisie onveranderbaarheid. Als dit niet onveranderbaar is, voegt u een mechanisme voor het verwittigen van het project verzameling/s die eigenaar is om hun toolsetVersion verhogen.'
+  summary: Represent an aggregation of a tools version (eg. "2.0"), tools path, and optional set of associated properties.
+  remarks: 'UNDONE: (danmose) Review immutability. If this is not immutable, add a mechanism to notify the project collection/s owning it to increment their toolsetVersion.'
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("ToolsVersion={ToolsVersion} ToolsPath={ToolsPath} #Properties={properties.Count}")]
@@ -45,22 +45,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Maakt een toolset met de versie van de opgegeven hulpprogramma&quot;s en het pad van de hulpprogramma&quot;s. Globale, gereserveerd, en eigenschappen van de omgeving zijn overgenomen uit de verzameling bepaald project."
+  summary: Creates a toolset with the given tools version and tools path. Global, reserved, and environment properties are taken from the given project collection.
   syntax:
     content: public Toolset (string toolsVersion, string toolsPath, Microsoft.Build.Evaluation.ProjectCollection projectCollection, string msbuildOverrideTasksPath);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Naam van de toolset"
+      description: Name of the toolset
     - id: toolsPath
       type: System.String
-      description: "Pad naar deze toolset taken en doelen"
+      description: Path to this toolset's tasks and targets
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "De projectverzameling waaruit om de eigenschappen te verkrijgen."
+      description: The project collection from which to obtain the properties.
     - id: msbuildOverrideTasksPath
       type: System.String
-      description: "Het pad naar het msbuild overridetasks bestanden zoeken."
+      description: The path to search for msbuild overridetasks files.
   overload: Microsoft.Build.Evaluation.Toolset.#ctor*
   exceptions: []
   platform:
@@ -77,25 +77,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Maakt een toolset met de versie van bepaalde hulpprogramma&quot;s, hulpprogramma&quot;s voor pad en build-eigenschappen. Globale, gereserveerd, en eigenschappen van de omgeving zijn overgenomen uit de verzameling bepaald project."
+  summary: Creates a toolset with the given tools version, tools path, and build properties. Global, reserved, and environment properties are taken from the given project collection.
   syntax:
     content: public Toolset (string toolsVersion, string toolsPath, System.Collections.Generic.IDictionary<string,string> buildProperties, Microsoft.Build.Evaluation.ProjectCollection projectCollection, string msbuildOverrideTasksPath);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Naam van de toolset"
+      description: Name of the toolset
     - id: toolsPath
       type: System.String
-      description: "Pad naar deze toolset taken en doelen"
+      description: Path to this toolset's tasks and targets
     - id: buildProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Eigenschappen die gekoppeld aan de Toolset worden moeten.       Kan niet null zijn, in welk geval een lege eigenschappengroep wordt gebruikt."
+      description: "Properties that should be associated with the Toolset.  \n  \n May be null, in which case an empty property group will be used."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "De projectverzameling waaruit om de eigenschappen te verkrijgen."
+      description: The project collection from which to obtain the properties.
     - id: msbuildOverrideTasksPath
       type: System.String
-      description: "Het pad naar het msbuild overridetasks bestanden zoeken."
+      description: The path to search for msbuild overridetasks files.
   overload: Microsoft.Build.Evaluation.Toolset.#ctor*
   exceptions: []
   platform:
@@ -112,28 +112,28 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Maakt een toolset met de versie van de opgegeven hulpprogramma&quot;s en het pad van de hulpprogramma&quot;s. Globale, gereserveerd, en eigenschappen van de omgeving zijn overgenomen uit de verzameling bepaald project."
+  summary: Creates a toolset with the given tools version and tools path. Global, reserved, and environment properties are taken from the given project collection.
   syntax:
     content: public Toolset (string toolsVersion, string toolsPath, System.Collections.Generic.IDictionary<string,string> buildProperties, Microsoft.Build.Evaluation.ProjectCollection projectCollection, System.Collections.Generic.IDictionary<string,Microsoft.Build.Evaluation.SubToolset> subToolsets, string msbuildOverrideTasksPath);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Naam van de toolset."
+      description: Name of the toolset.
     - id: toolsPath
       type: System.String
-      description: "Pad naar deze toolset taken en doelen."
+      description: Path to this toolset's tasks and targets.
     - id: buildProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Eigenschappen die gekoppeld aan de Toolset worden moeten.       Kan niet null zijn, in welk geval een lege eigenschappengroep wordt gebruikt."
+      description: "Properties that should be associated with the Toolset.  \n  \n May be null, in which case an empty property group will be used."
     - id: projectCollection
       type: Microsoft.Build.Evaluation.ProjectCollection
-      description: "De projectverzameling waaruit om de eigenschappen te verkrijgen."
+      description: The project collection from which to obtain the properties.
     - id: subToolsets
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Evaluation.SubToolset}
-      description: "De reeks sub toolsets toevoegen aan dit pakket hulpprogramma&quot;s."
+      description: The set of sub toolsets to add to this toolset.
     - id: msbuildOverrideTasksPath
       type: System.String
-      description: "Het pad naar het msbuild overridetasks bestanden zoeken. De reeks sub-toolsets toevoegen aan deze toolset"
+      description: The path to search for msbuild overridetasks files. The set of sub-toolsets to add to this toolset
   overload: Microsoft.Build.Evaluation.Toolset.#ctor*
   exceptions: []
   platform:
@@ -150,13 +150,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Standaard sub toolset versie voor deze toolset opgehaald."
-  remarks: "Als [!INCLUDE[vs_dev10_long](~/add/includes/vs-dev10-long-md.md)] is geïnstalleerd, gebruikt u base toolset en retourneren een sub toolset versie van &quot;10.0&quot;.       Gebruik anders de hoogste samengestelde sub toolset gevonden. Sub toolsets met genummerde versies besteld numeriek; eventuele extra sub toolsets zijn functienaam geplaatst om het begin van de lijst in de volgorde die is gevonden. Retourneert null als er geen toolset sub beschikbaar en [!INCLUDE[vs_dev10_long](~/add/includes/vs-dev10-long-md.md)] is niet geïnstalleerd."
+  summary: Gets the default sub toolset version for this toolset.
+  remarks: "If [!INCLUDE[vs_dev10_long](~/add/includes/vs-dev10-long-md.md)] is installed, use the base toolset and return a sub toolset version of “10.0”.  \n  \n Otherwise, use the highest-versioned sub toolset found. Sub toolsets with numbered versions are ordered numerically; any additional sub toolsets are prepended to the beginning of the list in the order found. Returns null if there is no sub toolset available and [!INCLUDE[vs_dev10_long](~/add/includes/vs-dev10-long-md.md)] is not installed."
   syntax:
     content: public string DefaultSubToolsetVersion { get; }
     return:
       type: System.String
-      description: "Retourneert de standaard sub toolset versie."
+      description: Returns the default sub toolset version.
   overload: Microsoft.Build.Evaluation.Toolset.DefaultSubToolsetVersion*
   exceptions: []
   platform:
@@ -173,14 +173,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "De sub toolset versie moet worden gebruikt met deze toolset maakt."
-  remarks: "Als &quot;VisualStudioVersion&quot; is ingesteld als eigenschap op de toolset zelf, is klikt u vervolgens sub toolset versie ingesteld op &quot;VisualStudioVersion&quot;.       Anders is sub toolset versie ingesteld op de DefaultSubToolsetVersion van de toolset."
+  summary: Creates the sub toolset version to be used with this toolset.
+  remarks: "If “VisualStudioVersion” is set as a property on the toolset itself, then sub toolset version is set to “VisualStudioVersion”.  \n  \n Otherwise, sub toolset version is set to the DefaultSubToolsetVersion of the toolset."
   syntax:
     content: public string GenerateSubToolsetVersion ();
     parameters: []
     return:
       type: System.String
-      description: "Retourneert de sub toolset versie moet worden gebruikt met deze toolset."
+      description: Returns the sub toolset version to be used with this toolset.
   overload: Microsoft.Build.Evaluation.Toolset.GenerateSubToolsetVersion*
   exceptions: []
   platform:
@@ -197,20 +197,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "De sub toolset versie moet worden gebruikt met deze toolset maakt."
-  remarks: "Als de algemene eigenschap in de set met algemene eigenschappen bestaat &quot;VisualStudioVersion&quot; doorgegeven, is sub toolset versie ingesteld op &quot;VisualStudioVersion&quot;.       Anders als &quot;VisualStudioVersion&quot; op de toolset zelf als een eigenschap is ingesteld, is klikt u vervolgens sub toolset versie ingesteld op &quot;VisualStudioVersion&quot;.       Anders, als de versie van Visual Studio overeenkomt met de versie van de oplossing (versie van Visual Studio solution versie: 1 =) Maps doorgegeven aan een bestaande sub-toolset wordt sub toolset versie is ingesteld op de versie van Visual Studio.       Anders is sub toolset versie ingesteld op de DefaultSubToolsetVersion van de toolset."
+  summary: Creates the sub toolset version to be used with this toolset.
+  remarks: "If the “VisualStudioVersion” global property exists in the set of global properties passed in, then sub toolset version is set to “VisualStudioVersion”.  \n  \n Otherwise, if “VisualStudioVersion” is set as a property on the toolset itself, then sub toolset version is set to “VisualStudioVersion”.  \n  \n Otherwise, if the Visual Studio version corresponding to the solution version (Visual Studio version = solution version – 1) passed in maps to an existing sub toolset, then sub toolset version is set to the Visual Studio version.  \n  \n Otherwise, sub toolset version is set to the DefaultSubToolsetVersion of the toolset."
   syntax:
     content: public string GenerateSubToolsetVersion (System.Collections.Generic.IDictionary<string,string> overrideGlobalProperties, int solutionVersion);
     parameters:
     - id: overrideGlobalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Instellen van algemene eigenschappen gebruiken om te maken van het sub toolset versie. Kan niet null zijn."
+      description: Set of global properties to use to create the sub toolset version. May be null.
     - id: solutionVersion
       type: System.Int32
-      description: "De versie van de oplossing moet worden gebruikt voor het maken van het sub toolset versie."
+      description: The solution version to use to create the sub toolset version.
     return:
       type: System.String
-      description: "Berekent het sub toolset versie."
+      description: Returns the sub toolset version.
   overload: Microsoft.Build.Evaluation.Toolset.GenerateSubToolsetVersion*
   exceptions: []
   platform:
@@ -227,20 +227,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hiermee wordt opgegeven door de opgegeven eigenschap naam en het sub toolset versie eigenschap."
-  remarks: "Als de eigenschap niet in de sub-toolset gevonden is, zoekt naar de eigenschap in de basistabel toolset.       Als de eigenschap niet in de toolset sub of de base toolset gevonden is, retourneert null."
+  summary: Gets property specified by the given property name and sub toolset version.
+  remarks: "If the property is not found in the sub toolset, searches for the property in the base toolset.  \n  \n If the property is not found in the sub toolset or the base toolset, returns null."
   syntax:
     content: public Microsoft.Build.Execution.ProjectPropertyInstance GetProperty (string propertyName, string subToolsetVersion);
     parameters:
     - id: propertyName
       type: System.String
-      description: "De naam van de eigenschap."
+      description: The name of the property.
     - id: subToolsetVersion
       type: System.String
-      description: "Sub toolset versie van het sub-toolset. Kan niet null zijn"
+      description: The sub toolset version of the sub toolset. May be null
     return:
       type: Microsoft.Build.Execution.ProjectPropertyInstance
-      description: "Retourneert de eigenschap die is opgegeven, als de service is gevonden, anders retourneert null."
+      description: Returns the property specified, if it is found, otherwise returns null.
   overload: Microsoft.Build.Evaluation.Toolset.GetProperty*
   exceptions: []
   platform:
@@ -257,12 +257,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hiermee haalt u de optionele eigenschappen die zijn gekoppeld aan de toolset."
+  summary: Gets the optional properties associated with the toolset.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Execution.ProjectPropertyInstance> Properties { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Execution.ProjectPropertyInstance}
-      description: "Retourneert de optionele eigenschappen die zijn gekoppeld aan de toolset."
+      description: Returns the optional properties associated with the toolset.
   overload: Microsoft.Build.Evaluation.Toolset.Properties*
   exceptions: []
   platform:
@@ -279,12 +279,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "De reeks sub toolsets die zijn gekoppeld aan deze toolset opgehaald."
+  summary: Gets the set of sub toolsets associated with this toolset.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,Microsoft.Build.Evaluation.SubToolset> SubToolsets { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Evaluation.SubToolset}
-      description: "Retourneert de set met sub toolsets."
+      description: Returns the set of sub toolsets.
   overload: Microsoft.Build.Evaluation.Toolset.SubToolsets*
   exceptions: []
   platform:
@@ -301,13 +301,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hiermee haalt u een pad op naar de taken en de doelen van deze toolset."
-  remarks: "Komt overeen met $(MSBuildToolsPath) in een bestand project of -doelen."
+  summary: Gets a path to the tasks and targets of this toolset.
+  remarks: Corresponds to $(MSBuildToolsPath) in a project or targets file.
   syntax:
     content: public string ToolsPath { get; }
     return:
       type: System.String
-      description: "Retourneert een pad en de taken en de doelen van dit pakket hulpprogramma&quot;s."
+      description: Returns a path to the tasks and targets of this toolset.
   overload: Microsoft.Build.Evaluation.Toolset.ToolsPath*
   exceptions: []
   platform:
@@ -324,12 +324,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hiermee haalt u de naam van deze toolset."
+  summary: Gets the name of this toolset.
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: "Retourneert de naam van dit pakket hulpprogramma&quot;s."
+      description: Returns the name of this toolset.
   overload: Microsoft.Build.Evaluation.Toolset.ToolsVersion*
   exceptions: []
   platform:

@@ -26,7 +26,7 @@ items:
   nameWithType: TrustInfo
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo
   type: Class
-  summary: "Deze klasse vertegenwoordigt de vertrouwensrelatie van toepassing beveiligingsgegevens."
+  summary: This class represents the application security trust information.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -50,7 +50,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo"></xref> class.
   syntax:
     content: public TrustInfo ();
     parameters: []
@@ -70,7 +70,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Stelt de <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo&quot;> </xref> object in de oorspronkelijke staat van volledig vertrouwen."
+  summary: Resets the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo"></xref> object to its default state of full trust.
   syntax:
     content: public void Clear ();
     parameters: []
@@ -90,13 +90,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Bepaalt of de toepassing toestemming om aan te roepen onbeheerde code heeft."
-  remarks: "&quot;Application&quot; verwijst naar de toepassing waarvoor het manifest wordt gelezen. U kunt de implementatie-manifest of <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> lezen"
+  summary: Determines whether the application has permission to call unmanaged code.
+  remarks: "\"Application\" refers to the application for which the manifest is being read. You can read the deployment manifest using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> or <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>."
   syntax:
     content: public bool HasUnmanagedCodePermission { get; }
     return:
       type: System.Boolean
-      description: "Een Booleaanse waarde die aangeeft of de toepassing is gemachtigd om aan te roepen onbeheerde code."
+      description: A Boolean value indicating whether the application has permission to call unmanaged code.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.HasUnmanagedCodePermission*
   exceptions: []
   platform:
@@ -113,13 +113,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Bepaalt of de toepassing volledig vertrouwen of gedeeltelijk vertrouwen is."
-  remarks: "&quot;Application&quot; verwijst naar de toepassing waarvoor het manifest wordt gelezen. U kunt de implementatie-manifest of <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> lezen"
+  summary: Determines whether the application is full trust or partial trust.
+  remarks: "\"Application\" refers to the application for which the manifest is being read. You can read the deployment manifest using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> or <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>."
   syntax:
     content: public bool IsFullTrust { get; set; }
     return:
       type: System.Boolean
-      description: "Een Booleaanse waarde die aangeeft of de toepassing volledig vertrouwen of gedeeltelijk vertrouwen."
+      description: A Boolean value indicating whether the application is full trust or partial trust.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust*
   exceptions: []
   platform:
@@ -136,12 +136,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Opgehaald of ingesteld van het object machtigingen instellen voor de vertrouwensrelatie van toepassing."
+  summary: Gets or sets the permission set object for the application trust.
   syntax:
     content: public System.Security.PermissionSet PermissionSet { get; set; }
     return:
       type: System.Security.PermissionSet
-      description: "Een object PermissionSet voor het toepassingsvertrouwen."
+      description: A PermissionSet object for the application trust.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet*
   exceptions: []
   platform:
@@ -158,13 +158,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Opgehaald of ingesteld of gedeeltelijk vertrouwen machtiging behouden wanneer de vlag volledig vertrouwen is ingesteld."
-  remarks: "Normaal gesproken wanneer <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A>is ingesteld op `True`, alle machtigingsinstellingen worden verwijderd.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> Als u wilt dat deze instellingen behouden (doorgaans tijdens ontwerptijd), u kunt contact opnemen met deze methode om te blijven behouden de machtiging instellingen ook wanneer <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A>is ingesteld op `True`.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A>       `PreserveFullTrustPermissionSet`moet niet worden ingesteld op `True` voor ClickOnce implementaties omdat dit is in strijd met ClickOnce schemavereisten.       Als deze eigenschap is ingesteld op `False` met volledig vertrouwen is opgegeven, klikt u vervolgens de machtigingen die zijn gedefinieerd in de machtiging set object wordt verwijderd bij het opslaan."
+  summary: Gets or sets whether to preserve partial trust permission when the full trust flag is set.
+  remarks: "Normally when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> is set to `True`, all permission settings are deleted. If you want to preserve these settings (typically during design time), you can call this method to persist the permission settings even when <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> is set to `True`.  \n  \n `PreserveFullTrustPermissionSet` should not be set to `True` for ClickOnce deployments because this violates ClickOnce schema requirements.  \n  \n If this property is set to `False` with full trust specified, then any permissions defined in the permission set object will be dropped on save."
   syntax:
     content: public bool PreserveFullTrustPermissionSet { get; set; }
     return:
       type: System.Boolean
-      description: "Een Booleaanse waarde die aangeeft of gedeeltelijk vertrouwen machtiging behouden wanneer de vlag volledig vertrouwen is ingesteld."
+      description: A Boolean value indicating whether to preserve partial trust permission when the full trust flag is set.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PreserveFullTrustPermissionSet*
   exceptions: []
   platform:
@@ -181,14 +181,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Leest het toepassingsvertrouwen van een XML-bestand."
-  remarks: "De gegevensstroom, mogen alleen een \\<TrustInfo > sectie en geen andere gegevens."
+  summary: Reads the application trust from an XML file.
+  remarks: The data stream must contain only a \<TrustInfo> section and no other data.
   syntax:
     content: public void Read (System.IO.Stream input);
     parameters:
     - id: input
       type: System.IO.Stream
-      description: "Hiermee geeft u een invoerstroom."
+      description: Specifies an input stream.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read*
   exceptions: []
   platform:
@@ -205,14 +205,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Leest het toepassingsvertrouwen van een XML-bestand."
-  remarks: "De opgegeven tekenreeks, mogen alleen een \\<TrustInfo > sectie en geen andere gegevens."
+  summary: Reads the application trust from an XML file.
+  remarks: The specified string must contain only a \<TrustInfo> section and no other data.
   syntax:
     content: public void Read (string path);
     parameters:
     - id: path
       type: System.String
-      description: "De naam van het invoerbestand."
+      description: The name of the input file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read*
   exceptions: []
   platform:
@@ -229,13 +229,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Leest het toepassingsvertrouwen uit een manifest van de ClickOnce-toepassing."
+  summary: Reads the application trust from a ClickOnce application manifest.
   syntax:
     content: public void ReadManifest (System.IO.Stream input);
     parameters:
     - id: input
       type: System.IO.Stream
-      description: "Hiermee geeft u een invoerstroom."
+      description: Specifies an input stream.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*
   exceptions: []
   platform:
@@ -252,13 +252,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Leest het toepassingsvertrouwen uit een manifest van de ClickOnce-toepassing."
+  summary: Reads the application trust from a ClickOnce application manifest.
   syntax:
     content: public void ReadManifest (string path);
     parameters:
     - id: path
       type: System.String
-      description: "De naam van het invoerbestand."
+      description: The name of the input file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*
   exceptions: []
   platform:
@@ -275,13 +275,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Opgehaald of ingesteld van het niveau van dezelfde sitetoegang toegestaan, opgeven of de toepassing is gemachtigd om te communiceren met de server van waaruit het werd geïmplementeerd."
-  remarks: "&quot;Application&quot; verwijst naar de toepassing waarvoor het manifest wordt gelezen. U kunt de implementatie-manifest of <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> </xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> lezen"
+  summary: Gets or sets the level of same site access permitted, specifying whether the application has permission to communicate with the server from which it was deployed.
+  remarks: "\"Application\" refers to the application for which the manifest is being read. You can read the deployment manifest using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> or <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>."
   syntax:
     content: public string SameSiteAccess { get; set; }
     return:
       type: System.String
-      description: "Een tekenreeks die wijzen op het niveau van toegang tot dezelfde site toegestaan. De waarden die kunnen worden <xref uid=&quot;langword_csharp_site&quot; name=&quot;site&quot; href=&quot;&quot;> </xref> of <xref uid=&quot;langword_csharp_none&quot; name=&quot;none&quot; href=&quot;&quot;> </xref>.       <xref uid=&quot;langword_csharp_site&quot; name=&quot;site&quot; href=&quot;&quot;></xref>Geeft aan dat de toepassing webservices op de dezelfde URL waaruit het werd geïmplementeerd oproepen kan; Als van een share hebt geïmplementeerd, is de toepassing toestemming om bestanden te lezen van deze share.       <xref uid=&quot;langword_csharp_none&quot; name=&quot;none&quot; href=&quot;&quot;></xref>Hiermee geeft u op of de toepassing geen toegang hebt tot webservices van dezelfde URL waaruit deze is geïmplementeerd, en evenmin toegang krijgen tot bestanden van de share van waaruit het werd geïmplementeerd.       &quot;Application&quot; verwijst naar de toepassing waarvoor het manifest wordt gelezen (met behulp van <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*>).</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*>"
+      description: "A string indicating the level of same site access permitted. The values can be <xref uid=\"langword_csharp_site\" name=\"site\" href=\"\"></xref> or <xref uid=\"langword_csharp_none\" name=\"none\" href=\"\"></xref>.  \n  \n <xref uid=\"langword_csharp_site\" name=\"site\" href=\"\"></xref> specifies that the application can call Web services at the same URL from which it was deployed; if deployed from a share, the application has permission to read files from that share.  \n  \n <xref uid=\"langword_csharp_none\" name=\"none\" href=\"\"></xref> specifies that the application can neither access Web services from the same URL from which it was deployed, nor access files from the share from which it was deployed.  \n  \n \"Application\" refers to the application for which the manifest is being read (using <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest*>)."
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.SameSiteAccess*
   exceptions: []
   platform:
@@ -298,13 +298,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Retourneert de informatie in het toepassingsobject security-vertrouwensrelatie als een tekenreeks."
+  summary: Returns all the information in the application security trust object as a string.
   syntax:
     content: public override string ToString ();
     parameters: []
     return:
       type: System.String
-      description: "Een tekenreeks met de informatie in het toepassingsobject voor het vertrouwen van beveiliging."
+      description: A string containing the information in the application security trust object.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ToString*
   exceptions: []
   platform:
@@ -321,14 +321,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Schrijft het toepassingsvertrouwen in een XML-bestand."
+  summary: Writes the application trust to an XML file.
   remarks: "This method updates only the \\<TrustInfo> section in a file containing only the \\<TrustInfo> section and nothing else.  \n  \n The specified stream must contain only a \\<TrustInfo> section and no other data."
   syntax:
     content: public void Write (System.IO.Stream output);
     parameters:
     - id: output
       type: System.IO.Stream
-      description: "Hiermee geeft u een uitvoerstroom."
+      description: Specifies an output stream.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write*
   exceptions: []
   platform:
@@ -345,14 +345,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Schrijft het toepassingsvertrouwen in een XML-bestand."
+  summary: Writes the application trust to an XML file.
   remarks: "This method updates only the \\<TrustInfo> section in a file containing only the \\<TrustInfo> section and nothing else.  \n  \n The specified string must contain only a \\<TrustInfo> section and no other data."
   syntax:
     content: public void Write (string path);
     parameters:
     - id: path
       type: System.String
-      description: "De naam van het uitvoerbestand."
+      description: The name of the output file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write*
   exceptions: []
   platform:
@@ -369,14 +369,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Schrijft het toepassingsvertrouwen naar een nieuwe sjabloon ClickOnce-toepassingsmanifest."
-  remarks: "Deze methode werkt alleen de \\<TrustInfo > sectie in een bestand met alleen de site op het hoogste manifest header, de \\<TrustInfo > sectie, maar niets anders."
+  summary: Writes the application trust to a new template ClickOnce application manifest.
+  remarks: This method updates only the \<TrustInfo> section in a file containing only the top-level manifest header, the \<TrustInfo> section, and nothing else.
   syntax:
     content: public void WriteManifest (System.IO.Stream output);
     parameters:
     - id: output
       type: System.IO.Stream
-      description: "Hiermee geeft u een uitvoerstroom waarnaar u de bijgewerkte manifestbestand schrijven."
+      description: Specifies an output stream to which to write the updated manifest file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest*
   exceptions: []
   platform:
@@ -393,14 +393,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Schrijft het toepassingsvertrouwen in een manifest van de ClickOnce-toepassing."
+  summary: Writes the application trust to a ClickOnce application manifest.
   remarks: "This method updates only the \\<TrustInfo> section in a file containing only the top-level manifest header, the \\<TrustInfo> section, and nothing else.  \n  \n This overload of the method will update the file in place (that is, the input file is the same as the output file). If the file exists, the trust section will be updated. If the file does not exist, a new template manifest with the specified trust will be created."
   syntax:
     content: public void WriteManifest (string path);
     parameters:
     - id: path
       type: System.String
-      description: "De naam van het uitvoerbestand."
+      description: The name of the output file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest*
   exceptions: []
   platform:
@@ -417,17 +417,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Een bestaande ClickOnce-toepassingsmanifest bijgewerkt met de opgegeven vertrouwensrelatie."
-  remarks: "Deze methode werkt alleen de \\<TrustInfo > sectie in een bestand met alleen de site op het hoogste manifest header, de \\<TrustInfo > sectie, maar niets anders."
+  summary: Updates an existing ClickOnce application manifest with the specified trust.
+  remarks: This method updates only the \<TrustInfo> section in a file containing only the top-level manifest header, the \<TrustInfo> section, and nothing else.
   syntax:
     content: public void WriteManifest (System.IO.Stream input, System.IO.Stream output);
     parameters:
     - id: input
       type: System.IO.Stream
-      description: "Hiermee geeft u een invoer-stream met het manifest worden bijgewerkt."
+      description: Specifies an input stream containing the manifest to be updated.
     - id: output
       type: System.IO.Stream
-      description: "Hiermee geeft u een uitvoerstroom waarnaar u de bijgewerkte manifestbestand schrijven."
+      description: Specifies an output stream to which to write the updated manifest file.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest*
   exceptions: []
   platform:

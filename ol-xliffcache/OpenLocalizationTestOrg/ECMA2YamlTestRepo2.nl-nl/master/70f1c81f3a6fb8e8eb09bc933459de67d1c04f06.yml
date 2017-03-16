@@ -19,7 +19,7 @@ items:
   nameWithType: ProjectElement
   fullName: Microsoft.Build.Construction.ProjectElement
   type: Class
-  summary: "Abstracte basisklasse voor MSBuild bouw object modelelementen."
+  summary: Abstract base class for MSBuild construction object model elements.
   syntax:
     content: public abstract class ProjectElement
   inheritance:
@@ -40,12 +40,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Bovenliggende elementen van dit element, tot de ProjectRootElement gaan.       Geen als dit een ProjectRootElement is.       Geen als dit is niet is gekoppeld aan een bovenliggend item."
+  summary: "All parent elements of this element, going up to the ProjectRootElement.  \n  \n None if this is a ProjectRootElement.  \n  \n None if this has not been attached to a parent yet."
   syntax:
     content: public System.Collections.Generic.IEnumerable<Microsoft.Build.Construction.ProjectElementContainer> AllParents { get; }
     return:
       type: System.Collections.Generic.IEnumerable{Microsoft.Build.Construction.ProjectElementContainer}
-      description: "Retourneert een enumerator over alle bovenliggende elementen. Er zijn geen elementen ouders als het element project een ProjectRootElement of als dit nog niet is gekoppeld aan een bovenliggend element."
+      description: Returns an enumerator over all parent elements. There are no parents elements if the project element is a ProjectRootElement or if this is not yet attached to a parent element.
   overload: Microsoft.Build.Construction.ProjectElement.AllParents*
   exceptions: []
   platform:
@@ -62,13 +62,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Waarde opgehaald of ingesteld de voorwaarde.       Lege tekenreeks IFF een voorwaardekenmerk is geldig maar is niet aanwezig of heeft geen waarde wordt geretourneerd.       Null IFF een voorwaardekenmerk is niet toegestaan op dat element wordt geretourneerd.       Hiermee verwijdert u het kenmerk als de waarde in te stellen leeg is.       Het is mogelijk afgeleide klassen om een <xref:System.InvalidOperationException>Als de voorwaarde niet van toepassing op deze elementen is.</xref:System.InvalidOperationException>"
-  remarks: "Hiermee verwijdert u het kenmerk voorwaarde als de waarde in te stellen is ingesteld op null of een lege tekenreeks. Als de voorwaarde-kenmerk niet aanwezig is, retourneert een lege tekenreeks in plaats van een uitzondering opgetreden omdat een niet-bestaande voorwaarde is impliciet geldt voor het element &quot;ProjectExtensions&quot;, de getter null retourneert en de setter een uitzondering voor elke waarde genereert."
+  summary: "Gets or sets the Condition value.  \n  \n It will return empty string IFF a condition attribute is legal but it’s not present or has no value.  \n  \n It will return null IFF a Condition attribute is illegal on that element.  \n  \n Removes the attribute if the value to set is empty.  \n  \n It is possible for derived classes to throw an <xref:System.InvalidOperationException> if setting the condition is not applicable for those elements."
+  remarks: "Removes the Condition attribute if the value to set is set to null or an empty string. If the Condition attribute is not present, returns an empty string instead of throwing an exception because a nonexistent condition is implicitly true  \n  \n For the \"ProjectExtensions\" element, the getter returns null and the setter throws an exception for any value."
   syntax:
     content: public virtual string Condition { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het probleem. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectElement.Condition*
   exceptions: []
   platform:
@@ -85,12 +85,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk &quot;Voorwaarde&quot; van dit element, indien van toepassing.       Als er kenmerk is niet aanwezig is, retourneert null."
+  summary: "Location of the \"Condition\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null."
   syntax:
     content: public virtual Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectElement.ConditionLocation*
   exceptions: []
   platform:
@@ -107,12 +107,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "ProjectRootElement (mogelijk geïmporteerd) die deze XML-code bevat.       Kan niet null zijn."
+  summary: "ProjectRootElement (possibly imported) that contains this Xml.  \n  \n Cannot be null."
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement ContainingProject { get; }
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retourneert het project hoofdcontainer die dit project bevat."
+      description: Returns the project root container that contains this project.
   overload: Microsoft.Build.Construction.ProjectElement.ContainingProject*
   exceptions: []
   platform:
@@ -129,13 +129,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de waarde voor het Label.       Resultaat een lege tekenreeks als dit niet aanwezig is.       Hiermee verwijdert u het kenmerk als de waarde in te stellen leeg is."
-  remarks: "Hiermee verwijdert u het kenmerk als de waarde in te stellen leeg is."
+  summary: "Gets or sets the Label value.  \n  \n Returns empty string if it is not present.  \n  \n Removes the attribute if the value to set is empty."
+  remarks: Removes the attribute if the value to set is empty.
   syntax:
     content: public string Label { get; set; }
     return:
       type: System.String
-      description: "Retourneert het label. Retourneert een lege tekenreeks als er geen label aanwezig is."
+      description: Returns the label. Returns an empty string if no label is present.
   overload: Microsoft.Build.Construction.ProjectElement.Label*
   exceptions: []
   platform:
@@ -152,12 +152,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk &quot;Label&quot; van dit element, indien van toepassing.       Als er kenmerk is niet aanwezig is, retourneert null."
+  summary: "Location of the \"Label\" attribute on this element, if any.  \n  \n If there is no such attribute, returns null;"
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation LabelLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectElement.LabelLocation*
   exceptions: []
   platform:
@@ -174,12 +174,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van de bijbehorende XML-element.       Mogelijk niet juist als bestand niet opgeslagen of het bestand is bewerkt omdat het laatst is opgeslagen.       In het geval van een niet-opgeslagen bewerking wordt alleen bevat het pad naar het bestand dat afkomstig van het element de locatie."
+  summary: "Location of the corresponding Xml element.  \n  \n May not be correct if file is not saved, or file has been edited since it was last saved.  \n  \n In the case of an unsaved edit, the location only contains the path to the file that the element originates from."
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectElement.Location*
   exceptions: []
   platform:
@@ -196,12 +196,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Volgende element.       Kan niet null zijn."
+  summary: "Next sibling element.  \n  \n May be null."
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement NextSibling { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Retourneert het volgende lid op hetzelfde niveau van dit project-element. Retourneert null als er geen volgende lid op hetzelfde niveau bestaat."
+      description: Returns the next sibling of this project element. Returns null if no next sibling exists.
   overload: Microsoft.Build.Construction.ProjectElement.NextSibling*
   exceptions: []
   platform:
@@ -218,13 +218,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Als dit een ProjectRootElement is null.       Null als deze is nog niet gekoppeld aan een bovenliggend item."
-  remarks: "Bovenliggende mag alleen worden ingesteld door ProjectElementContainer."
+  summary: "Null if this is a ProjectRootElement.  \n  \n Null if this has not been attached to a parent yet."
+  remarks: Parent should only be set by ProjectElementContainer.
   syntax:
     content: public Microsoft.Build.Construction.ProjectElementContainer Parent { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElementContainer
-      description: "Retourneert de project-element-container die dit project bevat."
+      description: Returns the project element container that contains this project.
   overload: Microsoft.Build.Construction.ProjectElement.Parent*
   exceptions: []
   platform:
@@ -241,12 +241,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Vorige element.       Kan niet null zijn."
+  summary: "Previous sibling element.  \n  \n May be null."
   syntax:
     content: public Microsoft.Build.Construction.ProjectElement PreviousSibling { get; }
     return:
       type: Microsoft.Build.Construction.ProjectElement
-      description: "Retourneert het vorige lid op hetzelfde niveau van dit project-element. Retourneert null als er geen vorige lid op hetzelfde niveau bestaat."
+      description: Returns the previous sibling of this project element. Returns null if no previous sibling exists.
   overload: Microsoft.Build.Construction.ProjectElement.PreviousSibling*
   exceptions: []
   platform:

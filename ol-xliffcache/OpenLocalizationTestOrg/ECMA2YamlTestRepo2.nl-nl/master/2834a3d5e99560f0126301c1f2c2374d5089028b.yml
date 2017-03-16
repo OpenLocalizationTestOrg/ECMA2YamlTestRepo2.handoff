@@ -35,7 +35,7 @@ items:
   nameWithType: Exec
   fullName: Microsoft.Build.Tasks.Exec
   type: Class
-  summary: "Implementeert de `Exec` taak. Gebruik de `Exec` element in het projectbestand maken en deze taak niet uitvoeren. Zie voor informatie en de parameter [Exec taak](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `Exec` task. Use the `Exec` element in your project file to create and execute this task. For usage and parameter information, see [Exec Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class Exec : Microsoft.Build.Tasks.ToolTaskExtension'
   inheritance:
@@ -100,7 +100,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.Exec&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Exec"></xref> class.
   syntax:
     content: public Exec ();
     parameters: []
@@ -120,13 +120,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Genereert opdrachtregelargumenten met het opdrachtregelprogramma moet rechtstreeks vanaf de opdrachtregel te gebruiken en niet vanuit een antwoordbestand."
+  summary: Generates command line arguments that the command line tool must run directly from the command line and not from a response file.
   syntax:
     content: protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "Opdrachtregel builder argumenten voor toevoegen."
+      description: Command line builder to add arguments to.
   overload: Microsoft.Build.Tasks.Exec.AddCommandLineCommands*
   exceptions: []
   platform:
@@ -143,13 +143,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de opdracht om uit te voeren."
-  remarks: "De opdracht om uit te voeren kan een systeemopdracht, zoals %{attrib/ of een uitvoerbaar bestand, zoals program.exe zijn."
+  summary: Gets or sets the command to run.
+  remarks: The command to run can be a system command, such as attrib, or an executable, such as program.exe.
   syntax:
     content: public string Command { get; set; }
     return:
       type: System.String
-      description: "De opdracht om uit te voeren."
+      description: The command to run.
   overload: Microsoft.Build.Tasks.Exec.Command*
   exceptions: []
   platform:
@@ -166,12 +166,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Retourneert de uitvoer als een Item. Witruimte is verwijderd.       ConsoleOutput wordt ingeschakeld als ConsoleToMSBuild ingesteld op true is. Dit voorkomt dat bevat regels in het geheugen als ze niet worden gebruikt. ConsoleOutput is een combinatie van stdout en stderr."
+  summary: "Returns the output as an Item. Whitespace is trimmed.  \n  \n ConsoleOutput is enabled when ConsoleToMSBuild is true. This avoids holding lines in memory if they aren't used. ConsoleOutput is a combination of stdout and stderr."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ConsoleOutput { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Returns <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Framework.ITaskItem"></xref>.
   overload: Microsoft.Build.Tasks.Exec.ConsoleOutput*
   exceptions: []
   platform:
@@ -188,12 +188,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Schakel de standaarduitvoer naar pipe aan een item. (StandardOutput)."
+  summary: Enable the standard output to pipe to an item. (StandardOutput).
   syntax:
     content: public bool ConsoleToMSBuild { get; set; }
     return:
       type: System.Boolean
-      description: "Retourneert <xref:System.Boolean>.</xref:System.Boolean>"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Tasks.Exec.ConsoleToMSBuild*
   exceptions: []
   platform:
@@ -210,13 +210,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een reguliere expressie te herkennen foutregels in de uitvoer van het hulpprogramma."
-  remarks: "Deze eigenschap is nuttig voor hulpprogramma&quot;s die ongebruikelijk opgemaakte uitvoer te produceren."
+  summary: Gets or sets a regular expression to spot error lines in the tool output.
+  remarks: This property is useful for tools that produce unusually formatted output.
   syntax:
     content: public string CustomErrorRegularExpression { get; set; }
     return:
       type: System.String
-      description: "Een reguliere expressie te herkennen foutregels in de uitvoer van het hulpprogramma."
+      description: A regular expression to spot error lines in the tool output.
   overload: Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression*
   exceptions: []
   platform:
@@ -233,13 +233,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een reguliere expressie te herkennen waarschuwing regels in de uitvoer van het hulpprogramma."
-  remarks: "Deze eigenschap is nuttig voor hulpprogramma&quot;s die ongebruikelijk opgemaakte uitvoer te produceren."
+  summary: Gets or sets a regular expression to spot warning lines in the tool output.
+  remarks: This property is useful for tools that produce unusually formatted output.
   syntax:
     content: public string CustomWarningRegularExpression { get; set; }
     return:
       type: System.String
-      description: "Een reguliere expressie te herkennen waarschuwing regels in de uitvoer van het hulpprogramma."
+      description: A regular expression to spot warning lines in the tool output.
   overload: Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression*
   exceptions: []
   platform:
@@ -256,23 +256,23 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Het hulpprogramma cmd.exe wordt uitgevoerd, wacht tot de voltooiing en het batchbestand opgeschoond nadat de uitvoering is voltooid."
-  remarks: "Als er fouten zijn geregistreerd en het hulpprogramma heeft een afsluitcode die gelijk is aan nul, stelt deze methode de afsluitcode op-1."
+  summary: Executes the cmd.exe tool, waits for its completion, and cleans up the batch file after execution completes.
+  remarks: If errors were logged and the tool has an exit code of zero, then this method sets the exit code to -1.
   syntax:
     content: protected override int ExecuteTool (string pathToTool, string responseFileCommands, string commandLineCommands);
     parameters:
     - id: pathToTool
       type: System.String
-      description: "Het pad naar het hulpprogramma uit te voeren."
+      description: The path to the tool to execute.
     - id: responseFileCommands
       type: System.String
-      description: "Opdrachtregelargumenten die naar een tijdelijke responsbestand moeten gaan."
+      description: Command line arguments that should go into a temporary response file.
     - id: commandLineCommands
       type: System.String
-      description: "Opdrachtregelargumenten die moeten worden doorgegeven aan het hulpprogramma rechtstreeks."
+      description: Command line arguments that should be passed to the tool directly.
     return:
       type: System.Int32
-      description: "De afsluitcode dat wordt geretourneerd door het hulpprogramma."
+      description: The exit code that the tool returns.
   overload: Microsoft.Build.Tasks.Exec.ExecuteTool*
   exceptions: []
   platform:
@@ -289,13 +289,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Retourneert het volledige pad naar het hulpprogramma system cmd.exe."
+  summary: Returns the full path to the system tool cmd.exe.
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: "Het volledige pad naar het hulpprogramma system cmd.exe."
+      description: The full path to the system tool cmd.exe.
   overload: Microsoft.Build.Tasks.Exec.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -312,14 +312,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Retourneert de werkmap moet worden gebruikt voor het proces van het hulpprogramma."
-  remarks: "Als de werkmap UNC is, retourneert de bestandssysteempad % SystemRoot%\\System32."
+  summary: Returns the working directory to use for the tool process.
+  remarks: If the working directory is UNC, returns the system path %SystemRoot%\System32.
   syntax:
     content: protected override string GetWorkingDirectory ();
     parameters: []
     return:
       type: System.String
-      description: "De werkmap moet worden gebruikt voor het proces van het hulpprogramma."
+      description: The working directory to use for the tool process.
   overload: Microsoft.Build.Tasks.Exec.GetWorkingDirectory*
   exceptions: []
   platform:
@@ -336,14 +336,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Foutbericht logboeken en -ingangen afsluitcode."
-  remarks: "Deze methode wordt alleen worden aangeroepen met een niet-nul afsluitcode."
+  summary: Logs error message and handles exit code.
+  remarks: This method will only be called with a non-zero exit code.
   syntax:
     content: protected override bool HandleTaskExecutionErrors ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de afsluitcode is genegeerd. anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if exit code was ignored; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Exec.HandleTaskExecutionErrors*
   exceptions: []
   platform:
@@ -360,12 +360,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de `Exec` taak moet de afsluitcode geleverd door de uitgevoerde opdracht negeren (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) of moet retourneren <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> als de uitgevoerde opdracht een afsluitcode die niet nul retourneert (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
+  summary: Gets or sets a Boolean value that indicates whether the `Exec` task should ignore the exit code provided by the executed command (<xref uid="langword_csharp_true" name="true" href=""></xref>) or should return <xref uid="langword_csharp_false" name="false" href=""></xref> if the executed command returns a non-zero exit code (<xref uid="langword_csharp_false" name="false" href=""></xref>).
   syntax:
     content: public bool IgnoreExitCode { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Exec` taak moet de afsluitcode geleverd door de uitgevoerde opdracht; negeren <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> als de `Exec` taak moet retourneren <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> als de uitgevoerde opdracht een afsluitcode die niet gelijk aan nul retourneert."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Exec` task should ignore the exit code provided by the executed command; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `Exec` task should return <xref uid="langword_csharp_false" name="false" href=""></xref> if the executed command returns a non-zero exit code.
   overload: Microsoft.Build.Tasks.Exec.IgnoreExitCode*
   exceptions: []
   platform:
@@ -382,13 +382,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de standaardfout en waarschuwing indeling en logboekbestanden fouten en waarschuwingen uit de uitvoer als gewone berichten negeren."
-  remarks: "De standaardwaarde is `false`."
+  summary: Gets or sets a Boolean value that indicates whether to ignore the standard error and warning format and log errors and warnings from the output as regular messages.
+  remarks: The default value is `false`.
   syntax:
     content: public bool IgnoreStandardErrorWarningFormat { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Exec` taak moet de standaardfout en de indeling van de waarschuwing negeren en logbestand fouten en waarschuwingen als gewone berichten; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> als de `Exec` taak logbestand de fouten en waarschuwingen die overeenkomen met de standaardfout en de indeling van de waarschuwing."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Exec` task should ignore the standard error and warning format and should log errors and warnings as regular messages; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `Exec` task should log the errors and warnings that match the standard error and warning format.
   overload: Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*
   exceptions: []
   platform:
@@ -405,16 +405,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "De opgegeven één regel tekst zich aanmeldt als een fout of waarschuwing als de regel aangepast of standaardfout en indelingen van de waarschuwing overeenkomende of als een reguliere bericht als <xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*>is ingesteld op <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> en geen aangepaste notatie overeenkomende.</xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*>"
+  summary: Logs the specified single line of text as an error or warning if the single line matched custom or standard error and warning formats or as a regular message if <xref:Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat*> is set to <xref uid="langword_csharp_true" name="true" href=""></xref> and no custom format matched.
   syntax:
     content: protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);
     parameters:
     - id: singleLine
       type: System.String
-      description: "Enkele lijn van de uitvoer parseren."
+      description: Single line from the output to parse.
     - id: messageImportance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "Het belang aan het bericht met aanmelden."
+      description: The importance to log the message with.
   overload: Microsoft.Build.Tasks.Exec.LogEventsFromTextOutput*
   exceptions: []
   platform:
@@ -431,16 +431,16 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Registreert de naam van het hulpprogramma en het pad."
+  summary: Logs the tool name and path.
   syntax:
     content: protected override void LogPathToTool (string toolName, string pathToTool);
     parameters:
     - id: toolName
       type: System.String
-      description: "De naam van het hulpprogramma."
+      description: The tool name.
     - id: pathToTool
       type: System.String
-      description: "De huidige map waar het hulpprogramma wordt uitgevoerd."
+      description: The current directory where the tool is run.
   overload: Microsoft.Build.Tasks.Exec.LogPathToTool*
   exceptions: []
   platform:
@@ -457,13 +457,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Registreert de batchopdracht-bestand om te worden uitgevoerd."
+  summary: Logs the batch file command to be executed.
   syntax:
     content: protected override void LogToolCommand (string message);
     parameters:
     - id: message
       type: System.String
-      description: "Geef een lege tekenreeks. Deze parameter wordt niet gebruikt."
+      description: Specify an empty string. This parameter is not used.
   overload: Microsoft.Build.Tasks.Exec.LogToolCommand*
   exceptions: []
   platform:
@@ -480,13 +480,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de Uitvoeritems van de taak."
-  remarks: "De `Exec` taak niet is ingesteld op de Uitvoeritems. In plaats daarvan kunt u opgeven de Uitvoeritems alsof ze zijn ingesteld door de taak, zodat ze later in het project kunnen worden gebruikt."
+  summary: Gets or sets the output items from the task.
+  remarks: The `Exec` task does not set the output items. Instead, you can provide the output items as if they were set by the task, so that they can be used later in the project.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Outputs { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De Uitvoeritems van de taak."
+      description: The output items from the task.
   overload: Microsoft.Build.Tasks.Exec.Outputs*
   exceptions: []
   platform:
@@ -503,12 +503,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hiermee haalt u de codering van de Standaardfoutstroom vastgelegde taak."
+  summary: Gets the encoding of the captured task standard error stream.
   syntax:
     content: protected override System.Text.Encoding StandardErrorEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: "De codering van de Standaardfoutstroom vastgelegde taak."
+      description: The encoding of the captured task standard error stream.
   overload: Microsoft.Build.Tasks.Exec.StandardErrorEncoding*
   exceptions: []
   platform:
@@ -525,12 +525,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Het belang om aan te melden gewone berichten met de Standaardfoutstroom opgehaald."
+  summary: Gets the importance to log ordinary messages with in the standard error stream.
   syntax:
     content: protected override Microsoft.Build.Framework.MessageImportance StandardErrorLoggingImportance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: "Het belang om aan te melden gewone berichten met de Standaardfoutstroom."
+      description: The importance to log ordinary messages with in the standard error stream.
   overload: Microsoft.Build.Tasks.Exec.StandardErrorLoggingImportance*
   exceptions: []
   platform:
@@ -547,12 +547,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hiermee haalt u de codering van de standaard uitvoerstroom vastgelegde taak."
+  summary: Gets the encoding of the captured task standard output stream.
   syntax:
     content: protected override System.Text.Encoding StandardOutputEncoding { get; }
     return:
       type: System.Text.Encoding
-      description: "De codering van de standaard uitvoerstroom vastgelegde taak."
+      description: The encoding of the captured task standard output stream.
   overload: Microsoft.Build.Tasks.Exec.StandardOutputEncoding*
   exceptions: []
   platform:
@@ -569,12 +569,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Het belang om aan te melden gewone berichten met de standard out stream opgehaald."
+  summary: Gets the importance to log ordinary messages with in the standard out stream.
   syntax:
     content: protected override Microsoft.Build.Framework.MessageImportance StandardOutputLoggingImportance { get; }
     return:
       type: Microsoft.Build.Framework.MessageImportance
-      description: "Het belang om aan te melden gewone berichten met de standard out stroom."
+      description: The importance to log ordinary messages with in the standard out stream.
   overload: Microsoft.Build.Tasks.Exec.StandardOutputLoggingImportance*
   exceptions: []
   platform:
@@ -591,12 +591,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de codering van de vastgelegde taak Standaardfoutstroom die zichtbaar is voor het project."
+  summary: Gets or sets the encoding of the captured task standard error stream that is visible to the project.
   syntax:
     content: public string StdErrEncoding { get; set; }
     return:
       type: System.String
-      description: "De codering van de Standaardfoutstroom vastgelegde taak die is zichtbaar voor het project."
+      description: The encoding of the captured task standard error stream that is visible to the project.
   overload: Microsoft.Build.Tasks.Exec.StdErrEncoding*
   exceptions: []
   platform:
@@ -613,12 +613,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de codering van de vastgelegde taak Standaarduitvoerstroom die zichtbaar is voor het project."
+  summary: Gets or sets the encoding of the captured task standard output stream that is visible to the project.
   syntax:
     content: public string StdOutEncoding { get; set; }
     return:
       type: System.String
-      description: "De codering van de vastgelegde taak Standaarduitvoerstroom die zichtbaar is voor het project."
+      description: The encoding of the captured task standard output stream that is visible to the project.
   overload: Microsoft.Build.Tasks.Exec.StdOutEncoding*
   exceptions: []
   platform:
@@ -635,12 +635,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hiermee haalt u de naam van het hulpprogramma (cmd.exe)."
+  summary: Gets the name of the tool (cmd.exe).
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: "De naam van het hulpprogramma (cmd.exe)."
+      description: The name of the tool (cmd.exe).
   overload: Microsoft.Build.Tasks.Exec.ToolName*
   exceptions: []
   platform:
@@ -657,13 +657,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Valideert ingevoerde parameters en logboeken fouten of waarschuwingen, indien van toepassing. Retourneert een Booleaanse waarde die aangeeft of de uitvoering van de taak moet doorgaan."
+  summary: Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de uitvoering van de taak moet worden voortgezet; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should proceed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Exec.ValidateParameters*
   exceptions: []
   platform:
@@ -680,12 +680,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de map op waarin de opdracht wordt uitgevoerd."
+  summary: Gets or sets the directory in which the command will run.
   syntax:
     content: public string WorkingDirectory { get; set; }
     return:
       type: System.String
-      description: "De map op waarin de opdracht wordt uitgevoerd."
+      description: The directory in which the command will run.
   overload: Microsoft.Build.Tasks.Exec.WorkingDirectory*
   exceptions: []
   platform:

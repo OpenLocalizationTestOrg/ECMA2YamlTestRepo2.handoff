@@ -25,7 +25,7 @@ items:
   nameWithType: ProjectItemElement
   fullName: Microsoft.Build.Construction.ProjectItemElement
   type: Class
-  summary: "Hiermee geeft u een [Item Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in een MSBuild-project."
+  summary: Represents an [Item Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{ItemType} Include={Include} Exclude={Exclude} #Metadata={Count} Condition={Condition}")]
@@ -73,19 +73,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Metagegevens toegevoegd aan dit item. Voegt de metagegevens naar alle bestaande metagegevens."
+  summary: Adds metadata to this item. Appends the metadata to any existing metadata.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement AddMetadata (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "Naam van de metagegevens."
+      description: Name of metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "Metagegevens worden toegevoegd."
+      description: Metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "Retourneert de gewijzigde metagegevens."
+      description: Returns the modified metadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.AddMetadata*
   exceptions: []
   platform:
@@ -102,13 +102,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de kenmerkwaarde uitsluiten."
-  remarks: "Hiermee verwijdert u het kenmerk uitsluiten als de waarde in te stellen is ingesteld op null of een lege tekenreeks."
+  summary: Gets or sets the Exclude attribute value.
+  remarks: Removes the Exclude attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Exclude { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk uitsluiten. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the Exclude attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Exclude*
   exceptions: []
   platform:
@@ -125,12 +125,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk uitsluiten"
+  summary: Location of the exclude attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ExcludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Construction.ProjectItemElement.ExcludeLocation*
   exceptions: []
   platform:
@@ -147,12 +147,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Bepaalt of dit object metagegevens onderliggende elementen heeft."
+  summary: Determines if this item has any child metadata elements.
   syntax:
     content: public bool HasMetadata { get; }
     return:
       type: System.Boolean
-      description: "Retourneert true als dit item onderliggende metagegevenselementen heeft; de waarde False anders."
+      description: Returns true if this item has child metadata elements; false otherwise.
   overload: Microsoft.Build.Construction.ProjectItemElement.HasMetadata*
   exceptions: []
   platform:
@@ -169,13 +169,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de waarde van het Include-kenmerk."
-  remarks: "Hiermee verwijdert u het kenmerk opnemen als de waarde in te stellen is ingesteld op null of een lege tekenreeks."
+  summary: Gets or sets the Include attribute value.
+  remarks: Removes the Include attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Include { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het Include-kenmerk. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the Include attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Include*
   exceptions: []
   platform:
@@ -192,12 +192,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het include-kenmerk"
+  summary: Location of the include attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation IncludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie opnemen"
+      description: Returns the include location
   overload: Microsoft.Build.Construction.ProjectItemElement.IncludeLocation*
   exceptions: []
   platform:
@@ -214,12 +214,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hiermee haalt u de item elementType."
+  summary: Gets the item element’s type.
   syntax:
     content: public string ItemType { get; set; }
     return:
       type: System.String
-      description: "Retourneert het itemtype van element."
+      description: Returns the item element type.
   overload: Microsoft.Build.Construction.ProjectItemElement.ItemType*
   exceptions: []
   platform:
@@ -236,13 +236,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de KeepDuplicates-waarde."
-  remarks: "Hiermee verwijdert u het kenmerk als de waarde in te stellen leeg of null is."
+  summary: Gets or sets the KeepDuplicates value.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string KeepDuplicates { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van KeepDuplicates of lege tekenreeks geretourneerd als dit niet aanwezig is."
+      description: Returns the value of KeepDuplicates, or returns empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepDuplicates*
   exceptions: []
   platform:
@@ -259,12 +259,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de locatie van het kenmerk KeepDuplicates."
+  summary: Gets or sets the Location of the KeepDuplicates attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepDuplicatesLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van het kenmerk KeepDuplicates."
+      description: Returns the location of the KeepDuplicates attribute.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepDuplicatesLocation*
   exceptions: []
   platform:
@@ -281,13 +281,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de kenmerkwaarde KeepMetadata."
-  remarks: "Hiermee verwijdert u het kenmerk als de waarde in te stellen leeg of null is."
+  summary: Gets or sets the KeepMetadata attribute value.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string KeepMetadata { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk KeepMetadata of een lege tekenreeks geretourneerd als dit niet aanwezig is."
+      description: Returns the value of the KeepMetadata attribute or returns an empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepMetadata*
   exceptions: []
   platform:
@@ -304,12 +304,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de locatie van het kenmerk KeepMetadata."
+  summary: Gets or sets the location of the KeepMetadata attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van KeepMetadata."
+      description: Returns the location of KeepMetadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.KeepMetadataLocation*
   exceptions: []
   platform:
@@ -326,12 +326,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hiermee haalt u alle onderliggende metagegevens."
+  summary: Gets all child metadata.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectMetadataElement> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectMetadataElement}
-      description: "Retourneert alle onderliggende metagegevens."
+      description: Returns all child metadata.
   overload: Microsoft.Build.Construction.ProjectItemElement.Metadata*
   exceptions: []
   platform:
@@ -348,13 +348,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de kenmerkwaarde verwijderen."
-  remarks: "Hiermee verwijdert u het kenmerk verwijderen als de waarde in te stellen is ingesteld op null of een lege tekenreeks."
+  summary: Gets or sets the Remove attribute value.
+  remarks: Removes the Remove attribute if the value to set is set to null or an empty string.
   syntax:
     content: public string Remove { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk verwijderen. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the Remove attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.Remove*
   exceptions: []
   platform:
@@ -371,12 +371,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk verwijderen"
+  summary: Location of the remove attribute
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van het kenmerk verwijderen."
+      description: Returns the remove attribute’s location.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveLocation*
   exceptions: []
   platform:
@@ -393,13 +393,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van het kenmerk RemoveMetadata."
-  remarks: "Hiermee verwijdert u het kenmerk als de waarde in te stellen leeg of null is."
+  summary: Gets or sets the RemoveMetadata attribute.
+  remarks: Removes the attribute if the value to set is empty or null.
   syntax:
     content: public string RemoveMetadata { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde RemoveMetadata of een lege tekenreeks geretourneerd als dit niet aanwezig is."
+      description: Returns the RemoveMetadata value or returns an empty string if it is not present.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveMetadata*
   exceptions: []
   platform:
@@ -416,12 +416,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van de locatie van het kenmerk RemoveMetadata."
+  summary: Gets or sets the location of the RemoveMetadata attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van het kenmerk RemoveMetadata."
+      description: Returns the RemoveMetadata attribute’s location.
   overload: Microsoft.Build.Construction.ProjectItemElement.RemoveMetadataLocation*
   exceptions: []
   platform:

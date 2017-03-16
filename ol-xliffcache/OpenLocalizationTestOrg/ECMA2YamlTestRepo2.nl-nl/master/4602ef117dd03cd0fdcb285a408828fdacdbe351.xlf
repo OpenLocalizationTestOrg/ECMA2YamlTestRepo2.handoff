@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nl-nl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4602ef117dd03cd0fdcb285a408828fdacdbe351</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.EnterpriseServices.IProcessInitializer.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2eca5c9a4d3da986637175a3ab24d6899c94cf01</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e6e88b5c54646b8f30bce4b5eff2658bebc60465</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Supports methods that can be called when a COM component starts up or shuts down.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Implement the IProcessInitializer interface methods on serviced components if you want to run initialization or shutdown code when a server process (Dllhost.exe) starts up or shuts down, respectively.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>COM+ provides <ph id="ph1">`Startup`</ph> and <ph id="ph2">`Shutdown`</ph> events when Dllhost.exe starts and ends.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This feature enables any COM+ components that are installed in a COM+ server application (referred to as server components hereafter) to run custom initialization and clean up code.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An instance of each component that implements the IProcessInitializer interface will be created and stored for the duration of the process, and called on the interface methods during startup and shutdown.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When implemented on a &lt;xref:System.EnterpriseServices.ServicedComponent&gt;, during registration of the component, the <ph id="ph1">`InitializesServerApplication`</ph> parameter in the <ph id="ph2">`COMAdminCatalogObject`</ph> within the Components collection is set to <ph id="ph3">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the <ph id="ph1">`Startup`</ph> and <ph id="ph2">`Shutdown`</ph> events, you can initialize resources, create connections, initialize shared data, and run cleanup code.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, you must not access states that are specific to COM+ because instances of server components have not yet been created.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In addition, the code in the <ph id="ph1">`Startup`</ph> and <ph id="ph2">`Shutdown`</ph> events should return as quickly as possible, because the system waits only 90 seconds for Dllhost.exe to prepare to accept activations after the system starts the process.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If Dllhost.exe does not signal that it is ready within 90 seconds, the system ends the process; thus, all initialization processing needs to be completed within this time frame.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Each server component that participates in initialization must support the IProcessInitializer interface.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>On DllHost.exe startup, COM+ creates all server components that requested this service, calls <ph id="ph1">`QueryInterface`</ph> for the IProcessInitializer interface, and calls the &lt;xref:System.EnterpriseServices.IProcessInitializer.Startup%2A&gt; function.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Similarly, when the DllHost.exe process is shut down, it calls the &lt;xref:System.EnterpriseServices.IProcessInitializer.Shutdown%2A&gt; function on those previously stored interface pointers.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Performs shutdown actions.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Called when Dllhost.exe is shut down.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Shutdown is not called during a failfast or other catastrophic shutdown events.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Performs initialization at startup.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Called when Dllhost.exe is started.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The object referenced by <ph id="ph1">`punkProcessControl`</ph> implements an &lt;xref:System.EnterpriseServices.IProcessInitControl&gt; interface.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.EnterpriseServices.IProcessInitControl&gt; supports the single method &lt;xref:System.EnterpriseServices.IProcessInitControl.ResetInitializerTimeout%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The initialization code in Startup can call the &lt;xref:System.EnterpriseServices.IProcessInitControl.ResetInitializerTimeout%2A&gt;, with the time-out set equal to the number of seconds remaining before the startup of the component times out.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>In Microsoft Windows XP, a pointer to the <bpt id="p1">&lt;xref uid="langword_csharp_IUnknown" name="IUnknown" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> interface of the COM component starting up.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In Microsoft Windows 2000, this argument is always <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nl-nl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ba25618bbfe093b58f216359469b0bdfd1a0e67a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.ServiceModel.HostNameComparisonMode.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bee0398607849218636b8269b54b18fdb02c5ca0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">196fa673ecd6514848c2a069097e9a1a11627d22</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Specifies how the host name should be used in URI comparisons when dispatching an incoming message to a service endpoint.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The value is used to specify the URI matching rules used by transports such as HTTP, Net.Tcp, and Net.Pipe when dispatching incoming messages.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Configure the value of the HostNameComparisonMode for a standard binding using one of the preceding transports, such as &lt;xref:System.ServiceModel.BasicHttpBinding&gt;, using the corresponding &lt;xref:System.ServiceModel.BasicHttpBinding.HostNameComparisonMode%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Configure the value of the HostNameComparisonMode for a binding element using one of the preceding transports, such as &lt;xref:System.ServiceModel.Channels.HttpTransportBindingElement&gt;, using the corresponding &lt;xref:System.ServiceModel.Channels.HttpTransportBindingElement.HostNameComparisonMode%2A&gt; property.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Each value of the HostNameComparisonMode corresponds to a specific type of matching rule.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The sequence of matching rules attempted is always ordered as follows:      1.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>StrongWildcard      2.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Exact      3.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>WeakWildcard       The first value, StrongWildcard, ignores the host name when matching and it takes the highest precedence of the three different matching modes.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is the default value for a <ph id="ph1">[!INCLUDE[indigo2](~/add/includes/ajax-current-ext-md.md)]</ph> system-provided binding or binding element.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This indicates that a service endpoint can be reached using any valid host name.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if MyService is hosted using http://localhost/MyService, it is still reachable using http://www.adatum.com/MyService because the (presumably valid) host name, "adatum.com", is ignored.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note that the port is a wildcard here as well.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The second value, Exact, requires that an exact match is found with the URI specified, including the hostname, if no strong match is found.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This mode, for example, does not perform equivalence between short hostnames and fully-qualified domain names.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This allows hostnames to be used as match criteria in the scenarios where multiple hosts are assigned a single IP address and it enables different services to be hosted on the same machine with distinct endpoints.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note that the port is a wildcard here as well.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The third value, WeakWildcard, matches by ignoring the hostname if no strong or exact match was found.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The behavior is the same as for StrongWildcard other than the order of matching: it runs after the strong and exact bindings have been tried.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  These values have no effect when used inside of the Internet Information Services (IIS) or Windows Process Activation Service (WAS) hosting environment.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In those cases, <ph id="ph1">[!INCLUDE[indigo2](~/add/includes/ajax-current-ext-md.md)]</ph> uses whatever hostname comparison mode is provided by the IIS Web Site hosting the <ph id="ph2">[!INCLUDE[indigo2](~/add/includes/ajax-current-ext-md.md)]</ph> services.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Uses the hostname when dispatching incoming messages to this endpoint, if no strong match was found.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Ignores the hostname when dispatching incoming messages to this endpoint.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This is the default value.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>If no strong or exact match was found, ignores the hostname when matching.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

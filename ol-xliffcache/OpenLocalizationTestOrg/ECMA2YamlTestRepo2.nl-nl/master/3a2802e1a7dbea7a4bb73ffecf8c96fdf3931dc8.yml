@@ -12,7 +12,7 @@ items:
   nameWithType: ResolvedImport
   fullName: Microsoft.Build.Evaluation.ResolvedImport
   type: Struct
-  summary: "Een relatie importeren in een geëvalueerde project tussen een ProjectImportElement en de ProjectRootElement van het geïmporteerde project bevat."
+  summary: Encapsulates an import relationship in an evaluated project between a ProjectImportElement and the ProjectRootElement of the imported project.
   syntax:
     content: public struct ResolvedImport
   inheritance:
@@ -32,12 +32,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hiermee haalt u een van de geïmporteerde projecten."
+  summary: Gets one of the imported projects.
   syntax:
     content: public Microsoft.Build.Construction.ProjectRootElement ImportedProject { get; }
     return:
       type: Microsoft.Build.Construction.ProjectRootElement
-      description: "Retourneert een <xref href=&quot;Microsoft.Build.Construction.ProjectRootElement&quot;> </xref> die het geïmporteerde project vertegenwoordigt."
+      description: Returns a <xref href="Microsoft.Build.Construction.ProjectRootElement"></xref> representing the imported project.
   overload: Microsoft.Build.Evaluation.ResolvedImport.ImportedProject*
   exceptions: []
   platform:
@@ -54,12 +54,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Het element tijdens het doorzoeken van de import opgehaald."
+  summary: Gets the element doing the import.
   syntax:
     content: public Microsoft.Build.Construction.ProjectImportElement ImportingElement { get; }
     return:
       type: Microsoft.Build.Construction.ProjectImportElement
-      description: "Retourneert de <xref href=&quot;Microsoft.Build.Construction.ProjectImportElement&quot;> </xref> van het element dat tijdens het doorzoeken van de invoer."
+      description: Returns the <xref href="Microsoft.Build.Construction.ProjectImportElement"></xref> representing the element doing the import.
   overload: Microsoft.Build.Evaluation.ResolvedImport.ImportingElement*
   exceptions: []
   platform:
@@ -76,12 +76,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Hiermee haalt u een vlag die bepaalt of het importeren element zelf geïmporteerd."
+  summary: Gets a flag which determines if the importing element is itself imported.
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: "Retourneert <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> als het element wordt geïmporteerd, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> anders."
+      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if the element is imported, <xref uid="langword_csharp_false" name="false" href=""></xref> otherwise.
   overload: Microsoft.Build.Evaluation.ResolvedImport.IsImported*
   exceptions: []
   platform:

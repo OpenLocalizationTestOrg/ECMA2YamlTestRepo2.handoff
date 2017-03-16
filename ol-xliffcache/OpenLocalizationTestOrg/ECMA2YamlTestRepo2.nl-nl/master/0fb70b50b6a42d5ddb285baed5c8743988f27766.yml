@@ -11,7 +11,7 @@ items:
   nameWithType: IProjectSchemaNode
   fullName: Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode
   type: Interface
-  summary: "Definieert een interface die alle hoofdklassen van XAML-projectbestanden schema moeten worden geïmplementeerd."
+  summary: Defines an interface that all root classes from project schema XAML files must implement.
   syntax:
     content: public interface IProjectSchemaNode
   implements: []
@@ -29,16 +29,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Retourneert een enumerator over alle exemplaren van statische gegevens met het opgegeven type."
+  summary: Returns an enumerator over all instances of static data that have the given type.
   syntax:
     content: public System.Collections.Generic.IEnumerable<object> GetSchemaObjects (Type type);
     parameters:
     - id: type
       type: System.Type
-      description: "Het type van statische gegevens moeten worden opgehaald."
+      description: The type of static data to retrieve.
     return:
       type: System.Collections.Generic.IEnumerable{System.Object}
-      description: "Retourneert een enumerator over alle exemplaren van statische gegevens met het opgegeven type. Retourneert <xref uid=&quot;langword_csharp_Null&quot; name=&quot;Null&quot; href=&quot;&quot;> </xref> of een lege lijst als er geen objecten van het opgegeven type worden opgegeven door dit knooppunt."
+      description: Returns an enumerator over all instances of static data that have the given type. Returns <xref uid="langword_csharp_Null" name="Null" href=""></xref> or Empty list if no objects of the given type are provided by this node.
   overload: Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjects*
   exceptions: []
   platform:
@@ -55,13 +55,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Retourneert een enumerator over alle soorten statische gegevens voor de gegevensgestuurde functies die dit knooppunt bevat."
+  summary: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   syntax:
     content: public System.Collections.Generic.IEnumerable<Type> GetSchemaObjectTypes ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerable{System.Type}
-      description: "Retourneert een enumerator over alle soorten statische gegevens voor de gegevensgestuurde functies die dit knooppunt bevat."
+      description: Returns an enumerator over all types of static data for the data-driven features that this node contains.
   overload: Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjectTypes*
   exceptions: []
   platform:

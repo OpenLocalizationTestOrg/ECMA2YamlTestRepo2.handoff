@@ -25,7 +25,7 @@ items:
   nameWithType: ProjectUsingTaskElement
   fullName: Microsoft.Build.Construction.ProjectUsingTaskElement
   type: Class
-  summary: "Hiermee geeft u een [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in een MSBuild-project. Het element UsingTask wordt gebruikt voor inline en vooraf gecompileerde taken."
+  summary: Represents a [UsingTask Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) in an MSBuild project. The UsingTask element is used both for inline tasks and precompiled tasks.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("TaskName={TaskName} AssemblyName={AssemblyName} AssemblyFile={AssemblyFile} Condition={Condition} Runtime={Runtime} Architecture={Architecture}")]
@@ -73,13 +73,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Een nieuwe ParameterGroup-element wordt toegevoegd aan deze inline-taak."
+  summary: Adds a new ParameterGroup element to this inline task.
   syntax:
     content: public Microsoft.Build.Construction.UsingTaskParameterGroupElement AddParameterGroup ();
     parameters: []
     return:
       type: Microsoft.Build.Construction.UsingTaskParameterGroupElement
-      description: "Retourneert de nieuwe groep in de parameter."
+      description: Returns the new parameter group.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.AddParameterGroup*
   exceptions: []
   platform:
@@ -96,19 +96,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Een nieuwe TaskBody-element wordt toegevoegd aan deze inline-taak."
+  summary: Adds a new TaskBody element to this inline task.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskBodyElement AddUsingTaskBody (string evaluate, string taskBody);
     parameters:
     - id: evaluate
       type: System.String
-      description: "Een vlag die als de voorwaarde waar is, breidt het item en de eigenschap waarden in de hoofdtekst van de taak. Met deze markering is standaard ingesteld op true."
+      description: A flag which, if true, expands the item and property values in the task body. This flag is true by default.
     - id: taskBody
       type: System.String
-      description: "De hoofdtekst van de taak als een tekenreeks."
+      description: The body of the task as a string.
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskBodyElement
-      description: "Retourneert het hoofdgedeelte van de nieuwe taak."
+      description: Returns the new task body.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.AddUsingTaskBody*
   exceptions: []
   platform:
@@ -125,12 +125,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van het kenmerk architectuur van deze taak inline."
+  summary: Gets or sets the Architecture attribute of this inline task.
   syntax:
     content: public string Architecture { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk architectuur. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the Architecture attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.Architecture*
   exceptions: []
   platform:
@@ -147,12 +147,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk architectuur voor dit element, indien van toepassing."
+  summary: Location of the Architecture attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ArchitectureLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van architectuur kenmerk. Als er kenmerk is niet aanwezig is, retourneert null."
+      description: Returns  the Architecture attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.ArchitectureLocation*
   exceptions: []
   platform:
@@ -169,13 +169,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hiermee wordt de waarde van het kenmerk AssemblyFile selecteert de naam van de assembly te laden."
-  remarks: "De assembly kan een sterke naam hebben en zich bevinden in de GAC. Ofwel de `AssemblyFile` of `AssemblyName` kenmerk moet aanwezig zijn, maar niet beide."
+  summary: Gets the value of the AssemblyFile attribute, which selects the name of the assembly to load.
+  remarks: The assembly may have a strong name and may be located in the GAC. Either the `AssemblyFile` or `AssemblyName` attribute must be present, but not both.
   syntax:
     content: public string AssemblyFile { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk AssemblyFile. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the AssemblyFile attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFile*
   exceptions: []
   platform:
@@ -192,12 +192,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk AssemblyFile voor dit element, indien van toepassing."
+  summary: Location of the AssemblyFile attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation AssemblyFileLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de AssemblyFile kenmerklocatie. Als er kenmerk is niet aanwezig is, retourneert null."
+      description: Returns  the AssemblyFile attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFileLocation*
   exceptions: []
   platform:
@@ -214,13 +214,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald en stelt u de waarde van het kenmerk AssemblyName."
-  remarks: "Het pad naar de assembly die mogelijk een volledig pad of een relatief pad. Relatieve paden zijn ten opzichte van de map van het projectbestand met deze UsingTask. Ofwel de `AssemblyFile` of `AssemblyName` kenmerk moet aanwezig zijn, maar niet beide."
+  summary: Gets and sets the value of the AssemblyName attribute.
+  remarks: The file path to the assembly, which may be either a full path or a relative path. Relative paths are relative to the directory of the project file containing this UsingTask. Either the `AssemblyFile` or `AssemblyName` attribute must be present, but not both.
   syntax:
     content: public string AssemblyName { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk AssemblyName. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the AssemblyName attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyName*
   exceptions: []
   platform:
@@ -237,12 +237,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk AssemblyName voor dit element, indien van toepassing."
+  summary: Location of the AssemblyName attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation AssemblyNameLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert het kenmerk AssemblyName locatie. Als er kenmerk is niet aanwezig is, retourneert null."
+      description: Returns  the AssemblyName attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyNameLocation*
   exceptions: []
   platform:
@@ -259,12 +259,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Elk element ParameterGroup voor deze taak inline opgehaald."
+  summary: Gets any ParameterGroup element for this inline task.
   syntax:
     content: public Microsoft.Build.Construction.UsingTaskParameterGroupElement ParameterGroup { get; }
     return:
       type: Microsoft.Build.Construction.UsingTaskParameterGroupElement
-      description: "Retourneert de parameter-groep. Retourneert null als er geen parameter groep bestaat."
+      description: Returns the parameter group. Returns null if no parameter group exists.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.ParameterGroup*
   exceptions: []
   platform:
@@ -281,12 +281,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald of ingesteld van het kenmerk Runtime van deze taak inline."
+  summary: Gets or sets the Runtime attribute of this inline task.
   syntax:
     content: public string Runtime { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van de Runtime-kenmerk. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the Runtime attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.Runtime*
   exceptions: []
   platform:
@@ -303,12 +303,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk Runtime voor dit element, indien van toepassing."
+  summary: Location of the Runtime attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RuntimeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de locatie van de Runtime-kenmerk. Als er kenmerk is niet aanwezig is, retourneert null."
+      description: Returns  the Runtime attribute location. If there is no such attribute, returns null.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.RuntimeLocation*
   exceptions: []
   platform:
@@ -325,13 +325,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Het interne XML-inhoud van deze taak inline opgehaald."
-  remarks: "De interne XML-inhoud is de hoofdtekst van de bron-code van de taak inline en rechtstreeks naar de fabriek taak als een tekenreeks is doorgegeven."
+  summary: Gets the inner XML content of this inline task.
+  remarks: The inner XML content is the source code body of the inline task, and is passed directly to the task factory as a string.
   syntax:
     content: public Microsoft.Build.Construction.ProjectUsingTaskBodyElement TaskBody { get; }
     return:
       type: Microsoft.Build.Construction.ProjectUsingTaskBodyElement
-      description: "Retourneert de interne XML-inhoud van de inline-taak. Retourneert null als er geen instantie bestaat."
+      description: Returns the inner XML content of the inline task. Returns null if no body exists.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.TaskBody*
   exceptions: []
   platform:
@@ -348,13 +348,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald en stelt u de waarde van het kenmerk TaskFactory van deze taak inline."
-  remarks: "Selecteert de klassenaam van de taak factory gebruikt om instanties van deze taak te maken. TaskFactory wordt gebruikt in combinatie met het AssemblyName AssemblyFile kenmerk of de fabriek taak vinden."
+  summary: Gets and sets the value of the TaskFactory attribute of this inline task.
+  remarks: Selects the task factory class name used to create instances of this task. TaskFactory is used together with either the AssemblyName or AssemblyFile attribute to locate the task factory.
   syntax:
     content: public string TaskFactory { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk TaskFactory. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the TaskFactory attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactory*
   exceptions: []
   platform:
@@ -371,12 +371,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk TaskFactory voor dit element, indien van toepassing."
+  summary: Location of the TaskFactory attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation TaskFactoryLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de waarde van het kenmerk TaskFactory. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the TaskFactory attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactoryLocation*
   exceptions: []
   platform:
@@ -393,13 +393,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Opgehaald en stelt u de waarde van het kenmerk taaknaam."
-  remarks: "Geeft de naam van dit vooraf gecompileerd of inline-taak."
+  summary: Gets and sets the value of the TaskName attribute.
+  remarks: Indicates the name of this precompiled or inline task.
   syntax:
     content: public string TaskName { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde van het kenmerk taaknaam. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the TaskName attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.TaskName*
   exceptions: []
   platform:
@@ -416,12 +416,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Locatie van het kenmerk taaknaam voor dit element, indien van toepassing."
+  summary: Location of the TaskName attribute on this element, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation TaskNameLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Retourneert de waarde van het kenmerk taaknaam. Retourneert een lege tekenreeks als het kenmerk niet aanwezig is is."
+      description: Returns the value of the TaskName attribute. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Construction.ProjectUsingTaskElement.TaskNameLocation*
   exceptions: []
   platform:

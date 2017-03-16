@@ -15,7 +15,7 @@ items:
   nameWithType: WindowClass
   fullName: Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass
   type: Class
-  summary: "Vertegenwoordigt een vensterklasse in een toepassingsmanifest."
+  summary: Represents a window class in an application manifest.
   syntax:
     content: >-
       [System.Runtime.InteropServices.ComVisible(false)]
@@ -39,7 +39,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass"></xref> class.
   syntax:
     content: public WindowClass ();
     parameters: []
@@ -59,17 +59,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass&quot;> </xref> klasse, geven informatie over de status van de versies van het vensterklasse."
-  remarks: 'De `versioned` parameter bepaalt of de vensterklasse interne een naam die wordt gebruikt bij registratie bevat de versie van de assembly die de vensterklasse bevat. De waarde van dit kenmerk kan worden `yes` of `no`. De standaardwaarde is `yes`. De waarde `no` moet alleen worden gebruikt als dezelfde vensterklasse is gedefinieerd door een side-by-side-onderdeel en een gelijkwaardig niet-side-by-side-onderdeel en u wilt behandeld als dezelfde vensterklasse. Merk op dat de gebruikelijke regels over de klasseregistratie van toepassing: alleen het eerste onderdeel dat registreert in het vensterklasse kunnen registreren, omdat er geen een versie die wordt toegepast.'
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass"></xref> class, specifying information about the versioning status of the window class.
+  remarks: 'The `versioned` parameter controls whether the internal window class name that is used in registration contains the version of the assembly that contains the window class. The value of this attribute can be `yes` or `no`. The default is `yes`. The value `no` should be used only if the same window class is defined by a side-by-side component and an equivalent non-side-by-side component and you want to treat them as the same window class. Note that the usual rules about window class registration apply: only the first component that registers the window class will be able to register it, because it does not have a version applied to it.'
   syntax:
     content: public WindowClass (string name, bool versioned);
     parameters:
     - id: name
       type: System.String
-      description: "De naam van de klasse."
+      description: The name of the class.
     - id: versioned
       type: System.Boolean
-      description: "Besturingselementen of de vensterklasse interne een naam die wordt gebruikt bij registratie bevat de versie van de assembly die de vensterklasse bevat."
+      description: Controls whether the internal window class name that is used in registration contains the version of the assembly that contains the window class.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.#ctor*
   exceptions: []
   platform:
@@ -86,12 +86,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "De naam van het vensterklasse opgehaald."
+  summary: Gets the name of the window class.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "De naam van het vensterklasse."
+      description: The name of the window class.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name*
   exceptions: []
   platform:
@@ -108,13 +108,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Hiermee wordt een waarde die bepaalt of de naam van de interne venster klasse die wordt gebruikt in de registratie van de versie van de assembly die de vensterklasse bevat bevat."
-  remarks: 'Deze eigenschap bepaalt of de vensterklasse interne een naam die wordt gebruikt bij registratie bevat de versie van de assembly die de vensterklasse bevat. De waarde van dit kenmerk kan worden `yes` of `no`. De standaardwaarde is `yes`. De waarde `no` moet alleen worden gebruikt als dezelfde vensterklasse is gedefinieerd door een side-by-side-onderdeel en een gelijkwaardig niet-side-by-side-onderdeel en u wilt behandeld als dezelfde vensterklasse. Merk op dat de gebruikelijke regels over de klasseregistratie van toepassing: alleen het eerste onderdeel dat registreert in het vensterklasse kunnen registreren, omdat er geen een versie die wordt toegepast.'
+  summary: Gets a value that controls whether the internal window class name that is used in registration contains the version of the assembly that contains the window class.
+  remarks: 'This property controls whether the internal window class name that is used in registration contains the version of the assembly that contains the window class. The value of this attribute can be `yes` or `no`. The default is `yes`. The value `no` should be used only if the same window class is defined by a side-by-side component and an equivalent non-side-by-side component and you want to treat them as the same window class. Note that the usual rules about window class registration apply: only the first component that registers the window class will be able to register it, because it does not have a version applied to it.'
   syntax:
     content: public bool Versioned { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_yes&quot; name=&quot;yes&quot; href=&quot;&quot;></xref>Als de naam die wordt gebruikt bij registratie de versie van de assembly bevat; anders <xref uid=&quot;langword_csharp_no&quot; name=&quot;no&quot; href=&quot;&quot;> </xref>. De standaardwaarde is <xref uid=&quot;langword_csharp_yes&quot; name=&quot;yes&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_yes" name="yes" href=""></xref> if the name that is used in registration contains the version of the assembly; otherwise, <xref uid="langword_csharp_no" name="no" href=""></xref>. The default is <xref uid="langword_csharp_yes" name="yes" href=""></xref>.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned*
   exceptions: []
   platform:
@@ -131,12 +131,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Opgehaald of ingesteld van een eigenschap die wordt gebruikt voor het serialiseren van de <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name*>eigenschap XML-bestand.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name*> property to an XML file.
   syntax:
     content: public string XmlName { get; set; }
     return:
       type: System.String
-      description: "De waarde van de <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name*>eigenschap.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.XmlName*
   exceptions: []
   platform:
@@ -153,12 +153,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks.Deployment.ManifestUtilities
-  summary: "Opgehaald of ingesteld van een eigenschap die wordt gebruikt voor het serialiseren van de <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned*>eigenschap XML-bestand.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned*>"
+  summary: Gets or sets a property that is used to serialize the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned*> property to an XML file.
   syntax:
     content: public string XmlVersioned { get; set; }
     return:
       type: System.String
-      description: "De waarde van de <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned*>eigenschap.</xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned*>"
+      description: The value of the <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned*> property.
   overload: Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.XmlVersioned*
   exceptions: []
   platform:

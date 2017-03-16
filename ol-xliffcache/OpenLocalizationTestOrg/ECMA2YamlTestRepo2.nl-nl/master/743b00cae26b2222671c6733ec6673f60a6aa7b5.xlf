@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nl-nl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">743b00cae26b2222671c6733ec6673f60a6aa7b5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Threading.ThreadState.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4339ccc806e16bb613901c0fedb2568b5da50f14</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b58d0f8f571e866a50256a8fec82b65b3451b6b2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Specifies the execution states of a <bpt id="p1">&lt;xref href="System.Threading.Thread"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ThreadState enumeration is of interest only in a few debugging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Your code should never use the thread state to synchronize the activities of threads.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>ThreadState defines a set of all possible execution states for threads.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Once a thread is created, it is in at least one of the states until it terminates.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Threads created within the common language runtime are initially in the <ph id="ph1">`Unstarted`</ph> state, while external threads that come into the runtime are already in the <ph id="ph2">`Running`</ph> state.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An <ph id="ph1">`Unstarted`</ph> thread is transitioned into the <ph id="ph2">`Running`</ph> state by calling &lt;xref:System.Threading.Thread.Start%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Not all combinations of <ph id="ph1">`ThreadState`</ph> values are valid; for example, a thread cannot be in both the <ph id="ph2">`Aborted`</ph> and <ph id="ph3">`Unstarted`</ph> states.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  There are two thread state enumerations,ThreadState and &lt;xref:System.Diagnostics.ThreadState?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following table shows the actions that cause a change of state.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|Action|ThreadState|   |------------|-----------------|   |A thread is created within the common language runtime.|Unstarted|   |Another thread calls the &lt;xref:System.Threading.Thread.Start%2A?displayProperty=fullName&gt; method on the new thread, and the call returns.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Threading.Thread.Start%2A&gt; method does not return until the new thread has started running.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There is no way to know at what point the new thread will start running, during the call to &lt;xref:System.Threading.Thread.Start%2A&gt;.|Running|   |The thread calls &lt;xref:System.Threading.Thread.Sleep%2A&gt;|WaitSleepJoin|   |The thread calls &lt;xref:System.Threading.Monitor.Wait%2A&gt; on another object.|WaitSleepJoin|   |The thread calls &lt;xref:System.Threading.Thread.Join%2A&gt; on another thread.|WaitSleepJoin|   |Another thread calls &lt;xref:System.Threading.Thread.Interrupt%2A&gt;|Running|   |Another thread calls &lt;xref:System.Threading.Thread.Suspend%2A&gt;|SuspendRequested|   |The thread responds to a &lt;xref:System.Threading.Thread.Suspend%2A&gt; request.|Suspended|   |Another thread calls &lt;xref:System.Threading.Thread.Resume%2A&gt;|Running|   |Another thread calls &lt;xref:System.Threading.Thread.Abort%2A&gt;|AbortRequested|   |The thread responds to a &lt;xref:System.Threading.Thread.Abort%2A&gt; request.|Stopped|   |A thread is terminated.|Stopped|       In addition to the states noted above, there is also the <ph id="ph1">`Background`</ph> state, which indicates whether the thread is running in the background or foreground.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A thread can be in more than one state at a given time.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, if a thread is blocked on a call to &lt;xref:System.Threading.Monitor.Wait%2A&gt;, and another thread calls &lt;xref:System.Threading.Thread.Abort%2A&gt; on the blocked thread, the blocked thread will be in both the <ph id="ph1">`WaitSleepJoin`</ph> and the <ph id="ph2">`AbortRequested`</ph> states at the same time.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In this case, as soon as the thread returns from the call to &lt;xref:System.Threading.Monitor.Wait%2A&gt; or is interrupted, it will receive the &lt;xref:System.Threading.ThreadAbortException&gt; to begin aborting.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Threading.Thread.ThreadState%2A?displayProperty=fullName&gt; property of a thread provides the current state of a thread.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Applications must use a bitmask to determine whether a thread is running.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Since the value for <ph id="ph1">`Running`</ph> is zero (0), test whether a thread is running by using C# code such as <ph id="ph2">`(myThread.ThreadState &amp; (ThreadState.Stopped | ThreadState.Unstarted)) == 0`</ph> or Visual Basic code such as <ph id="ph3">`(myThread.ThreadState And (ThreadState.Stopped Or ThreadState.Unstarted)) = 0`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The thread state includes AbortRequested and the thread is now dead, but its state has not yet changed to Stopped.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">&amp;lt;</ph>xref:System.Threading.Thread.Abort%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> method has been invoked on the thread, but the thread has not yet received the pending <bpt id="p1">&lt;xref href="System.Threading.ThreadAbortException"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that will attempt to terminate it.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The thread is being executed as a background thread, as opposed to a foreground thread.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This state is controlled by setting the <ph id="ph1">&amp;lt;</ph>xref:System.Threading.Thread.IsBackground%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> property.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The thread has been started, it is not blocked, and there is no pending <bpt id="p1">&lt;xref href="System.Threading.ThreadAbortException"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The thread has stopped.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The thread is being requested to stop.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This is for internal use only.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The thread has been suspended.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The thread is being requested to suspend.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">&amp;lt;</ph>xref:System.Threading.Thread.Start%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> method has not been invoked on the thread.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The thread is blocked.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This could be the result of calling <ph id="ph1">&amp;lt;</ph>xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName<ph id="ph2">&amp;gt;</ph> or <ph id="ph3">&amp;lt;</ph>xref:System.Threading.Thread.Join%2A?displayProperty=fullName<ph id="ph4">&amp;gt;</ph>, of requesting a lock — for example, by calling <ph id="ph5">&amp;lt;</ph>xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName<ph id="ph6">&amp;gt;</ph> or <ph id="ph7">&amp;lt;</ph>xref:System.Threading.Monitor.Wait%2A?displayProperty=fullName<ph id="ph8">&amp;gt;</ph> — or of waiting on a thread synchronization object such as &lt;xref:System.Threading.ManualResetEvent&gt;.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

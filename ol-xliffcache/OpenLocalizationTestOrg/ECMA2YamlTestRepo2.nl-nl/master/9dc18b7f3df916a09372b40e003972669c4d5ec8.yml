@@ -12,7 +12,7 @@ items:
   nameWithType: ForwardingLoggerRecord
   fullName: Microsoft.Build.Logging.ForwardingLoggerRecord
   type: Class
-  summary: "Hiermee geeft u een centrale/doorsturen berichtenlogboek paar gebruikt in het logboek met meerdere processors."
+  summary: Represents a central/forwarding logger pair used in multiprocessor logging.
   syntax:
     content: public class ForwardingLoggerRecord
   inheritance:
@@ -33,16 +33,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Hiermee maakt u een logboek doorsturen."
+  summary: Creates a forwarding logger.
   syntax:
     content: public ForwardingLoggerRecord (Microsoft.Build.Framework.ILogger centralLogger, Microsoft.Build.Logging.LoggerDescription forwardingLoggerDescription);
     parameters:
     - id: centralLogger
       type: Microsoft.Build.Framework.ILogger
-      description: "De centrale berichtenlogboek."
+      description: The central logger.
     - id: forwardingLoggerDescription
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "De beschrijving van het logboek doorsturen."
+      description: The description for the forwarding logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.#ctor*
   exceptions: []
   platform:
@@ -59,12 +59,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Hiermee haalt u de centrale berichtenlogboek."
+  summary: Gets the central logger.
   syntax:
     content: public Microsoft.Build.Framework.ILogger CentralLogger { get; }
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: "Retourneert het centrale berichtenlogboek."
+      description: Returns the central logger.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.CentralLogger*
   exceptions: []
   platform:
@@ -81,12 +81,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Het doorsturen opgehaald berichtenlogboek beschrijving."
+  summary: Gets the forwarding logger description.
   syntax:
     content: public Microsoft.Build.Logging.LoggerDescription ForwardingLoggerDescription { get; }
     return:
       type: Microsoft.Build.Logging.LoggerDescription
-      description: "Retourneert het logboek doorsturen beschrijving."
+      description: Returns the forwarding logger description.
   overload: Microsoft.Build.Logging.ForwardingLoggerRecord.ForwardingLoggerDescription*
   exceptions: []
   platform:

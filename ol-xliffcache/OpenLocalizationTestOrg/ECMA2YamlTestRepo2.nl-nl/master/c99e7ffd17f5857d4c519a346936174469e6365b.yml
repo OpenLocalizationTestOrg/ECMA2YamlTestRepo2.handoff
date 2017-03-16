@@ -12,7 +12,7 @@ items:
   nameWithType: ProjectItemDefinitionElement
   fullName: Microsoft.Build.Construction.ProjectItemDefinitionElement
   type: Class
-  summary: "Vertegenwoordigt een ItemDefinition-element in een MSBuild-project."
+  summary: Represents an ItemDefinition element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{ItemType} #Metadata={Count} Condition={Condition}")]
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Metagegevens toegevoegd aan de definitie van dit item. Voegt de metagegevens naar alle bestaande metagegevens."
+  summary: Adds metadata to this item definition. Appends the metadata to any existing metadata.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement AddMetadata (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "Naam van de metagegevens."
+      description: Name of the metadata.
     - id: unevaluatedValue
       type: System.String
-      description: "Metagegevens worden toegevoegd."
+      description: Metadata to be added.
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "Retourneert de gewijzigde metagegevens."
+      description: Returns the modified metadata.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.AddMetadata*
   exceptions: []
   platform:
@@ -89,12 +89,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hiermee haalt u de naam van het item definitie-element."
+  summary: Gets the item definition element name.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Retourneert de naam van het item definitie-element."
+      description: Returns the item definition element name.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.ItemType*
   exceptions: []
   platform:
@@ -111,12 +111,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Hiermee haalt u alle onderliggende definities voor metagegevens."
+  summary: Gets all child metadata definitions.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectMetadataElement> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectMetadataElement}
-      description: "Retourneert alle onderliggende definities voor metagegevens."
+      description: Returns all child metadata definitions.
   overload: Microsoft.Build.Construction.ProjectItemDefinitionElement.Metadata*
   exceptions: []
   platform:

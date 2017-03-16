@@ -13,7 +13,7 @@ items:
   nameWithType: LazyFormattedBuildEventArgs
   fullName: Microsoft.Build.Framework.LazyFormattedBuildEventArgs
   type: Class
-  summary: "Slaat tekenreeksen voor de onderdelen van een bericht vertragen de opmaak totdat het moet worden weergegeven."
+  summary: Stores strings for parts of a message delaying the formatting until it needs to be shown.
   syntax:
     content: 'public class LazyFormattedBuildEventArgs : Microsoft.Build.Framework.BuildEventArgs'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Standaard-constructor."
+  summary: Default constructor.
   syntax:
     content: protected LazyFormattedBuildEventArgs ();
     parameters: []
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Deze constructor beschikken kan alle gebeurtenisgegevens worden geïnitialiseerd."
+  summary: This constuctor allows all event data to be initialized.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName);
     parameters:
     - id: message
       type: System.String
-      description: "SMS-bericht."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "Help-sleutelwoord."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "naam van de gebeurtenis afzender."
+      description: name of event sender.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -89,25 +89,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Deze constructor beschikken waarmee Berichtargumenten die lazily zijn geformatteerd."
+  summary: This constuctor that allows message arguments that are lazily formatted.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "SMS-bericht."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "Help-sleutelwoord."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "naam van de gebeurtenis afzender."
+      description: name of event sender.
     - id: eventTimestamp
       type: System.DateTime
-      description: "Tijdstempel wanneer gebeurtenis is gemaakt."
+      description: Timestamp when event was created.
     - id: messageArgs
       type: System.Object[]
-      description: "Berichtargumenten."
+      description: Message arguments.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -124,12 +124,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Het opgemaakte bericht opgehaald."
+  summary: Gets the formatted message.
   syntax:
     content: public override string Message { get; }
     return:
       type: System.String
-      description: "Moet worden toegevoegd."
+      description: To be added.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.Message*
   exceptions: []
   platform:

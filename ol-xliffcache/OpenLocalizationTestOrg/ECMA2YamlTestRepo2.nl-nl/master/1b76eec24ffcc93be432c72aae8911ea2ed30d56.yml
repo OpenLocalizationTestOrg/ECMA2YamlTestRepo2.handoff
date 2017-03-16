@@ -15,8 +15,8 @@ items:
   nameWithType: Argument
   fullName: Microsoft.Build.Framework.XamlTypes.Argument
   type: Class
-  summary: "Hiermee geeft u een argument voor een <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref>."
-  remarks: "Functioneel, is dit slechts een verwijzing naar een andere <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> Als u deze klasse handmatig instantiëren, contact opnemen met <xref:Microsoft.Build.Framework.XamlTypes.Argument.BeginInit%2A>voordat u de eerste eigenschap van het object en <xref:Microsoft.Build.Framework.XamlTypes.Argument.EndInit%2A>nadat u de laatste eigenschap ingesteld.</xref:Microsoft.Build.Framework.XamlTypes.Argument.EndInit%2A> </xref:Microsoft.Build.Framework.XamlTypes.Argument.BeginInit%2A>"
+  summary: Represents an argument to a <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref>.
+  remarks: Functionally, this is just a reference to another <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>. If you manually instantiate this class, call <xref:Microsoft.Build.Framework.XamlTypes.Argument.BeginInit%2A> before you set the first property of the object and <xref:Microsoft.Build.Framework.XamlTypes.Argument.EndInit%2A> after you set the last property.
   syntax:
     content: 'public sealed class Argument : System.ComponentModel.ISupportInitialize'
   inheritance:
@@ -38,7 +38,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "De standaardconstructor vereist is voor XAML deserialisatie."
+  summary: Default constructor required for XAML deserialization.
   syntax:
     content: public Argument ();
     parameters: []
@@ -58,7 +58,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Zie <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.</xref:System.ComponentModel.ISupportInitialize.BeginInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.BeginInit*>.
   syntax:
     content: public void BeginInit ();
     parameters: []
@@ -78,7 +78,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Zie <xref:System.ComponentModel.ISupportInitialize.EndInit*>.</xref:System.ComponentModel.ISupportInitialize.EndInit*>"
+  summary: See <xref:System.ComponentModel.ISupportInitialize.EndInit*>.
   syntax:
     content: public void EndInit ();
     parameters: []
@@ -98,13 +98,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Geeft aan of de <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref> waarnaar wordt verwezen door <xref:Microsoft.Build.Framework.XamlTypes.Argument.Property*>moet worden gedefinieerd zodat de definitie van de <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref> die eigenaar is van dit argument zin.</xref:Microsoft.Build.Framework.XamlTypes.Argument.Property*>"
-  remarks: "Dit veld is optioneel en is ingesteld op `false` standaard."
+  summary: Indicates whether the <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref> pointed to by <xref:Microsoft.Build.Framework.XamlTypes.Argument.Property*> must be defined so that the definition of the <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref> that owns this argument makes sense.
+  remarks: This field is optional and is set to `false` by default.
   syntax:
     content: public bool IsRequired { get; set; }
     return:
       type: System.Boolean
-      description: "Retourneert <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref> als de BaseProperty gedefinieerd, anders worden moet, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: Returns <xref uid="langword_csharp_true" name="true" href=""></xref> if the BaseProperty must be defined; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Framework.XamlTypes.Argument.IsRequired*
   exceptions: []
   platform:
@@ -121,13 +121,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Opgehaald of ingesteld van de naam van de <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref> dat dit argument naar verwijst."
-  remarks: "Om de naam, moet de waarde verwijzen naar een geldige <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>.</xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> Dit veld is verplicht en cultuur-variabele."
+  summary: Gets or sets the name of the <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref> that this argument refers to.
+  remarks: To set the name, the value must point to a valid <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty>. This field is mandatory and culture-invariant.
   syntax:
     content: public string Property { get; set; }
     return:
       type: System.String
-      description: "Retourneert de naam van de <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref> dat dit argument naar verwijst."
+      description: Returns the name of the <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref> that this argument refers to.
   overload: Microsoft.Build.Framework.XamlTypes.Argument.Property*
   exceptions: []
   platform:
@@ -144,13 +144,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Opgehaald of ingesteld van de tekenreeks die is gebruikt om de waarde voor het argument van de bovenliggende site te verdelen <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref> overschakelen op de opdrachtregel."
-  remarks: "Dit veld is optioneel en cultuur-variabele."
+  summary: Gets or sets the string used to separate the argument value from the parent <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref> switch in the command line.
+  remarks: This field is optional and culture-invariant.
   syntax:
     content: public string Separator { get; set; }
     return:
       type: System.String
-      description: "Retourneert de tekenreeks die is gebruikt om de waarde voor het argument van de bovenliggende site te verdelen <xref href=&quot;Microsoft.Build.Framework.XamlTypes.BaseProperty&quot;> </xref> overschakelen."
+      description: Returns the string used to separate the argument value from the parent <xref href="Microsoft.Build.Framework.XamlTypes.BaseProperty"></xref> switch.
   overload: Microsoft.Build.Framework.XamlTypes.Argument.Separator*
   exceptions: []
   platform:

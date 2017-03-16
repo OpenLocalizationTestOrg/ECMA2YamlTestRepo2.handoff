@@ -45,7 +45,7 @@ items:
   nameWithType: Vbc
   fullName: Microsoft.Build.Tasks.Vbc
   type: Class
-  summary: "Implementeert de `Vbc` taak. Gebruik de `Vbc` element in het projectbestand maken en deze taak niet uitvoeren. Zie voor informatie en de parameter [Vbc taak](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `Vbc` task. Use the `Vbc` element in your project file to create and execute this task. For usage and parameter information, see [Vbc Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: 'public class Vbc : Microsoft.Build.Tasks.ManagedCompiler'
   inheritance:
@@ -154,7 +154,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.Vbc&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.Vbc"></xref> class.
   syntax:
     content: public Vbc ();
     parameters: []
@@ -174,13 +174,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Vult de opgegeven <code> commandLine </code> parameter met switches en andere informatie die in een responsbestand kan gaan."
+  summary: Fills the specified <code>commandLine</code> parameter with switches and other information that can go into a response file.
   syntax:
     content: protected override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);
     parameters:
     - id: commandLine
       type: Microsoft.Build.Tasks.CommandLineBuilderExtension
-      description: "Opdrachtregel builder argumenten voor toevoegen."
+      description: Command line builder to add arguments to.
   overload: Microsoft.Build.Tasks.Vbc.AddResponseFileCommands*
   exceptions: []
   platform:
@@ -197,12 +197,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van het basisadres van het DLL-bestand."
+  summary: Gets or sets the base address of the DLL.
   syntax:
     content: public string BaseAddress { get; set; }
     return:
       type: System.String
-      description: "Het basisadres van het DLL-bestand."
+      description: The base address of the DLL.
   overload: Microsoft.Build.Tasks.Vbc.BaseAddress*
   exceptions: []
   platform:
@@ -219,14 +219,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Compileert het project via het hostobject."
-  remarks: "Deze methode worden aangeroepen tijdens het uitvoeren als een hostobject is doorgegeven aan de `Vbc` taak."
+  summary: Compiles the project through the host object.
+  remarks: This method will get called during execution if a host object was passed to the `Vbc` task.
   syntax:
     content: protected override bool CallHostObjectToExecute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de compilatie is voltooid; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if compilation succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.CallHostObjectToExecute*
   exceptions: []
   platform:
@@ -243,13 +243,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een of meer waarschuwingen worden onderdrukt door het numerieke gedeelte van de waarschuwing-id worden opgegeven."
-  remarks: "Meerdere waarschuwingen worden gescheiden door puntkomma&quot;s."
+  summary: Gets or sets one or more warnings to suppress that are specified by the numeric part of the warning identifier.
+  remarks: Multiple warnings are separated by semicolons.
   syntax:
     content: public string DisabledWarnings { get; set; }
     return:
       type: System.String
-      description: "De waarschuwingen te onderdrukken die door het numerieke gedeelte van de waarschuwing-id worden opgegeven."
+      description: The warnings to suppress that are specified by the numeric part of the warning identifier.
   overload: Microsoft.Build.Tasks.Vbc.DisabledWarnings*
   exceptions: []
   platform:
@@ -266,13 +266,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Schakelt documentatieopmerkingen verwerken en opgehaald of ingesteld van het XML-bestand voor uitvoer documentatie."
-  remarks: "Deze eigenschap heeft voorrang op de <xref:Microsoft.Build.Tasks.Vbc.GenerateDocumentation%2A>eigenschap.</xref:Microsoft.Build.Tasks.Vbc.GenerateDocumentation%2A>"
+  summary: Turns on documentation comments processing and gets or sets the output documentation XML file.
+  remarks: This property overrides the <xref:Microsoft.Build.Tasks.Vbc.GenerateDocumentation%2A> property.
   syntax:
     content: public string DocumentationFile { get; set; }
     return:
       type: System.String
-      description: "De uitvoer documentatie XML-bestand."
+      description: The output documentation XML file.
   overload: Microsoft.Build.Tasks.Vbc.DocumentationFile*
   exceptions: []
   platform:
@@ -289,13 +289,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een string-waarde die aangeeft hoe de taak interne compilatiefouten worden gerapporteerd."
-  remarks: "Deze eigenschap kan de volgende waarden hebben:- `prompt`       -    `send`       -    `none` als `prompt` is opgegeven en een interne compilatiefout optreedt, wordt de gebruiker wordt gevraagd met een optie van of u de om foutgegevens te verzenden naar Microsoft.       Als `send` is opgegeven en een interne compilatiefout optreedt, wordt de taak de foutgegevens naar Microsoft verzonden.       De standaardwaarde is `none`, welke fouten in de tekst die alleen uitvoer rapporten."
+  summary: Gets or sets a string value that specifies how the task will report internal compiler errors.
+  remarks: "This property can have the following values:  \n  \n-   `prompt`  \n  \n-   `send`  \n  \n-   `none`  \n  \n If `prompt` is specified and an internal compiler error occurs, the user is prompted with an option of whether to send the error data to Microsoft.  \n  \n If `send` is specified and an internal compiler error occurs, the task sends the error data to Microsoft.  \n  \n The default value is `none`, which reports errors in text output only."
   syntax:
     content: public string ErrorReport { get; set; }
     return:
       type: System.String
-      description: "Een string-waarde die aangeeft hoe de taak interne compilatiefouten worden gerapporteerd."
+      description: A string value that specifies how the task will report internal compiler errors.
   overload: Microsoft.Build.Tasks.Vbc.ErrorReport*
   exceptions: []
   platform:
@@ -312,13 +312,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Overschrijven uitvoeren zodat we het PDB-bestand verplaatsen kunt als we moeten, nadat de compiler is voltooid."
+  summary: Override Execute so that we can move the PDB file, if we need to, after the compiler is done.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "Retourneert <xref:System.Boolean>.</xref:System.Boolean>"
+      description: Returns <xref:System.Boolean>.
   overload: Microsoft.Build.Tasks.Vbc.Execute*
   exceptions: []
   platform:
@@ -335,13 +335,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die of aangeeft voor het verwerken van een XML-bestand van documentatieopmerkingen."
-  remarks: "De naam van de XML-bestand voor uitvoer is de naam van het uitvoerbare bestand of de tapewisselaar die het maken van de taak."
+  summary: Gets or sets a Boolean value that specifies whether to process documentation comments to an XML file.
+  remarks: The name of the output XML file is the name of the executable file or the library that the task is creating.
   syntax:
     content: public bool GenerateDocumentation { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Vbc` taak verwerkt documentatieopmerkingen naar een XML-bestand; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task processes documentation comments to a XML file; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.GenerateDocumentation*
   exceptions: []
   platform:
@@ -358,13 +358,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Retourneert het volledige pad van het hulpprogramma."
+  summary: Returns the full file path of the tool.
   syntax:
     content: protected override string GenerateFullPathToTool ();
     parameters: []
     return:
       type: System.String
-      description: "Het volledige pad van het hulpprogramma."
+      description: The full file path of the tool.
   overload: Microsoft.Build.Tasks.Vbc.GenerateFullPathToTool*
   exceptions: []
   platform:
@@ -381,12 +381,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de itemverzamelingen importeren naamruimten uit."
+  summary: Gets or sets the item collections to import namespaces from.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Imports { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De itemverzamelingen importeren naamruimten uit."
+      description: The item collections to import namespaces from.
   overload: Microsoft.Build.Tasks.Vbc.Imports*
   exceptions: []
   platform:
@@ -403,14 +403,14 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Geeft een host-object initialisatie statuswaarde waarmee wordt aangegeven wat de volgende actie moet zijn."
-  remarks: "Deze methode worden aangeroepen tijdens het uitvoeren van deze taak als een hostobject is doorgegeven aan de `Vbc` taak."
+  summary: Returns a host object initialization status value that indicates what the next action should be.
+  remarks: This method will get called during execution of this task if a host object was passed to the `Vbc` task.
   syntax:
     content: protected override Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject ();
     parameters: []
     return:
       type: Microsoft.Build.Utilities.HostObjectInitializationStatus
-      description: "Een host object initialisatie statuswaarde waarmee wordt aangegeven wat de volgende actie moet zijn."
+      description: A host object initialization status value that indicates what the next action should be.
   overload: Microsoft.Build.Tasks.Vbc.InitializeHostObject*
   exceptions: []
   platform:
@@ -427,12 +427,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de taalversie."
+  summary: Gets or sets the language version.
   syntax:
     content: public string LangVersion { get; set; }
     return:
       type: System.String
-      description: "Retourneert de taalversie."
+      description: Returns the language version.
   overload: Microsoft.Build.Tasks.Vbc.LangVersion*
   exceptions: []
   platform:
@@ -449,17 +449,17 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Deze methode de regels die wordt onderschept afkomstig is van STDOUT van VBC."
-  remarks: "Als we een standaard vb waarschuwing of fout ziet, klikt u vervolgens we vastlegt en download de volgende 3 regels zodat we kunt gebruiken om de vorm van een tekenreeks de vorm van FileName.vb(line) naar FileName.vb(line,column) die kunnen we de regel en een kolom aan de IDE en waardoor de fout in de dubbele aanvraag voor multi-targeting filteren of alleen de juiste token in plaats van de gehele lijn kronkelende veranderen."
+  summary: This method intercepts the lines to be logged coming from STDOUT from VBC.
+  remarks: Once we see a standard vb warning or error, then we capture it and grab the next 3 lines so we can transform the string form the form of FileName.vb(line) to FileName.vb(line,column) which will allow us to report the line and column to the IDE, and thus filter the error in the duplicate case for multi-targeting, or just squiggle the appropriate token instead of the entire line.
   syntax:
     content: protected override void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);
     parameters:
     - id: singleLine
       type: System.String
-      description: "Een enkele regel vastgelegd in de STDOUT van de compiler vbc"
+      description: A single line captured from the STDOUT of the vbc compiler
     - id: messageImportance
       type: Microsoft.Build.Framework.MessageImportance
-      description: 'De urgentie van een bericht: hoog, laag of normaal'
+      description: 'The message importance: High,Low, or Normal'
   overload: Microsoft.Build.Tasks.Vbc.LogEventsFromTextOutput*
   exceptions: []
   platform:
@@ -476,12 +476,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de naam van de assembly waarin deze module een deel zal zijn."
+  summary: Gets or sets the name of the assembly that this module will be a part of.
   syntax:
     content: public string ModuleAssemblyName { get; set; }
     return:
       type: System.String
-      description: "De naam van de assembly waarin deze module een deel zal zijn."
+      description: The name of the assembly that this module will be a part of.
   overload: Microsoft.Build.Tasks.Vbc.ModuleAssemblyName*
   exceptions: []
   platform:
@@ -498,12 +498,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de compiler niet moet verwijzen naar de standard-bibliotheken."
+  summary: Gets or sets a Boolean value that specifies whether the compiler should not reference the standard libraries.
   syntax:
     content: public bool NoStandardLib { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de compiler mag niet verwijzen naar de standaard bibliotheken; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the compiler should not reference the standard libraries; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.NoStandardLib*
   exceptions: []
   platform:
@@ -520,12 +520,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de compiler zonder een verwijzing naar de Visual Basic-Runtime-bibliotheek compileren moet."
+  summary: Gets or sets a Boolean value that specifies whether the compiler should compile without a reference to the Visual Basic Runtime Library.
   syntax:
     content: public bool NoVBRuntimeReference { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de compiler zonder een verwijzing naar de Visual Basic Runtime Library compileren moet; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the compiler should compile without a reference to the Visual Basic Runtime Library; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.NoVBRuntimeReference*
   exceptions: []
   platform:
@@ -542,12 +542,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de taak, alle waarschuwingen worden onderdrukt."
+  summary: Gets or sets a Boolean value that specifies whether the task will suppress all warnings.
   syntax:
     content: public bool NoWarnings { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de taak, alle waarschuwingen; onderdrukt worden. anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task will suppress all warnings; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.NoWarnings*
   exceptions: []
   platform:
@@ -564,13 +564,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een string-waarde die aangeeft hoe tekenreeksvergelijkingen zijn gemaakt."
-  remarks: "Deze eigenschap kan de volgende waarden hebben:- `binary`       -    `text` de waarde `binary` geeft aan dat de taak maakt gebruik van binaire tekenreeksen te vergelijken. De waarde `text` geeft aan dat de taak maakt gebruik van tekst tekenreeksen te vergelijken. De standaardwaarde is `binary`."
+  summary: Gets or sets a string value that specifies how string comparisons are made.
+  remarks: "This property can have the following values:  \n  \n-   `binary`  \n  \n-   `text`  \n  \n The value `binary` specifies that the task uses binary string comparisons. The value `text` specifies that the task uses text string comparisons. The default value is `binary`."
   syntax:
     content: public string OptionCompare { get; set; }
     return:
       type: System.String
-      description: "Een string-waarde die aangeeft hoe tekenreeksvergelijkingen zijn gemaakt."
+      description: A string value that specifies how string comparisons are made.
   overload: Microsoft.Build.Tasks.Vbc.OptionCompare*
   exceptions: []
   platform:
@@ -587,12 +587,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of expliciete declaratie van variabelen vereist is."
+  summary: Gets or sets a Boolean value that specifies whether explicit declaration of variables is required.
   syntax:
     content: public bool OptionExplicit { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als u expliciete declaratie van variabelen is vereist. anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if explicit declaration of variables is required; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.OptionExplicit*
   exceptions: []
   platform:
@@ -609,12 +609,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of lokale type interferentie in variabelendeclaraties gebruikt."
+  summary: Gets or sets a Boolean value that specifies whether to use local type inference in variable declarations.
   syntax:
     content: public bool OptionInfer { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Vbc` taak lokale type interferentie gebruikt in de voorbeelden van variabelendeclaraties; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task will use local type inference in variable declarations; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.OptionInfer*
   exceptions: []
   platform:
@@ -631,12 +631,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de taak wordt afgedwongen strikte type semantiek impliciete typeconversies beperken."
+  summary: Gets or sets a Boolean value that specifies whether the task enforces strict type semantics to restrict implicit type conversions.
   syntax:
     content: public bool OptionStrict { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de taak strikte type semantiek afdwingt; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the task enforces strict type semantics; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.OptionStrict*
   exceptions: []
   platform:
@@ -653,12 +653,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een waarde voor de <xref:Microsoft.Build.Tasks.Vbc.OptionStrict*>eigenschap.</xref:Microsoft.Build.Tasks.Vbc.OptionStrict*> Op dit moment kunnen de waarde kan worden ingesteld op &quot;custom&quot; en geeft aan of de taak voor impliciete beperkende typeconversies waarschuwingen genereert."
+  summary: Gets or sets a value for the <xref:Microsoft.Build.Tasks.Vbc.OptionStrict*> property. Currently, the value can be set to "custom" and specifies whether the task generates warnings for implicit narrowing type conversions.
   syntax:
     content: public string OptionStrictType { get; set; }
     return:
       type: System.String
-      description: "Een waarde voor de <xref:Microsoft.Build.Tasks.Vbc.OptionStrict*>eigenschap.</xref:Microsoft.Build.Tasks.Vbc.OptionStrict*>"
+      description: A value for the <xref:Microsoft.Build.Tasks.Vbc.OptionStrict*> property.
   overload: Microsoft.Build.Tasks.Vbc.OptionStrictType*
   exceptions: []
   platform:
@@ -675,12 +675,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Het pad naar de. PDB-bestand."
+  summary: The path to the .Pdb file.
   syntax:
     content: public string PdbFile { get; set; }
     return:
       type: System.String
-      description: "Retourneert <xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.Vbc.PdbFile*
   exceptions: []
   platform:
@@ -697,13 +697,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of geheel getal overloop foutcontroles uitschakelen."
-  remarks: "De standaardwaarde is `false`."
+  summary: Gets or sets a Boolean value that specifies whether to disable integer overflow error checks.
+  remarks: The default value is `false`.
   syntax:
     content: public bool RemoveIntegerChecks { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Vbc` taak geheel getal overloop foutcontroles wordt uitgeschakeld; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task will disable integer overflow error checks; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.RemoveIntegerChecks*
   exceptions: []
   platform:
@@ -720,12 +720,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de naamruimte hoofdmap voor alle typedeclaraties."
+  summary: Gets or sets the root namespace for all type declarations.
   syntax:
     content: public string RootNamespace { get; set; }
     return:
       type: System.String
-      description: "De naamruimte van de hoofdmap voor alle typedeclaraties."
+      description: The root namespace for all type declarations.
   overload: Microsoft.Build.Tasks.Vbc.RootNamespace*
   exceptions: []
   platform:
@@ -742,12 +742,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de locatie van mscorlib.dll en microsoft.visualbasic.dll."
+  summary: Gets or sets the location of mscorlib.dll and microsoft.visualbasic.dll.
   syntax:
     content: public string SdkPath { get; set; }
     return:
       type: System.String
-      description: "De locatie van mscorlib.dll en microsoft.visualbasic.dll."
+      description: The location of mscorlib.dll and microsoft.visualbasic.dll.
   overload: Microsoft.Build.Tasks.Vbc.SdkPath*
   exceptions: []
   platform:
@@ -764,12 +764,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of als doel de [!INCLUDE[Compact](~/add/includes/compact-md.md)]."
+  summary: Gets or sets a Boolean value that specifies whether to target the [!INCLUDE[Compact](~/add/includes/compact-md.md)].
   syntax:
     content: public bool TargetCompactFramework { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Vbc` taak moet het doel de [!INCLUDE[Compact](~/add/includes/compact-md.md)]; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task should target the [!INCLUDE[Compact](~/add/includes/compact-md.md)]; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.TargetCompactFramework*
   exceptions: []
   platform:
@@ -786,12 +786,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hiermee haalt u de naam van het uitvoerbare bestand (vbc.exe)."
+  summary: Gets the name of the tool executable file (vbc.exe).
   syntax:
     content: protected override string ToolName { get; }
     return:
       type: System.String
-      description: "De naam van het uitvoerbare bestand."
+      description: The name of the tool executable file.
   overload: Microsoft.Build.Tasks.Vbc.ToolName*
   exceptions: []
   platform:
@@ -808,12 +808,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of het object compileerprogramma in het proces te gebruiken als deze beschikbaar is. Gebruik alleen door [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)]."
+  summary: Gets or sets a Boolean value that specifies whether to use the in-process compiler object, if available. Used only by [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)].
   syntax:
     content: public bool UseHostCompilerIfAvailable { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `Vbc` taak maakt gebruik van het object process-compiler als beschikbaar is, anders, <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `Vbc` task will use the in-process compiler object, if available; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.UseHostCompilerIfAvailable*
   exceptions: []
   platform:
@@ -830,13 +830,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Valideert ingevoerde parameters en logboeken fouten of waarschuwingen, indien van toepassing. Retourneert een Booleaanse waarde die aangeeft of de uitvoering van de taak moet doorgaan."
+  summary: Validates input parameters and logs errors or warnings, if any. Returns a Boolean value that indicates whether task execution should proceed.
   syntax:
     content: protected override bool ValidateParameters ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de uitvoering van de taak moet worden voortgezet; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution should proceed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.Vbc.ValidateParameters*
   exceptions: []
   platform:
@@ -853,12 +853,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Geeft aan of te compileren met de standaard Visual Basic-runtime."
+  summary: Specifies whether to compile with the default Visual Basic runtime.
   syntax:
     content: public string VBRuntime { get; set; }
     return:
       type: System.String
-      description: "Retourneert <xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.Vbc.VBRuntime*
   exceptions: []
   platform:
@@ -875,12 +875,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Het pad naar de Visual Basic-runtime gebruiken."
+  summary: The path to the Visual Basic runtime to use.
   syntax:
     content: public string VBRuntimePath { get; set; }
     return:
       type: System.String
-      description: "Retourneert <xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.Vbc.VBRuntimePath*
   exceptions: []
   platform:
@@ -897,13 +897,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de gegevens opnemen in de compiler-uitvoer, die kan worden `Quiet`, `Normal`, of `Verbose`."
-  remarks: "De gegevens standaard opnemen is `Normal`."
+  summary: Gets or sets the verbosity of the compiler’s output, which can be `Quiet`, `Normal`, or `Verbose`.
+  remarks: The default verbosity is `Normal`.
   syntax:
     content: public string Verbosity { get; set; }
     return:
       type: System.String
-      description: "Gegevens opnemen in de compiler-uitvoer."
+      description: The verbosity of the compiler’s output.
   overload: Microsoft.Build.Tasks.Vbc.Verbosity*
   exceptions: []
   platform:
@@ -920,12 +920,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een lijst met waarschuwingen om u te behandelen als fouten."
+  summary: Gets or sets a list of warnings to treat as errors.
   syntax:
     content: public string WarningsAsErrors { get; set; }
     return:
       type: System.String
-      description: "Een lijst met waarschuwingen om u te behandelen als fouten."
+      description: A list of warnings to treat as errors.
   overload: Microsoft.Build.Tasks.Vbc.WarningsAsErrors*
   exceptions: []
   platform:
@@ -942,12 +942,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een lijst met waarschuwingen worden geretourneerd die niet worden behandeld als fouten."
+  summary: Gets or sets a list of warnings that are not treated as errors.
   syntax:
     content: public string WarningsNotAsErrors { get; set; }
     return:
       type: System.String
-      description: "Een lijst met waarschuwingen worden geretourneerd die niet worden behandeld als fouten."
+      description: A list of warnings that are not treated as errors.
   overload: Microsoft.Build.Tasks.Vbc.WarningsNotAsErrors*
   exceptions: []
   platform:

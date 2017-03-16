@@ -39,7 +39,7 @@ items:
   nameWithType: GenerateResource
   fullName: Microsoft.Build.Tasks.GenerateResource
   type: Class
-  summary: "Implementeert de `GenerateResource` taak. Gebruik de `GenerateResource` element in het projectbestand maken en deze taak niet uitvoeren. Zie voor informatie en de parameter [GenerateResource taak](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `GenerateResource` task. Use the `GenerateResource` element in your project file to create and execute this task. For usage and parameter information, see [GenerateResource Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: >-
       [Microsoft.Build.Framework.RequiredRuntime("v2.0")]
@@ -73,7 +73,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;Microsoft.Build.Tasks.GenerateResource&quot;> </xref> klasse."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.GenerateResource"></xref> class.
   syntax:
     content: public GenerateResource ();
     parameters: []
@@ -93,13 +93,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de aanvullende invoeren voor de afhankelijkheid na te gaan of de `GenerateResource` taak uitvoert."
-  remarks: "Voor het voorbeeld voor het project en de doelen bestanden moeten invoeren om ervoor te zorgen dat als ze zijn bijgewerkt worden alle resources opnieuw gegenereerd."
+  summary: Gets or sets the additional inputs for the dependency checking that the `GenerateResource` task performs.
+  remarks: For example, the project and targets files should be inputs to ensure that if they are updated all resources are regenerated.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] AdditionalInputs { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De extra invoeren voor de afhankelijkheid na te gaan of de `GenerateResource` taak uitvoert."
+      description: The additional inputs for the dependency checking that the `GenerateResource` task performs.
   overload: Microsoft.Build.Tasks.GenerateResource.AdditionalInputs*
   exceptions: []
   platform:
@@ -116,13 +116,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een matrix van naam / waarde-paren van omgeving variabelen die moeten worden doorgegeven aan de actieve resgen.exe naast (of selectief onderdrukken) het omgevingsblok reguliere."
-  remarks: "Deze worden niet op dit moment gebruikt wanneer resgen in het proces wordt uitgevoerd."
+  summary: Gets or sets an array of name-value pairs of environment variables that should be passed to the spawned resgen.exe, in addition to (or selectively overriding) the regular environment block.
+  remarks: These aren't currently used when resgen is run in-process.
   syntax:
     content: public string[] EnvironmentVariables { get; set; }
     return:
       type: System.String[]
-      description: "Retourneert een matrix van naam / waarde-paren van omgevingsvariabelen."
+      description: Returns an array of name-value pairs of environment variables.
   overload: Microsoft.Build.Tasks.GenerateResource.EnvironmentVariables*
   exceptions: []
   platform:
@@ -139,12 +139,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een matrix van items die paden waaruit bijgehouden invoer worden genegeerd tijdens het controleren van up-to-date opgeven."
+  summary: Gets or sets an array of items that specify paths from which tracked inputs will be ignored during Up to date checking.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ExcludedInputPaths { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Retourneert een matrix van items die paden waaruit bijgehouden invoer worden genegeerd tijdens het controleren van up-to-date opgeven."
+      description: Returns an array of items that specify paths from which tracked inputs will be ignored during Up to date checking.
   overload: Microsoft.Build.Tasks.GenerateResource.ExcludedInputPaths*
   exceptions: []
   platform:
@@ -161,13 +161,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Voert de `GenerateResource` taak."
+  summary: Executes the `GenerateResource` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `GenerateResource` taakuitvoering is voltooid; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `GenerateResource` task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateResource.Execute*
   exceptions: []
   platform:
@@ -184,12 +184,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: 'Eigenschap waarmee multitargeting van ResolveComReferences: als waar, tlbimp.exe en aximp.exe van het juiste doel framework zal worden uitgevoerd out-of-proc voor het genereren van de benodigde wrapper-assembly&quot;s.'
+  summary: 'Property to allow multitargeting of ResolveComReferences: If true, tlbimp.exe and aximp.exe from the appropriate target framework will be run out-of-proc to generate the necessary wrapper assemblies.'
   syntax:
     content: public bool ExecuteAsTool { get; set; }
     return:
       type: System.Boolean
-      description: "Moet worden toegevoegd."
+      description: To be added.
   overload: Microsoft.Build.Tasks.GenerateResource.ExecuteAsTool*
   exceptions: []
   platform:
@@ -206,13 +206,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een vlag die aangeeft of deze regel .resources-bestanden genereert of extraheren. ResW bestanden uit assembly&quot;s."
-  remarks: "Vereist extra invoer filteren."
+  summary: Gets or sets a flag specifying whether this rule is generating .resources files or extracting .ResW files from assemblies.
+  remarks: Requires additional input filtering.
   syntax:
     content: public bool ExtractResWFiles { get; set; }
     return:
       type: System.Boolean
-      description: "Retourneert de markering."
+      description: Returns the flag.
   overload: Microsoft.Build.Tasks.GenerateResource.ExtractResWFiles*
   exceptions: []
   platform:
@@ -229,12 +229,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de namen van alle bestanden naar de schijf met het cachebestand wordt geschreven, indien aanwezig."
+  summary: Gets or sets the names of all files written to disk including the cache file, if present.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] FilesWritten { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De namen van alle bestanden die zijn geschreven naar schijf."
+      description: The names of all files written to disk.
   overload: Microsoft.Build.Tasks.GenerateResource.FilesWritten*
   exceptions: []
   platform:
@@ -251,12 +251,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een switch waarmee wordt aangegeven of bijgehouden incrementele build worden gebruikt. Indien waar, is incrementele build ingeschakeld. anders wordt opnieuw opbouwen afgebroken."
+  summary: Gets or sets a switch that specifies whether tracked incremental build will be used. If true, incremental build is turned on; otherwise, a rebuild will be forced.
   syntax:
     content: public bool MinimalRebuildFromTracking { get; set; }
     return:
       type: System.Boolean
-      description: "Retourneert een switch waarmee wordt aangegeven of bijgehouden incrementele build worden gebruikt. Indien waar, is incrementele build ingeschakeld. anders wordt opnieuw opbouwen afgebroken."
+      description: Returns a switch that specifies whether tracked incremental build will be used. If true, incremental build is turned on; otherwise, a rebuild will be forced.
   overload: Microsoft.Build.Tasks.GenerateResource.MinimalRebuildFromTracking*
   exceptions: []
   platform:
@@ -273,13 +273,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Een Booleaanse waarde die of aangeeft Maak een nieuwe opgehaald of ingesteld <xref href=&quot;System.AppDomain&quot;> </xref> om te evalueren van de resources (.resx)-bestanden (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) of maak een nieuwe <xref href=&quot;System.AppDomain&quot;> </xref> alleen wanneer de bestanden resources verwijst naar assembly van de gebruiker (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
-  remarks: "De standaardwaarde is `false`."
+  summary: Gets or sets a Boolean value that specifies whether to create a new <xref href="System.AppDomain"></xref> to evaluate the resources (.resx) files (<xref uid="langword_csharp_true" name="true" href=""></xref>) or to create a new <xref href="System.AppDomain"></xref> only when the resources files reference a user's assembly (<xref uid="langword_csharp_false" name="false" href=""></xref>).
+  remarks: The default value is `false`.
   syntax:
     content: public bool NeverLockTypeAssemblies { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `GenerateResource` taak moet maakt u een nieuwe <xref href=&quot;System.AppDomain&quot;> </xref> om te evalueren van de resources (.resx)-bestanden. <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> als de `GenerateResource` taak moet maakt u een nieuwe <xref href=&quot;System.AppDomain&quot;> </xref> alleen wanneer de resources (.resx)-bestanden verwijzen naar een gebruiker assembly."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `GenerateResource` task should create a new <xref href="System.AppDomain"></xref> to evaluate the resources (.resx) files; <xref uid="langword_csharp_false" name="false" href=""></xref> if the `GenerateResource` task should create a new <xref href="System.AppDomain"></xref> only when the resources (.resx) files reference a user's assembly.
   overload: Microsoft.Build.Tasks.GenerateResource.NeverLockTypeAssemblies*
   exceptions: []
   platform:
@@ -296,13 +296,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een waarde opgeven waar om op te halen. ResW bestanden."
-  remarks: "De tussenliggende map kan zijn."
+  summary: Gets or sets a value specifying where to extract .ResW files.
+  remarks: Could be the intermediate directory.
   syntax:
     content: public string OutputDirectory { get; set; }
     return:
       type: System.String
-      description: "Retourneert de waarde."
+      description: Returns the value.
   overload: Microsoft.Build.Tasks.GenerateResource.OutputDirectory*
   exceptions: []
   platform:
@@ -319,13 +319,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de naam van de gegenereerde bestanden, zoals .resources-bestanden."
-  remarks: "Als u geen naam opgeeft, wordt de naam van de overeenkomende invoerbestand gebruikt en het .resources-bestand dat is gemaakt in de map waarin het invoerbestand is geplaatst."
+  summary: Gets or sets the name of the generated files, such as .resources files.
+  remarks: If you do not specify a name, the name of the matching input file is used and the .resources file that is created is placed in the directory that contains the input file.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] OutputResources { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De naam van de gegenereerde bestanden, zoals .resources."
+      description: The name of the generated files, such as .resources files.
   overload: Microsoft.Build.Tasks.GenerateResource.OutputResources*
   exceptions: []
   platform:
@@ -342,12 +342,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of de `GenerateResource` taak moet een sterk getypeerde bronklasse als openbare klasse maken."
+  summary: Gets or sets a Boolean value that indicates whether the `GenerateResource` task should create a strongly typed resource class as a public class.
   syntax:
     content: public bool PublicClass { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als de `GenerateResource` taak moet maken van een sterk getypeerde bronklasse als openbare klasse; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the `GenerateResource` task should create a strongly typed resource class as a public class; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateResource.PublicClass*
   exceptions: []
   platform:
@@ -364,13 +364,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de verwijzingen naar typen in .resx bestanden van laden."
-  remarks: "Gegevenselementen resx-bestand kunnen een .NET-type hebben. Wanneer de .resx-bestand wordt gelezen, moet deze worden opgelost. Normaal gesproken het probleem is opgelost met succes door standaard type bij het laden van regels te gebruiken. Als u assembly&quot;s in de referenties opgeeft, voorrang ze.       Deze parameter is niet vereist voor sterk getypeerde bronnen."
+  summary: Gets or sets the references to load types in .resx files from.
+  remarks: "Resx file data elements may have a .NET type. When the .resx file is read, this must be resolved. Typically, it is resolved successfully by using standard type loading rules. If you provide assemblies in References, they take precedence.  \n  \n This parameter is not required for strongly typed resources."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] References { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De verwijzingen naar typen in .resx bestanden van laden."
+      description: The references to load types in .resx files from.
   overload: Microsoft.Build.Tasks.GenerateResource.References*
   exceptions: []
   platform:
@@ -387,12 +387,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hoewel de genereren resource-taak de verwerking in proces doet wordt, wordt een bericht logboekregistratie nog steeds gegenereerd. Dit bericht logboekregistratie bevat het pad naar de windows SDK. Aangezien de doelen nu goedgekeurd in de Windows SDK-pad moet we deze gebruiken voor logboekregistratie."
+  summary: Even though the generate resource task will do the processing in process, a logging message is still generated. This logging message will include the path to the windows SDK. Since the targets now will pass in the Windows SDK path we should use this for logging.
   syntax:
     content: public string SdkToolsPath { get; set; }
     return:
       type: System.String
-      description: "Moet worden toegevoegd."
+      description: To be added.
   overload: Microsoft.Build.Tasks.GenerateResource.SdkToolsPath*
   exceptions: []
   platform:
@@ -409,13 +409,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de items te converteren."
-  remarks: "Items die zijn doorgegeven aan de parameter moeten een van de volgende bestandsextensies hebben:- `.txt`: Hiermee geeft u de uitbreiding voor een tekstbestand dat u wilt converteren. Tekstbestanden kunnen alleen tekenreeksresources bevatten.      - `.resx`: Hiermee geeft u de uitbreiding voor een resource op basis van een XML-bestand te converteren.      - `.restext`: Hiermee geeft u dezelfde indeling als .txt. Deze andere extensie is handig als u wilt dat de bronbestanden met resources van andere bronbestanden in uw buildproces duidelijk onderscheid te maken.       `.resources`: Hiermee geeft u de uitbreiding voor een resource-bestand te converteren."
+  summary: Gets or sets the items to convert.
+  remarks: "Items passed to this parameter must have one of the following file extensions:  \n  \n-   `.txt`: Specifies the extension for a text file to convert. Text files can only contain string resources.  \n  \n-   `.resx`: Specifies the extension for an XML-based resource file to convert.  \n  \n-   `.restext`: Specifies the same format as .txt. This different extension is useful if you want to clearly distinguish source files that contain resources from other source files in your build process.  \n  \n `.resources`: Specifies the extension for a resource file to convert."
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Sources { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "De items te converteren."
+      description: The items to convert.
   overload: Microsoft.Build.Tasks.GenerateResource.Sources*
   exceptions: []
   platform:
@@ -432,12 +432,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van het pad naar een optionele cachebestand dat wordt gebruikt voor het controleren van koppelingen op .resx, invoerbestanden afhankelijkheid versnellen."
+  summary: Gets or sets the path to an optional cache file that is used to speed up dependency checking of links in .resx input files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem StateFile { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Het pad naar een optionele cachebestand dat wordt gebruikt voor het controleren van koppelingen op .resx, invoerbestanden afhankelijkheid versnellen."
+      description: The path to an optional cache file that is used to speed up dependency checking of links in .resx input files.
   overload: Microsoft.Build.Tasks.GenerateResource.StateFile*
   exceptions: []
   platform:
@@ -454,13 +454,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de naam van de klasse voor het sterk getypeerde bronklasse."
-  remarks: "Als deze eigenschap niet is opgegeven, wordt de naam op van het bronbestand wordt gebruikt."
+  summary: Gets or sets the class name for the strongly typed resource class.
+  remarks: If this property is not specified, the base name of the resource file is used.
   syntax:
     content: public string StronglyTypedClassName { get; set; }
     return:
       type: System.String
-      description: "De naam van de klasse voor het sterk getypeerde bronklasse."
+      description: The class name for the strongly typed resource class.
   overload: Microsoft.Build.Tasks.GenerateResource.StronglyTypedClassName*
   exceptions: []
   platform:
@@ -477,13 +477,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de bestandsnaam van het bronbestand."
-  remarks: 'Als deze eigenschap niet is opgegeven, wordt de naam van de klasse als de basistabel bestandsnaam, de uitbreiding is afhankelijk van de taal gebruikt. Bijvoorbeeld: `MyClass.cs`.'
+  summary: Gets or sets the filename for the source file.
+  remarks: 'If this property is not specified, the name of the class is used as the base filename, with the extension dependent on the language. For example: `MyClass.cs`.'
   syntax:
     content: public string StronglyTypedFileName { get; set; }
     return:
       type: System.String
-      description: "De bestandsnaam van het bronbestand."
+      description: The filename for the source file.
   overload: Microsoft.Build.Tasks.GenerateResource.StronglyTypedFileName*
   exceptions: []
   platform:
@@ -500,13 +500,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de taal die u wilt gebruiken bij het genereren van de bron van de klasse voor de sterk getypeerde resource."
-  remarks: "Deze eigenschap moet overeenkomen met exact één van de talen die worden gebruikt door de CodeDomProvider. Bijvoorbeeld: `VB` of `C#`.       Opdracht geven de taak voor het genereren van sterk getypeerde bronnen door een waarde voor deze parameter."
+  summary: Gets or sets the language to use when generating the class source for the strongly typed resource.
+  remarks: "This property must match exactly one of the languages used by the CodeDomProvider. For example: `VB` or `C#`.  \n  \n By passing a value to this parameter, you instruct the task to generate strongly typed resources."
   syntax:
     content: public string StronglyTypedLanguage { get; set; }
     return:
       type: System.String
-      description: "De taal die wordt gebruikt bij het genereren van de bron van de klasse voor de sterk getypeerde resource."
+      description: The language to use when generating the class source for the strongly typed resource.
   overload: Microsoft.Build.Tasks.GenerateResource.StronglyTypedLanguage*
   exceptions: []
   platform:
@@ -523,12 +523,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van het voorvoegsel resource naamruimte of manifest moet worden gebruikt in de bron gegenereerde klasse voor de sterk getypeerde resource."
+  summary: Gets or sets the resource namespace or manifest prefix to use in the generated class source for the strongly typed resource.
   syntax:
     content: public string StronglyTypedManifestPrefix { get; set; }
     return:
       type: System.String
-      description: "De resource naamruimte of manifest voorvoegsel moet worden gebruikt in de bron gegenereerde klasse voor de sterk getypeerde resource."
+      description: The resource namespace or manifest prefix to use in the generated class source for the strongly typed resource.
   overload: Microsoft.Build.Tasks.GenerateResource.StronglyTypedManifestPrefix*
   exceptions: []
   platform:
@@ -545,13 +545,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de naamruimte moet worden gebruikt voor de bron van de gegenereerde klasse voor de sterk getypeerde resource."
-  remarks: "Als deze eigenschap niet is opgegeven, worden eventuele sterk getypeerde resources in de globale naamruimte."
+  summary: Gets or sets the namespace to use for the generated class source for the strongly typed resource.
+  remarks: If this property is not specified, any strongly typed resources are in the global namespace.
   syntax:
     content: public string StronglyTypedNamespace { get; set; }
     return:
       type: System.String
-      description: "De naamruimte moet worden gebruikt voor de bron van de gegenereerde klasse voor de sterk getypeerde resource."
+      description: The namespace to use for the generated class source for the strongly typed resource.
   overload: Microsoft.Build.Tasks.GenerateResource.StronglyTypedNamespace*
   exceptions: []
   platform:
@@ -568,12 +568,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Hiermee haalt u een matrix van items die het bijhouden van Logboeken lezen vertegenwoordigen."
+  summary: Gets an array of items that represent the read tracking logs.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TLogReadFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Retourneert een matrix van items die het bijhouden van Logboeken lezen vertegenwoordigen."
+      description: Returns an array of items that represent the read tracking logs.
   overload: Microsoft.Build.Tasks.GenerateResource.TLogReadFiles*
   exceptions: []
   platform:
@@ -590,12 +590,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Haalt een matrix van items die de schrijfbewerking vertegenwoordigen logboeken bijhouden."
+  summary: Gets an array of items that represent the write tracking logs.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TLogWriteFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Retourneert een matrix van items die de logboeken schrijven bijhouden vertegenwoordigen."
+      description: Returns an array of items that represent the write tracking logs.
   overload: Microsoft.Build.Tasks.GenerateResource.TLogWriteFiles*
   exceptions: []
   platform:
@@ -612,12 +612,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Microsoft.Build.Utilities.ExecutableType van ResGen.exe. Gebruikt om te bepalen of er Tracker.exe worden gebruikt moet voor het starten van ResGen.exe. Als dit leeg is, gebruikt een heuristiek om te bepalen van een standaard-architectuur."
+  summary: Microsoft.Build.Utilities.ExecutableType of ResGen.exe. Used to determine whether or not Tracker.exe needs to be used to spawn ResGen.exe. If empty, uses a heuristic to determine a default architecture.
   syntax:
     content: public string ToolArchitecture { get; set; }
     return:
       type: System.String
-      description: "Retourneert <xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.GenerateResource.ToolArchitecture*
   exceptions: []
   platform:
@@ -634,12 +634,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pad naar de juiste locatie van .NET Framework die FileTracker.dll bevat. Als is ingesteld, de gebruiker de verantwoordelijkheid neemt voor ervoor te zorgen dat is de bitness van de FileTracker.dll die ze hebben doorstaan komt overeen met de bitness van de ResGen.exe die ze willen gebruiken. Als dat niet is ingesteld, de taak besluit de juiste locatie op basis van de huidige versie van .NET Framework."
+  summary: Path to the appropriate .NET Framework location that contains FileTracker.dll. If set, the user takes responsibility for making sure that the bitness of the FileTracker.dll that they pass matches the bitness of the ResGen.exe that they intend to use. If not set, the task decides the appropriate location based on the current .NET Framework version.
   syntax:
     content: public string TrackerFrameworkPath { get; set; }
     return:
       type: System.String
-      description: "Retourneert <xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.GenerateResource.TrackerFrameworkPath*
   exceptions: []
   platform:
@@ -656,12 +656,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van de tussenliggende map waarin u de logboeken bijhouden van het uitvoeren van deze taak wordt geplaatst."
+  summary: Gets or sets the intermediate directory into which the tracking logs from running this task will be placed.
   syntax:
     content: public string TrackerLogDirectory { get; set; }
     return:
       type: System.String
-      description: "Retourneert de tussenliggende map waarin u de logboeken bijhouden van het uitvoeren van deze taak wordt geplaatst."
+      description: Returns the intermediate directory into which the tracking logs from running this task will be placed.
   overload: Microsoft.Build.Tasks.GenerateResource.TrackerLogDirectory*
   exceptions: []
   platform:
@@ -678,12 +678,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pad naar de Windows SDK locatie die Tracker.exe bevat. Als is ingesteld, de gebruiker de verantwoordelijkheid neemt voor ervoor te zorgen dat is de bitness van de Tracker.exe die ze hebben doorstaan komt overeen met de bitness van de ResGen.exe die ze willen gebruiken. Als dat niet is ingesteld, de taak besluit de juiste locatie op basis van de huidige Windows-SDK."
+  summary: Path to the appropriate Windows SDK location that contains Tracker.exe. If set, the user takes responsibility for making sure that the bitness of the Tracker.exe that they pass matches the bitness of the ResGen.exe that they intend to use. If not set, the task decides the appropriate location based on the current Windows SDK.
   syntax:
     content: public string TrackerSdkPath { get; set; }
     return:
       type: System.String
-      description: "Retourneert <xref:System.String>.</xref:System.String>"
+      description: Returns <xref:System.String>.
   overload: Microsoft.Build.Tasks.GenerateResource.TrackerSdkPath*
   exceptions: []
   platform:
@@ -700,13 +700,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een switch waarmee wordt aangegeven of we bestand toegang patronen moet bijhouden."
-  remarks: "Ter ondersteuning van incrementele build, is het nodig zijn voor het bijhouden van bestand toegang patronen."
+  summary: Gets or sets a switch that specifies whether we should be tracking file access patterns.
+  remarks: To support incremental build, it is necessary to track file access patterns.
   syntax:
     content: public bool TrackFileAccess { get; set; }
     return:
       type: System.Boolean
-      description: "True als we bestand toegang patronen bijhouden moet; de waarde False anders."
+      description: True if we should be tracking file access patterns; false otherwise.
   overload: Microsoft.Build.Tasks.GenerateResource.TrackFileAccess*
   exceptions: []
   platform:
@@ -723,12 +723,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Opgehaald of ingesteld van een Booleaanse waarde die aangeeft of het invoerbestand directory moet worden gebruikt voor het oplossen van relatieve paden."
+  summary: Gets or sets a Boolean value that indicates whether the input file's directory is to be used for resolving relative file paths.
   syntax:
     content: public bool UseSourcePath { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Als het invoerbestand directory moet worden gebruikt voor het oplossen van relatieve paden; anders <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the input file's directory is to be used for resolving relative file paths; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.GenerateResource.UseSourcePath*
   exceptions: []
   platform:

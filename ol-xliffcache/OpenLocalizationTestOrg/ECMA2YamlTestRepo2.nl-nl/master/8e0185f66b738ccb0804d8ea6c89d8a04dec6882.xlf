@@ -1,0 +1,738 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nl-nl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8e0185f66b738ccb0804d8ea6c89d8a04dec6882</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Media.Animation.Storyboard.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">468c3dc66d470fe2ddf4b4198a3bb1d80b20e06d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2df83ec12b1cf542e0cf9e32f59ea85dbf631d26</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>A container timeline that provides object and property targeting information for its child animations.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">##</ph> Interactively Controlling Storyboards    A controllable storyboard can pause, resume, seek, stop, and be removed.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in markup, you specify the &lt;xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A&gt; property of the &lt;xref:System.Windows.Media.Animation.BeginStoryboard&gt; object that creates it; for an example, see <bpt id="p1">[</bpt>How to: Use Event Triggers to Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in code, you must use the appropriate overload of the storyboard's &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method and specify <ph id="ph1">`true`</ph> to make it controllable.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example, see <bpt id="p1">[</bpt>How to: Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Data Binding and Animating Timelines    Most timeline properties can be data bound or animated; however, because of the way the timing system works, data bound or animated timelines do not behave like other data bound or animated objects.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To understand their behavior, it helps to understand what it means to activate a timeline.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a timeline is activated, copies are made of the timeline and its child timelines.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These copies are frozen (made read-only) and &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created from them.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks do the actual work of animating the targeted properties.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If a timeline is data bound or animated, a snapshot of its current values is made when its clock is created.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Even though the original timeline might continue to change, its clock does not.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a timeline to reflect data binding or animation changes, its clock must be re-created.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Clocks are not re-created for you automatically.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following are several ways to apply timeline changes:      -   If the timeline is or belongs to a Storyboard, you can make it reflect changes by reapplying its storyboard using a &lt;xref:System.Windows.Media.Animation.BeginStoryboard&gt; or the &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This has the side effect of also restarting the animation.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In code, you can use the &lt;xref:System.Windows.Media.Animation.Storyboard.Seek%2A&gt; method to advance the storyboard back to its previous position.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If you applied an animation directly to a property using the &lt;xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A&gt; method, call the &lt;xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A&gt; method again and pass it the animation that has been modified.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   If you are working directly at the clock level, create and apply a new set of clocks and use them to replace the previous set of created clocks.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example of a data bound animation, see <bpt id="p1">[</bpt>Key Spline Animation Sample<ept id="p1">](http://go.microsoft.com/fwlink/?LinkID=160011)</ept> .</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the targeted properties are already animated, they are replaced using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; handoff behavior.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Storyboards started with this method cannot be paused, resumed, or otherwise interactively controlled after they are started.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable, use the &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; or &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the targeted properties are already animated, they are replaced using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; handoff behavior.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Storyboards started with this method cannot be paused, resumed, or otherwise interactively controlled after they are started.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable, use the &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Boolean%29&gt; or &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Windows.Media.Animation.HandoffBehavior%2CSystem.Boolean%29&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the targeted properties are already animated, they are replaced using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; handoff behavior.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To interactively control this storyboard, you must specify the same <ph id="ph1">`containingObject`</ph> when calling the interactive methods that you used to begin the storyboard       When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the storyboard should be interactively controllable; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them, using the specified <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.HandoffBehavior"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you apply a &lt;xref:System.Windows.Media.Animation.Storyboard&gt;, &lt;xref:System.Windows.Media.Animation.AnimationTimeline&gt;, or &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to a property using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, any &lt;xref:System.Windows.Media.Animation.Clock&gt; objects previously associated with that property continue to consume system resources; the timing system does not remove these clocks automatically.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To avoid performance issues when you apply a large number of clocks using &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, you should remove composing clocks from the animated property after they complete.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are several ways to remove a clock.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove all clocks from a property, use the &lt;xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29&gt; or &lt;xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29&gt; method of the animated object.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specify the property being animated as the first parameter, and <ph id="ph1">`null`</ph> as the second.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This removes all animation clocks from the property.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove a specific &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; from a list of clocks, use the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of the &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to retrieve a &lt;xref:System.Windows.Media.Animation.ClockController&gt;, then call the &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt; method of the &lt;xref:System.Windows.Media.Animation.ClockController&gt;.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is typically done in the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event handler for a clock.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note that only root clocks can be controlled by a &lt;xref:System.Windows.Media.Animation.ClockController&gt;; the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of a child clock returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note also that the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event is not called if the effective duration of the clock is forever.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In that case, the user must determine when to call &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is primarily an issue for animations on objects that have a long lifetime.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an object is garbage collected, its clocks are also disconnected and garbage collected.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about clock objects, see <bpt id="p1">[</bpt>Animation and Timing System Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The behavior the new animation should use to interact with any current animations.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the targeted properties are already animated, they are replaced using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; handoff behavior.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To interactively control this storyboard, you must use the same <ph id="ph1">`containingObject`</ph> parameter when calling the interactive methods that you used to begin the storyboard       When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the storyboard should be interactively controllable; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets within the specified template and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the targeted properties are already animated, they are replaced using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; handoff behavior.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The object to which the specified <ph id="ph1">`frameworkTemplate`</ph> has been applied.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The template to animate.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them, using the specified <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.HandoffBehavior"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Animations without a specified &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The behavior the new animation should use to interact with any current animations.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them, using the specified <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.HandoffBehavior"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the targeted properties are already animated, they are replaced using the specified handoff behavior.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To interactively control this storyboard, you must specify the same <ph id="ph1">`containingObject`</ph> when calling the interactive methods that you used to begin the storyboard       When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the Compose HandoffBehavior    When you apply a &lt;xref:System.Windows.Media.Animation.Storyboard&gt;, &lt;xref:System.Windows.Media.Animation.AnimationTimeline&gt;, or &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to a property using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, any &lt;xref:System.Windows.Media.Animation.Clock&gt; objects previously associated with that property continue to consume system resources; the timing system does not remove these clocks automatically.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To avoid performance issues when you apply a large number of clocks using &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, you should remove composing clocks from the animated property after they complete.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are several ways to remove a clock.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove all clocks from a property, use the &lt;xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29&gt; or &lt;xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29&gt; method of the animated object.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specify the property being animated as the first parameter, and <ph id="ph1">`null`</ph> as the second.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This removes all animation clocks from the property.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove a specific &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; from a list of clocks, use the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of the &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to retrieve a &lt;xref:System.Windows.Media.Animation.ClockController&gt;, then call the &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt; method of the &lt;xref:System.Windows.Media.Animation.ClockController&gt;.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is typically done in the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event handler for a clock.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note that only root clocks can be controlled by a &lt;xref:System.Windows.Media.Animation.ClockController&gt;; the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of a child clock returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note also that the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event is not called if the effective duration of the clock is forever.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In that case, the user must determine when to call &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is primarily an issue for animations on objects that have a long lifetime.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an object is garbage collected, its clocks are also disconnected and garbage collected.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about clock objects, see <bpt id="p1">[</bpt>Animation and Timing System Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Animations without a specified &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The behavior the new animation should use to interact with any current animations.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Declares whether the animation is controllable (can be paused) once started.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets within the specified template and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the targeted properties are already animated, they are replaced using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; handoff behavior.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To interactively control this storyboard, you must specify the same <ph id="ph1">`containingObject`</ph> when calling the interactive methods that you used to begin the storyboard       When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The object to which the specified <ph id="ph1">`frameworkTemplate`</ph> has been applied.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>The template to animate.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the storyboard should be interactively controllable; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets within the specified template and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the Compose HandoffBehavior    When you apply a &lt;xref:System.Windows.Media.Animation.Storyboard&gt;, &lt;xref:System.Windows.Media.Animation.AnimationTimeline&gt;, or &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to a property using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, any &lt;xref:System.Windows.Media.Animation.Clock&gt; objects previously associated with that property continue to consume system resources; the timing system does not remove these clocks automatically.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To avoid performance issues when you apply a large number of clocks using &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, you should remove composing clocks from the animated property after they complete.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are several ways to remove a clock.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove all clocks from a property, use the &lt;xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29&gt; or &lt;xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29&gt; method of the animated object.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specify the property being animated as the first parameter, and <ph id="ph1">`null`</ph> as the second.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This removes all animation clocks from the property.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove a specific &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; from a list of clocks, use the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of the &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to retrieve a &lt;xref:System.Windows.Media.Animation.ClockController&gt;, then call the &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt; method of the &lt;xref:System.Windows.Media.Animation.ClockController&gt;.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is typically done in the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event handler for a clock.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note that only root clocks can be controlled by a &lt;xref:System.Windows.Media.Animation.ClockController&gt;; the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of a child clock returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note also that the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event is not called if the effective duration of the clock is forever.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In that case, the user must determine when to call &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is primarily an issue for animations on objects that have a long lifetime.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an object is garbage collected, its clocks are also disconnected and garbage collected.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about clock objects, see <bpt id="p1">[</bpt>Animation and Timing System Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>The object to which the specified <ph id="ph1">`frameworkTemplate`</ph> has been applied.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>The template to animate.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The behavior the new animation should use to interact with any current animations.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To interactively control this storyboard, you must use the same <ph id="ph1">`containingObject`</ph> parameter when calling the interactive methods that you used to begin the storyboard       When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the Compose HandoffBehavior    When you apply a &lt;xref:System.Windows.Media.Animation.Storyboard&gt;, &lt;xref:System.Windows.Media.Animation.AnimationTimeline&gt;, or &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to a property using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, any &lt;xref:System.Windows.Media.Animation.Clock&gt; objects previously associated with that property continue to consume system resources; the timing system does not remove these clocks automatically.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To avoid performance issues when you apply a large number of clocks using &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, you should remove composing clocks from the animated property after they complete.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are several ways to remove a clock.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove all clocks from a property, use the &lt;xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29&gt; or &lt;xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29&gt; method of the animated object.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specify the property being animated as the first parameter, and <ph id="ph1">`null`</ph> as the second.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This removes all animation clocks from the property.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove a specific &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; from a list of clocks, use the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of the &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to retrieve a &lt;xref:System.Windows.Media.Animation.ClockController&gt;, then call the &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt; method of the &lt;xref:System.Windows.Media.Animation.ClockController&gt;.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is typically done in the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event handler for a clock.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note that only root clocks can be controlled by a &lt;xref:System.Windows.Media.Animation.ClockController&gt;; the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of a child clock returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note also that the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event is not called if the effective duration of the clock is forever.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In that case, the user must determine when to call &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is primarily an issue for animations on objects that have a long lifetime.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an object is garbage collected, its clocks are also disconnected and garbage collected.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about clock objects, see <bpt id="p1">[</bpt>Animation and Timing System Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>An object contained within the same name scope as the targets of this storyboard's animations.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Animations without a specified &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>The behavior the new animation should use to interact with any current animations.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>Declares whether the animation is controllable (can be paused) once started.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Applies the animations associated with this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> to their targets within the specified template and initiates them.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To interactively control this storyboard, you must specify the same <ph id="ph1">`containingObject`</ph> when calling the interactive methods that you used to begin the storyboard       When this method is called, &lt;xref:System.Windows.Media.Animation.Clock&gt; objects are created for the storyboard and any timelines it contains.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These clocks are stored with <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Beginning a storyboard triggers the &lt;xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated&gt; and &lt;xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated&gt; events.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Using the Compose HandoffBehavior    When you apply a &lt;xref:System.Windows.Media.Animation.Storyboard&gt;, &lt;xref:System.Windows.Media.Animation.AnimationTimeline&gt;, or &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to a property using the &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt; &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, any &lt;xref:System.Windows.Media.Animation.Clock&gt; objects previously associated with that property continue to consume system resources; the timing system does not remove these clocks automatically.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To avoid performance issues when you apply a large number of clocks using &lt;xref:System.Windows.Media.Animation.HandoffBehavior&gt;, you should remove composing clocks from the animated property after they complete.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There are several ways to remove a clock.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove all clocks from a property, use the &lt;xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29&gt; or &lt;xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29&gt; method of the animated object.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Specify the property being animated as the first parameter, and <ph id="ph1">`null`</ph> as the second.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This removes all animation clocks from the property.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   To remove a specific &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; from a list of clocks, use the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of the &lt;xref:System.Windows.Media.Animation.AnimationClock&gt; to retrieve a &lt;xref:System.Windows.Media.Animation.ClockController&gt;, then call the &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt; method of the &lt;xref:System.Windows.Media.Animation.ClockController&gt;.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is typically done in the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event handler for a clock.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note that only root clocks can be controlled by a &lt;xref:System.Windows.Media.Animation.ClockController&gt;; the &lt;xref:System.Windows.Media.Animation.Clock.Controller%2A&gt; property of a child clock returns <ph id="ph1">`null`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Note also that the &lt;xref:System.Windows.Media.Animation.Clock.Completed&gt; event is not called if the effective duration of the clock is forever.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In that case, the user must determine when to call &lt;xref:System.Windows.Media.Animation.ClockController.Remove%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is primarily an issue for animations on objects that have a long lifetime.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When an object is garbage collected, its clocks are also disconnected and garbage collected.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information about clock objects, see <bpt id="p1">[</bpt>Animation and Timing System Overview<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>The object to which the specified <ph id="ph1">`frameworkTemplate`</ph> has been applied.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Animations without a &lt;xref:System.Windows.Media.Animation.Storyboard.TargetName*&gt; are applied to <ph id="ph1">`containingObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>The template to animate.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>The behavior the new animation should use to interact with any current animations.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">&lt;xref uid="langword_csharp_true" name="true" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the storyboard should be interactively controllable; otherwise, <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>Creates a modifiable clone of this <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>, making deep copies of this object's values.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>When copying dependency properties, this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is used to produce modifiable copies of frozen &lt;xref:System.Windows.Freezable&gt; objects (or any &lt;xref:System.Windows.Freezable&gt; object).</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For convenience, this method shadows the inherited version with a strongly typed implementation.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Windows.Freezable.Clone%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>A modifiable clone of the current object.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>The cloned object's &lt;xref:System.Windows.Freezable.IsFrozen<bpt id="p1">*</bpt>&gt; property is <bpt id="p2">&lt;xref uid="langword_csharp_false" name="false" href=""&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> even if the source's &lt;xref:System.Windows.Freezable.IsFrozen<ept id="p1">*</ept>&gt; property is <bpt id="p3">&lt;xref uid="langword_csharp_true." name="true." href=""&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept></source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Creates a new instance of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method is called internally by &lt;xref:System.Windows.Freezable.CreateInstance%2A&gt; when creating new instances of the &lt;xref:System.Windows.Media.Animation.Storyboard&gt; class for the various cloning methods (such as &lt;xref:System.Windows.Freezable.Clone%2A&gt; and &lt;xref:System.Windows.Freezable.CloneCurrentValue%2A&gt;).</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>A new <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> instance.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>Retrieves the &lt;xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed*&gt; of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that was created for this <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>The current global speed, or 0 if the clock is stopped.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Retrieves the &lt;xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed*&gt; of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that was created for this <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A clock's &lt;xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed%2A&gt; speed is the rate at which its time is currently progressing, compared to real-world time.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use this method to retrieve information about a storyboard's clock, the storyboard must be controllable.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in code, you must use the appropriate overload of the storyboard's &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method and specify <ph id="ph1">`true`</ph> to make it controllable.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example, see <bpt id="p1">[</bpt>How to: Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>The object specified when the <ph id="ph1">&amp;lt;</ph>xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkContentElement%2CSystem.Boolean%29<ph id="ph2">&amp;gt;</ph> method was called.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>This object contains the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects that were created for this storyboard and its children.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>The current global speed, or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the clock is stopped.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>Retrieves the &lt;xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed*&gt; of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that was created for this <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A clock's &lt;xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed%2A&gt; speed is the rate at which its time is currently progressing, compared to real-world time.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use this method to retrieve information about a storyboard's clock, the storyboard must be controllable.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in code, you must use the appropriate overload of the storyboard's &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method and specify <ph id="ph1">`true`</ph> to make it controllable.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example, see <bpt id="p1">[</bpt>How to: Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>The object specified when the <ph id="ph1">&amp;lt;</ph>xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Boolean%29<ph id="ph2">&amp;gt;</ph> method was called.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>This object contains the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects that were created for this storyboard and its children.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>The current global speed, or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if the clock is stopped.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>Retrieves the &lt;xref:System.Windows.Media.Animation.Clock.CurrentIteration*&gt; of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that was created for this <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A clock's first iteration has a value of 1.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If this storyboard has a &lt;xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A&gt; setting of <ph id="ph1">`true`</ph>, a full iteration consists of a forward-reverse pair, not just one of these segments.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use this method to retrieve information about a storyboard's clock, the storyboard must be controllable.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in code, you must use the appropriate overload of the storyboard's &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method and specify <ph id="ph1">`true`</ph> to make it controllable.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example, see <bpt id="p1">[</bpt>How to: Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>This clock's current iteration within its current active period, or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this clock is stopped.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>Retrieves the &lt;xref:System.Windows.Media.Animation.Clock.CurrentIteration*&gt; of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that was created for this <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A clock's first iteration has a value of 1.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If this storyboard has a &lt;xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A&gt; setting of <ph id="ph1">`true`</ph>, a full iteration consists of a forward-reverse pair, not just one of these segments.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use this method to retrieve information about a storyboard's clock, the storyboard must be controllable.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in code, you must use the appropriate overload of the storyboard's &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method and specify <ph id="ph1">`true`</ph> to make it controllable.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example, see <bpt id="p1">[</bpt>How to: Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>The object specified when the <ph id="ph1">&amp;lt;</ph>xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkContentElement%2CSystem.Boolean%29<ph id="ph2">&amp;gt;</ph> method was called.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>This object contains the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects that were created for this storyboard and its children.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>This clock's current iteration within its current active period, or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this clock is stopped.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>Retrieves the &lt;xref:System.Windows.Media.Animation.Clock.CurrentIteration*&gt; of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that was created for this <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A clock's first iteration has a value of 1.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If this clock's timeline has an &lt;xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A&gt; setting of <ph id="ph1">`true`</ph>, a full iteration consists of a forward-reverse pair, not just one of these segments.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Regardless of its current iteration, seeking a clock returns its current iteration to 1.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Restarting a clock also returns its current iteration to 1.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use this method to retrieve information about a storyboard's clock, the storyboard must be controllable.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in code, you must use the appropriate overload of the storyboard's &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method and specify <ph id="ph1">`true`</ph> to make it controllable.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example, see <bpt id="p1">[</bpt>How to: Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>The object specified when the <ph id="ph1">&amp;lt;</ph>xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Boolean%29<ph id="ph2">&amp;gt;</ph> method was called.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>This object contains the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> objects that were created for this storyboard and its children.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>This clock's current iteration within its current active period, or <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> if this clock is stopped.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>Retrieves the &lt;xref:System.Windows.Media.Animation.Clock.CurrentProgress*&gt; of the <bpt id="p1">&lt;xref href="System.Windows.Media.Animation.Clock"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that was created for this <bpt id="p2">&lt;xref href="System.Windows.Media.Animation.Storyboard"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To use this method to retrieve information about a storyboard's clock, the storyboard must be controllable.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To make a storyboard controllable in code, you must use the appropriate overload of the storyboard's &lt;xref:System.Windows.Media.Animation.Storyboard.Begin%2A&gt; method and specify <ph id="ph1">`true`</ph> to make it controllable.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For an example, see <bpt id="p1">[</bpt>How to: Control a Storyboard After It Starts<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -23,7 +23,7 @@ items:
   nameWithType: BuildRequestData
   fullName: Microsoft.Build.Execution.BuildRequestData
   type: Class
-  summary: "Bevat alle gegevens die nodig zijn voor het indienen van een aanvraag voor het samenstellen."
+  summary: Encapsulates all of the data needed to submit a build request.
   syntax:
     content: public class BuildRequestData
   inheritance:
@@ -44,16 +44,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Constructs bouwen gegevens van aanvragen voor build-aanvragen op basis van exemplaren van project."
+  summary: Constructs build request data for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "De instantie voor het bouwen van."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "De doelen te bouwen."
+      description: The targets to build.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -70,19 +70,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Constructs bouwen gegevens van aanvragen voor build-aanvragen op basis van exemplaren van project."
+  summary: Constructs build request data for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "De instantie voor het bouwen van."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "De doelen te bouwen."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "De hostservices om te gebruiken, indien van toepassing.  Kan niet null zijn."
+      description: The host services to use, if any.  May be null.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -99,22 +99,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Vormt een BuildRequestData voor build-aanvragen op basis van exemplaren van project."
+  summary: Constructs a BuildRequestData for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "De instantie voor het bouwen van."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "De doelen te bouwen."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "De hostservices om te gebruiken, indien van toepassing.  Kan niet null zijn."
+      description: The host services to use, if any.  May be null.
     - id: flags
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "De vlaggen moet worden gebruikt voor het opbouwen."
+      description: The flags to use for the build.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -131,25 +131,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Vormt een BuildRequestData voor build-aanvragen op basis van exemplaren van project."
+  summary: Constructs a BuildRequestData for build requests based on project instances.
   syntax:
     content: public BuildRequestData (Microsoft.Build.Execution.ProjectInstance projectInstance, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags, System.Collections.Generic.IEnumerable<string> propertiesToTransfer);
     parameters:
     - id: projectInstance
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "De instantie voor het bouwen van."
+      description: The instance to build.
     - id: targetsToBuild
       type: System.String[]
-      description: "De doelen te bouwen."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "De hostservices om te gebruiken, indien van toepassing.  Kan niet null zijn."
+      description: The host services to use, if any.  May be null.
     - id: flags
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "De vlaggen moet worden gebruikt voor het opbouwen."
+      description: The flags to use for the build.
     - id: propertiesToTransfer
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: "De lijst met eigenschappen van het project overbrengen naar alle out-proces knooppunt."
+      description: The list of properties to transfer from the project to any out of process node.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -166,25 +166,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Vormt een BuildRequestData voor build aanvragen met een opgegeven pad."
+  summary: Constructs a BuildRequestData for build requests with a given project path.
   syntax:
     content: public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices);
     parameters:
     - id: projectFullPath
       type: System.String
-      description: "Het volledige pad naar het projectbestand."
+      description: The full path to the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "De algemene eigenschappen moet worden gebruikt tijdens de evaluatie van het project."
+      description: The global properties to use during evaluation of the project.
     - id: toolsVersion
       type: System.String
-      description: "De versie van het hulpprogramma&quot;s om te gebruiken voor het opbouwen.  Kan niet null zijn."
+      description: The tools version to use for the build.  May be null.
     - id: targetsToBuild
       type: System.String[]
-      description: "De doelen te bouwen."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "De hostservices om te gebruiken, indien van toepassing.  Kan niet null zijn."
+      description: The host services to use, if any.  May be null.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -201,28 +201,28 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Vormt een BuildRequestData voor build aanvragen met een opgegeven pad."
+  summary: Constructs a BuildRequestData for build requests with a given project path.
   syntax:
     content: public BuildRequestData (string projectFullPath, System.Collections.Generic.IDictionary<string,string> globalProperties, string toolsVersion, string[] targetsToBuild, Microsoft.Build.Execution.HostServices hostServices, Microsoft.Build.Execution.BuildRequestDataFlags flags);
     parameters:
     - id: projectFullPath
       type: System.String
-      description: "Het volledige pad naar het projectbestand."
+      description: The full path to the project file.
     - id: globalProperties
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "De algemene eigenschappen moet worden gebruikt tijdens de evaluatie van het project."
+      description: The global properties to use during evaluation of the project.
     - id: toolsVersion
       type: System.String
-      description: "De versie van het hulpprogramma&quot;s om te gebruiken voor het opbouwen.  Kan niet null zijn."
+      description: The tools version to use for the build.  May be null.
     - id: targetsToBuild
       type: System.String[]
-      description: "De doelen te bouwen."
+      description: The targets to build.
     - id: hostServices
       type: Microsoft.Build.Execution.HostServices
-      description: "De hostservices om te gebruiken, indien van toepassing.  Kan niet null zijn."
+      description: The host services to use, if any.  May be null.
     - id: flags
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "De vlaggen moet worden gebruikt voor het opbouwen."
+      description: The flags to use for the build.
   overload: Microsoft.Build.Execution.BuildRequestData.#ctor*
   exceptions: []
   platform:
@@ -239,12 +239,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Opgehaald of ingesteld van de versie van de hulpprogramma&quot;s gebruiken voor het opbouwen."
+  summary: Gets or sets the tools version to use for the build.
   syntax:
     content: public string ExplicitlySpecifiedToolsVersion { get; }
     return:
       type: System.String
-      description: "Retourneert de hulpprogramma&quot;s versie moet worden gebruikt voor het opbouwen."
+      description: Returns the tools version to use for the build.
   overload: Microsoft.Build.Execution.BuildRequestData.ExplicitlySpecifiedToolsVersion*
   exceptions: []
   platform:
@@ -261,12 +261,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Opgehaald of ingesteld van aanvullende vlaggen voor deze aanvraag voor het samenstellen."
+  summary: Gets or sets additional flags for this build request.
   syntax:
     content: public Microsoft.Build.Execution.BuildRequestDataFlags Flags { get; }
     return:
       type: Microsoft.Build.Execution.BuildRequestDataFlags
-      description: "Retourneert de vlaggen build-aanvraag."
+      description: Returns the build request flags.
   overload: Microsoft.Build.Execution.BuildRequestData.Flags*
   exceptions: []
   platform:
@@ -283,12 +283,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Hiermee haalt u de algemene eigenschappen voor deze aanvraag voor het samenstellen."
+  summary: Gets the global properties to use for this build request.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectPropertyInstance> GlobalProperties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectPropertyInstance}
-      description: "Retourneert de algemene eigenschappen voor deze aanvraag voor het samenstellen."
+      description: Returns the global properties to use for this build request.
   overload: Microsoft.Build.Execution.BuildRequestData.GlobalProperties*
   exceptions: []
   platform:
@@ -305,12 +305,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Hiermee haalt u de host-service voor deze versie."
+  summary: Gets the host service for this build.
   syntax:
     content: public Microsoft.Build.Execution.HostServices HostServices { get; }
     return:
       type: Microsoft.Build.Execution.HostServices
-      description: "Retourneert de host-service voor deze versie."
+      description: Returns the host service for this build.
   overload: Microsoft.Build.Execution.BuildRequestData.HostServices*
   exceptions: []
   platform:
@@ -327,12 +327,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Haalt het pad naar het projectbestand voor deze build van sets."
+  summary: Gets of sets the path to the project file for this build.
   syntax:
     content: public string ProjectFullPath { get; }
     return:
       type: System.String
-      description: "Retourneert het pad naar het projectbestand voor deze versie."
+      description: Returns the path to the project file for this build.
   overload: Microsoft.Build.Execution.BuildRequestData.ProjectFullPath*
   exceptions: []
   platform:
@@ -349,13 +349,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Opgehaald of ingesteld van project-exemplaar voor deze versie."
-  remarks: "In het geval wanneer het project bevindt zich niet in schijfopslag gebruikt."
+  summary: Gets or sets project instance for this build.
+  remarks: Used in the case where the project is not located in disk storage.
   syntax:
     content: public Microsoft.Build.Execution.ProjectInstance ProjectInstance { get; }
     return:
       type: Microsoft.Build.Execution.ProjectInstance
-      description: "De instantie project kan niet null zijn."
+      description: The project instance, which may be null.
   overload: Microsoft.Build.Execution.BuildRequestData.ProjectInstance*
   exceptions: []
   platform:
@@ -372,12 +372,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Hiermee haalt u de lijst met eigenschappen om over te dragen naar een out-of knooppunt proces voor het opbouwen."
+  summary: Gets the list of properties to transfer to an out of process node for the build.
   syntax:
     content: public System.Collections.Generic.IEnumerable<string> PropertiesToTransfer { get; }
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: "Retourneert de lijst met eigenschappen."
+      description: Returns the list of properties.
   overload: Microsoft.Build.Execution.BuildRequestData.PropertiesToTransfer*
   exceptions: []
   platform:
@@ -394,12 +394,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Hiermee haalt u de namen van de doelen te bouwen."
+  summary: Gets the names of the targets to build.
   syntax:
     content: public System.Collections.Generic.ICollection<string> TargetNames { get; }
     return:
       type: System.Collections.Generic.ICollection{System.String}
-      description: "Retourneert de namen van de doelen te bouwen."
+      description: Returns the names of the targets to build.
   overload: Microsoft.Build.Execution.BuildRequestData.TargetNames*
   exceptions: []
   platform:

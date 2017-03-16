@@ -25,7 +25,7 @@ items:
   nameWithType: InvalidProjectFileException
   fullName: Microsoft.Build.BuildEngine.InvalidProjectFileException
   type: Class
-  summary: "Deze uitzondering wordt gegenereerd wanneer er een probleem met XML-projectbestand van de gebruiker. Het probleem mogelijk semantische of syntactische. Als het probleem in de syntaxis is, kan het doorgaans gevangen door XSD-validatie."
+  summary: This exception is thrown whenever there is a problem with the user's XML project file. The problem might be semantic or syntactical. If the problem is in the syntax, it can typically be caught by XSD validation.
   syntax:
     content: 'public sealed class InvalidProjectFileException : Exception'
   inheritance:
@@ -46,7 +46,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiseert een nieuw exemplaar van <xref href=&quot;Microsoft.Build.BuildEngine.InvalidProjectFileException&quot;> </xref> klasse."
+  summary: Initializes a new instance of <xref href="Microsoft.Build.BuildEngine.InvalidProjectFileException"></xref> class.
   syntax:
     content: public InvalidProjectFileException ();
     parameters: []
@@ -66,13 +66,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiseert een nieuw exemplaar van <xref href=&quot;Microsoft.Build.BuildEngine.InvalidProjectFileException&quot;> </xref> klasse met het opgegeven bericht."
+  summary: Initializes a new instance of <xref href="Microsoft.Build.BuildEngine.InvalidProjectFileException"></xref> class using the specified message.
   syntax:
     content: public InvalidProjectFileException (string message);
     parameters:
     - id: message
       type: System.String
-      description: "Het foutbericht met uitleg over de reden voor de uitzondering."
+      description: The error message that explains the reason for the exception.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor*
   exceptions: []
   platform:
@@ -89,16 +89,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiseert een nieuw exemplaar van <xref href=&quot;Microsoft.Build.BuildEngine.InvalidProjectFileException&quot;> </xref> klasse met de opgegeven fout bericht en de binnenste uitzondering."
+  summary: Initializes a new instance of <xref href="Microsoft.Build.BuildEngine.InvalidProjectFileException"></xref> class using the specified error message and inner exception.
   syntax:
     content: public InvalidProjectFileException (string message, Exception innerException);
     parameters:
     - id: message
       type: System.String
-      description: "Het foutbericht met uitleg over de reden voor de uitzondering."
+      description: The error message that explains the reason for the exception.
     - id: innerException
       type: System.Exception
-      description: "De uitzondering die is de oorzaak van de huidige uitzondering. Als de `innerException` parameter is een null-verwijzing (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]), de huidige uitzondering is opgetreden in een <xref uid=&quot;langword_csharp_catch&quot; name=&quot;catch&quot; href=&quot;&quot;> </xref> blokkeren die verantwoordelijk is voor de interne uitzondering."
+      description: The exception that is the cause of the current excpetion. If the `innerException` parameter is not a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]), the current exception is raised in a <xref uid="langword_csharp_catch" name="catch" href=""></xref> block that handles the inner exception.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor*
   exceptions: []
   platform:
@@ -115,26 +115,26 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiseert een nieuw exemplaar van <xref href=&quot;Microsoft.Build.BuildEngine.InvalidProjectFileException&quot;> </xref> klasse met uitgebreide foutinformatie."
-  remarks: "Deze constructor heeft de voorkeur boven de basic constructors."
+  summary: Initializes a new instance of <xref href="Microsoft.Build.BuildEngine.InvalidProjectFileException"></xref> class using rich error information.
+  remarks: This constructor is preferred over the basic constructors.
   syntax:
     content: public InvalidProjectFileException (System.Xml.XmlNode xmlNode, string message, string errorSubcategory, string errorCode, string helpKeyword);
     parameters:
     - id: xmlNode
       type: System.Xml.XmlNode
-      description: "Het XML-knooppunt waar de fout zich bevindt. Kan niet null zijn."
+      description: The XML node where the error is located. Can be null.
     - id: message
       type: System.String
-      description: "De tekst van foutberichten voor de uitzondering."
+      description: The error message text for the exception.
     - id: errorSubcategory
       type: System.String
-      description: "Een beschrijving voor de fout. Deze parameter een null-verwijzing kan zijn (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+      description: A description for the error. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
     - id: errorCode
       type: System.String
-      description: "De foutcode. Deze parameter een null-verwijzing kan zijn (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)."
+      description: The error code. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
     - id: helpKeyword
       type: System.String
-      description: "Het sleutelwoord F1 om voor de host IDE. Kan niet null zijn."
+      description: The F1-help keyword for the host IDE. Can be null.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor*
   exceptions: []
   platform:
@@ -151,38 +151,38 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Initialiseert een nieuw exemplaar van <xref href=&quot;Microsoft.Build.BuildEngine.InvalidProjectFileException&quot;> </xref> klasse met uitgebreide foutinformatie."
-  remarks: "Deze constructor heeft de voorkeur boven de basic constructors."
+  summary: Initializes a new instance of <xref href="Microsoft.Build.BuildEngine.InvalidProjectFileException"></xref> class using rich error information.
+  remarks: This constructor is preferred over the basic constructors.
   syntax:
     content: public InvalidProjectFileException (string projectFile, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string errorSubcategory, string errorCode, string helpKeyword);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Het bestand project is ongeldig. Geen lege tekenreeks kan zijn."
+      description: The invalid project file. Can be an empty string.
     - id: lineNumber
       type: System.Int32
-      description: "Het ongeldige regelnummer in het project. Ingesteld op nul als niet beschikbaar."
+      description: The invalid line number in the project. Set to zero if not available.
     - id: columnNumber
       type: System.Int32
-      description: "Het aantal ongeldige kolom in het project. Ingesteld op nul als niet beschikbaar."
+      description: The invalid column number in the project. Set to zero if not available.
     - id: endLineNumber
       type: System.Int32
-      description: "Het einde van een reeks ongeldige regels in het project. Ingesteld op nul als niet beschikbaar."
+      description: The end of a range of invalid lines in the project. Set to zero if not available.
     - id: endColumnNumber
       type: System.Int32
-      description: "Het einde van een bereik met ongeldige kolommen in het project. Ingesteld op nul als niet beschikbaar."
+      description: The end of a range of invalid columns in the project. Set to zero if not available.
     - id: message
       type: System.String
-      description: "De tekst van foutberichten voor de uitzondering."
+      description: The error message text for the exception.
     - id: errorSubcategory
       type: System.String
-      description: "De beschrijving van de fout. Deze parameter een null-verwijzing kan zijn (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+      description: The description of the error. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
     - id: errorCode
       type: System.String
-      description: "De foutcode. Deze parameter een null-verwijzing kan zijn (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)."
+      description: The error code. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
     - id: helpKeyword
       type: System.String
-      description: "Het sleutelwoord F1 om voor de host IDE. Deze parameter een null-verwijzing kan zijn (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>)."
+      description: The F1-help keyword for the host IDE. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>).
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.#ctor*
   exceptions: []
   platform:
@@ -199,12 +199,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Hiermee kunt u het uitzonderingsbericht, met uitzondering van het projectbestand ophalen."
+  summary: Gets the exception message, not including the project file.
   syntax:
     content: public string BaseMessage { get; }
     return:
       type: System.String
-      description: "Het bericht fouttekenreeks alleen."
+      description: The error message string only.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.BaseMessage*
   exceptions: []
   platform:
@@ -221,12 +221,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Haalt de Ongeldig kolomnummer, indien van toepassing, in het project."
+  summary: Gets the invalid column number, if any, in the project.
   syntax:
     content: public int ColumnNumber { get; }
     return:
       type: System.Int32
-      description: "Het aantal ongeldige kolom, of nul."
+      description: The invalid column number, or zero.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.ColumnNumber*
   exceptions: []
   platform:
@@ -243,12 +243,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Hiermee haalt u het nummer van de laatste kolom van een bereik met ongeldige kolommen in het project."
+  summary: Gets the last column number, if any, of a range of invalid columns in the project.
   syntax:
     content: public int EndColumnNumber { get; }
     return:
       type: System.Int32
-      description: "Het nummer van de laatste kolom is ongeldig, of nul."
+      description: The last invalid column number, or zero.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.EndColumnNumber*
   exceptions: []
   platform:
@@ -265,12 +265,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Haalt de laatste regelnummer, indien van toepassing van een reeks ongeldige regels in het project."
+  summary: Gets the last line number, if any, of a range of invalid lines in the project.
   syntax:
     content: public int EndLineNumber { get; }
     return:
       type: System.Int32
-      description: "De laatste ongeldige regelnummer, of nul."
+      description: The last invalid line number, or zero.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.EndLineNumber*
   exceptions: []
   platform:
@@ -287,12 +287,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Hiermee haalt u de foutcode indien aanwezig, gekoppeld met het bericht van uitzondering."
+  summary: Gets the error code, if any, associated with the exception message.
   syntax:
     content: public string ErrorCode { get; }
     return:
       type: System.String
-      description: "Fout codetekenreeks of een null-verwijzing (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+      description: Error code string, or a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorCode*
   exceptions: []
   platform:
@@ -309,12 +309,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Hiermee haalt u de fout subcategorie als dat het type van deze fout wordt beschreven."
+  summary: Gets the error sub-category, if any that describes the type of this error.
   syntax:
     content: public string ErrorSubcategory { get; }
     return:
       type: System.String
-      description: "De subcategorie tekenreeks of null."
+      description: The sub-category string, or null.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.ErrorSubcategory*
   exceptions: []
   platform:
@@ -331,16 +331,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Stelt de <xref href=&quot;System.Runtime.Serialization.SerializationInfo&quot;> </xref> met informatie over de uitzondering."
+  summary: Sets the <xref href="System.Runtime.Serialization.SerializationInfo"></xref> with information about the exception.
   syntax:
     content: public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     parameters:
     - id: info
       type: System.Runtime.Serialization.SerializationInfo
-      description: "De <xref href=&quot;System.Runtime.Serialization.SerializationInfo&quot;> </xref> waarin zich de geserialiseerde objectgegevens over de uitzondering."
+      description: The <xref href="System.Runtime.Serialization.SerializationInfo"></xref> that holds the serialized object data about the exception being thrown.
     - id: context
       type: System.Runtime.Serialization.StreamingContext
-      description: "De <xref:System.Runtime.Serialization.StreamingContext>die contextuele informatie bevat over de bron of bestemming.</xref:System.Runtime.Serialization.StreamingContext>"
+      description: The <xref:System.Runtime.Serialization.StreamingContext> that contains contextual information about the source or destination.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.GetObjectData*
   exceptions: []
   platform:
@@ -357,12 +357,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Haalt de F1-help sleutelwoord, indien aanwezig, die zijn gekoppeld aan deze fout is opgetreden voor de host IDE."
+  summary: Gets the F1-help keyword, if any, associated with this error, for the host IDE.
   syntax:
     content: public string HelpKeyword { get; }
     return:
       type: System.String
-      description: "De tekenreeks sleutelwoord of een null-verwijzing (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+      description: The keyword string, or a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.HelpKeyword*
   exceptions: []
   platform:
@@ -379,12 +379,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Haalt het ongeldige regelnummer, indien van toepassing, in het project."
+  summary: Gets the invalid line number, if any, in the project.
   syntax:
     content: public int LineNumber { get; }
     return:
       type: System.Int32
-      description: "Het ongeldige regelnummer, of nul."
+      description: The invalid line number, or zero.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.LineNumber*
   exceptions: []
   platform:
@@ -401,12 +401,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Hiermee haalt u het uitzonderingsbericht, met inbegrip van de betrokken projectbestand, indien van toepassing."
+  summary: Gets the exception message, including the affected project file, if any.
   syntax:
     content: public override string Message { get; }
     return:
       type: System.String
-      description: "De tekenreeks van volledige bericht."
+      description: The complete message string.
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.Message*
   exceptions: []
   platform:
@@ -423,12 +423,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Het projectbestand opgehaald als de toepassing dat is gekoppeld aan deze uitzondering."
+  summary: Gets the project file, if any, associated with this exception.
   syntax:
     content: public string ProjectFile { get; }
     return:
       type: System.String
-      description: "De tekenreeks project-bestand en het pad of een null-verwijzing (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)])."
+      description: The project file name and path string, or a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]).
   overload: Microsoft.Build.BuildEngine.InvalidProjectFileException.ProjectFile*
   exceptions: []
   platform:

@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="nl-nl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f0ea2cc3d70d31ea2b618485cb1cc69efee45358</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Workflow.Runtime.Hosting.WorkflowRuntimeService.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a17340b147f684bab395979662a3c1a6c352cc95</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e866d941252268361f63c1128395e15319ffa83c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents the abstract base class from which the workflow runtime engine core services are derived.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source><ph id="ph1">&gt; [!NOTE]</ph><ph id="ph2"> &gt;  </ph><ph id="ph3">[!INCLUDE[DeprecatedContent](~/add/includes/ajax-current-ext-md.md)]</ph>       Services that derive from the WorkflowRuntimeService class can be started and stopped by the workflow runtime engine.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The order in which the services are started or stopped, however, is indeterminate, and services may require the support of other services in order to properly initialize themselves when they are started, and, conversely, may require the to support of other services in order to properly shut down when they are stopped.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To address this problem, the workflow runtime engine provides two-phase mechanisms for starting and stopping services.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A&gt; is called, the workflow runtime engine invokes the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; method for each of its services that derive from the WorkflowRuntimeService class.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After all of these services have been started, the workflow runtime engine raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=fullName&gt; event, which causes the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A&gt; method to be invoked for each workflow runtime engine service.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Your service can override the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A&gt; method to participate in this two phase process.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Similarly, when &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A&gt; is called, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; method, the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=fullName&gt; event, and the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A&gt; method provide this two-phase mechanism.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The State property contains a &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt; value that indicates whether the service is in the process of starting or stopping or is completely started or stopped.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Services that derive from the WorkflowRuntimeService class can raise the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled?displayProperty=fullName&gt; event when they encounter a condition that causes an unhandled exception by calling &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Services derived from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService&gt; class, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService&gt; class, and the &lt;xref:System.Workflow.Runtime.Tracking.TrackingService&gt; class ultimately derives from the WorkflowRuntimeService class.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When implemented in a derived class, initializes a new instance of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Hosting.WorkflowRuntimeService"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A&gt; is initialized to &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt;.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, represents the method that will be called when the workflow runtime engine raises the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime.Started"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class implements a two-phase starting mechanism so that workflow runtime engine services may perform any initialization that depends on other services after the workflow runtime engine has invoked the  &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; method for all of its workflow runtime engine services.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After the workflow runtime engine has called the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; method of all of its workflow runtime engine services, it raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=fullName&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can override the OnStarted method to provide any final startup functionality required by your service when the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=fullName&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The mechanics of subscribing and unsubscribing from the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=fullName&gt; event is handled internally.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If your service is added to the workflow runtime engine by a call to &lt;xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A&gt; after the workflow runtime engine has already been started, the workflow runtime engine will call &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; on your service.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, in this situation, the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started&gt; event has already occurred, therefore, your service may have to perform any initialization that it would ordinarily perform in OnStarted from inside the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can test &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; to determine whether the workflow runtime engine has been started.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A&gt; is set to &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt; before OnStarted is invoked.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation of OnStarted performs no action.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, represents the method that will be called when the workflow runtime engine raises the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime.Stopped"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class implements a two-phase stopping mechanism so that workflow runtime engine services may retain some functionality after their &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; method is invoked by the workflow runtime engine in order that they may, if necessary, support the shutdown of other services.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After the workflow runtime engine has called the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; method of all of its workflow runtime engine services, it raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=fullName&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can override the OnStopped method to provide any final shutdown functionality required by your service when the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=fullName&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The mechanics of subscribing and unsubscribing from the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=fullName&gt; event is handled internally.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If your &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; is removed from the workflow runtime engine by a call to &lt;xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A&gt; while the workflow runtime engine is running, the workflow runtime engine will call &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; on your service.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, in this situation, the OnStopped method will not be called for your service.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, your service may have to perform any final shutdown that it would ordinarily perform in OnStopped from inside the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can test &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; to determine whether the workflow runtime engine is running.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A&gt; is set to &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt; before OnStopped is invoked.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation of OnStopped performs no action.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Raises the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> event.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Your service can call RaiseServicesExceptionNotHandledEvent to raise the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled?displayProperty=fullName&gt; event when it encounters an exception that it cannot handle during its execution.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should pass the &lt;xref:System.Guid&gt; of the workflow instance associated with the unhandled exception.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For example, a timer service might pass the &lt;xref:System.Guid&gt; associated with the timer for which the exception occurred.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The exception that could not be handled.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Guid&gt; of the workflow instance associated with the unhandled exception.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Gets the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.WorkflowRuntime"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> for this service.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The workflow runtime engine sets this property before it calls &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; on the service.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Hosting.WorkflowRuntimeService"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, starts the service and changes the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State*&gt; to <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Start is invoked by the workflow runtime engine on all of its services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class when &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Start is also invoked by the workflow runtime engine when a workflow runtime engine service is added to the workflow runtime engine by a call to &lt;xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A&gt; after the workflow runtime engine has already started.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation of Start tracks whether the service has been started and uses this information to throw the appropriate exception if the service is started while it is already running.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can provide additional functionality necessary to have your service started by the workflow runtime engine by overriding this method.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There is no guarantee about which, if any, services will be running when the workflow runtime engine calls Start on your service.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, in the Start method, you should only perform any initialization that does not depend on functionality provided by other services.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This includes functionality provided by core services such as the scheduler service.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The workflow runtime engine raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=fullName&gt; event after it has called the Start method of all of its workflow runtime engine services.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If your service requires additional initialization after all of the workflow runtime engine services have been started, you can override the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A&gt; method in order to perform this initialization when the Start event is raised.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If your service is added to the workflow runtime engine by a call to &lt;xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A&gt; after the workflow runtime engine has already been started, the workflow runtime engine will call Start on your service.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, in this situation, the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started&gt; event has already occurred, therefore, your service may have to perform any initialization that it would ordinarily perform in &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A&gt; from inside the Start method.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can test &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; to determine whether the workflow runtime engine has been started.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Start should only be called by the workflow runtime engine.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Runtime*&gt; is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic)       -or-       The service has already been started.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Gets the state of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Hosting.WorkflowRuntimeService"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class implements two-phase mechanisms for both starting and stopping a workflow runtime engine service.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The first phase of the start mechanism begins when the workflow runtime engine calls the implementation of the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt; method for the service.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method should call the base implementation of &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A&gt;, which sets State to &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt;.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The second phase occurs after the workflow runtime engine starts all of its workflow runtime engine services when it raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Started&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; internally manages a subscription to this event and its handler will set State to &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt;.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The two-phase mechanism for stopping a workflow runtime engine service begins when the workflow runtime engine calls the implementation of the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt; method for the service.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method should call the base implementation of &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A&gt;, which sets State to &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt;.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" extradata="MT">
+          <source>After it has stopped all of its workflow runtime engine services, the workflow runtime engine raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped&gt; event.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; internally manages a subscription to this event and its handler will set State to &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState&gt;.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> values.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>When overridden in a derived class, stops the service and changes the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State*&gt; to <bpt id="p1">&lt;xref href="System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Stop is invoked by the workflow runtime engine on all of its services that derive from the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; class when &lt;xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Stop is also invoked by the workflow runtime engine when a workflow runtime engine service is removed from the workflow runtime engine by a call to &lt;xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The default implementation of Stop tracks whether the service has been started and uses this information to throw the appropriate exception if the service is stopped before it is started.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can provide additional functionality necessary to have your service stopped by the workflow runtime engine by overriding this method.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There is no guarantee about which, if any, services will be stopped or running when Stop is called on your service.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The workflow runtime engine raises the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=fullName&gt; event after it has called the Stop method of all of its workflow runtime engine services.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Your service may need to retain some residual functionality to support other services until all the workflow runtime engine services have had their stop methods invoked by the workflow runtime engine.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If your service must retain such functionality, you can override the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A&gt; method to perform any additional action required to finish stopping your service when the &lt;xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=fullName&gt; event is raised.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!NOTE]</ph> &gt;  If your &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService&gt; is removed from the workflow runtime engine by a call to &lt;xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A&gt; while the workflow runtime engine is running, the workflow runtime engine will call Stop on your service.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT">
+          <source>However, in this situation, the &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A&gt; method will not be called for your service.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, your service may have to perform any additional shutdown functionality that it would ordinarily perform in &lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A&gt; from inside the Stop method.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You can test &lt;xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A&gt; to determine whether the workflow runtime engine is running.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Stop should only be called by the workflow runtime engine.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Runtime*&gt; is a null reference (<bpt id="p1">&lt;xref uid="langword_csharp_Nothing" name="Nothing" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> in Visual Basic).</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>-or-       The service has not yet been started.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
