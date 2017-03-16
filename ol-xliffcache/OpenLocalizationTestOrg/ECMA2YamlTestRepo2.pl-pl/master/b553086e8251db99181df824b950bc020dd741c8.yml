@@ -15,7 +15,7 @@ items:
   nameWithType: BuildStartedEventArgs
   fullName: Microsoft.Build.Framework.BuildStartedEventArgs
   type: Class
-  summary: "Dostarcza dane do <xref href=&quot;Microsoft.Build.Framework.IEventSource.BuildStarted&quot;> </xref> zdarzeń."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.BuildStarted"></xref> event.
   remarks: 'WARNING: marking a type [Serializable] without implementing ISerializable imposes a serialization contract -- it is a promise to never change the type''s fields i.e. the type is immutable; adding new fields in the next version of the type without following certain special FX guidelines, can break both forward and backward compatibility'
   syntax:
     content: 'public class BuildStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs'
@@ -46,7 +46,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Framework.BuildStartedEventArgs&quot;> </xref> klasy."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildStartedEventArgs"></xref> class.
   syntax:
     content: protected BuildStartedEventArgs ();
     parameters: []
@@ -66,16 +66,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Framework.BuildStartedEventArgs&quot;> </xref> klasy z określonym komunikatem i słowo kluczowe pomocy."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.BuildStartedEventArgs"></xref> class with the specified message and Help keyword.
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword);
     parameters:
     - id: message
       type: System.String
-      description: "Tekst zdarzenia."
+      description: The text of the event.
     - id: helpKeyword
       type: System.String
-      description: "Słowo kluczowe Pomocy skojarzone ze zdarzeniem."
+      description: The Help keyword associated with the event.
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -92,20 +92,20 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktor zainicjowania wszystkich parametrów."
-  remarks: "Pole nadawcy nie można ustawić tutaj i zakłada, że &quot;MSBuild&quot;."
+  summary: Constructor to initialize all parameters.
+  remarks: Sender field cannot be set here and is assumed to be "MSBuild".
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, System.Collections.Generic.IDictionary<string,string> environmentOfBuild);
     parameters:
     - id: message
       type: System.String
-      description: "wiadomość SMS"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "słowo kluczowe pomocy"
+      description: help keyword
     - id: environmentOfBuild
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Słownik, który wyświetla listę środowiska kompilacji, po uruchomieniu kompilacji."
+      description: A dictionary which lists the environment of the build when the build is started.
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -122,19 +122,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktor, aby umożliwić sygnatury czasowej, należy ustawić"
+  summary: Constructor to allow timestamp to be set
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp);
     parameters:
     - id: message
       type: System.String
-      description: "wiadomość SMS"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "słowo kluczowe pomocy"
+      description: help keyword
     - id: eventTimestamp
       type: System.DateTime
-      description: "Sygnatura czasowa podczas tworzenia zdarzenia"
+      description: Timestamp when the event was created
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -151,22 +151,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktor, aby umożliwić sygnatury czasowej, należy ustawić"
+  summary: Constructor to allow timestamp to be set
   syntax:
     content: public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "wiadomość SMS"
+      description: text message
     - id: helpKeyword
       type: System.String
-      description: "słowo kluczowe pomocy"
+      description: help keyword
     - id: eventTimestamp
       type: System.DateTime
-      description: "Sygnatura czasowa podczas tworzenia zdarzenia"
+      description: Timestamp when the event was created
     - id: messageArgs
       type: System.Object[]
-      description: "argumenty komunikatu"
+      description: message args
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.#ctor*
   exceptions: []
   platform:
@@ -183,12 +183,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Pobiera słownik środowiska, który jest używany na początku kompilacji."
+  summary: Gets the environment dictionary which is used at the start of the build.
   syntax:
     content: public System.Collections.Generic.IDictionary<string,string> BuildEnvironment { get; }
     return:
       type: System.Collections.Generic.IDictionary{System.String,System.String}
-      description: "Zwraca słownik środowiska, który jest używany na początku kompilacji."
+      description: Returns the environment dictionary which is used at the start of the build.
   overload: Microsoft.Build.Framework.BuildStartedEventArgs.BuildEnvironment*
   exceptions: []
   platform:

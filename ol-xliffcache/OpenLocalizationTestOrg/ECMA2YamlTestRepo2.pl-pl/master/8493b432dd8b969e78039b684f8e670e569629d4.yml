@@ -13,7 +13,7 @@ items:
   nameWithType: ProjectPropertyGroupElement
   fullName: Microsoft.Build.Construction.ProjectPropertyGroupElement
   type: Class
-  summary: "Reprezentuje element PropertyGroup w projekcie programu MSBuild."
+  summary: Represents a PropertyGroup element in an MSBuild project.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("#Properties={Count} Condition={Condition} Label={Label}")]
@@ -61,20 +61,20 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Dołącza nowe właściwości do grupy właściwości."
-  remarks: "Ta wygodna metoda wybiera lokalizację w MSBuild DOM w oparciu o heurystykę."
+  summary: Appends a new property to the property group.
+  remarks: This convenience method picks a location in the MSBuild DOM based on a heuristic.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement AddProperty (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "Nazwa właściwości."
+      description: The property name.
     - id: unevaluatedValue
       type: System.String
-      description: "Wartość właściwości."
+      description: The property value.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "Zwraca nową właściwość."
+      description: Returns the new property.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.AddProperty*
   exceptions: []
   platform:
@@ -91,12 +91,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Pobiera wszystkie właściwości podrzędnych."
+  summary: Gets all child properties.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyElement> Properties { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyElement}
-      description: "Zwraca wszystkie właściwości podrzędnych."
+      description: Returns all child properties.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.Properties*
   exceptions: []
   platform:
@@ -113,12 +113,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Pobiera wszystkie właściwości podrzędne, począwszy od ostatniego elementu podrzędnego."
+  summary: Gets all child properties, starting with the last child.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Construction.ProjectPropertyElement> PropertiesReversed { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Construction.ProjectPropertyElement}
-      description: "Zwraca wszystkie właściwości podrzędne, począwszy od ostatniego elementu podrzędnego."
+      description: Returns all child properties, starting with the last child.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.PropertiesReversed*
   exceptions: []
   platform:
@@ -135,19 +135,19 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Construction
-  summary: "Aktualizuje wartości danej właściwości w grupie właściwości."
+  summary: Updates the value of the given property in the property group.
   syntax:
     content: public Microsoft.Build.Construction.ProjectPropertyElement SetProperty (string name, string unevaluatedValue);
     parameters:
     - id: name
       type: System.String
-      description: "Nazwa właściwości do aktualizacji."
+      description: The name of the property to be updated.
     - id: unevaluatedValue
       type: System.String
-      description: "Nowa wartość właściwości."
+      description: The new property value.
     return:
       type: Microsoft.Build.Construction.ProjectPropertyElement
-      description: "Zwraca zaktualizowane właściwości."
+      description: Returns the updated property.
   overload: Microsoft.Build.Construction.ProjectPropertyGroupElement.SetProperty*
   exceptions: []
   platform:

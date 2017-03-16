@@ -15,7 +15,7 @@ items:
   nameWithType: CallTarget
   fullName: Microsoft.Build.Tasks.CallTarget
   type: Class
-  summary: "Implementuje `CallTarget` zadań. Użyj `CallTarget` elementu w pliku projektu, aby utworzyć i wykonać tego zadania. Uzyskać użycia i parametrów, zobacz [calltarget — zadanie](~/add/includes/ajax-current-ext-md.md)."
+  summary: Implements the `CallTarget` task. Use the `CallTarget` element in your project file to create and execute this task. For usage and parameter information, see [CallTarget Task](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: >-
       [Microsoft.Build.Framework.RunInMTA]
@@ -49,7 +49,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Tasks.CallTarget&quot;> </xref> klasy."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.CallTarget"></xref> class.
   syntax:
     content: public CallTarget ();
     parameters: []
@@ -69,13 +69,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Powoduje, że [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] aparat do tworzenia jeden lub więcej obiektów docelowych w bieżącym projekcie."
+  summary: Instructs the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine to build one or more targets in the current project.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli wszystkie elementy docelowe skompilować; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if all targets built successfully; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.CallTarget.Execute*
   exceptions: []
   platform:
@@ -92,12 +92,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia wartość logiczną, która wskazuje, czy [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] aparat jest wywoływana raz na docelowym (<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>) lub [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] aparat jest wywoływana raz do tworzenia wszystkie elementy docelowe (<xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;></xref>)."
+  summary: Gets or sets a Boolean value that indicates whether the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once per target (<xref uid="langword_csharp_true" name="true" href=""></xref>) or the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once to build all targets (<xref uid="langword_csharp_false" name="false" href=""></xref>).
   syntax:
     content: public bool RunEachTargetSeparately { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] aparat jest wywoływana raz na docelowym; <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> Jeśli [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] aparat jest wywoływana raz do tworzenia wszystkie elementy docelowe."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once per target; <xref uid="langword_csharp_false" name="false" href=""></xref> if the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine is called once to build all targets.
   overload: Microsoft.Build.Tasks.CallTarget.RunEachTargetSeparately*
   exceptions: []
   platform:
@@ -114,12 +114,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera dane wyjściowe z wszystkich skompilowanych elementów docelowych."
+  summary: Gets the outputs of all built targets.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] TargetOutputs { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Dane wyjściowe wszystkich skompilowanych elementów docelowych."
+      description: The outputs of all built targets.
   overload: Microsoft.Build.Tasks.CallTarget.TargetOutputs*
   exceptions: []
   platform:
@@ -136,12 +136,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia obiekt docelowy lub docelowych do kompilacji."
+  summary: Gets or sets the target or targets to build.
   syntax:
     content: public string[] Targets { get; set; }
     return:
       type: System.String[]
-      description: "Docelowy lub docelowych do kompilacji."
+      description: The target or targets to build.
   overload: Microsoft.Build.Tasks.CallTarget.Targets*
   exceptions: []
   platform:
@@ -158,13 +158,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia wartość logiczną, która wskazuje, czy aparat MSBuild zwróci skompilowanych elementów docelowych z pamięci podręcznej."
-  remarks: "Zakres skompilowanych elementów docelowych pieniężne jest (ProjectFileName GlobalProperties) [TargetNames] jako listę elementów kompilacji."
+  summary: Gets or sets a Boolean value that indicates whether the MSBuild engine will return the built targets from the cache.
+  remarks: The scope of built targets in the cash is (ProjectFileName, GlobalProperties)[TargetNames] as a list of build items.
   syntax:
     content: public bool UseResultsCache { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli aparat MSBuild będzie zwracać skompilowanych elementów docelowych z pamięci podręcznej; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the MSBuild engine will return the built targets from the cache; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.CallTarget.UseResultsCache*
   exceptions: []
   platform:

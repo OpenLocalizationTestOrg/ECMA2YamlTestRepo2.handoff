@@ -10,8 +10,8 @@ items:
   nameWithType: IAccPropServer
   fullName: Accessibility.IAccPropServer
   type: Interface
-  summary: "IAccPropServer i wszystkie jej narażonych elementów członkowskich są częścią zarządzany otok dla modelu COM (Component Object) <xref uid=&quot;langword_csharp_IAccPropServer&quot; name=&quot;IAccPropServer&quot; href=&quot;&quot;> </xref> interfejsu."
-  remarks: "Aby uzyskać więcej informacji o IAccPropServer, zobacz dokumentację dla `Dynamic Properties` w dokumentacji programu Microsoft Active Accessibility w bibliotece MSDN w http://msdn.microsoft.com/library/."
+  summary: The IAccPropServer and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) <xref uid="langword_csharp_IAccPropServer" name="IAccPropServer" href=""></xref> interface.
+  remarks: For more information about IAccPropServer, see the documentation for `Dynamic Properties` in the Microsoft Active Accessibility documentation in the MSDN library at http://msdn.microsoft.com/library.
   syntax:
     content: >-
       [System.Runtime.InteropServices.Guid("76C0DBBB-15E0-4E7B-B61B-20EEEA2001E0")]
@@ -34,26 +34,26 @@ items:
   assemblies:
   - Accessibility
   namespace: Accessibility
-  summary: "<xref href=&quot;Accessibility.IAccPropServer&quot;> </xref> i wszystkich jego członków narażonych są częścią zarządzany otok dla modelu COM (Component Object) <xref uid=&quot;langword_csharp_IAccPropServer&quot; name=&quot;IAccPropServer&quot; href=&quot;&quot;> </xref> interfejsu."
-  remarks: "Aby uzyskać więcej informacji o <xref:Accessibility.IAccPropServer>, zajrzyj do dokumentacji `IAccPropServer::GetPropValue` w dokumentacji Microsoft Active Accessibility w bibliotece MSDN w http://msdn.microsoft.com/library/.</xref:Accessibility.IAccPropServer>"
+  summary: The <xref href="Accessibility.IAccPropServer"></xref> and all of its exposed members are part of a managed wrapper for the Component Object Model (COM) <xref uid="langword_csharp_IAccPropServer" name="IAccPropServer" href=""></xref> interface.
+  remarks: For more information about <xref:Accessibility.IAccPropServer>, see the documentation for `IAccPropServer::GetPropValue` in the Microsoft Active Accessibility documentation in the MSDN library at http://msdn.microsoft.com/library.
   syntax:
     content: public void GetPropValue (ref byte pIDString, uint dwIDStringLen, Guid idProp, out object pvarValue, out int pfHasProp);
     parameters:
     - id: pIDString
       type: System.Byte
-      description: "Zawiera ciąg, który identyfikuje żądaną właściwość."
+      description: Contains a string that identifies the property being requested.
     - id: dwIDStringLen
       type: System.UInt32
-      description: "Określa długość określona przez ciąg tożsamości `pIDString` parametru."
+      description: Specifies the length of the identity string specified by the `pIDString` parameter.
     - id: idProp
       type: System.Guid
-      description: "Określa identyfikator GUID żądane właściwości."
+      description: Specifies a GUID indicating the desired property.
     - id: pvarValue
       type: System.Object
-      description: "Określa wartość właściwości zastąpione. Ten parametr jest prawidłowy tylko wtedy, gdy `pfHasProp` ma wartość TRUE. Serwer trzeba ustawić VT_EMPTY Jeśli `pfHasProp` ma wartość FALSE."
+      description: Specifies the value of the overridden property. This parameter is valid only if `pfHasProp` is TRUE. The server must set this to VT_EMPTY if `pfHasProp` is set to FALSE.
     - id: pfHasProp
       type: System.Int32
-      description: "Wskazuje, czy serwer jest podanie wartości dla wymaganej właściwości. Serwer ustawiać na wartość TRUE, jeśli zwraca zastępowanie właściwości lub FALSE, jeśli nie zwraca właściwości (w którym to przypadku należy również ustawić `pvarValue` do VT_EMPTY)."
+      description: Indicates whether the server is supplying a value for the requested property. The server should set this to TRUE if it is returning an overriding property or to FALSE if it is not returning a property (in which case it should also set `pvarValue` to VT_EMPTY).
   overload: Accessibility.IAccPropServer.GetPropValue*
   exceptions: []
   platform:

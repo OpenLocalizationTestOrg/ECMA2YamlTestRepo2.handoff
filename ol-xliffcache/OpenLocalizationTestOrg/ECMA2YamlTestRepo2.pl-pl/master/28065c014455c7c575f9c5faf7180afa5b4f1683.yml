@@ -14,8 +14,8 @@ items:
   nameWithType: ProjectOnErrorInstance
   fullName: Microsoft.Build.Execution.ProjectOnErrorInstance
   type: Class
-  summary: "Otacza [OnError — Element (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Jest to klasa niezmienne."
+  summary: Wraps an [OnError Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: This is an immutable class.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("ExecuteTargets={executeTargets} Condition={condition}")]
@@ -41,12 +41,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość atrybutu warunek unevaluated tego elementu OnError."
+  summary: Gets the unevaluated Condition attribute value of this OnError element.
   syntax:
     content: public override string Condition { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu unevaluated warunku. Jeśli atrybut nie jest obecny, zwraca pusty ciąg."
+      description: Returns the unevaluated Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectOnErrorInstance.Condition*
   exceptions: []
   platform:
@@ -63,12 +63,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lokalizacja warunku, jeśli istnieje"
+  summary: Location of the condition, if any
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Execution.ProjectOnErrorInstance.ConditionLocation*
   exceptions: []
   platform:
@@ -85,13 +85,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość atrybutu ExecuteTargets unevaluated tego elementu OnError."
-  remarks: "Obiekty docelowe do wykonania, jeśli zadanie nie powiedzie się."
+  summary: Gets the unevaluated ExecuteTargets attribute value of this OnError element.
+  remarks: The targets to execute if a task fails.
   syntax:
     content: public string ExecuteTargets { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu unevaluated ExecuteTargets, który może być ciągiem pustym."
+      description: Returns the unevaluated ExecuteTargets attribute value, which may be an empty string.
   overload: Microsoft.Build.Execution.ProjectOnErrorInstance.ExecuteTargets*
   exceptions: []
   platform:
@@ -108,12 +108,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Atrybut jest przeznaczony dla lokalizacji execute ewentualne"
+  summary: Location of the execute targets attribute, if any
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ExecuteTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Execution.ProjectOnErrorInstance.ExecuteTargetsLocation*
   exceptions: []
   platform:
@@ -130,12 +130,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Położenie elementu"
+  summary: Location of the element
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Execution.ProjectOnErrorInstance.Location*
   exceptions: []
   platform:

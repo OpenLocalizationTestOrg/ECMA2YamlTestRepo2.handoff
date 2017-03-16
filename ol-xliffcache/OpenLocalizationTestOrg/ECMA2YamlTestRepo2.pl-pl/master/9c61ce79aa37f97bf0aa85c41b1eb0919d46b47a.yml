@@ -10,7 +10,7 @@ items:
   nameWithType: LocalNode
   fullName: Microsoft.Build.BuildEngine.LocalNode
   type: Class
-  summary: "Ta klasa obsługuje klasy węzła podrzędnego procesu kompilacji. Używa pamięci współużytkowanej do komunikowania się z dostawcą węzła lokalnego."
+  summary: This class hosts a node class in the child build process. It uses shared memory to communicate with the local node provider.
   syntax:
     content: public class LocalNode
   inheritance:
@@ -31,13 +31,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Rozpoczyna się lokalnego węzła, gdy proces jest uruchamiany i zamyka przekroczenia limitu czasu."
+  summary: Starts the local node when the process is launched and shuts it down on timeout.
   syntax:
     content: public static void StartLocalNodeServer (int nodeNumber);
     parameters:
     - id: nodeNumber
       type: System.Int32
-      description: "Liczba węzłów do uruchomienia."
+      description: The number of nodes to start.
   overload: Microsoft.Build.BuildEngine.LocalNode.StartLocalNodeServer*
   exceptions: []
   platform:

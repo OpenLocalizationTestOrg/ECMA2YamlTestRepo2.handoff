@@ -10,7 +10,7 @@ items:
   nameWithType: Utilities
   fullName: Microsoft.Build.BuildEngine.Utilities
   type: Class
-  summary: "Zawiera metody narzędzie używane przez [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]. Ta klasa nie może być dziedziczona."
+  summary: Contains utility methods used by [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]. This class cannot be inherited.
   syntax:
     content: public static class Utilities
   inheritance:
@@ -31,17 +31,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Konwertuje określony ciąg składni, która umożliwia [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] aparatu dosłownie interpretować znak."
-  remarks: "Niektóre znaki mają specjalne znaczenie w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] pliki projektu. Przykłady znaków średnikami (;) i gwiazdki (*). Aby można było używać tych znaków specjalnych jako literały, ich musi być określona z nn % składni, gdzie nn reprezentuje wartość szesnastkową znaku ASCII. Ta metoda wykonuje tej konwersji."
+  summary: Converts the specified string into a syntax that allows the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] engine to interpret the character literally.
+  remarks: Certain characters have special meaning in [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project files. Examples of the characters include semicolons (;) and asterisks (*). In order to use these special characters as literals, they must be specified with the syntax %nn, where nn represents the ASCII hexadecimal value of the character. This method performs that conversion.
   syntax:
     content: public static string Escape (string unescapedExpression);
     parameters:
     - id: unescapedExpression
       type: System.String
-      description: "Ciąg do przekonwertowania."
+      description: The string to convert.
     return:
       type: System.String
-      description: "Przekonwertowane wartości określonego ciągu."
+      description: The converted value of the specified string.
   overload: Microsoft.Build.BuildEngine.Utilities.Escape*
   exceptions: []
   platform:

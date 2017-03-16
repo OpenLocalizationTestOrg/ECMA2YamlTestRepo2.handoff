@@ -21,8 +21,8 @@ items:
   nameWithType: ToolsetCollection
   fullName: Microsoft.Build.BuildEngine.ToolsetCollection
   type: Class
-  summary: "Reprezentuje jedną lub więcej <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> obiektów. Zestaw narzędzi jest kombinacją wersji zestawu narzędzi (takich jak &quot;2.0&quot;), ścieżki narzędzi i opcjonalny zestaw powiązanych właściwości."
-  remarks: "ToolsetCollection pozwala na pobranie pojedyncze <xref:Microsoft.Build.BuildEngine.Toolset>obiekty, przekazując ciąg wersji narzędzia odpowiadającego z wymaganą <xref:Microsoft.Build.BuildEngine.Toolset>.</xref:Microsoft.Build.BuildEngine.Toolset> </xref:Microsoft.Build.BuildEngine.Toolset>"
+  summary: Represents one or more <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> objects. A Toolset is a combination of a Toolset version (such as "2.0"), a tools path, and an optional set of associated properties.
+  remarks: ToolsetCollection allows you to retrieve individual <xref:Microsoft.Build.BuildEngine.Toolset> objects by passing the string value of the tools version corresponding with the desired <xref:Microsoft.Build.BuildEngine.Toolset>.
   syntax:
     content: 'public class ToolsetCollection : System.Collections.Generic.ICollection<Microsoft.Build.BuildEngine.Toolset>, System.Collections.Generic.IEnumerable<Microsoft.Build.BuildEngine.Toolset>'
   inheritance:
@@ -45,14 +45,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje określony <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> do tej kolekcji."
-  remarks: "Dodaj zastępuje poprzednią wartość, która ma tę samą wersję narzędzia. Powiadamia nadrzędnego <xref:Microsoft.Build.BuildEngine.Engine>zmiany.</xref:Microsoft.Build.BuildEngine.Engine>"
+  summary: Adds the specified <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> to this collection.
+  remarks: Add replaces any previous value that has the same tools version. It also notifies the parent <xref:Microsoft.Build.BuildEngine.Engine> of the change.
   syntax:
     content: public void Add (Microsoft.Build.BuildEngine.Toolset item);
     parameters:
     - id: item
       type: Microsoft.Build.BuildEngine.Toolset
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> obiekt reprezentujący zestawu narzędzi do dodania do kolekcji."
+      description: A <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> object representing the Toolset to add to the collection.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.Add*
   exceptions: []
   platform:
@@ -69,7 +69,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ta metoda nie jest obsługiwana."
+  summary: This method is not supported.
   syntax:
     content: public void Clear ();
     parameters: []
@@ -89,16 +89,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera czy kolekcja zawiera <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> z określonym <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref> nazwy."
+  summary: Gets whether the collection contains a <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> with the specified <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref> name.
   syntax:
     content: public bool Contains (Microsoft.Build.BuildEngine.Toolset item);
     parameters:
     - id: item
       type: Microsoft.Build.BuildEngine.Toolset
-      description: "Wymagany. Ciąg reprezentujący nazwę <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+      description: Required. A string value representing the name of the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> jest zawarte w kolekcji; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>. Wartość domyślna to <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> is contained in the collection; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>. The default is <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.Contains*
   exceptions: []
   platform:
@@ -115,16 +115,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera czy kolekcja zawiera <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> za pomocą narzędzia określonej wersji."
+  summary: Gets whether the collection contains a <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> with the specified tools version.
   syntax:
     content: public bool Contains (string toolsVersion);
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Wymagany. Ciąg reprezentujący wersję narzędzia skojarzoną z <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+      description: Required. A string value representing the tools version associated with the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> jest zawarte w kolekcji; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>. Wartość domyślna to <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> is contained in the collection; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>. The default is <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.Contains*
   exceptions: []
   platform:
@@ -141,16 +141,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kopiuje zawartość <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref> do zgodnych jednowymiarowy <xref:System.Array>, zaczynając od określonego indeksu tablicy docelowej.</xref:System.Array>"
+  summary: Copies the contents of the <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref> to a compatible one-dimensional <xref:System.Array>, starting at the specified index of the target array.
   syntax:
     content: public void CopyTo (Microsoft.Build.BuildEngine.Toolset[] array, int arrayIndex);
     parameters:
     - id: array
       type: Microsoft.Build.BuildEngine.Toolset[]
-      description: "Jednowymiarowy <xref:System.Array>czyli docelowym elementów kopiowanych z <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref>.</xref:System.Array> <xref:System.Array>Musi mieć Indeksowanie oparte na zerze.</xref:System.Array>"
+      description: The one-dimensional <xref:System.Array> that is the destination of the elements copied from <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref>. The <xref:System.Array> must have zero-based indexing.
     - id: arrayIndex
       type: System.Int32
-      description: "Liczony od zera indeks w `Array` gdzie rozpoczyna się kopiowanie."
+      description: The zero-based index in `Array` at which copying begins.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.CopyTo*
   exceptions: []
   platform:
@@ -167,13 +167,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera wartość wskazującą liczbę <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> obiekty w <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref>."
-  remarks: "Każdy <xref:Microsoft.Build.BuildEngine.Toolset>reprezentuje element w kolekcji <xref:Microsoft.Build.BuildEngine.Toolset>w projekcie.</xref:Microsoft.Build.BuildEngine.Toolset> </xref:Microsoft.Build.BuildEngine.Toolset>"
+  summary: Gets a value indicating the number of <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> objects in the <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref>.
+  remarks: Each <xref:Microsoft.Build.BuildEngine.Toolset> element in the collection represents a <xref:Microsoft.Build.BuildEngine.Toolset> in the project.
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: "Wartość całkowitą reprezentującą liczbę <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> obiekty w kolekcji."
+      description: An integer value representing the number of <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> objects in the collection.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.Count*
   exceptions: []
   platform:
@@ -190,14 +190,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera moduł wyliczający, który dokonuje iteracji <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref>."
-  remarks: "Ta metoda umożliwia obiekt wywołujący do używania `foreach` instrukcja języka C# (`for each` w [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) do iteracji poszczególnych <xref:Microsoft.Build.BuildEngine.Toolset>obiektów w <xref:Microsoft.Build.BuildEngine.ToolsetCollection>.</xref:Microsoft.Build.BuildEngine.ToolsetCollection> </xref:Microsoft.Build.BuildEngine.Toolset>"
+  summary: Gets an enumerator that iterates through the <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref>.
+  remarks: This method allows the caller to use the `foreach` statement of the C# language (`for each` in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) to iterate through the individual <xref:Microsoft.Build.BuildEngine.Toolset> objects in the <xref:Microsoft.Build.BuildEngine.ToolsetCollection>.
   syntax:
     content: public System.Collections.Generic.IEnumerator<Microsoft.Build.BuildEngine.Toolset> GetEnumerator ();
     parameters: []
     return:
       type: System.Collections.Generic.IEnumerator{Microsoft.Build.BuildEngine.Toolset}
-      description: "<xref:System.Collections.IEnumerator>Dla całego <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref>.</xref:System.Collections.IEnumerator>"
+      description: An <xref:System.Collections.IEnumerator> for the entire <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref>.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.GetEnumerator*
   exceptions: []
   platform:
@@ -214,13 +214,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera czy <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref> jest tylko do odczytu. Zwraca zawsze IsReadOnly <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref> , ponieważ są zawsze zapisu procesami."
-  remarks: "IsReadOnly zawsze zwraca `false` ponieważ są zawsze zapisu procesami."
+  summary: Gets whether the <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref> is read-only. IsReadOnly always returns <xref uid="langword_csharp_false" name="false" href=""></xref> because Toolsets are always writable.
+  remarks: IsReadOnly always returns `false` because Toolsets are always writable.
   syntax:
     content: public bool IsReadOnly { get; }
     return:
       type: System.Boolean
-      description: "Wartość logiczna wskazująca czy <xref href=&quot;Microsoft.Build.BuildEngine.ToolsetCollection&quot;> </xref> jest tylko do odczytu."
+      description: A boolean value indicating whether the <xref href="Microsoft.Build.BuildEngine.ToolsetCollection"></xref> is read-only.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.IsReadOnly*
   exceptions: []
   platform:
@@ -237,16 +237,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> związane z wersją określonego narzędzia."
+  summary: Gets the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> associated with the specified tools version.
   syntax:
     content: public Microsoft.Build.BuildEngine.Toolset this[string toolsVersion] { get; }
     parameters:
     - id: toolsVersion
       type: System.String
-      description: "Wymagany. Ciąg reprezentujący wersję narzędzia powiązaną z wymaganą <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>."
+      description: Required. A string value representing the tools version associated with the desired <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>.
     return:
       type: Microsoft.Build.BuildEngine.Toolset
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> obiekt reprezentujący zestaw narzędzi, który jest zgodny z określonym <code> toolsVersion </code>."
+      description: A <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> object representing the toolset that matches the specified <code>toolsVersion</code>.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.Item*
   exceptions: []
   platform:
@@ -263,16 +263,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ta metoda nie jest obsługiwana."
+  summary: This method is not supported.
   syntax:
     content: public bool Remove (Microsoft.Build.BuildEngine.Toolset item);
     parameters:
     - id: item
       type: Microsoft.Build.BuildEngine.Toolset
-      description: "Nieobsługiwane."
+      description: Not supported.
     return:
       type: System.Boolean
-      description: "Nieobsługiwane."
+      description: Not supported.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.Remove*
   exceptions: []
   platform:
@@ -290,14 +290,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Moduł wyliczający non ogólny dla procesami w tej kolekcji."
-  remarks: "Zwraca moduł wyliczający."
+  summary: Non-generic enumerator for the Toolsets in this collection.
+  remarks: Returns the enumerator.
   syntax:
     content: System.Collections.IEnumerator IEnumerable.GetEnumerator ();
     parameters: []
     return:
       type: System.Collections.IEnumerator
-      description: "Zwraca moduł wyliczający dla procesami."
+      description: Returns an enumerator for the toolsets.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.System#Collections#IEnumerable#GetEnumerator*
   exceptions: []
   platform:
@@ -314,12 +314,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera nazwy <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref>s przechowywane w tej kolekcji."
+  summary: Gets the names of the <xref href="Microsoft.Build.BuildEngine.Toolset"></xref>s stored in this collection.
   syntax:
     content: public System.Collections.Generic.IEnumerable<string> ToolsVersions { get; }
     return:
       type: System.Collections.Generic.IEnumerable{System.String}
-      description: "Wyliczenie, której elementy reprezentują poszczególne <xref href=&quot;Microsoft.Build.BuildEngine.Toolset&quot;> </xref> obiektów w tej kolekcji."
+      description: An enumeration whose elements represent individual <xref href="Microsoft.Build.BuildEngine.Toolset"></xref> objects in this collection.
   overload: Microsoft.Build.BuildEngine.ToolsetCollection.ToolsVersions*
   exceptions: []
   platform:

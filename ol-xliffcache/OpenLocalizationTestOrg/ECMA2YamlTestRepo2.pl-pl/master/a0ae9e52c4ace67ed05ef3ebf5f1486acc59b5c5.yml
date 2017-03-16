@@ -17,7 +17,7 @@ items:
   nameWithType: ImportCollection
   fullName: Microsoft.Build.BuildEngine.ImportCollection
   type: Class
-  summary: "Reprezentuje kolekcję wszystkich [importowania](~/add/includes/ajax-current-ext-md.md) elementów w projekcie."
+  summary: Represents a collection of all [Import](~/add/includes/ajax-current-ext-md.md) elements in a project.
   syntax:
     content: 'public class ImportCollection : System.Collections.ICollection'
   inheritance:
@@ -39,16 +39,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pozwala hostom programowo Dodaj nowy [ &lt;importowania&gt; ](~/add/includes/ajax-current-ext-md.md) znacznika w pliku projektu jest przetwarzany przez hosta."
+  summary: Allows hosts to programmatically add a new [&lt;Import&gt;](~/add/includes/ajax-current-ext-md.md) tag to a project file being manipulated by the host.
   syntax:
     content: public void AddNewImport (string projectFile, string condition);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Wymagany ciąg reprezentujący nazwę pliku projektu dla &lt;importowania&gt; instrukcji do dodania. Na przykład &quot;myproject.csproj&quot;."
+      description: A required string representing the name of the project file for the &lt;Import&gt; statement to be added. For example, "myproject.csproj."
     - id: condition
       type: System.String
-      description: "Opcjonalny ciąg wskazującą, czy element jest przetwarzany. Jeśli `condition` jest <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref>, następnie określone &lt;importowania&gt; tag zostanie dodany, jeśli <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>, nie jest."
+      description: An optional string indicating whether the element is processed. If `condition` is <xref uid="langword_csharp_true" name="true" href=""></xref>, then the specified &lt;Import&gt; tag is added, if <xref uid="langword_csharp_false" name="false" href=""></xref>, it is not.
   overload: Microsoft.Build.BuildEngine.ImportCollection.AddNewImport*
   exceptions: []
   platform:
@@ -65,16 +65,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kopiuje całą <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref> do zgodnych jednowymiarowy <xref:System.Array>z <xref href=&quot;Microsoft.Build.BuildEngine.Import&quot;> </xref> obiektów, zaczynając od określonego indeksu tablicy docelowej.</xref:System.Array>"
+  summary: Copies the entire <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref> to a compatible one-dimensional <xref:System.Array> of <xref href="Microsoft.Build.BuildEngine.Import"></xref> objects, starting at the specified index of the target array.
   syntax:
     content: public void CopyTo (Microsoft.Build.BuildEngine.Import[] array, int index);
     parameters:
     - id: array
       type: Microsoft.Build.BuildEngine.Import[]
-      description: "Jednowymiarowy <xref:System.Array>z <xref href=&quot;Microsoft.Build.BuildEngine.Import&quot;> </xref> obiektów, które jest miejscem docelowym elementów kopiowanych z <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref>.</xref:System.Array> <xref:System.Array>Musi mieć Indeksowanie oparte na zerze.</xref:System.Array>"
+      description: The one-dimensional <xref:System.Array> of <xref href="Microsoft.Build.BuildEngine.Import"></xref> objects that is the destination of the elements copied from <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref>. The <xref:System.Array> must have zero-based indexing.
     - id: index
       type: System.Int32
-      description: "Liczony od zera indeks w `array` gdzie rozpoczyna się kopiowanie."
+      description: The zero-based index in `array` at which copying begins.
   overload: Microsoft.Build.BuildEngine.ImportCollection.CopyTo*
   exceptions: []
   platform:
@@ -91,16 +91,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kopiuje całą <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref> do zgodnych jednowymiarowy <xref:System.Array>, zaczynając od określonego indeksu tablicy docelowej.</xref:System.Array>"
+  summary: Copies the entire <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref> to a compatible one-dimensional <xref:System.Array>, starting at the specified index of the target array.
   syntax:
     content: public void CopyTo (Array array, int index);
     parameters:
     - id: array
       type: System.Array
-      description: "Jednowymiarowy <xref:System.Array>czyli docelowym elementów kopiowanych z <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref>.</xref:System.Array> <xref:System.Array>Musi mieć Indeksowanie oparte na zerze.</xref:System.Array>"
+      description: The one-dimensional <xref:System.Array> that is the destination of the elements copied from <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref>. The <xref:System.Array> must have zero-based indexing.
     - id: index
       type: System.Int32
-      description: "Liczony od zera indeks w `array` gdzie rozpoczyna się kopiowanie."
+      description: The zero-based index in `array` at which copying begins.
   overload: Microsoft.Build.BuildEngine.ImportCollection.CopyTo*
   exceptions: []
   platform:
@@ -117,13 +117,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera wartość wskazującą liczbę <xref href=&quot;Microsoft.Build.BuildEngine.Import&quot;> </xref> obiekty w <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref>."
-  remarks: "Każdy <xref:Microsoft.Build.BuildEngine.Import>obiektu w kolekcji reprezentuje element w projekcie.</xref:Microsoft.Build.BuildEngine.Import>"
+  summary: Gets a value indicating the number of <xref href="Microsoft.Build.BuildEngine.Import"></xref> objects in the <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref>.
+  remarks: Each <xref:Microsoft.Build.BuildEngine.Import> object in the collection represents a  element in the project.
   syntax:
     content: public int Count { get; }
     return:
       type: System.Int32
-      description: "Wartość całkowitą reprezentującą liczbę <xref href=&quot;Microsoft.Build.BuildEngine.Import&quot;> </xref> obiekty w kolekcji."
+      description: An integer value representing the number of <xref href="Microsoft.Build.BuildEngine.Import"></xref> objects in the collection.
   overload: Microsoft.Build.BuildEngine.ImportCollection.Count*
   exceptions: []
   platform:
@@ -140,14 +140,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera moduł wyliczający, który dokonuje iteracji <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref>."
-  remarks: "Ta metoda umożliwia obiekt wywołujący do używania `foreach` instrukcja języka C# (`for each` w [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) do iteracji poszczególnych <xref:Microsoft.Build.BuildEngine.Import>obiektów w <xref:Microsoft.Build.BuildEngine.ImportCollection>.</xref:Microsoft.Build.BuildEngine.ImportCollection> </xref:Microsoft.Build.BuildEngine.Import>"
+  summary: Gets an enumerator that iterates through the <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref>.
+  remarks: This method allows the caller to use the `foreach` statement of the C# language (`for each` in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) to iterate through the individual <xref:Microsoft.Build.BuildEngine.Import> objects in the <xref:Microsoft.Build.BuildEngine.ImportCollection>.
   syntax:
     content: public System.Collections.IEnumerator GetEnumerator ();
     parameters: []
     return:
       type: System.Collections.IEnumerator
-      description: "<xref:System.Collections.IEnumerator>Dla całego <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref>.</xref:System.Collections.IEnumerator>"
+      description: An <xref:System.Collections.IEnumerator> for the entire <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref>.
   overload: Microsoft.Build.BuildEngine.ImportCollection.GetEnumerator*
   exceptions: []
   platform:
@@ -164,12 +164,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustala wartość wskazującą czy uzyskują dostęp do <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref> jest zsynchronizowany (bezpieczne dla wątków)."
+  summary: Gets a value indicating whether access to the <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref> is synchronized (thread safe).
   syntax:
     content: public bool IsSynchronized { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli dostęp do <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref> jest zsynchronizowany (bezpieczne dla wątków); w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>. Wartość domyślna to <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if access to the <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref> is synchronized (thread safe); otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>. The default is <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.ImportCollection.IsSynchronized*
   exceptions: []
   platform:
@@ -186,14 +186,14 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pozwala hostom programowane usuwanie [ &lt;importowania&gt; ](~/add/includes/ajax-current-ext-md.md) znaczniki, które są częścią projektu plik jest przetwarzany przez hosta."
-  remarks: "Usuwanie importowania oznacza projekt jako zakłócone, co oznacza, że projekt będzie oceniona w pewnym momencie podczas innych operacji na wystąpienie projektu."
+  summary: Allows hosts to programmatically remove [&lt;Import&gt;](~/add/includes/ajax-current-ext-md.md) tags that are part of a project file being manipulated by the host.
+  remarks: Removing an import marks the project as dirty, which means that the project will be re-evaluated at some point during other operations on the project instance.
   syntax:
     content: public void RemoveImport (Microsoft.Build.BuildEngine.Import importToRemove);
     parameters:
     - id: importToRemove
       type: Microsoft.Build.BuildEngine.Import
-      description: "Ciąg reprezentujący nazwę &lt;importowania&gt; tag, aby usunąć z pliku projektu."
+      description: A string representing the name of the &lt;Import&gt; tag to remove from the project file.
   overload: Microsoft.Build.BuildEngine.ImportCollection.RemoveImport*
   exceptions: []
   platform:
@@ -210,12 +210,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera obiekt, który może służyć do synchronizowania dostępu do <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref>."
+  summary: Gets an object that can be used to synchronize access to the <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref>.
   syntax:
     content: public object SyncRoot { get; }
     return:
       type: System.Object
-      description: "Obiekt, który może służyć do synchronizowania dostępu do <xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref>."
+      description: An object that can be used to synchronize access to the <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref>.
   overload: Microsoft.Build.BuildEngine.ImportCollection.SyncRoot*
   exceptions: []
   platform:

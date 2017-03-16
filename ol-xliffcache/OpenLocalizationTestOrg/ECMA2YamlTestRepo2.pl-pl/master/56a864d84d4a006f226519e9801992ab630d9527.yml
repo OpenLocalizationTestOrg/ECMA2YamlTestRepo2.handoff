@@ -12,7 +12,7 @@ items:
   nameWithType: BuildEngineResult
   fullName: Microsoft.Build.Framework.BuildEngineResult
   type: Struct
-  summary: "Zawiera wynik kompilacji i wyprowadza docelowego."
+  summary: Contains the result of the build and the target outputs.
   syntax:
     content: public struct BuildEngineResult
   inheritance:
@@ -32,16 +32,16 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktor, który przyjmuje wynik kompilacji i listę docelową danych wyjściowych dla poszczególnych projektów."
+  summary: Constructor that takes the result of the build and a list of the target outputs per project.
   syntax:
     content: public BuildEngineResult (bool result, System.Collections.Generic.List<System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.ITaskItem[]>> targetOutputsPerProject);
     parameters:
     - id: result
       type: System.Boolean
-      description: "Wynik kompilacji."
+      description: The result of the build.
     - id: targetOutputsPerProject
       type: System.Collections.Generic.List{System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.ITaskItem[]}}
-      description: "Lista danych wyjściowych dla poszczególnych projektów."
+      description: The list of outputs per project.
   overload: Microsoft.Build.Framework.BuildEngineResult.#ctor*
   exceptions: []
   platform:
@@ -58,12 +58,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Zwraca wartość true, jeśli kompilacja powiodła się."
+  summary: Returns true if the build succeeded.
   syntax:
     content: public bool Result { get; }
     return:
       type: System.Boolean
-      description: "Do dodania."
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEngineResult.Result*
   exceptions: []
   platform:
@@ -80,12 +80,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Dane wyjściowe elementów docelowych dla projektu."
+  summary: Outputs of the targets per project.
   syntax:
     content: public System.Collections.Generic.IList<System.Collections.Generic.IDictionary<string,Microsoft.Build.Framework.ITaskItem[]>> TargetOutputsPerProject { get; }
     return:
       type: System.Collections.Generic.IList{System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.ITaskItem[]}}
-      description: "Do dodania."
+      description: To be added.
   overload: Microsoft.Build.Framework.BuildEngineResult.TargetOutputsPerProject*
   exceptions: []
   platform:

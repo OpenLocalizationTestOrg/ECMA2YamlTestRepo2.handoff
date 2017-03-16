@@ -14,8 +14,8 @@ items:
   nameWithType: TaskCommandLineEventArgs
   fullName: Microsoft.Build.Framework.TaskCommandLineEventArgs
   type: Class
-  summary: "Dostarcza dane do <xref href=&quot;Microsoft.Build.Framework.IEventSource.MessageRaised&quot;> </xref> zdarzeń."
-  remarks: "Rozszerza TaskCommandLineEventArgs <xref:Microsoft.Build.Framework.BuildMessageEventArgs>Tak, aby ciąg wiersza polecenia używane przez zadania do wykonania programu źródłowego mogą być rejestrowane jako wiadomość.</xref:Microsoft.Build.Framework.BuildMessageEventArgs> Rejestrowanie ciągu wiersza polecenia jest stosowana tylko dla zadań, które zawijać odpowiedni program lub emulować polecenia powłoki. To zdarzenie rozszerzony komunikat, nie powinny wywoływać zadania, które mają nie odpowiednik wiersza polecenia."
+  summary: Provides data for the <xref href="Microsoft.Build.Framework.IEventSource.MessageRaised"></xref> event.
+  remarks: TaskCommandLineEventArgs extends <xref:Microsoft.Build.Framework.BuildMessageEventArgs> so that the command line string used by a task to execute an underlying program can be logged as a message. Logging a command line string is only relevant for tasks that wrap an underlying program or emulate a shell command. Tasks that have no command line equivalent should not raise this extended message event.
   syntax:
     content: 'public class TaskCommandLineEventArgs : Microsoft.Build.Framework.BuildMessageEventArgs'
   inheritance:
@@ -54,7 +54,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Framework.TaskCommandLineEventArgs&quot;> </xref> klasy."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.TaskCommandLineEventArgs"></xref> class.
   syntax:
     content: protected TaskCommandLineEventArgs ();
     parameters: []
@@ -74,19 +74,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Framework.TaskCommandLineEventArgs&quot;> </xref> klasy przy użyciu określonego wiersza polecenia i <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref>."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.TaskCommandLineEventArgs"></xref> class with the specified command line and <xref href="Microsoft.Build.Framework.MessageImportance"></xref>.
   syntax:
     content: public TaskCommandLineEventArgs (string commandLine, string taskName, Microsoft.Build.Framework.MessageImportance importance);
     parameters:
     - id: commandLine
       type: System.String
-      description: "Wiersz polecenia używane przez zadanie do uruchomienia programu źródłowego."
+      description: The command line used by the task to run the underlying program.
     - id: taskName
       type: System.String
-      description: "Nazwa zadania wywoływanie zdarzeń."
+      description: The name of the task raising the event.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "<xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref> Wiadomości."
+      description: The <xref href="Microsoft.Build.Framework.MessageImportance"></xref> of the message.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor*
   exceptions: []
   platform:
@@ -103,22 +103,22 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Framework.TaskCommandLineEventArgs&quot;> </xref> klasy przy użyciu określonego wiersza polecenia, nazwa zadania i <xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref>."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Framework.TaskCommandLineEventArgs"></xref> class with the specified command line, task name and <xref href="Microsoft.Build.Framework.MessageImportance"></xref>.
   syntax:
     content: public TaskCommandLineEventArgs (string commandLine, string taskName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);
     parameters:
     - id: commandLine
       type: System.String
-      description: "Wiersz polecenia używane przez zadanie do uruchomienia programu źródłowego."
+      description: The command line used by the task to run the underlying program.
     - id: taskName
       type: System.String
-      description: "Nazwa zadania wywoływanie zdarzeń."
+      description: The name of the task raising the event.
     - id: importance
       type: Microsoft.Build.Framework.MessageImportance
-      description: "<xref href=&quot;Microsoft.Build.Framework.MessageImportance&quot;> </xref> Wiadomości."
+      description: The <xref href="Microsoft.Build.Framework.MessageImportance"></xref> of the message.
     - id: eventTimestamp
       type: System.DateTime
-      description: "Godzina wystąpienia zdarzenia."
+      description: The time the event occurred.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor*
   exceptions: []
   platform:
@@ -135,12 +135,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Pobiera wiersza polecenia używane przez zadanie do uruchomienia programu źródłowego."
+  summary: Gets the command line used by the task to run the underlying program.
   syntax:
     content: public string CommandLine { get; }
     return:
       type: System.String
-      description: "Wiersz polecenia używane przez zadanie do uruchomienia programu źródłowego."
+      description: The command line used by the task to run the underlying program.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.CommandLine*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Pobiera nazwę zadania, który spowodował zdarzenie."
+  summary: Gets the name of the task that raised the event.
   syntax:
     content: public string TaskName { get; }
     return:
       type: System.String
-      description: "Nazwa zadania, który spowodował zdarzenie."
+      description: The name of the task that raised the event.
   overload: Microsoft.Build.Framework.TaskCommandLineEventArgs.TaskName*
   exceptions: []
   platform:

@@ -13,8 +13,8 @@ items:
   nameWithType: StringListProperty
   fullName: Microsoft.Build.Framework.XamlTypes.StringListProperty
   type: Class
-  summary: "Reprezentuje schematu listy z ciągów właściwości."
-  remarks: "Uwaga: ta reprezentuje listy ciągów, nie listę <xref:Microsoft.Build.Framework.XamlTypes.StringProperty>s.</xref:Microsoft.Build.Framework.XamlTypes.StringProperty>"
+  summary: Represents the schema of a list-of-strings property.
+  remarks: Note, this represents a list of strings, not a list of <xref:Microsoft.Build.Framework.XamlTypes.StringProperty>s.
   syntax:
     content: 'public sealed class StringListProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty'
   inheritance:
@@ -61,7 +61,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Konstruktor domyślny. Potrzebne do właściwości języka XAML deserializacji."
+  summary: Default constructor. Needed for property XAML deserialization.
   syntax:
     content: public StringListProperty ();
     parameters: []
@@ -81,13 +81,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Pobiera lub ustawia separator do użycia w oddzielania poszczególnych wartości tej właściwości listy ciągów"
-  remarks: 'Dla `Val1;Val2;Val3`, jeśli `CommandLineValueSeparator` jest określony jako, że `,`, wiersz polecenia wygląda następująco: `/p:val1,val2,val3` Jeśli nie zostanie określony, polecenie wygląda następująco: `/p:val1 /p:val2 /p:val3` to pole jest opcjonalne.'
+  summary: Gets or sets the separator to use in delineating individual values of this string list property
+  remarks: 'For `Val1;Val2;Val3`, if `CommandLineValueSeparator` is specified as, say `,`, the command line looks like this: `/p:val1,val2,val3` If not specified, the command line looks like this: `/p:val1 /p:val2 /p:val3` This field is optional.'
   syntax:
     content: public string CommandLineValueSeparator { get; set; }
     return:
       type: System.String
-      description: "Zwraca separatora."
+      description: Returns the separator.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator*
   exceptions: []
   platform:
@@ -104,12 +104,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Pobiera lub ustawia separatora renderowania interfejsu użytkownika. Ta właściwość jest przestarzała."
+  summary: Gets or sets the UI rendering separator. This property is deprecated.
   syntax:
     content: public string RendererValueSeparator { get; set; }
     return:
       type: System.String
-      description: "Zwraca separatora renderowania interfejsu użytkownika. Ta właściwość jest przestarzała."
+      description: Returns the UI rendering separator. This property is deprecated.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator*
   exceptions: []
   platform:
@@ -126,13 +126,13 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework.XamlTypes
-  summary: "Kwalifikuje się tę właściwość ciągu, aby nadać mu dokładniejsze klasyfikacji."
-  remarks: "Podobnie jak <xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A>właściwość.</xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A>"
+  summary: Qualifies this string property to give it a more specific classification.
+  remarks: Similar to the <xref:Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype%2A> property.
   syntax:
     content: public string Subtype { get; set; }
     return:
       type: System.String
-      description: "Zwraca podtyp właściwości."
+      description: Returns the property subtype.
   overload: Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype*
   exceptions: []
   platform:

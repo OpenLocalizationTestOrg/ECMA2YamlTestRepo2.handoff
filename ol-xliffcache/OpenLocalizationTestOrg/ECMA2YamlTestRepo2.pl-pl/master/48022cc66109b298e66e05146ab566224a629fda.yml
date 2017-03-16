@@ -12,7 +12,7 @@ items:
   nameWithType: TargetResult
   fullName: Microsoft.Build.Execution.TargetResult
   type: Class
-  summary: "Reprezentuje kod wyniku do tworzenia pojedynczy element docelowy i ogólnej wyników kompilacji."
+  summary: Represents both the result code for building a single target and the overall build result.
   syntax:
     content: 'public class TargetResult : Microsoft.Build.Execution.ITargetResult'
   inheritance:
@@ -34,12 +34,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wyjątków, które zostało przerwane tego obiektu docelowego, jeśli istnieją."
+  summary: Gets the exception which aborted this target, if any.
   syntax:
     content: public Exception Exception { get; }
     return:
       type: System.Exception
-      description: "Zwraca wyjątków, które zostało przerwane tego obiektu docelowego, jeśli istnieją."
+      description: Returns the exception which aborted this target, if any.
   overload: Microsoft.Build.Execution.TargetResult.Exception*
   exceptions: []
   platform:
@@ -56,13 +56,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera elementy utworzone przez tego obiektu docelowego."
-  remarks: "ITaskItem nie ma elementu typu."
+  summary: Gets the items produced by this target.
+  remarks: An ITaskItem has no item-type.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] Items { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Zwraca elementy tworzony przez ten element docelowy."
+      description: Returns the items produced by this target.
   overload: Microsoft.Build.Execution.TargetResult.Items*
   exceptions: []
   platform:
@@ -79,12 +79,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera kod wyniku do tworzenia tego obiektu docelowego."
+  summary: Gets the result code for building this target.
   syntax:
     content: public Microsoft.Build.Execution.TargetResultCode ResultCode { get; }
     return:
       type: Microsoft.Build.Execution.TargetResultCode
-      description: "Zwraca kod wyniku do tworzenia tego obiektu docelowego."
+      description: Returns the result code for building this target.
   overload: Microsoft.Build.Execution.TargetResult.ResultCode*
   exceptions: []
   platform:

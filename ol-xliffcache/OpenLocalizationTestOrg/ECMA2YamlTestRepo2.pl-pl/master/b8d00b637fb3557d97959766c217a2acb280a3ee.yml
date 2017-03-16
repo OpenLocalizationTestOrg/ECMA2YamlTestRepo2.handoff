@@ -17,8 +17,8 @@ items:
   nameWithType: Move
   fullName: Microsoft.Build.Tasks.Move
   type: Class
-  summary: "Zadanie, aby przenieść jeden lub więcej plików."
-  remarks: "Nie obsługuje przenoszenie katalogów (tj., polecenia xcopy)."
+  summary: Task to move one or more files.
+  remarks: This does not support moving directories (ie, xcopy).
   syntax:
     content: 'public class Move : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask'
   inheritance:
@@ -50,7 +50,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Tworzy zadanie, aby przenieść jeden lub więcej plików."
+  summary: Creates a task to move one or more files.
   syntax:
     content: public Move ();
     parameters: []
@@ -70,7 +70,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Zatrzymaj i jak najszybciej powrócić (w stanie niezdefiniowane)."
+  summary: Stop and return (in an undefined state) as soon as possible.
   syntax:
     content: public void Cancel ();
     parameters: []
@@ -90,12 +90,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia reprezentujące docelowej pasujących plików źródłowych plików docelowych."
+  summary: Gets or sets the destination files that represent the destination of the matching source files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] DestinationFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Zwraca element, który reprezentuje pliki docelowe."
+      description: Returns an item that represents the destination files.
   overload: Microsoft.Build.Tasks.Move.DestinationFiles*
   exceptions: []
   platform:
@@ -112,12 +112,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia folder docelowy dla plików źródłowych."
+  summary: Gets or sets the destination folder for the source files.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem DestinationFolder { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem
-      description: "Zwraca element reprezentuje folder docelowy."
+      description: Returns an item representing the destination folder.
   overload: Microsoft.Build.Tasks.Move.DestinationFolder*
   exceptions: []
   platform:
@@ -134,13 +134,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Wykonuje przeniesienie."
+  summary: Executes the move.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "Zwraca wartość true, jeśli ruch jest pomyślne, wartość false w przeciwnym razie."
+      description: Returns true if the move is successful, false otherwise.
   overload: Microsoft.Build.Tasks.Move.Execute*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera element reprezentuje pliki, które zostały przeniesione."
+  summary: Gets an item representing the files that were successfully moved.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] MovedFiles { get; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Zwraca element reprezentuje pliki, które zostały przeniesione."
+      description: Returns an item representing the files that were successfully moved.
   overload: Microsoft.Build.Tasks.Move.MovedFiles*
   exceptions: []
   platform:
@@ -179,13 +179,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia przełącznik, który wybiera, czy pliki w folderze docelowym, które mają ustawiony atrybut tylko do odczytu może zostać zastąpiona."
-  remarks: "Wartość domyślna to nie zezwala na zastępowanie plików."
+  summary: Gets or sets a switch that selects whether files in the destination folder that have the read-only attribute set can be overwritten.
+  remarks: The default is to not allow files to be overwritten.
   syntax:
     content: public bool OverwriteReadOnlyFiles { get; set; }
     return:
       type: System.Boolean
-      description: "Zwraca wartość true, jeśli pliki mogą być zastąpione, wartość false w przeciwnym razie."
+      description: Returns true if the files can be overwritten, false otherwise.
   overload: Microsoft.Build.Tasks.Move.OverwriteReadOnlyFiles*
   exceptions: []
   platform:
@@ -202,12 +202,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia element reprezentuje listę plików, aby przenieść."
+  summary: Gets or sets an item representing the list of files to move.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] SourceFiles { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Zwraca wartość reprezentującą listę plików, aby przenieść element."
+      description: Returns an item representing the list of files to move.
   overload: Microsoft.Build.Tasks.Move.SourceFiles*
   exceptions: []
   platform:

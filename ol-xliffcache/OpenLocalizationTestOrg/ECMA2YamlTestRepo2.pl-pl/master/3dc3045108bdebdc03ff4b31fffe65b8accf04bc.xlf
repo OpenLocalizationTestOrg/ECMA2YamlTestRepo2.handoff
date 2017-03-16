@@ -1,0 +1,969 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3dc3045108bdebdc03ff4b31fffe65b8accf04bc</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Web.UI.WebControls.WebParts.PageCatalogPart.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">62e1e3d5e5019919cc43756a3a7ef9b15b314784</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8be1da1d5198e53fbb4134b9ee7cbdf6e3e30d06</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Provides a catalog that keeps references to all <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> controls (and other server controls contained in <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartZoneBase"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> zones) that a user has closed on a single Web Parts page, which enables users to add the closed controls back to the page.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>This class cannot be inherited.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The PageCatalogPart class serves one very specific purpose on a Web Parts page: it acts as a page catalog to maintain any controls previously added to the page that a user has closed, so that the user can add them back to the page.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This control is visible only when a Web page is in catalog display mode, a special view that enables users to add and remove controls on the page.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Add a PageCatalogPart control to your page if you want to provide users with the flexibility of closing and reopening controls.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If your page does not allow users to close controls at all, there is no need to add a PageCatalogPart control to your page.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Only closed controls are added to the page catalog.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A closed control has several attributes:      -   It is not visible on the page.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   It is not rendered on the page.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   It does not participate in page life-cycle phases.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Closing a control is different from deleting it, which permanently removes it from the page.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A user can reopen a closed control instance from a page catalog, but after a user deletes a control, he or she can never recover that specific instance.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The most common and convenient way to add a PageCatalogPart control to a page is by declaring it in page persistence format.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>As with any declarative &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; control, a PageCatalogPart control must be declared within the proper context of ASP.NET markup elements on a Web page.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For a working code example of how to declare a PageCatalogPart control in a Web page, see the Example section of this topic.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You must add the following sequence of declarative elements to the page:      1.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An <ph id="ph1">`&lt;asp:catalogzone&gt;`</ph> element must be declared, and a child <ph id="ph2">`&lt;zonetemplate&gt;`</ph> element must be added to it to contain any &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; controls declared in the zone.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>An <ph id="ph1">`&lt;asp:pagecatalogpart&gt;`</ph> element must be added as a child of the <ph id="ph2">`&lt;zonetemplate&gt;`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>There might also be other &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; controls declared as child elements of the <ph id="ph1">`&lt;zonetemplate&gt;`</ph> element, including &lt;xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart&gt; or &lt;xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart&gt; controls.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The PageCatalogPart class has only one usable property, the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Title%2A&gt; property, which overrides the base property so that a default title can be provided for the page catalog if no value is supplied.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The remaining properties for the PageCatalogPart class override the inherited properties, but are not actually used for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>They are overridden only so that special code attributes can be set on them to hide them from design tools like <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>You should not use these hidden properties, because they have no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The fact that they are hidden from IntelliSense and the Properties pane in Visual Studio helps developers avoid using them by mistake.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>All these hidden properties are noted as such in their respective Help topics.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The PageCatalogPart class also has several important methods.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A&gt; method retrieves a &lt;xref:System.Web.UI.WebControls.WebParts.WebPartDescription&gt; object for each &lt;xref:System.Web.UI.WebControls.WebParts.WebPart&gt; control in the page catalog, which enables a PageCatalogPart control to display information about each server control without having to create an instance of that control.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Another method is the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This method gets an instance of a particular &lt;xref:System.Web.UI.WebControls.WebParts.WebPart&gt; control, based on the description passed to the method.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Accessibility    The markup rendered by default for this control might not conform to accessibility standards such as the Web Content Accessibility Guidelines 1.0 (WCAG) priority 1 guidelines.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For details about accessibility support for this control, see <bpt id="p1">[</bpt>ASP.NET Controls and Accessibility<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Initializes a new instance of the class.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The PageCatalogPart constructor is a default; no constructor is declared in the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; class and hence no special tasks are carried out when a new instance of the class is created.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The .NET Framework uses the constructor internally to create an instance of the class.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve" extradata="MT">
+          <source>It is possible, but unlikely, that you will need to use the PageCatalogPart constructor programmatically in your own code.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The intended use of the control is for page developers to add it to a page declaratively at design time.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The AccessKey property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the AccessKey property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.AccessKey%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>A string that represents a keyboard key used for quick keyboard navigation to a control.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The BackColor property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the BackColor property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.BackColor%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Drawing.Color"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used for the background color of the control.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The BackImageUrl property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the BackImageUrl property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.Panel.BackImageUrl%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>A string that contains the URL to an image used as the background for a control.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The BorderColor property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the BorderColor property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.BorderColor%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Drawing.Color"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used as the color of the border around a control.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The BorderStyle property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the BorderStyle property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.BorderStyle"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that determines the type of border and title display for a control.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The BorderWidth property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the BorderWidth property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.Unit"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that determines the width of the border around a control.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The CssClass property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the CssClass property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.CssClass%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>A string that contains the name of a cascading style sheet (CSS) class used to assign style characteristics to a control.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The DefaultButton property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the DefaultButton property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.Panel.DefaultButton%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>A string that contains the ID of a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.Button"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control that serves as the default button on a control.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Direction property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the Direction property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.Panel.Direction%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.ContentDirection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that indicates the direction in which the content flows in a control.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Enabled property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the Enabled property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.Enabled%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>A Boolean value that indicates whether a control is currently enabled or disabled.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The EnableTheming property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the EnableTheming property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>A Boolean value that indicates whether themes can be used on a control.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>An attempt was made to set the property.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Font property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the Font property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.Font%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.FontInfo"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that indicates the font used for a control's content.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ForeColor property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the ForeColor property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.ForeColor%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Drawing.Color"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that determines the foreground color for a control.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>Returns a collection of descriptions of the available <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> controls in a catalog.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetAvailableWebPartDescriptions method provides an implementation for the abstract base method declared in the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetAvailableWebPartDescriptions method returns description information for each control in a catalog.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve" extradata="MT">
+          <source>A &lt;xref:System.Web.UI.WebControls.WebParts.WebPartDescription&gt; object contains essential information about a &lt;xref:System.Web.UI.WebControls.WebParts.WebPart&gt; control, including its ID, an object reference to the control, and the values of several important properties that are inherited from the &lt;xref:System.Web.UI.WebControls.WebParts.Part&gt; class, such as &lt;xref:System.Web.UI.WebControls.WebParts.Part.Title%2A&gt; and &lt;xref:System.Web.UI.WebControls.WebParts.Part.Description%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetAvailableWebPartDescriptions method improves performance.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When a catalog is created, it needs some information about each control it contains, including a title, a description, an icon (if one exists), and an ID.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Rather than having to create an instance of each control to get this information, a &lt;xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase&gt; zone that creates a catalog calls the GetAvailableWebPartDescriptions method for each control that will be in the catalog, and the call returns only the description information for the control.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains a <bpt id="p2">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartDescription"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> for each closed <bpt id="p3">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPart"&gt;</bpt><ept id="p3">&lt;/xref&gt;</ept> control in a page catalog.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Returns a reference to a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control based on the value of the description passed into the method.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GetWebPart method returns a reference to a &lt;xref:System.Web.UI.WebControls.WebParts.WebPart&gt; control whose description details match the values of the &lt;xref:System.Web.UI.WebControls.WebParts.WebPartDescription&gt; object passed into the method.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Typically, this method is used together with the GetWebPart method, which is used to retrieve the descriptions of all the controls in the catalog.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Individual &lt;xref:System.Web.UI.WebControls.WebParts.WebPart&gt; controls can then be retrieved or manipulated as needed by passing individual &lt;xref:System.Web.UI.WebControls.WebParts.WebPartDescription&gt; objects to the GetWebPart method.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartDescription"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that contains details about the control.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>A reference to the actual instance of a closed <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control whose description matches <bpt id="p2">&lt;code&gt;</bpt><ph id="ph1">description</ph><ept id="p2">&lt;/code&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;description&lt;/code&gt;</ph> is <bpt id="p1">&lt;xref uid="langword_csharp_null" name="null" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept>.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">&lt;code&gt;description&lt;/code&gt;</ph> is not an available <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.WebPartDescription"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The GroupingText property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the GroupingText property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.Panel.GroupingText%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>A string that contains the text at the head of a section of grouped child controls within the control.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Height property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the Height property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.Height%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.Unit"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> value that indicates the height of the control.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The HorizontalAlign property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the HorizontalAlign property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.Panel.HorizontalAlign%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.HorizontalAlign"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that indicates the type of horizontal alignment used in rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ScrollBars property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the ScrollBars property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.Panel.ScrollBars%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.ScrollBars"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that is used if needed within the control.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The SkinID property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the SkinID property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.SkinID%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>A string that contains the ID of a skin for the control.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>An attempt was made to set the property.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The TabIndex property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the TabIndex property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.TabIndex%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>A short number that serves as the index of this control in the tab order.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>Gets or sets the title that appears in the control's title bar.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Title property value is displayed in the title bar of a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control when the control is visible in catalog mode.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When the control is declared in a page, you can set a value for the property by using the <ph id="ph1">`Title`</ph> attribute.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you do not supply a value for the title, a culture-specific default value is used to describe the kind of properties that this control allows users to edit.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>A string that is used as the title of the control.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>The default value is a calculated control name supplied by the Web Parts control set.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The ToolTip property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the ToolTip property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.ToolTip%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>A string that contains the content of a ToolTip.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Visible property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the Visible property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.Control.Visible%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve">
+          <source>A Boolean value that indicates whether the control is visible.</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Width property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the Width property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.WebControl.Width%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.Unit"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> that indicates the width of the control.</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve">
+          <source>This inherited property is not used by the Web Parts control set when rendering a <bpt id="p1">&lt;xref href="System.Web.UI.WebControls.WebParts.PageCatalogPart"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve">
+          <source>The property is overridden only for the purpose of preventing it from appearing in <ph id="ph1">[!INCLUDE[vsprvsext](~/add/includes/ajax-current-ext-md.md)]</ph> designer tools.</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The Wrap property, as a member of the &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control, is not used anywhere within the Web Parts control set for rendering the control.</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, you should not use this property; setting it has no effect on rendering.</source>
+        </trans-unit>
+        <trans-unit id="411" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To prevent developers from using this property, code attributes are set on it to hide it in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="412" translate="yes" xml:space="preserve" extradata="MT">
+          <source>When you work with a &lt;xref:System.Web.UI.WebControls.WebParts.PageCatalogPart&gt; control in Visual Studio, the Wrap property is not visible in the Properties pane or IntelliSense.</source>
+        </trans-unit>
+        <trans-unit id="413" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to use this property, you need to create a custom class that inherits from the &lt;xref:System.Web.UI.WebControls.WebParts.CatalogPart&gt; class.</source>
+        </trans-unit>
+        <trans-unit id="414" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The custom class can either use the inherited &lt;xref:System.Web.UI.WebControls.Panel.Wrap%2A&gt; property as it is, or override it and change its behavior.</source>
+        </trans-unit>
+        <trans-unit id="415" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This property cannot be set by themes or style sheet themes.</source>
+        </trans-unit>
+        <trans-unit id="416" translate="yes" xml:space="preserve" extradata="MT">
+          <source>For more information, see &lt;xref:System.Web.UI.ThemeableAttribute&gt; and <bpt id="p1">[</bpt>ASP.NET Themes and Skins<ept id="p1">](~/add/includes/ajax-current-ext-md.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="417" translate="yes" xml:space="preserve">
+          <source>A Boolean value that indicates whether long lines in the control can wrap.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

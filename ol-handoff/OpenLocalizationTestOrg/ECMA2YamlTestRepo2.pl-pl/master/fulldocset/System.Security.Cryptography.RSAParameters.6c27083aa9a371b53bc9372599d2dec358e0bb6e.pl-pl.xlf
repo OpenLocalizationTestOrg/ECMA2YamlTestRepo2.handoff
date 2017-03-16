@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c231658a86f40d1ab2b69484646ccdd23473e80f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Security.Cryptography.RSAParameters.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">732e729e252bd983c04720cd658a255ba2278bb4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">58371a00afa2079ec926141aaf065a8450d99356</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Represents the standard parameters for the <bpt id="p1">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The &lt;xref:System.Security.Cryptography.RSA&gt; class exposes an &lt;xref:System.Security.Cryptography.RSA.ExportParameters%2A&gt; method that enables you to retrieve the raw RSA key in the form of an RSAParameters structure.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Understanding the contents of this structure requires familiarity with how the &lt;xref:System.Security.Cryptography.RSA&gt; algorithm works.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The next section discusses the algorithm briefly.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source>RSA Algorithm    To generate a key pair, you start by creating two large prime numbers named p and q.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>These numbers are multiplied and the result is called n.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Because p and q are both prime numbers, the only factors of n are 1, p, q, and n.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If we consider only numbers that are less than n, the count of numbers that are relatively prime to n, that is, have no factors in common with n, equals (p - 1)(q - 1).</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Now you choose a number e, which is relatively prime to the value you calculated.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The public key is now represented as {e, n}.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>To create the private key, you must calculate d, which is a number such that (d)(e) mod (p - 1)(q - 1) = 1.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In accordance with the Euclidean algorithm, the private key is now {d, n}.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Encryption of plaintext m to ciphertext c is defined as c = (m ^ e) mod n.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Decryption would then be defined as m = (c ^ d) mod n.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Summary of Fields    Section A.1.2 of the <bpt id="p1">[</bpt>PKCS #1: RSA Cryptography Standard<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=113155)</ept> on the RSA Laboratories Web site defines a format for RSA private keys.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The following table summarizes the fields of the RSAParameters structure.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The third column provides the corresponding field in section A.1.2 of <bpt id="p1">[</bpt>PKCS #1: RSA Cryptography Standard<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=113155)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>|RSAParameters field|Contains|Corresponding PKCS #1 field|   |---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------|   |&lt;xref:System.Security.Cryptography.RSAParameters.D&gt;|d, the private exponent|privateExponent|   |&lt;xref:System.Security.Cryptography.RSAParameters.DP&gt;|d mod (p - 1)|exponent1|   |&lt;xref:System.Security.Cryptography.RSAParameters.DQ&gt;|d mod (q - 1)|exponent2|   |&lt;xref:System.Security.Cryptography.RSAParameters.Exponent&gt;|e, the public exponent|publicExponent|   |&lt;xref:System.Security.Cryptography.RSAParameters.InverseQ&gt;|(InverseQ)(q) = 1 mod p|coefficient|   |&lt;xref:System.Security.Cryptography.RSAParameters.Modulus&gt;|n|modulus|   |&lt;xref:System.Security.Cryptography.RSAParameters.P&gt;|p|prime1|   |&lt;xref:System.Security.Cryptography.RSAParameters.Q&gt;|q|prime2|       The security of RSA derives from the fact that, given the public key { e, n }, it is computationally infeasible to calculate d, either directly or by factoring n into p and q.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Therefore, any part of the key related to d, p, or q must be kept secret.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you call       &lt;xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A&gt; and ask for only the public key information, this is why you will receive only &lt;xref:System.Security.Cryptography.RSAParameters.Exponent&gt; and &lt;xref:System.Security.Cryptography.RSAParameters.Modulus&gt;.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The other fields are available only if you have access to the private key, and you request it.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve" extradata="MT">
+          <source>RSAParameters is not encrypted in any way, so you must be careful when you use it with the private key information.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In fact, none of the fields that contain private key information can be serialized.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you try to serialize an RSAParameters structure with a remoting call or by using one of the serializers, you will receive only public key information.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you want to pass private key information, you will have to manually send that data.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve" extradata="MT">
+          <source>In all cases, if anyone can derive the parameters, the key that you transmit becomes useless.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_D" name="D" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_DP" name="DP" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_DQ" name="DQ" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_Exponent" name="Exponent" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_InverseQ" name="InverseQ" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_Modulus" name="Modulus" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_P" name="P" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Represents the <bpt id="p1">&lt;xref uid="langword_csharp_Q" name="Q" href=""&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> parameter for the <bpt id="p2">&lt;xref href="System.Security.Cryptography.RSA"&gt;</bpt><ept id="p2">&lt;/xref&gt;</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>To be added.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

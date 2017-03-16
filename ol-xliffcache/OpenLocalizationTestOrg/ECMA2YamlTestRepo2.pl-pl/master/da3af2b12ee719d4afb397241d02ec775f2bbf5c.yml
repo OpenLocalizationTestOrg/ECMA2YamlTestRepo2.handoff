@@ -12,7 +12,7 @@ items:
   nameWithType: NodeAffinity
   fullName: Microsoft.Build.Execution.NodeAffinity
   type: Enum
-  summary: "Typ wyliczany danych, który określa, gdzie projekty są kompilowane."
+  summary: An enumerated data type that determines where projects are built.
   syntax:
     content: public enum NodeAffinity
   inheritance:
@@ -31,12 +31,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Projekt mogą być zaplanowane w dowolnym miejscu."
+  summary: The project may be scheduled anywhere.
   syntax:
     content: Any
     return:
       type: Microsoft.Build.Execution.NodeAffinity
-      description: "Do dodania."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -52,12 +52,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Projekt mogą być tylko zaplanowane w węźle wewnątrzprocesową. Dzieje się to automatycznie w przypadku obiektu hosta lub jeśli określono ProjectInstance. Host może chcieć określić, że jeśli posiadają zadania zależy jawnie udostępnionych danych statycznych lub inne obiekty dostarczane przez hosta."
+  summary: The project may only be scheduled on the in-proc node. This happens automatically if there is a host object or if a ProjectInstance was specified. A host may wish to specify it if they know a task depends explicitly on shared static data or other host-provided objects.
   syntax:
     content: InProc
     return:
       type: Microsoft.Build.Execution.NodeAffinity
-      description: "Do dodania."
+      description: To be added.
   exceptions: []
   platform:
   - net462
@@ -73,12 +73,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Projekt mogą być tylko zaplanowane na węźle poza procesem. Host może chcieć określić, to jeśli wiadomo, że projekt kompilowana można zanieczyszczają środowisko hosta (lub hosta contaminates środowiska podczas kompilacji jest kontynuowanie.)"
+  summary: The project may only be scheduled on an out-of-proc node. A host may wish to specify this if it is known the project being built could contaminate the host environment (or the host contaminates the environment while a build is proceeding.)
   syntax:
     content: OutOfProc
     return:
       type: Microsoft.Build.Execution.NodeAffinity
-      description: "Do dodania."
+      description: To be added.
   exceptions: []
   platform:
   - net462

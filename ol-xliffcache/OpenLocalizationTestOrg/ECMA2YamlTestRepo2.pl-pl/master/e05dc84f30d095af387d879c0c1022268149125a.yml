@@ -81,8 +81,8 @@ items:
   nameWithType: Project
   fullName: Microsoft.Build.BuildEngine.Project
   type: Class
-  summary: "Reprezentuje projektu, który może być utworzone przy użyciu [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]."
-  remarks: "Reprezentuje projektu [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektu. Jest to kontener dla elementów, właściwości i elementów docelowych. Załadowanie projektu zawartości z pliku XML w pamięci lub z pliku XML i zapisać do pliku XML, zachowując większość spacji i wszystkie komentarze XML.       Każdy projekt musi być skojarzone z <xref:Microsoft.Build.BuildEngine.Engine>dostęp do informacji udostępnionych.</xref:Microsoft.Build.BuildEngine.Engine> Podczas kompilacji <xref:Microsoft.Build.BuildEngine.Engine>obiekt przechowuje informacje o aktualnie kompilowania projektów.</xref:Microsoft.Build.BuildEngine.Engine>"
+  summary: Represents a project that can be built using [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)].
+  remarks: "A Project represents an [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project. It is a container for items, properties and targets. It can load project content from in-memory XML or from an XML file, and can save to an XML file, preserving most whitespace and all XML comments.  \n  \n Every Project must be associated with an <xref:Microsoft.Build.BuildEngine.Engine> to access shared information. During a build, the <xref:Microsoft.Build.BuildEngine.Engine> object keeps track of which projects are currently building."
   syntax:
     content: >-
       [System.Obsolete("This class has been deprecated. Please use Microsoft.Build.Evaluation.Project from the Microsoft.Build assembly instead.")]
@@ -106,7 +106,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> klasy."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Project"></xref> class.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty><xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> classes to list all the items and properties in the project.  \n  \n [!code-vb[msbuild_ListItemsAndProperties#1](~/add/codesnippet/visualbasic/ListItemAndPropertiesVB/Module1.vb#1)]\n [!code-cs[msbuild_ListItemsAndProperties#1](~/add/codesnippet/csharp/ListItemAndPropertiesCS/Program.cs#1)]"
@@ -129,7 +129,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> klasy przy użyciu dostarczonego <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref>."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Project"></xref> class using the supplied <xref href="Microsoft.Build.BuildEngine.Engine"></xref>.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
@@ -138,7 +138,7 @@ items:
     parameters:
     - id: engine
       type: Microsoft.Build.BuildEngine.Engine
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> Wystąpienie do tworzenia projektu w pamięci."
+      description: The <xref href="Microsoft.Build.BuildEngine.Engine"></xref> instance to use for creating the project in memory.
   overload: Microsoft.Build.BuildEngine.Project.#ctor*
   exceptions: []
   platform:
@@ -155,16 +155,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> klasy przy użyciu dostarczonego <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> i <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion*>.</xref:Microsoft.Build.BuildEngine.Project.ToolsVersion*>"
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.Project"></xref> class using the supplied <xref href="Microsoft.Build.BuildEngine.Engine"></xref> and <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion*>.
   syntax:
     content: public Project (Microsoft.Build.BuildEngine.Engine engine, string toolsVersion);
     parameters:
     - id: engine
       type: Microsoft.Build.BuildEngine.Engine
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> Wystąpienie do tworzenia projektu w pamięci."
+      description: The <xref href="Microsoft.Build.BuildEngine.Engine"></xref> instance to use for creating the project in memory.
     - id: toolsVersion
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.Project.ToolsVersion*>Do tworzenia projektu w pamięci.</xref:Microsoft.Build.BuildEngine.Project.ToolsVersion*>"
+      description: The <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion*> to use for creating the project in memory.
   overload: Microsoft.Build.BuildEngine.Project.#ctor*
   exceptions: []
   platform:
@@ -181,16 +181,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje [importowania](~/add/includes/ajax-current-ext-md.md) element do końca projektu."
+  summary: Adds an [Import](~/add/includes/ajax-current-ext-md.md) element to the end of the project.
   syntax:
     content: public void AddNewImport (string projectFile, string condition);
     parameters:
     - id: projectFile
       type: System.String
-      description: "Nazwa pliku projektu do zaimportowania. Odpowiada <xref uid=&quot;langword_csharp_Project&quot; name=&quot;Project&quot; href=&quot;&quot;> </xref> atrybutu <xref uid=&quot;langword_csharp_Import&quot; name=&quot;Import&quot; href=&quot;&quot;> </xref> element."
+      description: The name of the project file to import. Corresponds to the <xref uid="langword_csharp_Project" name="Project" href=""></xref> attribute of the <xref uid="langword_csharp_Import" name="Import" href=""></xref> element.
     - id: condition
       type: System.String
-      description: "Warunek do oceny, przed zaimportowaniem projektu. Odpowiada <xref uid=&quot;langword_csharp_Condition&quot; name=&quot;Condition&quot; href=&quot;&quot;> </xref> atrybutu <xref uid=&quot;langword_csharp_Import&quot; name=&quot;Import&quot; href=&quot;&quot;> </xref> element."
+      description: The condition to evaluate before importing the project. Corresponds to the <xref uid="langword_csharp_Condition" name="Condition" href=""></xref> attribute of the <xref uid="langword_csharp_Import" name="Import" href=""></xref> element.
   overload: Microsoft.Build.BuildEngine.Project.AddNewImport*
   exceptions: []
   platform:
@@ -207,20 +207,20 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje określony [elementu](~/add/includes/ajax-current-ext-md.md) element do projektu."
-  remarks: "Ta metoda próbuje dodać element do projektu w pobliżu innych elementów w kolekcji elementów."
+  summary: Adds the specified [Item](~/add/includes/ajax-current-ext-md.md) element to the project.
+  remarks: This method attempts to add the item to the project near the other items in the item collection.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItem AddNewItem (string itemName, string itemInclude);
     parameters:
     - id: itemName
       type: System.String
-      description: "Nazwa kolekcji elementów, aby dodać element. Odnosi się do nazwy zdefiniowanej przez użytkownika <xref uid=&quot;langword_csharp_Item&quot; name=&quot;Item&quot; href=&quot;&quot;> </xref> element."
+      description: The name of the item collection to add the item to. Corresponds to the user-defined name of the <xref uid="langword_csharp_Item" name="Item" href=""></xref> element.
     - id: itemInclude
       type: System.String
-      description: "Wartość <xref uid=&quot;langword_csharp_Include&quot; name=&quot;Include&quot; href=&quot;&quot;> </xref> atrybutu elementu."
+      description: The value of the <xref uid="langword_csharp_Include" name="Include" href=""></xref> attribute of the item.
     return:
       type: Microsoft.Build.BuildEngine.BuildItem
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref> zawierający utworzony element."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref> containing the created item.
   overload: Microsoft.Build.BuildEngine.Project.AddNewItem*
   exceptions: []
   platform:
@@ -237,23 +237,23 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje określony [elementu](~/add/includes/ajax-current-ext-md.md) element do projektu."
-  remarks: "Ta metoda próbuje dodać element do projektu w pobliżu innych elementów w kolekcji elementów."
+  summary: Adds the specified [Item](~/add/includes/ajax-current-ext-md.md) element to the project.
+  remarks: This method attempts to add the item to the project near the other items in the item collection.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItem AddNewItem (string itemName, string itemInclude, bool treatItemIncludeAsLiteral);
     parameters:
     - id: itemName
       type: System.String
-      description: "Nazwa kolekcji elementów, aby dodać element. Odnosi się do nazwy zdefiniowanej przez użytkownika <xref uid=&quot;langword_csharp_Item&quot; name=&quot;Item&quot; href=&quot;&quot;> </xref> element."
+      description: The name of the item collection to add the item to. Corresponds to the user-defined name of the <xref uid="langword_csharp_Item" name="Item" href=""></xref> element.
     - id: itemInclude
       type: System.String
-      description: "Wartość <xref uid=&quot;langword_csharp_Include&quot; name=&quot;Include&quot; href=&quot;&quot;> </xref> atrybutu elementu."
+      description: The value of the <xref uid="langword_csharp_Include" name="Include" href=""></xref> attribute of the item.
     - id: treatItemIncludeAsLiteral
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>traktowanie `itemInclude` parametru jako wartości literału; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to treat the `itemInclude` parameter as a literal value; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: Microsoft.Build.BuildEngine.BuildItem
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref> zawierający utworzony element."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref> containing the created item.
   overload: Microsoft.Build.BuildEngine.Project.AddNewItem*
   exceptions: []
   platform:
@@ -270,13 +270,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje nowy [itemgroup —](~/add/includes/ajax-current-ext-md.md) element do projektu."
+  summary: Adds a new [ItemGroup](~/add/includes/ajax-current-ext-md.md) element to the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItemGroup AddNewItemGroup ();
     parameters: []
     return:
       type: Microsoft.Build.BuildEngine.BuildItemGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> zawierający utworzony element grupy."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> containing the created item group.
   overload: Microsoft.Build.BuildEngine.Project.AddNewItemGroup*
   exceptions: []
   platform:
@@ -293,16 +293,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje nowy [PropertyGroup](~/add/includes/ajax-current-ext-md.md) do projektu."
+  summary: Adds a new [PropertyGroup](~/add/includes/ajax-current-ext-md.md) element to the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildPropertyGroup AddNewPropertyGroup (bool insertAtEndOfProject);
     parameters:
     - id: insertAtEndOfProject
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Aby wstawić <xref uid=&quot;langword_csharp_PropertyGroup&quot; name=&quot;PropertyGroup&quot; href=&quot;&quot;> </xref> na końcu projektu; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to insert the <xref uid="langword_csharp_PropertyGroup" name="PropertyGroup" href=""></xref> at the end of the project; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> utworzony właściwości grupy nadrzędnej."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> containing the created property group.
   overload: Microsoft.Build.BuildEngine.Project.AddNewPropertyGroup*
   exceptions: []
   platform:
@@ -319,16 +319,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje nowy [UsingTask](~/add/includes/ajax-current-ext-md.md) element z określonego pliku zestawu."
+  summary: Adds a new [UsingTask](~/add/includes/ajax-current-ext-md.md) element with the specified assembly file.
   syntax:
     content: public void AddNewUsingTaskFromAssemblyFile (string taskName, string assemblyFile);
     parameters:
     - id: taskName
       type: System.String
-      description: "Nazwa zadania odwołanie z zestawu. Odpowiada <xref uid=&quot;langword_csharp_TaskName&quot; name=&quot;TaskName&quot; href=&quot;&quot;> </xref> atrybutu <xref uid=&quot;langword_csharp_UsingTask&quot; name=&quot;UsingTask&quot; href=&quot;&quot;> </xref> element."
+      description: The name of the task to reference from the assembly. Corresponds to the <xref uid="langword_csharp_TaskName" name="TaskName" href=""></xref> attribute of the <xref uid="langword_csharp_UsingTask" name="UsingTask" href=""></xref> element.
     - id: assemblyFile
       type: System.String
-      description: "Ścieżka do zestawu. Odpowiada <xref uid=&quot;langword_csharp_AssemblyFile&quot; name=&quot;AssemblyFile&quot; href=&quot;&quot;> </xref> atrybutu <xref uid=&quot;langword_csharp_UsingTask&quot; name=&quot;UsingTask&quot; href=&quot;&quot;> </xref> element."
+      description: The file path to the assembly. Corresponds to the <xref uid="langword_csharp_AssemblyFile" name="AssemblyFile" href=""></xref> attribute of the <xref uid="langword_csharp_UsingTask" name="UsingTask" href=""></xref> element.
   overload: Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyFile*
   exceptions: []
   platform:
@@ -345,16 +345,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Dodaje nowy [UsingTask](~/add/includes/ajax-current-ext-md.md) elementu o nazwie określonego zestawu."
+  summary: Adds a new [UsingTask](~/add/includes/ajax-current-ext-md.md) element with the specified assembly name.
   syntax:
     content: public void AddNewUsingTaskFromAssemblyName (string taskName, string assemblyName);
     parameters:
     - id: taskName
       type: System.String
-      description: "Nazwa zadania odwołanie z zestawu. Odpowiada <xref uid=&quot;langword_csharp_TaskName&quot; name=&quot;TaskName&quot; href=&quot;&quot;> </xref> atrybutu <xref uid=&quot;langword_csharp_UsingTask&quot; name=&quot;UsingTask&quot; href=&quot;&quot;> </xref> element."
+      description: The name of the task to reference from the assembly. Corresponds to the <xref uid="langword_csharp_TaskName" name="TaskName" href=""></xref> attribute of the <xref uid="langword_csharp_UsingTask" name="UsingTask" href=""></xref> element.
     - id: assemblyName
       type: System.String
-      description: "Nazwa zestawu do załadowania. Odpowiada <xref uid=&quot;langword_csharp_AssemblyName&quot; name=&quot;AssemblyName&quot; href=&quot;&quot;> </xref> atrybutu <xref uid=&quot;langword_csharp_UsingTask&quot; name=&quot;UsingTask&quot; href=&quot;&quot;> </xref> element."
+      description: The name of the assembly to load. Corresponds to the <xref uid="langword_csharp_AssemblyName" name="AssemblyName" href=""></xref> attribute of the <xref uid="langword_csharp_UsingTask" name="UsingTask" href=""></xref> element.
   overload: Microsoft.Build.BuildEngine.Project.AddNewUsingTaskFromAssemblyName*
   exceptions: []
   platform:
@@ -371,13 +371,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Tworzy domyślne elementy docelowe projektu."
+  summary: Builds the default targets of the project.
   syntax:
     content: public bool Build ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli kompilacja powiodła się. w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.Build*
   exceptions: []
   platform:
@@ -394,16 +394,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kompilacje określonego docelowego w projekcie."
+  summary: Builds the specified target in the project.
   syntax:
     content: public bool Build (string targetName);
     parameters:
     - id: targetName
       type: System.String
-      description: "Element docelowy do skompilowania."
+      description: The target to build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli kompilacja powiodła się. w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.Build*
   exceptions: []
   platform:
@@ -420,16 +420,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kompilacje określona lista elementów docelowych w projekcie."
+  summary: Builds the specified list of targets in the project.
   syntax:
     content: public bool Build (string[] targetNames);
     parameters:
     - id: targetNames
       type: System.String[]
-      description: "Lista elementów docelowych do kompilacji. Ten parametr może być odwołaniem do wartości null (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> w [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) do kompilacji domyślnych elementów docelowych."
+      description: The list of targets to build. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) to build the default targets.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli kompilacja powiodła się. w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.Build*
   exceptions: []
   platform:
@@ -446,19 +446,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kompilacje określona lista elementów docelowych w projekcie i zwraca dane wyjściowe docelowych."
+  summary: Builds the specified list of targets in the project, and returns the outputs of the targets.
   syntax:
     content: public bool Build (string[] targetNames, System.Collections.IDictionary targetOutputs);
     parameters:
     - id: targetNames
       type: System.String[]
-      description: "Lista elementów docelowych do kompilacji. Ten parametr może być odwołaniem do wartości null (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> w [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) do kompilacji domyślnych elementów docelowych."
+      description: The list of targets to build. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) to build the default targets.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "Wyjścia skompilowanych elementów docelowych. Ten parametr może być odwołaniem do wartości null (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>), jeśli dane wyjściowe nie są już potrzebne."
+      description: The outputs of the built targets. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>) if outputs are not needed.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli kompilacja powiodła się. w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.Build*
   exceptions: []
   platform:
@@ -475,22 +475,22 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kompilacje określona lista elementów docelowych w projekcie przy użyciu określonych ustawień i zwraca dane wyjściowe docelowych."
+  summary: Builds the specified list of targets in the project using the specified settings, and returns the outputs of the targets.
   syntax:
     content: public bool Build (string[] targetNames, System.Collections.IDictionary targetOutputs, Microsoft.Build.BuildEngine.BuildSettings buildFlags);
     parameters:
     - id: targetNames
       type: System.String[]
-      description: "Lista elementów docelowych do kompilacji. Ten parametr może być odwołaniem do wartości null (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;> </xref> w [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) do kompilacji domyślnych elementów docelowych."
+      description: The list of targets to build. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref> in [!INCLUDE[vbprvb](~/add/includes/vbprvb-md.md)]) to build the default targets.
     - id: targetOutputs
       type: System.Collections.IDictionary
-      description: "Wyjścia skompilowanych elementów docelowych. Ten parametr może być odwołaniem do wartości null (<xref uid=&quot;langword_csharp_Nothing&quot; name=&quot;Nothing&quot; href=&quot;&quot;></xref>), jeśli dane wyjściowe nie są już potrzebne."
+      description: The outputs of the built targets. This parameter can be a null reference (<xref uid="langword_csharp_Nothing" name="Nothing" href=""></xref>) if outputs are not needed.
     - id: buildFlags
       type: Microsoft.Build.BuildEngine.BuildSettings
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.BuildSettings&quot;> </xref> Do zastosowania do kompilacji."
+      description: The <xref href="Microsoft.Build.BuildEngine.BuildSettings"></xref> to apply to the build.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli kompilacja powiodła się. w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the build was successful; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.Build*
   exceptions: []
   platform:
@@ -507,13 +507,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia wartość wskazującą, czy projekt jest włączone do tworzenia zadań i elementów docelowych."
-  remarks: "Domyślnie ta właściwość używa wartości <xref:Microsoft.Build.BuildEngine.Engine.BuildEnabled%2A>właściwości <xref:Microsoft.Build.BuildEngine.Project.ParentEngine%2A>.</xref:Microsoft.Build.BuildEngine.Project.ParentEngine%2A> projektu</xref:Microsoft.Build.BuildEngine.Engine.BuildEnabled%2A>"
+  summary: Gets or sets a value indicating whether the project is enabled for building tasks and targets.
+  remarks: By default, this property uses value of the <xref:Microsoft.Build.BuildEngine.Engine.BuildEnabled%2A> property of the project's <xref:Microsoft.Build.BuildEngine.Project.ParentEngine%2A>.
   syntax:
     content: public bool BuildEnabled { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli projekt jest włączona do tworzenia zadań i obiekty docelowe; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project is enabled for building tasks and targets; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.BuildEnabled*
   exceptions: []
   platform:
@@ -530,12 +530,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia `DefaultTargets` atrybutu [projektu](~/add/includes/ajax-current-ext-md.md) elementu w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektu."
+  summary: Gets or sets the `DefaultTargets` attribute of the [Project](~/add/includes/ajax-current-ext-md.md) element in the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project.
   syntax:
     content: public string DefaultTargets { get; set; }
     return:
       type: System.String
-      description: "Średnika (;) rozdzielaną listę elementów docelowych określonych w `DefaultTargets` atrybutu."
+      description: A semi-colon (;) delimited list of the targets specified in the `DefaultTargets` attribute.
   overload: Microsoft.Build.BuildEngine.Project.DefaultTargets*
   exceptions: []
   platform:
@@ -552,13 +552,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia lub pobiera atrybut ToolsVersion XML na [projektu](~/add/includes/ajax-current-ext-md.md)[Project — Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) elementu w pliku projektu."
+  summary: Sets or gets the ToolsVersion XML attribute found on the [Project](~/add/includes/ajax-current-ext-md.md)[Project Element (MSBuild)](~/add/includes/ajax-current-ext-md.md) element in the project file.
   remarks: "If the <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion%2A> attribute is not present on the <xref:System.Data.Odbc.OdbcError>[Project Element (MSBuild)](../Topic/Project%20Element%20\\(MSBuild\\).md) element, getting the value returns the default Tools version of the parent <xref:Microsoft.Build.BuildEngine>.  \n  \n The DefaultToolsVersion value can differ from the Tools version used during a build if its value is overridden during construction of the <xref:Microsoft.Build.BuildEngine.Project> instance or it is set to a specific value with the <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion%2A> property. Setting the DefaultToolsVersion value cannot change the Tools version if it has been overridden, but you can change the Tools version using the <xref:Microsoft.Build.BuildEngine.Project.ToolsVersion%2A> property.  \n  \n For more information about Tools versions, see `MSBuild Tool Set (ToolsVersion)`."
   syntax:
     content: public string DefaultToolsVersion { get; set; }
     return:
       type: System.String
-      description: "Ciąg reprezentujący wersja narzędzia."
+      description: A string representing the Tools version.
   overload: Microsoft.Build.BuildEngine.Project.DefaultToolsVersion*
   exceptions: []
   platform:
@@ -575,12 +575,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera kodowanie pliku projektu."
+  summary: Gets the encoding for the project file.
   syntax:
     content: public System.Text.Encoding Encoding { get; }
     return:
       type: System.Text.Encoding
-      description: "<xref:System.Text.Encoding>Wartości w pliku projektu.</xref:System.Text.Encoding>"
+      description: An <xref:System.Text.Encoding> value of the project file.
   overload: Microsoft.Build.BuildEngine.Project.Encoding*
   exceptions: []
   platform:
@@ -597,13 +597,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera kolekcję elementów obliczane podczas kompilacji."
-  remarks: "Zwrócony <xref:Microsoft.Build.BuildEngine.BuildItemGroup>zawiera wszystkie elementy ocenionych w projekcie po rozwinięciu symboli wieloznacznych, a właściwość.</xref:Microsoft.Build.BuildEngine.BuildItemGroup> Elementy w tej właściwości reprezentują rzeczywiste elementy używane w procesie kompilacji. Wartość tej właściwości jest generowany za każdym razem, gdy coś w projekcie zmiany. Zmiany w istniejących elementów w tej kolekcji zostaną uwzględnione, że następnym razem, gdy projekt jest zapisany, ale Dodawanie lub usuwanie elementów nie wpłyną na projekt."
+  summary: Gets a collection of the items evaluated during the build.
+  remarks: The returned <xref:Microsoft.Build.BuildEngine.BuildItemGroup> contains all the evaluated items in the project after wildcard and property expansion. The items in this property represent the actual items used during the build process. This property value is generated every time something in the project changes. Changes to existing items in this collection will be reflected the next time the project is saved, but adding or deleting items will not impact the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItemGroup EvaluatedItems { get; }
     return:
       type: Microsoft.Build.BuildEngine.BuildItemGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> zawierające elementy obliczane podczas kompilacji."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> containing the items evaluated during the build.
   overload: Microsoft.Build.BuildEngine.Project.EvaluatedItems*
   exceptions: []
   platform:
@@ -620,13 +620,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera kolekcję wszystkich elementów w projekcie, nawet tych, które nie są używane w procesie kompilacji, ponieważ [warunku](~/add/includes/ajax-current-ext-md.md) atrybut obliczone do <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
-  remarks: "Zwrócony <xref:Microsoft.Build.BuildEngine.BuildItemGroup>zawiera wszystkie elementy w projekcie po rozwinięciu symbolu wieloznacznego i właściwości, także tymi, które nie zostały użyte podczas procesu tworzenia powodu `Condition` atrybuty oceny do `false`.</xref:Microsoft.Build.BuildEngine.BuildItemGroup> Wartość tej właściwości jest generowany tylko w przypadku, gdy występują pewne zmiany, takie jak nowy element dodawany do projektu. Dodawanie lub usuwanie elementów z tej właściwości nie wpływa na projekt."
+  summary: Gets a collection of all items in a project, even those not used in the build process because a [Condition](~/add/includes/ajax-current-ext-md.md) attribute evaluated to <xref uid="langword_csharp_false" name="false" href=""></xref>.
+  remarks: The returned <xref:Microsoft.Build.BuildEngine.BuildItemGroup> contains all items in the project after wildcard and property expansion, including those that were not used during the build process due to `Condition` attributes evaluating to `false`. This property value is only generated when certain changes occur, such as a new  element being added to the project. Adding or deleting items from this property does not impact the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItemGroup EvaluatedItemsIgnoringCondition { get; }
     return:
       type: Microsoft.Build.BuildEngine.BuildItemGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> zawierający wszystkie elementy w projekcie."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> containing all items in a project.
   overload: Microsoft.Build.BuildEngine.Project.EvaluatedItemsIgnoringCondition*
   exceptions: []
   platform:
@@ -643,13 +643,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera zbiór właściwości obliczane podczas kompilacji."
-  remarks: "Zwrócony <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>zawiera wszystkie ocenianego właściwości w projekcie po wykonaniu rozszerzenia oceny i właściwości warunku.</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Właściwości w tej kolekcji obejmują właściwości globalne, zmienne środowiskowe, właściwości zastrzeżone i importowanych właściwości. Zmiany właściwości istniejących w tej kolekcji zostaną uwzględnione, że następnym razem, gdy projekt jest zapisany, ale dodanie lub usunięcie właściwości nie wpłyną na projekt.      > [!NOTE] > Klonowanie <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>może niekorzystnie wpłynąć na wydajność.</xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> Kopię tej właściwości należy używać tylko, gdy jest to konieczne."
+  summary: Gets a collection of the properties evaluated during the build.
+  remarks: "The returned <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> contains all the evaluated properties in the project after performing condition evaluation and property expansion. The properties in this collection include global properties, environment variables, reserved properties, and imported properties. Changes to existing properties in this collection will be reflected the next time the project is saved, but adding or deleting properties will not impact the project.  \n  \n> [!NOTE]\n>  Cloning a <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> can negatively impact performance. Only use a copy of this property when it is strictly necessary."
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildPropertyGroup EvaluatedProperties { get; }
     return:
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> zawierającą właściwości obliczane podczas kompilacji."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> containing the properties evaluated during the build.
   overload: Microsoft.Build.BuildEngine.Project.EvaluatedProperties*
   exceptions: []
   platform:
@@ -666,13 +666,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia pełną ścieżkę i nazwę pliku projektu."
-  remarks: "Ta właściwość jest pusta `string` Jeśli projekt nie ma skojarzonego z nim pliku."
+  summary: Gets or sets the fully qualified path and file name of the project file.
+  remarks: This property is an empty `string` if the project does not have a file associated with it.
   syntax:
     content: public string FullFileName { get; set; }
     return:
       type: System.String
-      description: "Pełna ścieżka pliku projektu."
+      description: The full path of the project file.
   overload: Microsoft.Build.BuildEngine.Project.FullFileName*
   exceptions: []
   platform:
@@ -689,17 +689,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca listę możliwych wartości dla określonej właściwości."
-  remarks: "Ta metoda generuje listy możliwych wartości, sprawdzając, czy wszystkie atrybuty w projekcie, które obejmują właściwości."
+  summary: Returns a list of possible values for the specified property.
+  remarks: This method generates the list of possible values by inspecting all of the  attributes in the project that involve the property.
   syntax:
     content: public string[] GetConditionedPropertyValues (string propertyName);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Właściwość używana podczas generowania listy możliwych wartości."
+      description: The property to use when generating the list of possible values.
     return:
       type: System.String[]
-      description: "Lista możliwych wartości dla właściwości."
+      description: The list of possible values for the property.
   overload: Microsoft.Build.BuildEngine.Project.GetConditionedPropertyValues*
   exceptions: []
   platform:
@@ -716,16 +716,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca wszystkie elementy ocenionych należące do określonego elementu kolekcji."
+  summary: Returns all evaluated items belonging to the specified item collection.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItemGroup GetEvaluatedItemsByName (string itemName);
     parameters:
     - id: itemName
       type: System.String
-      description: "Nazwa kolekcji elementów."
+      description: The name of the item collection.
     return:
       type: Microsoft.Build.BuildEngine.BuildItemGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> zawierający wszystkie elementy ocenionych należące do określonego elementu kolekcji."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> containing all of the evaluated items belonging to the specified item collection.
   overload: Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByName*
   exceptions: []
   platform:
@@ -742,16 +742,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca wszystkie elementy należące do określonego elementu kolekcji."
+  summary: Returns all items belonging to the specified item collection.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItemGroup GetEvaluatedItemsByNameIgnoringCondition (string itemName);
     parameters:
     - id: itemName
       type: System.String
-      description: "Nazwa kolekcji określonego elementu."
+      description: The name of the specified item collection.
     return:
       type: Microsoft.Build.BuildEngine.BuildItemGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroup&quot;> </xref> zawierające wszystkie elementy należące do określonego elementu kolekcji, nawet tych nie są używane w procesie kompilacji, ponieważ [warunku](~/add/includes/ajax-current-ext-md.md) atrybut obliczone do <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItemGroup"></xref> containing all items belonging to the specified item collection, even those not used in the build process because a [Condition](~/add/includes/ajax-current-ext-md.md) attribute evaluated to <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.GetEvaluatedItemsByNameIgnoringCondition*
   exceptions: []
   platform:
@@ -768,17 +768,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca wartość określonej właściwości."
-  remarks: "Jeśli trzeba pobrać dużą liczbę wartości właściwości, użyj <xref:Microsoft.Build.BuildEngine.Project.EvaluatedProperties%2A>właściwość.</xref:Microsoft.Build.BuildEngine.Project.EvaluatedProperties%2A>"
+  summary: Returns the value of the specified property.
+  remarks: If you need to retrieve a large number of property values, use the <xref:Microsoft.Build.BuildEngine.Project.EvaluatedProperties%2A> property.
   syntax:
     content: public string GetEvaluatedProperty (string propertyName);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości."
+      description: The name of the property.
     return:
       type: System.String
-      description: "Wartość określonej właściwości."
+      description: The value of the specified property.
   overload: Microsoft.Build.BuildEngine.Project.GetEvaluatedProperty*
   exceptions: []
   platform:
@@ -795,16 +795,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca wartość ciągu XML z określonego elementu w [projectextensions —](~/add/includes/ajax-current-ext-md.md) element."
+  summary: Returns a string value of the XML from the specified element in the [ProjectExtensions](~/add/includes/ajax-current-ext-md.md) element.
   syntax:
     content: public string GetProjectExtensions (string id);
     parameters:
     - id: id
       type: System.String
-      description: "Nazwa elementu w <xref uid=&quot;langword_csharp_ProjectExtensions&quot; name=&quot;ProjectExtensions&quot; href=&quot;&quot;> </xref> element do zwrócenia."
+      description: The name of the element in the <xref uid="langword_csharp_ProjectExtensions" name="ProjectExtensions" href=""></xref> element to return.
     return:
       type: System.String
-      description: "Wartość ciągu określonego elementu w `ProjectExtensions` elementu projektu."
+      description: The string value of the specified element in the `ProjectExtensions` element of the project.
   overload: Microsoft.Build.BuildEngine.Project.GetProjectExtensions*
   exceptions: []
   platform:
@@ -821,13 +821,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia zbiór właściwości globalne dla projektu."
-  remarks: "Właściwości globalne są właściwościami z **/property** przełącznik w wierszu polecenia lub właściwości ustawione przez zintegrowane środowisko programistyczne przed wywołaniem [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]. Aby uzyskać więcej informacji, zobacz [odwołanie do wiersza polecenia MSBuild](~/add/includes/ajax-current-ext-md.md)."
+  summary: Gets or sets a collection of the global properties for the project.
+  remarks: Global properties are properties set with the **/property** switch on the command line, or properties set by the integrated development environment before invoking [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)]. For more information, see [MSBuild Command-Line Reference](~/add/includes/ajax-current-ext-md.md).
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildPropertyGroup GlobalProperties { get; set; }
     return:
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> zawierającą globalne właściwości dla projektu."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> containing the global properties for the project.
   overload: Microsoft.Build.BuildEngine.Project.GlobalProperties*
   exceptions: []
   platform:
@@ -844,13 +844,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera, czy plik projektu zawiera atrybut ToolsVersion XML."
-  remarks: "Przykład atrybut ToolsVersion jest `Project ToolsVersion=&quot;3.5&quot;`. Ten atrybut umożliwia projektów do docelowej wersji systemu .NET Framework, obecnie 2.0, 3.0 i 3.5. Aby uzyskać więcej informacji o ToolsVersion, zobacz [tworzenie aplikacji dla określonych wersji programu .NET Framework](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8)."
+  summary: Gets whether the Project file has the ToolsVersion XML attribute.
+  remarks: An example ToolsVersion attribute is `Project ToolsVersion="3.5"`. This attribute enables projects to target .NET Framework versions, currently 2.0, 3.0, and 3.5. For more information about ToolsVersion, see [Building for Specific Versions of the .NET Framework](http://msdn.microsoft.com/en-us/24a6530c-e837-4774-9da0-6893614524d8).
   syntax:
     content: public bool HasToolsVersionAttribute { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli projekt ma atrybut ToolsVersion; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project has the ToolsVersion attribute; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.HasToolsVersionAttribute*
   exceptions: []
   platform:
@@ -867,13 +867,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera projektów zaimportowany do tego projektu."
-  remarks: "Zaimportowane projekty są określane przez element w projekcie."
+  summary: Gets the projects imported into this project.
+  remarks: Imported projects are specified by the  element in the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.ImportCollection Imports { get; }
     return:
       type: Microsoft.Build.BuildEngine.ImportCollection
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.ImportCollection&quot;> </xref> Projektów zaimportowany do tego projektu."
+      description: An <xref href="Microsoft.Build.BuildEngine.ImportCollection"></xref> of the projects imported into this project.
   overload: Microsoft.Build.BuildEngine.Project.Imports*
   exceptions: []
   platform:
@@ -890,12 +890,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia `InitialTargets` atrybutu [projektu](~/add/includes/ajax-current-ext-md.md) elementu w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektu."
+  summary: Gets or sets the `InitialTargets` attribute of the [Project](~/add/includes/ajax-current-ext-md.md) element in the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project.
   syntax:
     content: public string InitialTargets { get; set; }
     return:
       type: System.String
-      description: "Średnika (;) rozdzielaną listę elementów docelowych określonych w `InitialTargets` atrybutu."
+      description: A semi-colon (;) delimited list of the targets specified in the `InitialTargets` attribute.
   overload: Microsoft.Build.BuildEngine.Project.InitialTargets*
   exceptions: []
   platform:
@@ -912,12 +912,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera wartość wskazującą, czy projekt został zmieniony i musi być zapisany w pliku."
+  summary: Gets a value indicating whether the project has changed and needs to be saved to a file.
   syntax:
     content: public bool IsDirty { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli projekt został zmieniony i należy zapisać; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project has changed and needs to be saved; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.IsDirty*
   exceptions: []
   platform:
@@ -934,12 +934,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera wartość wskazującą, czy projekt jest sprawdzany ze schematem."
+  summary: Gets a value indicating whether the project is to be validated against a schema.
   syntax:
     content: public bool IsValidated { get; set; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli projekt jest sprawdzany ze schematem; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the project is to be validated against a schema; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.IsValidated*
   exceptions: []
   platform:
@@ -956,15 +956,15 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera zbiór grup elementów określony za pomocą [itemgroup —](~/add/includes/ajax-current-ext-md.md) element w projekcie."
-  remarks: "<xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection>Zwrócone przez to właściwość zawiera grup elementów tego projektu i wszystkie projekty importowanych.</xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection>"
+  summary: Gets a collection of the item groups specified with the [ItemGroup](~/add/includes/ajax-current-ext-md.md) element in the project.
+  remarks: The <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> returned by this property contains the item groups in this project and all imported projects.
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty><xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> classes to list all the items and properties in the project.  \n  \n [!code-vb[msbuild_ListItemsAndProperties#1](~/add/codesnippet/visualbasic/ListItemAndPropertiesVB/Module1.vb#1)]\n [!code-cs[msbuild_ListItemsAndProperties#1](~/add/codesnippet/csharp/ListItemAndPropertiesCS/Program.cs#1)]"
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItemGroupCollection ItemGroups { get; }
     return:
       type: Microsoft.Build.BuildEngine.BuildItemGroupCollection
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildItemGroupCollection&quot;> </xref> zawierającą element grupy specifiied w projekcie."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildItemGroupCollection"></xref> containing the item groups specifiied in the project.
   overload: Microsoft.Build.BuildEngine.Project.ItemGroups*
   exceptions: []
   platform:
@@ -981,18 +981,18 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ładuje zawartość określonego <xref:System.IO.TextReader>do <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> obiektu.</xref:System.IO.TextReader>"
+  summary: Loads the contents of the specified <xref:System.IO.TextReader> into the <xref href="Microsoft.Build.BuildEngine.Project"></xref> object.
   syntax:
     content: public void Load (System.IO.TextReader textReader);
     parameters:
     - id: textReader
       type: System.IO.TextReader
-      description: "<xref:System.IO.TextReader>Do załadowania.</xref:System.IO.TextReader>"
+      description: The <xref:System.IO.TextReader> to load.
   overload: Microsoft.Build.BuildEngine.Project.Load*
   exceptions:
   - type: Microsoft.Build.BuildEngine.InvalidProjectFileException
     commentId: T:Microsoft.Build.BuildEngine.InvalidProjectFileException
-    description: "Plik używany przez <code> textReader </code> <xref:System.IO.TextReader>nie jest to prawidłowy plik.</xref:System.IO.TextReader>"
+    description: The file used by the <code>textReader</code><xref:System.IO.TextReader> is not a valid project file.
   platform:
   - net462
 - uid: Microsoft.Build.BuildEngine.Project.Load(System.String)
@@ -1007,7 +1007,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ładuje zawartość pliku określonego projektu w <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> obiektu."
+  summary: Loads the contents of the specified project file into the <xref href="Microsoft.Build.BuildEngine.Project"></xref> object.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty>,  <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> classes to list all the items and properties in the project.  \n  \n [!code-vb[msbuild_ListItemsAndProperties#1](~/add/codesnippet/visualbasic/ListItemAndPropertiesVB/Module1.vb#1)]\n [!code-cs[msbuild_ListItemsAndProperties#1](~/add/codesnippet/csharp/ListItemAndPropertiesCS/Program.cs#1)]"
@@ -1016,12 +1016,12 @@ items:
     parameters:
     - id: projectFileName
       type: System.String
-      description: "Plik projektu do załadowania."
+      description: The project file to load.
   overload: Microsoft.Build.BuildEngine.Project.Load*
   exceptions:
   - type: Microsoft.Build.BuildEngine.InvalidProjectFileException
     commentId: T:Microsoft.Build.BuildEngine.InvalidProjectFileException
-    description: "W pliku określonym przez <code> projectFileName </code> nie jest to prawidłowy plik."
+    description: The file specified by <code>projectFileName</code> is not a valid project file.
   platform:
   - net462
 - uid: Microsoft.Build.BuildEngine.Project.Load(System.IO.TextReader,Microsoft.Build.BuildEngine.ProjectLoadSettings)
@@ -1036,16 +1036,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Odczytuje zawartość tego projektu z ciągu zawierającego zawartość XML."
+  summary: Reads the contents of this project from a string containing the XML contents.
   syntax:
     content: public void Load (System.IO.TextReader textReader, Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);
     parameters:
     - id: textReader
       type: System.IO.TextReader
-      description: "A <xref:System.IO.TextReader>obiektu z zawartością projektu.</xref:System.IO.TextReader>"
+      description: A <xref:System.IO.TextReader> object containing the project contents.
     - id: projectLoadSettings
       type: Microsoft.Build.BuildEngine.ProjectLoadSettings
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.ProjectLoadSettings&quot;> </xref> wartość, która określa ustawienia dla załadowywanego projektu."
+      description: A <xref href="Microsoft.Build.BuildEngine.ProjectLoadSettings"></xref> value that specifies the settings for the project being loaded.
   overload: Microsoft.Build.BuildEngine.Project.Load*
   exceptions: []
   platform:
@@ -1062,16 +1062,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Odczytuje zawartość tego projektu z pliku XML projektu na dysku."
+  summary: Reads the contents of this project from a project XML file on disk.
   syntax:
     content: public void Load (string projectFileName, Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);
     parameters:
     - id: projectFileName
       type: System.String
-      description: "Ciąg reprezentujący nazwę pliku do załadowania."
+      description: A string representing the name of the file to load.
     - id: projectLoadSettings
       type: Microsoft.Build.BuildEngine.ProjectLoadSettings
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.ProjectLoadSettings&quot;> </xref> wartość, która określa ustawienia dla załadowywanego projektu."
+      description: A <xref href="Microsoft.Build.BuildEngine.ProjectLoadSettings"></xref> value that specifies the settings for the project being loaded.
   overload: Microsoft.Build.BuildEngine.Project.Load*
   exceptions: []
   platform:
@@ -1088,7 +1088,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ładuje zawartość określonego ciągu do <xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> obiektu."
+  summary: Loads the contents of the specified string into the <xref href="Microsoft.Build.BuildEngine.Project"></xref> object.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the LoadXml method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
@@ -1097,12 +1097,12 @@ items:
     parameters:
     - id: projectXml
       type: System.String
-      description: "Ciąg XML do załadowania."
+      description: The string of XML to load.
   overload: Microsoft.Build.BuildEngine.Project.LoadXml*
   exceptions:
   - type: Microsoft.Build.BuildEngine.InvalidProjectFileException
     commentId: T:Microsoft.Build.BuildEngine.InvalidProjectFileException
-    description: "Kod XML zawartych w <code> projectXML </code> nie jest to prawidłowy plik."
+    description: The XML contained in <code>projectXML</code> is not a valid project file.
   platform:
   - net462
 - uid: Microsoft.Build.BuildEngine.Project.LoadXml(System.String,Microsoft.Build.BuildEngine.ProjectLoadSettings)
@@ -1117,16 +1117,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Odczytuje zawartość tego projektu z ciągu zawierającego zawartość XML."
+  summary: Reads the contents of this project from a string containing the XML contents.
   syntax:
     content: public void LoadXml (string projectXml, Microsoft.Build.BuildEngine.ProjectLoadSettings projectLoadSettings);
     parameters:
     - id: projectXml
       type: System.String
-      description: "Ciąg zawierający zawartość projektu."
+      description: A string containing the project contents.
     - id: projectLoadSettings
       type: Microsoft.Build.BuildEngine.ProjectLoadSettings
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.ProjectLoadSettings&quot;> </xref> wartość, która określa ustawienia dla załadowywanego projektu."
+      description: A <xref href="Microsoft.Build.BuildEngine.ProjectLoadSettings"></xref> value that specifies the settings for the project being loaded.
   overload: Microsoft.Build.BuildEngine.Project.LoadXml*
   exceptions: []
   platform:
@@ -1143,7 +1143,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zestawy <xref:Microsoft.Build.BuildEngine.Project.IsDirty*>Właściwości projektu do <xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;> </xref>.</xref:Microsoft.Build.BuildEngine.Project.IsDirty*>"
+  summary: Sets the <xref:Microsoft.Build.BuildEngine.Project.IsDirty*> property of the project to <xref uid="langword_csharp_true" name="true" href=""></xref>.
   syntax:
     content: public void MarkProjectAsDirty ();
     parameters: []
@@ -1163,12 +1163,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> który kompiluje projekt."
+  summary: Gets the <xref href="Microsoft.Build.BuildEngine.Engine"></xref> that builds the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.Engine ParentEngine { get; }
     return:
       type: Microsoft.Build.BuildEngine.Engine
-      description: "Element nadrzędny <xref href=&quot;Microsoft.Build.BuildEngine.Engine&quot;> </xref> obiektu."
+      description: The parent <xref href="Microsoft.Build.BuildEngine.Engine"></xref> object.
   overload: Microsoft.Build.BuildEngine.Project.ParentEngine*
   exceptions: []
   platform:
@@ -1185,15 +1185,15 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera zbiór grup właściwości określony za pomocą [PropertyGroup](~/add/includes/ajax-current-ext-md.md) element w projekcie."
-  remarks: "<xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection>Zwrócone przez to właściwość zawiera grupy właściwości tego projektu i wszystkie projekty importowanych.</xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection>"
+  summary: Gets a collection of the property groups specified with the [PropertyGroup](~/add/includes/ajax-current-ext-md.md) element in the project.
+  remarks: The <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> returned by this property contains the property groups in this project and all imported projects.
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildProperty><xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup> classes to list all the items and properties in the project.  \n  \n [!code-vb[msbuild_ListItemsAndProperties#1](~/add/codesnippet/visualbasic/ListItemAndPropertiesVB/Module1.vb#1)]\n [!code-cs[msbuild_ListItemsAndProperties#1](~/add/codesnippet/csharp/ListItemAndPropertiesCS/Program.cs#1)]"
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildPropertyGroupCollection PropertyGroups { get; }
     return:
       type: Microsoft.Build.BuildEngine.BuildPropertyGroupCollection
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroupCollection&quot;> </xref> zawierającą właściwości grupy specifiied w projekcie."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroupCollection"></xref> containing the property groups specifiied in the project.
   overload: Microsoft.Build.BuildEngine.Project.PropertyGroups*
   exceptions: []
   platform:
@@ -1210,7 +1210,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usuwa wszystkie grupy elementów z projektu, ale nie modyfikuje importowany projektów."
+  summary: Removes all item groups from the project, but does not modify imported projects.
   syntax:
     content: public void RemoveAllItemGroups ();
     parameters: []
@@ -1230,7 +1230,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usunięcie wszystkich grup właściwości z projektu, ale nie modyfikuje importowany projektów."
+  summary: Removes all property groups from the project, but does not modify imported projects.
   syntax:
     content: public void RemoveAllPropertyGroups ();
     parameters: []
@@ -1250,13 +1250,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usunięcie grupy określonej właściwości z pliku głównego projektu."
+  summary: Removes the specified property group from the main project file.
   syntax:
     content: public void RemoveImportedPropertyGroup (Microsoft.Build.BuildEngine.BuildPropertyGroup propertyGroupToRemove);
     parameters:
     - id: propertyGroupToRemove
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.BuildPropertyGroup&quot;> </xref> obiekt reprezentujący grupę do usunięcia."
+      description: A <xref href="Microsoft.Build.BuildEngine.BuildPropertyGroup"></xref> object representing the group to remove.
   overload: Microsoft.Build.BuildEngine.Project.RemoveImportedPropertyGroup*
   exceptions: []
   platform:
@@ -1273,13 +1273,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usuwa określony element z projektu."
+  summary: Removes the specified item from the project.
   syntax:
     content: public void RemoveItem (Microsoft.Build.BuildEngine.BuildItem itemToRemove);
     parameters:
     - id: itemToRemove
       type: Microsoft.Build.BuildEngine.BuildItem
-      description: "Element do usunięcia z projektu."
+      description: The item to remove from the project.
   overload: Microsoft.Build.BuildEngine.Project.RemoveItem*
   exceptions: []
   platform:
@@ -1296,13 +1296,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usuwa określony element grupy z projektu."
+  summary: Removes the specified item group from the project.
   syntax:
     content: public void RemoveItemGroup (Microsoft.Build.BuildEngine.BuildItemGroup itemGroupToRemove);
     parameters:
     - id: itemGroupToRemove
       type: Microsoft.Build.BuildEngine.BuildItemGroup
-      description: "Grupa elementów do usunięcia z projektu."
+      description: The item group to remove from the project.
   overload: Microsoft.Build.BuildEngine.Project.RemoveItemGroup*
   exceptions: []
   platform:
@@ -1319,13 +1319,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Spowoduje usunięcie wszystkich grup elementów z określonym [warunku](~/add/includes/ajax-current-ext-md.md) z projektu, ale nie powoduje modyfikacji importowany projektów."
+  summary: Removes all item groups with the specified [condition](~/add/includes/ajax-current-ext-md.md) from the project, but does not modify imported projects.
   syntax:
     content: public void RemoveItemGroupsWithMatchingCondition (string matchCondition);
     parameters:
     - id: matchCondition
       type: System.String
-      description: "Warunek odpowiadać podczas usuwania grup elementów."
+      description: The condition to match when removing item groups.
   overload: Microsoft.Build.BuildEngine.Project.RemoveItemGroupsWithMatchingCondition*
   exceptions: []
   platform:
@@ -1342,13 +1342,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usuwa wszystkie elementy w kolekcji określonego elementu z projektu, ale nie powoduje modyfikacji importowany projektów."
+  summary: Removes all items in the specified item collection from the project, but does not modify imported projects.
   syntax:
     content: public void RemoveItemsByName (string itemName);
     parameters:
     - id: itemName
       type: System.String
-      description: "Kolekcja elementów do usunięcia."
+      description: The item collection to remove.
   overload: Microsoft.Build.BuildEngine.Project.RemoveItemsByName*
   exceptions: []
   platform:
@@ -1365,13 +1365,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usuwa grupę określonej właściwości z projektu."
+  summary: Removes the specified property group from the project.
   syntax:
     content: public void RemovePropertyGroup (Microsoft.Build.BuildEngine.BuildPropertyGroup propertyGroupToRemove);
     parameters:
     - id: propertyGroupToRemove
       type: Microsoft.Build.BuildEngine.BuildPropertyGroup
-      description: "Grupa właściwości do usunięcia z projektu."
+      description: The property group to remove from the project.
   overload: Microsoft.Build.BuildEngine.Project.RemovePropertyGroup*
   exceptions: []
   platform:
@@ -1388,13 +1388,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Spowoduje usunięcie wszystkich grup właściwości z określonym [warunku](~/add/includes/ajax-current-ext-md.md) z projektu, ale nie powoduje modyfikacji importowany projektów."
+  summary: Removes all property groups with the specified [condition](~/add/includes/ajax-current-ext-md.md) from the project, but does not modify imported projects.
   syntax:
     content: public void RemovePropertyGroupsWithMatchingCondition (string matchCondition);
     parameters:
     - id: matchCondition
       type: System.String
-      description: "Warunek odpowiadać podczas usuwania grupy właściwości."
+      description: The condition to match when removing property groups.
   overload: Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition*
   exceptions: []
   platform:
@@ -1411,17 +1411,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usuwa wszystkie &lt;PropertyGroup&gt;użytkownika z pliku głównego projektu, który ma określony &quot;warunek&quot;."
-  remarks: "Nie spowoduje to usunięcia żadnych grup właściwości z plików importowany projektów."
+  summary: Removes all &lt;PropertyGroup&gt;'s from the main project file that have a specific "Condition."
+  remarks: This will not remove any property groups from imported project files.
   syntax:
     content: public void RemovePropertyGroupsWithMatchingCondition (string matchCondition, bool includeImportedPropertyGroups);
     parameters:
     - id: matchCondition
       type: System.String
-      description: "Ciąg reprezentujący warunek PropertyGroups, którą chcesz usunąć."
+      description: A string representing the condition of the PropertyGroups that you want removed.
     - id: includeImportedPropertyGroups
       type: System.Boolean
-      description: "Wartość logiczna wskazująca, czy mają zostać uwzględnione w wyszukiwaniu grupy importowanych właściwości."
+      description: A boolean value indicating whether to include imported property groups in the search.
   overload: Microsoft.Build.BuildEngine.Project.RemovePropertyGroupsWithMatchingCondition*
   exceptions: []
   platform:
@@ -1438,7 +1438,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Resetuje stan każdej docelowej w projekcie, tak aby dalej kompilacji ponownie utworzy wszystkie elementy docelowe."
+  summary: Resets the status every target in the project so that the next build will build all targets again.
   syntax:
     content: public void ResetBuildStatus ();
     parameters: []
@@ -1458,13 +1458,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zapisuje projekt w określonym <xref:System.IO.TextWriter>obiektu.</xref:System.IO.TextWriter>"
+  summary: Saves the project in the specified <xref:System.IO.TextWriter> object.
   syntax:
     content: public void Save (System.IO.TextWriter textWriter);
     parameters:
     - id: textWriter
       type: System.IO.TextWriter
-      description: "<xref:System.IO.TextWriter>Obiektu, w którym chcesz zapisać projekt.</xref:System.IO.TextWriter>"
+      description: The <xref:System.IO.TextWriter> object in which to save the project.
   overload: Microsoft.Build.BuildEngine.Project.Save*
   exceptions: []
   platform:
@@ -1481,13 +1481,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zapisuje projekt do określonego pliku."
+  summary: Saves the project to the specified file.
   syntax:
     content: public void Save (string projectFileName);
     parameters:
     - id: projectFileName
       type: System.String
-      description: "Nazwa pliku, w którym ma zostać zapisany projekt."
+      description: The name of the file in which to save the project.
   overload: Microsoft.Build.BuildEngine.Project.Save*
   exceptions: []
   platform:
@@ -1504,16 +1504,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zapisuje projekt w określonym pliku do określonego kodowania."
+  summary: Saves the project in the specified file with the specified encoding.
   syntax:
     content: public void Save (string projectFileName, System.Text.Encoding encoding);
     parameters:
     - id: projectFileName
       type: System.String
-      description: "Nazwa pliku, w którym ma zostać zapisany projekt."
+      description: The name of the file in which to save the project.
     - id: encoding
       type: System.Text.Encoding
-      description: "<xref:System.Text.Encoding>Wartości, z którym ma zostać zapisany plik.</xref:System.Text.Encoding>"
+      description: The <xref:System.Text.Encoding> value with which to save the file.
   overload: Microsoft.Build.BuildEngine.Project.Save*
   exceptions: []
   platform:
@@ -1530,12 +1530,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia plik schematu XML do użycia podczas sprawdzania poprawności projektu."
+  summary: Gets or sets the XML schema file to use when validating the project.
   syntax:
     content: public string SchemaFile { get; set; }
     return:
       type: System.String
-      description: "Plik schematu XML do użycia podczas sprawdzania poprawności projektu."
+      description: The XML schema file to use when validating the project.
   overload: Microsoft.Build.BuildEngine.Project.SchemaFile*
   exceptions: []
   platform:
@@ -1552,22 +1552,22 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia wartości właściwości w importowanych określonego projektu."
+  summary: Sets the value of a property in the specified imported project.
   syntax:
     content: public void SetImportedProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.Project importProject);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości, aby zmienić."
+      description: The name of the property to change.
     - id: propertyValue
       type: System.String
-      description: "Wartość do przypisania do właściwości."
+      description: The value to assign the property.
     - id: condition
       type: System.String
-      description: "Warunek do użytku we właściwościach. Odpowiada <xref uid=&quot;langword_csharp_Condition&quot; name=&quot;Condition&quot; href=&quot;&quot;> </xref> atrybutu elementu właściwości."
+      description: The condition to use on the property. Corresponds to the <xref uid="langword_csharp_Condition" name="Condition" href=""></xref> attribute of the Property element.
     - id: importProject
       type: Microsoft.Build.BuildEngine.Project
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> Zawierający określonej właściwości."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> that contains the specified property.
   overload: Microsoft.Build.BuildEngine.Project.SetImportedProperty*
   exceptions: []
   platform:
@@ -1584,25 +1584,25 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia wartości właściwości w importowanych określonego projektu."
+  summary: Sets the value of a property in the specified imported project.
   syntax:
     content: public void SetImportedProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.Project importedProject, Microsoft.Build.BuildEngine.PropertyPosition position);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości, aby zmienić."
+      description: The name of the property to change.
     - id: propertyValue
       type: System.String
-      description: "Wartość do przypisania do właściwości."
+      description: The value to assign the property.
     - id: condition
       type: System.String
-      description: "Warunek do użytku we właściwościach. Odpowiada <xref uid=&quot;langword_csharp_Condition&quot; name=&quot;Condition&quot; href=&quot;&quot;> </xref> atrybutu elementu właściwości."
+      description: The condition to use on the property. Corresponds to the <xref uid="langword_csharp_Condition" name="Condition" href=""></xref> attribute of the Property element.
     - id: importedProject
       type: Microsoft.Build.BuildEngine.Project
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> Zawierający określonej właściwości."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> that contains the specified property.
     - id: position
       type: Microsoft.Build.BuildEngine.PropertyPosition
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.PropertyPosition&quot;> </xref> wartość wskazująca lokalizację do wstawienia właściwości."
+      description: A <xref href="Microsoft.Build.BuildEngine.PropertyPosition"></xref> value indicating the location to insert the property.
   overload: Microsoft.Build.BuildEngine.Project.SetImportedProperty*
   exceptions: []
   platform:
@@ -1619,29 +1619,29 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia wartości właściwości w importowanych określonego projektu."
-  remarks: "Ustawia wartości właściwości i opcjonalnie specjalne, dzięki czemu jest traktowany jako literał pomimo może zawierać znaków specjalnych."
+  summary: Sets the value of a property in the specified imported project.
+  remarks: Sets the value of a property and optionally escapes it so that it will be treated as a literal value despite any special characters it may contain.
   syntax:
     content: public void SetImportedProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.Project importedProject, Microsoft.Build.BuildEngine.PropertyPosition position, bool treatPropertyValueAsLiteral);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości, aby zmienić."
+      description: The name of the property to change.
     - id: propertyValue
       type: System.String
-      description: "Wartość do przypisania do właściwości."
+      description: The value to assign the property.
     - id: condition
       type: System.String
-      description: "Warunek do użytku we właściwościach. Odpowiada <xref uid=&quot;langword_csharp_Condition&quot; name=&quot;Condition&quot; href=&quot;&quot;> </xref> atrybutu elementu właściwości."
+      description: The condition to use on the property. Corresponds to the <xref uid="langword_csharp_Condition" name="Condition" href=""></xref> attribute of the Property element.
     - id: importedProject
       type: Microsoft.Build.BuildEngine.Project
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.Project&quot;> </xref> Zawierający określonej właściwości."
+      description: The <xref href="Microsoft.Build.BuildEngine.Project"></xref> that contains the specified property.
     - id: position
       type: Microsoft.Build.BuildEngine.PropertyPosition
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.PropertyPosition&quot;> </xref> wartość wskazująca lokalizację do wstawienia właściwości."
+      description: A <xref href="Microsoft.Build.BuildEngine.PropertyPosition"></xref> value indicating the location to insert the property.
     - id: treatPropertyValueAsLiteral
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>traktowanie `propertyValue` parametru jako wartości literału; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to treat the `propertyValue` parameter as a literal value; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.SetImportedProperty*
   exceptions: []
   platform:
@@ -1658,16 +1658,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zestawy [projectextensions —](~/add/includes/ajax-current-ext-md.md) element projektu o nazwie określonego elementu i zawartości."
+  summary: Sets the [ProjectExtensions](~/add/includes/ajax-current-ext-md.md) element of the project with the specified element name and content.
   syntax:
     content: public void SetProjectExtensions (string id, string content);
     parameters:
     - id: id
       type: System.String
-      description: "Nazwa elementu XML do tworzenia jako element podrzędny <xref uid=&quot;langword_csharp_ProjectExtensions&quot; name=&quot;ProjectExtensions&quot; href=&quot;&quot;> </xref> element."
+      description: The name of the XML element to create as a child of the <xref uid="langword_csharp_ProjectExtensions" name="ProjectExtensions" href=""></xref> element.
     - id: content
       type: System.String
-      description: "Wartość tekstowa utworzonych elementów XML."
+      description: The text value of the created XML element.
   overload: Microsoft.Build.BuildEngine.Project.SetProjectExtensions*
   exceptions: []
   platform:
@@ -1684,16 +1684,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia wartość określonej właściwości."
+  summary: Sets the value of the specified property.
   syntax:
     content: public void SetProperty (string propertyName, string propertyValue);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości, aby zmienić."
+      description: The name of the property to change.
     - id: propertyValue
       type: System.String
-      description: "Wartość do przypisania do właściwości."
+      description: The value to assign the property.
   overload: Microsoft.Build.BuildEngine.Project.SetProperty*
   exceptions: []
   platform:
@@ -1710,19 +1710,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia wartość określonej właściwości."
+  summary: Sets the value of the specified property.
   syntax:
     content: public void SetProperty (string propertyName, string propertyValue, string condition);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości, aby zmienić."
+      description: The name of the property to change.
     - id: propertyValue
       type: System.String
-      description: "Wartość do przypisania do właściwości."
+      description: The value to assign the property.
     - id: condition
       type: System.String
-      description: "Warunek do użytku we właściwościach. Odpowiada <xref uid=&quot;langword_csharp_Condition&quot; name=&quot;Condition&quot; href=&quot;&quot;> </xref> atrybutu elementu właściwości."
+      description: The condition to use on the property. Corresponds to the <xref uid="langword_csharp_Condition" name="Condition" href=""></xref> attribute of the Property element.
   overload: Microsoft.Build.BuildEngine.Project.SetProperty*
   exceptions: []
   platform:
@@ -1739,23 +1739,23 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia wartość określonej właściwości."
-  remarks: "SetProperty jest wywoływana z zintegrowanego środowiska programistycznego (IDE), aby ustawić określonej właściwości na poziomie projektu. Metoda ta wyszukuje istniejących grup właściwości dla właściwości o tej nazwie. Jeśli zostanie znaleziony, zmienia jego wartość. W przeciwnym razie go dodaje nową właściwość do tej grupy właściwość albo dodaje nową grupę właściwości do projektu. Używa SetProperty `condition` parametru, aby określić nazwę grupy właściwości umieść go w."
+  summary: Sets the value of the specified property.
+  remarks: SetProperty is called from the integrated development environment (IDE) to set a particular property at the project level. This method searches the existing property groups for a property with this name. If one is found, it changes its value. Otherwise, it either adds a new property to that property group, or adds a new property group to the project. SetProperty uses the `condition` parameter to determine the name of the property group place it in.
   syntax:
     content: public void SetProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.PropertyPosition position);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości, aby zmienić."
+      description: The name of the property to change.
     - id: propertyValue
       type: System.String
-      description: "Wartość do przypisania do właściwości."
+      description: The value to assign the property.
     - id: condition
       type: System.String
-      description: "Warunek do użytku we właściwościach. Odpowiada <xref uid=&quot;langword_csharp_Condition&quot; name=&quot;Condition&quot; href=&quot;&quot;> </xref> atrybutu elementu właściwości."
+      description: The condition to use on the property. Corresponds to the <xref uid="langword_csharp_Condition" name="Condition" href=""></xref> attribute of the Property element.
     - id: position
       type: Microsoft.Build.BuildEngine.PropertyPosition
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.PropertyPosition&quot;> </xref> wartość wskazująca lokalizację do wstawienia właściwości."
+      description: A <xref href="Microsoft.Build.BuildEngine.PropertyPosition"></xref> value indicating the location to insert the property.
   overload: Microsoft.Build.BuildEngine.Project.SetProperty*
   exceptions: []
   platform:
@@ -1772,25 +1772,25 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia wartość określonej właściwości."
+  summary: Sets the value of the specified property.
   syntax:
     content: public void SetProperty (string propertyName, string propertyValue, string condition, Microsoft.Build.BuildEngine.PropertyPosition position, bool treatPropertyValueAsLiteral);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości, aby zmienić."
+      description: The name of the property to change.
     - id: propertyValue
       type: System.String
-      description: "Wartość do przypisania do właściwości."
+      description: The value to assign the property.
     - id: condition
       type: System.String
-      description: "Warunek do użytku we właściwościach. Odpowiada <xref uid=&quot;langword_csharp_Condition&quot; name=&quot;Condition&quot; href=&quot;&quot;> </xref> atrybutu elementu właściwości."
+      description: The condition to use on the property. Corresponds to the <xref uid="langword_csharp_Condition" name="Condition" href=""></xref> attribute of the Property element.
     - id: position
       type: Microsoft.Build.BuildEngine.PropertyPosition
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.PropertyPosition&quot;> </xref> wartość wskazująca lokalizację do wstawienia właściwości."
+      description: A <xref href="Microsoft.Build.BuildEngine.PropertyPosition"></xref> value indicating the location to insert the property.
     - id: treatPropertyValueAsLiteral
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>traktowanie `propertyValue` parametru jako wartości literału; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to treat the `propertyValue` parameter as a literal value; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.Project.SetProperty*
   exceptions: []
   platform:
@@ -1807,13 +1807,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera elementy docelowe w projekcie."
-  remarks: "Obiekty docelowe są określone w elemencie w projekcie."
+  summary: Gets the targets in the project.
+  remarks: Targets are specified by the  element in the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.TargetCollection Targets { get; }
     return:
       type: Microsoft.Build.BuildEngine.TargetCollection
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.TargetCollection&quot;> </xref> elementów docelowych w projekcie."
+      description: A <xref href="Microsoft.Build.BuildEngine.TargetCollection"></xref> of the targets in the project.
   overload: Microsoft.Build.BuildEngine.Project.Targets*
   exceptions: []
   platform:
@@ -1830,12 +1830,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera <xref:System.DateTime>obiekt wskazujący czas ostatniego projektu zmieniony w taki sposób, że wymagane go mają być zapisywane w pliku.</xref:System.DateTime>"
+  summary: Gets a <xref:System.DateTime> object indicating the time the project was last changed in a way that required it to be saved to a file.
   syntax:
     content: public DateTime TimeOfLastDirty { get; }
     return:
       type: System.DateTime
-      description: "A <xref:System.DateTime>obiekt wskazujący czas ostatniego projektu zmieniony w taki sposób, że wymagane go mają być zapisywane w pliku.</xref:System.DateTime>"
+      description: A <xref:System.DateTime> object indicating the time the project was last changed in a way that required it to be saved to a file.
   overload: Microsoft.Build.BuildEngine.Project.TimeOfLastDirty*
   exceptions: []
   platform:
@@ -1852,13 +1852,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Ustawia lub pobiera bieżącą wersję zestawu narzędzi używanych w projekcie."
-  remarks: "Wersja zestawu narzędzi jest wyłączona, ta wartość staje się skuteczne wersję zestawu narzędzi. Jeśli element projektu jest atrybutem ToolsVersion, to skuteczne wersję zestawu narzędzi. W przeciwnym razie wersja zestawu narzędzi jest taka sama jak domyślna wersja zestawu narzędzi silnika macierzystego. Po ustawieniu ToolsVersion zastępuje bieżącą wersję zestawu narzędzi projektu z podana wartość.       Aby uzyskać więcej informacji na temat procesami zobacz [standardowego i niestandardowego zestawu narzędzi konfiguracji](~/add/includes/ajax-current-ext-md.md).      > [!NOTE] > Pobrać lub ustawić atrybutu ToolsVersion na <xref:Microsoft.Build.BuildEngine.Project>element, użyj <xref:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion%2A>właściwość.</xref:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion%2A> </xref:Microsoft.Build.BuildEngine.Project>"
+  summary: Sets or gets the current version of the Toolset being used by the project.
+  remarks: "If the Toolset version is overridden, that value becomes the effective Toolset version. If there is a ToolsVersion attribute on the Project element, then that is the effective Toolset version. Otherwise, the Toolset version is the same as the default Toolset version of the parent engine. When set, ToolsVersion overrides the current Toolset version of the project with the provided value.  \n  \n For more information about Toolsets, see [Standard and Custom Toolset Configurations](~/add/includes/ajax-current-ext-md.md).  \n  \n> [!NOTE]\n>  To get or set the ToolsVersion attribute on the <xref:Microsoft.Build.BuildEngine.Project> element, use the <xref:Microsoft.Build.BuildEngine.Project.DefaultToolsVersion%2A> property."
   syntax:
     content: public string ToolsVersion { get; }
     return:
       type: System.String
-      description: "Ciąg reprezentujący numer wersji zestawu narzędzi."
+      description: A string representing the version number of the Toolset.
   overload: Microsoft.Build.BuildEngine.Project.ToolsVersion*
   exceptions: []
   platform:
@@ -1875,12 +1875,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera kolekcję [UsingTask](~/add/includes/ajax-current-ext-md.md) elementów w projekcie."
+  summary: Gets a collection of the [UsingTask](~/add/includes/ajax-current-ext-md.md) elements in the project.
   syntax:
     content: public Microsoft.Build.BuildEngine.UsingTaskCollection UsingTasks { get; }
     return:
       type: Microsoft.Build.BuildEngine.UsingTaskCollection
-      description: "A <xref href=&quot;Microsoft.Build.BuildEngine.UsingTaskCollection&quot;> </xref> z `UsingTask` elementów w projekcie."
+      description: A <xref href="Microsoft.Build.BuildEngine.UsingTaskCollection"></xref> of the `UsingTask` elements in the project.
   overload: Microsoft.Build.BuildEngine.Project.UsingTasks*
   exceptions: []
   platform:
@@ -1897,7 +1897,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera XML reprezentującego projekt."
+  summary: Gets the XML representing the project.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
@@ -1905,7 +1905,7 @@ items:
     content: public string Xml { get; }
     return:
       type: System.String
-      description: "Pełna XML reprezentującego projekt."
+      description: The full XML representing the project.
   overload: Microsoft.Build.BuildEngine.Project.Xml*
   exceptions: []
   platform:

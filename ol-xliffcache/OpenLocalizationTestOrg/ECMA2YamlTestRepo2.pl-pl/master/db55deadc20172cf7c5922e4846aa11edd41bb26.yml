@@ -20,8 +20,8 @@ items:
   nameWithType: ProjectMetadata
   fullName: Microsoft.Build.Evaluation.ProjectMetadata
   type: Class
-  summary: "Reprezentuje obliczane metadanych w czasie projektowania."
-  remarks: "Nigdy nie jest używana do reprezentowania wbudowanych metadanych, takich jak % (nazwa pliku). Metadane są zawsze skojarzone z kodem źródłowym projektu.       Metadane jest zawarty w jednej <xref:Microsoft.Build.Evaluation.ProjectItemDefinition>lub <xref:Microsoft.Build.Evaluation.ProjectItem>.</xref:Microsoft.Build.Evaluation.ProjectItem> </xref:Microsoft.Build.Evaluation.ProjectItemDefinition>"
+  summary: Represents evaluated design-time metadata.
+  remarks: "Never used to represent built-in metadata, like %(Filename). The metadata is always associated with project source code.  \n  \n The metadata is contained by either by a <xref:Microsoft.Build.Evaluation.ProjectItemDefinition> or a <xref:Microsoft.Build.Evaluation.ProjectItem>."
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{Name}={EvaluatedValue} [{xml.Value}]")]
@@ -46,12 +46,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Lokalizację atrybutu warunku."
+  summary: Location of the Condition attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu warunku."
+      description: Returns Condition attribute location.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.ConditionLocation*
   exceptions: []
   platform:
@@ -68,13 +68,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Pobiera wartość ocenionych metadanych."
-  remarks: 'Nie można ustawić bezpośrednio: można ustawić tylko wartość unevaluated.'
+  summary: Gets the evaluated metadata value.
+  remarks: 'Cannot be set directly: only the unevaluated value can be set.'
   syntax:
     content: public string EvaluatedValue { get; }
     return:
       type: System.String
-      description: "Zwraca wartość ocenionych metadanych, które nigdy nie ma wartość null."
+      description: Returns the evaluated metadata value, which is never null.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.EvaluatedValue*
   exceptions: []
   platform:
@@ -91,12 +91,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Określa, jeśli metadanych pochodzi z importowanego pliku."
+  summary: Determines if the metadata originated from an imported file.
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: "Zwraca wartość true, jeśli metadanych pochodzi z pliku importowanych; wartość false w przeciwnym razie."
+      description: Returns true if the metadata originated from an imported file; false otherwise.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.IsImported*
   exceptions: []
   platform:
@@ -113,12 +113,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Pobiera typ elementu zawierającego definicji elementu lub elementu."
+  summary: Gets the item type of the containing item definition or item.
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Zwraca typ elementu zawierającego definicji elementu lub elementu."
+      description: Returns the item type of the containing item definition or item.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.ItemType*
   exceptions: []
   platform:
@@ -135,12 +135,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Położenie elementu."
+  summary: Location of the element.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację elementu."
+      description: Returns the element location.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Location*
   exceptions: []
   platform:
@@ -157,12 +157,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Pobiera nazwę metadanych."
+  summary: Gets the name of the metadata.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "Zwraca nazwę metadanych."
+      description: Returns the name of the metadata.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Name*
   exceptions: []
   platform:
@@ -179,13 +179,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Pobiera ostatni metadanych (z definicji elementu lub elementu) została zastąpiona przez te metadane podczas obliczania."
-  remarks: "Metoda ta wyszukuje wszystkie metadane o tej samej nazwie, które znajdują się powyżej w pliku projektu logicznych i które znajdują się definicje elementów typu elementu i warunki, których ocena ma wartość PRAWDA. Metadane są przechowywane przez element, Metoda ta wyszukuje wszystkie poprzednie metadane o tej samej nazwie i elementów, których warunek przyjął wartość true. Definicje elementów są przeszukiwane przed elementami.       Jeśli projekt nie ma zostały ponownie oceniane od czasu ostatniej modyfikacji, ta wartość może być nieprawidłowa."
+  summary: Gets the last metadata (from an item definition or item) that was overridden by this metadata during evaluation.
+  remarks: "This method searches for all metadata with the same name that lie above in the logical project file, and which are contained by item definitions of the same item type, and whose conditions evaluate to true. If the metadata is contained by an item, this method searches for any previous metadata with the same name and item whose condition evaluated to true. Item definitions are searched before items.  \n  \n If the project has not been reevaluated since the last modification, this value may be incorrect."
   syntax:
     content: public Microsoft.Build.Evaluation.ProjectMetadata Predecessor { get; }
     return:
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: "Zwraca ostatnich metadanych (z definicji elementu lub elementu), którego wartość została zastąpiona przez te metadane podczas obliczania. Zwraca wartość null, jeśli nie została zastąpiona metadanych."
+      description: Returns the last metadata (from an item definition or item) whose value was overridden by this metadata during evaluation. Returns null if the metadata has not been overridden.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Predecessor*
   exceptions: []
   platform:
@@ -202,12 +202,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Pobiera projektu, który zawiera metadane."
+  summary: Gets the project that contains this metadata.
   syntax:
     content: public Microsoft.Build.Evaluation.Project Project { get; }
     return:
       type: Microsoft.Build.Evaluation.Project
-      description: "Zwraca projektu, który zawiera metadane, które nigdy nie ma wartość null."
+      description: Returns the project that contains this metadata, which is never null.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Project*
   exceptions: []
   platform:
@@ -230,10 +230,10 @@ items:
     parameters:
     - id: other
       type: Microsoft.Build.Evaluation.ProjectMetadata
-      description: "Do dodania."
+      description: To be added.
     return:
       type: System.Boolean
-      description: "Do dodania."
+      description: To be added.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.System#IEquatable<Microsoft#Build#Evaluation#ProjectMetadata>#Equals*
   exceptions: []
   platform:
@@ -250,13 +250,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Pobiera lub ustawia wartość unevaluated metadanych."
-  remarks: "Metoda ustawiająca aktualizuje zarówno wartość unevaluated i ocenionych wartość, ale nie wpływa na niczego więcej w projekcie do ponownej oceny.       Na przykład — jeśli fragment metadanych o nazwie &quot;m&quot; jest modyfikowany na element typu &quot;i&quot;, nie wpływa na &quot;j&quot;, który jest oceniany z &quot;@(j->&quot;% (m)&quot;)&quot; do ponownej oceny. — Jeśli unevaluated wartość &quot;m&quot; jest ustawiona na coś, co jest modyfikowany przez oceny, takie jak &quot;$(p)&quot;, ocenionych wartość zostanie ustawiona na &quot;$(p)&quot; do ponownej oceny.       Ustawianie metadanych za pośrednictwem <xref:Microsoft.Build.Evaluation.ProjectItem>może spowodować skojarzonego <xref:Microsoft.Build.Construction.ProjectItemElement>podziału, jeśli element element pochodzi z wyrażenia elementu listy, symbol wieloznaczny lub średnika.</xref:Microsoft.Build.Construction.ProjectItemElement> </xref:Microsoft.Build.Evaluation.ProjectItem> ponieważ oznacza zamiar dotyczą tylko konkretnego elementu.       Ustawienie metadanych za pośrednictwem ProjectMetadata nie powoduje żadnych podziału, ponieważ zakłada zamiar wpływają na wszystkie elementy przy użyciu podstawowych <xref:Microsoft.Build.Construction.ProjectMetadataElement>.</xref:Microsoft.Build.Construction.ProjectMetadataElement>       Zawierającego projekt jest oznaczona jako zmodyfikowana. Unevaluated wartości są uznawane za zawierają wyjściowym sekwencje znaków zgodnie z potrzebami.       Ta metoda nie mogą opuszczać projektu self spójna."
+  summary: Gets or sets the unevaluated metadata value.
+  remarks: "The setter method updates both the unevaluated value and the evaluated value, but does not affect anything else in the project until reevaluation.  \n  \n For example, --if a piece of metadata named \"m\" is modified on item of type \"i\", it does not affect \"j\" which is evaluated from \"@(j->'%(m)')\" until reevaluation. --if the unevaluated value of \"m\" is set to something that is modified by evaluation, such as \"$(p)\", the evaluated value will be set to \"$(p)\" until reevaluation.  \n  \n Setting metadata through a <xref:Microsoft.Build.Evaluation.ProjectItem> may cause the associated <xref:Microsoft.Build.Construction.ProjectItemElement> to be split, if the item element originated from an item list, wildcard, or semicolon expression. because it implies an intention to only affect that particular item.  \n  \n Setting metadata through ProjectMetadata does not cause any splitting, because it implies an intention to affect all items using the underlying <xref:Microsoft.Build.Construction.ProjectMetadataElement>.  \n  \n The containing project is marked as modified. Unevaluated values are assumed to contain escaped character sequences as needed.  \n  \n This method may not leave the project in a self consistent state."
   syntax:
     content: public string UnevaluatedValue { get; set; }
     return:
       type: System.String
-      description: "Zwraca wartość unevaluated metadanych."
+      description: Returns the unevaluated metadata value.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.UnevaluatedValue*
   exceptions: []
   platform:
@@ -273,12 +273,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Evaluation
-  summary: "Pobiera element projektu skojarzone metadane."
+  summary: Gets the associated project metadata element.
   syntax:
     content: public Microsoft.Build.Construction.ProjectMetadataElement Xml { get; }
     return:
       type: Microsoft.Build.Construction.ProjectMetadataElement
-      description: "Zwraca element metadanych skojarzony projekt, który nigdy nie może mieć wartości null."
+      description: Returns the associated project metadata element, which can never be null.
   overload: Microsoft.Build.Evaluation.ProjectMetadata.Xml*
   exceptions: []
   platform:

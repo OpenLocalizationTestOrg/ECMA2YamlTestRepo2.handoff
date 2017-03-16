@@ -14,8 +14,8 @@ items:
   nameWithType: ResolveNonMSBuildProjectOutput
   fullName: Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput
   type: Class
-  summary: "Określa pliki wyjściowe dla nie -[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] odwołania do projektu."
-  remarks: "`ResolveNonMSBuildProjectOutput` Zadań wyszukuje specjalne właściwości ustawione przez [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)] IDE Lista identyfikatorów GUID projektu i ich skojarzone dane wyjściowe. IDE wstępnie rozwiązuje tylko nie -[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektów i w ten sposób oddziela [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektu odwołania z innych niż -[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] odwołania. IDE zwraca listę [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektów jako UnresolvedProjectReferences. Dzięki temu zadanie używać bardziej wydajne [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] mechanizmów do manipulowania właśnie [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektu odwołania, np. wywoływanie w określonych elementów docelowych odwołań, aby uzyskać nazwę pliku manifestu, który nie jest możliwe z listą mieszane [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] i innych niż-[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] odwołania do projektu."
+  summary: Determines the output files for non-[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project references.
+  remarks: The `ResolveNonMSBuildProjectOutput` task searches for a special property set by the [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)] IDE for the list of project GUIDs and their associated outputs. The IDE only pre-resolves non-[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projects and in this way separates [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project references from non-[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] references. The IDE returns the list of [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projects as UnresolvedProjectReferences. This enables the task to use more powerful [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] mechanisms to manipulate just the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project references, such as. calling into specific targets of references to get the manifest file name, which would not be possible with a mixed list of [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] and non-[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project references.
   syntax:
     content: 'public class ResolveNonMSBuildProjectOutput : Microsoft.Build.Tasks.ResolveProjectBase'
   inheritance:
@@ -51,7 +51,7 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput&quot;> </xref> klasy."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput"></xref> class.
   syntax:
     content: public ResolveNonMSBuildProjectOutput ();
     parameters: []
@@ -71,13 +71,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Wykonuje `ResolveNonMSBuildProjectOutput` zadań."
+  summary: Executes the `ResolveNonMSBuildProjectOutput` task.
   syntax:
     content: public override bool Execute ();
     parameters: []
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli wykonanie zadania zakończyło się pomyślnie; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if task execution succeeded; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.Execute*
   exceptions: []
   platform:
@@ -94,12 +94,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia ciąg XML zawierający dane wyjściowe projektu rozwiązania."
+  summary: Gets or sets an XML string containing resolved project outputs.
   syntax:
     content: public string PreresolvedProjectOutputs { get; set; }
     return:
       type: System.String
-      description: "Ciąg XML zawierający rozwiązane danych wyjściowych projektu."
+      description: An XML string containing resolved project outputs.
   overload: Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.PreresolvedProjectOutputs*
   exceptions: []
   platform:
@@ -116,12 +116,12 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia odwołanie rozwiązany ścieżek, które zachować oryginalne atrybutów odwołania projektu."
+  summary: Gets or sets resolved reference paths that preserve the original project reference attributes.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] ResolvedOutputPaths { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Ścieżki rozpoznać odwołania, które zachować oryginalne atrybutów odwołania projektu."
+      description: The resolved reference paths that preserve the original project reference attributes.
   overload: Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.ResolvedOutputPaths*
   exceptions: []
   platform:
@@ -138,13 +138,13 @@ items:
   assemblies:
   - Microsoft.Build.Tasks.v4.0
   namespace: Microsoft.Build.Tasks
-  summary: "Pobiera lub ustawia elementy odwołanie do projektu, które są w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] formacie."
-  remarks: "Ponieważ [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)] tylko przed rozwiązuje nie -[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projekty, elementy odwołanie do projektu, których nie można rozwiązać za pomocą wstępnie rozwiązany listę dane wyjściowe są w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] formacie."
+  summary: Gets or sets project reference items that are in the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] format.
+  remarks: Since [!INCLUDE[vsprvs](~/add/includes/vsprvs-md.md)] only pre-resolves non-[!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projects, the project reference items that could not be resolved using the pre-resolved list of outputs are in the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] format.
   syntax:
     content: public Microsoft.Build.Framework.ITaskItem[] UnresolvedProjectReferences { get; set; }
     return:
       type: Microsoft.Build.Framework.ITaskItem[]
-      description: "Projektu odwołania elementów, które są w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] formacie."
+      description: Project reference items that are in the [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] format.
   overload: Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.UnresolvedProjectReferences*
   exceptions: []
   platform:

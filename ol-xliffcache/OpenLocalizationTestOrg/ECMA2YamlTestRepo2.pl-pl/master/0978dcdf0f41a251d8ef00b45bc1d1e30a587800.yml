@@ -13,7 +13,7 @@ items:
   nameWithType: LazyFormattedBuildEventArgs
   fullName: Microsoft.Build.Framework.LazyFormattedBuildEventArgs
   type: Class
-  summary: "Przechowuje ciągi dla części opóźniania formatowania, dopóki nie musi być wyświetlony komunikat."
+  summary: Stores strings for parts of a message delaying the formatting until it needs to be shown.
   syntax:
     content: 'public class LazyFormattedBuildEventArgs : Microsoft.Build.Framework.BuildEventArgs'
   inheritance:
@@ -40,7 +40,7 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Konstruktor domyślny."
+  summary: Default constructor.
   syntax:
     content: protected LazyFormattedBuildEventArgs ();
     parameters: []
@@ -60,19 +60,19 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ten konstruktor pozbawiony umożliwia wszystkie dane zdarzeń można było zainicjować."
+  summary: This constuctor allows all event data to be initialized.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName);
     parameters:
     - id: message
       type: System.String
-      description: "wiadomość SMS."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "słowo kluczowe pomocy."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "Nazwa nadawcy zdarzeń."
+      description: name of event sender.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -89,25 +89,25 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Ten konstruktor jest pozbawiony umożliwiający komunikat argumenty, które są formatowane opóźnieniem."
+  summary: This constuctor that allows message arguments that are lazily formatted.
   syntax:
     content: public LazyFormattedBuildEventArgs (string message, string helpKeyword, string senderName, DateTime eventTimestamp, object[] messageArgs);
     parameters:
     - id: message
       type: System.String
-      description: "wiadomość SMS."
+      description: text message.
     - id: helpKeyword
       type: System.String
-      description: "słowo kluczowe pomocy."
+      description: help keyword.
     - id: senderName
       type: System.String
-      description: "Nazwa nadawcy zdarzeń."
+      description: name of event sender.
     - id: eventTimestamp
       type: System.DateTime
-      description: "Sygnatura czasowa podczas tworzenia zdarzenia."
+      description: Timestamp when event was created.
     - id: messageArgs
       type: System.Object[]
-      description: "Argumenty komunikatu."
+      description: Message arguments.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.#ctor*
   exceptions: []
   platform:
@@ -124,12 +124,12 @@ items:
   assemblies:
   - Microsoft.Build.Framework
   namespace: Microsoft.Build.Framework
-  summary: "Pobiera sformatowany komunikat."
+  summary: Gets the formatted message.
   syntax:
     content: public override string Message { get; }
     return:
       type: System.String
-      description: "Do dodania."
+      description: To be added.
   overload: Microsoft.Build.Framework.LazyFormattedBuildEventArgs.Message*
   exceptions: []
   platform:

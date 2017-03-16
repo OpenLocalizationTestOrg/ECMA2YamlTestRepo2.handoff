@@ -26,7 +26,7 @@ items:
   nameWithType: ProjectItemGroupTaskItemInstance
   fullName: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance
   type: Class
-  summary: "Otacza elementu unevaluated w obszarze itemgroup — element docelowy. Niezmienne."
+  summary: Wraps an unevaluated item under an itemgroup in a target. Immutable.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("{itemType} Include={include} Exclude={exclude} Remove={remove} Condition={condition}")]
@@ -50,12 +50,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość atrybutu unevaluated warunku."
+  summary: Gets the unevaluated Condition attribute value.
   syntax:
     content: public string Condition { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu unevaluated warunku."
+      description: Returns the unevaluated Condition attribute value.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.Condition*
   exceptions: []
   platform:
@@ -72,12 +72,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lokalizację atrybutu warunku ewentualne"
+  summary: Location of the condition attribute if any
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu warunku."
+      description: Returns the location of the condition attribute.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.ConditionLocation*
   exceptions: []
   platform:
@@ -94,12 +94,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość atrybutu unevaluated wykluczania."
+  summary: Gets the unevaluated Exclude attribute value.
   syntax:
     content: public string Exclude { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu unevaluated wykluczania."
+      description: Returns the unevaluated Exclude attribute value.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.Exclude*
   exceptions: []
   platform:
@@ -116,12 +116,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lokalizację atrybutu Wyklucz, jeśli istnieje"
+  summary: Location of the exclude attribute, if any
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ExcludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu wykluczania."
+      description: Returns the location of the exclude attribute.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.ExcludeLocation*
   exceptions: []
   platform:
@@ -138,12 +138,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość atrybutu unevaluated Include."
+  summary: Gets the unevaluated Include attribute value.
   syntax:
     content: public string Include { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu unevaluated Include."
+      description: Returns the unevaluated Include attribute value.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.Include*
   exceptions: []
   platform:
@@ -160,12 +160,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lokalizacja atrybutu Uwzględnij, jeśli istnieje"
+  summary: Location of the include attribute, if any
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation IncludeLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu include."
+      description: Returns the location of the include attribute.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.IncludeLocation*
   exceptions: []
   platform:
@@ -182,12 +182,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobranie typu elementu, na przykład &quot;Compile&quot;."
+  summary: Get the item type, for example "Compile".
   syntax:
     content: public string ItemType { get; }
     return:
       type: System.String
-      description: "Zwraca typ elementu, na przykład &quot;Compile&quot;."
+      description: Returns the item type, for example "Compile".
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.ItemType*
   exceptions: []
   platform:
@@ -204,12 +204,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość unevaluated KeepDuplicates."
+  summary: Gets the unevaluated KeepDuplicates value.
   syntax:
     content: public string KeepDuplicates { get; }
     return:
       type: System.String
-      description: "Zwraca wartość KeepDuplicates."
+      description: Returns the KeepDuplicates value.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.KeepDuplicates*
   exceptions: []
   platform:
@@ -226,12 +226,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lub Ustawia lokalizację atrybutu KeepDuplicates, jeśli istnieją."
+  summary: Gets or sets the location of the KeepDuplicates attribute, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepDuplicatesLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu KeepDuplicates."
+      description: Returns the location of the KeepDuplicates attribute.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.KeepDuplicatesLocation*
   exceptions: []
   platform:
@@ -248,12 +248,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość atrybutu unevaluated KeepMetadata"
+  summary: Gets the unevaluated KeepMetadata attribute value
   syntax:
     content: public string KeepMetadata { get; }
     return:
       type: System.String
-      description: "Zwraca wartość KeepMetadata."
+      description: Returns the KeepMetadata value.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.KeepMetadata*
   exceptions: []
   platform:
@@ -270,12 +270,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu KeepMetadata, jeśli istnieją."
+  summary: Gets the location of the KeepMetadata attribute, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację KeepMetadata."
+      description: Returns the location of KeepMetadata.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.KeepMetadataLocation*
   exceptions: []
   platform:
@@ -292,12 +292,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Położenie elementu"
+  summary: Location of the element
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca położenie elementu."
+      description: Returns the element’s location.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.Location*
   exceptions: []
   platform:
@@ -314,12 +314,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera uporządkowaną kolekcję unevaluated metadanych w elemencie."
+  summary: Gets an ordered collection of unevaluated metadata on the item.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemGroupTaskMetadataInstance> Metadata { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemGroupTaskMetadataInstance}
-      description: "Zwraca element uporządkowaną kolekcję unevaluated metadanych."
+      description: Returns an ordered collection of unevaluated metadata on the item.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.Metadata*
   exceptions: []
   platform:
@@ -336,12 +336,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość atrybutu unevaluated Usuń."
+  summary: Gets the unevaluated Remove attribute value.
   syntax:
     content: public string Remove { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu unevaluated Usuń."
+      description: Returns the unevaluated Remove attribute value.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.Remove*
   exceptions: []
   platform:
@@ -358,12 +358,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lokalizacja atrybut usuń ewentualne"
+  summary: Location of the remove attribute, if any
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu Usuń."
+      description: Returns the location of the remove attribute.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.RemoveLocation*
   exceptions: []
   platform:
@@ -380,12 +380,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wartość unevaluated RemoveMetadata."
+  summary: Gets the unevaluated RemoveMetadata value.
   syntax:
     content: public string RemoveMetadata { get; }
     return:
       type: System.String
-      description: "Zwraca wartość RemoveMetadata."
+      description: Returns the RemoveMetadata value.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.RemoveMetadata*
   exceptions: []
   platform:
@@ -402,12 +402,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu RemoveMetadata, jeśli istnieją."
+  summary: Gets the location of the RemoveMetadata attribute, if any.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation RemoveMetadataLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację RemoveMetadata."
+      description: Returns the RemoveMetadata location.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance.RemoveMetadataLocation*
   exceptions: []
   platform:

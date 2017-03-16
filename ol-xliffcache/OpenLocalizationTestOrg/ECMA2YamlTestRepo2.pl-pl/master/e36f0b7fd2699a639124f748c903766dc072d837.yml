@@ -33,8 +33,8 @@ items:
   nameWithType: ConsoleLogger
   fullName: Microsoft.Build.Logging.ConsoleLogger
   type: Class
-  summary: "Reprezentuje rejestratora domyślne, która wyświetla dane zdarzeń do konsoli (stdout)."
-  remarks: "Ta klasa tworzy otacza i deleguje do `BaseConsoleLogger`, albo `SerialConsoleLogger` lub `ParallelConsoleLogger`.       Ta klasa nie jest bezpieczne dla wątków."
+  summary: Represents the default logger that outputs event data to the console (stdout).
+  remarks: "This class creates, wraps, and delegates to a `BaseConsoleLogger`, either `SerialConsoleLogger` or `ParallelConsoleLogger`.  \n  \n This class is not thread safe."
   syntax:
     content: 'public class ConsoleLogger : Microsoft.Build.Framework.INodeLogger'
   inheritance:
@@ -56,7 +56,7 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Tworzy rejestratora domyślne."
+  summary: Creates a default logger.
   syntax:
     content: public ConsoleLogger ();
     parameters: []
@@ -76,13 +76,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Tworzy wystąpienie rejestratora z danego poziom szczegółowości, którego loguje się do konsoli domyślne."
+  summary: Creates a logger instance with the given verbosity that logs to the default console.
   syntax:
     content: public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity);
     parameters:
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Poziom szczegółowości."
+      description: The verbosity level.
   overload: Microsoft.Build.Logging.ConsoleLogger.#ctor*
   exceptions: []
   platform:
@@ -99,22 +99,22 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Inicjuje rejestratora z obsługą alternatywny."
+  summary: Initializes the logger with alternate output handlers.
   syntax:
     content: public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity, Microsoft.Build.Logging.WriteHandler write, Microsoft.Build.Logging.ColorSetter colorSet, Microsoft.Build.Logging.ColorResetter colorReset);
     parameters:
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Poziom szczegółowości."
+      description: The verbosity level.
     - id: write
       type: Microsoft.Build.Logging.WriteHandler
-      description: "Obsługa zapisu."
+      description: The write handler.
     - id: colorSet
       type: Microsoft.Build.Logging.ColorSetter
-      description: "Ustawia kolor tekstu."
+      description: Sets the text color.
     - id: colorReset
       type: Microsoft.Build.Logging.ColorResetter
-      description: "Resetuje koloru tekstu."
+      description: Resets the text color.
   overload: Microsoft.Build.Logging.ConsoleLogger.#ctor*
   exceptions: []
   platform:
@@ -131,17 +131,17 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Dotyczy parametr rejestratora."
-  remarks: "Zaniechane."
+  summary: Applies a parameter to the logger.
+  remarks: Deprecated.
   syntax:
     content: public void ApplyParameter (string parameterName, string parameterValue);
     parameters:
     - id: parameterName
       type: System.String
-      description: "Nazwa parametru."
+      description: The name of the parameter.
     - id: parameterValue
       type: System.String
-      description: "Wartość parametru."
+      description: The value of the parameter.
   overload: Microsoft.Build.Logging.ConsoleLogger.ApplyParameter*
   exceptions: []
   platform:
@@ -158,16 +158,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wywoływane po zakończeniu kompilacji."
+  summary: Called when the build is finished.
   syntax:
     content: public void BuildFinishedHandler (object sender, Microsoft.Build.Framework.BuildFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.BuildFinishedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.BuildFinishedHandler*
   exceptions: []
   platform:
@@ -184,16 +184,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wywoływana, gdy kompilacja jest uruchomiona."
+  summary: Called when the build is started.
   syntax:
     content: public void BuildStartedHandler (object sender, Microsoft.Build.Framework.BuildStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.BuildStartedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.BuildStartedHandler*
   exceptions: []
   platform:
@@ -210,16 +210,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wywoływana, aby rejestrować zdarzenia niestandardowego."
+  summary: Called to log a custom event.
   syntax:
     content: public void CustomEventHandler (object sender, Microsoft.Build.Framework.CustomBuildEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca zdarzenia."
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.CustomBuildEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.CustomEventHandler*
   exceptions: []
   platform:
@@ -236,16 +236,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wywoływana, aby rejestrować zdarzenia błędu."
+  summary: Called to log an error event.
   syntax:
     content: public void ErrorHandler (object sender, Microsoft.Build.Framework.BuildErrorEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca zdarzenia."
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.BuildErrorEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.ErrorHandler*
   exceptions: []
   platform:
@@ -262,13 +262,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Podpisuje się rejestratora konsoli dla zdarzenia danej kompilacji."
+  summary: Signs up the console logger for the given build event.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "Dostępne zdarzenia."
+      description: The available events.
   overload: Microsoft.Build.Logging.ConsoleLogger.Initialize*
   exceptions: []
   platform:
@@ -285,16 +285,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Inicjuje rejestratora o liczbie źródłowy i węzeł z określonych zdarzeń."
+  summary: Initializes the logger with the given event source and node count.
   syntax:
     content: public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);
     parameters:
     - id: eventSource
       type: Microsoft.Build.Framework.IEventSource
-      description: "Źródło zdarzenia."
+      description: The event source.
     - id: nodeCount
       type: System.Int32
-      description: "Liczba węzłów."
+      description: The node count.
   overload: Microsoft.Build.Logging.ConsoleLogger.Initialize*
   exceptions: []
   platform:
@@ -311,16 +311,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wywoływana, aby rejestrować zdarzenia wiadomości."
+  summary: Called to log a message event.
   syntax:
     content: public void MessageHandler (object sender, Microsoft.Build.Framework.BuildMessageEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca zdarzenia."
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.BuildMessageEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.MessageHandler*
   exceptions: []
   platform:
@@ -337,12 +337,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Pobiera lub ustawia rozdzielaną średnikami listę parametru pary klucz wartość."
+  summary: Gets or sets a semicolon-delimited list of parameter key-value pairs.
   syntax:
     content: public string Parameters { get; set; }
     return:
       type: System.String
-      description: "Zwraca rozdzielaną średnikami listę parametru pary klucz wartość."
+      description: Returns a semicolon-delimited list of parameter key-value pairs.
   overload: Microsoft.Build.Logging.ConsoleLogger.Parameters*
   exceptions: []
   platform:
@@ -359,16 +359,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "O nazwie logowania projektu Zakończono zdarzeń."
+  summary: Called to log a project finished event.
   syntax:
     content: public void ProjectFinishedHandler (object sender, Microsoft.Build.Framework.ProjectFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.ProjectFinishedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.ProjectFinishedHandler*
   exceptions: []
   platform:
@@ -385,16 +385,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "O nazwie logowania projektu uruchomienia zdarzenia."
+  summary: Called to log a project started event.
   syntax:
     content: public void ProjectStartedHandler (object sender, Microsoft.Build.Framework.ProjectStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.ProjectStartedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.ProjectStartedHandler*
   exceptions: []
   platform:
@@ -411,12 +411,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Pobiera lub ustawia przełącznik, który określa, czy pominąć wyświetlania błędów i ostrzeżeń podsumowanie."
+  summary: Gets or sets a switch that determines whether to suppress the display of errors and the warnings summary.
   syntax:
     content: public bool ShowSummary { get; set; }
     return:
       type: System.Boolean
-      description: "Zwraca przełącznik, który określa, czy pominąć wyświetlania błędów i ostrzeżeń podsumowanie."
+      description: Returns a switch that determines whether to suppress the display of errors and the warnings summary.
   overload: Microsoft.Build.Logging.ConsoleLogger.ShowSummary*
   exceptions: []
   platform:
@@ -433,8 +433,8 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wywoływane po zakończeniu kompilacji."
-  remarks: "Rejestratora konsoli nie musisz zwolnić wszystkie zasoby. Ta metoda nie działa."
+  summary: Called when the build is finished.
+  remarks: The console logger does not need to release any resources. This method does nothing.
   syntax:
     content: public virtual void Shutdown ();
     parameters: []
@@ -454,13 +454,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Pobiera lub ustawia przełącznik, który określa, czy pominąć wyświetlanie nagłówków projektu."
-  remarks: "Nagłówki projektu są domyślnie wyświetlane, chyba że ta właściwość jest ustawiona."
+  summary: Gets or sets a switch that determines whether to suppress the display of project headers.
+  remarks: Project headers are displayed by default unless this property is set.
   syntax:
     content: public bool SkipProjectStartedText { get; set; }
     return:
       type: System.Boolean
-      description: "Zwraca przełącznik, który określa, czy pominąć wyświetlanie nagłówków projektu."
+      description: Returns a switch that determines whether to suppress the display of project headers.
   overload: Microsoft.Build.Logging.ConsoleLogger.SkipProjectStartedText*
   exceptions: []
   platform:
@@ -477,16 +477,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "O nazwie logowania obiektu docelowego Zakończono zdarzeń."
+  summary: Called to log a target finished event.
   syntax:
     content: public void TargetFinishedHandler (object sender, Microsoft.Build.Framework.TargetFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TargetFinishedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TargetFinishedHandler*
   exceptions: []
   platform:
@@ -503,16 +503,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "O nazwie do dziennika w celu uruchomienia zdarzeń."
+  summary: Called to log a target started event.
   syntax:
     content: public void TargetStartedHandler (object sender, Microsoft.Build.Framework.TargetStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TargetStartedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TargetStartedHandler*
   exceptions: []
   platform:
@@ -529,16 +529,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "O nazwie logowania zadania zakończone zdarzenia."
+  summary: Called to log a task finished event.
   syntax:
     content: public void TaskFinishedHandler (object sender, Microsoft.Build.Framework.TaskFinishedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TaskFinishedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TaskFinishedHandler*
   exceptions: []
   platform:
@@ -555,16 +555,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "O nazwie logowania zadania uruchomienia zdarzenia."
+  summary: Called to log a task started event.
   syntax:
     content: public void TaskStartedHandler (object sender, Microsoft.Build.Framework.TaskStartedEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca (powinien mieć wartość null)."
+      description: The sender (should be null).
     - id: e
       type: Microsoft.Build.Framework.TaskStartedEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.TaskStartedHandler*
   exceptions: []
   platform:
@@ -581,12 +581,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Pobiera lub ustawia poziom szczegółowości do pokazania w dzienniku zdarzeń."
+  summary: Gets or sets the level of detail to show in the event log.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Zwraca poziom szczegółowości do pokazania w dzienniku zdarzeń."
+      description: Returns the level of detail to show in the event log.
   overload: Microsoft.Build.Logging.ConsoleLogger.Verbosity*
   exceptions: []
   platform:
@@ -603,16 +603,16 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Wywoływana, aby rejestrować zdarzenia ostrzeżenia."
+  summary: Called to log a warning event.
   syntax:
     content: public void WarningHandler (object sender, Microsoft.Build.Framework.BuildWarningEventArgs e);
     parameters:
     - id: sender
       type: System.Object
-      description: "Nadawca zdarzenia."
+      description: The sender of the event.
     - id: e
       type: Microsoft.Build.Framework.BuildWarningEventArgs
-      description: "Argumenty zdarzeń."
+      description: The event arguments.
   overload: Microsoft.Build.Logging.ConsoleLogger.WarningHandler*
   exceptions: []
   platform:
@@ -629,12 +629,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Zapewnia dostęp do zapisu delegata obsługi, dzięki czemu mogą być przekierowywane w razie potrzeby (np. do pliku)."
+  summary: Provides access to the write handler delegate so that it can be redirected if necessary (e.g. to a file).
   syntax:
     content: protected Microsoft.Build.Logging.WriteHandler WriteHandler { get; set; }
     return:
       type: Microsoft.Build.Logging.WriteHandler
-      description: "Zwraca delegata obsługi zapisu."
+      description: Returns the write handler delegate.
   overload: Microsoft.Build.Logging.ConsoleLogger.WriteHandler*
   exceptions: []
   platform:

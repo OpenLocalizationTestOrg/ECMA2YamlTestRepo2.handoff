@@ -18,7 +18,7 @@ items:
   nameWithType: BuildProperty
   fullName: Microsoft.Build.BuildEngine.BuildProperty
   type: Class
-  summary: "Reprezentuje jedną właściwość w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektu."
+  summary: Represents a single property in an [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The BuildProperty, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-cs[msbuild_AddNewProperty#1](~/add/codesnippet/csharp/AddNewProperty/Program.cs#1)]\n [!code-vb[msbuild_AddNewProperty#1](~/add/codesnippet/visualbasic/AddNewProperty/Module1.vb#1)]"
@@ -45,16 +45,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref> klasy o określonej nazwie i wartości."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref> class with the specified name and value.
   syntax:
     content: public BuildProperty (string propertyName, string propertyValue);
     parameters:
     - id: propertyName
       type: System.String
-      description: "Nazwa właściwości."
+      description: The property name.
     - id: propertyValue
       type: System.String
-      description: "Wartość właściwości."
+      description: The property value.
   overload: Microsoft.Build.BuildEngine.BuildProperty.#ctor*
   exceptions: []
   platform:
@@ -71,17 +71,17 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Tworzy kopię bezpośrednich lub płytka <xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>."
-  remarks: "Płytka kopia <xref:Microsoft.Build.BuildEngine.BuildProperty>odwołuje się do tego samego elementu XML, co oryginalne.</xref:Microsoft.Build.BuildEngine.BuildProperty> Zmiany nazwy lub wartość płytka kopia zostaną uwzględnione w obu kopii. Jednak w zależności od oceny właściwości dwie kopie może mieć różne <xref:Microsoft.Build.BuildEngine.BuildProperty.FinalValue%2A>wartości właściwości.</xref:Microsoft.Build.BuildEngine.BuildProperty.FinalValue%2A>       Głębokie kopię <xref:Microsoft.Build.BuildEngine.BuildProperty>tworzy nowy element XML odwołują się tak, aby obie kopie <xref:Microsoft.Build.BuildEngine.BuildProperty>mogą być modyfikowane niezależnie.</xref:Microsoft.Build.BuildEngine.BuildProperty> </xref:Microsoft.Build.BuildEngine.BuildProperty>"
+  summary: Creates a deep or shallow copy of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
+  remarks: "A shallow copy of a <xref:Microsoft.Build.BuildEngine.BuildProperty> references the same XML element as the original. Modifications to the name or value of a shallow copy will be reflected in both copies. However, depending on property evaluation, the two copies could have different <xref:Microsoft.Build.BuildEngine.BuildProperty.FinalValue%2A> property values.  \n  \n A deep copy of a <xref:Microsoft.Build.BuildEngine.BuildProperty> creates a new XML element to reference so that both copies of the <xref:Microsoft.Build.BuildEngine.BuildProperty> can be independently modified."
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildProperty Clone (bool deepClone);
     parameters:
     - id: deepClone
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Aby utworzyć kopię bezpośrednich <xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to create a deep copy of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
     return:
       type: Microsoft.Build.BuildEngine.BuildProperty
-      description: "Kopię <xref href=&quot;Microsoft.Build.BuildEngine.BuildProperty&quot;> </xref>."
+      description: A copy of the <xref href="Microsoft.Build.BuildEngine.BuildProperty"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildProperty.Clone*
   exceptions: []
   platform:
@@ -98,12 +98,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia `Condition` atrybutu wartość właściwości."
+  summary: Gets or sets the `Condition` attribute value of the property.
   syntax:
     content: public string Condition { get; set; }
     return:
       type: System.String
-      description: "Pobiera lub ustawia `Condition` atrybutu wartość właściwości."
+      description: Gets or sets the `Condition` attribute value of the property.
   overload: Microsoft.Build.BuildEngine.BuildProperty.Condition*
   exceptions: []
   platform:
@@ -120,12 +120,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera końcowej wartości właściwości po zostały wykonane wszystkie oceny właściwości."
+  summary: Gets the final value of the property after all property evaluations have been performed.
   syntax:
     content: public string FinalValue { get; }
     return:
       type: System.String
-      description: "Końcowej właściwość po zostały wykonane wszystkie oceny właściwości."
+      description: The final value of the property after all property evaluations have been performed.
   overload: Microsoft.Build.BuildEngine.BuildProperty.FinalValue*
   exceptions: []
   platform:
@@ -142,12 +142,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia wartość wskazującą, czy właściwość został zaimportowany do projektu."
+  summary: Gets or sets a value indicating whether the property was imported into the project.
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli właściwość zostały zaimportowane do projektu; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the property was imported into the project; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.BuildProperty.IsImported*
   exceptions: []
   platform:
@@ -164,7 +164,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera nazwę właściwości."
+  summary: Gets the property name.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-cs[msbuild_AddNewProperty#1](~/add/codesnippet/csharp/AddNewProperty/Program.cs#1)]\n [!code-vb[msbuild_AddNewProperty#1](~/add/codesnippet/visualbasic/AddNewProperty/Module1.vb#1)]"
@@ -172,7 +172,7 @@ items:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "Nazwa właściwości."
+      description: The property name.
   overload: Microsoft.Build.BuildEngine.BuildProperty.Name*
   exceptions: []
   platform:
@@ -194,10 +194,10 @@ items:
     parameters:
     - id: propertyToCast
       type: Microsoft.Build.BuildEngine.BuildProperty
-      description: "Do dodania."
+      description: To be added.
     return:
       type: System.String
-      description: "Do dodania."
+      description: To be added.
   overload: Microsoft.Build.BuildEngine.BuildProperty.op_Explicit*
   exceptions: []
   platform:
@@ -214,13 +214,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca ciąg, który reprezentuje właściwość <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>.</xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>"
+  summary: Returns the string that represents the property <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>.
   syntax:
     content: public override string ToString ();
     parameters: []
     return:
       type: System.String
-      description: "Ciąg, który reprezentuje właściwość <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>.</xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>"
+      description: The string that represents the property <xref:Microsoft.Build.BuildEngine.BuildProperty.Value*>.
   overload: Microsoft.Build.BuildEngine.BuildProperty.ToString*
   exceptions: []
   platform:
@@ -237,7 +237,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia wartość właściwości."
+  summary: Gets or sets the property value.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildProperty>, <xref:Microsoft.Build.BuildEngine.BuildPropertyGroup>, and <xref:Microsoft.Build.BuildEngine.BuildPropertyGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-cs[msbuild_AddNewProperty#1](~/add/codesnippet/csharp/AddNewProperty/Program.cs#1)]\n [!code-vb[msbuild_AddNewProperty#1](~/add/codesnippet/visualbasic/AddNewProperty/Module1.vb#1)]"
@@ -245,7 +245,7 @@ items:
     content: public string Value { get; set; }
     return:
       type: System.String
-      description: "Wartość właściwości."
+      description: The property value.
   overload: Microsoft.Build.BuildEngine.BuildProperty.Value*
   exceptions: []
   platform:

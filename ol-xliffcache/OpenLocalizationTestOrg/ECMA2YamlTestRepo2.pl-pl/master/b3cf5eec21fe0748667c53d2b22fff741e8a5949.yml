@@ -13,7 +13,7 @@ items:
   nameWithType: LoggerDescription
   fullName: Microsoft.Build.Logging.LoggerDescription
   type: Class
-  summary: "Zawiera informacje o Rejestrator jako zbiór wartości, które mogą być używane do utworzenia wystąpienia rejestratora i może być Zserializowany przekazywane między różnych procesów."
+  summary: Contains information about a logger as a collection of values that can be used to instantiate the logger and can be serialized to be passed between different processes.
   syntax:
     content: public class LoggerDescription
   inheritance:
@@ -34,25 +34,25 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Tworzy opis rejestratora z danego danych."
+  summary: Creates a logger description from the given data.
   syntax:
     content: public LoggerDescription (string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, Microsoft.Build.Framework.LoggerVerbosity verbosity);
     parameters:
     - id: loggerClassName
       type: System.String
-      description: "Nazwa klasy rejestratora."
+      description: The class name of the logger.
     - id: loggerAssemblyName
       type: System.String
-      description: "Nazwa zestawu, który implementuje rejestratora."
+      description: The assembly name that implements the logger.
     - id: loggerAssemblyFile
       type: System.String
-      description: "Plik zestawu, który implementuje rejestratora."
+      description: The assembly file that implements the logger.
     - id: loggerSwitchParameters
       type: System.String
-      description: "Przełącz parametrów dla rejestratora."
+      description: Switch parameters for the logger.
     - id: verbosity
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Poziom szczegółowości."
+      description: The verbosity level.
   overload: Microsoft.Build.Logging.LoggerDescription.#ctor*
   exceptions: []
   platform:
@@ -69,14 +69,14 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Tworzy wystąpienie ILogger z danych w tym opis."
-  remarks: "Ta metoda może zgłaszać różne wyjątki odbicia, jeśli dane są nieprawidłowe. Jest resposibility obiektu wywołującego obsłużyć te wyjątki, jeśli to konieczne."
+  summary: Creates an ILogger instance from the data in this description.
+  remarks: This method may throw a variety of reflection exceptions if the data is invalid. It is the resposibility of the caller to handle these exceptions if desired.
   syntax:
     content: public Microsoft.Build.Framework.ILogger CreateLogger ();
     parameters: []
     return:
       type: Microsoft.Build.Framework.ILogger
-      description: "Zwraca wystąpienie ILogger z danych w tym opis."
+      description: Returns an ILogger instance from the data in this description.
   overload: Microsoft.Build.Logging.LoggerDescription.CreateLogger*
   exceptions: []
   platform:
@@ -93,12 +93,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Pobiera ciąg parametrów rejestratora."
+  summary: Gets the string of logger parameters.
   syntax:
     content: public string LoggerSwitchParameters { get; }
     return:
       type: System.String
-      description: "Zwraca ciąg parametrów rejestratora.  Zwraca wartość null, jeśli nie ma żadnych parametrów."
+      description: Returns the string of logger parameters.  Returns null if there are no parameters.
   overload: Microsoft.Build.Logging.LoggerDescription.LoggerSwitchParameters*
   exceptions: []
   platform:
@@ -115,13 +115,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Logging
-  summary: "Zwraca poziom szczegółowości dla tego rejestratora."
-  remarks: "Do wyświetlenia wiersza polecenia wszystkie rejestratorów Pobierz ten sam poziom szczegółowości."
+  summary: Returns the verbosity level for this logger.
+  remarks: For command line display, all loggers get the same verbosity level.
   syntax:
     content: public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; }
     return:
       type: Microsoft.Build.Framework.LoggerVerbosity
-      description: "Do dodania."
+      description: To be added.
   overload: Microsoft.Build.Logging.LoggerDescription.Verbosity*
   exceptions: []
   platform:

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-192e1fd" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ad5df7f325aac26cc6f54d62bf084c3dc2d01fcf</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset\System.Windows.Navigation.IProvideCustomContentState.yml</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fulldocset</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9c1ee8610ee6a3db10fd31a80d82bcfd113f8b33</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ac4d257c0e2beb1fb83f014a71404ca21a8efad1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Implemented by a class that needs to add custom state to the navigation history entry for content before the content is navigated away from.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve" extradata="MT">
+          <source>IProvideCustomContentState allows you to associate a piece of custom state, implemented as a custom &lt;xref:System.Windows.Navigation.CustomContentState&gt; class, with the navigation history entry for content that has been navigated away from.</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Custom state can also be associated in this way by using the following:      -   Calling <bpt id="p1">**</bpt>AddBackEntry<ept id="p1">**</ept>:          -   &lt;xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A?displayProperty=fullName&gt;          -   &lt;xref:System.Windows.Navigation.NavigationWindow.AddBackEntry%2A?displayProperty=fullName&gt;          -   &lt;xref:System.Windows.Controls.Frame.AddBackEntry%2A?displayProperty=fullName&gt;.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve" extradata="MT">
+          <source>-   Setting &lt;xref:System.Windows.Navigation.NavigatingCancelEventArgs.Content%2A?displayProperty=fullName&gt; when one of the following events are raised:          -   &lt;xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=fullName&gt;          -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=fullName&gt;          -   &lt;xref:System.Windows.Controls.Frame.Navigating?displayProperty=fullName&gt;          -   &lt;xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=fullName&gt;       You must implement IProvideCustomContentState when you add custom state to navigation history by calling <bpt id="p1">**</bpt>AddBackEntry<ept id="p1">**</ept>, otherwise navigation history will not function correctly; consider the following steps:      1.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve" extradata="MT">
+          <source><bpt id="p1">**</bpt>AddBackEntry<ept id="p1">**</ept> is called to associate a custom state with the current content.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve" extradata="MT">
+          <source>2.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The navigation history entry is navigated back to, and the &lt;xref:System.Windows.Navigation.CustomContentState.Replay%2A&gt; method of the custom state is called, and the state is applied to the content.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve" extradata="MT">
+          <source>3.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The previous content is navigated to in forward navigation history.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve" extradata="MT">
+          <source>4.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve" extradata="MT">
+          <source>The navigation history entry is navigated back to, but the custom state has not been retained since the last time the navigation history entry it was associated with was navigated to.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This is the default behavior because the state that is initially recorded in custom state may change after it was added to navigation history.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If the custom state object is navigated back to and its state is applied, before some aspect about the state changes before the entry in navigation history is navigated to, the change in state cannot be reflected in the custom state object.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Furthermore, &lt;xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A&gt; can't be explicitly called to add a new custom state object that reflects the state changes.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve" extradata="MT">
+          <source>Consequently, to ensure the current state for a particular navigation is always stored in navigation history, &lt;xref:System.Windows.Navigation.IProvideCustomContentState.GetContentState%2A&gt; is called.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve" extradata="MT">
+          <source>&gt; <ph id="ph1">[!IMPORTANT]</ph> &gt;  When you store information in custom content state, you cannot store any references to the instance of the page for which you are remembering state.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve" extradata="MT">
+          <source>This prevents <ph id="ph1">[!INCLUDE[TLA2#tla_wpf](~/add/includes/ajax-current-ext-md.md)]</ph> from releasing the page instance, and defeats the purpose of the default navigation history behavior.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve" extradata="MT">
+          <source>If you must do this, you might consider using &lt;xref:System.Windows.Controls.Page.KeepAlive%2A&gt; instead.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Returns an instance of a custom state class that is to be associated with content in navigation history.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>An instance of a custom <bpt id="p1">&lt;xref href="System.Windows.Navigation.CustomContentState"&gt;</bpt><ept id="p1">&lt;/xref&gt;</ept> class that is to be associated with content in navigation history.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

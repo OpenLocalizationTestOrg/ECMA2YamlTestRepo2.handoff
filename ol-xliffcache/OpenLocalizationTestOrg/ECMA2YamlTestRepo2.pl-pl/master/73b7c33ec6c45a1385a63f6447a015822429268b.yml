@@ -29,8 +29,8 @@ items:
   nameWithType: ProjectTargetInstance
   fullName: Microsoft.Build.Execution.ProjectTargetInstance
   type: Class
-  summary: "Otacza [Target — Element (MSBuild)](~/add/includes/ajax-current-ext-md.md)."
-  remarks: "Jest to klasa niezmienne."
+  summary: Wraps a [Target Element (MSBuild)](~/add/includes/ajax-current-ext-md.md).
+  remarks: This is an immutable class.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("Name={name} Count={children.Count} Condition={condition} Inputs={inputs} Outputs={outputs} DependsOnTargets={dependsOnTargets}")]
@@ -54,12 +54,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu AfterTargets."
+  summary: Gets the location of the AfterTargets attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation AfterTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu AfterTargets."
+      description: Returns the AfterTargets attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.AfterTargetsLocation*
   exceptions: []
   platform:
@@ -76,12 +76,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu BeforeTargets."
+  summary: Gets the location of the BeforeTargets attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation BeforeTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu BeforeTargets."
+      description: Returns the BeforeTargets attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.BeforeTargetsLocation*
   exceptions: []
   platform:
@@ -98,13 +98,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera listę elementów podrzędnych tego elementu docelowego. Kompilacja iterację tutaj, aby uzyskać każdego zadania do wykonania."
-  remarks: "To jest uporządkowaną kolekcję. Jest to lista tylko do odczytu; Klasa ProjectTargetInstance jest niezmienny. Ta kolekcja nie zawiera odwołań docelowy OnError."
+  summary: Gets a list of the children of this target. The build iterates through this to get each task to execute.
+  remarks: This is an ordered collection. This is a read-only list; the ProjectTargetInstance class is immutable. This collection does not contain the OnError target references.
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Execution.ProjectTargetInstanceChild> Children { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Execution.ProjectTargetInstanceChild}
-      description: "Zwraca listę elementów podrzędnych tego elementu docelowego."
+      description: Returns a list of the children of this target.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Children*
   exceptions: []
   platform:
@@ -121,12 +121,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera unevaluated atrybut warunku tego elementu docelowego."
+  summary: Gets the unevaluated Condition attribute of this target element.
   syntax:
     content: public string Condition { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu warunek. Jeśli atrybut nie jest obecny, zwraca pusty ciąg."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Condition*
   exceptions: []
   platform:
@@ -143,12 +143,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu warunku."
+  summary: Gets the location of the Condition attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu warunku."
+      description: Returns the Condition attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.ConditionLocation*
   exceptions: []
   platform:
@@ -165,12 +165,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera unevaluated rozdzielaną średnikami listę obiektów docelowych, które zależy od tego elementu docelowego."
+  summary: Gets an unevaluated semicolon-delimited list of targets that this target depends on.
   syntax:
     content: public string DependsOnTargets { get; }
     return:
       type: System.String
-      description: "Zwraca unevaluated rozdzielaną średnikami listę obiektów docelowych, które zależy od tego elementu docelowego. Zwraca pusty ciąg, jeśli ten obiekt docelowy zależy od nie innych celów."
+      description: Returns an unevaluated semicolon-delimited list of targets that this target depends on. Returns an empty string if this target depends on no other targets.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargets*
   exceptions: []
   platform:
@@ -187,12 +187,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu DependsOnTargets."
+  summary: Gets the location of the DependsOnTargets attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation DependsOnTargetsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu DependsOnTargets."
+      description: Returns the DependsOnTargets attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargetsLocation*
   exceptions: []
   platform:
@@ -209,12 +209,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera pełną ścieżkę do pliku, z którego pochodzi ten element docelowy."
+  summary: Gets the full path to the file from which this target originated.
   syntax:
     content: public string FullPath { get; }
     return:
       type: System.String
-      description: "Zwraca pełną ścieżkę do pliku, z którego pochodzi ten element docelowy. Zwraca pusty ciąg, jeśli ten obiekt docelowy pochodzi w projekcie nie została załadowana, którego nigdy nie podano ścieżki."
+      description: Returns the full path to the file from which this target originated. Returns an empty string if this target originated in a project that was not loaded and has never been given a path.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.FullPath*
   exceptions: []
   platform:
@@ -231,12 +231,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera unevaluated dane wejściowe dla tego elementu docelowego."
+  summary: Gets the unevaluated inputs on this target element.
   syntax:
     content: public string Inputs { get; }
     return:
       type: System.String
-      description: "Zwraca unevaluated wejść na ten element docelowy. Zwraca pusty ciąg, jeśli ten obiekt docelowy nie ma żadnych danych wejściowych."
+      description: Returns the unevaluated inputs on this target element. Returns an empty string if this target has no inputs.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Inputs*
   exceptions: []
   platform:
@@ -253,12 +253,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu danych wejściowych."
+  summary: Gets the location of the Inputs attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation InputsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu danych wejściowych."
+      description: Returns the Inputs attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.InputsLocation*
   exceptions: []
   platform:
@@ -275,12 +275,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera unevaluated warunek, który służy do usuwania duplikatów danych wyjściowych z tego obiektu docelowego."
+  summary: Gets an unevaluated condition which is used to delete duplicate outputs from this target.
   syntax:
     content: public string KeepDuplicateOutputs { get; }
     return:
       type: System.String
-      description: "Zwraca unevaluated warunek, który służy do usuwania duplikatów danych wyjściowych z tego obiektu docelowego. Zwraca pusty ciąg, jeśli żaden warunek."
+      description: Returns an unevaluated condition which is used to delete duplicate outputs from this target. Returns an empty string if there is no condition.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputs*
   exceptions: []
   platform:
@@ -297,12 +297,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu KeepDuplicateOutputs."
+  summary: Gets the location of the KeepDuplicateOutputs attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation KeepDuplicateOutputsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu KeepDuplicateOutputs."
+      description: Returns the KeepDuplicateOutputs attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputsLocation*
   exceptions: []
   platform:
@@ -319,12 +319,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację samego elementu."
+  summary: Gets the location of the element itself.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację elementu."
+      description: Returns the element location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Location*
   exceptions: []
   platform:
@@ -341,12 +341,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera nazwę obiektu docelowego."
+  summary: Gets the name of the target.
   syntax:
     content: public string Name { get; }
     return:
       type: System.String
-      description: "Zwraca nazwę elementu docelowego."
+      description: Returns the name of the target.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Name*
   exceptions: []
   platform:
@@ -363,13 +363,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera listę elementy podrzędne tego obiektu docelowego, odwołujące się do elementów docelowych OnError."
-  remarks: "To jest uporządkowaną kolekcję. Jest to lista tylko do odczytu; Klasa ProjectTargetInstance jest niezmienny."
+  summary: Gets a list of the children of this target that refer to OnError targets.
+  remarks: This is an ordered collection. This is a read-only list; the ProjectTargetInstance class is immutable.
   syntax:
     content: public System.Collections.Generic.IList<Microsoft.Build.Execution.ProjectOnErrorInstance> OnErrorChildren { get; }
     return:
       type: System.Collections.Generic.IList{Microsoft.Build.Execution.ProjectOnErrorInstance}
-      description: "Pobiera listę elementy podrzędne tego obiektu docelowego, odwołujące się do elementów docelowych OnError."
+      description: Gets a list of the children of this target that refer to OnError targets.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.OnErrorChildren*
   exceptions: []
   platform:
@@ -386,12 +386,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera unevaluated dane wyjściowe na ten element docelowy może być ciągiem pustym."
+  summary: Gets the unevaluated outputs on this target element May be empty string.
   syntax:
     content: public string Outputs { get; }
     return:
       type: System.String
-      description: "Zwraca unevaluated dane wyjściowe na ten element docelowy zwraca pusty ciąg, jeśli nie ma żadnych danych wyjściowych."
+      description: Returns the unevaluated outputs on this target element Returns an empty string if there are no outputs.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Outputs*
   exceptions: []
   platform:
@@ -408,12 +408,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu danych wyjściowych."
+  summary: Gets the location of the Outputs attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation OutputsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu danych wyjściowych."
+      description: Returns the Outputs attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.OutputsLocation*
   exceptions: []
   platform:
@@ -430,12 +430,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera unevaluated wartości zwracane w elemencie docelowym jako ciąg."
+  summary: Gets the unevaluated return values on the target element as a string.
   syntax:
     content: public string Returns { get; }
     return:
       type: System.String
-      description: "Zwraca unevaluated wartości zwracane w elemencie docelowym jako ciąg. Zwraca pusty ciąg lub wartość null, jeśli wartość zwracana nie jest określona."
+      description: Returns the unevaluated return values on the target element as a string. Returns an empty string or null, if no return value is specified.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Returns*
   exceptions: []
   platform:
@@ -452,12 +452,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lokalizację atrybutu zwraca."
+  summary: Gets the location of the Returns attribute.
   syntax:
     content: public Microsoft.Build.Construction.ElementLocation ReturnsLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Zwraca lokalizację atrybutu zwraca."
+      description: Returns the Returns attribute location.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.ReturnsLocation*
   exceptions: []
   platform:
@@ -474,12 +474,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wszystkie zadania, które są bezpośrednie elementy podrzędne tego elementu docelowego."
+  summary: Gets all the tasks that are immediate children of this target.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectTaskInstance> Tasks { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectTaskInstance}
-      description: "Zwraca wszystkie zadania, które są bezpośrednie elementy podrzędne tego elementu docelowego."
+      description: Returns all the tasks that are immediate children of this target.
   overload: Microsoft.Build.Execution.ProjectTargetInstance.Tasks*
   exceptions: []
   platform:

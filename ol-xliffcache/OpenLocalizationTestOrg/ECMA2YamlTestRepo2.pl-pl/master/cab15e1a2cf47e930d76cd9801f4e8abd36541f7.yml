@@ -13,7 +13,7 @@ items:
   nameWithType: ProjectItemGroupTaskInstance
   fullName: Microsoft.Build.Execution.ProjectItemGroupTaskInstance
   type: Class
-  summary: "Otacza unevaluated itemgroup — poniżej wartości docelowej. Niezmienne."
+  summary: Wraps an unevaluated itemgroup under a target. Immutable.
   syntax:
     content: >-
       [System.Diagnostics.DebuggerDisplay("Condition={condition}")]
@@ -39,12 +39,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera lub ustawia atrybut warunku tego elementu projektu."
+  summary: Gets or sets the Condition attribute of this project element.
   syntax:
     content: public override string Condition { get; }
     return:
       type: System.String
-      description: "Zwraca wartość atrybutu warunek. Jeśli atrybut nie jest obecny, zwraca pusty ciąg."
+      description: Returns the Condition attribute value. Returns an empty string if the attribute is not present.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskInstance.Condition*
   exceptions: []
   platform:
@@ -61,12 +61,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lokalizacja warunku, jeśli istnieje"
+  summary: Location of the condition, if any
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskInstance.ConditionLocation*
   exceptions: []
   platform:
@@ -83,13 +83,13 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Pobiera wszystkie elementy podrzędne tej definicji elementu."
-  remarks: "Nie ma ProjectItemInstances, jak te są obliczane podczas kompilacji."
+  summary: Gets all child items of this item definition.
+  remarks: Does not include ProjectItemInstances, as these are evaluated during the build.
   syntax:
     content: public System.Collections.Generic.ICollection<Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance> Items { get; }
     return:
       type: System.Collections.Generic.ICollection{Microsoft.Build.Execution.ProjectItemGroupTaskItemInstance}
-      description: "Zwraca wszystkie elementy podrzędne tej definicji elementu."
+      description: Returns all child items of this item definition.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskInstance.Items*
   exceptions: []
   platform:
@@ -106,12 +106,12 @@ items:
   assemblies:
   - Microsoft.Build
   namespace: Microsoft.Build.Execution
-  summary: "Lokalizacja oryginalnego elementu"
+  summary: Location of the original element
   syntax:
     content: public override Microsoft.Build.Construction.ElementLocation Location { get; }
     return:
       type: Microsoft.Build.Construction.ElementLocation
-      description: "Returns <xref href=&quot;Microsoft.Build.Construction.ElementLocation&quot;></xref>."
+      description: Returns <xref href="Microsoft.Build.Construction.ElementLocation"></xref>.
   overload: Microsoft.Build.Execution.ProjectItemGroupTaskInstance.Location*
   exceptions: []
   platform:

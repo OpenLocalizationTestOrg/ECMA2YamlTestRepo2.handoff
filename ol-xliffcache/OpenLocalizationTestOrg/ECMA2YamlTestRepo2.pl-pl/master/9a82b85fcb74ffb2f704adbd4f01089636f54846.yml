@@ -29,8 +29,8 @@ items:
   nameWithType: BuildItem
   fullName: Microsoft.Build.BuildEngine.BuildItem
   type: Class
-  summary: "Reprezentuje pojedynczy element w [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] projektu."
-  remarks: "Element w projekcie może reprezentować wiele elementów przy użyciu symboli wieloznacznych. W związku z tym, każdy obiekt BuildItem nie musi to oznaczać `Item` element w projekcie."
+  summary: Represents a single item in an [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] project.
+  remarks: An  element in a project can represent multiple items through the use of wildcards. Therefore, each BuildItem object does not necessarily represent an `Item` element in the project.
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The BuildItem, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
   syntax:
@@ -56,16 +56,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref> na podstawie klasy <xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;> </xref> obiektu."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref> class based on an <xref href="Microsoft.Build.Framework.ITaskItem"></xref> object.
   syntax:
     content: public BuildItem (string itemName, Microsoft.Build.Framework.ITaskItem taskItem);
     parameters:
     - id: itemName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildItem.Name*>Właściwość <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>.</xref:Microsoft.Build.BuildEngine.BuildItem.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildItem.Name*> property of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
     - id: taskItem
       type: Microsoft.Build.Framework.ITaskItem
-      description: "<xref href=&quot;Microsoft.Build.Framework.ITaskItem&quot;> </xref> z którym ma zostać utworzony <xref:Microsoft.Build.BuildEngine.BuildItem.Include*>właściwości <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>.</xref:Microsoft.Build.BuildEngine.BuildItem.Include*>"
+      description: The <xref href="Microsoft.Build.Framework.ITaskItem"></xref> from which to create the <xref:Microsoft.Build.BuildEngine.BuildItem.Include*> property of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItem.#ctor*
   exceptions: []
   platform:
@@ -82,16 +82,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Inicjuje nowe wystąpienie <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref> klasy z określonym <> </> *> i <> </> *> wartości właściwości."
+  summary: Initializes a new instance of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref> class with the specified <xref:Microsoft.Build.BuildEngine.BuildItem.Name*> and <xref:Microsoft.Build.BuildEngine.BuildItem.Include*> property values.
   syntax:
     content: public BuildItem (string itemName, string itemInclude);
     parameters:
     - id: itemName
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildItem.Name*>Właściwość <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>.</xref:Microsoft.Build.BuildEngine.BuildItem.Name*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildItem.Name*> property of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
     - id: itemInclude
       type: System.String
-      description: "<xref:Microsoft.Build.BuildEngine.BuildItem.Include*>Właściwość <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>.</xref:Microsoft.Build.BuildEngine.BuildItem.Include*>"
+      description: The <xref:Microsoft.Build.BuildEngine.BuildItem.Include*> property of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItem.#ctor*
   exceptions: []
   platform:
@@ -108,13 +108,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Tworzy płytką kopię <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>."
+  summary: Creates a shallow copy of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
   syntax:
     content: public Microsoft.Build.BuildEngine.BuildItem Clone ();
     parameters: []
     return:
       type: Microsoft.Build.BuildEngine.BuildItem
-      description: "Kopię <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>."
+      description: A copy of the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItem.Clone*
   exceptions: []
   platform:
@@ -131,12 +131,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia `Condition` wartość elementu atrybutu."
+  summary: Gets or sets the `Condition` attribute value of the item.
   syntax:
     content: public string Condition { get; set; }
     return:
       type: System.String
-      description: "`Condition` Wartość elementu atrybutu."
+      description: The `Condition` attribute value of the item.
   overload: Microsoft.Build.BuildEngine.BuildItem.Condition*
   exceptions: []
   platform:
@@ -153,13 +153,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Kopiuje wszystkie metadane elementu w tej <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref> na określonym <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>."
+  summary: Copies all item metadata on this <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref> to the specified <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
   syntax:
     content: public void CopyCustomMetadataTo (Microsoft.Build.BuildEngine.BuildItem destinationItem);
     parameters:
     - id: destinationItem
       type: Microsoft.Build.BuildEngine.BuildItem
-      description: "<xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref> Do którego chcesz skopiować element metadanych."
+      description: The <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref> to which to copy the item metadata.
   overload: Microsoft.Build.BuildEngine.BuildItem.CopyCustomMetadataTo*
   exceptions: []
   platform:
@@ -176,13 +176,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera liczbę atrybutów niestandardowych, które są ustawione dla tego elementu."
-  remarks: "Wartość zwracana przez CustomMetadataCount obejmują wstępnie zdefiniowanych lub zarezerwowane Modyfikatory specyfikacje elementu, ponieważ nie mają atrybutów niestandardowych."
+  summary: Gets the number of custom attributes that are set on this item.
+  remarks: The value returned by CustomMetadataCount does include pre-defined or reserved item-spec modifiers, because they are not custom attributes.
   syntax:
     content: public int CustomMetadataCount { get; }
     return:
       type: System.Int32
-      description: "Liczba całkowita wskazująca, ile atrybuty niestandardowe są ustawione na ten element."
+      description: An integer indicating how many custom attributes are set on this item.
   overload: Microsoft.Build.BuildEngine.BuildItem.CustomMetadataCount*
   exceptions: []
   platform:
@@ -199,13 +199,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera wszystkie nazwy atrybutu niestandardowego lub zdefiniowanych przez użytkownika."
-  remarks: "CustomMetadataNames nie zawiera nazwy przez użytkownika lub innych niż niestandardowe atrybuty."
+  summary: Gets all user-defined or custom attribute names.
+  remarks: CustomMetadataNames does not include the names of non-user-defined or non-custom attributes.
   syntax:
     content: public System.Collections.ICollection CustomMetadataNames { get; }
     return:
       type: System.Collections.ICollection
-      description: "<xref:System.Collections.ICollection>Zawierający wszystkie atrybuty zdefiniowane przez użytkownika lub niestandardowy ciąg nazwy.</xref:System.Collections.ICollection>"
+      description: An <xref:System.Collections.ICollection> containing string names for all of the user-defined or custom attributes.
   overload: Microsoft.Build.BuildEngine.BuildItem.CustomMetadataNames*
   exceptions: []
   platform:
@@ -222,12 +222,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia `Exclude` wartość elementu atrybutu."
+  summary: Gets or sets the `Exclude` attribute value of the item.
   syntax:
     content: public string Exclude { get; set; }
     return:
       type: System.String
-      description: "Pobiera lub ustawia `Exclude` wartość elementu atrybutu."
+      description: Gets or sets the `Exclude` attribute value of the item.
   overload: Microsoft.Build.BuildEngine.BuildItem.Exclude*
   exceptions: []
   platform:
@@ -244,12 +244,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera końcowego specyfikacji elementu po wszystkie symbole wieloznaczne i właściwości zostały ocenione."
+  summary: Gets the final specification of the item after all wildcards and properties have been evaluated.
   syntax:
     content: public string FinalItemSpec { get; }
     return:
       type: System.String
-      description: "Specyfikacja końcowego elementu po wszystkie symbole wieloznaczne i właściwości zostały ocenione."
+      description: The final specification of the item after all wildcards and properties have been evaluated.
   overload: Microsoft.Build.BuildEngine.BuildItem.FinalItemSpec*
   exceptions: []
   platform:
@@ -266,16 +266,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca wartość określonego elementu metadanych po po wszystkie odwołania do elementów i właściwości zostały ocenione."
+  summary: Returns the value of the specified item metadata after after all item and property references have been evaluated.
   syntax:
     content: public string GetEvaluatedMetadata (string metadataName);
     parameters:
     - id: metadataName
       type: System.String
-      description: "Nazwa metadanych elementu."
+      description: The item metadata name.
     return:
       type: System.String
-      description: "Wartość metadanych określony element po po wszystkie odwołania do elementów i właściwości zostały ocenione."
+      description: The value of the specified item metadata after after all item and property references have been evaluated.
   overload: Microsoft.Build.BuildEngine.BuildItem.GetEvaluatedMetadata*
   exceptions: []
   platform:
@@ -292,7 +292,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Zwraca wartość określonego elementu metadanych."
+  summary: Returns the value of the specified item metadata.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
@@ -301,10 +301,10 @@ items:
     parameters:
     - id: metadataName
       type: System.String
-      description: "Nazwa metadanych elementu."
+      description: The item metadata name.
     return:
       type: System.String
-      description: "Wartość metadanych określonego elementu."
+      description: The value of the specified item metadata.
   overload: Microsoft.Build.BuildEngine.BuildItem.GetMetadata*
   exceptions: []
   platform:
@@ -321,16 +321,16 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Wskazuje, czy element ma określony element metadanych."
+  summary: Indicates whether the item has the specified item metadata.
   syntax:
     content: public bool HasMetadata (string metadataName);
     parameters:
     - id: metadataName
       type: System.String
-      description: "Nazwa metadanych elementu."
+      description: The item metadata name.
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli element ma określony element metadanych; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the item has the specified item metadata; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItem.HasMetadata*
   exceptions: []
   platform:
@@ -347,7 +347,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia `Include` atrybutu utworzony <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>."
+  summary: Gets or sets the `Include` attribute that created the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
@@ -355,7 +355,7 @@ items:
     content: public string Include { get; set; }
     return:
       type: System.String
-      description: "`Include` Atrybutu utworzony <xref href=&quot;Microsoft.Build.BuildEngine.BuildItem&quot;> </xref>."
+      description: The `Include` attribute that created the <xref href="Microsoft.Build.BuildEngine.BuildItem"></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItem.Include*
   exceptions: []
   platform:
@@ -372,12 +372,12 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera wartość wskazującą, czy element został zaimportowany do projektu."
+  summary: Gets a value indicating whether the item was imported into the project.
   syntax:
     content: public bool IsImported { get; }
     return:
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>Jeśli element został zaimportowany do programu project; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the item was imported into the project; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItem.IsImported*
   exceptions: []
   platform:
@@ -394,13 +394,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera liczbę ustawić w elemencie metadanych"
-  remarks: "Wartość zwracana przez MetadataCount obejmuje wstępnie zdefiniowanych lub zarezerwowane Modyfikatory specyfikacje elementu, jak i innych metadanych."
+  summary: Gets the number of metadata set on the item
+  remarks: The value returned by MetadataCount includes pre-defined or reserved item-spec modifiers as well as other metadata.
   syntax:
     content: public int MetadataCount { get; }
     return:
       type: System.Int32
-      description: "Liczbę całkowitą reprezentującą liczbę elementów metadanych."
+      description: An integer representing the number of metadata items.
   overload: Microsoft.Build.BuildEngine.BuildItem.MetadataCount*
   exceptions: []
   platform:
@@ -417,13 +417,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera nazwy metadanych elementu, łącznie z wstępnie zdefiniowanych lub zarezerwowane Modyfikatory specyfikacje elementu."
-  remarks: "Wartość zwracana przez MetadataNames zawiera nazwy wszystkich metadanych, w tym atrybuty zdefiniowane przez użytkownika i niestandardowe."
+  summary: Gets the names of metadata on the item, including pre-defined or reserved item-spec modifiers.
+  remarks: The value returned by MetadataNames includes the names of all metadata, including user-defined and custom attributes.
   syntax:
     content: public System.Collections.ICollection MetadataNames { get; }
     return:
       type: System.Collections.ICollection
-      description: "<xref:System.Collections.ICollection>Ciągów nazw wszystkich metadanych w elemencie zawierającego.</xref:System.Collections.ICollection>"
+      description: An <xref:System.Collections.ICollection> containing name strings of all metadata on the item.
   overload: Microsoft.Build.BuildEngine.BuildItem.MetadataNames*
   exceptions: []
   platform:
@@ -440,7 +440,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Pobiera lub ustawia nazwę kolekcji elementów, do której należy element."
+  summary: Gets or sets the name of the item collection to which the item belongs.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
@@ -448,7 +448,7 @@ items:
     content: public string Name { get; set; }
     return:
       type: System.String
-      description: "Nazwa kolekcji elementów, do której należy element."
+      description: The name of the item collection to which the item belongs.
   overload: Microsoft.Build.BuildEngine.BuildItem.Name*
   exceptions: []
   platform:
@@ -465,13 +465,13 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Usuwa określony element metadanych."
+  summary: Removes the specified item metadata.
   syntax:
     content: public void RemoveMetadata (string metadataName);
     parameters:
     - id: metadataName
       type: System.String
-      description: "Nazwa metadanych elementu."
+      description: The item metadata name.
   overload: Microsoft.Build.BuildEngine.BuildItem.RemoveMetadata*
   exceptions: []
   platform:
@@ -488,7 +488,7 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Określona wartość przypisuje metadanych określonego elementu."
+  summary: Assigns the specified value to the specified item metadata.
   remarks: ''
   example:
   - "The following example creates a <xref:Microsoft.Build.BuildEngine.Project> object and uses the <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> method to add content to the project. The <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup>, and <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> classes are used to add, remove, and change items in the project.  \n  \n [!code-vb[msbuild_AddNewItem#1](~/add/codesnippet/visualbasic/AddNewItem/Module1.vb#1)]\n [!code-cs[msbuild_AddNewItem#1](~/add/codesnippet/csharp/AddNewItem/Program.cs#1)]"
@@ -497,10 +497,10 @@ items:
     parameters:
     - id: metadataName
       type: System.String
-      description: "Nazwa metadanych elementu."
+      description: The item metadata name.
     - id: metadataValue
       type: System.String
-      description: "Wartość elementu metadanych."
+      description: The item metadata value.
   overload: Microsoft.Build.BuildEngine.BuildItem.SetMetadata*
   exceptions: []
   platform:
@@ -517,19 +517,19 @@ items:
   assemblies:
   - Microsoft.Build.Engine
   namespace: Microsoft.Build.BuildEngine
-  summary: "Przypisuje określona wartość określonego elementu metadanych i opcjonalnie traktuje metadanych jako wartości literału."
+  summary: Assigns the specified value to the specified item metadata, and optionally treats the metadata as a literal value.
   syntax:
     content: public void SetMetadata (string metadataName, string metadataValue, bool treatMetadataValueAsLiteral);
     parameters:
     - id: metadataName
       type: System.String
-      description: "Nazwa metadanych elementu."
+      description: The item metadata name.
     - id: metadataValue
       type: System.String
-      description: "Wartość elementu metadanych."
+      description: The item metadata value.
     - id: treatMetadataValueAsLiteral
       type: System.Boolean
-      description: "<xref uid=&quot;langword_csharp_true&quot; name=&quot;true&quot; href=&quot;&quot;></xref>traktowanie metadanych jako wartości literału przez wszystkie wyjścia [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] znaki specjalne; w przeciwnym razie <xref uid=&quot;langword_csharp_false&quot; name=&quot;false&quot; href=&quot;&quot;> </xref>."
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> to treat the metadata as a literal value by escaping all [!INCLUDE[vstecmsbuild](~/add/includes/vstecmsbuild-md.md)] special characters; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
   overload: Microsoft.Build.BuildEngine.BuildItem.SetMetadata*
   exceptions: []
   platform:
