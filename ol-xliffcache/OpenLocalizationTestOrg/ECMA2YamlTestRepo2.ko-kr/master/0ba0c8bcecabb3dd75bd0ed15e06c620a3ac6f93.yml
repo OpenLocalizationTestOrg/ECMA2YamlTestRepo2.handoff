@@ -36,8 +36,8 @@ items:
   nameWithType: ComponentCommands
   fullName: System.Windows.Input.ComponentCommands
   type: Class
-  summary: Provides a standard set of component-related commands, which have predefined key input gestures and &lt;xref:System.Windows.Input.RoutedUICommand.Text%2A?displayProperty=fullName&gt; properties.
-  remarks: "The commands in the ComponentCommands class and commands in the other command library classes, such as <xref:System.Windows.Input.ApplicationCommands> and <xref:System.Windows.Input.NavigationCommands>, are intended to represent a set of common commands that application programmers encounter frequently.  The commands only represent the instance of the <xref:System.Windows.Input.RoutedCommand> and not the implementation logic for the command. The implementation logic is bound to the command via a <xref:System.Windows.UIElement.CommandBindings%2A>. For example, if the <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A> command is executed on a control (the command target), the logic that performs the <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A> command may not be provided by the command target, so the application writer is responsible for writing the logic that determines how the command target handles the command.  \n  \n Many controls do provide implementation logic, though, for many of the commands in the command library.  For example, the <xref:System.Windows.Controls.TextBox> class provides logic for the <xref:System.Windows.Input.ApplicationCommands.Paste%2A> command, <xref:System.Windows.Input.ApplicationCommands.Cut%2A> command, <xref:System.Windows.Input.ApplicationCommands.Copy%2A> command, <xref:System.Windows.Input.ApplicationCommands.Undo%2A> command, and <xref:System.Windows.Input.ApplicationCommands.Redo%2A> command. See the class documentation for particular control classes for more information.  \n  \n For more information on commands and commanding, see [Commanding Overview](~/add/includes/ajax-current-ext-md.md)."
+  summary: "키 입력된 제스처 미리 정의 된 구성 요소 관련 명령의 표준 집합을 제공 하 고 &lt;xref:System.Windows.Input.RoutedUICommand.Text%2A?displayProperty=fullName&gt; 속성입니다."
+  remarks: "ComponentCommands 클래스에서 명령 및의 다른 명령을 라이브러리 클래스와 같은 <xref:System.Windows.Input.ApplicationCommands>및 <xref:System.Windows.Input.NavigationCommands>, 응용 프로그램 프로그래머는 자주 발생 하는 일반적인 명령 집합을 나타내는 하기 위한 것입니다.</xref:System.Windows.Input.NavigationCommands> </xref:System.Windows.Input.ApplicationCommands>  명령을 나타낼의 인스턴스는 <xref:System.Windows.Input.RoutedCommand>및 명령에 대 한 구현 논리 아닙니다.</xref:System.Windows.Input.RoutedCommand> 에 <xref:System.Windows.UIElement.CommandBindings%2A>.</xref:System.Windows.UIElement.CommandBindings%2A> 를 통해 구현 논리와 명령에 연결이 바인딩됩니다. 예를 들어 경우는 <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A>명령이 수행 하는 논리 (명령 대상) 컨트롤에서 실행 되는 <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A>명령 명령 대상 이므로 응용 프로그램 개발자가 작성 해야 명령 대상이 명령을 처리 하는 방법을 결정 하는 논리 제공 되지 않을 수 있습니다.</xref:System.Windows.Input.ComponentCommands.MoveLeft%2A> </xref:System.Windows.Input.ComponentCommands.MoveLeft%2A>       여러 컨트롤의 많은 명령 라이브러리의 명령에 대 한 구현 논리를 하지만 제공지 않습니다.  예를 들어는 <xref:System.Windows.Controls.TextBox>클래스에 대 한 논리를 제공는 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>명령을 <xref:System.Windows.Input.ApplicationCommands.Cut%2A>명령을 <xref:System.Windows.Input.ApplicationCommands.Copy%2A>명령을 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>명령 및 <xref:System.Windows.Input.ApplicationCommands.Redo%2A>명령입니다.</xref:System.Windows.Input.ApplicationCommands.Redo%2A> </xref:System.Windows.Input.ApplicationCommands.Undo%2A> </xref:System.Windows.Input.ApplicationCommands.Copy%2A> </xref:System.Windows.Input.ApplicationCommands.Cut%2A> </xref:System.Windows.Input.ApplicationCommands.Paste%2A> </xref:System.Windows.Controls.TextBox> 자세한 내용은 특정 컨트롤 클래스에 대 한 클래스 설명서를 참조 하십시오.       명령 및 명령 실행에 대 한 자세한 내용은 참조 하십시오. [명령 실행 개요](~/add/includes/ajax-current-ext-md.md)합니다."
   syntax:
     content: public static class ComponentCommands
   inheritance:
@@ -58,13 +58,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Extend Selection Down command.
-  remarks: "This command indicates the intention to extend the selection downward.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ExtendSelectionDown\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ExtendSelectionDown\"/>  \n```"
+  summary: "아래로 선택 영역 확장 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 선택 영역을 아래로 확장 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ExtendSelectionDown&quot;></a># # XAML 특성 사용```   <object property=&quot;ExtendSelectionDown&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ExtendSelectionDown { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+Down  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Extend Selection Down  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + 아래쪽       </td></tr><tr><td> UI 텍스트       </td><td> 아래로 선택 영역 확장       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ExtendSelectionDown*
   exceptions: []
   platform:
@@ -81,13 +81,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Extend Selection Left command.
-  remarks: "This command indicates the intention to extend the selection to the left.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ExtendSelectionLeft\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ExtendSelectionLeft\"/>  \n```"
+  summary: "왼쪽으로 선택 영역 확장 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 왼쪽에 범위를 선택 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ExtendSelectionLeft&quot;></a># # XAML 특성 사용```   <object property=&quot;ExtendSelectionLeft&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ExtendSelectionLeft { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+Left  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Extend Selection Left  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + 왼쪽 화살표       </td></tr><tr><td> UI 텍스트       </td><td> 왼쪽으로 선택 영역 확장       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ExtendSelectionLeft*
   exceptions: []
   platform:
@@ -104,13 +104,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Extend Selection Right command.
-  remarks: "This command indicates the intention to extend the selection to the right.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ExtendSelectionRight\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ExtendSelectionRight\"/>  \n```"
+  summary: "오른쪽으로 선택 영역 확장 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 오른쪽 범위를 선택 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ExtendSelectionRight&quot;></a># # XAML 특성 사용```   <object property=&quot;ExtendSelectionRight&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ExtendSelectionRight { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+Right  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Extend Selection Right  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + 오른쪽       </td></tr><tr><td> UI 텍스트       </td><td> 선택 영역 오른쪽으로 확장       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ExtendSelectionRight*
   exceptions: []
   platform:
@@ -127,13 +127,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Extend Selection Up command.
-  remarks: "This command indicates the intention to extend the selection upward.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ExtendSelectionUp\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ExtendSelectionUp\"/>  \n```"
+  summary: "위로 선택 영역 확장 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 위쪽으로 범위를 선택 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ExtendSelectionUp&quot;></a># # XAML 특성 사용```   <object property=&quot;ExtendSelectionUp&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ExtendSelectionUp { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+Up  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Extend Selection Up  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + 위쪽       </td></tr><tr><td> UI 텍스트       </td><td> 위로 선택 영역 확장       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ExtendSelectionUp*
   exceptions: []
   platform:
@@ -150,13 +150,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Down command.
-  remarks: "This command indicates the intention to extend the selection down.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveDown\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveDown\"/>  \n```"
+  summary: "아래로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 아래로 선택 영역을 확장 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveDown&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveDown&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveDown { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Down  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Down  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 아래로       </td></tr><tr><td> UI 텍스트       </td><td> 아래로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveDown*
   exceptions: []
   platform:
@@ -173,13 +173,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Focus Back command.
-  remarks: "This command indicates the intention to extend the selection backward.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveFocusBack\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveFocusBack\"/>  \n```"
+  summary: "포커스 뒤로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 이전 버전과 범위를 선택 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveFocusBack&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveFocusBack&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveFocusBack { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Ctrl+Left  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Focus Back  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Ctrl + 왼쪽 화살표       </td></tr><tr><td> UI 텍스트       </td><td> 포커스를 다시 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveFocusBack*
   exceptions: []
   platform:
@@ -196,13 +196,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Focus Down command.
-  remarks: "This command indicates the intention to extend move the focus down.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveFocusDown\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveFocusDown\"/>  \n```"
+  summary: "포커스 아래로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 하려고 함을 나타냅니다 포커스를 아래로 이동 합니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveFocusDown&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveFocusDown&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveFocusDown { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Ctrl+Down  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Focus Down  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Ctrl + 아래쪽       </td></tr><tr><td> UI 텍스트       </td><td> 아래로 포커스 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveFocusDown*
   exceptions: []
   platform:
@@ -219,13 +219,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Focus Forward command.
-  remarks: "This command indicates the intention to move the focus forward.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveFocusForward\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveFocusForward\"/>  \n```"
+  summary: "포커스 앞으로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 포커스 앞으로 이동 하려면 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveFocusForward&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveFocusForward&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveFocusForward { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Ctrl+Right  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Focus Forward  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Ctrl + 오른쪽 화살표       </td></tr><tr><td> UI 텍스트       </td><td> 포커스 앞으로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveFocusForward*
   exceptions: []
   platform:
@@ -242,13 +242,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Focus Page Down command.
-  remarks: "This command indicates the intention to move the focus down one page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveFocusPageDown\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveFocusPageDown\"/>  \n```"
+  summary: "포커스 페이지 아래로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 한 페이지 아래로 포커스를 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveFocusPageDown&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveFocusPageDown&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveFocusPageDown { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Ctrl+PageDown  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Focus Page Down  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Ctrl + PageDown       </td></tr><tr><td> UI 텍스트       </td><td> 포커스 페이지 아래로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveFocusPageDown*
   exceptions: []
   platform:
@@ -265,13 +265,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Focus Page Up command.
-  remarks: "This command indicates the intention to move the focus up one page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveFocusPageUp\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveFocusPageUp\"/>  \n```"
+  summary: "포커스 페이지 위로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 한 페이지 위로 포커스를 이동 하려면 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveFocusPageUp&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveFocusPageUp&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveFocusPageUp { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Ctrl+PageUp  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Focus Page Up  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Ctrl + PageUp       </td></tr><tr><td> UI 텍스트       </td><td> 포커스 페이지 위로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveFocusPageUp*
   exceptions: []
   platform:
@@ -288,13 +288,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Focus Up command.
-  remarks: "This command indicates the intention to move the focus up.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveFocusUp\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveFocusUp\"/>  \n```"
+  summary: "포커스 위로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 포커스를 위로 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveFocusUp&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveFocusUp&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveFocusUp { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Ctrl+Up  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Focus Up  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Ctrl + 위쪽       </td></tr><tr><td> UI 텍스트       </td><td> 포커스 위로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveFocusUp*
   exceptions: []
   platform:
@@ -311,13 +311,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Left command.
-  remarks: "This command indicates the intention to move the selection left.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveLeft\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveLeft\"/>  \n```"
+  summary: "왼쪽으로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 선택 영역을 왼쪽 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveLeft&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveLeft&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveLeft { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Left  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Left  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 왼쪽       </td></tr><tr><td> UI 텍스트       </td><td> 왼쪽으로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveLeft*
   exceptions: []
   platform:
@@ -334,13 +334,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Right command.
-  remarks: "This command indicates the intention to move the selection right.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveRight\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveRight\"/>  \n```"
+  summary: "오른쪽으로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 선택 항목을 오른쪽으로 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveRight&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveRight&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveRight { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Right  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Right  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Right       </td></tr><tr><td> UI 텍스트       </td><td> 오른쪽으로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveRight*
   exceptions: []
   platform:
@@ -357,13 +357,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move To End command.
-  remarks: "This command indicates the intention to move the selection to the last item.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveToEnd\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveToEnd\"/>  \n```"
+  summary: "끝으로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 마지막 항목 선택 영역을 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveToEnd&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveToEnd&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveToEnd { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> End  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move To End  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 끝       </td></tr><tr><td> UI 텍스트       </td><td> 끝으로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveToEnd*
   exceptions: []
   platform:
@@ -380,13 +380,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move To Home command.
-  remarks: "This command indicates the intention to move the selection to the first item.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveToHome\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveToHome\"/>  \n```"
+  summary: "앞으로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 첫 번째 항목 선택 영역을 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveToHome&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveToHome&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveToHome { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Home  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move To Home  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 홈       </td></tr><tr><td> UI 텍스트       </td><td> 맨 앞으로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveToHome*
   exceptions: []
   platform:
@@ -403,13 +403,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move To Page Down command.
-  remarks: "This command indicates the intention to move the selection down one page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveToPageDown\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveToPageDown\"/>  \n```"
+  summary: "페이지 아래로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 한 페이지 아래로 선택 영역을 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveToPageDown&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveToPageDown&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveToPageDown { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> PageDown  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move To Page Down  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 페이지 아래로       </td></tr><tr><td> UI 텍스트       </td><td> 페이지 아래로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveToPageDown*
   exceptions: []
   platform:
@@ -426,13 +426,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move To Page Up command.
-  remarks: "This command indicates the intention to move the selection up one page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveToPageUp\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveToPageUp\"/>  \n```"
+  summary: "페이지 위로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 한 페이지 위로 선택 영역을 이동 하려고 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveToPageUp&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveToPageUp&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveToPageUp { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> PageUp  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move To Page Up  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> PageUp       </td></tr><tr><td> UI 텍스트       </td><td> 페이지 위로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveToPageUp*
   exceptions: []
   platform:
@@ -449,13 +449,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Move Up command.
-  remarks: "This command indicates the intention to move the selection up.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_MoveUp\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"MoveUp\"/>  \n```"
+  summary: "위로 이동 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 선택 영역 위로 이동 하려면 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_MoveUp&quot;></a># # XAML 특성 사용```   <object property=&quot;MoveUp&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand MoveUp { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Up  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Move Up  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 위쪽       </td></tr><tr><td> UI 텍스트       </td><td> 위로 이동       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.MoveUp*
   exceptions: []
   platform:
@@ -472,13 +472,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Scroll By Line command.
-  remarks: "This command indicates the intention to scroll vertically upward by a given number of lines.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ScrollByLine\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ScrollByLine\"/>  \n```"
+  summary: "줄 별 스크롤 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 줄 수를 지정된 하 여 위쪽으로 스크롤하여 세로로 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ScrollByLine&quot;></a># # XAML 특성 사용```   <object property=&quot;ScrollByLine&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ScrollByLine { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> No gesture defined  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Scroll By Line  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 정의 된       </td></tr><tr><td> UI 텍스트       </td><td> 줄 별 스크롤       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ScrollByLine*
   exceptions: []
   platform:
@@ -495,13 +495,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Scroll Page Down command.
-  remarks: "This command indicates the intention to scroll vertically downward by a page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ScrollPageDown\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ScrollPageDown\"/>  \n```"
+  summary: "아래로 페이지 스크롤 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 한 페이지 아래로 스크롤해야 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ScrollPageDown&quot;></a># # XAML 특성 사용```   <object property=&quot;ScrollPageDown&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ScrollPageDown { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> PageDown  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Scroll Page Down  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 페이지 아래로       </td></tr><tr><td> UI 텍스트       </td><td> 아래로 페이지 스크롤       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ScrollPageDown*
   exceptions: []
   platform:
@@ -518,13 +518,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Scroll Page Left command.
-  remarks: "This command indicates the intention to scroll one page to the left.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ScrollPageLeft\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ScrollPageLeft\"/>  \n```"
+  summary: "왼쪽으로 페이지 스크롤 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 한 페이지 왼쪽으로 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ScrollPageLeft&quot;></a># # XAML 특성 사용```   <object property=&quot;ScrollPageLeft&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ScrollPageLeft { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> No gesture defined.  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Scroll Page Left  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 정의 된 합니다.       </td></tr><tr><td> UI 텍스트       </td><td> 왼쪽으로 페이지 스크롤       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ScrollPageLeft*
   exceptions: []
   platform:
@@ -541,13 +541,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Scroll Page Right command.
-  remarks: "This command indicates the intention to scroll one page to the right.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ScrollPageRight\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ScrollPageRight\"/>  \n```"
+  summary: "오른쪽으로 페이지 스크롤 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 한 페이지 오른쪽으로 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ScrollPageRight&quot;></a># # XAML 특성 사용```   <object property=&quot;ScrollPageRight&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ScrollPageRight { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> No gesture defined.  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Scroll Page Right  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> 정의 된 합니다.       </td></tr><tr><td> UI 텍스트       </td><td> 오른쪽으로 페이지 스크롤       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ScrollPageRight*
   exceptions: []
   platform:
@@ -564,13 +564,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Scroll Page Up command.
-  remarks: "This command indicates the intention to scroll vertically upward by a page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_ScrollPageUp\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"ScrollPageUp\"/>  \n```"
+  summary: "위로 페이지 스크롤 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 페이지 여 위쪽으로 세로로 스크롤하려면 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_ScrollPageUp&quot;></a># # XAML 특성 사용```   <object property=&quot;ScrollPageUp&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand ScrollPageUp { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> PageUp  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Scroll Page Up  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> PageUp       </td></tr><tr><td> UI 텍스트       </td><td> 위로 페이지 스크롤       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.ScrollPageUp*
   exceptions: []
   platform:
@@ -587,13 +587,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Select To End command.
-  remarks: "This command indicates the intention to select the items from the current item to the last item.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_SelectToEnd\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"SelectToEnd\"/>  \n```"
+  summary: "끝 선택 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 항목을 선택 하려면 현재 항목의 마지막 항목 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_SelectToEnd&quot;></a># # XAML 특성 사용```   <object property=&quot;SelectToEnd&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand SelectToEnd { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+End  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Select To End  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + End       </td></tr><tr><td> UI 텍스트       </td><td> 끝까지 선택       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.SelectToEnd*
   exceptions: []
   platform:
@@ -610,13 +610,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Select To Home command.
-  remarks: "This command indicates the intention to extend select the items from the current item to the first item.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_SelectToHome\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"SelectToHome\"/>  \n```"
+  summary: "앞까지 선택 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 하려고 함을 나타냅니다 첫 번째 항목을 현재 항목에서 항목을 선택 합니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_SelectToHome&quot;></a># # XAML 특성 사용```   <object property=&quot;SelectToHome&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand SelectToHome { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+Home  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Select To Home  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + Home       </td></tr><tr><td> UI 텍스트       </td><td> 맨 앞까지 선택       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.SelectToHome*
   exceptions: []
   platform:
@@ -633,13 +633,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Select To Page Down command.
-  remarks: "This command indicates the intention to select from the current item down one page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_SelectToPageDown\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"SelectToPageDown\"/>  \n```"
+  summary: "페이지 아래로 선택 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 현재 항목을 한 페이지 아래로를 선택 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_SelectToPageDown&quot;></a># # XAML 특성 사용```   <object property=&quot;SelectToPageDown&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand SelectToPageDown { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+PageDown  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Select To Page Down  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + PageDown       </td></tr><tr><td> UI 텍스트       </td><td> 페이지 아래로 선택       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.SelectToPageDown*
   exceptions: []
   platform:
@@ -656,13 +656,13 @@ items:
   assemblies:
   - PresentationCore
   namespace: System.Windows.Input
-  summary: Gets the value that represents the Select To Page Up command.
-  remarks: "This command indicates the intention to select from the current item up one page.  \n  \n There is not necessarily an actual implementation responding to the command on any given object; in many cases the implementation in response to that command is the responsibility of the application writer.  \n  \n<a name=\"xamlAttributeUsage_SelectToPageUp\"></a>   \n## XAML Attribute Usage  \n  \n```  \n<object property=\"SelectToPageUp\"/>  \n```"
+  summary: "페이지 위로 선택 명령을 나타내는 값을 가져옵니다."
+  remarks: "이 명령은 현재 항목을 한 페이지 위로를 선택 함을 나타냅니다.       반드시 있는 것은 아닙니다; 지정된 된 개체에서 명령에 응답 하는 실제 구현 대부분의 경우에서 응용 프로그램 작성자가 명령에 응답 하는 구현을 합니다.      <a name=&quot;xamlAttributeUsage_SelectToPageUp&quot;></a># # XAML 특성 사용```   <object property=&quot;SelectToPageUp&quot;/>   ```"
   syntax:
     content: public static System.Windows.Input.RoutedUICommand SelectToPageUp { get; }
     return:
       type: System.Windows.Input.RoutedUICommand
-      description: "The command.  \n  \n <table><thead><tr><th> Default Values  \n  \n </th><th></th></tr></thead><tbody><tr><td> Key Gesture  \n  \n </td><td> Shift+PageUp  \n  \n </td></tr><tr><td> UI Text  \n  \n </td><td> Select To Page Up  \n  \n </td></tr></tbody></table>"
+      description: "명령입니다.       <table><thead><tr><th> 기본값       </th><th></th></tr></thead><tbody><tr><td> 키 제스처       </td><td> Shift + PageUp       </td></tr><tr><td> UI 텍스트       </td><td> 페이지 위로 선택       </td></tr></tbody></table>"
   overload: System.Windows.Input.ComponentCommands.SelectToPageUp*
   exceptions: []
   platform:
