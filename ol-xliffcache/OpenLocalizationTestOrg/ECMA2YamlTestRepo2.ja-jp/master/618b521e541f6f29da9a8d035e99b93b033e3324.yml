@@ -19,8 +19,8 @@ items:
   nameWithType: UnvalidatedRequestValues
   fullName: System.Web.UnvalidatedRequestValues
   type: Class
-  summary: Provides access to HTTP request values without triggering ASP.NET request validation.
-  remarks: "When ASP.NET reads the values in HTTP request collections (such as the <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, and <xref:System.Web.HttpRequest.Cookies%2A> collections), it performs *request validation*. During request validation, ASP.NET examines the posted values and determines whether they contain markup, script, or reserved characters. By default, if ASP.NET detects any of these types of input, it throws an <xref:System.Web.HttpRequestValidationException> exception. This helps prevent malicious script injection attacks on your website.  \n  \n However, in some cases, you might want to bypass ASP.NET request validation and allow values that contain markup, script, or reserved characters.  For example, if your application uses a rich-text editor that enables users to submit HTML markup as formatted content, you can use the members of the UnvalidatedRequestValues class to retrieve the rich-text request values without triggering the default ASP.NET request validation. In your code, you access members of this class by using the <xref:System.Web.HttpRequest.Unvalidated%2A> property.  \n  \n> [!IMPORTANT]\n>  If you use this class, you must manually check the data for potential cross-site scripting attacks."
+  summary: "ASP.NET 要求の検証をトリガーしない HTTP 要求値へのアクセスを提供します。"
+  remarks: "ASP.NET が要求のコレクションを HTTP に値を読み取る場合 (など、 <xref:System.Web.HttpRequest.Form%2A>、 <xref:System.Web.HttpRequest.QueryString%2A>、および<xref:System.Web.HttpRequest.Cookies%2A>コレクション)、実行*要求の検証*</xref:System.Web.HttpRequest.Cookies%2A></xref:System.Web.HttpRequest.QueryString%2A></xref:System.Web.HttpRequest.Form%2A>。 要求の検証中には、ASP.NET は、ポストされた値を検査し、マークアップ、スクリプト、または予約文字を含めるかどうかを決定します。 既定では、ASP.NET では、これらの種類の入力のいずれかが検出された場合、スロー、<xref:System.Web.HttpRequestValidationException>例外です</xref:System.Web.HttpRequestValidationException>。 これにより、web サイト上の悪意のあるスクリプト インジェクション攻撃を防止できます。       ただし、場合によっては、ASP.NET 要求の検証をバイパスし、マークアップ、スクリプト、または予約文字を含む値を許可する必要があります。  たとえば、アプリケーションでは、ユーザーが HTML マークアップと書式設定されたコンテンツを送信できるようにするリッチ テキスト エディターを使用する場合は、既定の ASP.NET 要求の検証をトリガーすることがなく、リッチ テキストの要求値を取得する UnvalidatedRequestValues クラスのメンバーを使用することができます。 使用してこのクラスのメンバーにアクセスする、コードで、<xref:System.Web.HttpRequest.Unvalidated%2A>プロパティ</xref:System.Web.HttpRequest.Unvalidated%2A>。      > [!IMPORTANT] > このクラスを使用する場合は、潜在的なクロスサイト スクリプティング攻撃のデータを手動でチェックする必要があります。"
   syntax:
     content: public sealed class UnvalidatedRequestValues
   inheritance:
@@ -41,7 +41,7 @@ items:
   assemblies:
   - System.Web
   namespace: System.Web
-  summary: Gets the collection of cookies that the client sent, without triggering ASP.NET request validation.
+  summary: "ASP.NET 要求の検証をトリガーすることがなく、クライアントが送信されたクッキーのコレクションを取得します。"
   remarks: >-
     > [!IMPORTANT]
 
@@ -254,7 +254,7 @@ items:
   - System.Web
   namespace: System.Web
   summary: Gets the part of the requested URL that follows the website name, without triggering ASP.NET request validation.
-  remarks: "> [!IMPORTANT]\n>  If you use this property, you must manually check the data for potential cross-site scripting attacks.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
+  remarks: "> [!IMPORTANT]> このプロパティを使用する場合は、クロスサイト スクリプティング攻撃の潜在的なデータを手動で確認する必要があります。  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
   syntax:
     content: public string RawUrl { get; }
     return:
