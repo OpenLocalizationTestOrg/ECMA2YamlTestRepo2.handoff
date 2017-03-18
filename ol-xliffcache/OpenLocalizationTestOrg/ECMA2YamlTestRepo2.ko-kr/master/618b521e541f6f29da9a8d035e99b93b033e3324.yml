@@ -19,8 +19,8 @@ items:
   nameWithType: UnvalidatedRequestValues
   fullName: System.Web.UnvalidatedRequestValues
   type: Class
-  summary: Provides access to HTTP request values without triggering ASP.NET request validation.
-  remarks: "When ASP.NET reads the values in HTTP request collections (such as the <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, and <xref:System.Web.HttpRequest.Cookies%2A> collections), it performs *request validation*. During request validation, ASP.NET examines the posted values and determines whether they contain markup, script, or reserved characters. By default, if ASP.NET detects any of these types of input, it throws an <xref:System.Web.HttpRequestValidationException> exception. This helps prevent malicious script injection attacks on your website.  \n  \n However, in some cases, you might want to bypass ASP.NET request validation and allow values that contain markup, script, or reserved characters.  For example, if your application uses a rich-text editor that enables users to submit HTML markup as formatted content, you can use the members of the UnvalidatedRequestValues class to retrieve the rich-text request values without triggering the default ASP.NET request validation. In your code, you access members of this class by using the <xref:System.Web.HttpRequest.Unvalidated%2A> property.  \n  \n> [!IMPORTANT]\n>  If you use this class, you must manually check the data for potential cross-site scripting attacks."
+  summary: "ASP.NET 요청 유효성 검사를 트리거하지 않고 HTTP 요청 값에 대 한 액세스를 제공 합니다."
+  remarks: "ASP.NET 컬렉션을 요청 하는 HTTP의 값을 읽을 때 (같은 <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, 및 <xref:System.Web.HttpRequest.Cookies%2A>컬렉션), 수행 *요청 유효성 검사를*.</xref:System.Web.HttpRequest.Cookies%2A> </xref:System.Web.HttpRequest.QueryString%2A> </xref:System.Web.HttpRequest.Form%2A> 요청 유효성 검사 중 ASP.NET 게시 된 값을 검사 하 고 태그, 스크립트 또는 예약 된 문자를 포함 되어 있는지 여부를 결정 합니다. 기본적으로 ASP.NET의 이러한 유형의 입력을 발견 하면 throw 된 <xref:System.Web.HttpRequestValidationException>예외.</xref:System.Web.HttpRequestValidationException> 이렇게 하면 웹 사이트에 악성 스크립트 삽입 공격을 방지할 수 있습니다.       하지만, 경우에 따라 ASP.NET 요청 유효성 검사를 무시 하 고 태그, 스크립트 또는 예약 된 문자를 포함 하는 값을 허용 하려면 필요할 수 있습니다.  예를 들어 응용 프로그램에서 형식이 지정 된 내용으로 HTML 태그를 제출할 수 있도록 하는 서식 있는 텍스트 편집기를 사용 하는 경우 기본 ASP.NET 요청 유효성 검사를 트리거하지 않고 서식 있는 텍스트 요청 값을 검색 하 여 UnvalidatedRequestValues 클래스의 멤버를 사용할 수 있습니다. 코드를 사용 하 여이 클래스의 멤버 액세스는 <xref:System.Web.HttpRequest.Unvalidated%2A>속성.</xref:System.Web.HttpRequest.Unvalidated%2A>      > [!IMPORTANT] >이 클래스를 사용 하는 경우 수동으로 잠재적인 교차 사이트 스크립팅 공격에 대 한 데이터를 확인 해야 합니다."
   syntax:
     content: public sealed class UnvalidatedRequestValues
   inheritance:
@@ -41,7 +41,7 @@ items:
   assemblies:
   - System.Web
   namespace: System.Web
-  summary: Gets the collection of cookies that the client sent, without triggering ASP.NET request validation.
+  summary: "ASP.NET 요청 유효성 검사를 트리거하지 않고 클라이언트가 보낸 쿠키의 컬렉션을 가져옵니다."
   remarks: >-
     > [!IMPORTANT]
 
@@ -254,7 +254,7 @@ items:
   - System.Web
   namespace: System.Web
   summary: Gets the part of the requested URL that follows the website name, without triggering ASP.NET request validation.
-  remarks: "> [!IMPORTANT]\n>  If you use this property, you must manually check the data for potential cross-site scripting attacks.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
+  remarks: "> [!IMPORTANT]>이 속성을 사용 하는 경우 잠재적인 교차 사이트 스크립팅 공격에 대 한 데이터를 수동으로 확인 해야 합니다.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
   syntax:
     content: public string RawUrl { get; }
     return:
