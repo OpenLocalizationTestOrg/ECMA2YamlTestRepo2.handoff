@@ -19,8 +19,8 @@ items:
   nameWithType: UnvalidatedRequestValues
   fullName: System.Web.UnvalidatedRequestValues
   type: Class
-  summary: Provides access to HTTP request values without triggering ASP.NET request validation.
-  remarks: "When ASP.NET reads the values in HTTP request collections (such as the <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, and <xref:System.Web.HttpRequest.Cookies%2A> collections), it performs *request validation*. During request validation, ASP.NET examines the posted values and determines whether they contain markup, script, or reserved characters. By default, if ASP.NET detects any of these types of input, it throws an <xref:System.Web.HttpRequestValidationException> exception. This helps prevent malicious script injection attacks on your website.  \n  \n However, in some cases, you might want to bypass ASP.NET request validation and allow values that contain markup, script, or reserved characters.  For example, if your application uses a rich-text editor that enables users to submit HTML markup as formatted content, you can use the members of the UnvalidatedRequestValues class to retrieve the rich-text request values without triggering the default ASP.NET request validation. In your code, you access members of this class by using the <xref:System.Web.HttpRequest.Unvalidated%2A> property.  \n  \n> [!IMPORTANT]\n>  If you use this class, you must manually check the data for potential cross-site scripting attacks."
+  summary: "Fornisce l&quot;accesso ai valori delle richieste HTTP senza attivare la convalida delle richieste ASP.NET."
+  remarks: "Quando ASP.NET legge i valori HTTP richiesta raccolte (ad esempio il <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, e <xref:System.Web.HttpRequest.Cookies%2A>raccolte), esegue *la convalida delle richieste*.</xref:System.Web.HttpRequest.Cookies%2A> </xref:System.Web.HttpRequest.QueryString%2A> </xref:System.Web.HttpRequest.Form%2A> Durante la convalida della richiesta, ASP.NET esamina i valori registrati e determina se contengono caratteri riservati, script o markup. Per impostazione predefinita, se ASP.NET rileva uno di questi tipi di input, viene generata una <xref:System.Web.HttpRequestValidationException>eccezione.</xref:System.Web.HttpRequestValidationException> Ciò aiuta a evitare attacchi intrusivi nel codice di script dannosi nel sito Web.       Tuttavia, in alcuni casi, è consigliabile ignorare la convalida della richiesta ASP.NET e consentire i valori che contengono caratteri riservati, script o markup.  Ad esempio, se l&quot;applicazione utilizza un editor di testo RTF che consente agli utenti di inviare markup HTML come contenuto formattato, è possibile utilizzare i membri della classe UnvalidatedRequestValues per recuperare i valori di testo RTF richiesta senza attivare la convalida della richiesta ASP.NET predefinito. Nel codice, i membri di questa classe è accedere utilizzando il <xref:System.Web.HttpRequest.Unvalidated%2A>proprietà.</xref:System.Web.HttpRequest.Unvalidated%2A>      > [!IMPORTANT] > Se si utilizza questa classe, è necessario archiviare manualmente i dati per potenziali attacchi script tra siti."
   syntax:
     content: public sealed class UnvalidatedRequestValues
   inheritance:
@@ -41,7 +41,7 @@ items:
   assemblies:
   - System.Web
   namespace: System.Web
-  summary: Gets the collection of cookies that the client sent, without triggering ASP.NET request validation.
+  summary: "Ottiene la raccolta di cookie che il client ha inviato, senza attivare la convalida delle richieste ASP.NET."
   remarks: >-
     > [!IMPORTANT]
 
@@ -254,7 +254,7 @@ items:
   - System.Web
   namespace: System.Web
   summary: Gets the part of the requested URL that follows the website name, without triggering ASP.NET request validation.
-  remarks: "> [!IMPORTANT]\n>  If you use this property, you must manually check the data for potential cross-site scripting attacks.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
+  remarks: "> [!IMPORTANT]> Se si utilizza questa proprietà, è necessario controllare manualmente i dati per potenziali attacchi script tra siti.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
   syntax:
     content: public string RawUrl { get; }
     return:
