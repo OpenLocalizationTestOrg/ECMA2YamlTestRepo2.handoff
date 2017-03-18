@@ -19,8 +19,8 @@ items:
   nameWithType: UnvalidatedRequestValues
   fullName: System.Web.UnvalidatedRequestValues
   type: Class
-  summary: Provides access to HTTP request values without triggering ASP.NET request validation.
-  remarks: "When ASP.NET reads the values in HTTP request collections (such as the <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, and <xref:System.Web.HttpRequest.Cookies%2A> collections), it performs *request validation*. During request validation, ASP.NET examines the posted values and determines whether they contain markup, script, or reserved characters. By default, if ASP.NET detects any of these types of input, it throws an <xref:System.Web.HttpRequestValidationException> exception. This helps prevent malicious script injection attacks on your website.  \n  \n However, in some cases, you might want to bypass ASP.NET request validation and allow values that contain markup, script, or reserved characters.  For example, if your application uses a rich-text editor that enables users to submit HTML markup as formatted content, you can use the members of the UnvalidatedRequestValues class to retrieve the rich-text request values without triggering the default ASP.NET request validation. In your code, you access members of this class by using the <xref:System.Web.HttpRequest.Unvalidated%2A> property.  \n  \n> [!IMPORTANT]\n>  If you use this class, you must manually check the data for potential cross-site scripting attacks."
+  summary: "HTTP-kérelem értékek hozzáférést biztosít az ASP.NET-kérelem érvényesítési elindítása nélkül."
+  remarks: "Ha ASP.NET olvassa be, hogy az értékek HTTP kérelem gyűjtemények (például a <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, és <xref:System.Web.HttpRequest.Cookies%2A>gyűjtemények), végez *érvényesítés kérése*.</xref:System.Web.HttpRequest.Cookies%2A> </xref:System.Web.HttpRequest.QueryString%2A> </xref:System.Web.HttpRequest.Form%2A> Kérelem érvényesítése során ASP.NET keressen-e a közzétett értékeket, és határozza meg, hogy markup, parancsfájl vagy fenntartott karaktereket tartalmaznak. Alapértelmezés szerint ha ASP.NET észleli az ilyen típusú bemeneti, hogy okoz egy <xref:System.Web.HttpRequestValidationException>kivétel.</xref:System.Web.HttpRequestValidationException> Ez megakadályozza, hogy rosszindulatú parancsprogram injektálási támadások a webhelyen.       Azonban bizonyos esetekben érdemes ASP.NET-kérelem kihagyását és érték is, hogy a jelölés során, parancsfájl vagy fenntartott karaktereket tartalmaz.  Például ha az alkalmazás egy rich text editor, amely lehetővé teszi a felhasználóknak formázott tartalmat HTML-kódot, használhatja a UnvalidatedRequestValues osztály tagjai a rich text kérelem értékek beolvasása az alapértelmezett ASP.NET-kérelem érvényesítési elindítása nélkül. A kódban használatával éri el ez az osztály tagjai a <xref:System.Web.HttpRequest.Unvalidated%2A>tulajdonság.</xref:System.Web.HttpRequest.Unvalidated%2A>      > [!IMPORTANT] > Használja ezt az osztályt, manuálisan ellenőrizni kell az adatokat a potenciális többhelyes parancsfájlok futtatására."
   syntax:
     content: public sealed class UnvalidatedRequestValues
   inheritance:
@@ -41,7 +41,7 @@ items:
   assemblies:
   - System.Web
   namespace: System.Web
-  summary: Gets the collection of cookies that the client sent, without triggering ASP.NET request validation.
+  summary: "Cookie-k, az ügyfél küldött kérelem ellenőrzése ASP.NET elindítása nélkül gyűjteményének beolvasása."
   remarks: >-
     > [!IMPORTANT]
 
@@ -254,7 +254,7 @@ items:
   - System.Web
   namespace: System.Web
   summary: Gets the part of the requested URL that follows the website name, without triggering ASP.NET request validation.
-  remarks: "> [!IMPORTANT]\n>  If you use this property, you must manually check the data for potential cross-site scripting attacks.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
+  remarks: "> [!IMPORTANT]> Ha használja ezt a tulajdonságot, manuálisan ellenőrizze az adatokat a potenciális többhelyes parancsfájlok futtatására.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
   syntax:
     content: public string RawUrl { get; }
     return:
