@@ -19,8 +19,8 @@ items:
   nameWithType: UnvalidatedRequestValues
   fullName: System.Web.UnvalidatedRequestValues
   type: Class
-  summary: Provides access to HTTP request values without triggering ASP.NET request validation.
-  remarks: "When ASP.NET reads the values in HTTP request collections (such as the <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.QueryString%2A>, and <xref:System.Web.HttpRequest.Cookies%2A> collections), it performs *request validation*. During request validation, ASP.NET examines the posted values and determines whether they contain markup, script, or reserved characters. By default, if ASP.NET detects any of these types of input, it throws an <xref:System.Web.HttpRequestValidationException> exception. This helps prevent malicious script injection attacks on your website.  \n  \n However, in some cases, you might want to bypass ASP.NET request validation and allow values that contain markup, script, or reserved characters.  For example, if your application uses a rich-text editor that enables users to submit HTML markup as formatted content, you can use the members of the UnvalidatedRequestValues class to retrieve the rich-text request values without triggering the default ASP.NET request validation. In your code, you access members of this class by using the <xref:System.Web.HttpRequest.Unvalidated%2A> property.  \n  \n> [!IMPORTANT]\n>  If you use this class, you must manually check the data for potential cross-site scripting attacks."
+  summary: "提供对 HTTP 请求值的访问，而不会触发 ASP.NET 请求验证。"
+  remarks: "当 ASP.NET 读取请求 HTTP 中的值的集合 (如<xref:System.Web.HttpRequest.Form%2A>， <xref:System.Web.HttpRequest.QueryString%2A>，和<xref:System.Web.HttpRequest.Cookies%2A>集合)，它执行*请求验证*。</xref:System.Web.HttpRequest.Cookies%2A> </xref:System.Web.HttpRequest.QueryString%2A> </xref:System.Web.HttpRequest.Form%2A> 请求验证过程 ASP.NET 检查发送的值，并确定它们是否包含标记、 脚本或保留的字符。 默认情况下，如果 ASP.NET 检测到的所有这些类型的输入，则会引发<xref:System.Web.HttpRequestValidationException>异常。</xref:System.Web.HttpRequestValidationException> 这有助于防止在网站上的恶意脚本注入式攻击。       但是，在某些情况下，你可能想要跳过 ASP.NET 请求验证，并允许包含标记、 脚本或保留的字符的值。  例如，如果你的应用程序使用多格式文本编辑器，可帮助用户提交带格式的内容作为 HTML 标记，你可以使用 UnvalidatedRequestValues 类的成员而不会触发默认 ASP.NET 请求验证检索的多格式文本请求值。 你可以在代码中，来访问使用此类的成员<xref:System.Web.HttpRequest.Unvalidated%2A>属性。</xref:System.Web.HttpRequest.Unvalidated%2A>      1> [!IMPORTANT]&1;> 如果使用此类时，你必须手动检查潜在的跨站点脚本攻击的数据。"
   syntax:
     content: public sealed class UnvalidatedRequestValues
   inheritance:
@@ -41,7 +41,7 @@ items:
   assemblies:
   - System.Web
   namespace: System.Web
-  summary: Gets the collection of cookies that the client sent, without triggering ASP.NET request validation.
+  summary: "获取的客户端发送，而不会触发 ASP.NET 请求验证的 cookie 的集合。"
   remarks: >-
     > [!IMPORTANT]
 
@@ -254,7 +254,7 @@ items:
   - System.Web
   namespace: System.Web
   summary: Gets the part of the requested URL that follows the website name, without triggering ASP.NET request validation.
-  remarks: "> [!IMPORTANT]\n>  If you use this property, you must manually check the data for potential cross-site scripting attacks.  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
+  remarks: "> [!IMPORTANT]1> 如果使用此属性时，你必须手动检查潜在的跨站点脚本攻击的数据。  \n  \n If the complete request URL is `http://www.contoso.com/default.aspx?id=44`, the value of RawUrl is `/default.aspx?id=44`."
   syntax:
     content: public string RawUrl { get; }
     return:
