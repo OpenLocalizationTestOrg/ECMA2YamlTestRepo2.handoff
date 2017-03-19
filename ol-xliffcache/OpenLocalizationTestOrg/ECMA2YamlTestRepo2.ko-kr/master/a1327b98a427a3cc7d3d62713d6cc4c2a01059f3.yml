@@ -24,8 +24,8 @@ items:
   nameWithType: PasswordDeriveBytes
   fullName: System.Security.Cryptography.PasswordDeriveBytes
   type: Class
-  summary: Derives a key from a password using an extension of the PBKDF1 algorithm.
-  remarks: "This class uses an extension of the PBKDF1 algorithm defined in the PKCS#5 v2.0 standard to derive bytes suitable for use as key material from a password. The standard is documented in IETF RRC 2898.  \n  \n> [!IMPORTANT]\n>  Never hard-code a password within your source code.  Hard coded passwords can be retrieved from an assembly using the [Ildasm.exe (IL Disassembler)](~/add/includes/ajax-current-ext-md.md) tool, a hex editor, or by simply opening up the assembly in a text editor like notepad.exe."
+  summary: "PBKDF1 알고리즘의 확장을 사용 하 여 암호에서 키를 파생 시킵니다."
+  remarks: "이 클래스는 키 자료로 사용 하기에 적합 한 바이트 암호에서 파생 되도록 PKCS&#5; v2.0 표준에 정의 된 PBKDF1 알고리즘의 확장을 사용 합니다. 표준은 IETF RRC 2898 수록 되어 있습니다.      > [!IMPORTANT] > 하드 코드 하지 소스 코드에는 암호입니다.  사용 하 여 어셈블리에서 하드 코드 된 암호를 검색할 수는 [Ildasm.exe (IL 디스어셈블러)](~/add/includes/ajax-current-ext-md.md) 도구,&16; 진수 편집기 또는 notepad.exe와 같은 텍스트 편집기에서 어셈블리를 여는 합니다."
   example:
   - "The following code example creates a key from a password using the PasswordDeriveBytes class.  \n  \n [!code-cs[Cryptography.PasswordDerivedbytes#1](~/add/codesnippet/csharp/t-system.security.crypto_118_1.cs)]\n [!code-cpp[Cryptography.PasswordDerivedbytes#1](~/add/codesnippet/cpp/t-system.security.crypto_118_1.cpp)]\n [!code-vb[Cryptography.PasswordDerivedbytes#1](~/add/codesnippet/visualbasic/t-system.security.crypto_118_1.vb)]"
   syntax:
@@ -53,7 +53,7 @@ items:
   assemblies:
   - mscorlib
   namespace: System.Security.Cryptography
-  summary: Initializes a new instance of the <xref href="System.Security.Cryptography.PasswordDeriveBytes"></xref> class specifying the password and key salt to use to derive the key.
+  summary: "새 인스턴스를 초기화는 <xref href=&quot;System.Security.Cryptography.PasswordDeriveBytes&quot;> </xref> 암호 및 키 파생에 사용할 키 솔트를 지정 하는 클래스입니다."
   remarks: >-
     > [!IMPORTANT]
 
@@ -184,7 +184,7 @@ items:
   - mscorlib
   namespace: System.Security.Cryptography
   summary: Initializes a new instance of the <xref href="System.Security.Cryptography.PasswordDeriveBytes"></xref> class specifying the password, key salt, hash name, and iterations to use to derive the key.
-  remarks: "> [!IMPORTANT]\n>  Never hard code a password within your source code.  Hard-coded passwords can be retrieved from an assembly using the [Ildasm.exe (IL Disassembler)](~/add/includes/ajax-current-ext-md.md), a hex editor, or by simply opening up the assembly in a text editor such as Notepad.exe.  \n  \n For a list of hash algorithm names, see the <xref:System.Security.Cryptography.CryptoConfig> class."
+  remarks: "> [!IMPORTANT]> 하드 코딩 하지 마십시오 소스 코드 내에서 암호입니다.  사용 하 여 어셈블리에서 하드 코드 된 암호를 검색할 수는 [Ildasm.exe (IL 디스어셈블러)](~/add/includes/ajax-current-ext-md.md),&16; 진수 편집기 또는 Notepad.exe와 같은 텍스트 편집기에서 어셈블리를 여는 합니다.  \n  \n For a list of hash algorithm names, see the <xref:System.Security.Cryptography.CryptoConfig> class."
   syntax:
     content: public PasswordDeriveBytes (byte[] password, byte[] salt, string hashName, int iterations);
     parameters:
