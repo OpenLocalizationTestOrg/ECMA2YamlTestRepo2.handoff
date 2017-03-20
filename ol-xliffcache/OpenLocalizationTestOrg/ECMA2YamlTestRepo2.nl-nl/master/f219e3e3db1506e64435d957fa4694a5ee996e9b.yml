@@ -40,8 +40,8 @@ items:
   nameWithType: HwndHost
   fullName: System.Windows.Interop.HwndHost
   type: Class
-  summary: Hosts a [!INCLUDE[TLA#tla_win32](~/add/includes/tlasharptla-win32-md.md)] window as an element within [!INCLUDE[TLA#tla_winclient](~/add/includes/ajax-current-ext-md.md)] content.
-  remarks: "To host a [!INCLUDE[TLA2#tla_win32](~/add/includes/tla2sharptla-win32-md.md)] window, create a class that derives from HwndHost. Override the <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> method and create your [!INCLUDE[TLA2#tla_win32](~/add/includes/tla2sharptla-win32-md.md)] window as a child of the parent window that is passed into the method.  \n  \n> [!IMPORTANT]\n>  Although HwndHost derives from <xref:System.Windows.FrameworkElement>, various properties of HwndHost that come from <xref:System.Windows.FrameworkElement> and other intermediate classes such as <xref:System.Windows.UIElement> are not generally mapped to possible [!INCLUDE[TLA#tla_win32](~/add/includes/tlasharptla-win32-md.md)] equivalents. Also, not all <xref:System.Windows.FrameworkElement> / <xref:System.Windows.UIElement> input events transfer across the interoperation boundary. HwndHost derives from <xref:System.Windows.FrameworkElement> primarily so that an HwndHost instance can be inserted into the widest variety of possible content models, and so that default <xref:System.Windows.FrameworkElement> layout characteristics can apply. For more details on HwndHost, see [WPF and Win32 Interoperation](~/add/includes/ajax-current-ext-md.md)."
+  summary: "Hosts een [!INCLUDE[TLA#tla_win32](~/add/includes/tlasharptla-win32-md.md)] als een element in venster [!INCLUDE[TLA#tla_winclient](~/add/includes/ajax-current-ext-md.md)] inhoud."
+  remarks: "Op de host een [!INCLUDE[TLA2#tla_win32](~/add/includes/tla2sharptla-win32-md.md)] venster, maakt u een klasse die is afgeleid van HwndHost. Overschrijf de <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>methode en maak uw [!INCLUDE[TLA2#tla_win32](~/add/includes/tla2sharptla-win32-md.md)] als een onderliggend element van het bovenliggende venster dat wordt doorgegeven aan de methode-venster.</xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>      > [!IMPORTANT] > Hoewel HwndHost is afgeleid van <xref:System.Windows.FrameworkElement>, verschillende eigenschappen van HwndHost die afkomstig zijn van <xref:System.Windows.FrameworkElement>en andere tussenliggende klassen zoals <xref:System.Windows.UIElement>niet in het algemeen zijn toegewezen aan mogelijke [!INCLUDE[TLA#tla_win32](~/add/includes/tlasharptla-win32-md.md)] equivalenten.</xref:System.Windows.UIElement> </xref:System.Windows.FrameworkElement> </xref:System.Windows.FrameworkElement> Bovendien niet alle <xref:System.Windows.FrameworkElement>/ <xref:System.Windows.UIElement>gebeurtenissen overdracht invoer over de grens van interoperaties tussen.</xref:System.Windows.UIElement> </xref:System.Windows.FrameworkElement> HwndHost is afgeleid van <xref:System.Windows.FrameworkElement>voornamelijk zodat een HwndHost exemplaar kan worden ingevoegd in het breedste scala aan mogelijke inhoud modellen en daarom die standaard <xref:System.Windows.FrameworkElement>indeling kenmerken kunnen toepassen.</xref:System.Windows.FrameworkElement> </xref:System.Windows.FrameworkElement> Zie voor meer informatie over HwndHost [WPF en de Win32-samenwerking](~/add/includes/ajax-current-ext-md.md)."
   syntax:
     content: 'public abstract class HwndHost : System.Windows.FrameworkElement, IDisposable, System.Windows.Interop.IKeyboardInputSink, System.Windows.Interop.IWin32Window'
   inheritance:
@@ -634,7 +634,7 @@ items:
   assemblies:
   - PresentationFramework
   namespace: System.Windows.Interop
-  summary: Initializes a new instance of the <xref href="System.Windows.Interop.HwndHost"></xref> class.
+  summary: "Initialiseert een nieuw exemplaar van de <xref href=&quot;System.Windows.Interop.HwndHost&quot;> </xref> klasse."
   remarks: >-
     > [!IMPORTANT]
 
@@ -713,7 +713,7 @@ items:
   - PresentationFramework
   namespace: System.Windows.Interop
   summary: Immediately frees any system resources that the object might hold.
-  remarks: "> [!IMPORTANT]\n>  This type or member is not available in the Internet security zone.  \n>   \n>  This method can be overridden, but not by this signature. See <xref:System.Windows.Interop.HwndHost.Dispose%28System.Boolean%29> for the overridable signature. This parameterless signature is the one required by the interface contract, and it effectively calls the active <xref:System.Windows.Interop.HwndHost.Dispose%28System.Boolean%29> implementation with `disposing``true`."
+  remarks: "> [!IMPORTANT]> Dit type of lid is niet beschikbaar in de zone Internet.  \n>   \n>  This method can be overridden, but not by this signature. See <xref:System.Windows.Interop.HwndHost.Dispose%28System.Boolean%29> for the overridable signature. This parameterless signature is the one required by the interface contract, and it effectively calls the active <xref:System.Windows.Interop.HwndHost.Dispose%28System.Boolean%29> implementation with `disposing``true`."
   syntax:
     content: public void Dispose ();
     parameters: []
